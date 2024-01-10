@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs
 // generated from terraform resource schema
 
@@ -201,6 +196,31 @@ export function azurermProviderFeaturesApiManagementToTerraform(struct?: Azurerm
   }
 }
 
+
+export function azurermProviderFeaturesApiManagementToHclTerraform(struct?: AzurermProviderFeaturesApiManagement): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    purge_soft_delete_on_destroy: {
+      value: cdktf.booleanToHclTerraform(struct!.purgeSoftDeleteOnDestroy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    recover_soft_deleted: {
+      value: cdktf.booleanToHclTerraform(struct!.recoverSoftDeleted),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export interface AzurermProviderFeaturesAppConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}
@@ -223,6 +243,31 @@ export function azurermProviderFeaturesAppConfigurationToTerraform(struct?: Azur
   }
 }
 
+
+export function azurermProviderFeaturesAppConfigurationToHclTerraform(struct?: AzurermProviderFeaturesAppConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    purge_soft_delete_on_destroy: {
+      value: cdktf.booleanToHclTerraform(struct!.purgeSoftDeleteOnDestroy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    recover_soft_deleted: {
+      value: cdktf.booleanToHclTerraform(struct!.recoverSoftDeleted),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export interface AzurermProviderFeaturesApplicationInsights {
   /**
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs#disable_generated_rule AzurermProvider#disable_generated_rule}
@@ -240,6 +285,25 @@ export function azurermProviderFeaturesApplicationInsightsToTerraform(struct?: A
   }
 }
 
+
+export function azurermProviderFeaturesApplicationInsightsToHclTerraform(struct?: AzurermProviderFeaturesApplicationInsights): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disable_generated_rule: {
+      value: cdktf.booleanToHclTerraform(struct!.disableGeneratedRule),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export interface AzurermProviderFeaturesCognitiveAccount {
   /**
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}
@@ -255,6 +319,25 @@ export function azurermProviderFeaturesCognitiveAccountToTerraform(struct?: Azur
   return {
     purge_soft_delete_on_destroy: cdktf.booleanToTerraform(struct!.purgeSoftDeleteOnDestroy),
   }
+}
+
+
+export function azurermProviderFeaturesCognitiveAccountToHclTerraform(struct?: AzurermProviderFeaturesCognitiveAccount): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    purge_soft_delete_on_destroy: {
+      value: cdktf.booleanToHclTerraform(struct!.purgeSoftDeleteOnDestroy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export interface AzurermProviderFeaturesKeyVault {
@@ -332,6 +415,73 @@ export function azurermProviderFeaturesKeyVaultToTerraform(struct?: AzurermProvi
   }
 }
 
+
+export function azurermProviderFeaturesKeyVaultToHclTerraform(struct?: AzurermProviderFeaturesKeyVault): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    purge_soft_delete_on_destroy: {
+      value: cdktf.booleanToHclTerraform(struct!.purgeSoftDeleteOnDestroy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    purge_soft_deleted_certificates_on_destroy: {
+      value: cdktf.booleanToHclTerraform(struct!.purgeSoftDeletedCertificatesOnDestroy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    purge_soft_deleted_hardware_security_modules_on_destroy: {
+      value: cdktf.booleanToHclTerraform(struct!.purgeSoftDeletedHardwareSecurityModulesOnDestroy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    purge_soft_deleted_keys_on_destroy: {
+      value: cdktf.booleanToHclTerraform(struct!.purgeSoftDeletedKeysOnDestroy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    purge_soft_deleted_secrets_on_destroy: {
+      value: cdktf.booleanToHclTerraform(struct!.purgeSoftDeletedSecretsOnDestroy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    recover_soft_deleted_certificates: {
+      value: cdktf.booleanToHclTerraform(struct!.recoverSoftDeletedCertificates),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    recover_soft_deleted_key_vaults: {
+      value: cdktf.booleanToHclTerraform(struct!.recoverSoftDeletedKeyVaults),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    recover_soft_deleted_keys: {
+      value: cdktf.booleanToHclTerraform(struct!.recoverSoftDeletedKeys),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    recover_soft_deleted_secrets: {
+      value: cdktf.booleanToHclTerraform(struct!.recoverSoftDeletedSecrets),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export interface AzurermProviderFeaturesLogAnalyticsWorkspace {
   /**
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs#permanently_delete_on_destroy AzurermProvider#permanently_delete_on_destroy}
@@ -347,6 +497,25 @@ export function azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform(struct?:
   return {
     permanently_delete_on_destroy: cdktf.booleanToTerraform(struct!.permanentlyDeleteOnDestroy),
   }
+}
+
+
+export function azurermProviderFeaturesLogAnalyticsWorkspaceToHclTerraform(struct?: AzurermProviderFeaturesLogAnalyticsWorkspace): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    permanently_delete_on_destroy: {
+      value: cdktf.booleanToHclTerraform(struct!.permanentlyDeleteOnDestroy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export interface AzurermProviderFeaturesManagedDisk {
@@ -366,6 +535,25 @@ export function azurermProviderFeaturesManagedDiskToTerraform(struct?: AzurermPr
   }
 }
 
+
+export function azurermProviderFeaturesManagedDiskToHclTerraform(struct?: AzurermProviderFeaturesManagedDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    expand_without_downtime: {
+      value: cdktf.booleanToHclTerraform(struct!.expandWithoutDowntime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export interface AzurermProviderFeaturesResourceGroup {
   /**
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs#prevent_deletion_if_contains_resources AzurermProvider#prevent_deletion_if_contains_resources}
@@ -381,6 +569,25 @@ export function azurermProviderFeaturesResourceGroupToTerraform(struct?: Azurerm
   return {
     prevent_deletion_if_contains_resources: cdktf.booleanToTerraform(struct!.preventDeletionIfContainsResources),
   }
+}
+
+
+export function azurermProviderFeaturesResourceGroupToHclTerraform(struct?: AzurermProviderFeaturesResourceGroup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    prevent_deletion_if_contains_resources: {
+      value: cdktf.booleanToHclTerraform(struct!.preventDeletionIfContainsResources),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export interface AzurermProviderFeaturesSubscription {
@@ -400,6 +607,25 @@ export function azurermProviderFeaturesSubscriptionToTerraform(struct?: AzurermP
   }
 }
 
+
+export function azurermProviderFeaturesSubscriptionToHclTerraform(struct?: AzurermProviderFeaturesSubscription): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    prevent_cancellation_on_destroy: {
+      value: cdktf.booleanToHclTerraform(struct!.preventCancellationOnDestroy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export interface AzurermProviderFeaturesTemplateDeployment {
   /**
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs#delete_nested_items_during_deletion AzurermProvider#delete_nested_items_during_deletion}
@@ -415,6 +641,25 @@ export function azurermProviderFeaturesTemplateDeploymentToTerraform(struct?: Az
   return {
     delete_nested_items_during_deletion: cdktf.booleanToTerraform(struct!.deleteNestedItemsDuringDeletion),
   }
+}
+
+
+export function azurermProviderFeaturesTemplateDeploymentToHclTerraform(struct?: AzurermProviderFeaturesTemplateDeployment): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    delete_nested_items_during_deletion: {
+      value: cdktf.booleanToHclTerraform(struct!.deleteNestedItemsDuringDeletion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export interface AzurermProviderFeaturesVirtualMachine {
@@ -444,6 +689,37 @@ export function azurermProviderFeaturesVirtualMachineToTerraform(struct?: Azurer
   }
 }
 
+
+export function azurermProviderFeaturesVirtualMachineToHclTerraform(struct?: AzurermProviderFeaturesVirtualMachine): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    delete_os_disk_on_deletion: {
+      value: cdktf.booleanToHclTerraform(struct!.deleteOsDiskOnDeletion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    graceful_shutdown: {
+      value: cdktf.booleanToHclTerraform(struct!.gracefulShutdown),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    skip_shutdown_and_force_delete: {
+      value: cdktf.booleanToHclTerraform(struct!.skipShutdownAndForceDelete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export interface AzurermProviderFeaturesVirtualMachineScaleSet {
   /**
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs#force_delete AzurermProvider#force_delete}
@@ -469,6 +745,37 @@ export function azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct?
     roll_instances_when_required: cdktf.booleanToTerraform(struct!.rollInstancesWhenRequired),
     scale_to_zero_before_deletion: cdktf.booleanToTerraform(struct!.scaleToZeroBeforeDeletion),
   }
+}
+
+
+export function azurermProviderFeaturesVirtualMachineScaleSetToHclTerraform(struct?: AzurermProviderFeaturesVirtualMachineScaleSet): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    force_delete: {
+      value: cdktf.booleanToHclTerraform(struct!.forceDelete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    roll_instances_when_required: {
+      value: cdktf.booleanToHclTerraform(struct!.rollInstancesWhenRequired),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    scale_to_zero_before_deletion: {
+      value: cdktf.booleanToHclTerraform(struct!.scaleToZeroBeforeDeletion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export interface AzurermProviderFeatures {
@@ -565,6 +872,91 @@ export function azurermProviderFeaturesToTerraform(struct?: AzurermProviderFeatu
     virtual_machine: azurermProviderFeaturesVirtualMachineToTerraform(struct!.virtualMachine),
     virtual_machine_scale_set: azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct!.virtualMachineScaleSet),
   }
+}
+
+
+export function azurermProviderFeaturesToHclTerraform(struct?: AzurermProviderFeatures): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    api_management: {
+      value: azurermProviderFeaturesApiManagementToHclTerraform(struct!.apiManagement),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AzurermProviderFeaturesApiManagementList",
+    },
+    app_configuration: {
+      value: azurermProviderFeaturesAppConfigurationToHclTerraform(struct!.appConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AzurermProviderFeaturesAppConfigurationList",
+    },
+    application_insights: {
+      value: azurermProviderFeaturesApplicationInsightsToHclTerraform(struct!.applicationInsights),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AzurermProviderFeaturesApplicationInsightsList",
+    },
+    cognitive_account: {
+      value: azurermProviderFeaturesCognitiveAccountToHclTerraform(struct!.cognitiveAccount),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AzurermProviderFeaturesCognitiveAccountList",
+    },
+    key_vault: {
+      value: azurermProviderFeaturesKeyVaultToHclTerraform(struct!.keyVault),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AzurermProviderFeaturesKeyVaultList",
+    },
+    log_analytics_workspace: {
+      value: azurermProviderFeaturesLogAnalyticsWorkspaceToHclTerraform(struct!.logAnalyticsWorkspace),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AzurermProviderFeaturesLogAnalyticsWorkspaceList",
+    },
+    managed_disk: {
+      value: azurermProviderFeaturesManagedDiskToHclTerraform(struct!.managedDisk),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AzurermProviderFeaturesManagedDiskList",
+    },
+    resource_group: {
+      value: azurermProviderFeaturesResourceGroupToHclTerraform(struct!.resourceGroup),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AzurermProviderFeaturesResourceGroupList",
+    },
+    subscription: {
+      value: azurermProviderFeaturesSubscriptionToHclTerraform(struct!.subscription),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AzurermProviderFeaturesSubscriptionList",
+    },
+    template_deployment: {
+      value: azurermProviderFeaturesTemplateDeploymentToHclTerraform(struct!.templateDeployment),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AzurermProviderFeaturesTemplateDeploymentList",
+    },
+    virtual_machine: {
+      value: azurermProviderFeaturesVirtualMachineToHclTerraform(struct!.virtualMachine),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AzurermProviderFeaturesVirtualMachineList",
+    },
+    virtual_machine_scale_set: {
+      value: azurermProviderFeaturesVirtualMachineScaleSetToHclTerraform(struct!.virtualMachineScaleSet),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AzurermProviderFeaturesVirtualMachineScaleSetList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 
@@ -1127,5 +1519,181 @@ export class AzurermProvider extends cdktf.TerraformProvider {
       alias: cdktf.stringToTerraform(this._alias),
       features: azurermProviderFeaturesToTerraform(this._features),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      auxiliary_tenant_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._auxiliaryTenantIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      client_certificate: {
+        value: cdktf.stringToHclTerraform(this._clientCertificate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_certificate_password: {
+        value: cdktf.stringToHclTerraform(this._clientCertificatePassword),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_certificate_path: {
+        value: cdktf.stringToHclTerraform(this._clientCertificatePath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_id: {
+        value: cdktf.stringToHclTerraform(this._clientId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_id_file_path: {
+        value: cdktf.stringToHclTerraform(this._clientIdFilePath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_secret: {
+        value: cdktf.stringToHclTerraform(this._clientSecret),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_secret_file_path: {
+        value: cdktf.stringToHclTerraform(this._clientSecretFilePath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disable_correlation_request_id: {
+        value: cdktf.booleanToHclTerraform(this._disableCorrelationRequestId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      disable_terraform_partner_id: {
+        value: cdktf.booleanToHclTerraform(this._disableTerraformPartnerId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      environment: {
+        value: cdktf.stringToHclTerraform(this._environment),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      metadata_host: {
+        value: cdktf.stringToHclTerraform(this._metadataHost),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      msi_endpoint: {
+        value: cdktf.stringToHclTerraform(this._msiEndpoint),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      oidc_request_token: {
+        value: cdktf.stringToHclTerraform(this._oidcRequestToken),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      oidc_request_url: {
+        value: cdktf.stringToHclTerraform(this._oidcRequestUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      oidc_token: {
+        value: cdktf.stringToHclTerraform(this._oidcToken),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      oidc_token_file_path: {
+        value: cdktf.stringToHclTerraform(this._oidcTokenFilePath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      partner_id: {
+        value: cdktf.stringToHclTerraform(this._partnerId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      skip_provider_registration: {
+        value: cdktf.booleanToHclTerraform(this._skipProviderRegistration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      storage_use_azuread: {
+        value: cdktf.booleanToHclTerraform(this._storageUseAzuread),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      subscription_id: {
+        value: cdktf.stringToHclTerraform(this._subscriptionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tenant_id: {
+        value: cdktf.stringToHclTerraform(this._tenantId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      use_aks_workload_identity: {
+        value: cdktf.booleanToHclTerraform(this._useAksWorkloadIdentity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      use_cli: {
+        value: cdktf.booleanToHclTerraform(this._useCli),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      use_msi: {
+        value: cdktf.booleanToHclTerraform(this._useMsi),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      use_oidc: {
+        value: cdktf.booleanToHclTerraform(this._useOidc),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      alias: {
+        value: cdktf.stringToHclTerraform(this._alias),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      features: {
+        value: azurermProviderFeaturesToHclTerraform(this._features),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AzurermProviderFeaturesList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

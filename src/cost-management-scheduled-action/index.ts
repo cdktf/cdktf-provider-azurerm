@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cost_management_scheduled_action
 // generated from terraform resource schema
 
@@ -112,6 +107,43 @@ export function costManagementScheduledActionTimeoutsToTerraform(struct?: CostMa
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function costManagementScheduledActionTimeoutsToHclTerraform(struct?: CostManagementScheduledActionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CostManagementScheduledActionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -564,5 +596,109 @@ export class CostManagementScheduledAction extends cdktf.TerraformResource {
       weeks_of_month: cdktf.listMapper(cdktf.stringToTerraform, false)(this._weeksOfMonth),
       timeouts: costManagementScheduledActionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      day_of_month: {
+        value: cdktf.numberToHclTerraform(this._dayOfMonth),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      days_of_week: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._daysOfWeek),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      email_address_sender: {
+        value: cdktf.stringToHclTerraform(this._emailAddressSender),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      email_addresses: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._emailAddresses),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      email_subject: {
+        value: cdktf.stringToHclTerraform(this._emailSubject),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      end_date: {
+        value: cdktf.stringToHclTerraform(this._endDate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      frequency: {
+        value: cdktf.stringToHclTerraform(this._frequency),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      hour_of_day: {
+        value: cdktf.numberToHclTerraform(this._hourOfDay),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      message: {
+        value: cdktf.stringToHclTerraform(this._message),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      start_date: {
+        value: cdktf.stringToHclTerraform(this._startDate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      view_id: {
+        value: cdktf.stringToHclTerraform(this._viewId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      weeks_of_month: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._weeksOfMonth),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      timeouts: {
+        value: costManagementScheduledActionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CostManagementScheduledActionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

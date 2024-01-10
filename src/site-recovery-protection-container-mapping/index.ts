@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/site_recovery_protection_container_mapping
 // generated from terraform resource schema
 
@@ -85,6 +80,37 @@ export function siteRecoveryProtectionContainerMappingAutomaticUpdateToTerraform
     automation_account_id: cdktf.stringToTerraform(struct!.automationAccountId),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
   }
+}
+
+
+export function siteRecoveryProtectionContainerMappingAutomaticUpdateToHclTerraform(struct?: SiteRecoveryProtectionContainerMappingAutomaticUpdateOutputReference | SiteRecoveryProtectionContainerMappingAutomaticUpdate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    authentication_type: {
+      value: cdktf.stringToHclTerraform(struct!.authenticationType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    automation_account_id: {
+      value: cdktf.stringToHclTerraform(struct!.automationAccountId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SiteRecoveryProtectionContainerMappingAutomaticUpdateOutputReference extends cdktf.ComplexObject {
@@ -209,6 +235,43 @@ export function siteRecoveryProtectionContainerMappingTimeoutsToTerraform(struct
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function siteRecoveryProtectionContainerMappingTimeoutsToHclTerraform(struct?: SiteRecoveryProtectionContainerMappingTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SiteRecoveryProtectionContainerMappingTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -559,5 +622,73 @@ export class SiteRecoveryProtectionContainerMapping extends cdktf.TerraformResou
       automatic_update: siteRecoveryProtectionContainerMappingAutomaticUpdateToTerraform(this._automaticUpdate.internalValue),
       timeouts: siteRecoveryProtectionContainerMappingTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      recovery_fabric_name: {
+        value: cdktf.stringToHclTerraform(this._recoveryFabricName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      recovery_replication_policy_id: {
+        value: cdktf.stringToHclTerraform(this._recoveryReplicationPolicyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      recovery_source_protection_container_name: {
+        value: cdktf.stringToHclTerraform(this._recoverySourceProtectionContainerName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      recovery_target_protection_container_id: {
+        value: cdktf.stringToHclTerraform(this._recoveryTargetProtectionContainerId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      recovery_vault_name: {
+        value: cdktf.stringToHclTerraform(this._recoveryVaultName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      automatic_update: {
+        value: siteRecoveryProtectionContainerMappingAutomaticUpdateToHclTerraform(this._automaticUpdate.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SiteRecoveryProtectionContainerMappingAutomaticUpdateList",
+      },
+      timeouts: {
+        value: siteRecoveryProtectionContainerMappingTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SiteRecoveryProtectionContainerMappingTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/virtual_desktop_host_pool
 // generated from terraform resource schema
 
@@ -110,6 +105,31 @@ export function virtualDesktopHostPoolScheduledAgentUpdatesScheduleToTerraform(s
     day_of_week: cdktf.stringToTerraform(struct!.dayOfWeek),
     hour_of_day: cdktf.numberToTerraform(struct!.hourOfDay),
   }
+}
+
+
+export function virtualDesktopHostPoolScheduledAgentUpdatesScheduleToHclTerraform(struct?: VirtualDesktopHostPoolScheduledAgentUpdatesSchedule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day_of_week: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeek),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    hour_of_day: {
+      value: cdktf.numberToHclTerraform(struct!.hourOfDay),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VirtualDesktopHostPoolScheduledAgentUpdatesScheduleOutputReference extends cdktf.ComplexObject {
@@ -240,6 +260,43 @@ export function virtualDesktopHostPoolScheduledAgentUpdatesToTerraform(struct?: 
     use_session_host_timezone: cdktf.booleanToTerraform(struct!.useSessionHostTimezone),
     schedule: cdktf.listMapper(virtualDesktopHostPoolScheduledAgentUpdatesScheduleToTerraform, true)(struct!.schedule),
   }
+}
+
+
+export function virtualDesktopHostPoolScheduledAgentUpdatesToHclTerraform(struct?: VirtualDesktopHostPoolScheduledAgentUpdatesOutputReference | VirtualDesktopHostPoolScheduledAgentUpdates): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    timezone: {
+      value: cdktf.stringToHclTerraform(struct!.timezone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    use_session_host_timezone: {
+      value: cdktf.booleanToHclTerraform(struct!.useSessionHostTimezone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    schedule: {
+      value: cdktf.listMapperHcl(virtualDesktopHostPoolScheduledAgentUpdatesScheduleToHclTerraform, true)(struct!.schedule),
+      isBlock: true,
+      type: "list",
+      storageClassType: "VirtualDesktopHostPoolScheduledAgentUpdatesScheduleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VirtualDesktopHostPoolScheduledAgentUpdatesOutputReference extends cdktf.ComplexObject {
@@ -386,6 +443,43 @@ export function virtualDesktopHostPoolTimeoutsToTerraform(struct?: VirtualDeskto
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function virtualDesktopHostPoolTimeoutsToHclTerraform(struct?: VirtualDesktopHostPoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VirtualDesktopHostPoolTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -868,5 +962,115 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
       scheduled_agent_updates: virtualDesktopHostPoolScheduledAgentUpdatesToTerraform(this._scheduledAgentUpdates.internalValue),
       timeouts: virtualDesktopHostPoolTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      custom_rdp_properties: {
+        value: cdktf.stringToHclTerraform(this._customRdpProperties),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      friendly_name: {
+        value: cdktf.stringToHclTerraform(this._friendlyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      load_balancer_type: {
+        value: cdktf.stringToHclTerraform(this._loadBalancerType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      maximum_sessions_allowed: {
+        value: cdktf.numberToHclTerraform(this._maximumSessionsAllowed),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      personal_desktop_assignment_type: {
+        value: cdktf.stringToHclTerraform(this._personalDesktopAssignmentType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      preferred_app_group_type: {
+        value: cdktf.stringToHclTerraform(this._preferredAppGroupType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      start_vm_on_connect: {
+        value: cdktf.booleanToHclTerraform(this._startVmOnConnect),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      type: {
+        value: cdktf.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      validate_environment: {
+        value: cdktf.booleanToHclTerraform(this._validateEnvironment),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      scheduled_agent_updates: {
+        value: virtualDesktopHostPoolScheduledAgentUpdatesToHclTerraform(this._scheduledAgentUpdates.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "VirtualDesktopHostPoolScheduledAgentUpdatesList",
+      },
+      timeouts: {
+        value: virtualDesktopHostPoolTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "VirtualDesktopHostPoolTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

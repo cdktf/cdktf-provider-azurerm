@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlelasticpool"
 
 mssqlelasticpool.NewMssqlElasticpool(scope Construct, id *string, config MssqlElasticpoolConfig) MssqlElasticpool
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -136,6 +137,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.toMetadata"></a>
 
@@ -473,7 +480,7 @@ func ResetZoneRedundant()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlelasticpool"
 
 mssqlelasticpool.MssqlElasticpool_IsConstruct(x interface{}) *bool
 ```
@@ -505,7 +512,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlelasticpool"
 
 mssqlelasticpool.MssqlElasticpool_IsTerraformElement(x interface{}) *bool
 ```
@@ -519,7 +526,7 @@ mssqlelasticpool.MssqlElasticpool_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlelasticpool"
 
 mssqlelasticpool.MssqlElasticpool_IsTerraformResource(x interface{}) *bool
 ```
@@ -533,7 +540,7 @@ mssqlelasticpool.MssqlElasticpool_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlelasticpool"
 
 mssqlelasticpool.MssqlElasticpool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1092,7 +1099,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlelasticpool"
 
 &mssqlelasticpool.MssqlElasticpoolConfig {
 	Connection: interface{},
@@ -1104,10 +1111,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
 	Provisioners: *[]interface{},
 	Location: *string,
 	Name: *string,
-	PerDatabaseSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlElasticpool.MssqlElasticpoolPerDatabaseSettings,
+	PerDatabaseSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlElasticpool.MssqlElasticpoolPerDatabaseSettings,
 	ResourceGroupName: *string,
 	ServerName: *string,
-	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlElasticpool.MssqlElasticpoolSku,
+	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlElasticpool.MssqlElasticpoolSku,
 	EnclaveType: *string,
 	Id: *string,
 	LicenseType: *string,
@@ -1115,7 +1122,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
 	MaxSizeBytes: *f64,
 	MaxSizeGb: *f64,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlElasticpool.MssqlElasticpoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlElasticpool.MssqlElasticpoolTimeouts,
 	ZoneRedundant: interface{},
 }
 ```
@@ -1413,7 +1420,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpoolPerDatabaseSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlelasticpool"
 
 &mssqlelasticpool.MssqlElasticpoolPerDatabaseSettings {
 	MaxCapacity: *f64,
@@ -1459,7 +1466,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpoolSku.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlelasticpool"
 
 &mssqlelasticpool.MssqlElasticpoolSku {
 	Capacity: *f64,
@@ -1533,7 +1540,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlelasticpool"
 
 &mssqlelasticpool.MssqlElasticpoolTimeouts {
 	Create: *string,
@@ -1609,7 +1616,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpoolPerDatabaseSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlelasticpool"
 
 mssqlelasticpool.NewMssqlElasticpoolPerDatabaseSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlElasticpoolPerDatabaseSettingsOutputReference
 ```
@@ -1902,7 +1909,7 @@ func InternalValue() MssqlElasticpoolPerDatabaseSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpoolSkuOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlelasticpool"
 
 mssqlelasticpool.NewMssqlElasticpoolSkuOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlElasticpoolSkuOutputReference
 ```
@@ -2246,7 +2253,7 @@ func InternalValue() MssqlElasticpoolSku
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlElasticpool.MssqlElasticpoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlelasticpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlelasticpool"
 
 mssqlelasticpool.NewMssqlElasticpoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlElasticpoolTimeoutsOutputReference
 ```

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/monitor_action_group
 // generated from terraform resource schema
 
@@ -44,6 +39,17 @@ export function dataAzurermMonitorActionGroupArmRoleReceiverToTerraform(struct?:
   }
   return {
   }
+}
+
+
+export function dataAzurermMonitorActionGroupArmRoleReceiverToHclTerraform(struct?: DataAzurermMonitorActionGroupArmRoleReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermMonitorActionGroupArmRoleReceiverOutputReference extends cdktf.ComplexObject {
@@ -118,6 +124,17 @@ export function dataAzurermMonitorActionGroupAutomationRunbookReceiverToTerrafor
   }
   return {
   }
+}
+
+
+export function dataAzurermMonitorActionGroupAutomationRunbookReceiverToHclTerraform(struct?: DataAzurermMonitorActionGroupAutomationRunbookReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermMonitorActionGroupAutomationRunbookReceiverOutputReference extends cdktf.ComplexObject {
@@ -214,6 +231,17 @@ export function dataAzurermMonitorActionGroupAzureAppPushReceiverToTerraform(str
   }
 }
 
+
+export function dataAzurermMonitorActionGroupAzureAppPushReceiverToHclTerraform(struct?: DataAzurermMonitorActionGroupAzureAppPushReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermMonitorActionGroupAzureAppPushReceiverOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -281,6 +309,17 @@ export function dataAzurermMonitorActionGroupAzureFunctionReceiverToTerraform(st
   }
   return {
   }
+}
+
+
+export function dataAzurermMonitorActionGroupAzureFunctionReceiverToHclTerraform(struct?: DataAzurermMonitorActionGroupAzureFunctionReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermMonitorActionGroupAzureFunctionReceiverOutputReference extends cdktf.ComplexObject {
@@ -367,6 +406,17 @@ export function dataAzurermMonitorActionGroupEmailReceiverToTerraform(struct?: D
   }
 }
 
+
+export function dataAzurermMonitorActionGroupEmailReceiverToHclTerraform(struct?: DataAzurermMonitorActionGroupEmailReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermMonitorActionGroupEmailReceiverOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -439,6 +489,17 @@ export function dataAzurermMonitorActionGroupEventHubReceiverToTerraform(struct?
   }
   return {
   }
+}
+
+
+export function dataAzurermMonitorActionGroupEventHubReceiverToHclTerraform(struct?: DataAzurermMonitorActionGroupEventHubReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermMonitorActionGroupEventHubReceiverOutputReference extends cdktf.ComplexObject {
@@ -535,6 +596,17 @@ export function dataAzurermMonitorActionGroupItsmReceiverToTerraform(struct?: Da
   }
 }
 
+
+export function dataAzurermMonitorActionGroupItsmReceiverToHclTerraform(struct?: DataAzurermMonitorActionGroupItsmReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermMonitorActionGroupItsmReceiverOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -619,6 +691,17 @@ export function dataAzurermMonitorActionGroupLogicAppReceiverToTerraform(struct?
   }
 }
 
+
+export function dataAzurermMonitorActionGroupLogicAppReceiverToHclTerraform(struct?: DataAzurermMonitorActionGroupLogicAppReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermMonitorActionGroupLogicAppReceiverOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -698,6 +781,17 @@ export function dataAzurermMonitorActionGroupSmsReceiverToTerraform(struct?: Dat
   }
 }
 
+
+export function dataAzurermMonitorActionGroupSmsReceiverToHclTerraform(struct?: DataAzurermMonitorActionGroupSmsReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermMonitorActionGroupSmsReceiverOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -770,6 +864,17 @@ export function dataAzurermMonitorActionGroupVoiceReceiverToTerraform(struct?: D
   }
   return {
   }
+}
+
+
+export function dataAzurermMonitorActionGroupVoiceReceiverToHclTerraform(struct?: DataAzurermMonitorActionGroupVoiceReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermMonitorActionGroupVoiceReceiverOutputReference extends cdktf.ComplexObject {
@@ -846,6 +951,17 @@ export function dataAzurermMonitorActionGroupWebhookReceiverAadAuthToTerraform(s
   }
 }
 
+
+export function dataAzurermMonitorActionGroupWebhookReceiverAadAuthToHclTerraform(struct?: DataAzurermMonitorActionGroupWebhookReceiverAadAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermMonitorActionGroupWebhookReceiverAadAuthOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -918,6 +1034,17 @@ export function dataAzurermMonitorActionGroupWebhookReceiverToTerraform(struct?:
   }
   return {
   }
+}
+
+
+export function dataAzurermMonitorActionGroupWebhookReceiverToHclTerraform(struct?: DataAzurermMonitorActionGroupWebhookReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermMonitorActionGroupWebhookReceiverOutputReference extends cdktf.ComplexObject {
@@ -1003,6 +1130,25 @@ export function dataAzurermMonitorActionGroupTimeoutsToTerraform(struct?: DataAz
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermMonitorActionGroupTimeoutsToHclTerraform(struct?: DataAzurermMonitorActionGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermMonitorActionGroupTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1270,5 +1416,37 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermMonitorActionGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermMonitorActionGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermMonitorActionGroupTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

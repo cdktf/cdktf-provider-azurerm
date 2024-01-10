@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebustopic"
 
 iothubendpointservicebustopic.NewIothubEndpointServicebusTopic(scope Construct, id *string, config IothubEndpointServicebusTopicConfig) IothubEndpointServicebusTopic
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -132,6 +133,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.toMetadata"></a>
 
@@ -433,7 +440,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebustopic"
 
 iothubendpointservicebustopic.IothubEndpointServicebusTopic_IsConstruct(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebustopic"
 
 iothubendpointservicebustopic.IothubEndpointServicebusTopic_IsTerraformElement(x interface{}) *bool
 ```
@@ -479,7 +486,7 @@ iothubendpointservicebustopic.IothubEndpointServicebusTopic_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebustopic"
 
 iothubendpointservicebustopic.IothubEndpointServicebusTopic_IsTerraformResource(x interface{}) *bool
 ```
@@ -493,7 +500,7 @@ iothubendpointservicebustopic.IothubEndpointServicebusTopic_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopic.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebustopic"
 
 iothubendpointservicebustopic.IothubEndpointServicebusTopic_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -942,7 +949,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopicConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebustopic"
 
 &iothubendpointservicebustopic.IothubEndpointServicebusTopicConfig {
 	Connection: interface{},
@@ -961,7 +968,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointser
 	EntityPath: *string,
 	Id: *string,
 	IdentityId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.iothubEndpointServicebusTopic.IothubEndpointServicebusTopicTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopicTimeouts,
 }
 ```
 
@@ -1189,7 +1196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopicTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebustopic"
 
 &iothubendpointservicebustopic.IothubEndpointServicebusTopicTimeouts {
 	Create: *string,
@@ -1265,7 +1272,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubEndpointServicebusTopic.IothubEndpointServicebusTopicTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebustopic"
 
 iothubendpointservicebustopic.NewIothubEndpointServicebusTopicTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubEndpointServicebusTopicTimeoutsOutputReference
 ```

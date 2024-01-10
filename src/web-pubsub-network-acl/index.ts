@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/web_pubsub_network_acl
 // generated from terraform resource schema
 
@@ -74,6 +69,37 @@ export function webPubsubNetworkAclPrivateEndpointToTerraform(struct?: WebPubsub
     denied_request_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.deniedRequestTypes),
     id: cdktf.stringToTerraform(struct!.id),
   }
+}
+
+
+export function webPubsubNetworkAclPrivateEndpointToHclTerraform(struct?: WebPubsubNetworkAclPrivateEndpoint | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_request_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedRequestTypes),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    denied_request_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.deniedRequestTypes),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class WebPubsubNetworkAclPrivateEndpointOutputReference extends cdktf.ComplexObject {
@@ -219,6 +245,31 @@ export function webPubsubNetworkAclPublicNetworkToTerraform(struct?: WebPubsubNe
   }
 }
 
+
+export function webPubsubNetworkAclPublicNetworkToHclTerraform(struct?: WebPubsubNetworkAclPublicNetworkOutputReference | WebPubsubNetworkAclPublicNetwork): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_request_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedRequestTypes),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    denied_request_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.deniedRequestTypes),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class WebPubsubNetworkAclPublicNetworkOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -319,6 +370,43 @@ export function webPubsubNetworkAclTimeoutsToTerraform(struct?: WebPubsubNetwork
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function webPubsubNetworkAclTimeoutsToHclTerraform(struct?: WebPubsubNetworkAclTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class WebPubsubNetworkAclTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -612,5 +700,49 @@ export class WebPubsubNetworkAcl extends cdktf.TerraformResource {
       public_network: webPubsubNetworkAclPublicNetworkToTerraform(this._publicNetwork.internalValue),
       timeouts: webPubsubNetworkAclTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      default_action: {
+        value: cdktf.stringToHclTerraform(this._defaultAction),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      web_pubsub_id: {
+        value: cdktf.stringToHclTerraform(this._webPubsubId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      private_endpoint: {
+        value: cdktf.listMapperHcl(webPubsubNetworkAclPrivateEndpointToHclTerraform, true)(this._privateEndpoint.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "WebPubsubNetworkAclPrivateEndpointList",
+      },
+      public_network: {
+        value: webPubsubNetworkAclPublicNetworkToHclTerraform(this._publicNetwork.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "WebPubsubNetworkAclPublicNetworkList",
+      },
+      timeouts: {
+        value: webPubsubNetworkAclTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "WebPubsubNetworkAclTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

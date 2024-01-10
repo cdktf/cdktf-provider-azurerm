@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/container_registry_token_password
 // generated from terraform resource schema
 
@@ -57,6 +52,25 @@ export function containerRegistryTokenPasswordPassword1ToTerraform(struct?: Cont
   return {
     expiry: cdktf.stringToTerraform(struct!.expiry),
   }
+}
+
+
+export function containerRegistryTokenPasswordPassword1ToHclTerraform(struct?: ContainerRegistryTokenPasswordPassword1OutputReference | ContainerRegistryTokenPasswordPassword1): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    expiry: {
+      value: cdktf.stringToHclTerraform(struct!.expiry),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ContainerRegistryTokenPasswordPassword1OutputReference extends cdktf.ComplexObject {
@@ -127,6 +141,25 @@ export function containerRegistryTokenPasswordPassword2ToTerraform(struct?: Cont
   return {
     expiry: cdktf.stringToTerraform(struct!.expiry),
   }
+}
+
+
+export function containerRegistryTokenPasswordPassword2ToHclTerraform(struct?: ContainerRegistryTokenPasswordPassword2OutputReference | ContainerRegistryTokenPasswordPassword2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    expiry: {
+      value: cdktf.stringToHclTerraform(struct!.expiry),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ContainerRegistryTokenPasswordPassword2OutputReference extends cdktf.ComplexObject {
@@ -212,6 +245,43 @@ export function containerRegistryTokenPasswordTimeoutsToTerraform(struct?: Conta
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function containerRegistryTokenPasswordTimeoutsToHclTerraform(struct?: ContainerRegistryTokenPasswordTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ContainerRegistryTokenPasswordTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -487,5 +557,43 @@ export class ContainerRegistryTokenPassword extends cdktf.TerraformResource {
       password2: containerRegistryTokenPasswordPassword2ToTerraform(this._password2.internalValue),
       timeouts: containerRegistryTokenPasswordTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      container_registry_token_id: {
+        value: cdktf.stringToHclTerraform(this._containerRegistryTokenId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      password1: {
+        value: containerRegistryTokenPasswordPassword1ToHclTerraform(this._password1.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ContainerRegistryTokenPasswordPassword1List",
+      },
+      password2: {
+        value: containerRegistryTokenPasswordPassword2ToHclTerraform(this._password2.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ContainerRegistryTokenPasswordPassword2List",
+      },
+      timeouts: {
+        value: containerRegistryTokenPasswordTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ContainerRegistryTokenPasswordTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

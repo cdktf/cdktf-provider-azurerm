@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/servicebus_namespace
 // generated from terraform resource schema
 
@@ -109,6 +104,37 @@ export function servicebusNamespaceCustomerManagedKeyToTerraform(struct?: Servic
     infrastructure_encryption_enabled: cdktf.booleanToTerraform(struct!.infrastructureEncryptionEnabled),
     key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
   }
+}
+
+
+export function servicebusNamespaceCustomerManagedKeyToHclTerraform(struct?: ServicebusNamespaceCustomerManagedKeyOutputReference | ServicebusNamespaceCustomerManagedKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_id: {
+      value: cdktf.stringToHclTerraform(struct!.identityId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    infrastructure_encryption_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.infrastructureEncryptionEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    key_vault_key_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ServicebusNamespaceCustomerManagedKeyOutputReference extends cdktf.ComplexObject {
@@ -219,6 +245,31 @@ export function servicebusNamespaceIdentityToTerraform(struct?: ServicebusNamesp
   }
 }
 
+
+export function servicebusNamespaceIdentityToHclTerraform(struct?: ServicebusNamespaceIdentityOutputReference | ServicebusNamespaceIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ServicebusNamespaceIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -316,6 +367,31 @@ export function servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform(struct?
     ignore_missing_vnet_service_endpoint: cdktf.booleanToTerraform(struct!.ignoreMissingVnetServiceEndpoint),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
   }
+}
+
+
+export function servicebusNamespaceNetworkRuleSetNetworkRulesToHclTerraform(struct?: ServicebusNamespaceNetworkRuleSetNetworkRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ignore_missing_vnet_service_endpoint: {
+      value: cdktf.booleanToHclTerraform(struct!.ignoreMissingVnetServiceEndpoint),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference extends cdktf.ComplexObject {
@@ -454,6 +530,49 @@ export function servicebusNamespaceNetworkRuleSetToTerraform(struct?: Servicebus
     trusted_services_allowed: cdktf.booleanToTerraform(struct!.trustedServicesAllowed),
     network_rules: cdktf.listMapper(servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform, true)(struct!.networkRules),
   }
+}
+
+
+export function servicebusNamespaceNetworkRuleSetToHclTerraform(struct?: ServicebusNamespaceNetworkRuleSetOutputReference | ServicebusNamespaceNetworkRuleSet): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_action: {
+      value: cdktf.stringToHclTerraform(struct!.defaultAction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ip_rules: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.ipRules),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    public_network_access_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.publicNetworkAccessEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    trusted_services_allowed: {
+      value: cdktf.booleanToHclTerraform(struct!.trustedServicesAllowed),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    network_rules: {
+      value: cdktf.listMapperHcl(servicebusNamespaceNetworkRuleSetNetworkRulesToHclTerraform, true)(struct!.networkRules),
+      isBlock: true,
+      type: "set",
+      storageClassType: "ServicebusNamespaceNetworkRuleSetNetworkRulesList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ServicebusNamespaceNetworkRuleSetOutputReference extends cdktf.ComplexObject {
@@ -622,6 +741,43 @@ export function servicebusNamespaceTimeoutsToTerraform(struct?: ServicebusNamesp
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function servicebusNamespaceTimeoutsToHclTerraform(struct?: ServicebusNamespaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ServicebusNamespaceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1096,5 +1252,103 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
       network_rule_set: servicebusNamespaceNetworkRuleSetToTerraform(this._networkRuleSet.internalValue),
       timeouts: servicebusNamespaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      capacity: {
+        value: cdktf.numberToHclTerraform(this._capacity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      local_auth_enabled: {
+        value: cdktf.booleanToHclTerraform(this._localAuthEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      minimum_tls_version: {
+        value: cdktf.stringToHclTerraform(this._minimumTlsVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku: {
+        value: cdktf.stringToHclTerraform(this._sku),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      zone_redundant: {
+        value: cdktf.booleanToHclTerraform(this._zoneRedundant),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      customer_managed_key: {
+        value: servicebusNamespaceCustomerManagedKeyToHclTerraform(this._customerManagedKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ServicebusNamespaceCustomerManagedKeyList",
+      },
+      identity: {
+        value: servicebusNamespaceIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ServicebusNamespaceIdentityList",
+      },
+      network_rule_set: {
+        value: servicebusNamespaceNetworkRuleSetToHclTerraform(this._networkRuleSet.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ServicebusNamespaceNetworkRuleSetList",
+      },
+      timeouts: {
+        value: servicebusNamespaceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ServicebusNamespaceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/private_dns_resolver_inbound_endpoint
 // generated from terraform resource schema
 
@@ -68,6 +63,31 @@ export function privateDnsResolverInboundEndpointIpConfigurationsToTerraform(str
     private_ip_allocation_method: cdktf.stringToTerraform(struct!.privateIpAllocationMethod),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
   }
+}
+
+
+export function privateDnsResolverInboundEndpointIpConfigurationsToHclTerraform(struct?: PrivateDnsResolverInboundEndpointIpConfigurations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    private_ip_allocation_method: {
+      value: cdktf.stringToHclTerraform(struct!.privateIpAllocationMethod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivateDnsResolverInboundEndpointIpConfigurationsOutputReference extends cdktf.ComplexObject {
@@ -204,6 +224,43 @@ export function privateDnsResolverInboundEndpointTimeoutsToTerraform(struct?: Pr
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function privateDnsResolverInboundEndpointTimeoutsToHclTerraform(struct?: PrivateDnsResolverInboundEndpointTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivateDnsResolverInboundEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -509,5 +566,55 @@ export class PrivateDnsResolverInboundEndpoint extends cdktf.TerraformResource {
       ip_configurations: cdktf.listMapper(privateDnsResolverInboundEndpointIpConfigurationsToTerraform, true)(this._ipConfigurations.internalValue),
       timeouts: privateDnsResolverInboundEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      private_dns_resolver_id: {
+        value: cdktf.stringToHclTerraform(this._privateDnsResolverId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      ip_configurations: {
+        value: cdktf.listMapperHcl(privateDnsResolverInboundEndpointIpConfigurationsToHclTerraform, true)(this._ipConfigurations.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PrivateDnsResolverInboundEndpointIpConfigurationsList",
+      },
+      timeouts: {
+        value: privateDnsResolverInboundEndpointTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "PrivateDnsResolverInboundEndpointTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

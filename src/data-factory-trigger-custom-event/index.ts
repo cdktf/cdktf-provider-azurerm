@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_factory_trigger_custom_event
 // generated from terraform resource schema
 
@@ -92,6 +87,31 @@ export function dataFactoryTriggerCustomEventPipelineToTerraform(struct?: DataFa
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
   }
+}
+
+
+export function dataFactoryTriggerCustomEventPipelineToHclTerraform(struct?: DataFactoryTriggerCustomEventPipeline | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryTriggerCustomEventPipelineOutputReference extends cdktf.ComplexObject {
@@ -223,6 +243,43 @@ export function dataFactoryTriggerCustomEventTimeoutsToTerraform(struct?: DataFa
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dataFactoryTriggerCustomEventTimeoutsToHclTerraform(struct?: DataFactoryTriggerCustomEventTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryTriggerCustomEventTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -633,5 +690,91 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
       pipeline: cdktf.listMapper(dataFactoryTriggerCustomEventPipelineToTerraform, true)(this._pipeline.internalValue),
       timeouts: dataFactoryTriggerCustomEventTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      activated: {
+        value: cdktf.booleanToHclTerraform(this._activated),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      additional_properties: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._additionalProperties),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      annotations: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._annotations),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      data_factory_id: {
+        value: cdktf.stringToHclTerraform(this._dataFactoryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      eventgrid_topic_id: {
+        value: cdktf.stringToHclTerraform(this._eventgridTopicId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      events: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._events),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subject_begins_with: {
+        value: cdktf.stringToHclTerraform(this._subjectBeginsWith),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subject_ends_with: {
+        value: cdktf.stringToHclTerraform(this._subjectEndsWith),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pipeline: {
+        value: cdktf.listMapperHcl(dataFactoryTriggerCustomEventPipelineToHclTerraform, true)(this._pipeline.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "DataFactoryTriggerCustomEventPipelineList",
+      },
+      timeouts: {
+        value: dataFactoryTriggerCustomEventTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataFactoryTriggerCustomEventTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

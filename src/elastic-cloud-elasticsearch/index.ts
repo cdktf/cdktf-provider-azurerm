@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/elastic_cloud_elasticsearch
 // generated from terraform resource schema
 
@@ -85,6 +80,37 @@ export function elasticCloudElasticsearchLogsFilteringTagToTerraform(struct?: El
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function elasticCloudElasticsearchLogsFilteringTagToHclTerraform(struct?: ElasticCloudElasticsearchLogsFilteringTag | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ElasticCloudElasticsearchLogsFilteringTagOutputReference extends cdktf.ComplexObject {
@@ -236,6 +262,43 @@ export function elasticCloudElasticsearchLogsToTerraform(struct?: ElasticCloudEl
   }
 }
 
+
+export function elasticCloudElasticsearchLogsToHclTerraform(struct?: ElasticCloudElasticsearchLogsOutputReference | ElasticCloudElasticsearchLogs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    send_activity_logs: {
+      value: cdktf.booleanToHclTerraform(struct!.sendActivityLogs),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    send_azuread_logs: {
+      value: cdktf.booleanToHclTerraform(struct!.sendAzureadLogs),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    send_subscription_logs: {
+      value: cdktf.booleanToHclTerraform(struct!.sendSubscriptionLogs),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    filtering_tag: {
+      value: cdktf.listMapperHcl(elasticCloudElasticsearchLogsFilteringTagToHclTerraform, true)(struct!.filteringTag),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ElasticCloudElasticsearchLogsFilteringTagList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ElasticCloudElasticsearchLogsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -380,6 +443,43 @@ export function elasticCloudElasticsearchTimeoutsToTerraform(struct?: ElasticClo
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function elasticCloudElasticsearchTimeoutsToHclTerraform(struct?: ElasticCloudElasticsearchTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ElasticCloudElasticsearchTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -766,5 +866,73 @@ export class ElasticCloudElasticsearch extends cdktf.TerraformResource {
       logs: elasticCloudElasticsearchLogsToTerraform(this._logs.internalValue),
       timeouts: elasticCloudElasticsearchTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      elastic_cloud_email_address: {
+        value: cdktf.stringToHclTerraform(this._elasticCloudEmailAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      monitoring_enabled: {
+        value: cdktf.booleanToHclTerraform(this._monitoringEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku_name: {
+        value: cdktf.stringToHclTerraform(this._skuName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      logs: {
+        value: elasticCloudElasticsearchLogsToHclTerraform(this._logs.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ElasticCloudElasticsearchLogsList",
+      },
+      timeouts: {
+        value: elasticCloudElasticsearchTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ElasticCloudElasticsearchTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

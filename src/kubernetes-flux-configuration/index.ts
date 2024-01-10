@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/kubernetes_flux_configuration
 // generated from terraform resource schema
 
@@ -85,6 +80,25 @@ export function kubernetesFluxConfigurationBlobStorageManagedIdentityToTerraform
   return {
     client_id: cdktf.stringToTerraform(struct!.clientId),
   }
+}
+
+
+export function kubernetesFluxConfigurationBlobStorageManagedIdentityToHclTerraform(struct?: KubernetesFluxConfigurationBlobStorageManagedIdentityOutputReference | KubernetesFluxConfigurationBlobStorageManagedIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    client_id: {
+      value: cdktf.stringToHclTerraform(struct!.clientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KubernetesFluxConfigurationBlobStorageManagedIdentityOutputReference extends cdktf.ComplexObject {
@@ -172,6 +186,55 @@ export function kubernetesFluxConfigurationBlobStorageServicePrincipalToTerrafor
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     tenant_id: cdktf.stringToTerraform(struct!.tenantId),
   }
+}
+
+
+export function kubernetesFluxConfigurationBlobStorageServicePrincipalToHclTerraform(struct?: KubernetesFluxConfigurationBlobStorageServicePrincipalOutputReference | KubernetesFluxConfigurationBlobStorageServicePrincipal): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    client_certificate_base64: {
+      value: cdktf.stringToHclTerraform(struct!.clientCertificateBase64),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.clientCertificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_certificate_send_chain: {
+      value: cdktf.booleanToHclTerraform(struct!.clientCertificateSendChain),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    client_id: {
+      value: cdktf.stringToHclTerraform(struct!.clientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_secret: {
+      value: cdktf.stringToHclTerraform(struct!.clientSecret),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tenant_id: {
+      value: cdktf.stringToHclTerraform(struct!.tenantId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KubernetesFluxConfigurationBlobStorageServicePrincipalOutputReference extends cdktf.ComplexObject {
@@ -380,6 +443,67 @@ export function kubernetesFluxConfigurationBlobStorageToTerraform(struct?: Kuber
     managed_identity: kubernetesFluxConfigurationBlobStorageManagedIdentityToTerraform(struct!.managedIdentity),
     service_principal: kubernetesFluxConfigurationBlobStorageServicePrincipalToTerraform(struct!.servicePrincipal),
   }
+}
+
+
+export function kubernetesFluxConfigurationBlobStorageToHclTerraform(struct?: KubernetesFluxConfigurationBlobStorageOutputReference | KubernetesFluxConfigurationBlobStorage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    account_key: {
+      value: cdktf.stringToHclTerraform(struct!.accountKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    container_id: {
+      value: cdktf.stringToHclTerraform(struct!.containerId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    local_auth_reference: {
+      value: cdktf.stringToHclTerraform(struct!.localAuthReference),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sas_token: {
+      value: cdktf.stringToHclTerraform(struct!.sasToken),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sync_interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.syncIntervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.timeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    managed_identity: {
+      value: kubernetesFluxConfigurationBlobStorageManagedIdentityToHclTerraform(struct!.managedIdentity),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KubernetesFluxConfigurationBlobStorageManagedIdentityList",
+    },
+    service_principal: {
+      value: kubernetesFluxConfigurationBlobStorageServicePrincipalToHclTerraform(struct!.servicePrincipal),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KubernetesFluxConfigurationBlobStorageServicePrincipalList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KubernetesFluxConfigurationBlobStorageOutputReference extends cdktf.ComplexObject {
@@ -631,6 +755,67 @@ export function kubernetesFluxConfigurationBucketToTerraform(struct?: Kubernetes
     tls_enabled: cdktf.booleanToTerraform(struct!.tlsEnabled),
     url: cdktf.stringToTerraform(struct!.url),
   }
+}
+
+
+export function kubernetesFluxConfigurationBucketToHclTerraform(struct?: KubernetesFluxConfigurationBucketOutputReference | KubernetesFluxConfigurationBucket): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    access_key: {
+      value: cdktf.stringToHclTerraform(struct!.accessKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    bucket_name: {
+      value: cdktf.stringToHclTerraform(struct!.bucketName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    local_auth_reference: {
+      value: cdktf.stringToHclTerraform(struct!.localAuthReference),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    secret_key_base64: {
+      value: cdktf.stringToHclTerraform(struct!.secretKeyBase64),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sync_interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.syncIntervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.timeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    tls_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tlsEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KubernetesFluxConfigurationBucketOutputReference extends cdktf.ComplexObject {
@@ -894,6 +1079,85 @@ export function kubernetesFluxConfigurationGitRepositoryToTerraform(struct?: Kub
     timeout_in_seconds: cdktf.numberToTerraform(struct!.timeoutInSeconds),
     url: cdktf.stringToTerraform(struct!.url),
   }
+}
+
+
+export function kubernetesFluxConfigurationGitRepositoryToHclTerraform(struct?: KubernetesFluxConfigurationGitRepositoryOutputReference | KubernetesFluxConfigurationGitRepository): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    https_ca_cert_base64: {
+      value: cdktf.stringToHclTerraform(struct!.httpsCaCertBase64),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    https_key_base64: {
+      value: cdktf.stringToHclTerraform(struct!.httpsKeyBase64),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    https_user: {
+      value: cdktf.stringToHclTerraform(struct!.httpsUser),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    local_auth_reference: {
+      value: cdktf.stringToHclTerraform(struct!.localAuthReference),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    reference_type: {
+      value: cdktf.stringToHclTerraform(struct!.referenceType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    reference_value: {
+      value: cdktf.stringToHclTerraform(struct!.referenceValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssh_known_hosts_base64: {
+      value: cdktf.stringToHclTerraform(struct!.sshKnownHostsBase64),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssh_private_key_base64: {
+      value: cdktf.stringToHclTerraform(struct!.sshPrivateKeyBase64),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sync_interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.syncIntervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.timeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KubernetesFluxConfigurationGitRepositoryOutputReference extends cdktf.ComplexObject {
@@ -1207,6 +1471,67 @@ export function kubernetesFluxConfigurationKustomizationsToTerraform(struct?: Ku
   }
 }
 
+
+export function kubernetesFluxConfigurationKustomizationsToHclTerraform(struct?: KubernetesFluxConfigurationKustomizations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    depends_on: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.dependsOn),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    garbage_collection_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.garbageCollectionEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    recreating_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.recreatingEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    retry_interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.retryIntervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    sync_interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.syncIntervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.timeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KubernetesFluxConfigurationKustomizationsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1468,6 +1793,43 @@ export function kubernetesFluxConfigurationTimeoutsToTerraform(struct?: Kubernet
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function kubernetesFluxConfigurationTimeoutsToHclTerraform(struct?: KubernetesFluxConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KubernetesFluxConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1845,5 +2207,79 @@ export class KubernetesFluxConfiguration extends cdktf.TerraformResource {
       kustomizations: cdktf.listMapper(kubernetesFluxConfigurationKustomizationsToTerraform, true)(this._kustomizations.internalValue),
       timeouts: kubernetesFluxConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cluster_id: {
+        value: cdktf.stringToHclTerraform(this._clusterId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      continuous_reconciliation_enabled: {
+        value: cdktf.booleanToHclTerraform(this._continuousReconciliationEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      namespace: {
+        value: cdktf.stringToHclTerraform(this._namespace),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scope: {
+        value: cdktf.stringToHclTerraform(this._scope),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      blob_storage: {
+        value: kubernetesFluxConfigurationBlobStorageToHclTerraform(this._blobStorage.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KubernetesFluxConfigurationBlobStorageList",
+      },
+      bucket: {
+        value: kubernetesFluxConfigurationBucketToHclTerraform(this._bucket.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KubernetesFluxConfigurationBucketList",
+      },
+      git_repository: {
+        value: kubernetesFluxConfigurationGitRepositoryToHclTerraform(this._gitRepository.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KubernetesFluxConfigurationGitRepositoryList",
+      },
+      kustomizations: {
+        value: cdktf.listMapperHcl(kubernetesFluxConfigurationKustomizationsToHclTerraform, true)(this._kustomizations.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "KubernetesFluxConfigurationKustomizationsList",
+      },
+      timeouts: {
+        value: kubernetesFluxConfigurationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "KubernetesFluxConfigurationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

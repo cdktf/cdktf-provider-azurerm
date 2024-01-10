@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappactiveslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappactiveslot"
 
 functionappactiveslot.NewFunctionAppActiveSlot(scope Construct, id *string, config FunctionAppActiveSlotConfig) FunctionAppActiveSlot
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.toMetadata"></a>
 
@@ -405,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappactiveslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappactiveslot"
 
 functionappactiveslot.FunctionAppActiveSlot_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappactiveslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappactiveslot"
 
 functionappactiveslot.FunctionAppActiveSlot_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ functionappactiveslot.FunctionAppActiveSlot_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappactiveslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappactiveslot"
 
 functionappactiveslot.FunctionAppActiveSlot_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ functionappactiveslot.FunctionAppActiveSlot_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappactiveslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappactiveslot"
 
 functionappactiveslot.FunctionAppActiveSlot_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -793,7 +800,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappactiveslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappactiveslot"
 
 &functionappactiveslot.FunctionAppActiveSlotConfig {
 	Connection: interface{},
@@ -806,7 +813,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappactive
 	SlotId: *string,
 	Id: *string,
 	OverwriteNetworkConfig: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionAppActiveSlot.FunctionAppActiveSlotTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionAppActiveSlot.FunctionAppActiveSlotTimeouts,
 }
 ```
 
@@ -960,7 +967,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappactiveslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappactiveslot"
 
 &functionappactiveslot.FunctionAppActiveSlotTimeouts {
 	Create: *string,
@@ -1036,7 +1043,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappactiveslot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappactiveslot"
 
 functionappactiveslot.NewFunctionAppActiveSlotTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppActiveSlotTimeoutsOutputReference
 ```

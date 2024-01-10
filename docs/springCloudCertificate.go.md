@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcertificate"
 
 springcloudcertificate.NewSpringCloudCertificate(scope Construct, id *string, config SpringCloudCertificateConfig) SpringCloudCertificate
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.toMetadata"></a>
 
@@ -419,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcertificate"
 
 springcloudcertificate.SpringCloudCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcertificate"
 
 springcloudcertificate.SpringCloudCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ springcloudcertificate.SpringCloudCertificate_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcertificate"
 
 springcloudcertificate.SpringCloudCertificate_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +486,7 @@ springcloudcertificate.SpringCloudCertificate_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcertificate"
 
 springcloudcertificate.SpringCloudCertificate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -895,7 +902,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcertificate"
 
 &springcloudcertificate.SpringCloudCertificateConfig {
 	Connection: interface{},
@@ -912,7 +919,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcertif
 	ExcludePrivateKey: interface{},
 	Id: *string,
 	KeyVaultCertificateId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudCertificate.SpringCloudCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudCertificate.SpringCloudCertificateTimeouts,
 }
 ```
 
@@ -1114,7 +1121,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcertificate"
 
 &springcloudcertificate.SpringCloudCertificateTimeouts {
 	Create: *string,
@@ -1176,7 +1183,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudCertificate.SpringCloudCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcertificate"
 
 springcloudcertificate.NewSpringCloudCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudCertificateTimeoutsOutputReference
 ```

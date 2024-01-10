@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/policy_set_definition
 // generated from terraform resource schema
 
@@ -101,6 +96,49 @@ export function policySetDefinitionPolicyDefinitionGroupToTerraform(struct?: Pol
     display_name: cdktf.stringToTerraform(struct!.displayName),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function policySetDefinitionPolicyDefinitionGroupToHclTerraform(struct?: PolicySetDefinitionPolicyDefinitionGroup | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    additional_metadata_resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.additionalMetadataResourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    category: {
+      value: cdktf.stringToHclTerraform(struct!.category),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    display_name: {
+      value: cdktf.stringToHclTerraform(struct!.displayName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PolicySetDefinitionPolicyDefinitionGroupOutputReference extends cdktf.ComplexObject {
@@ -300,6 +338,43 @@ export function policySetDefinitionPolicyDefinitionReferenceToTerraform(struct?:
   }
 }
 
+
+export function policySetDefinitionPolicyDefinitionReferenceToHclTerraform(struct?: PolicySetDefinitionPolicyDefinitionReference | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    parameter_values: {
+      value: cdktf.stringToHclTerraform(struct!.parameterValues),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    policy_definition_id: {
+      value: cdktf.stringToHclTerraform(struct!.policyDefinitionId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    policy_group_names: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.policyGroupNames),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    reference_id: {
+      value: cdktf.stringToHclTerraform(struct!.referenceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PolicySetDefinitionPolicyDefinitionReferenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -473,6 +548,43 @@ export function policySetDefinitionTimeoutsToTerraform(struct?: PolicySetDefinit
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function policySetDefinitionTimeoutsToHclTerraform(struct?: PolicySetDefinitionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PolicySetDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -850,5 +962,79 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
       policy_definition_reference: cdktf.listMapper(policySetDefinitionPolicyDefinitionReferenceToTerraform, true)(this._policyDefinitionReference.internalValue),
       timeouts: policySetDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      management_group_id: {
+        value: cdktf.stringToHclTerraform(this._managementGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      metadata: {
+        value: cdktf.stringToHclTerraform(this._metadata),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parameters: {
+        value: cdktf.stringToHclTerraform(this._parameters),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy_type: {
+        value: cdktf.stringToHclTerraform(this._policyType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy_definition_group: {
+        value: cdktf.listMapperHcl(policySetDefinitionPolicyDefinitionGroupToHclTerraform, true)(this._policyDefinitionGroup.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "PolicySetDefinitionPolicyDefinitionGroupList",
+      },
+      policy_definition_reference: {
+        value: cdktf.listMapperHcl(policySetDefinitionPolicyDefinitionReferenceToHclTerraform, true)(this._policyDefinitionReference.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PolicySetDefinitionPolicyDefinitionReferenceList",
+      },
+      timeouts: {
+        value: policySetDefinitionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "PolicySetDefinitionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

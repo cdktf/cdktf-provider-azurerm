@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/dev_test_linux_virtual_machine
 // generated from terraform resource schema
 
@@ -130,6 +125,43 @@ export function devTestLinuxVirtualMachineGalleryImageReferenceToTerraform(struc
   }
 }
 
+
+export function devTestLinuxVirtualMachineGalleryImageReferenceToHclTerraform(struct?: DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference | DevTestLinuxVirtualMachineGalleryImageReference): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    offer: {
+      value: cdktf.stringToHclTerraform(struct!.offer),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    publisher: {
+      value: cdktf.stringToHclTerraform(struct!.publisher),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sku: {
+      value: cdktf.stringToHclTerraform(struct!.sku),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -252,6 +284,31 @@ export function devTestLinuxVirtualMachineInboundNatRuleToTerraform(struct?: Dev
     backend_port: cdktf.numberToTerraform(struct!.backendPort),
     protocol: cdktf.stringToTerraform(struct!.protocol),
   }
+}
+
+
+export function devTestLinuxVirtualMachineInboundNatRuleToHclTerraform(struct?: DevTestLinuxVirtualMachineInboundNatRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    backend_port: {
+      value: cdktf.numberToHclTerraform(struct!.backendPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    protocol: {
+      value: cdktf.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DevTestLinuxVirtualMachineInboundNatRuleOutputReference extends cdktf.ComplexObject {
@@ -385,6 +442,43 @@ export function devTestLinuxVirtualMachineTimeoutsToTerraform(struct?: DevTestLi
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function devTestLinuxVirtualMachineTimeoutsToHclTerraform(struct?: DevTestLinuxVirtualMachineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DevTestLinuxVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -898,5 +992,127 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
       inbound_nat_rule: cdktf.listMapper(devTestLinuxVirtualMachineInboundNatRuleToTerraform, true)(this._inboundNatRule.internalValue),
       timeouts: devTestLinuxVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allow_claim: {
+        value: cdktf.booleanToHclTerraform(this._allowClaim),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      disallow_public_ip_address: {
+        value: cdktf.booleanToHclTerraform(this._disallowPublicIpAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lab_name: {
+        value: cdktf.stringToHclTerraform(this._labName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lab_subnet_name: {
+        value: cdktf.stringToHclTerraform(this._labSubnetName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lab_virtual_network_id: {
+        value: cdktf.stringToHclTerraform(this._labVirtualNetworkId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      notes: {
+        value: cdktf.stringToHclTerraform(this._notes),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      password: {
+        value: cdktf.stringToHclTerraform(this._password),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      size: {
+        value: cdktf.stringToHclTerraform(this._size),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ssh_key: {
+        value: cdktf.stringToHclTerraform(this._sshKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_type: {
+        value: cdktf.stringToHclTerraform(this._storageType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      username: {
+        value: cdktf.stringToHclTerraform(this._username),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gallery_image_reference: {
+        value: devTestLinuxVirtualMachineGalleryImageReferenceToHclTerraform(this._galleryImageReference.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DevTestLinuxVirtualMachineGalleryImageReferenceList",
+      },
+      inbound_nat_rule: {
+        value: cdktf.listMapperHcl(devTestLinuxVirtualMachineInboundNatRuleToHclTerraform, true)(this._inboundNatRule.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "DevTestLinuxVirtualMachineInboundNatRuleList",
+      },
+      timeouts: {
+        value: devTestLinuxVirtualMachineTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DevTestLinuxVirtualMachineTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

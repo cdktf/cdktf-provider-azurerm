@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_alert_processing_rule_action_group
 // generated from terraform resource schema
 
@@ -86,6 +81,31 @@ export function monitorAlertProcessingRuleActionGroupConditionAlertContextToTerr
     operator: cdktf.stringToTerraform(struct!.operator),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
+}
+
+
+export function monitorAlertProcessingRuleActionGroupConditionAlertContextToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupConditionAlertContextOutputReference | MonitorAlertProcessingRuleActionGroupConditionAlertContext): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertProcessingRuleActionGroupConditionAlertContextOutputReference extends cdktf.ComplexObject {
@@ -174,6 +194,31 @@ export function monitorAlertProcessingRuleActionGroupConditionAlertRuleIdToTerra
   }
 }
 
+
+export function monitorAlertProcessingRuleActionGroupConditionAlertRuleIdToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupConditionAlertRuleIdOutputReference | MonitorAlertProcessingRuleActionGroupConditionAlertRuleId): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorAlertProcessingRuleActionGroupConditionAlertRuleIdOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -258,6 +303,31 @@ export function monitorAlertProcessingRuleActionGroupConditionAlertRuleNameToTer
     operator: cdktf.stringToTerraform(struct!.operator),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
+}
+
+
+export function monitorAlertProcessingRuleActionGroupConditionAlertRuleNameToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupConditionAlertRuleNameOutputReference | MonitorAlertProcessingRuleActionGroupConditionAlertRuleName): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertProcessingRuleActionGroupConditionAlertRuleNameOutputReference extends cdktf.ComplexObject {
@@ -346,6 +416,31 @@ export function monitorAlertProcessingRuleActionGroupConditionDescriptionToTerra
   }
 }
 
+
+export function monitorAlertProcessingRuleActionGroupConditionDescriptionToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupConditionDescriptionOutputReference | MonitorAlertProcessingRuleActionGroupConditionDescription): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorAlertProcessingRuleActionGroupConditionDescriptionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -430,6 +525,31 @@ export function monitorAlertProcessingRuleActionGroupConditionMonitorConditionTo
     operator: cdktf.stringToTerraform(struct!.operator),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
+}
+
+
+export function monitorAlertProcessingRuleActionGroupConditionMonitorConditionToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupConditionMonitorConditionOutputReference | MonitorAlertProcessingRuleActionGroupConditionMonitorCondition): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertProcessingRuleActionGroupConditionMonitorConditionOutputReference extends cdktf.ComplexObject {
@@ -518,6 +638,31 @@ export function monitorAlertProcessingRuleActionGroupConditionMonitorServiceToTe
   }
 }
 
+
+export function monitorAlertProcessingRuleActionGroupConditionMonitorServiceToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupConditionMonitorServiceOutputReference | MonitorAlertProcessingRuleActionGroupConditionMonitorService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorAlertProcessingRuleActionGroupConditionMonitorServiceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -602,6 +747,31 @@ export function monitorAlertProcessingRuleActionGroupConditionSeverityToTerrafor
     operator: cdktf.stringToTerraform(struct!.operator),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
+}
+
+
+export function monitorAlertProcessingRuleActionGroupConditionSeverityToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupConditionSeverityOutputReference | MonitorAlertProcessingRuleActionGroupConditionSeverity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertProcessingRuleActionGroupConditionSeverityOutputReference extends cdktf.ComplexObject {
@@ -690,6 +860,31 @@ export function monitorAlertProcessingRuleActionGroupConditionSignalTypeToTerraf
   }
 }
 
+
+export function monitorAlertProcessingRuleActionGroupConditionSignalTypeToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupConditionSignalTypeOutputReference | MonitorAlertProcessingRuleActionGroupConditionSignalType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorAlertProcessingRuleActionGroupConditionSignalTypeOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -774,6 +969,31 @@ export function monitorAlertProcessingRuleActionGroupConditionTargetResourceToTe
     operator: cdktf.stringToTerraform(struct!.operator),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
+}
+
+
+export function monitorAlertProcessingRuleActionGroupConditionTargetResourceToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupConditionTargetResourceOutputReference | MonitorAlertProcessingRuleActionGroupConditionTargetResource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertProcessingRuleActionGroupConditionTargetResourceOutputReference extends cdktf.ComplexObject {
@@ -862,6 +1082,31 @@ export function monitorAlertProcessingRuleActionGroupConditionTargetResourceGrou
   }
 }
 
+
+export function monitorAlertProcessingRuleActionGroupConditionTargetResourceGroupToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupConditionTargetResourceGroupOutputReference | MonitorAlertProcessingRuleActionGroupConditionTargetResourceGroup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorAlertProcessingRuleActionGroupConditionTargetResourceGroupOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -946,6 +1191,31 @@ export function monitorAlertProcessingRuleActionGroupConditionTargetResourceType
     operator: cdktf.stringToTerraform(struct!.operator),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
+}
+
+
+export function monitorAlertProcessingRuleActionGroupConditionTargetResourceTypeToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupConditionTargetResourceTypeOutputReference | MonitorAlertProcessingRuleActionGroupConditionTargetResourceType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertProcessingRuleActionGroupConditionTargetResourceTypeOutputReference extends cdktf.ComplexObject {
@@ -1099,6 +1369,85 @@ export function monitorAlertProcessingRuleActionGroupConditionToTerraform(struct
     target_resource_group: monitorAlertProcessingRuleActionGroupConditionTargetResourceGroupToTerraform(struct!.targetResourceGroup),
     target_resource_type: monitorAlertProcessingRuleActionGroupConditionTargetResourceTypeToTerraform(struct!.targetResourceType),
   }
+}
+
+
+export function monitorAlertProcessingRuleActionGroupConditionToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupConditionOutputReference | MonitorAlertProcessingRuleActionGroupCondition): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    alert_context: {
+      value: monitorAlertProcessingRuleActionGroupConditionAlertContextToHclTerraform(struct!.alertContext),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupConditionAlertContextList",
+    },
+    alert_rule_id: {
+      value: monitorAlertProcessingRuleActionGroupConditionAlertRuleIdToHclTerraform(struct!.alertRuleId),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupConditionAlertRuleIdList",
+    },
+    alert_rule_name: {
+      value: monitorAlertProcessingRuleActionGroupConditionAlertRuleNameToHclTerraform(struct!.alertRuleName),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupConditionAlertRuleNameList",
+    },
+    description: {
+      value: monitorAlertProcessingRuleActionGroupConditionDescriptionToHclTerraform(struct!.description),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupConditionDescriptionList",
+    },
+    monitor_condition: {
+      value: monitorAlertProcessingRuleActionGroupConditionMonitorConditionToHclTerraform(struct!.monitorCondition),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupConditionMonitorConditionList",
+    },
+    monitor_service: {
+      value: monitorAlertProcessingRuleActionGroupConditionMonitorServiceToHclTerraform(struct!.monitorService),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupConditionMonitorServiceList",
+    },
+    severity: {
+      value: monitorAlertProcessingRuleActionGroupConditionSeverityToHclTerraform(struct!.severity),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupConditionSeverityList",
+    },
+    signal_type: {
+      value: monitorAlertProcessingRuleActionGroupConditionSignalTypeToHclTerraform(struct!.signalType),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupConditionSignalTypeList",
+    },
+    target_resource: {
+      value: monitorAlertProcessingRuleActionGroupConditionTargetResourceToHclTerraform(struct!.targetResource),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupConditionTargetResourceList",
+    },
+    target_resource_group: {
+      value: monitorAlertProcessingRuleActionGroupConditionTargetResourceGroupToHclTerraform(struct!.targetResourceGroup),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupConditionTargetResourceGroupList",
+    },
+    target_resource_type: {
+      value: monitorAlertProcessingRuleActionGroupConditionTargetResourceTypeToHclTerraform(struct!.targetResourceType),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupConditionTargetResourceTypeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertProcessingRuleActionGroupConditionOutputReference extends cdktf.ComplexObject {
@@ -1391,6 +1740,31 @@ export function monitorAlertProcessingRuleActionGroupScheduleRecurrenceDailyToTe
   }
 }
 
+
+export function monitorAlertProcessingRuleActionGroupScheduleRecurrenceDailyToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupScheduleRecurrenceDaily | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    end_time: {
+      value: cdktf.stringToHclTerraform(struct!.endTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    start_time: {
+      value: cdktf.stringToHclTerraform(struct!.startTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorAlertProcessingRuleActionGroupScheduleRecurrenceDailyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1512,6 +1886,37 @@ export function monitorAlertProcessingRuleActionGroupScheduleRecurrenceMonthlyTo
     end_time: cdktf.stringToTerraform(struct!.endTime),
     start_time: cdktf.stringToTerraform(struct!.startTime),
   }
+}
+
+
+export function monitorAlertProcessingRuleActionGroupScheduleRecurrenceMonthlyToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupScheduleRecurrenceMonthly | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    days_of_month: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.daysOfMonth),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+    end_time: {
+      value: cdktf.stringToHclTerraform(struct!.endTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    start_time: {
+      value: cdktf.stringToHclTerraform(struct!.startTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertProcessingRuleActionGroupScheduleRecurrenceMonthlyOutputReference extends cdktf.ComplexObject {
@@ -1660,6 +2065,37 @@ export function monitorAlertProcessingRuleActionGroupScheduleRecurrenceWeeklyToT
     end_time: cdktf.stringToTerraform(struct!.endTime),
     start_time: cdktf.stringToTerraform(struct!.startTime),
   }
+}
+
+
+export function monitorAlertProcessingRuleActionGroupScheduleRecurrenceWeeklyToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupScheduleRecurrenceWeekly | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    days_of_week: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.daysOfWeek),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    end_time: {
+      value: cdktf.stringToHclTerraform(struct!.endTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    start_time: {
+      value: cdktf.stringToHclTerraform(struct!.startTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertProcessingRuleActionGroupScheduleRecurrenceWeeklyOutputReference extends cdktf.ComplexObject {
@@ -1816,6 +2252,37 @@ export function monitorAlertProcessingRuleActionGroupScheduleRecurrenceToTerrafo
   }
 }
 
+
+export function monitorAlertProcessingRuleActionGroupScheduleRecurrenceToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupScheduleRecurrenceOutputReference | MonitorAlertProcessingRuleActionGroupScheduleRecurrence): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    daily: {
+      value: cdktf.listMapperHcl(monitorAlertProcessingRuleActionGroupScheduleRecurrenceDailyToHclTerraform, true)(struct!.daily),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupScheduleRecurrenceDailyList",
+    },
+    monthly: {
+      value: cdktf.listMapperHcl(monitorAlertProcessingRuleActionGroupScheduleRecurrenceMonthlyToHclTerraform, true)(struct!.monthly),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupScheduleRecurrenceMonthlyList",
+    },
+    weekly: {
+      value: cdktf.listMapperHcl(monitorAlertProcessingRuleActionGroupScheduleRecurrenceWeeklyToHclTerraform, true)(struct!.weekly),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupScheduleRecurrenceWeeklyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorAlertProcessingRuleActionGroupScheduleRecurrenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1940,6 +2407,43 @@ export function monitorAlertProcessingRuleActionGroupScheduleToTerraform(struct?
     time_zone: cdktf.stringToTerraform(struct!.timeZone),
     recurrence: monitorAlertProcessingRuleActionGroupScheduleRecurrenceToTerraform(struct!.recurrence),
   }
+}
+
+
+export function monitorAlertProcessingRuleActionGroupScheduleToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupScheduleOutputReference | MonitorAlertProcessingRuleActionGroupSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    effective_from: {
+      value: cdktf.stringToHclTerraform(struct!.effectiveFrom),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    effective_until: {
+      value: cdktf.stringToHclTerraform(struct!.effectiveUntil),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    time_zone: {
+      value: cdktf.stringToHclTerraform(struct!.timeZone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    recurrence: {
+      value: monitorAlertProcessingRuleActionGroupScheduleRecurrenceToHclTerraform(struct!.recurrence),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertProcessingRuleActionGroupScheduleRecurrenceList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertProcessingRuleActionGroupScheduleOutputReference extends cdktf.ComplexObject {
@@ -2086,6 +2590,43 @@ export function monitorAlertProcessingRuleActionGroupTimeoutsToTerraform(struct?
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function monitorAlertProcessingRuleActionGroupTimeoutsToHclTerraform(struct?: MonitorAlertProcessingRuleActionGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertProcessingRuleActionGroupTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -2463,5 +3004,79 @@ export class MonitorAlertProcessingRuleActionGroup extends cdktf.TerraformResour
       schedule: monitorAlertProcessingRuleActionGroupScheduleToTerraform(this._schedule.internalValue),
       timeouts: monitorAlertProcessingRuleActionGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      add_action_group_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._addActionGroupIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scopes: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._scopes),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      condition: {
+        value: monitorAlertProcessingRuleActionGroupConditionToHclTerraform(this._condition.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorAlertProcessingRuleActionGroupConditionList",
+      },
+      schedule: {
+        value: monitorAlertProcessingRuleActionGroupScheduleToHclTerraform(this._schedule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorAlertProcessingRuleActionGroupScheduleList",
+      },
+      timeouts: {
+        value: monitorAlertProcessingRuleActionGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MonitorAlertProcessingRuleActionGroupTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinventorypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblobinventorypolicy"
 
 storageblobinventorypolicy.NewStorageBlobInventoryPolicy(scope Construct, id *string, config StorageBlobInventoryPolicyConfig) StorageBlobInventoryPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.toMetadata"></a>
 
@@ -411,7 +418,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinventorypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblobinventorypolicy"
 
 storageblobinventorypolicy.StorageBlobInventoryPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -443,7 +450,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinventorypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblobinventorypolicy"
 
 storageblobinventorypolicy.StorageBlobInventoryPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -457,7 +464,7 @@ storageblobinventorypolicy.StorageBlobInventoryPolicy_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinventorypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblobinventorypolicy"
 
 storageblobinventorypolicy.StorageBlobInventoryPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -471,7 +478,7 @@ storageblobinventorypolicy.StorageBlobInventoryPolicy_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinventorypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblobinventorypolicy"
 
 storageblobinventorypolicy.StorageBlobInventoryPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -788,7 +795,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinventorypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblobinventorypolicy"
 
 &storageblobinventorypolicy.StorageBlobInventoryPolicyConfig {
 	Connection: interface{},
@@ -801,7 +808,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinvent
 	Rules: interface{},
 	StorageAccountId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageBlobInventoryPolicy.StorageBlobInventoryPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyTimeouts,
 }
 ```
 
@@ -953,7 +960,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinventorypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblobinventorypolicy"
 
 &storageblobinventorypolicy.StorageBlobInventoryPolicyRules {
 	Format: *string,
@@ -962,7 +969,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinvent
 	SchemaFields: *[]*string,
 	Scope: *string,
 	StorageContainerName: *string,
-	Filter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRulesFilter,
+	Filter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRulesFilter,
 }
 ```
 
@@ -1071,7 +1078,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRulesFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinventorypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblobinventorypolicy"
 
 &storageblobinventorypolicy.StorageBlobInventoryPolicyRulesFilter {
 	BlobTypes: *[]*string,
@@ -1173,7 +1180,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinventorypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblobinventorypolicy"
 
 &storageblobinventorypolicy.StorageBlobInventoryPolicyTimeouts {
 	Create: *string,
@@ -1249,7 +1256,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRulesFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinventorypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblobinventorypolicy"
 
 storageblobinventorypolicy.NewStorageBlobInventoryPolicyRulesFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageBlobInventoryPolicyRulesFilterOutputReference
 ```
@@ -1665,7 +1672,7 @@ func InternalValue() StorageBlobInventoryPolicyRulesFilter
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinventorypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblobinventorypolicy"
 
 storageblobinventorypolicy.NewStorageBlobInventoryPolicyRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageBlobInventoryPolicyRulesList
 ```
@@ -1706,10 +1713,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRulesList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRulesList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRulesList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRulesList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRulesList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRulesList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRulesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1808,7 +1832,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinventorypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblobinventorypolicy"
 
 storageblobinventorypolicy.NewStorageBlobInventoryPolicyRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageBlobInventoryPolicyRulesOutputReference
 ```
@@ -2249,7 +2273,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageBlobInventoryPolicy.StorageBlobInventoryPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblobinventorypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblobinventorypolicy"
 
 storageblobinventorypolicy.NewStorageBlobInventoryPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageBlobInventoryPolicyTimeoutsOutputReference
 ```

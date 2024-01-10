@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor
 // generated from terraform resource schema
 
@@ -104,6 +99,43 @@ export function newRelicMonitorPlanToTerraform(struct?: NewRelicMonitorPlanOutpu
     plan_id: cdktf.stringToTerraform(struct!.planId),
     usage_type: cdktf.stringToTerraform(struct!.usageType),
   }
+}
+
+
+export function newRelicMonitorPlanToHclTerraform(struct?: NewRelicMonitorPlanOutputReference | NewRelicMonitorPlan): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    billing_cycle: {
+      value: cdktf.stringToHclTerraform(struct!.billingCycle),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    effective_date: {
+      value: cdktf.stringToHclTerraform(struct!.effectiveDate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    plan_id: {
+      value: cdktf.stringToHclTerraform(struct!.planId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    usage_type: {
+      value: cdktf.stringToHclTerraform(struct!.usageType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NewRelicMonitorPlanOutputReference extends cdktf.ComplexObject {
@@ -244,6 +276,37 @@ export function newRelicMonitorTimeoutsToTerraform(struct?: NewRelicMonitorTimeo
   }
 }
 
+
+export function newRelicMonitorTimeoutsToHclTerraform(struct?: NewRelicMonitorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NewRelicMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -376,6 +439,43 @@ export function newRelicMonitorUserToTerraform(struct?: NewRelicMonitorUserOutpu
     last_name: cdktf.stringToTerraform(struct!.lastName),
     phone_number: cdktf.stringToTerraform(struct!.phoneNumber),
   }
+}
+
+
+export function newRelicMonitorUserToHclTerraform(struct?: NewRelicMonitorUserOutputReference | NewRelicMonitorUser): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    email: {
+      value: cdktf.stringToHclTerraform(struct!.email),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    first_name: {
+      value: cdktf.stringToHclTerraform(struct!.firstName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    last_name: {
+      value: cdktf.stringToHclTerraform(struct!.lastName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    phone_number: {
+      value: cdktf.stringToHclTerraform(struct!.phoneNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NewRelicMonitorUserOutputReference extends cdktf.ComplexObject {
@@ -764,5 +864,91 @@ export class NewRelicMonitor extends cdktf.TerraformResource {
       timeouts: newRelicMonitorTimeoutsToTerraform(this._timeouts.internalValue),
       user: newRelicMonitorUserToTerraform(this._user.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      account_creation_source: {
+        value: cdktf.stringToHclTerraform(this._accountCreationSource),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      account_id: {
+        value: cdktf.stringToHclTerraform(this._accountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ingestion_key: {
+        value: cdktf.stringToHclTerraform(this._ingestionKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      org_creation_source: {
+        value: cdktf.stringToHclTerraform(this._orgCreationSource),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      organization_id: {
+        value: cdktf.stringToHclTerraform(this._organizationId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_id: {
+        value: cdktf.stringToHclTerraform(this._userId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      plan: {
+        value: newRelicMonitorPlanToHclTerraform(this._plan.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NewRelicMonitorPlanList",
+      },
+      timeouts: {
+        value: newRelicMonitorTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NewRelicMonitorTimeouts",
+      },
+      user: {
+        value: newRelicMonitorUserToHclTerraform(this._user.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NewRelicMonitorUserList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

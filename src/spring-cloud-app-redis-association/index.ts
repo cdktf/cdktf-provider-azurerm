@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/spring_cloud_app_redis_association
 // generated from terraform resource schema
 
@@ -76,6 +71,43 @@ export function springCloudAppRedisAssociationTimeoutsToTerraform(struct?: Sprin
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function springCloudAppRedisAssociationTimeoutsToHclTerraform(struct?: SpringCloudAppRedisAssociationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudAppRedisAssociationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -381,5 +413,55 @@ export class SpringCloudAppRedisAssociation extends cdktf.TerraformResource {
       ssl_enabled: cdktf.booleanToTerraform(this._sslEnabled),
       timeouts: springCloudAppRedisAssociationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      redis_access_key: {
+        value: cdktf.stringToHclTerraform(this._redisAccessKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      redis_cache_id: {
+        value: cdktf.stringToHclTerraform(this._redisCacheId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      spring_cloud_app_id: {
+        value: cdktf.stringToHclTerraform(this._springCloudAppId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ssl_enabled: {
+        value: cdktf.booleanToHclTerraform(this._sslEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      timeouts: {
+        value: springCloudAppRedisAssociationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SpringCloudAppRedisAssociationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

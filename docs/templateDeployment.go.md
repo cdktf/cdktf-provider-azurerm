@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/templatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/templatedeployment"
 
 templatedeployment.NewTemplateDeployment(scope Construct, id *string, config TemplateDeploymentConfig) TemplateDeployment
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.toMetadata"></a>
 
@@ -419,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/templatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/templatedeployment"
 
 templatedeployment.TemplateDeployment_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/templatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/templatedeployment"
 
 templatedeployment.TemplateDeployment_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ templatedeployment.TemplateDeployment_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/templatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/templatedeployment"
 
 templatedeployment.TemplateDeployment_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +486,7 @@ templatedeployment.TemplateDeployment_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.templateDeployment.TemplateDeployment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/templatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/templatedeployment"
 
 templatedeployment.TemplateDeployment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -895,7 +902,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.templateDeployment.TemplateDeploymentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/templatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/templatedeployment"
 
 &templatedeployment.TemplateDeploymentConfig {
 	Connection: interface{},
@@ -912,7 +919,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/templatedeploymen
 	Parameters: *map[string]*string,
 	ParametersBody: *string,
 	TemplateBody: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.templateDeployment.TemplateDeploymentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.templateDeployment.TemplateDeploymentTimeouts,
 }
 ```
 
@@ -1114,7 +1121,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.templateDeployment.TemplateDeploymentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/templatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/templatedeployment"
 
 &templatedeployment.TemplateDeploymentTimeouts {
 	Create: *string,
@@ -1190,7 +1197,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.templateDeployment.TemplateDeploymentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/templatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/templatedeployment"
 
 templatedeployment.NewTemplateDeploymentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) TemplateDeploymentTimeoutsOutputReference
 ```

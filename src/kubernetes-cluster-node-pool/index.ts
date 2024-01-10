@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/kubernetes_cluster_node_pool
 // generated from terraform resource schema
 
@@ -268,6 +263,79 @@ export function kubernetesClusterNodePoolKubeletConfigToTerraform(struct?: Kuber
     pod_max_pid: cdktf.numberToTerraform(struct!.podMaxPid),
     topology_manager_policy: cdktf.stringToTerraform(struct!.topologyManagerPolicy),
   }
+}
+
+
+export function kubernetesClusterNodePoolKubeletConfigToHclTerraform(struct?: KubernetesClusterNodePoolKubeletConfigOutputReference | KubernetesClusterNodePoolKubeletConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_unsafe_sysctls: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedUnsafeSysctls),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    container_log_max_line: {
+      value: cdktf.numberToHclTerraform(struct!.containerLogMaxLine),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    container_log_max_size_mb: {
+      value: cdktf.numberToHclTerraform(struct!.containerLogMaxSizeMb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    cpu_cfs_quota_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.cpuCfsQuotaEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    cpu_cfs_quota_period: {
+      value: cdktf.stringToHclTerraform(struct!.cpuCfsQuotaPeriod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cpu_manager_policy: {
+      value: cdktf.stringToHclTerraform(struct!.cpuManagerPolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    image_gc_high_threshold: {
+      value: cdktf.numberToHclTerraform(struct!.imageGcHighThreshold),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    image_gc_low_threshold: {
+      value: cdktf.numberToHclTerraform(struct!.imageGcLowThreshold),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    pod_max_pid: {
+      value: cdktf.numberToHclTerraform(struct!.podMaxPid),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    topology_manager_policy: {
+      value: cdktf.stringToHclTerraform(struct!.topologyManagerPolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KubernetesClusterNodePoolKubeletConfigOutputReference extends cdktf.ComplexObject {
@@ -671,6 +739,193 @@ export function kubernetesClusterNodePoolLinuxOsConfigSysctlConfigToTerraform(st
     vm_swappiness: cdktf.numberToTerraform(struct!.vmSwappiness),
     vm_vfs_cache_pressure: cdktf.numberToTerraform(struct!.vmVfsCachePressure),
   }
+}
+
+
+export function kubernetesClusterNodePoolLinuxOsConfigSysctlConfigToHclTerraform(struct?: KubernetesClusterNodePoolLinuxOsConfigSysctlConfigOutputReference | KubernetesClusterNodePoolLinuxOsConfigSysctlConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    fs_aio_max_nr: {
+      value: cdktf.numberToHclTerraform(struct!.fsAioMaxNr),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    fs_file_max: {
+      value: cdktf.numberToHclTerraform(struct!.fsFileMax),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    fs_inotify_max_user_watches: {
+      value: cdktf.numberToHclTerraform(struct!.fsInotifyMaxUserWatches),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    fs_nr_open: {
+      value: cdktf.numberToHclTerraform(struct!.fsNrOpen),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    kernel_threads_max: {
+      value: cdktf.numberToHclTerraform(struct!.kernelThreadsMax),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_core_netdev_max_backlog: {
+      value: cdktf.numberToHclTerraform(struct!.netCoreNetdevMaxBacklog),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_core_optmem_max: {
+      value: cdktf.numberToHclTerraform(struct!.netCoreOptmemMax),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_core_rmem_default: {
+      value: cdktf.numberToHclTerraform(struct!.netCoreRmemDefault),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_core_rmem_max: {
+      value: cdktf.numberToHclTerraform(struct!.netCoreRmemMax),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_core_somaxconn: {
+      value: cdktf.numberToHclTerraform(struct!.netCoreSomaxconn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_core_wmem_default: {
+      value: cdktf.numberToHclTerraform(struct!.netCoreWmemDefault),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_core_wmem_max: {
+      value: cdktf.numberToHclTerraform(struct!.netCoreWmemMax),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_ipv4_ip_local_port_range_max: {
+      value: cdktf.numberToHclTerraform(struct!.netIpv4IpLocalPortRangeMax),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_ipv4_ip_local_port_range_min: {
+      value: cdktf.numberToHclTerraform(struct!.netIpv4IpLocalPortRangeMin),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_ipv4_neigh_default_gc_thresh1: {
+      value: cdktf.numberToHclTerraform(struct!.netIpv4NeighDefaultGcThresh1),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_ipv4_neigh_default_gc_thresh2: {
+      value: cdktf.numberToHclTerraform(struct!.netIpv4NeighDefaultGcThresh2),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_ipv4_neigh_default_gc_thresh3: {
+      value: cdktf.numberToHclTerraform(struct!.netIpv4NeighDefaultGcThresh3),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_ipv4_tcp_fin_timeout: {
+      value: cdktf.numberToHclTerraform(struct!.netIpv4TcpFinTimeout),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_ipv4_tcp_keepalive_intvl: {
+      value: cdktf.numberToHclTerraform(struct!.netIpv4TcpKeepaliveIntvl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_ipv4_tcp_keepalive_probes: {
+      value: cdktf.numberToHclTerraform(struct!.netIpv4TcpKeepaliveProbes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_ipv4_tcp_keepalive_time: {
+      value: cdktf.numberToHclTerraform(struct!.netIpv4TcpKeepaliveTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_ipv4_tcp_max_syn_backlog: {
+      value: cdktf.numberToHclTerraform(struct!.netIpv4TcpMaxSynBacklog),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_ipv4_tcp_max_tw_buckets: {
+      value: cdktf.numberToHclTerraform(struct!.netIpv4TcpMaxTwBuckets),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_ipv4_tcp_tw_reuse: {
+      value: cdktf.booleanToHclTerraform(struct!.netIpv4TcpTwReuse),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    net_netfilter_nf_conntrack_buckets: {
+      value: cdktf.numberToHclTerraform(struct!.netNetfilterNfConntrackBuckets),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    net_netfilter_nf_conntrack_max: {
+      value: cdktf.numberToHclTerraform(struct!.netNetfilterNfConntrackMax),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    vm_max_map_count: {
+      value: cdktf.numberToHclTerraform(struct!.vmMaxMapCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    vm_swappiness: {
+      value: cdktf.numberToHclTerraform(struct!.vmSwappiness),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    vm_vfs_cache_pressure: {
+      value: cdktf.numberToHclTerraform(struct!.vmVfsCachePressure),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KubernetesClusterNodePoolLinuxOsConfigSysctlConfigOutputReference extends cdktf.ComplexObject {
@@ -1371,6 +1626,43 @@ export function kubernetesClusterNodePoolLinuxOsConfigToTerraform(struct?: Kuber
   }
 }
 
+
+export function kubernetesClusterNodePoolLinuxOsConfigToHclTerraform(struct?: KubernetesClusterNodePoolLinuxOsConfigOutputReference | KubernetesClusterNodePoolLinuxOsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    swap_file_size_mb: {
+      value: cdktf.numberToHclTerraform(struct!.swapFileSizeMb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    transparent_huge_page_defrag: {
+      value: cdktf.stringToHclTerraform(struct!.transparentHugePageDefrag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    transparent_huge_page_enabled: {
+      value: cdktf.stringToHclTerraform(struct!.transparentHugePageEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sysctl_config: {
+      value: kubernetesClusterNodePoolLinuxOsConfigSysctlConfigToHclTerraform(struct!.sysctlConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KubernetesClusterNodePoolLinuxOsConfigSysctlConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KubernetesClusterNodePoolLinuxOsConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1502,6 +1794,25 @@ export function kubernetesClusterNodePoolNodeNetworkProfileToTerraform(struct?: 
   }
 }
 
+
+export function kubernetesClusterNodePoolNodeNetworkProfileToHclTerraform(struct?: KubernetesClusterNodePoolNodeNetworkProfileOutputReference | KubernetesClusterNodePoolNodeNetworkProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    node_public_ip_tags: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.nodePublicIpTags),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KubernetesClusterNodePoolNodeNetworkProfileOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1580,6 +1891,43 @@ export function kubernetesClusterNodePoolTimeoutsToTerraform(struct?: Kubernetes
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function kubernetesClusterNodePoolTimeoutsToHclTerraform(struct?: KubernetesClusterNodePoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KubernetesClusterNodePoolTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1723,6 +2071,25 @@ export function kubernetesClusterNodePoolUpgradeSettingsToTerraform(struct?: Kub
   }
 }
 
+
+export function kubernetesClusterNodePoolUpgradeSettingsToHclTerraform(struct?: KubernetesClusterNodePoolUpgradeSettingsOutputReference | KubernetesClusterNodePoolUpgradeSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max_surge: {
+      value: cdktf.stringToHclTerraform(struct!.maxSurge),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KubernetesClusterNodePoolUpgradeSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1783,6 +2150,25 @@ export function kubernetesClusterNodePoolWindowsProfileToTerraform(struct?: Kube
   return {
     outbound_nat_enabled: cdktf.booleanToTerraform(struct!.outboundNatEnabled),
   }
+}
+
+
+export function kubernetesClusterNodePoolWindowsProfileToHclTerraform(struct?: KubernetesClusterNodePoolWindowsProfileOutputReference | KubernetesClusterNodePoolWindowsProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    outbound_nat_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.outboundNatEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KubernetesClusterNodePoolWindowsProfileOutputReference extends cdktf.ComplexObject {
@@ -2699,5 +3085,283 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       upgrade_settings: kubernetesClusterNodePoolUpgradeSettingsToTerraform(this._upgradeSettings.internalValue),
       windows_profile: kubernetesClusterNodePoolWindowsProfileToTerraform(this._windowsProfile.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      capacity_reservation_group_id: {
+        value: cdktf.stringToHclTerraform(this._capacityReservationGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      custom_ca_trust_enabled: {
+        value: cdktf.booleanToHclTerraform(this._customCaTrustEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_auto_scaling: {
+        value: cdktf.booleanToHclTerraform(this._enableAutoScaling),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_host_encryption: {
+        value: cdktf.booleanToHclTerraform(this._enableHostEncryption),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_node_public_ip: {
+        value: cdktf.booleanToHclTerraform(this._enableNodePublicIp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      eviction_policy: {
+        value: cdktf.stringToHclTerraform(this._evictionPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      fips_enabled: {
+        value: cdktf.booleanToHclTerraform(this._fipsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      gpu_instance: {
+        value: cdktf.stringToHclTerraform(this._gpuInstance),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      host_group_id: {
+        value: cdktf.stringToHclTerraform(this._hostGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kubelet_disk_type: {
+        value: cdktf.stringToHclTerraform(this._kubeletDiskType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kubernetes_cluster_id: {
+        value: cdktf.stringToHclTerraform(this._kubernetesClusterId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_count: {
+        value: cdktf.numberToHclTerraform(this._maxCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      max_pods: {
+        value: cdktf.numberToHclTerraform(this._maxPods),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      message_of_the_day: {
+        value: cdktf.stringToHclTerraform(this._messageOfTheDay),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      min_count: {
+        value: cdktf.numberToHclTerraform(this._minCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      mode: {
+        value: cdktf.stringToHclTerraform(this._mode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      node_count: {
+        value: cdktf.numberToHclTerraform(this._nodeCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      node_labels: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._nodeLabels),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      node_public_ip_prefix_id: {
+        value: cdktf.stringToHclTerraform(this._nodePublicIpPrefixId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      node_taints: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._nodeTaints),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      orchestrator_version: {
+        value: cdktf.stringToHclTerraform(this._orchestratorVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      os_disk_size_gb: {
+        value: cdktf.numberToHclTerraform(this._osDiskSizeGb),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      os_disk_type: {
+        value: cdktf.stringToHclTerraform(this._osDiskType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      os_sku: {
+        value: cdktf.stringToHclTerraform(this._osSku),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      os_type: {
+        value: cdktf.stringToHclTerraform(this._osType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pod_subnet_id: {
+        value: cdktf.stringToHclTerraform(this._podSubnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      priority: {
+        value: cdktf.stringToHclTerraform(this._priority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      proximity_placement_group_id: {
+        value: cdktf.stringToHclTerraform(this._proximityPlacementGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scale_down_mode: {
+        value: cdktf.stringToHclTerraform(this._scaleDownMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      snapshot_id: {
+        value: cdktf.stringToHclTerraform(this._snapshotId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      spot_max_price: {
+        value: cdktf.numberToHclTerraform(this._spotMaxPrice),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      ultra_ssd_enabled: {
+        value: cdktf.booleanToHclTerraform(this._ultraSsdEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      vm_size: {
+        value: cdktf.stringToHclTerraform(this._vmSize),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vnet_subnet_id: {
+        value: cdktf.stringToHclTerraform(this._vnetSubnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      workload_runtime: {
+        value: cdktf.stringToHclTerraform(this._workloadRuntime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      zones: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._zones),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      kubelet_config: {
+        value: kubernetesClusterNodePoolKubeletConfigToHclTerraform(this._kubeletConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KubernetesClusterNodePoolKubeletConfigList",
+      },
+      linux_os_config: {
+        value: kubernetesClusterNodePoolLinuxOsConfigToHclTerraform(this._linuxOsConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KubernetesClusterNodePoolLinuxOsConfigList",
+      },
+      node_network_profile: {
+        value: kubernetesClusterNodePoolNodeNetworkProfileToHclTerraform(this._nodeNetworkProfile.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KubernetesClusterNodePoolNodeNetworkProfileList",
+      },
+      timeouts: {
+        value: kubernetesClusterNodePoolTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "KubernetesClusterNodePoolTimeouts",
+      },
+      upgrade_settings: {
+        value: kubernetesClusterNodePoolUpgradeSettingsToHclTerraform(this._upgradeSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KubernetesClusterNodePoolUpgradeSettingsList",
+      },
+      windows_profile: {
+        value: kubernetesClusterNodePoolWindowsProfileToHclTerraform(this._windowsProfile.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KubernetesClusterNodePoolWindowsProfileList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

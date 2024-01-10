@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_live_event_output
 // generated from terraform resource schema
 
@@ -87,6 +82,37 @@ export function mediaLiveEventOutputTimeoutsToTerraform(struct?: MediaLiveEventO
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function mediaLiveEventOutputTimeoutsToHclTerraform(struct?: MediaLiveEventOutputTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaLiveEventOutputTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -442,5 +468,79 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
       rewind_window_duration: cdktf.stringToTerraform(this._rewindWindowDuration),
       timeouts: mediaLiveEventOutputTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      archive_window_duration: {
+        value: cdktf.stringToHclTerraform(this._archiveWindowDuration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      asset_name: {
+        value: cdktf.stringToHclTerraform(this._assetName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      hls_fragments_per_ts_segment: {
+        value: cdktf.numberToHclTerraform(this._hlsFragmentsPerTsSegment),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      live_event_id: {
+        value: cdktf.stringToHclTerraform(this._liveEventId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      manifest_name: {
+        value: cdktf.stringToHclTerraform(this._manifestName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      output_snap_time_in_seconds: {
+        value: cdktf.numberToHclTerraform(this._outputSnapTimeInSeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      rewind_window_duration: {
+        value: cdktf.stringToHclTerraform(this._rewindWindowDuration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: mediaLiveEventOutputTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MediaLiveEventOutputTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

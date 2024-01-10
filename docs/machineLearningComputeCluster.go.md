@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 machinelearningcomputecluster.NewMachineLearningComputeCluster(scope Construct, id *string, config MachineLearningComputeClusterConfig) MachineLearningComputeCluster
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -138,6 +139,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.toMetadata"></a>
 
@@ -493,7 +500,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 machinelearningcomputecluster.MachineLearningComputeCluster_IsConstruct(x interface{}) *bool
 ```
@@ -525,7 +532,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 machinelearningcomputecluster.MachineLearningComputeCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -539,7 +546,7 @@ machinelearningcomputecluster.MachineLearningComputeCluster_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 machinelearningcomputecluster.MachineLearningComputeCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -553,7 +560,7 @@ machinelearningcomputecluster.MachineLearningComputeCluster_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 machinelearningcomputecluster.MachineLearningComputeCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1134,7 +1141,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 &machinelearningcomputecluster.MachineLearningComputeClusterConfig {
 	Connection: interface{},
@@ -1147,19 +1154,19 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningco
 	Location: *string,
 	MachineLearningWorkspaceId: *string,
 	Name: *string,
-	ScaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.machineLearningComputeCluster.MachineLearningComputeClusterScaleSettings,
+	ScaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.machineLearningComputeCluster.MachineLearningComputeClusterScaleSettings,
 	VmPriority: *string,
 	VmSize: *string,
 	Description: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.machineLearningComputeCluster.MachineLearningComputeClusterIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.machineLearningComputeCluster.MachineLearningComputeClusterIdentity,
 	LocalAuthEnabled: interface{},
 	NodePublicIpEnabled: interface{},
-	Ssh: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.machineLearningComputeCluster.MachineLearningComputeClusterSsh,
+	Ssh: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.machineLearningComputeCluster.MachineLearningComputeClusterSsh,
 	SshPublicAccessEnabled: interface{},
 	SubnetResourceId: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.machineLearningComputeCluster.MachineLearningComputeClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.machineLearningComputeCluster.MachineLearningComputeClusterTimeouts,
 }
 ```
 
@@ -1471,7 +1478,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeClusterIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 &machinelearningcomputecluster.MachineLearningComputeClusterIdentity {
 	Type: *string,
@@ -1517,7 +1524,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeClusterScaleSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 &machinelearningcomputecluster.MachineLearningComputeClusterScaleSettings {
 	MaxNodeCount: *f64,
@@ -1577,7 +1584,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeClusterSsh.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 &machinelearningcomputecluster.MachineLearningComputeClusterSsh {
 	AdminUsername: *string,
@@ -1637,7 +1644,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 &machinelearningcomputecluster.MachineLearningComputeClusterTimeouts {
 	Create: *string,
@@ -1699,7 +1706,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeClusterIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 machinelearningcomputecluster.NewMachineLearningComputeClusterIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MachineLearningComputeClusterIdentityOutputReference
 ```
@@ -2021,7 +2028,7 @@ func InternalValue() MachineLearningComputeClusterIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeClusterScaleSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 machinelearningcomputecluster.NewMachineLearningComputeClusterScaleSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MachineLearningComputeClusterScaleSettingsOutputReference
 ```
@@ -2336,7 +2343,7 @@ func InternalValue() MachineLearningComputeClusterScaleSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeClusterSshOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 machinelearningcomputecluster.NewMachineLearningComputeClusterSshOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MachineLearningComputeClusterSshOutputReference
 ```
@@ -2665,7 +2672,7 @@ func InternalValue() MachineLearningComputeClusterSsh
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.machineLearningComputeCluster.MachineLearningComputeClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/machinelearningcomputecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/machinelearningcomputecluster"
 
 machinelearningcomputecluster.NewMachineLearningComputeClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MachineLearningComputeClusterTimeoutsOutputReference
 ```

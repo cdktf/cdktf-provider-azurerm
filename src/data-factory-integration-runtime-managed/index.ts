@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_factory_integration_runtime_managed
 // generated from terraform resource schema
 
@@ -110,6 +105,43 @@ export function dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(struc
     pricing_tier: cdktf.stringToTerraform(struct!.pricingTier),
     server_endpoint: cdktf.stringToTerraform(struct!.serverEndpoint),
   }
+}
+
+
+export function dataFactoryIntegrationRuntimeManagedCatalogInfoToHclTerraform(struct?: DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference | DataFactoryIntegrationRuntimeManagedCatalogInfo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    administrator_login: {
+      value: cdktf.stringToHclTerraform(struct!.administratorLogin),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    administrator_password: {
+      value: cdktf.stringToHclTerraform(struct!.administratorPassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    pricing_tier: {
+      value: cdktf.stringToHclTerraform(struct!.pricingTier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    server_endpoint: {
+      value: cdktf.stringToHclTerraform(struct!.serverEndpoint),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference extends cdktf.ComplexObject {
@@ -245,6 +277,31 @@ export function dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform
   }
 }
 
+
+export function dataFactoryIntegrationRuntimeManagedCustomSetupScriptToHclTerraform(struct?: DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference | DataFactoryIntegrationRuntimeManagedCustomSetupScript): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    blob_container_uri: {
+      value: cdktf.stringToHclTerraform(struct!.blobContainerUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sas_token: {
+      value: cdktf.stringToHclTerraform(struct!.sasToken),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -339,6 +396,43 @@ export function dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(struct?:
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dataFactoryIntegrationRuntimeManagedTimeoutsToHclTerraform(struct?: DataFactoryIntegrationRuntimeManagedTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -485,6 +579,31 @@ export function dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(s
     subnet_name: cdktf.stringToTerraform(struct!.subnetName),
     vnet_id: cdktf.stringToTerraform(struct!.vnetId),
   }
+}
+
+
+export function dataFactoryIntegrationRuntimeManagedVnetIntegrationToHclTerraform(struct?: DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference | DataFactoryIntegrationRuntimeManagedVnetIntegration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    subnet_name: {
+      value: cdktf.stringToHclTerraform(struct!.subnetName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.vnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference extends cdktf.ComplexObject {
@@ -856,5 +975,97 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
       timeouts: dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(this._timeouts.internalValue),
       vnet_integration: dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(this._vnetIntegration.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      data_factory_id: {
+        value: cdktf.stringToHclTerraform(this._dataFactoryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      edition: {
+        value: cdktf.stringToHclTerraform(this._edition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      license_type: {
+        value: cdktf.stringToHclTerraform(this._licenseType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_parallel_executions_per_node: {
+        value: cdktf.numberToHclTerraform(this._maxParallelExecutionsPerNode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      node_size: {
+        value: cdktf.stringToHclTerraform(this._nodeSize),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      number_of_nodes: {
+        value: cdktf.numberToHclTerraform(this._numberOfNodes),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      catalog_info: {
+        value: dataFactoryIntegrationRuntimeManagedCatalogInfoToHclTerraform(this._catalogInfo.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryIntegrationRuntimeManagedCatalogInfoList",
+      },
+      custom_setup_script: {
+        value: dataFactoryIntegrationRuntimeManagedCustomSetupScriptToHclTerraform(this._customSetupScript.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryIntegrationRuntimeManagedCustomSetupScriptList",
+      },
+      timeouts: {
+        value: dataFactoryIntegrationRuntimeManagedTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataFactoryIntegrationRuntimeManagedTimeouts",
+      },
+      vnet_integration: {
+        value: dataFactoryIntegrationRuntimeManagedVnetIntegrationToHclTerraform(this._vnetIntegration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryIntegrationRuntimeManagedVnetIntegrationList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

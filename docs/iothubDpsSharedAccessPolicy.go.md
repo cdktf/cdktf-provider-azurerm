@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubdpssharedaccesspolicy"
 
 iothubdpssharedaccesspolicy.NewIothubDpsSharedAccessPolicy(scope Construct, id *string, config IothubDpsSharedAccessPolicyConfig) IothubDpsSharedAccessPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -132,6 +133,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.toMetadata"></a>
 
@@ -433,7 +440,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubdpssharedaccesspolicy"
 
 iothubdpssharedaccesspolicy.IothubDpsSharedAccessPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubdpssharedaccesspolicy"
 
 iothubdpssharedaccesspolicy.IothubDpsSharedAccessPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -479,7 +486,7 @@ iothubdpssharedaccesspolicy.IothubDpsSharedAccessPolicy_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubdpssharedaccesspolicy"
 
 iothubdpssharedaccesspolicy.IothubDpsSharedAccessPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -493,7 +500,7 @@ iothubdpssharedaccesspolicy.IothubDpsSharedAccessPolicy_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubdpssharedaccesspolicy"
 
 iothubdpssharedaccesspolicy.IothubDpsSharedAccessPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -986,7 +993,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubdpssharedaccesspolicy"
 
 &iothubdpssharedaccesspolicy.IothubDpsSharedAccessPolicyConfig {
 	Connection: interface{},
@@ -1005,7 +1012,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubdpssharedac
 	RegistrationRead: interface{},
 	RegistrationWrite: interface{},
 	ServiceConfig: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicyTimeouts,
 }
 ```
 
@@ -1233,7 +1240,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubdpssharedaccesspolicy"
 
 &iothubdpssharedaccesspolicy.IothubDpsSharedAccessPolicyTimeouts {
 	Create: *string,
@@ -1309,7 +1316,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubDpsSharedAccessPolicy.IothubDpsSharedAccessPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubdpssharedaccesspolicy"
 
 iothubdpssharedaccesspolicy.NewIothubDpsSharedAccessPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubDpsSharedAccessPolicyTimeoutsOutputReference
 ```

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/synapse_workspace_security_alert_policy
 // generated from terraform resource schema
 
@@ -88,6 +83,43 @@ export function synapseWorkspaceSecurityAlertPolicyTimeoutsToTerraform(struct?: 
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function synapseWorkspaceSecurityAlertPolicyTimeoutsToHclTerraform(struct?: SynapseWorkspaceSecurityAlertPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SynapseWorkspaceSecurityAlertPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -453,5 +485,73 @@ export class SynapseWorkspaceSecurityAlertPolicy extends cdktf.TerraformResource
       synapse_workspace_id: cdktf.stringToTerraform(this._synapseWorkspaceId),
       timeouts: synapseWorkspaceSecurityAlertPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      disabled_alerts: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._disabledAlerts),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      email_account_admins_enabled: {
+        value: cdktf.booleanToHclTerraform(this._emailAccountAdminsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      email_addresses: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._emailAddresses),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy_state: {
+        value: cdktf.stringToHclTerraform(this._policyState),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      retention_days: {
+        value: cdktf.numberToHclTerraform(this._retentionDays),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      storage_account_access_key: {
+        value: cdktf.stringToHclTerraform(this._storageAccountAccessKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_endpoint: {
+        value: cdktf.stringToHclTerraform(this._storageEndpoint),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      synapse_workspace_id: {
+        value: cdktf.stringToHclTerraform(this._synapseWorkspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: synapseWorkspaceSecurityAlertPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SynapseWorkspaceSecurityAlertPolicyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

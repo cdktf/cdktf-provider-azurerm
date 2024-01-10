@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/image
 // generated from terraform resource schema
 
@@ -101,6 +96,49 @@ export function imageDataDiskToTerraform(struct?: ImageDataDisk | cdktf.IResolva
     managed_disk_id: cdktf.stringToTerraform(struct!.managedDiskId),
     size_gb: cdktf.numberToTerraform(struct!.sizeGb),
   }
+}
+
+
+export function imageDataDiskToHclTerraform(struct?: ImageDataDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    blob_uri: {
+      value: cdktf.stringToHclTerraform(struct!.blobUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    caching: {
+      value: cdktf.stringToHclTerraform(struct!.caching),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    lun: {
+      value: cdktf.numberToHclTerraform(struct!.lun),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    managed_disk_id: {
+      value: cdktf.stringToHclTerraform(struct!.managedDiskId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    size_gb: {
+      value: cdktf.numberToHclTerraform(struct!.sizeGb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ImageDataDiskOutputReference extends cdktf.ComplexObject {
@@ -318,6 +356,61 @@ export function imageOsDiskToTerraform(struct?: ImageOsDiskOutputReference | Ima
   }
 }
 
+
+export function imageOsDiskToHclTerraform(struct?: ImageOsDiskOutputReference | ImageOsDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    blob_uri: {
+      value: cdktf.stringToHclTerraform(struct!.blobUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    caching: {
+      value: cdktf.stringToHclTerraform(struct!.caching),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    disk_encryption_set_id: {
+      value: cdktf.stringToHclTerraform(struct!.diskEncryptionSetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    managed_disk_id: {
+      value: cdktf.stringToHclTerraform(struct!.managedDiskId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    os_state: {
+      value: cdktf.stringToHclTerraform(struct!.osState),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    os_type: {
+      value: cdktf.stringToHclTerraform(struct!.osType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    size_gb: {
+      value: cdktf.numberToHclTerraform(struct!.sizeGb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ImageOsDiskOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -528,6 +621,43 @@ export function imageTimeoutsToTerraform(struct?: ImageTimeouts | cdktf.IResolva
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function imageTimeoutsToHclTerraform(struct?: ImageTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ImageTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -908,5 +1038,79 @@ export class Image extends cdktf.TerraformResource {
       os_disk: imageOsDiskToTerraform(this._osDisk.internalValue),
       timeouts: imageTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      hyper_v_generation: {
+        value: cdktf.stringToHclTerraform(this._hyperVGeneration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_virtual_machine_id: {
+        value: cdktf.stringToHclTerraform(this._sourceVirtualMachineId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      zone_resilient: {
+        value: cdktf.booleanToHclTerraform(this._zoneResilient),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      data_disk: {
+        value: cdktf.listMapperHcl(imageDataDiskToHclTerraform, true)(this._dataDisk.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ImageDataDiskList",
+      },
+      os_disk: {
+        value: imageOsDiskToHclTerraform(this._osDisk.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ImageOsDiskList",
+      },
+      timeouts: {
+        value: imageTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ImageTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

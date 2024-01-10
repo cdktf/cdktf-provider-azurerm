@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/spring_cloud_application_insights_application_performance_monitoring
 // generated from terraform resource schema
 
@@ -88,6 +83,43 @@ export function springCloudApplicationInsightsApplicationPerformanceMonitoringTi
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function springCloudApplicationInsightsApplicationPerformanceMonitoringTimeoutsToHclTerraform(struct?: SpringCloudApplicationInsightsApplicationPerformanceMonitoringTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudApplicationInsightsApplicationPerformanceMonitoringTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -453,5 +485,73 @@ export class SpringCloudApplicationInsightsApplicationPerformanceMonitoring exte
       spring_cloud_service_id: cdktf.stringToTerraform(this._springCloudServiceId),
       timeouts: springCloudApplicationInsightsApplicationPerformanceMonitoringTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      connection_string: {
+        value: cdktf.stringToHclTerraform(this._connectionString),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      globally_enabled: {
+        value: cdktf.booleanToHclTerraform(this._globallyEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role_instance: {
+        value: cdktf.stringToHclTerraform(this._roleInstance),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role_name: {
+        value: cdktf.stringToHclTerraform(this._roleName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sampling_percentage: {
+        value: cdktf.numberToHclTerraform(this._samplingPercentage),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      sampling_requests_per_second: {
+        value: cdktf.numberToHclTerraform(this._samplingRequestsPerSecond),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      spring_cloud_service_id: {
+        value: cdktf.stringToHclTerraform(this._springCloudServiceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: springCloudApplicationInsightsApplicationPerformanceMonitoringTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SpringCloudApplicationInsightsApplicationPerformanceMonitoringTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

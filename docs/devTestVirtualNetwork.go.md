@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestvirtualnetwork"
 
 devtestvirtualnetwork.NewDevTestVirtualNetwork(scope Construct, id *string, config DevTestVirtualNetworkConfig) DevTestVirtualNetwork
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -131,6 +132,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.toMetadata"></a>
 
@@ -432,7 +439,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestvirtualnetwork"
 
 devtestvirtualnetwork.DevTestVirtualNetwork_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestvirtualnetwork"
 
 devtestvirtualnetwork.DevTestVirtualNetwork_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +485,7 @@ devtestvirtualnetwork.DevTestVirtualNetwork_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestvirtualnetwork"
 
 devtestvirtualnetwork.DevTestVirtualNetwork_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +499,7 @@ devtestvirtualnetwork.DevTestVirtualNetwork_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetwork.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestvirtualnetwork"
 
 devtestvirtualnetwork.DevTestVirtualNetwork_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -908,7 +915,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestvirtualnetwork"
 
 &devtestvirtualnetwork.DevTestVirtualNetworkConfig {
 	Connection: interface{},
@@ -923,9 +930,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestvirtualnet
 	ResourceGroupName: *string,
 	Description: *string,
 	Id: *string,
-	Subnet: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.devTestVirtualNetwork.DevTestVirtualNetworkSubnet,
+	Subnet: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.devTestVirtualNetwork.DevTestVirtualNetworkSubnet,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.devTestVirtualNetwork.DevTestVirtualNetworkTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.devTestVirtualNetwork.DevTestVirtualNetworkTimeouts,
 }
 ```
 
@@ -1129,7 +1136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetworkSubnet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestvirtualnetwork"
 
 &devtestvirtualnetwork.DevTestVirtualNetworkSubnet {
 	UseInVirtualMachineCreation: *string,
@@ -1175,7 +1182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetworkTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestvirtualnetwork"
 
 &devtestvirtualnetwork.DevTestVirtualNetworkTimeouts {
 	Create: *string,
@@ -1251,7 +1258,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetworkSubnetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestvirtualnetwork"
 
 devtestvirtualnetwork.NewDevTestVirtualNetworkSubnetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevTestVirtualNetworkSubnetOutputReference
 ```
@@ -1569,7 +1576,7 @@ func InternalValue() DevTestVirtualNetworkSubnet
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestVirtualNetwork.DevTestVirtualNetworkTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestvirtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestvirtualnetwork"
 
 devtestvirtualnetwork.NewDevTestVirtualNetworkTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevTestVirtualNetworkTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
 
 mysqldatabase.NewMysqlDatabase(scope Construct, id *string, config MysqlDatabaseConfig) MysqlDatabase
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
 
 mysqldatabase.MysqlDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
 
 mysqldatabase.MysqlDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ mysqldatabase.MysqlDatabase_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
 
 mysqldatabase.MysqlDatabase_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ mysqldatabase.MysqlDatabase_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
 
 mysqldatabase.MysqlDatabase_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -841,7 +848,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
 
 &mysqldatabase.MysqlDatabaseConfig {
 	Connection: interface{},
@@ -857,7 +864,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqldatabase"
 	ResourceGroupName: *string,
 	ServerName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mysqlDatabase.MysqlDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlDatabase.MysqlDatabaseTimeouts,
 }
 ```
 
@@ -1046,7 +1053,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
 
 &mysqldatabase.MysqlDatabaseTimeouts {
 	Create: *string,
@@ -1108,7 +1115,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqldatabase"
 
 mysqldatabase.NewMysqlDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlDatabaseTimeoutsOutputReference
 ```

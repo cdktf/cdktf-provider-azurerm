@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_automation
 // generated from terraform resource schema
 
@@ -96,6 +91,43 @@ export function securityCenterAutomationActionToTerraform(struct?: SecurityCente
     trigger_url: cdktf.stringToTerraform(struct!.triggerUrl),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function securityCenterAutomationActionToHclTerraform(struct?: SecurityCenterAutomationAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    connection_string: {
+      value: cdktf.stringToHclTerraform(struct!.connectionString),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.resourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    trigger_url: {
+      value: cdktf.stringToHclTerraform(struct!.triggerUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SecurityCenterAutomationActionOutputReference extends cdktf.ComplexObject {
@@ -270,6 +302,43 @@ export function securityCenterAutomationSourceRuleSetRuleToTerraform(struct?: Se
   }
 }
 
+
+export function securityCenterAutomationSourceRuleSetRuleToHclTerraform(struct?: SecurityCenterAutomationSourceRuleSetRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    expected_value: {
+      value: cdktf.stringToHclTerraform(struct!.expectedValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    property_path: {
+      value: cdktf.stringToHclTerraform(struct!.propertyPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    property_type: {
+      value: cdktf.stringToHclTerraform(struct!.propertyType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SecurityCenterAutomationSourceRuleSetRuleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -423,6 +492,25 @@ export function securityCenterAutomationSourceRuleSetToTerraform(struct?: Securi
   }
 }
 
+
+export function securityCenterAutomationSourceRuleSetToHclTerraform(struct?: SecurityCenterAutomationSourceRuleSet | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    rule: {
+      value: cdktf.listMapperHcl(securityCenterAutomationSourceRuleSetRuleToHclTerraform, true)(struct!.rule),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SecurityCenterAutomationSourceRuleSetRuleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SecurityCenterAutomationSourceRuleSetOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -522,6 +610,31 @@ export function securityCenterAutomationSourceToTerraform(struct?: SecurityCente
     event_source: cdktf.stringToTerraform(struct!.eventSource),
     rule_set: cdktf.listMapper(securityCenterAutomationSourceRuleSetToTerraform, true)(struct!.ruleSet),
   }
+}
+
+
+export function securityCenterAutomationSourceToHclTerraform(struct?: SecurityCenterAutomationSource | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    event_source: {
+      value: cdktf.stringToHclTerraform(struct!.eventSource),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rule_set: {
+      value: cdktf.listMapperHcl(securityCenterAutomationSourceRuleSetToHclTerraform, true)(struct!.ruleSet),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SecurityCenterAutomationSourceRuleSetList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SecurityCenterAutomationSourceOutputReference extends cdktf.ComplexObject {
@@ -653,6 +766,43 @@ export function securityCenterAutomationTimeoutsToTerraform(struct?: SecurityCen
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function securityCenterAutomationTimeoutsToHclTerraform(struct?: SecurityCenterAutomationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SecurityCenterAutomationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1024,5 +1174,79 @@ export class SecurityCenterAutomation extends cdktf.TerraformResource {
       source: cdktf.listMapper(securityCenterAutomationSourceToTerraform, true)(this._source.internalValue),
       timeouts: securityCenterAutomationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scopes: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._scopes),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      action: {
+        value: cdktf.listMapperHcl(securityCenterAutomationActionToHclTerraform, true)(this._action.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SecurityCenterAutomationActionList",
+      },
+      source: {
+        value: cdktf.listMapperHcl(securityCenterAutomationSourceToHclTerraform, true)(this._source.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SecurityCenterAutomationSourceList",
+      },
+      timeouts: {
+        value: securityCenterAutomationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SecurityCenterAutomationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/synapse_sql_pool_workload_group
 // generated from terraform resource schema
 
@@ -88,6 +83,43 @@ export function synapseSqlPoolWorkloadGroupTimeoutsToTerraform(struct?: SynapseS
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function synapseSqlPoolWorkloadGroupTimeoutsToHclTerraform(struct?: SynapseSqlPoolWorkloadGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SynapseSqlPoolWorkloadGroupTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -447,5 +479,73 @@ export class SynapseSqlPoolWorkloadGroup extends cdktf.TerraformResource {
       sql_pool_id: cdktf.stringToTerraform(this._sqlPoolId),
       timeouts: synapseSqlPoolWorkloadGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      importance: {
+        value: cdktf.stringToHclTerraform(this._importance),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_resource_percent: {
+        value: cdktf.numberToHclTerraform(this._maxResourcePercent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      max_resource_percent_per_request: {
+        value: cdktf.numberToHclTerraform(this._maxResourcePercentPerRequest),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      min_resource_percent: {
+        value: cdktf.numberToHclTerraform(this._minResourcePercent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      min_resource_percent_per_request: {
+        value: cdktf.numberToHclTerraform(this._minResourcePercentPerRequest),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      query_execution_timeout_in_seconds: {
+        value: cdktf.numberToHclTerraform(this._queryExecutionTimeoutInSeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      sql_pool_id: {
+        value: cdktf.stringToHclTerraform(this._sqlPoolId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: synapseSqlPoolWorkloadGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SynapseSqlPoolWorkloadGroupTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

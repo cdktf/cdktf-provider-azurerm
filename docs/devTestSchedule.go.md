@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 devtestschedule.NewDevTestSchedule(scope Construct, id *string, config DevTestScheduleConfig) DevTestSchedule
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -136,6 +137,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.toMetadata"></a>
 
@@ -485,7 +492,7 @@ func ResetWeeklyRecurrence()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 devtestschedule.DevTestSchedule_IsConstruct(x interface{}) *bool
 ```
@@ -517,7 +524,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 devtestschedule.DevTestSchedule_IsTerraformElement(x interface{}) *bool
 ```
@@ -531,7 +538,7 @@ devtestschedule.DevTestSchedule_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 devtestschedule.DevTestSchedule_IsTerraformResource(x interface{}) *bool
 ```
@@ -545,7 +552,7 @@ devtestschedule.DevTestSchedule_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.devTestSchedule.DevTestSchedule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 devtestschedule.DevTestSchedule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1082,7 +1089,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestSchedule.DevTestScheduleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 &devtestschedule.DevTestScheduleConfig {
 	Connection: interface{},
@@ -1095,17 +1102,17 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
 	LabName: *string,
 	Location: *string,
 	Name: *string,
-	NotificationSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.devTestSchedule.DevTestScheduleNotificationSettings,
+	NotificationSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.devTestSchedule.DevTestScheduleNotificationSettings,
 	ResourceGroupName: *string,
 	TaskType: *string,
 	TimeZoneId: *string,
-	DailyRecurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.devTestSchedule.DevTestScheduleDailyRecurrence,
-	HourlyRecurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.devTestSchedule.DevTestScheduleHourlyRecurrence,
+	DailyRecurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.devTestSchedule.DevTestScheduleDailyRecurrence,
+	HourlyRecurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.devTestSchedule.DevTestScheduleHourlyRecurrence,
 	Id: *string,
 	Status: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.devTestSchedule.DevTestScheduleTimeouts,
-	WeeklyRecurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.devTestSchedule.DevTestScheduleWeeklyRecurrence,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.devTestSchedule.DevTestScheduleTimeouts,
+	WeeklyRecurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.devTestSchedule.DevTestScheduleWeeklyRecurrence,
 }
 ```
 
@@ -1393,7 +1400,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestSchedule.DevTestScheduleDailyRecurrence.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 &devtestschedule.DevTestScheduleDailyRecurrence {
 	Time: *string,
@@ -1425,7 +1432,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestSchedule.DevTestScheduleHourlyRecurrence.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 &devtestschedule.DevTestScheduleHourlyRecurrence {
 	Minute: *f64,
@@ -1457,7 +1464,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestSchedule.DevTestScheduleNotificationSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 &devtestschedule.DevTestScheduleNotificationSettings {
 	Status: *string,
@@ -1517,7 +1524,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestSchedule.DevTestScheduleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 &devtestschedule.DevTestScheduleTimeouts {
 	Create: *string,
@@ -1591,7 +1598,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestSchedule.DevTestScheduleWeeklyRecurrence.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 &devtestschedule.DevTestScheduleWeeklyRecurrence {
 	Time: *string,
@@ -1639,7 +1646,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestSchedule.DevTestScheduleDailyRecurrenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 devtestschedule.NewDevTestScheduleDailyRecurrenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevTestScheduleDailyRecurrenceOutputReference
 ```
@@ -1910,7 +1917,7 @@ func InternalValue() DevTestScheduleDailyRecurrence
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestSchedule.DevTestScheduleHourlyRecurrenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 devtestschedule.NewDevTestScheduleHourlyRecurrenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevTestScheduleHourlyRecurrenceOutputReference
 ```
@@ -2181,7 +2188,7 @@ func InternalValue() DevTestScheduleHourlyRecurrence
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestSchedule.DevTestScheduleNotificationSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 devtestschedule.NewDevTestScheduleNotificationSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevTestScheduleNotificationSettingsOutputReference
 ```
@@ -2517,7 +2524,7 @@ func InternalValue() DevTestScheduleNotificationSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestSchedule.DevTestScheduleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 devtestschedule.NewDevTestScheduleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevTestScheduleTimeoutsOutputReference
 ```
@@ -2882,7 +2889,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestSchedule.DevTestScheduleWeeklyRecurrenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestschedule"
 
 devtestschedule.NewDevTestScheduleWeeklyRecurrenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevTestScheduleWeeklyRecurrenceOutputReference
 ```

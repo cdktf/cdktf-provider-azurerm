@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/stream_analytics_output_blob
 // generated from terraform resource schema
 
@@ -110,6 +105,43 @@ export function streamAnalyticsOutputBlobSerializationToTerraform(struct?: Strea
     format: cdktf.stringToTerraform(struct!.format),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function streamAnalyticsOutputBlobSerializationToHclTerraform(struct?: StreamAnalyticsOutputBlobSerializationOutputReference | StreamAnalyticsOutputBlobSerialization): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    encoding: {
+      value: cdktf.stringToHclTerraform(struct!.encoding),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    field_delimiter: {
+      value: cdktf.stringToHclTerraform(struct!.fieldDelimiter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    format: {
+      value: cdktf.stringToHclTerraform(struct!.format),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StreamAnalyticsOutputBlobSerializationOutputReference extends cdktf.ComplexObject {
@@ -253,6 +285,43 @@ export function streamAnalyticsOutputBlobTimeoutsToTerraform(struct?: StreamAnal
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function streamAnalyticsOutputBlobTimeoutsToHclTerraform(struct?: StreamAnalyticsOutputBlobTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StreamAnalyticsOutputBlobTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -687,5 +756,103 @@ export class StreamAnalyticsOutputBlob extends cdktf.TerraformResource {
       serialization: streamAnalyticsOutputBlobSerializationToTerraform(this._serialization.internalValue),
       timeouts: streamAnalyticsOutputBlobTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      authentication_mode: {
+        value: cdktf.stringToHclTerraform(this._authenticationMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      batch_max_wait_time: {
+        value: cdktf.stringToHclTerraform(this._batchMaxWaitTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      batch_min_rows: {
+        value: cdktf.numberToHclTerraform(this._batchMinRows),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      date_format: {
+        value: cdktf.stringToHclTerraform(this._dateFormat),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      path_pattern: {
+        value: cdktf.stringToHclTerraform(this._pathPattern),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_key: {
+        value: cdktf.stringToHclTerraform(this._storageAccountKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_name: {
+        value: cdktf.stringToHclTerraform(this._storageAccountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_container_name: {
+        value: cdktf.stringToHclTerraform(this._storageContainerName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      stream_analytics_job_name: {
+        value: cdktf.stringToHclTerraform(this._streamAnalyticsJobName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      time_format: {
+        value: cdktf.stringToHclTerraform(this._timeFormat),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      serialization: {
+        value: streamAnalyticsOutputBlobSerializationToHclTerraform(this._serialization.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "StreamAnalyticsOutputBlobSerializationList",
+      },
+      timeouts: {
+        value: streamAnalyticsOutputBlobTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "StreamAnalyticsOutputBlobTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

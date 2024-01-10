@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_next_generation_firewall_virtual_network_panorama
 // generated from terraform resource schema
 
@@ -74,6 +69,17 @@ export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaPanoramaToTe
   }
   return {
   }
+}
+
+
+export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaPanoramaToHclTerraform(struct?: PaloAltoNextGenerationFirewallVirtualNetworkPanoramaPanorama): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class PaloAltoNextGenerationFirewallVirtualNetworkPanoramaPanoramaOutputReference extends cdktf.ComplexObject {
@@ -180,6 +186,31 @@ export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationN
   }
 }
 
+
+export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatBackendConfigToHclTerraform(struct?: PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatBackendConfigOutputReference | PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatBackendConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    public_ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.publicIpAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatBackendConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -264,6 +295,31 @@ export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationN
     port: cdktf.numberToTerraform(struct!.port),
     public_ip_address_id: cdktf.stringToTerraform(struct!.publicIpAddressId),
   }
+}
+
+
+export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatFrontendConfigToHclTerraform(struct?: PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatFrontendConfigOutputReference | PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatFrontendConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    public_ip_address_id: {
+      value: cdktf.stringToHclTerraform(struct!.publicIpAddressId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatFrontendConfigOutputReference extends cdktf.ComplexObject {
@@ -364,6 +420,43 @@ export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationN
     backend_config: paloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatBackendConfigToTerraform(struct!.backendConfig),
     frontend_config: paloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatFrontendConfigToTerraform(struct!.frontendConfig),
   }
+}
+
+
+export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatToHclTerraform(struct?: PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNat | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    protocol: {
+      value: cdktf.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    backend_config: {
+      value: paloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatBackendConfigToHclTerraform(struct!.backendConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatBackendConfigList",
+    },
+    frontend_config: {
+      value: paloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatFrontendConfigToHclTerraform(struct!.frontendConfig),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatFrontendConfigList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatOutputReference extends cdktf.ComplexObject {
@@ -528,6 +621,31 @@ export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaDnsSettingsT
   }
 }
 
+
+export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaDnsSettingsToHclTerraform(struct?: PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDnsSettingsOutputReference | PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDnsSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dns_servers: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.dnsServers),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    use_azure_dns: {
+      value: cdktf.booleanToHclTerraform(struct!.useAzureDns),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDnsSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -628,6 +746,37 @@ export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfi
     untrusted_subnet_id: cdktf.stringToTerraform(struct!.untrustedSubnetId),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
   }
+}
+
+
+export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfileVnetConfigurationToHclTerraform(struct?: PaloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfileVnetConfigurationOutputReference | PaloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfileVnetConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    trusted_subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.trustedSubnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    untrusted_subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.untrustedSubnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_network_id: {
+      value: cdktf.stringToHclTerraform(struct!.virtualNetworkId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PaloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfileVnetConfigurationOutputReference extends cdktf.ComplexObject {
@@ -751,6 +900,37 @@ export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfi
     public_ip_address_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.publicIpAddressIds),
     vnet_configuration: paloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfileVnetConfigurationToTerraform(struct!.vnetConfiguration),
   }
+}
+
+
+export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfileToHclTerraform(struct?: PaloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfileOutputReference | PaloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    egress_nat_ip_address_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.egressNatIpAddressIds),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    public_ip_address_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.publicIpAddressIds),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    vnet_configuration: {
+      value: paloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfileVnetConfigurationToHclTerraform(struct!.vnetConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PaloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfileVnetConfigurationList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PaloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfileOutputReference extends cdktf.ComplexObject {
@@ -879,6 +1059,43 @@ export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaTimeoutsToTe
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function paloAltoNextGenerationFirewallVirtualNetworkPanoramaTimeoutsToHclTerraform(struct?: PaloAltoNextGenerationFirewallVirtualNetworkPanoramaTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PaloAltoNextGenerationFirewallVirtualNetworkPanoramaTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1241,5 +1458,73 @@ export class PaloAltoNextGenerationFirewallVirtualNetworkPanorama extends cdktf.
       network_profile: paloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfileToTerraform(this._networkProfile.internalValue),
       timeouts: paloAltoNextGenerationFirewallVirtualNetworkPanoramaTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      panorama_base64_config: {
+        value: cdktf.stringToHclTerraform(this._panoramaBase64Config),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      destination_nat: {
+        value: cdktf.listMapperHcl(paloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatToHclTerraform, true)(this._destinationNat.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDestinationNatList",
+      },
+      dns_settings: {
+        value: paloAltoNextGenerationFirewallVirtualNetworkPanoramaDnsSettingsToHclTerraform(this._dnsSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PaloAltoNextGenerationFirewallVirtualNetworkPanoramaDnsSettingsList",
+      },
+      network_profile: {
+        value: paloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfileToHclTerraform(this._networkProfile.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PaloAltoNextGenerationFirewallVirtualNetworkPanoramaNetworkProfileList",
+      },
+      timeouts: {
+        value: paloAltoNextGenerationFirewallVirtualNetworkPanoramaTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "PaloAltoNextGenerationFirewallVirtualNetworkPanoramaTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

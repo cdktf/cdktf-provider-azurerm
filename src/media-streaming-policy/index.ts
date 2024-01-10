@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_streaming_policy
 // generated from terraform resource schema
 
@@ -83,6 +78,25 @@ export function mediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionToTerr
   }
 }
 
+
+export function mediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionOutputReference | MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    custom_keys_acquisition_url_template: {
+      value: cdktf.stringToHclTerraform(struct!.customKeysAcquisitionUrlTemplate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -148,6 +162,31 @@ export function mediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyToTerra
     label: cdktf.stringToTerraform(struct!.label),
     policy_name: cdktf.stringToTerraform(struct!.policyName),
   }
+}
+
+
+export function mediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference | MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    label: {
+      value: cdktf.stringToHclTerraform(struct!.label),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    policy_name: {
+      value: cdktf.stringToHclTerraform(struct!.policyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference extends cdktf.ComplexObject {
@@ -240,6 +279,31 @@ export function mediaStreamingPolicyCommonEncryptionCbcsDrmFairplayToTerraform(s
     allow_persistent_license: cdktf.booleanToTerraform(struct!.allowPersistentLicense),
     custom_license_acquisition_url_template: cdktf.stringToTerraform(struct!.customLicenseAcquisitionUrlTemplate),
   }
+}
+
+
+export function mediaStreamingPolicyCommonEncryptionCbcsDrmFairplayToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference | MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allow_persistent_license: {
+      value: cdktf.booleanToHclTerraform(struct!.allowPersistentLicense),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    custom_license_acquisition_url_template: {
+      value: cdktf.stringToHclTerraform(struct!.customLicenseAcquisitionUrlTemplate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference extends cdktf.ComplexObject {
@@ -342,6 +406,43 @@ export function mediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsToTerraf
     hls: cdktf.booleanToTerraform(struct!.hls),
     smooth_streaming: cdktf.booleanToTerraform(struct!.smoothStreaming),
   }
+}
+
+
+export function mediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference | MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dash: {
+      value: cdktf.booleanToHclTerraform(struct!.dash),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    download: {
+      value: cdktf.booleanToHclTerraform(struct!.download),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    hls: {
+      value: cdktf.booleanToHclTerraform(struct!.hls),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    smooth_streaming: {
+      value: cdktf.booleanToHclTerraform(struct!.smoothStreaming),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference extends cdktf.ComplexObject {
@@ -498,6 +599,43 @@ export function mediaStreamingPolicyCommonEncryptionCbcsToTerraform(struct?: Med
   }
 }
 
+
+export function mediaStreamingPolicyCommonEncryptionCbcsToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsOutputReference | MediaStreamingPolicyCommonEncryptionCbcs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    clear_key_encryption: {
+      value: mediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionToHclTerraform(struct!.clearKeyEncryption),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionList",
+    },
+    default_content_key: {
+      value: mediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyToHclTerraform(struct!.defaultContentKey),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyList",
+    },
+    drm_fairplay: {
+      value: mediaStreamingPolicyCommonEncryptionCbcsDrmFairplayToHclTerraform(struct!.drmFairplay),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayList",
+    },
+    enabled_protocols: {
+      value: mediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsToHclTerraform(struct!.enabledProtocols),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -629,6 +767,25 @@ export function mediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionToTerr
   }
 }
 
+
+export function mediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionOutputReference | MediaStreamingPolicyCommonEncryptionCencClearKeyEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    custom_keys_acquisition_url_template: {
+      value: cdktf.stringToHclTerraform(struct!.customKeysAcquisitionUrlTemplate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -699,6 +856,37 @@ export function mediaStreamingPolicyCommonEncryptionCencClearTrackConditionToTer
     property: cdktf.stringToTerraform(struct!.property),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function mediaStreamingPolicyCommonEncryptionCencClearTrackConditionToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencClearTrackCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operation: {
+      value: cdktf.stringToHclTerraform(struct!.operation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    property: {
+      value: cdktf.stringToHclTerraform(struct!.property),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaStreamingPolicyCommonEncryptionCencClearTrackConditionOutputReference extends cdktf.ComplexObject {
@@ -835,6 +1023,25 @@ export function mediaStreamingPolicyCommonEncryptionCencClearTrackToTerraform(st
   }
 }
 
+
+export function mediaStreamingPolicyCommonEncryptionCencClearTrackToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencClearTrack | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    condition: {
+      value: cdktf.listMapperHcl(mediaStreamingPolicyCommonEncryptionCencClearTrackConditionToHclTerraform, true)(struct!.condition),
+      isBlock: true,
+      type: "set",
+      storageClassType: "MediaStreamingPolicyCommonEncryptionCencClearTrackConditionList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MediaStreamingPolicyCommonEncryptionCencClearTrackOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -937,6 +1144,37 @@ export function mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping
     property: cdktf.stringToTerraform(struct!.property),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operation: {
+      value: cdktf.stringToHclTerraform(struct!.operation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    property: {
+      value: cdktf.stringToHclTerraform(struct!.property),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionOutputReference extends cdktf.ComplexObject {
@@ -1073,6 +1311,25 @@ export function mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping
   }
 }
 
+
+export function mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrack | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    condition: {
+      value: cdktf.listMapperHcl(mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionToHclTerraform, true)(struct!.condition),
+      isBlock: true,
+      type: "set",
+      storageClassType: "MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1177,6 +1434,37 @@ export function mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping
     policy_name: cdktf.stringToTerraform(struct!.policyName),
     track: cdktf.listMapper(mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackToTerraform, true)(struct!.track),
   }
+}
+
+
+export function mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    label: {
+      value: cdktf.stringToHclTerraform(struct!.label),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    policy_name: {
+      value: cdktf.stringToHclTerraform(struct!.policyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    track: {
+      value: cdktf.listMapperHcl(mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackToHclTerraform, true)(struct!.track),
+      isBlock: true,
+      type: "set",
+      storageClassType: "MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingOutputReference extends cdktf.ComplexObject {
@@ -1322,6 +1610,31 @@ export function mediaStreamingPolicyCommonEncryptionCencDefaultContentKeyToTerra
   }
 }
 
+
+export function mediaStreamingPolicyCommonEncryptionCencDefaultContentKeyToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference | MediaStreamingPolicyCommonEncryptionCencDefaultContentKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    label: {
+      value: cdktf.stringToHclTerraform(struct!.label),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    policy_name: {
+      value: cdktf.stringToHclTerraform(struct!.policyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1412,6 +1725,31 @@ export function mediaStreamingPolicyCommonEncryptionCencDrmPlayreadyToTerraform(
     custom_attributes: cdktf.stringToTerraform(struct!.customAttributes),
     custom_license_acquisition_url_template: cdktf.stringToTerraform(struct!.customLicenseAcquisitionUrlTemplate),
   }
+}
+
+
+export function mediaStreamingPolicyCommonEncryptionCencDrmPlayreadyToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference | MediaStreamingPolicyCommonEncryptionCencDrmPlayready): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    custom_attributes: {
+      value: cdktf.stringToHclTerraform(struct!.customAttributes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    custom_license_acquisition_url_template: {
+      value: cdktf.stringToHclTerraform(struct!.customLicenseAcquisitionUrlTemplate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference extends cdktf.ComplexObject {
@@ -1514,6 +1852,43 @@ export function mediaStreamingPolicyCommonEncryptionCencEnabledProtocolsToTerraf
     hls: cdktf.booleanToTerraform(struct!.hls),
     smooth_streaming: cdktf.booleanToTerraform(struct!.smoothStreaming),
   }
+}
+
+
+export function mediaStreamingPolicyCommonEncryptionCencEnabledProtocolsToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference | MediaStreamingPolicyCommonEncryptionCencEnabledProtocols): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dash: {
+      value: cdktf.booleanToHclTerraform(struct!.dash),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    download: {
+      value: cdktf.booleanToHclTerraform(struct!.download),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    hls: {
+      value: cdktf.booleanToHclTerraform(struct!.hls),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    smooth_streaming: {
+      value: cdktf.booleanToHclTerraform(struct!.smoothStreaming),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference extends cdktf.ComplexObject {
@@ -1687,6 +2062,61 @@ export function mediaStreamingPolicyCommonEncryptionCencToTerraform(struct?: Med
     drm_playready: mediaStreamingPolicyCommonEncryptionCencDrmPlayreadyToTerraform(struct!.drmPlayready),
     enabled_protocols: mediaStreamingPolicyCommonEncryptionCencEnabledProtocolsToTerraform(struct!.enabledProtocols),
   }
+}
+
+
+export function mediaStreamingPolicyCommonEncryptionCencToHclTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencOutputReference | MediaStreamingPolicyCommonEncryptionCenc): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    drm_widevine_custom_license_acquisition_url_template: {
+      value: cdktf.stringToHclTerraform(struct!.drmWidevineCustomLicenseAcquisitionUrlTemplate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    clear_key_encryption: {
+      value: mediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionToHclTerraform(struct!.clearKeyEncryption),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionList",
+    },
+    clear_track: {
+      value: cdktf.listMapperHcl(mediaStreamingPolicyCommonEncryptionCencClearTrackToHclTerraform, true)(struct!.clearTrack),
+      isBlock: true,
+      type: "set",
+      storageClassType: "MediaStreamingPolicyCommonEncryptionCencClearTrackList",
+    },
+    content_key_to_track_mapping: {
+      value: cdktf.listMapperHcl(mediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingToHclTerraform, true)(struct!.contentKeyToTrackMapping),
+      isBlock: true,
+      type: "set",
+      storageClassType: "MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingList",
+    },
+    default_content_key: {
+      value: mediaStreamingPolicyCommonEncryptionCencDefaultContentKeyToHclTerraform(struct!.defaultContentKey),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyList",
+    },
+    drm_playready: {
+      value: mediaStreamingPolicyCommonEncryptionCencDrmPlayreadyToHclTerraform(struct!.drmPlayready),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyList",
+    },
+    enabled_protocols: {
+      value: mediaStreamingPolicyCommonEncryptionCencEnabledProtocolsToHclTerraform(struct!.enabledProtocols),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdktf.ComplexObject {
@@ -1891,6 +2321,31 @@ export function mediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyToTerrafo
   }
 }
 
+
+export function mediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyToHclTerraform(struct?: MediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyOutputReference | MediaStreamingPolicyEnvelopeEncryptionDefaultContentKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    label: {
+      value: cdktf.stringToHclTerraform(struct!.label),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    policy_name: {
+      value: cdktf.stringToHclTerraform(struct!.policyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1991,6 +2446,43 @@ export function mediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsToTerrafor
     hls: cdktf.booleanToTerraform(struct!.hls),
     smooth_streaming: cdktf.booleanToTerraform(struct!.smoothStreaming),
   }
+}
+
+
+export function mediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsToHclTerraform(struct?: MediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsOutputReference | MediaStreamingPolicyEnvelopeEncryptionEnabledProtocols): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dash: {
+      value: cdktf.booleanToHclTerraform(struct!.dash),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    download: {
+      value: cdktf.booleanToHclTerraform(struct!.download),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    hls: {
+      value: cdktf.booleanToHclTerraform(struct!.hls),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    smooth_streaming: {
+      value: cdktf.booleanToHclTerraform(struct!.smoothStreaming),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsOutputReference extends cdktf.ComplexObject {
@@ -2138,6 +2630,37 @@ export function mediaStreamingPolicyEnvelopeEncryptionToTerraform(struct?: Media
   }
 }
 
+
+export function mediaStreamingPolicyEnvelopeEncryptionToHclTerraform(struct?: MediaStreamingPolicyEnvelopeEncryptionOutputReference | MediaStreamingPolicyEnvelopeEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    custom_keys_acquisition_url_template: {
+      value: cdktf.stringToHclTerraform(struct!.customKeysAcquisitionUrlTemplate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    default_content_key: {
+      value: mediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyToHclTerraform(struct!.defaultContentKey),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyList",
+    },
+    enabled_protocols: {
+      value: mediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsToHclTerraform(struct!.enabledProtocols),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MediaStreamingPolicyEnvelopeEncryptionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2260,6 +2783,43 @@ export function mediaStreamingPolicyNoEncryptionEnabledProtocolsToTerraform(stru
     hls: cdktf.booleanToTerraform(struct!.hls),
     smooth_streaming: cdktf.booleanToTerraform(struct!.smoothStreaming),
   }
+}
+
+
+export function mediaStreamingPolicyNoEncryptionEnabledProtocolsToHclTerraform(struct?: MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference | MediaStreamingPolicyNoEncryptionEnabledProtocols): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dash: {
+      value: cdktf.booleanToHclTerraform(struct!.dash),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    download: {
+      value: cdktf.booleanToHclTerraform(struct!.download),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    hls: {
+      value: cdktf.booleanToHclTerraform(struct!.hls),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    smooth_streaming: {
+      value: cdktf.booleanToHclTerraform(struct!.smoothStreaming),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference extends cdktf.ComplexObject {
@@ -2401,6 +2961,37 @@ export function mediaStreamingPolicyTimeoutsToTerraform(struct?: MediaStreamingP
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function mediaStreamingPolicyTimeoutsToHclTerraform(struct?: MediaStreamingPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaStreamingPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -2741,5 +3332,73 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
       no_encryption_enabled_protocols: mediaStreamingPolicyNoEncryptionEnabledProtocolsToTerraform(this._noEncryptionEnabledProtocols.internalValue),
       timeouts: mediaStreamingPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      default_content_key_policy_name: {
+        value: cdktf.stringToHclTerraform(this._defaultContentKeyPolicyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      media_services_account_name: {
+        value: cdktf.stringToHclTerraform(this._mediaServicesAccountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      common_encryption_cbcs: {
+        value: mediaStreamingPolicyCommonEncryptionCbcsToHclTerraform(this._commonEncryptionCbcs.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MediaStreamingPolicyCommonEncryptionCbcsList",
+      },
+      common_encryption_cenc: {
+        value: mediaStreamingPolicyCommonEncryptionCencToHclTerraform(this._commonEncryptionCenc.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MediaStreamingPolicyCommonEncryptionCencList",
+      },
+      envelope_encryption: {
+        value: mediaStreamingPolicyEnvelopeEncryptionToHclTerraform(this._envelopeEncryption.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MediaStreamingPolicyEnvelopeEncryptionList",
+      },
+      no_encryption_enabled_protocols: {
+        value: mediaStreamingPolicyNoEncryptionEnabledProtocolsToHclTerraform(this._noEncryptionEnabledProtocols.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MediaStreamingPolicyNoEncryptionEnabledProtocolsList",
+      },
+      timeouts: {
+        value: mediaStreamingPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MediaStreamingPolicyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

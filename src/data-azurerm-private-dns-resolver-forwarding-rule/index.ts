@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/private_dns_resolver_forwarding_rule
 // generated from terraform resource schema
 
@@ -44,6 +39,17 @@ export function dataAzurermPrivateDnsResolverForwardingRuleTargetDnsServersToTer
   }
   return {
   }
+}
+
+
+export function dataAzurermPrivateDnsResolverForwardingRuleTargetDnsServersToHclTerraform(struct?: DataAzurermPrivateDnsResolverForwardingRuleTargetDnsServers): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermPrivateDnsResolverForwardingRuleTargetDnsServersOutputReference extends cdktf.ComplexObject {
@@ -118,6 +124,25 @@ export function dataAzurermPrivateDnsResolverForwardingRuleTimeoutsToTerraform(s
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermPrivateDnsResolverForwardingRuleTimeoutsToHclTerraform(struct?: DataAzurermPrivateDnsResolverForwardingRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermPrivateDnsResolverForwardingRuleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -331,5 +356,37 @@ export class DataAzurermPrivateDnsResolverForwardingRule extends cdktf.Terraform
       name: cdktf.stringToTerraform(this._name),
       timeouts: dataAzurermPrivateDnsResolverForwardingRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      dns_forwarding_ruleset_id: {
+        value: cdktf.stringToHclTerraform(this._dnsForwardingRulesetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermPrivateDnsResolverForwardingRuleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermPrivateDnsResolverForwardingRuleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

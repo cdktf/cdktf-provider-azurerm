@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/web_pubsub_private_link_resource
 // generated from terraform resource schema
 
@@ -40,6 +35,17 @@ export function dataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkResource
   }
   return {
   }
+}
+
+
+export function dataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkResourceTypesToHclTerraform(struct?: DataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkResourceTypes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkResourceTypesOutputReference extends cdktf.ComplexObject {
@@ -114,6 +120,25 @@ export function dataAzurermWebPubsubPrivateLinkResourceTimeoutsToTerraform(struc
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermWebPubsubPrivateLinkResourceTimeoutsToHclTerraform(struct?: DataAzurermWebPubsubPrivateLinkResourceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermWebPubsubPrivateLinkResourceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -296,5 +321,31 @@ export class DataAzurermWebPubsubPrivateLinkResource extends cdktf.TerraformData
       web_pubsub_id: cdktf.stringToTerraform(this._webPubsubId),
       timeouts: dataAzurermWebPubsubPrivateLinkResourceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      web_pubsub_id: {
+        value: cdktf.stringToHclTerraform(this._webPubsubId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermWebPubsubPrivateLinkResourceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermWebPubsubPrivateLinkResourceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/stream_analytics_function_javascript_uda
 // generated from terraform resource schema
 
@@ -70,6 +65,31 @@ export function streamAnalyticsFunctionJavascriptUdaInputToTerraform(struct?: St
     configuration_parameter: cdktf.booleanToTerraform(struct!.configurationParameter),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function streamAnalyticsFunctionJavascriptUdaInputToHclTerraform(struct?: StreamAnalyticsFunctionJavascriptUdaInput | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    configuration_parameter: {
+      value: cdktf.booleanToHclTerraform(struct!.configurationParameter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StreamAnalyticsFunctionJavascriptUdaInputOutputReference extends cdktf.ComplexObject {
@@ -188,6 +208,25 @@ export function streamAnalyticsFunctionJavascriptUdaOutputToTerraform(struct?: S
   }
 }
 
+
+export function streamAnalyticsFunctionJavascriptUdaOutputToHclTerraform(struct?: StreamAnalyticsFunctionJavascriptUdaOutputOutputReference | StreamAnalyticsFunctionJavascriptUdaOutput): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class StreamAnalyticsFunctionJavascriptUdaOutputOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -263,6 +302,43 @@ export function streamAnalyticsFunctionJavascriptUdaTimeoutsToTerraform(struct?:
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function streamAnalyticsFunctionJavascriptUdaTimeoutsToHclTerraform(struct?: StreamAnalyticsFunctionJavascriptUdaTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StreamAnalyticsFunctionJavascriptUdaTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -565,5 +641,55 @@ export class StreamAnalyticsFunctionJavascriptUda extends cdktf.TerraformResourc
       output: streamAnalyticsFunctionJavascriptUdaOutputToTerraform(this._output.internalValue),
       timeouts: streamAnalyticsFunctionJavascriptUdaTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      script: {
+        value: cdktf.stringToHclTerraform(this._script),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      stream_analytics_job_id: {
+        value: cdktf.stringToHclTerraform(this._streamAnalyticsJobId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      input: {
+        value: cdktf.listMapperHcl(streamAnalyticsFunctionJavascriptUdaInputToHclTerraform, true)(this._input.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "StreamAnalyticsFunctionJavascriptUdaInputList",
+      },
+      output: {
+        value: streamAnalyticsFunctionJavascriptUdaOutputToHclTerraform(this._output.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "StreamAnalyticsFunctionJavascriptUdaOutputList",
+      },
+      timeouts: {
+        value: streamAnalyticsFunctionJavascriptUdaTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "StreamAnalyticsFunctionJavascriptUdaTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

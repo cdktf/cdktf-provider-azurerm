@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.NewLabServiceSchedule(scope Construct, id *string, config LabServiceScheduleConfig) LabServiceSchedule
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -131,6 +132,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.toMetadata"></a>
 
@@ -432,7 +439,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.LabServiceSchedule_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.LabServiceSchedule_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +485,7 @@ labserviceschedule.LabServiceSchedule_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.LabServiceSchedule_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +499,7 @@ labserviceschedule.LabServiceSchedule_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.LabServiceSchedule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -919,7 +926,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceScheduleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 &labserviceschedule.LabServiceScheduleConfig {
 	Connection: interface{},
@@ -935,9 +942,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedul
 	TimeZone: *string,
 	Id: *string,
 	Notes: *string,
-	Recurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.labServiceSchedule.LabServiceScheduleRecurrence,
+	Recurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceSchedule.LabServiceScheduleRecurrence,
 	StartTime: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.labServiceSchedule.LabServiceScheduleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceSchedule.LabServiceScheduleTimeouts,
 }
 ```
 
@@ -1154,7 +1161,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceScheduleRecurrence.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 &labserviceschedule.LabServiceScheduleRecurrence {
 	ExpirationDate: *string,
@@ -1228,7 +1235,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceScheduleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 &labserviceschedule.LabServiceScheduleTimeouts {
 	Create: *string,
@@ -1304,7 +1311,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceScheduleRecurrenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.NewLabServiceScheduleRecurrenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceScheduleRecurrenceOutputReference
 ```
@@ -1655,7 +1662,7 @@ func InternalValue() LabServiceScheduleRecurrence
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceScheduleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.NewLabServiceScheduleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceScheduleTimeoutsOutputReference
 ```

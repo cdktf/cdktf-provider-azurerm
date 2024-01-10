@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_failover_group
 // generated from terraform resource schema
 
@@ -76,6 +71,25 @@ export function mssqlFailoverGroupPartnerServerToTerraform(struct?: MssqlFailove
   return {
     id: cdktf.stringToTerraform(struct!.id),
   }
+}
+
+
+export function mssqlFailoverGroupPartnerServerToHclTerraform(struct?: MssqlFailoverGroupPartnerServer | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlFailoverGroupPartnerServerOutputReference extends cdktf.ComplexObject {
@@ -187,6 +201,31 @@ export function mssqlFailoverGroupReadWriteEndpointFailoverPolicyToTerraform(str
   }
 }
 
+
+export function mssqlFailoverGroupReadWriteEndpointFailoverPolicyToHclTerraform(struct?: MssqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference | MssqlFailoverGroupReadWriteEndpointFailoverPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    grace_minutes: {
+      value: cdktf.numberToHclTerraform(struct!.graceMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MssqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -284,6 +323,43 @@ export function mssqlFailoverGroupTimeoutsToTerraform(struct?: MssqlFailoverGrou
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function mssqlFailoverGroupTimeoutsToHclTerraform(struct?: MssqlFailoverGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlFailoverGroupTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -625,5 +701,67 @@ export class MssqlFailoverGroup extends cdktf.TerraformResource {
       read_write_endpoint_failover_policy: mssqlFailoverGroupReadWriteEndpointFailoverPolicyToTerraform(this._readWriteEndpointFailoverPolicy.internalValue),
       timeouts: mssqlFailoverGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      databases: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._databases),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      readonly_endpoint_failover_policy_enabled: {
+        value: cdktf.booleanToHclTerraform(this._readonlyEndpointFailoverPolicyEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      server_id: {
+        value: cdktf.stringToHclTerraform(this._serverId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      partner_server: {
+        value: cdktf.listMapperHcl(mssqlFailoverGroupPartnerServerToHclTerraform, true)(this._partnerServer.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlFailoverGroupPartnerServerList",
+      },
+      read_write_endpoint_failover_policy: {
+        value: mssqlFailoverGroupReadWriteEndpointFailoverPolicyToHclTerraform(this._readWriteEndpointFailoverPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlFailoverGroupReadWriteEndpointFailoverPolicyList",
+      },
+      timeouts: {
+        value: mssqlFailoverGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MssqlFailoverGroupTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/sentinel_automation_rule
 // generated from terraform resource schema
 
@@ -125,6 +120,61 @@ export function sentinelAutomationRuleActionIncidentToTerraform(struct?: Sentine
     severity: cdktf.stringToTerraform(struct!.severity),
     status: cdktf.stringToTerraform(struct!.status),
   }
+}
+
+
+export function sentinelAutomationRuleActionIncidentToHclTerraform(struct?: SentinelAutomationRuleActionIncident | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    classification: {
+      value: cdktf.stringToHclTerraform(struct!.classification),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    classification_comment: {
+      value: cdktf.stringToHclTerraform(struct!.classificationComment),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    labels: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.labels),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    order: {
+      value: cdktf.numberToHclTerraform(struct!.order),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    owner_id: {
+      value: cdktf.stringToHclTerraform(struct!.ownerId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    severity: {
+      value: cdktf.stringToHclTerraform(struct!.severity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    status: {
+      value: cdktf.stringToHclTerraform(struct!.status),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelAutomationRuleActionIncidentOutputReference extends cdktf.ComplexObject {
@@ -363,6 +413,37 @@ export function sentinelAutomationRuleActionPlaybookToTerraform(struct?: Sentine
   }
 }
 
+
+export function sentinelAutomationRuleActionPlaybookToHclTerraform(struct?: SentinelAutomationRuleActionPlaybook | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    logic_app_id: {
+      value: cdktf.stringToHclTerraform(struct!.logicAppId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    order: {
+      value: cdktf.numberToHclTerraform(struct!.order),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    tenant_id: {
+      value: cdktf.stringToHclTerraform(struct!.tenantId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SentinelAutomationRuleActionPlaybookOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -506,6 +587,37 @@ export function sentinelAutomationRuleConditionToTerraform(struct?: SentinelAuto
     property: cdktf.stringToTerraform(struct!.property),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
+}
+
+
+export function sentinelAutomationRuleConditionToHclTerraform(struct?: SentinelAutomationRuleCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    property: {
+      value: cdktf.stringToHclTerraform(struct!.property),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelAutomationRuleConditionOutputReference extends cdktf.ComplexObject {
@@ -653,6 +765,43 @@ export function sentinelAutomationRuleTimeoutsToTerraform(struct?: SentinelAutom
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function sentinelAutomationRuleTimeoutsToHclTerraform(struct?: SentinelAutomationRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelAutomationRuleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1084,5 +1233,97 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
       condition: cdktf.listMapper(sentinelAutomationRuleConditionToTerraform, true)(this._condition.internalValue),
       timeouts: sentinelAutomationRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      condition_json: {
+        value: cdktf.stringToHclTerraform(this._conditionJson),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      expiration: {
+        value: cdktf.stringToHclTerraform(this._expiration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log_analytics_workspace_id: {
+        value: cdktf.stringToHclTerraform(this._logAnalyticsWorkspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      order: {
+        value: cdktf.numberToHclTerraform(this._order),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      triggers_on: {
+        value: cdktf.stringToHclTerraform(this._triggersOn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      triggers_when: {
+        value: cdktf.stringToHclTerraform(this._triggersWhen),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      action_incident: {
+        value: cdktf.listMapperHcl(sentinelAutomationRuleActionIncidentToHclTerraform, true)(this._actionIncident.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelAutomationRuleActionIncidentList",
+      },
+      action_playbook: {
+        value: cdktf.listMapperHcl(sentinelAutomationRuleActionPlaybookToHclTerraform, true)(this._actionPlaybook.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelAutomationRuleActionPlaybookList",
+      },
+      condition: {
+        value: cdktf.listMapperHcl(sentinelAutomationRuleConditionToHclTerraform, true)(this._condition.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelAutomationRuleConditionList",
+      },
+      timeouts: {
+        value: sentinelAutomationRuleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SentinelAutomationRuleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

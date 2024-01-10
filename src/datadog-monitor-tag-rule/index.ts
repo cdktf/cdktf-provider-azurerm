@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/datadog_monitor_tag_rule
 // generated from terraform resource schema
 
@@ -71,6 +66,37 @@ export function datadogMonitorTagRuleLogFilterToTerraform(struct?: DatadogMonito
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function datadogMonitorTagRuleLogFilterToHclTerraform(struct?: DatadogMonitorTagRuleLogFilter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatadogMonitorTagRuleLogFilterOutputReference extends cdktf.ComplexObject {
@@ -220,6 +246,43 @@ export function datadogMonitorTagRuleLogToTerraform(struct?: DatadogMonitorTagRu
     subscription_log_enabled: cdktf.booleanToTerraform(struct!.subscriptionLogEnabled),
     filter: cdktf.listMapper(datadogMonitorTagRuleLogFilterToTerraform, true)(struct!.filter),
   }
+}
+
+
+export function datadogMonitorTagRuleLogToHclTerraform(struct?: DatadogMonitorTagRuleLog | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    aad_log_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.aadLogEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    resource_log_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.resourceLogEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    subscription_log_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.subscriptionLogEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    filter: {
+      value: cdktf.listMapperHcl(datadogMonitorTagRuleLogFilterToHclTerraform, true)(struct!.filter),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatadogMonitorTagRuleLogFilterList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatadogMonitorTagRuleLogOutputReference extends cdktf.ComplexObject {
@@ -395,6 +458,37 @@ export function datadogMonitorTagRuleMetricFilterToTerraform(struct?: DatadogMon
   }
 }
 
+
+export function datadogMonitorTagRuleMetricFilterToHclTerraform(struct?: DatadogMonitorTagRuleMetricFilter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DatadogMonitorTagRuleMetricFilterOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -529,6 +623,25 @@ export function datadogMonitorTagRuleMetricToTerraform(struct?: DatadogMonitorTa
   }
 }
 
+
+export function datadogMonitorTagRuleMetricToHclTerraform(struct?: DatadogMonitorTagRuleMetric | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    filter: {
+      value: cdktf.listMapperHcl(datadogMonitorTagRuleMetricFilterToHclTerraform, true)(struct!.filter),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DatadogMonitorTagRuleMetricFilterList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DatadogMonitorTagRuleMetricOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -639,6 +752,43 @@ export function datadogMonitorTagRuleTimeoutsToTerraform(struct?: DatadogMonitor
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function datadogMonitorTagRuleTimeoutsToHclTerraform(struct?: DatadogMonitorTagRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatadogMonitorTagRuleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -935,5 +1085,49 @@ export class DatadogMonitorTagRule extends cdktf.TerraformResource {
       metric: cdktf.listMapper(datadogMonitorTagRuleMetricToTerraform, true)(this._metric.internalValue),
       timeouts: datadogMonitorTagRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      datadog_monitor_id: {
+        value: cdktf.stringToHclTerraform(this._datadogMonitorId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log: {
+        value: cdktf.listMapperHcl(datadogMonitorTagRuleLogToHclTerraform, true)(this._log.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DatadogMonitorTagRuleLogList",
+      },
+      metric: {
+        value: cdktf.listMapperHcl(datadogMonitorTagRuleMetricToHclTerraform, true)(this._metric.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DatadogMonitorTagRuleMetricList",
+      },
+      timeouts: {
+        value: datadogMonitorTagRuleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DatadogMonitorTagRuleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

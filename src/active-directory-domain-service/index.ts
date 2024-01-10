@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/active_directory_domain_service
 // generated from terraform resource schema
 
@@ -97,6 +92,25 @@ export function activeDirectoryDomainServiceInitialReplicaSetToTerraform(struct?
   return {
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
   }
+}
+
+
+export function activeDirectoryDomainServiceInitialReplicaSetToHclTerraform(struct?: ActiveDirectoryDomainServiceInitialReplicaSetOutputReference | ActiveDirectoryDomainServiceInitialReplicaSet): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ActiveDirectoryDomainServiceInitialReplicaSetOutputReference extends cdktf.ComplexObject {
@@ -194,6 +208,37 @@ export function activeDirectoryDomainServiceNotificationsToTerraform(struct?: Ac
     notify_dc_admins: cdktf.booleanToTerraform(struct!.notifyDcAdmins),
     notify_global_admins: cdktf.booleanToTerraform(struct!.notifyGlobalAdmins),
   }
+}
+
+
+export function activeDirectoryDomainServiceNotificationsToHclTerraform(struct?: ActiveDirectoryDomainServiceNotificationsOutputReference | ActiveDirectoryDomainServiceNotifications): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    additional_recipients: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.additionalRecipients),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    notify_dc_admins: {
+      value: cdktf.booleanToHclTerraform(struct!.notifyDcAdmins),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    notify_global_admins: {
+      value: cdktf.booleanToHclTerraform(struct!.notifyGlobalAdmins),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ActiveDirectoryDomainServiceNotificationsOutputReference extends cdktf.ComplexObject {
@@ -318,6 +363,43 @@ export function activeDirectoryDomainServiceSecureLdapToTerraform(struct?: Activ
     pfx_certificate: cdktf.stringToTerraform(struct!.pfxCertificate),
     pfx_certificate_password: cdktf.stringToTerraform(struct!.pfxCertificatePassword),
   }
+}
+
+
+export function activeDirectoryDomainServiceSecureLdapToHclTerraform(struct?: ActiveDirectoryDomainServiceSecureLdapOutputReference | ActiveDirectoryDomainServiceSecureLdap): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    external_access_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.externalAccessEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    pfx_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.pfxCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    pfx_certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.pfxCertificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ActiveDirectoryDomainServiceSecureLdapOutputReference extends cdktf.ComplexObject {
@@ -485,6 +567,61 @@ export function activeDirectoryDomainServiceSecurityToTerraform(struct?: ActiveD
     sync_on_prem_passwords: cdktf.booleanToTerraform(struct!.syncOnPremPasswords),
     tls_v1_enabled: cdktf.booleanToTerraform(struct!.tlsV1Enabled),
   }
+}
+
+
+export function activeDirectoryDomainServiceSecurityToHclTerraform(struct?: ActiveDirectoryDomainServiceSecurityOutputReference | ActiveDirectoryDomainServiceSecurity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kerberos_armoring_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.kerberosArmoringEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    kerberos_rc4_encryption_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.kerberosRc4EncryptionEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ntlm_v1_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.ntlmV1Enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    sync_kerberos_passwords: {
+      value: cdktf.booleanToHclTerraform(struct!.syncKerberosPasswords),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    sync_ntlm_passwords: {
+      value: cdktf.booleanToHclTerraform(struct!.syncNtlmPasswords),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    sync_on_prem_passwords: {
+      value: cdktf.booleanToHclTerraform(struct!.syncOnPremPasswords),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tls_v1_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tlsV1Enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ActiveDirectoryDomainServiceSecurityOutputReference extends cdktf.ComplexObject {
@@ -697,6 +834,43 @@ export function activeDirectoryDomainServiceTimeoutsToTerraform(struct?: ActiveD
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function activeDirectoryDomainServiceTimeoutsToHclTerraform(struct?: ActiveDirectoryDomainServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ActiveDirectoryDomainServiceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1147,5 +1321,97 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
       security: activeDirectoryDomainServiceSecurityToTerraform(this._security.internalValue),
       timeouts: activeDirectoryDomainServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      domain_configuration_type: {
+        value: cdktf.stringToHclTerraform(this._domainConfigurationType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      domain_name: {
+        value: cdktf.stringToHclTerraform(this._domainName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      filtered_sync_enabled: {
+        value: cdktf.booleanToHclTerraform(this._filteredSyncEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku: {
+        value: cdktf.stringToHclTerraform(this._sku),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      initial_replica_set: {
+        value: activeDirectoryDomainServiceInitialReplicaSetToHclTerraform(this._initialReplicaSet.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ActiveDirectoryDomainServiceInitialReplicaSetList",
+      },
+      notifications: {
+        value: activeDirectoryDomainServiceNotificationsToHclTerraform(this._notifications.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ActiveDirectoryDomainServiceNotificationsList",
+      },
+      secure_ldap: {
+        value: activeDirectoryDomainServiceSecureLdapToHclTerraform(this._secureLdap.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ActiveDirectoryDomainServiceSecureLdapList",
+      },
+      security: {
+        value: activeDirectoryDomainServiceSecurityToHclTerraform(this._security.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ActiveDirectoryDomainServiceSecurityList",
+      },
+      timeouts: {
+        value: activeDirectoryDomainServiceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ActiveDirectoryDomainServiceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/costmanagementscheduledaction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/costmanagementscheduledaction"
 
 costmanagementscheduledaction.NewCostManagementScheduledAction(scope Construct, id *string, config CostManagementScheduledActionConfig) CostManagementScheduledAction
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -132,6 +133,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.toMetadata"></a>
 
@@ -433,7 +440,7 @@ func ResetWeeksOfMonth()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/costmanagementscheduledaction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/costmanagementscheduledaction"
 
 costmanagementscheduledaction.CostManagementScheduledAction_IsConstruct(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/costmanagementscheduledaction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/costmanagementscheduledaction"
 
 costmanagementscheduledaction.CostManagementScheduledAction_IsTerraformElement(x interface{}) *bool
 ```
@@ -479,7 +486,7 @@ costmanagementscheduledaction.CostManagementScheduledAction_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/costmanagementscheduledaction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/costmanagementscheduledaction"
 
 costmanagementscheduledaction.CostManagementScheduledAction_IsTerraformResource(x interface{}) *bool
 ```
@@ -493,7 +500,7 @@ costmanagementscheduledaction.CostManagementScheduledAction_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledAction.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/costmanagementscheduledaction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/costmanagementscheduledaction"
 
 costmanagementscheduledaction.CostManagementScheduledAction_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1074,7 +1081,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledActionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/costmanagementscheduledaction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/costmanagementscheduledaction"
 
 &costmanagementscheduledaction.CostManagementScheduledActionConfig {
 	Connection: interface{},
@@ -1098,7 +1105,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/costmanagementsch
 	HourOfDay: *f64,
 	Id: *string,
 	Message: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.costManagementScheduledAction.CostManagementScheduledActionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.costManagementScheduledAction.CostManagementScheduledActionTimeouts,
 	WeeksOfMonth: *[]*string,
 }
 ```
@@ -1405,7 +1412,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledActionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/costmanagementscheduledaction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/costmanagementscheduledaction"
 
 &costmanagementscheduledaction.CostManagementScheduledActionTimeouts {
 	Create: *string,
@@ -1481,7 +1488,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.costManagementScheduledAction.CostManagementScheduledActionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/costmanagementscheduledaction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/costmanagementscheduledaction"
 
 costmanagementscheduledaction.NewCostManagementScheduledActionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CostManagementScheduledActionTimeoutsOutputReference
 ```

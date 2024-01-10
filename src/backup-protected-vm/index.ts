@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/backup_protected_vm
 // generated from terraform resource schema
 
@@ -84,6 +79,43 @@ export function backupProtectedVmTimeoutsToTerraform(struct?: BackupProtectedVmT
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function backupProtectedVmTimeoutsToHclTerraform(struct?: BackupProtectedVmTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BackupProtectedVmTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -431,5 +463,67 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
       source_vm_id: cdktf.stringToTerraform(this._sourceVmId),
       timeouts: backupProtectedVmTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      backup_policy_id: {
+        value: cdktf.stringToHclTerraform(this._backupPolicyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      exclude_disk_luns: {
+        value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(this._excludeDiskLuns),
+        isBlock: false,
+        type: "set",
+        storageClassType: "numberList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      include_disk_luns: {
+        value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(this._includeDiskLuns),
+        isBlock: false,
+        type: "set",
+        storageClassType: "numberList",
+      },
+      protection_state: {
+        value: cdktf.stringToHclTerraform(this._protectionState),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      recovery_vault_name: {
+        value: cdktf.stringToHclTerraform(this._recoveryVaultName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_vm_id: {
+        value: cdktf.stringToHclTerraform(this._sourceVmId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: backupProtectedVmTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "BackupProtectedVmTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

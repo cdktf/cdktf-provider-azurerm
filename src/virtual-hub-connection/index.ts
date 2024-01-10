@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/virtual_hub_connection
 // generated from terraform resource schema
 
@@ -68,6 +63,31 @@ export function virtualHubConnectionRoutingPropagatedRouteTableToTerraform(struc
     labels: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.labels),
     route_table_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.routeTableIds),
   }
+}
+
+
+export function virtualHubConnectionRoutingPropagatedRouteTableToHclTerraform(struct?: VirtualHubConnectionRoutingPropagatedRouteTableOutputReference | VirtualHubConnectionRoutingPropagatedRouteTable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    labels: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.labels),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    route_table_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.routeTableIds),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VirtualHubConnectionRoutingPropagatedRouteTableOutputReference extends cdktf.ComplexObject {
@@ -165,6 +185,37 @@ export function virtualHubConnectionRoutingStaticVnetRouteToTerraform(struct?: V
     name: cdktf.stringToTerraform(struct!.name),
     next_hop_ip_address: cdktf.stringToTerraform(struct!.nextHopIpAddress),
   }
+}
+
+
+export function virtualHubConnectionRoutingStaticVnetRouteToHclTerraform(struct?: VirtualHubConnectionRoutingStaticVnetRoute | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    address_prefixes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.addressPrefixes),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    next_hop_ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.nextHopIpAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VirtualHubConnectionRoutingStaticVnetRouteOutputReference extends cdktf.ComplexObject {
@@ -335,6 +386,55 @@ export function virtualHubConnectionRoutingToTerraform(struct?: VirtualHubConnec
     propagated_route_table: virtualHubConnectionRoutingPropagatedRouteTableToTerraform(struct!.propagatedRouteTable),
     static_vnet_route: cdktf.listMapper(virtualHubConnectionRoutingStaticVnetRouteToTerraform, true)(struct!.staticVnetRoute),
   }
+}
+
+
+export function virtualHubConnectionRoutingToHclTerraform(struct?: VirtualHubConnectionRoutingOutputReference | VirtualHubConnectionRouting): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    associated_route_table_id: {
+      value: cdktf.stringToHclTerraform(struct!.associatedRouteTableId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    inbound_route_map_id: {
+      value: cdktf.stringToHclTerraform(struct!.inboundRouteMapId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    outbound_route_map_id: {
+      value: cdktf.stringToHclTerraform(struct!.outboundRouteMapId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    static_vnet_local_route_override_criteria: {
+      value: cdktf.stringToHclTerraform(struct!.staticVnetLocalRouteOverrideCriteria),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    propagated_route_table: {
+      value: virtualHubConnectionRoutingPropagatedRouteTableToHclTerraform(struct!.propagatedRouteTable),
+      isBlock: true,
+      type: "list",
+      storageClassType: "VirtualHubConnectionRoutingPropagatedRouteTableList",
+    },
+    static_vnet_route: {
+      value: cdktf.listMapperHcl(virtualHubConnectionRoutingStaticVnetRouteToHclTerraform, true)(struct!.staticVnetRoute),
+      isBlock: true,
+      type: "list",
+      storageClassType: "VirtualHubConnectionRoutingStaticVnetRouteList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObject {
@@ -525,6 +625,43 @@ export function virtualHubConnectionTimeoutsToTerraform(struct?: VirtualHubConne
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function virtualHubConnectionTimeoutsToHclTerraform(struct?: VirtualHubConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -833,5 +970,55 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
       routing: virtualHubConnectionRoutingToTerraform(this._routing.internalValue),
       timeouts: virtualHubConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      internet_security_enabled: {
+        value: cdktf.booleanToHclTerraform(this._internetSecurityEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      remote_virtual_network_id: {
+        value: cdktf.stringToHclTerraform(this._remoteVirtualNetworkId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      virtual_hub_id: {
+        value: cdktf.stringToHclTerraform(this._virtualHubId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      routing: {
+        value: virtualHubConnectionRoutingToHclTerraform(this._routing.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "VirtualHubConnectionRoutingList",
+      },
+      timeouts: {
+        value: virtualHubConnectionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "VirtualHubConnectionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/netapp_snapshot_policy
 // generated from terraform resource schema
 
@@ -48,6 +43,17 @@ export function dataAzurermNetappSnapshotPolicyDailyScheduleToTerraform(struct?:
   }
   return {
   }
+}
+
+
+export function dataAzurermNetappSnapshotPolicyDailyScheduleToHclTerraform(struct?: DataAzurermNetappSnapshotPolicyDailySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermNetappSnapshotPolicyDailyScheduleOutputReference extends cdktf.ComplexObject {
@@ -124,6 +130,17 @@ export function dataAzurermNetappSnapshotPolicyHourlyScheduleToTerraform(struct?
   }
 }
 
+
+export function dataAzurermNetappSnapshotPolicyHourlyScheduleToHclTerraform(struct?: DataAzurermNetappSnapshotPolicyHourlySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermNetappSnapshotPolicyHourlyScheduleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -191,6 +208,17 @@ export function dataAzurermNetappSnapshotPolicyMonthlyScheduleToTerraform(struct
   }
   return {
   }
+}
+
+
+export function dataAzurermNetappSnapshotPolicyMonthlyScheduleToHclTerraform(struct?: DataAzurermNetappSnapshotPolicyMonthlySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermNetappSnapshotPolicyMonthlyScheduleOutputReference extends cdktf.ComplexObject {
@@ -270,6 +298,17 @@ export function dataAzurermNetappSnapshotPolicyWeeklyScheduleToTerraform(struct?
   }
   return {
   }
+}
+
+
+export function dataAzurermNetappSnapshotPolicyWeeklyScheduleToHclTerraform(struct?: DataAzurermNetappSnapshotPolicyWeeklySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermNetappSnapshotPolicyWeeklyScheduleOutputReference extends cdktf.ComplexObject {
@@ -354,6 +393,25 @@ export function dataAzurermNetappSnapshotPolicyTimeoutsToTerraform(struct?: Data
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermNetappSnapshotPolicyTimeoutsToHclTerraform(struct?: DataAzurermNetappSnapshotPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermNetappSnapshotPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -600,5 +658,43 @@ export class DataAzurermNetappSnapshotPolicy extends cdktf.TerraformDataSource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermNetappSnapshotPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      account_name: {
+        value: cdktf.stringToHclTerraform(this._accountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermNetappSnapshotPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermNetappSnapshotPolicyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

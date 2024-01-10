@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/app_service_connection
 // generated from terraform resource schema
 
@@ -103,6 +98,61 @@ export function appServiceConnectionAuthenticationToTerraform(struct?: AppServic
     subscription_id: cdktf.stringToTerraform(struct!.subscriptionId),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function appServiceConnectionAuthenticationToHclTerraform(struct?: AppServiceConnectionAuthenticationOutputReference | AppServiceConnectionAuthentication): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate: {
+      value: cdktf.stringToHclTerraform(struct!.certificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_id: {
+      value: cdktf.stringToHclTerraform(struct!.clientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    principal_id: {
+      value: cdktf.stringToHclTerraform(struct!.principalId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    secret: {
+      value: cdktf.stringToHclTerraform(struct!.secret),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subscription_id: {
+      value: cdktf.stringToHclTerraform(struct!.subscriptionId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppServiceConnectionAuthenticationOutputReference extends cdktf.ComplexObject {
@@ -299,6 +349,25 @@ export function appServiceConnectionSecretStoreToTerraform(struct?: AppServiceCo
   }
 }
 
+
+export function appServiceConnectionSecretStoreToHclTerraform(struct?: AppServiceConnectionSecretStoreOutputReference | AppServiceConnectionSecretStore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppServiceConnectionSecretStoreOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -374,6 +443,43 @@ export function appServiceConnectionTimeoutsToTerraform(struct?: AppServiceConne
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function appServiceConnectionTimeoutsToHclTerraform(struct?: AppServiceConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppServiceConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -715,5 +821,67 @@ export class AppServiceConnection extends cdktf.TerraformResource {
       secret_store: appServiceConnectionSecretStoreToTerraform(this._secretStore.internalValue),
       timeouts: appServiceConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      app_service_id: {
+        value: cdktf.stringToHclTerraform(this._appServiceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_type: {
+        value: cdktf.stringToHclTerraform(this._clientType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_resource_id: {
+        value: cdktf.stringToHclTerraform(this._targetResourceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vnet_solution: {
+        value: cdktf.stringToHclTerraform(this._vnetSolution),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      authentication: {
+        value: appServiceConnectionAuthenticationToHclTerraform(this._authentication.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppServiceConnectionAuthenticationList",
+      },
+      secret_store: {
+        value: appServiceConnectionSecretStoreToHclTerraform(this._secretStore.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppServiceConnectionSecretStoreList",
+      },
+      timeouts: {
+        value: appServiceConnectionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AppServiceConnectionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/stream_analytics_output_eventhub
 // generated from terraform resource schema
 
@@ -102,6 +97,43 @@ export function streamAnalyticsOutputEventhubSerializationToTerraform(struct?: S
     format: cdktf.stringToTerraform(struct!.format),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function streamAnalyticsOutputEventhubSerializationToHclTerraform(struct?: StreamAnalyticsOutputEventhubSerializationOutputReference | StreamAnalyticsOutputEventhubSerialization): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    encoding: {
+      value: cdktf.stringToHclTerraform(struct!.encoding),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    field_delimiter: {
+      value: cdktf.stringToHclTerraform(struct!.fieldDelimiter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    format: {
+      value: cdktf.stringToHclTerraform(struct!.format),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StreamAnalyticsOutputEventhubSerializationOutputReference extends cdktf.ComplexObject {
@@ -245,6 +277,43 @@ export function streamAnalyticsOutputEventhubTimeoutsToTerraform(struct?: Stream
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function streamAnalyticsOutputEventhubTimeoutsToHclTerraform(struct?: StreamAnalyticsOutputEventhubTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StreamAnalyticsOutputEventhubTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -652,5 +721,91 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
       serialization: streamAnalyticsOutputEventhubSerializationToTerraform(this._serialization.internalValue),
       timeouts: streamAnalyticsOutputEventhubTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      authentication_mode: {
+        value: cdktf.stringToHclTerraform(this._authenticationMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      eventhub_name: {
+        value: cdktf.stringToHclTerraform(this._eventhubName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      partition_key: {
+        value: cdktf.stringToHclTerraform(this._partitionKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      property_columns: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._propertyColumns),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      servicebus_namespace: {
+        value: cdktf.stringToHclTerraform(this._servicebusNamespace),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      shared_access_policy_key: {
+        value: cdktf.stringToHclTerraform(this._sharedAccessPolicyKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      shared_access_policy_name: {
+        value: cdktf.stringToHclTerraform(this._sharedAccessPolicyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      stream_analytics_job_name: {
+        value: cdktf.stringToHclTerraform(this._streamAnalyticsJobName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      serialization: {
+        value: streamAnalyticsOutputEventhubSerializationToHclTerraform(this._serialization.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "StreamAnalyticsOutputEventhubSerializationList",
+      },
+      timeouts: {
+        value: streamAnalyticsOutputEventhubTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "StreamAnalyticsOutputEventhubTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

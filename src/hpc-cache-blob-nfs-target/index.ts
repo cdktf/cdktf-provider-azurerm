@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/hpc_cache_blob_nfs_target
 // generated from terraform resource schema
 
@@ -92,6 +87,43 @@ export function hpcCacheBlobNfsTargetTimeoutsToTerraform(struct?: HpcCacheBlobNf
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function hpcCacheBlobNfsTargetTimeoutsToHclTerraform(struct?: HpcCacheBlobNfsTargetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HpcCacheBlobNfsTargetTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -463,5 +495,79 @@ export class HpcCacheBlobNfsTarget extends cdktf.TerraformResource {
       write_back_timer_in_seconds: cdktf.numberToTerraform(this._writeBackTimerInSeconds),
       timeouts: hpcCacheBlobNfsTargetTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      access_policy_name: {
+        value: cdktf.stringToHclTerraform(this._accessPolicyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cache_name: {
+        value: cdktf.stringToHclTerraform(this._cacheName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      namespace_path: {
+        value: cdktf.stringToHclTerraform(this._namespacePath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_container_id: {
+        value: cdktf.stringToHclTerraform(this._storageContainerId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      usage_model: {
+        value: cdktf.stringToHclTerraform(this._usageModel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      verification_timer_in_seconds: {
+        value: cdktf.numberToHclTerraform(this._verificationTimerInSeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      write_back_timer_in_seconds: {
+        value: cdktf.numberToHclTerraform(this._writeBackTimerInSeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      timeouts: {
+        value: hpcCacheBlobNfsTargetTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "HpcCacheBlobNfsTargetTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

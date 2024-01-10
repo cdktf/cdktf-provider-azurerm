@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/consumption_budget_resource_group
 // generated from terraform resource schema
 
@@ -44,6 +39,17 @@ export function dataAzurermConsumptionBudgetResourceGroupFilterDimensionToTerraf
   }
   return {
   }
+}
+
+
+export function dataAzurermConsumptionBudgetResourceGroupFilterDimensionToHclTerraform(struct?: DataAzurermConsumptionBudgetResourceGroupFilterDimension): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermConsumptionBudgetResourceGroupFilterDimensionOutputReference extends cdktf.ComplexObject {
@@ -120,6 +126,17 @@ export function dataAzurermConsumptionBudgetResourceGroupFilterNotDimensionToTer
   }
 }
 
+
+export function dataAzurermConsumptionBudgetResourceGroupFilterNotDimensionToHclTerraform(struct?: DataAzurermConsumptionBudgetResourceGroupFilterNotDimension): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermConsumptionBudgetResourceGroupFilterNotDimensionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -192,6 +209,17 @@ export function dataAzurermConsumptionBudgetResourceGroupFilterNotTagToTerraform
   }
   return {
   }
+}
+
+
+export function dataAzurermConsumptionBudgetResourceGroupFilterNotTagToHclTerraform(struct?: DataAzurermConsumptionBudgetResourceGroupFilterNotTag): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermConsumptionBudgetResourceGroupFilterNotTagOutputReference extends cdktf.ComplexObject {
@@ -268,6 +296,17 @@ export function dataAzurermConsumptionBudgetResourceGroupFilterNotToTerraform(st
   }
 }
 
+
+export function dataAzurermConsumptionBudgetResourceGroupFilterNotToHclTerraform(struct?: DataAzurermConsumptionBudgetResourceGroupFilterNot): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermConsumptionBudgetResourceGroupFilterNotOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -337,6 +376,17 @@ export function dataAzurermConsumptionBudgetResourceGroupFilterTagToTerraform(st
   }
   return {
   }
+}
+
+
+export function dataAzurermConsumptionBudgetResourceGroupFilterTagToHclTerraform(struct?: DataAzurermConsumptionBudgetResourceGroupFilterTag): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermConsumptionBudgetResourceGroupFilterTagOutputReference extends cdktf.ComplexObject {
@@ -411,6 +461,17 @@ export function dataAzurermConsumptionBudgetResourceGroupFilterToTerraform(struc
   }
   return {
   }
+}
+
+
+export function dataAzurermConsumptionBudgetResourceGroupFilterToHclTerraform(struct?: DataAzurermConsumptionBudgetResourceGroupFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermConsumptionBudgetResourceGroupFilterOutputReference extends cdktf.ComplexObject {
@@ -488,6 +549,17 @@ export function dataAzurermConsumptionBudgetResourceGroupNotificationToTerraform
   }
   return {
   }
+}
+
+
+export function dataAzurermConsumptionBudgetResourceGroupNotificationToHclTerraform(struct?: DataAzurermConsumptionBudgetResourceGroupNotification): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermConsumptionBudgetResourceGroupNotificationOutputReference extends cdktf.ComplexObject {
@@ -584,6 +656,17 @@ export function dataAzurermConsumptionBudgetResourceGroupTimePeriodToTerraform(s
   }
 }
 
+
+export function dataAzurermConsumptionBudgetResourceGroupTimePeriodToHclTerraform(struct?: DataAzurermConsumptionBudgetResourceGroupTimePeriod): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermConsumptionBudgetResourceGroupTimePeriodOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -656,6 +739,25 @@ export function dataAzurermConsumptionBudgetResourceGroupTimeoutsToTerraform(str
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermConsumptionBudgetResourceGroupTimeoutsToHclTerraform(struct?: DataAzurermConsumptionBudgetResourceGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermConsumptionBudgetResourceGroupTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -875,5 +977,37 @@ export class DataAzurermConsumptionBudgetResourceGroup extends cdktf.TerraformDa
       resource_group_id: cdktf.stringToTerraform(this._resourceGroupId),
       timeouts: dataAzurermConsumptionBudgetResourceGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_id: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermConsumptionBudgetResourceGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermConsumptionBudgetResourceGroupTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

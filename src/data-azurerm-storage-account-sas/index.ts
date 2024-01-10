@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/storage_account_sas
 // generated from terraform resource schema
 
@@ -128,6 +123,79 @@ export function dataAzurermStorageAccountSasPermissionsToTerraform(struct?: Data
     update: cdktf.booleanToTerraform(struct!.update),
     write: cdktf.booleanToTerraform(struct!.write),
   }
+}
+
+
+export function dataAzurermStorageAccountSasPermissionsToHclTerraform(struct?: DataAzurermStorageAccountSasPermissionsOutputReference | DataAzurermStorageAccountSasPermissions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    add: {
+      value: cdktf.booleanToHclTerraform(struct!.add),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    create: {
+      value: cdktf.booleanToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    delete: {
+      value: cdktf.booleanToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    filter: {
+      value: cdktf.booleanToHclTerraform(struct!.filter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    list: {
+      value: cdktf.booleanToHclTerraform(struct!.list),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    process: {
+      value: cdktf.booleanToHclTerraform(struct!.process),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    read: {
+      value: cdktf.booleanToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tag: {
+      value: cdktf.booleanToHclTerraform(struct!.tag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    update: {
+      value: cdktf.booleanToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    write: {
+      value: cdktf.booleanToHclTerraform(struct!.write),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdktf.ComplexObject {
@@ -373,6 +441,37 @@ export function dataAzurermStorageAccountSasResourceTypesToTerraform(struct?: Da
   }
 }
 
+
+export function dataAzurermStorageAccountSasResourceTypesToHclTerraform(struct?: DataAzurermStorageAccountSasResourceTypesOutputReference | DataAzurermStorageAccountSasResourceTypes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    container: {
+      value: cdktf.booleanToHclTerraform(struct!.container),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    object: {
+      value: cdktf.booleanToHclTerraform(struct!.object),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    service: {
+      value: cdktf.booleanToHclTerraform(struct!.service),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -486,6 +585,43 @@ export function dataAzurermStorageAccountSasServicesToTerraform(struct?: DataAzu
     queue: cdktf.booleanToTerraform(struct!.queue),
     table: cdktf.booleanToTerraform(struct!.table),
   }
+}
+
+
+export function dataAzurermStorageAccountSasServicesToHclTerraform(struct?: DataAzurermStorageAccountSasServicesOutputReference | DataAzurermStorageAccountSasServices): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    blob: {
+      value: cdktf.booleanToHclTerraform(struct!.blob),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    file: {
+      value: cdktf.booleanToHclTerraform(struct!.file),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    queue: {
+      value: cdktf.booleanToHclTerraform(struct!.queue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    table: {
+      value: cdktf.booleanToHclTerraform(struct!.table),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.ComplexObject {
@@ -605,6 +741,25 @@ export function dataAzurermStorageAccountSasTimeoutsToTerraform(struct?: DataAzu
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermStorageAccountSasTimeoutsToHclTerraform(struct?: DataAzurermStorageAccountSasTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -915,5 +1070,79 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
       services: dataAzurermStorageAccountSasServicesToTerraform(this._services.internalValue),
       timeouts: dataAzurermStorageAccountSasTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      connection_string: {
+        value: cdktf.stringToHclTerraform(this._connectionString),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      expiry: {
+        value: cdktf.stringToHclTerraform(this._expiry),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      https_only: {
+        value: cdktf.booleanToHclTerraform(this._httpsOnly),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ip_addresses: {
+        value: cdktf.stringToHclTerraform(this._ipAddresses),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      signed_version: {
+        value: cdktf.stringToHclTerraform(this._signedVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      start: {
+        value: cdktf.stringToHclTerraform(this._start),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      permissions: {
+        value: dataAzurermStorageAccountSasPermissionsToHclTerraform(this._permissions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataAzurermStorageAccountSasPermissionsList",
+      },
+      resource_types: {
+        value: dataAzurermStorageAccountSasResourceTypesToHclTerraform(this._resourceTypes.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataAzurermStorageAccountSasResourceTypesList",
+      },
+      services: {
+        value: dataAzurermStorageAccountSasServicesToHclTerraform(this._services.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataAzurermStorageAccountSasServicesList",
+      },
+      timeouts: {
+        value: dataAzurermStorageAccountSasTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermStorageAccountSasTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

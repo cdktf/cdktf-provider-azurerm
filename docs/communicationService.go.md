@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.communicationService.CommunicationService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
 
 communicationservice.NewCommunicationService(scope Construct, id *string, config CommunicationServiceConfig) CommunicationService
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.communicationService.CommunicationService.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -129,6 +130,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.communicationService.CommunicationService.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.communicationService.CommunicationService.toMetadata"></a>
 
@@ -412,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.communicationService.CommunicationService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
 
 communicationservice.CommunicationService_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.communicationService.CommunicationService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
 
 communicationservice.CommunicationService_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ communicationservice.CommunicationService_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.communicationService.CommunicationService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
 
 communicationservice.CommunicationService_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ communicationservice.CommunicationService_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.communicationService.CommunicationService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
 
 communicationservice.CommunicationService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -877,7 +884,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.communicationService.CommunicationServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
 
 &communicationservice.CommunicationServiceConfig {
 	Connection: interface{},
@@ -892,7 +899,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/communicationserv
 	DataLocation: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.communicationService.CommunicationServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.communicationService.CommunicationServiceTimeouts,
 }
 ```
 
@@ -1068,7 +1075,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
 
 &communicationservice.CommunicationServiceTimeouts {
 	Create: *string,
@@ -1144,7 +1151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.communicationService.CommunicationServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/communicationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservice"
 
 communicationservice.NewCommunicationServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CommunicationServiceTimeoutsOutputReference
 ```

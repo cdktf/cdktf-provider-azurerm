@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/kubernetes_cluster_extension
 // generated from terraform resource schema
 
@@ -78,6 +73,17 @@ export function kubernetesClusterExtensionAksAssignedIdentityToTerraform(struct?
   }
   return {
   }
+}
+
+
+export function kubernetesClusterExtensionAksAssignedIdentityToHclTerraform(struct?: KubernetesClusterExtensionAksAssignedIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class KubernetesClusterExtensionAksAssignedIdentityOutputReference extends cdktf.ComplexObject {
@@ -177,6 +183,49 @@ export function kubernetesClusterExtensionPlanToTerraform(struct?: KubernetesClu
     publisher: cdktf.stringToTerraform(struct!.publisher),
     version: cdktf.stringToTerraform(struct!.version),
   }
+}
+
+
+export function kubernetesClusterExtensionPlanToHclTerraform(struct?: KubernetesClusterExtensionPlanOutputReference | KubernetesClusterExtensionPlan): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    product: {
+      value: cdktf.stringToHclTerraform(struct!.product),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    promotion_code: {
+      value: cdktf.stringToHclTerraform(struct!.promotionCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    publisher: {
+      value: cdktf.stringToHclTerraform(struct!.publisher),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KubernetesClusterExtensionPlanOutputReference extends cdktf.ComplexObject {
@@ -336,6 +385,43 @@ export function kubernetesClusterExtensionTimeoutsToTerraform(struct?: Kubernete
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function kubernetesClusterExtensionTimeoutsToHclTerraform(struct?: KubernetesClusterExtensionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KubernetesClusterExtensionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -745,5 +831,85 @@ export class KubernetesClusterExtension extends cdktf.TerraformResource {
       plan: kubernetesClusterExtensionPlanToTerraform(this._plan.internalValue),
       timeouts: kubernetesClusterExtensionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cluster_id: {
+        value: cdktf.stringToHclTerraform(this._clusterId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      configuration_protected_settings: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._configurationProtectedSettings),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      configuration_settings: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._configurationSettings),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      extension_type: {
+        value: cdktf.stringToHclTerraform(this._extensionType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      release_namespace: {
+        value: cdktf.stringToHclTerraform(this._releaseNamespace),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      release_train: {
+        value: cdktf.stringToHclTerraform(this._releaseTrain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_namespace: {
+        value: cdktf.stringToHclTerraform(this._targetNamespace),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      version: {
+        value: cdktf.stringToHclTerraform(this._version),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      plan: {
+        value: kubernetesClusterExtensionPlanToHclTerraform(this._plan.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KubernetesClusterExtensionPlanList",
+      },
+      timeouts: {
+        value: kubernetesClusterExtensionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "KubernetesClusterExtensionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

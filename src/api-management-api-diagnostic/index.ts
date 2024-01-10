@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_api_diagnostic
 // generated from terraform resource schema
 
@@ -114,6 +109,31 @@ export function apiManagementApiDiagnosticBackendRequestDataMaskingHeadersToTerr
     mode: cdktf.stringToTerraform(struct!.mode),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function apiManagementApiDiagnosticBackendRequestDataMaskingHeadersToHclTerraform(struct?: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiDiagnosticBackendRequestDataMaskingHeadersOutputReference extends cdktf.ComplexObject {
@@ -232,6 +252,31 @@ export function apiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsTo
     mode: cdktf.stringToTerraform(struct!.mode),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function apiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsToHclTerraform(struct?: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsOutputReference extends cdktf.ComplexObject {
@@ -356,6 +401,31 @@ export function apiManagementApiDiagnosticBackendRequestDataMaskingToTerraform(s
   }
 }
 
+
+export function apiManagementApiDiagnosticBackendRequestDataMaskingToHclTerraform(struct?: ApiManagementApiDiagnosticBackendRequestDataMaskingOutputReference | ApiManagementApiDiagnosticBackendRequestDataMasking): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    headers: {
+      value: cdktf.listMapperHcl(apiManagementApiDiagnosticBackendRequestDataMaskingHeadersToHclTerraform, true)(struct!.headers),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiDiagnosticBackendRequestDataMaskingHeadersList",
+    },
+    query_params: {
+      value: cdktf.listMapperHcl(apiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsToHclTerraform, true)(struct!.queryParams),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiDiagnosticBackendRequestDataMaskingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -453,6 +523,37 @@ export function apiManagementApiDiagnosticBackendRequestToTerraform(struct?: Api
     headers_to_log: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.headersToLog),
     data_masking: apiManagementApiDiagnosticBackendRequestDataMaskingToTerraform(struct!.dataMasking),
   }
+}
+
+
+export function apiManagementApiDiagnosticBackendRequestToHclTerraform(struct?: ApiManagementApiDiagnosticBackendRequestOutputReference | ApiManagementApiDiagnosticBackendRequest): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    body_bytes: {
+      value: cdktf.numberToHclTerraform(struct!.bodyBytes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    headers_to_log: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.headersToLog),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    data_masking: {
+      value: apiManagementApiDiagnosticBackendRequestDataMaskingToHclTerraform(struct!.dataMasking),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiDiagnosticBackendRequestDataMaskingList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiDiagnosticBackendRequestOutputReference extends cdktf.ComplexObject {
@@ -567,6 +668,31 @@ export function apiManagementApiDiagnosticBackendResponseDataMaskingHeadersToTer
     mode: cdktf.stringToTerraform(struct!.mode),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function apiManagementApiDiagnosticBackendResponseDataMaskingHeadersToHclTerraform(struct?: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiDiagnosticBackendResponseDataMaskingHeadersOutputReference extends cdktf.ComplexObject {
@@ -685,6 +811,31 @@ export function apiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsT
     mode: cdktf.stringToTerraform(struct!.mode),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function apiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsToHclTerraform(struct?: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsOutputReference extends cdktf.ComplexObject {
@@ -809,6 +960,31 @@ export function apiManagementApiDiagnosticBackendResponseDataMaskingToTerraform(
   }
 }
 
+
+export function apiManagementApiDiagnosticBackendResponseDataMaskingToHclTerraform(struct?: ApiManagementApiDiagnosticBackendResponseDataMaskingOutputReference | ApiManagementApiDiagnosticBackendResponseDataMasking): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    headers: {
+      value: cdktf.listMapperHcl(apiManagementApiDiagnosticBackendResponseDataMaskingHeadersToHclTerraform, true)(struct!.headers),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiDiagnosticBackendResponseDataMaskingHeadersList",
+    },
+    query_params: {
+      value: cdktf.listMapperHcl(apiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsToHclTerraform, true)(struct!.queryParams),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiDiagnosticBackendResponseDataMaskingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -906,6 +1082,37 @@ export function apiManagementApiDiagnosticBackendResponseToTerraform(struct?: Ap
     headers_to_log: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.headersToLog),
     data_masking: apiManagementApiDiagnosticBackendResponseDataMaskingToTerraform(struct!.dataMasking),
   }
+}
+
+
+export function apiManagementApiDiagnosticBackendResponseToHclTerraform(struct?: ApiManagementApiDiagnosticBackendResponseOutputReference | ApiManagementApiDiagnosticBackendResponse): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    body_bytes: {
+      value: cdktf.numberToHclTerraform(struct!.bodyBytes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    headers_to_log: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.headersToLog),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    data_masking: {
+      value: apiManagementApiDiagnosticBackendResponseDataMaskingToHclTerraform(struct!.dataMasking),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiDiagnosticBackendResponseDataMaskingList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiDiagnosticBackendResponseOutputReference extends cdktf.ComplexObject {
@@ -1020,6 +1227,31 @@ export function apiManagementApiDiagnosticFrontendRequestDataMaskingHeadersToTer
     mode: cdktf.stringToTerraform(struct!.mode),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function apiManagementApiDiagnosticFrontendRequestDataMaskingHeadersToHclTerraform(struct?: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiDiagnosticFrontendRequestDataMaskingHeadersOutputReference extends cdktf.ComplexObject {
@@ -1138,6 +1370,31 @@ export function apiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsT
     mode: cdktf.stringToTerraform(struct!.mode),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function apiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsToHclTerraform(struct?: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsOutputReference extends cdktf.ComplexObject {
@@ -1262,6 +1519,31 @@ export function apiManagementApiDiagnosticFrontendRequestDataMaskingToTerraform(
   }
 }
 
+
+export function apiManagementApiDiagnosticFrontendRequestDataMaskingToHclTerraform(struct?: ApiManagementApiDiagnosticFrontendRequestDataMaskingOutputReference | ApiManagementApiDiagnosticFrontendRequestDataMasking): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    headers: {
+      value: cdktf.listMapperHcl(apiManagementApiDiagnosticFrontendRequestDataMaskingHeadersToHclTerraform, true)(struct!.headers),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiDiagnosticFrontendRequestDataMaskingHeadersList",
+    },
+    query_params: {
+      value: cdktf.listMapperHcl(apiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsToHclTerraform, true)(struct!.queryParams),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiDiagnosticFrontendRequestDataMaskingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1359,6 +1641,37 @@ export function apiManagementApiDiagnosticFrontendRequestToTerraform(struct?: Ap
     headers_to_log: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.headersToLog),
     data_masking: apiManagementApiDiagnosticFrontendRequestDataMaskingToTerraform(struct!.dataMasking),
   }
+}
+
+
+export function apiManagementApiDiagnosticFrontendRequestToHclTerraform(struct?: ApiManagementApiDiagnosticFrontendRequestOutputReference | ApiManagementApiDiagnosticFrontendRequest): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    body_bytes: {
+      value: cdktf.numberToHclTerraform(struct!.bodyBytes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    headers_to_log: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.headersToLog),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    data_masking: {
+      value: apiManagementApiDiagnosticFrontendRequestDataMaskingToHclTerraform(struct!.dataMasking),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiDiagnosticFrontendRequestDataMaskingList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiDiagnosticFrontendRequestOutputReference extends cdktf.ComplexObject {
@@ -1473,6 +1786,31 @@ export function apiManagementApiDiagnosticFrontendResponseDataMaskingHeadersToTe
     mode: cdktf.stringToTerraform(struct!.mode),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function apiManagementApiDiagnosticFrontendResponseDataMaskingHeadersToHclTerraform(struct?: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiDiagnosticFrontendResponseDataMaskingHeadersOutputReference extends cdktf.ComplexObject {
@@ -1591,6 +1929,31 @@ export function apiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams
     mode: cdktf.stringToTerraform(struct!.mode),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function apiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsToHclTerraform(struct?: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsOutputReference extends cdktf.ComplexObject {
@@ -1715,6 +2078,31 @@ export function apiManagementApiDiagnosticFrontendResponseDataMaskingToTerraform
   }
 }
 
+
+export function apiManagementApiDiagnosticFrontendResponseDataMaskingToHclTerraform(struct?: ApiManagementApiDiagnosticFrontendResponseDataMaskingOutputReference | ApiManagementApiDiagnosticFrontendResponseDataMasking): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    headers: {
+      value: cdktf.listMapperHcl(apiManagementApiDiagnosticFrontendResponseDataMaskingHeadersToHclTerraform, true)(struct!.headers),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiDiagnosticFrontendResponseDataMaskingHeadersList",
+    },
+    query_params: {
+      value: cdktf.listMapperHcl(apiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsToHclTerraform, true)(struct!.queryParams),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiDiagnosticFrontendResponseDataMaskingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1812,6 +2200,37 @@ export function apiManagementApiDiagnosticFrontendResponseToTerraform(struct?: A
     headers_to_log: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.headersToLog),
     data_masking: apiManagementApiDiagnosticFrontendResponseDataMaskingToTerraform(struct!.dataMasking),
   }
+}
+
+
+export function apiManagementApiDiagnosticFrontendResponseToHclTerraform(struct?: ApiManagementApiDiagnosticFrontendResponseOutputReference | ApiManagementApiDiagnosticFrontendResponse): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    body_bytes: {
+      value: cdktf.numberToHclTerraform(struct!.bodyBytes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    headers_to_log: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.headersToLog),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    data_masking: {
+      value: apiManagementApiDiagnosticFrontendResponseDataMaskingToHclTerraform(struct!.dataMasking),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiDiagnosticFrontendResponseDataMaskingList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiDiagnosticFrontendResponseOutputReference extends cdktf.ComplexObject {
@@ -1936,6 +2355,43 @@ export function apiManagementApiDiagnosticTimeoutsToTerraform(struct?: ApiManage
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function apiManagementApiDiagnosticTimeoutsToHclTerraform(struct?: ApiManagementApiDiagnosticTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiDiagnosticTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -2418,5 +2874,115 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
       frontend_response: apiManagementApiDiagnosticFrontendResponseToTerraform(this._frontendResponse.internalValue),
       timeouts: apiManagementApiDiagnosticTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      always_log_errors: {
+        value: cdktf.booleanToHclTerraform(this._alwaysLogErrors),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      api_management_logger_id: {
+        value: cdktf.stringToHclTerraform(this._apiManagementLoggerId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      api_management_name: {
+        value: cdktf.stringToHclTerraform(this._apiManagementName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      api_name: {
+        value: cdktf.stringToHclTerraform(this._apiName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      http_correlation_protocol: {
+        value: cdktf.stringToHclTerraform(this._httpCorrelationProtocol),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      identifier: {
+        value: cdktf.stringToHclTerraform(this._identifier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log_client_ip: {
+        value: cdktf.booleanToHclTerraform(this._logClientIp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      operation_name_format: {
+        value: cdktf.stringToHclTerraform(this._operationNameFormat),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sampling_percentage: {
+        value: cdktf.numberToHclTerraform(this._samplingPercentage),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      verbosity: {
+        value: cdktf.stringToHclTerraform(this._verbosity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      backend_request: {
+        value: apiManagementApiDiagnosticBackendRequestToHclTerraform(this._backendRequest.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementApiDiagnosticBackendRequestList",
+      },
+      backend_response: {
+        value: apiManagementApiDiagnosticBackendResponseToHclTerraform(this._backendResponse.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementApiDiagnosticBackendResponseList",
+      },
+      frontend_request: {
+        value: apiManagementApiDiagnosticFrontendRequestToHclTerraform(this._frontendRequest.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementApiDiagnosticFrontendRequestList",
+      },
+      frontend_response: {
+        value: apiManagementApiDiagnosticFrontendResponseToHclTerraform(this._frontendResponse.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementApiDiagnosticFrontendResponseList",
+      },
+      timeouts: {
+        value: apiManagementApiDiagnosticTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ApiManagementApiDiagnosticTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

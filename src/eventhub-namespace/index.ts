@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/eventhub_namespace
 // generated from terraform resource schema
 
@@ -108,6 +103,31 @@ export function eventhubNamespaceNetworkRulesetsIpRuleToTerraform(struct?: Event
     action: struct!.action === undefined ? null : cdktf.stringToTerraform(struct!.action),
     ip_mask: struct!.ipMask === undefined ? null : cdktf.stringToTerraform(struct!.ipMask),
   }
+}
+
+
+export function eventhubNamespaceNetworkRulesetsIpRuleToHclTerraform(struct?: EventhubNamespaceNetworkRulesetsIpRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: struct!.action === undefined ? null : cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ip_mask: {
+      value: struct!.ipMask === undefined ? null : cdktf.stringToHclTerraform(struct!.ipMask),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class EventhubNamespaceNetworkRulesetsIpRuleOutputReference extends cdktf.ComplexObject {
@@ -232,6 +252,31 @@ export function eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform(st
     ignore_missing_virtual_network_service_endpoint: struct!.ignoreMissingVirtualNetworkServiceEndpoint === undefined ? null : cdktf.booleanToTerraform(struct!.ignoreMissingVirtualNetworkServiceEndpoint),
     subnet_id: struct!.subnetId === undefined ? null : cdktf.stringToTerraform(struct!.subnetId),
   }
+}
+
+
+export function eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToHclTerraform(struct?: EventhubNamespaceNetworkRulesetsVirtualNetworkRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ignore_missing_virtual_network_service_endpoint: {
+      value: struct!.ignoreMissingVirtualNetworkServiceEndpoint === undefined ? null : cdktf.booleanToHclTerraform(struct!.ignoreMissingVirtualNetworkServiceEndpoint),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    subnet_id: {
+      value: struct!.subnetId === undefined ? null : cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class EventhubNamespaceNetworkRulesetsVirtualNetworkRuleOutputReference extends cdktf.ComplexObject {
@@ -371,6 +416,49 @@ export function eventhubNamespaceNetworkRulesetsToTerraform(struct?: EventhubNam
     trusted_service_access_enabled: struct!.trustedServiceAccessEnabled === undefined ? null : cdktf.booleanToTerraform(struct!.trustedServiceAccessEnabled),
     virtual_network_rule: struct!.virtualNetworkRule === undefined ? null : cdktf.listMapper(eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform, false)(struct!.virtualNetworkRule),
   }
+}
+
+
+export function eventhubNamespaceNetworkRulesetsToHclTerraform(struct?: EventhubNamespaceNetworkRulesets | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_action: {
+      value: struct!.defaultAction === undefined ? null : cdktf.stringToHclTerraform(struct!.defaultAction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ip_rule: {
+      value: struct!.ipRule === undefined ? null : cdktf.listMapperHcl(eventhubNamespaceNetworkRulesetsIpRuleToHclTerraform, false)(struct!.ipRule),
+      isBlock: true,
+      type: "list",
+      storageClassType: "EventhubNamespaceNetworkRulesetsIpRuleList",
+    },
+    public_network_access_enabled: {
+      value: struct!.publicNetworkAccessEnabled === undefined ? null : cdktf.booleanToHclTerraform(struct!.publicNetworkAccessEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    trusted_service_access_enabled: {
+      value: struct!.trustedServiceAccessEnabled === undefined ? null : cdktf.booleanToHclTerraform(struct!.trustedServiceAccessEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    virtual_network_rule: {
+      value: struct!.virtualNetworkRule === undefined ? null : cdktf.listMapperHcl(eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToHclTerraform, false)(struct!.virtualNetworkRule),
+      isBlock: true,
+      type: "set",
+      storageClassType: "EventhubNamespaceNetworkRulesetsVirtualNetworkRuleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class EventhubNamespaceNetworkRulesetsOutputReference extends cdktf.ComplexObject {
@@ -563,6 +651,31 @@ export function eventhubNamespaceIdentityToTerraform(struct?: EventhubNamespaceI
   }
 }
 
+
+export function eventhubNamespaceIdentityToHclTerraform(struct?: EventhubNamespaceIdentityOutputReference | EventhubNamespaceIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class EventhubNamespaceIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -670,6 +783,43 @@ export function eventhubNamespaceTimeoutsToTerraform(struct?: EventhubNamespaceT
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function eventhubNamespaceTimeoutsToHclTerraform(struct?: EventhubNamespaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class EventhubNamespaceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1185,5 +1335,115 @@ export class EventhubNamespace extends cdktf.TerraformResource {
       identity: eventhubNamespaceIdentityToTerraform(this._identity.internalValue),
       timeouts: eventhubNamespaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      auto_inflate_enabled: {
+        value: cdktf.booleanToHclTerraform(this._autoInflateEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      capacity: {
+        value: cdktf.numberToHclTerraform(this._capacity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      dedicated_cluster_id: {
+        value: cdktf.stringToHclTerraform(this._dedicatedClusterId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      local_authentication_enabled: {
+        value: cdktf.booleanToHclTerraform(this._localAuthenticationEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      maximum_throughput_units: {
+        value: cdktf.numberToHclTerraform(this._maximumThroughputUnits),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      minimum_tls_version: {
+        value: cdktf.stringToHclTerraform(this._minimumTlsVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_rulesets: {
+        value: cdktf.listMapperHcl(eventhubNamespaceNetworkRulesetsToHclTerraform, false)(this._networkRulesets.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "EventhubNamespaceNetworkRulesetsList",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku: {
+        value: cdktf.stringToHclTerraform(this._sku),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      zone_redundant: {
+        value: cdktf.booleanToHclTerraform(this._zoneRedundant),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      identity: {
+        value: eventhubNamespaceIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "EventhubNamespaceIdentityList",
+      },
+      timeouts: {
+        value: eventhubNamespaceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "EventhubNamespaceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/spring_cloud_gateway_route_config
 // generated from terraform resource schema
 
@@ -81,6 +76,25 @@ export function springCloudGatewayRouteConfigOpenApiToTerraform(struct?: SpringC
   return {
     uri: cdktf.stringToTerraform(struct!.uri),
   }
+}
+
+
+export function springCloudGatewayRouteConfigOpenApiToHclTerraform(struct?: SpringCloudGatewayRouteConfigOpenApiOutputReference | SpringCloudGatewayRouteConfigOpenApi): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudGatewayRouteConfigOpenApiOutputReference extends cdktf.ComplexObject {
@@ -186,6 +200,73 @@ export function springCloudGatewayRouteConfigRouteToTerraform(struct?: SpringClo
     token_relay: cdktf.booleanToTerraform(struct!.tokenRelay),
     uri: cdktf.stringToTerraform(struct!.uri),
   }
+}
+
+
+export function springCloudGatewayRouteConfigRouteToHclTerraform(struct?: SpringCloudGatewayRouteConfigRoute | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    classification_tags: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.classificationTags),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    filters: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.filters),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    order: {
+      value: cdktf.numberToHclTerraform(struct!.order),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    predicates: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.predicates),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    sso_validation_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.ssoValidationEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    title: {
+      value: cdktf.stringToHclTerraform(struct!.title),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    token_relay: {
+      value: cdktf.booleanToHclTerraform(struct!.tokenRelay),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudGatewayRouteConfigRouteOutputReference extends cdktf.ComplexObject {
@@ -471,6 +552,43 @@ export function springCloudGatewayRouteConfigTimeoutsToTerraform(struct?: Spring
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function springCloudGatewayRouteConfigTimeoutsToHclTerraform(struct?: SpringCloudGatewayRouteConfigTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudGatewayRouteConfigTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -854,5 +972,79 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
       route: cdktf.listMapper(springCloudGatewayRouteConfigRouteToTerraform, true)(this._route.internalValue),
       timeouts: springCloudGatewayRouteConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      filters: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._filters),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      predicates: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._predicates),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      protocol: {
+        value: cdktf.stringToHclTerraform(this._protocol),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      spring_cloud_app_id: {
+        value: cdktf.stringToHclTerraform(this._springCloudAppId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      spring_cloud_gateway_id: {
+        value: cdktf.stringToHclTerraform(this._springCloudGatewayId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sso_validation_enabled: {
+        value: cdktf.booleanToHclTerraform(this._ssoValidationEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      open_api: {
+        value: springCloudGatewayRouteConfigOpenApiToHclTerraform(this._openApi.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudGatewayRouteConfigOpenApiList",
+      },
+      route: {
+        value: cdktf.listMapperHcl(springCloudGatewayRouteConfigRouteToHclTerraform, true)(this._route.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "SpringCloudGatewayRouteConfigRouteList",
+      },
+      timeouts: {
+        value: springCloudGatewayRouteConfigTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SpringCloudGatewayRouteConfigTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/virtual_desktop_scaling_plan
 // generated from terraform resource schema
 
@@ -90,6 +85,31 @@ export function virtualDesktopScalingPlanHostPoolToTerraform(struct?: VirtualDes
     hostpool_id: cdktf.stringToTerraform(struct!.hostpoolId),
     scaling_plan_enabled: cdktf.booleanToTerraform(struct!.scalingPlanEnabled),
   }
+}
+
+
+export function virtualDesktopScalingPlanHostPoolToHclTerraform(struct?: VirtualDesktopScalingPlanHostPool | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hostpool_id: {
+      value: cdktf.stringToHclTerraform(struct!.hostpoolId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    scaling_plan_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.scalingPlanEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VirtualDesktopScalingPlanHostPoolOutputReference extends cdktf.ComplexObject {
@@ -288,6 +308,127 @@ export function virtualDesktopScalingPlanScheduleToTerraform(struct?: VirtualDes
     ramp_up_minimum_hosts_percent: cdktf.numberToTerraform(struct!.rampUpMinimumHostsPercent),
     ramp_up_start_time: cdktf.stringToTerraform(struct!.rampUpStartTime),
   }
+}
+
+
+export function virtualDesktopScalingPlanScheduleToHclTerraform(struct?: VirtualDesktopScalingPlanSchedule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    days_of_week: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.daysOfWeek),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    off_peak_load_balancing_algorithm: {
+      value: cdktf.stringToHclTerraform(struct!.offPeakLoadBalancingAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    off_peak_start_time: {
+      value: cdktf.stringToHclTerraform(struct!.offPeakStartTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    peak_load_balancing_algorithm: {
+      value: cdktf.stringToHclTerraform(struct!.peakLoadBalancingAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    peak_start_time: {
+      value: cdktf.stringToHclTerraform(struct!.peakStartTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ramp_down_capacity_threshold_percent: {
+      value: cdktf.numberToHclTerraform(struct!.rampDownCapacityThresholdPercent),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    ramp_down_force_logoff_users: {
+      value: cdktf.booleanToHclTerraform(struct!.rampDownForceLogoffUsers),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ramp_down_load_balancing_algorithm: {
+      value: cdktf.stringToHclTerraform(struct!.rampDownLoadBalancingAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ramp_down_minimum_hosts_percent: {
+      value: cdktf.numberToHclTerraform(struct!.rampDownMinimumHostsPercent),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    ramp_down_notification_message: {
+      value: cdktf.stringToHclTerraform(struct!.rampDownNotificationMessage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ramp_down_start_time: {
+      value: cdktf.stringToHclTerraform(struct!.rampDownStartTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ramp_down_stop_hosts_when: {
+      value: cdktf.stringToHclTerraform(struct!.rampDownStopHostsWhen),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ramp_down_wait_time_minutes: {
+      value: cdktf.numberToHclTerraform(struct!.rampDownWaitTimeMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    ramp_up_capacity_threshold_percent: {
+      value: cdktf.numberToHclTerraform(struct!.rampUpCapacityThresholdPercent),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    ramp_up_load_balancing_algorithm: {
+      value: cdktf.stringToHclTerraform(struct!.rampUpLoadBalancingAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ramp_up_minimum_hosts_percent: {
+      value: cdktf.numberToHclTerraform(struct!.rampUpMinimumHostsPercent),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    ramp_up_start_time: {
+      value: cdktf.stringToHclTerraform(struct!.rampUpStartTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VirtualDesktopScalingPlanScheduleOutputReference extends cdktf.ComplexObject {
@@ -728,6 +869,43 @@ export function virtualDesktopScalingPlanTimeoutsToTerraform(struct?: VirtualDes
   }
 }
 
+
+export function virtualDesktopScalingPlanTimeoutsToHclTerraform(struct?: VirtualDesktopScalingPlanTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class VirtualDesktopScalingPlanTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1118,5 +1296,85 @@ export class VirtualDesktopScalingPlan extends cdktf.TerraformResource {
       schedule: cdktf.listMapper(virtualDesktopScalingPlanScheduleToTerraform, true)(this._schedule.internalValue),
       timeouts: virtualDesktopScalingPlanTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      exclusion_tag: {
+        value: cdktf.stringToHclTerraform(this._exclusionTag),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      friendly_name: {
+        value: cdktf.stringToHclTerraform(this._friendlyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      time_zone: {
+        value: cdktf.stringToHclTerraform(this._timeZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      host_pool: {
+        value: cdktf.listMapperHcl(virtualDesktopScalingPlanHostPoolToHclTerraform, true)(this._hostPool.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "VirtualDesktopScalingPlanHostPoolList",
+      },
+      schedule: {
+        value: cdktf.listMapperHcl(virtualDesktopScalingPlanScheduleToHclTerraform, true)(this._schedule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "VirtualDesktopScalingPlanScheduleList",
+      },
+      timeouts: {
+        value: virtualDesktopScalingPlanTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "VirtualDesktopScalingPlanTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

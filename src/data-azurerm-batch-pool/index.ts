@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/batch_pool
 // generated from terraform resource schema
 
@@ -48,6 +43,17 @@ export function dataAzurermBatchPoolAutoScaleToTerraform(struct?: DataAzurermBat
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolAutoScaleToHclTerraform(struct?: DataAzurermBatchPoolAutoScale): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolAutoScaleOutputReference extends cdktf.ComplexObject {
@@ -117,6 +123,17 @@ export function dataAzurermBatchPoolCertificateToTerraform(struct?: DataAzurermB
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolCertificateToHclTerraform(struct?: DataAzurermBatchPoolCertificate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolCertificateOutputReference extends cdktf.ComplexObject {
@@ -198,6 +215,17 @@ export function dataAzurermBatchPoolContainerConfigurationContainerRegistriesToT
   }
 }
 
+
+export function dataAzurermBatchPoolContainerConfigurationContainerRegistriesToHclTerraform(struct?: DataAzurermBatchPoolContainerConfigurationContainerRegistries): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolContainerConfigurationContainerRegistriesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -277,6 +305,17 @@ export function dataAzurermBatchPoolContainerConfigurationToTerraform(struct?: D
   }
 }
 
+
+export function dataAzurermBatchPoolContainerConfigurationToHclTerraform(struct?: DataAzurermBatchPoolContainerConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolContainerConfigurationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -350,6 +389,17 @@ export function dataAzurermBatchPoolDataDisksToTerraform(struct?: DataAzurermBat
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolDataDisksToHclTerraform(struct?: DataAzurermBatchPoolDataDisks): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolDataDisksOutputReference extends cdktf.ComplexObject {
@@ -431,6 +481,17 @@ export function dataAzurermBatchPoolDiskEncryptionToTerraform(struct?: DataAzure
   }
 }
 
+
+export function dataAzurermBatchPoolDiskEncryptionToHclTerraform(struct?: DataAzurermBatchPoolDiskEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolDiskEncryptionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -493,6 +554,17 @@ export function dataAzurermBatchPoolExtensionsToTerraform(struct?: DataAzurermBa
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolExtensionsToHclTerraform(struct?: DataAzurermBatchPoolExtensions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolExtensionsOutputReference extends cdktf.ComplexObject {
@@ -594,6 +666,17 @@ export function dataAzurermBatchPoolFixedScaleToTerraform(struct?: DataAzurermBa
   }
 }
 
+
+export function dataAzurermBatchPoolFixedScaleToHclTerraform(struct?: DataAzurermBatchPoolFixedScale): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolFixedScaleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -666,6 +749,17 @@ export function dataAzurermBatchPoolMountAzureBlobFileSystemToTerraform(struct?:
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolMountAzureBlobFileSystemToHclTerraform(struct?: DataAzurermBatchPoolMountAzureBlobFileSystem): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolMountAzureBlobFileSystemOutputReference extends cdktf.ComplexObject {
@@ -762,6 +856,17 @@ export function dataAzurermBatchPoolMountAzureFileShareToTerraform(struct?: Data
   }
 }
 
+
+export function dataAzurermBatchPoolMountAzureFileShareToHclTerraform(struct?: DataAzurermBatchPoolMountAzureFileShare): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolMountAzureFileShareOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -844,6 +949,17 @@ export function dataAzurermBatchPoolMountCifsMountToTerraform(struct?: DataAzure
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolMountCifsMountToHclTerraform(struct?: DataAzurermBatchPoolMountCifsMount): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolMountCifsMountOutputReference extends cdktf.ComplexObject {
@@ -930,6 +1046,17 @@ export function dataAzurermBatchPoolMountNfsMountToTerraform(struct?: DataAzurer
   }
 }
 
+
+export function dataAzurermBatchPoolMountNfsMountToHclTerraform(struct?: DataAzurermBatchPoolMountNfsMount): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolMountNfsMountOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1002,6 +1129,17 @@ export function dataAzurermBatchPoolMountToTerraform(struct?: DataAzurermBatchPo
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolMountToHclTerraform(struct?: DataAzurermBatchPoolMount): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolMountOutputReference extends cdktf.ComplexObject {
@@ -1087,6 +1225,17 @@ export function dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNet
   }
 }
 
+
+export function dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesToHclTerraform(struct?: DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1164,6 +1313,17 @@ export function dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationToT
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationToHclTerraform(struct?: DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationOutputReference extends cdktf.ComplexObject {
@@ -1249,6 +1409,17 @@ export function dataAzurermBatchPoolNetworkConfigurationToTerraform(struct?: Dat
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolNetworkConfigurationToHclTerraform(struct?: DataAzurermBatchPoolNetworkConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolNetworkConfigurationOutputReference extends cdktf.ComplexObject {
@@ -1341,6 +1512,17 @@ export function dataAzurermBatchPoolNodePlacementToTerraform(struct?: DataAzurer
   }
 }
 
+
+export function dataAzurermBatchPoolNodePlacementToHclTerraform(struct?: DataAzurermBatchPoolNodePlacement): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolNodePlacementOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1403,6 +1585,17 @@ export function dataAzurermBatchPoolStartTaskContainerRegistryToTerraform(struct
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolStartTaskContainerRegistryToHclTerraform(struct?: DataAzurermBatchPoolStartTaskContainerRegistry): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolStartTaskContainerRegistryOutputReference extends cdktf.ComplexObject {
@@ -1484,6 +1677,17 @@ export function dataAzurermBatchPoolStartTaskContainerToTerraform(struct?: DataA
   }
 }
 
+
+export function dataAzurermBatchPoolStartTaskContainerToHclTerraform(struct?: DataAzurermBatchPoolStartTaskContainer): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolStartTaskContainerOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1562,6 +1766,17 @@ export function dataAzurermBatchPoolStartTaskResourceFileToTerraform(struct?: Da
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolStartTaskResourceFileToHclTerraform(struct?: DataAzurermBatchPoolStartTaskResourceFile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolStartTaskResourceFileOutputReference extends cdktf.ComplexObject {
@@ -1658,6 +1873,17 @@ export function dataAzurermBatchPoolStartTaskUserIdentityAutoUserToTerraform(str
   }
 }
 
+
+export function dataAzurermBatchPoolStartTaskUserIdentityAutoUserToHclTerraform(struct?: DataAzurermBatchPoolStartTaskUserIdentityAutoUser): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolStartTaskUserIdentityAutoUserOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1725,6 +1951,17 @@ export function dataAzurermBatchPoolStartTaskUserIdentityToTerraform(struct?: Da
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolStartTaskUserIdentityToHclTerraform(struct?: DataAzurermBatchPoolStartTaskUserIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolStartTaskUserIdentityOutputReference extends cdktf.ComplexObject {
@@ -1795,6 +2032,17 @@ export function dataAzurermBatchPoolStartTaskToTerraform(struct?: DataAzurermBat
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolStartTaskToHclTerraform(struct?: DataAzurermBatchPoolStartTask): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
@@ -1895,6 +2143,17 @@ export function dataAzurermBatchPoolStorageImageReferenceToTerraform(struct?: Da
   }
 }
 
+
+export function dataAzurermBatchPoolStorageImageReferenceToHclTerraform(struct?: DataAzurermBatchPoolStorageImageReference): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolStorageImageReferenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1979,6 +2238,17 @@ export function dataAzurermBatchPoolTaskSchedulingPolicyToTerraform(struct?: Dat
   }
 }
 
+
+export function dataAzurermBatchPoolTaskSchedulingPolicyToHclTerraform(struct?: DataAzurermBatchPoolTaskSchedulingPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolTaskSchedulingPolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2041,6 +2311,17 @@ export function dataAzurermBatchPoolUserAccountsLinuxUserConfigurationToTerrafor
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolUserAccountsLinuxUserConfigurationToHclTerraform(struct?: DataAzurermBatchPoolUserAccountsLinuxUserConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolUserAccountsLinuxUserConfigurationOutputReference extends cdktf.ComplexObject {
@@ -2117,6 +2398,17 @@ export function dataAzurermBatchPoolUserAccountsWindowsUserConfigurationToTerraf
   }
 }
 
+
+export function dataAzurermBatchPoolUserAccountsWindowsUserConfigurationToHclTerraform(struct?: DataAzurermBatchPoolUserAccountsWindowsUserConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolUserAccountsWindowsUserConfigurationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2179,6 +2471,17 @@ export function dataAzurermBatchPoolUserAccountsToTerraform(struct?: DataAzurerm
   }
   return {
   }
+}
+
+
+export function dataAzurermBatchPoolUserAccountsToHclTerraform(struct?: DataAzurermBatchPoolUserAccounts): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermBatchPoolUserAccountsOutputReference extends cdktf.ComplexObject {
@@ -2267,6 +2570,17 @@ export function dataAzurermBatchPoolWindowsToTerraform(struct?: DataAzurermBatch
   }
 }
 
+
+export function dataAzurermBatchPoolWindowsToHclTerraform(struct?: DataAzurermBatchPoolWindows): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchPoolWindowsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2334,6 +2648,25 @@ export function dataAzurermBatchPoolTimeoutsToTerraform(struct?: DataAzurermBatc
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermBatchPoolTimeoutsToHclTerraform(struct?: DataAzurermBatchPoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermBatchPoolTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -2671,5 +3004,43 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermBatchPoolTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      account_name: {
+        value: cdktf.stringToHclTerraform(this._accountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermBatchPoolTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermBatchPoolTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

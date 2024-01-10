@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/resource_group_cost_management_view
 // generated from terraform resource schema
 
@@ -92,6 +87,31 @@ export function resourceGroupCostManagementViewDatasetAggregationToTerraform(str
     column_name: cdktf.stringToTerraform(struct!.columnName),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function resourceGroupCostManagementViewDatasetAggregationToHclTerraform(struct?: ResourceGroupCostManagementViewDatasetAggregation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    column_name: {
+      value: cdktf.stringToHclTerraform(struct!.columnName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ResourceGroupCostManagementViewDatasetAggregationOutputReference extends cdktf.ComplexObject {
@@ -212,6 +232,31 @@ export function resourceGroupCostManagementViewDatasetGroupingToTerraform(struct
   }
 }
 
+
+export function resourceGroupCostManagementViewDatasetGroupingToHclTerraform(struct?: ResourceGroupCostManagementViewDatasetGrouping | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ResourceGroupCostManagementViewDatasetGroupingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -328,6 +373,31 @@ export function resourceGroupCostManagementViewDatasetSortingToTerraform(struct?
     direction: cdktf.stringToTerraform(struct!.direction),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function resourceGroupCostManagementViewDatasetSortingToHclTerraform(struct?: ResourceGroupCostManagementViewDatasetSorting | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    direction: {
+      value: cdktf.stringToHclTerraform(struct!.direction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ResourceGroupCostManagementViewDatasetSortingOutputReference extends cdktf.ComplexObject {
@@ -464,6 +534,43 @@ export function resourceGroupCostManagementViewDatasetToTerraform(struct?: Resou
   }
 }
 
+
+export function resourceGroupCostManagementViewDatasetToHclTerraform(struct?: ResourceGroupCostManagementViewDatasetOutputReference | ResourceGroupCostManagementViewDataset): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    granularity: {
+      value: cdktf.stringToHclTerraform(struct!.granularity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    aggregation: {
+      value: cdktf.listMapperHcl(resourceGroupCostManagementViewDatasetAggregationToHclTerraform, true)(struct!.aggregation),
+      isBlock: true,
+      type: "set",
+      storageClassType: "ResourceGroupCostManagementViewDatasetAggregationList",
+    },
+    grouping: {
+      value: cdktf.listMapperHcl(resourceGroupCostManagementViewDatasetGroupingToHclTerraform, true)(struct!.grouping),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ResourceGroupCostManagementViewDatasetGroupingList",
+    },
+    sorting: {
+      value: cdktf.listMapperHcl(resourceGroupCostManagementViewDatasetSortingToHclTerraform, true)(struct!.sorting),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ResourceGroupCostManagementViewDatasetSortingList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ResourceGroupCostManagementViewDatasetOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -589,6 +696,25 @@ export function resourceGroupCostManagementViewKpiToTerraform(struct?: ResourceG
   }
 }
 
+
+export function resourceGroupCostManagementViewKpiToHclTerraform(struct?: ResourceGroupCostManagementViewKpi | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ResourceGroupCostManagementViewKpiOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -686,6 +812,31 @@ export function resourceGroupCostManagementViewPivotToTerraform(struct?: Resourc
     name: cdktf.stringToTerraform(struct!.name),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function resourceGroupCostManagementViewPivotToHclTerraform(struct?: ResourceGroupCostManagementViewPivot | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ResourceGroupCostManagementViewPivotOutputReference extends cdktf.ComplexObject {
@@ -814,6 +965,43 @@ export function resourceGroupCostManagementViewTimeoutsToTerraform(struct?: Reso
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function resourceGroupCostManagementViewTimeoutsToHclTerraform(struct?: ResourceGroupCostManagementViewTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ResourceGroupCostManagementViewTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1197,5 +1385,85 @@ export class ResourceGroupCostManagementView extends cdktf.TerraformResource {
       pivot: cdktf.listMapper(resourceGroupCostManagementViewPivotToTerraform, true)(this._pivot.internalValue),
       timeouts: resourceGroupCostManagementViewTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      accumulated: {
+        value: cdktf.booleanToHclTerraform(this._accumulated),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      chart_type: {
+        value: cdktf.stringToHclTerraform(this._chartType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      report_type: {
+        value: cdktf.stringToHclTerraform(this._reportType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_id: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeframe: {
+        value: cdktf.stringToHclTerraform(this._timeframe),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dataset: {
+        value: resourceGroupCostManagementViewDatasetToHclTerraform(this._dataset.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ResourceGroupCostManagementViewDatasetList",
+      },
+      kpi: {
+        value: cdktf.listMapperHcl(resourceGroupCostManagementViewKpiToHclTerraform, true)(this._kpi.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ResourceGroupCostManagementViewKpiList",
+      },
+      pivot: {
+        value: cdktf.listMapperHcl(resourceGroupCostManagementViewPivotToHclTerraform, true)(this._pivot.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ResourceGroupCostManagementViewPivotList",
+      },
+      timeouts: {
+        value: resourceGroupCostManagementViewTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ResourceGroupCostManagementViewTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

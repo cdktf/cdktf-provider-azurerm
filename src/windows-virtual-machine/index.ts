@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/windows_virtual_machine
 // generated from terraform resource schema
 
@@ -261,6 +256,25 @@ export function windowsVirtualMachineAdditionalCapabilitiesToTerraform(struct?: 
   }
 }
 
+
+export function windowsVirtualMachineAdditionalCapabilitiesToHclTerraform(struct?: WindowsVirtualMachineAdditionalCapabilitiesOutputReference | WindowsVirtualMachineAdditionalCapabilities): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ultra_ssd_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.ultraSsdEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class WindowsVirtualMachineAdditionalCapabilitiesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -329,6 +343,31 @@ export function windowsVirtualMachineAdditionalUnattendContentToTerraform(struct
     content: cdktf.stringToTerraform(struct!.content),
     setting: cdktf.stringToTerraform(struct!.setting),
   }
+}
+
+
+export function windowsVirtualMachineAdditionalUnattendContentToHclTerraform(struct?: WindowsVirtualMachineAdditionalUnattendContent | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content: {
+      value: cdktf.stringToHclTerraform(struct!.content),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    setting: {
+      value: cdktf.stringToHclTerraform(struct!.setting),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class WindowsVirtualMachineAdditionalUnattendContentOutputReference extends cdktf.ComplexObject {
@@ -444,6 +483,25 @@ export function windowsVirtualMachineBootDiagnosticsToTerraform(struct?: Windows
   }
 }
 
+
+export function windowsVirtualMachineBootDiagnosticsToHclTerraform(struct?: WindowsVirtualMachineBootDiagnosticsOutputReference | WindowsVirtualMachineBootDiagnostics): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    storage_account_uri: {
+      value: cdktf.stringToHclTerraform(struct!.storageAccountUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class WindowsVirtualMachineBootDiagnosticsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -522,6 +580,43 @@ export function windowsVirtualMachineGalleryApplicationToTerraform(struct?: Wind
     tag: cdktf.stringToTerraform(struct!.tag),
     version_id: cdktf.stringToTerraform(struct!.versionId),
   }
+}
+
+
+export function windowsVirtualMachineGalleryApplicationToHclTerraform(struct?: WindowsVirtualMachineGalleryApplication | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    configuration_blob_uri: {
+      value: cdktf.stringToHclTerraform(struct!.configurationBlobUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    order: {
+      value: cdktf.numberToHclTerraform(struct!.order),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    tag: {
+      value: cdktf.stringToHclTerraform(struct!.tag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version_id: {
+      value: cdktf.stringToHclTerraform(struct!.versionId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class WindowsVirtualMachineGalleryApplicationOutputReference extends cdktf.ComplexObject {
@@ -689,6 +784,31 @@ export function windowsVirtualMachineIdentityToTerraform(struct?: WindowsVirtual
   }
 }
 
+
+export function windowsVirtualMachineIdentityToHclTerraform(struct?: WindowsVirtualMachineIdentityOutputReference | WindowsVirtualMachineIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class WindowsVirtualMachineIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -786,6 +906,31 @@ export function windowsVirtualMachineOsDiskDiffDiskSettingsToTerraform(struct?: 
     option: cdktf.stringToTerraform(struct!.option),
     placement: cdktf.stringToTerraform(struct!.placement),
   }
+}
+
+
+export function windowsVirtualMachineOsDiskDiffDiskSettingsToHclTerraform(struct?: WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference | WindowsVirtualMachineOsDiskDiffDiskSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    option: {
+      value: cdktf.stringToHclTerraform(struct!.option),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    placement: {
+      value: cdktf.stringToHclTerraform(struct!.placement),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference extends cdktf.ComplexObject {
@@ -912,6 +1057,73 @@ export function windowsVirtualMachineOsDiskToTerraform(struct?: WindowsVirtualMa
     write_accelerator_enabled: cdktf.booleanToTerraform(struct!.writeAcceleratorEnabled),
     diff_disk_settings: windowsVirtualMachineOsDiskDiffDiskSettingsToTerraform(struct!.diffDiskSettings),
   }
+}
+
+
+export function windowsVirtualMachineOsDiskToHclTerraform(struct?: WindowsVirtualMachineOsDiskOutputReference | WindowsVirtualMachineOsDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    caching: {
+      value: cdktf.stringToHclTerraform(struct!.caching),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    disk_encryption_set_id: {
+      value: cdktf.stringToHclTerraform(struct!.diskEncryptionSetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    disk_size_gb: {
+      value: cdktf.numberToHclTerraform(struct!.diskSizeGb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    secure_vm_disk_encryption_set_id: {
+      value: cdktf.stringToHclTerraform(struct!.secureVmDiskEncryptionSetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    security_encryption_type: {
+      value: cdktf.stringToHclTerraform(struct!.securityEncryptionType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_account_type: {
+      value: cdktf.stringToHclTerraform(struct!.storageAccountType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    write_accelerator_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.writeAcceleratorEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    diff_disk_settings: {
+      value: windowsVirtualMachineOsDiskDiffDiskSettingsToHclTerraform(struct!.diffDiskSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "WindowsVirtualMachineOsDiskDiffDiskSettingsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObject {
@@ -1159,6 +1371,37 @@ export function windowsVirtualMachinePlanToTerraform(struct?: WindowsVirtualMach
   }
 }
 
+
+export function windowsVirtualMachinePlanToHclTerraform(struct?: WindowsVirtualMachinePlanOutputReference | WindowsVirtualMachinePlan): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    product: {
+      value: cdktf.stringToHclTerraform(struct!.product),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    publisher: {
+      value: cdktf.stringToHclTerraform(struct!.publisher),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class WindowsVirtualMachinePlanOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1262,6 +1505,31 @@ export function windowsVirtualMachineSecretCertificateToTerraform(struct?: Windo
     store: cdktf.stringToTerraform(struct!.store),
     url: cdktf.stringToTerraform(struct!.url),
   }
+}
+
+
+export function windowsVirtualMachineSecretCertificateToHclTerraform(struct?: WindowsVirtualMachineSecretCertificate | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    store: {
+      value: cdktf.stringToHclTerraform(struct!.store),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class WindowsVirtualMachineSecretCertificateOutputReference extends cdktf.ComplexObject {
@@ -1382,6 +1650,31 @@ export function windowsVirtualMachineSecretToTerraform(struct?: WindowsVirtualMa
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     certificate: cdktf.listMapper(windowsVirtualMachineSecretCertificateToTerraform, true)(struct!.certificate),
   }
+}
+
+
+export function windowsVirtualMachineSecretToHclTerraform(struct?: WindowsVirtualMachineSecret | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    certificate: {
+      value: cdktf.listMapperHcl(windowsVirtualMachineSecretCertificateToHclTerraform, true)(struct!.certificate),
+      isBlock: true,
+      type: "set",
+      storageClassType: "WindowsVirtualMachineSecretCertificateList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class WindowsVirtualMachineSecretOutputReference extends cdktf.ComplexObject {
@@ -1512,6 +1805,43 @@ export function windowsVirtualMachineSourceImageReferenceToTerraform(struct?: Wi
   }
 }
 
+
+export function windowsVirtualMachineSourceImageReferenceToHclTerraform(struct?: WindowsVirtualMachineSourceImageReferenceOutputReference | WindowsVirtualMachineSourceImageReference): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    offer: {
+      value: cdktf.stringToHclTerraform(struct!.offer),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    publisher: {
+      value: cdktf.stringToHclTerraform(struct!.publisher),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sku: {
+      value: cdktf.stringToHclTerraform(struct!.sku),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class WindowsVirtualMachineSourceImageReferenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1636,6 +1966,31 @@ export function windowsVirtualMachineTerminationNotificationToTerraform(struct?:
   }
 }
 
+
+export function windowsVirtualMachineTerminationNotificationToHclTerraform(struct?: WindowsVirtualMachineTerminationNotificationOutputReference | WindowsVirtualMachineTerminationNotification): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    timeout: {
+      value: cdktf.stringToHclTerraform(struct!.timeout),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class WindowsVirtualMachineTerminationNotificationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1733,6 +2088,43 @@ export function windowsVirtualMachineTimeoutsToTerraform(struct?: WindowsVirtual
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function windowsVirtualMachineTimeoutsToHclTerraform(struct?: WindowsVirtualMachineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class WindowsVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1879,6 +2271,31 @@ export function windowsVirtualMachineWinrmListenerToTerraform(struct?: WindowsVi
     certificate_url: cdktf.stringToTerraform(struct!.certificateUrl),
     protocol: cdktf.stringToTerraform(struct!.protocol),
   }
+}
+
+
+export function windowsVirtualMachineWinrmListenerToHclTerraform(struct?: WindowsVirtualMachineWinrmListener | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate_url: {
+      value: cdktf.stringToHclTerraform(struct!.certificateUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    protocol: {
+      value: cdktf.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class WindowsVirtualMachineWinrmListenerOutputReference extends cdktf.ComplexObject {
@@ -2964,5 +3381,319 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       timeouts: windowsVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
       winrm_listener: cdktf.listMapper(windowsVirtualMachineWinrmListenerToTerraform, true)(this._winrmListener.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      admin_password: {
+        value: cdktf.stringToHclTerraform(this._adminPassword),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      admin_username: {
+        value: cdktf.stringToHclTerraform(this._adminUsername),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      allow_extension_operations: {
+        value: cdktf.booleanToHclTerraform(this._allowExtensionOperations),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      availability_set_id: {
+        value: cdktf.stringToHclTerraform(this._availabilitySetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      bypass_platform_safety_checks_on_user_schedule_enabled: {
+        value: cdktf.booleanToHclTerraform(this._bypassPlatformSafetyChecksOnUserScheduleEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      capacity_reservation_group_id: {
+        value: cdktf.stringToHclTerraform(this._capacityReservationGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      computer_name: {
+        value: cdktf.stringToHclTerraform(this._computerName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      custom_data: {
+        value: cdktf.stringToHclTerraform(this._customData),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dedicated_host_group_id: {
+        value: cdktf.stringToHclTerraform(this._dedicatedHostGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dedicated_host_id: {
+        value: cdktf.stringToHclTerraform(this._dedicatedHostId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      edge_zone: {
+        value: cdktf.stringToHclTerraform(this._edgeZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_automatic_updates: {
+        value: cdktf.booleanToHclTerraform(this._enableAutomaticUpdates),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      encryption_at_host_enabled: {
+        value: cdktf.booleanToHclTerraform(this._encryptionAtHostEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      eviction_policy: {
+        value: cdktf.stringToHclTerraform(this._evictionPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      extensions_time_budget: {
+        value: cdktf.stringToHclTerraform(this._extensionsTimeBudget),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      hotpatching_enabled: {
+        value: cdktf.booleanToHclTerraform(this._hotpatchingEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      license_type: {
+        value: cdktf.stringToHclTerraform(this._licenseType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_bid_price: {
+        value: cdktf.numberToHclTerraform(this._maxBidPrice),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_interface_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._networkInterfaceIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      patch_assessment_mode: {
+        value: cdktf.stringToHclTerraform(this._patchAssessmentMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      patch_mode: {
+        value: cdktf.stringToHclTerraform(this._patchMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      platform_fault_domain: {
+        value: cdktf.numberToHclTerraform(this._platformFaultDomain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      priority: {
+        value: cdktf.stringToHclTerraform(this._priority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      provision_vm_agent: {
+        value: cdktf.booleanToHclTerraform(this._provisionVmAgent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      proximity_placement_group_id: {
+        value: cdktf.stringToHclTerraform(this._proximityPlacementGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      reboot_setting: {
+        value: cdktf.stringToHclTerraform(this._rebootSetting),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      secure_boot_enabled: {
+        value: cdktf.booleanToHclTerraform(this._secureBootEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      size: {
+        value: cdktf.stringToHclTerraform(this._size),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_image_id: {
+        value: cdktf.stringToHclTerraform(this._sourceImageId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      timezone: {
+        value: cdktf.stringToHclTerraform(this._timezone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_data: {
+        value: cdktf.stringToHclTerraform(this._userData),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      virtual_machine_scale_set_id: {
+        value: cdktf.stringToHclTerraform(this._virtualMachineScaleSetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vtpm_enabled: {
+        value: cdktf.booleanToHclTerraform(this._vtpmEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      zone: {
+        value: cdktf.stringToHclTerraform(this._zone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      additional_capabilities: {
+        value: windowsVirtualMachineAdditionalCapabilitiesToHclTerraform(this._additionalCapabilities.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "WindowsVirtualMachineAdditionalCapabilitiesList",
+      },
+      additional_unattend_content: {
+        value: cdktf.listMapperHcl(windowsVirtualMachineAdditionalUnattendContentToHclTerraform, true)(this._additionalUnattendContent.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "WindowsVirtualMachineAdditionalUnattendContentList",
+      },
+      boot_diagnostics: {
+        value: windowsVirtualMachineBootDiagnosticsToHclTerraform(this._bootDiagnostics.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "WindowsVirtualMachineBootDiagnosticsList",
+      },
+      gallery_application: {
+        value: cdktf.listMapperHcl(windowsVirtualMachineGalleryApplicationToHclTerraform, true)(this._galleryApplication.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "WindowsVirtualMachineGalleryApplicationList",
+      },
+      identity: {
+        value: windowsVirtualMachineIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "WindowsVirtualMachineIdentityList",
+      },
+      os_disk: {
+        value: windowsVirtualMachineOsDiskToHclTerraform(this._osDisk.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "WindowsVirtualMachineOsDiskList",
+      },
+      plan: {
+        value: windowsVirtualMachinePlanToHclTerraform(this._plan.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "WindowsVirtualMachinePlanList",
+      },
+      secret: {
+        value: cdktf.listMapperHcl(windowsVirtualMachineSecretToHclTerraform, true)(this._secret.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "WindowsVirtualMachineSecretList",
+      },
+      source_image_reference: {
+        value: windowsVirtualMachineSourceImageReferenceToHclTerraform(this._sourceImageReference.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "WindowsVirtualMachineSourceImageReferenceList",
+      },
+      termination_notification: {
+        value: windowsVirtualMachineTerminationNotificationToHclTerraform(this._terminationNotification.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "WindowsVirtualMachineTerminationNotificationList",
+      },
+      timeouts: {
+        value: windowsVirtualMachineTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "WindowsVirtualMachineTimeouts",
+      },
+      winrm_listener: {
+        value: cdktf.listMapperHcl(windowsVirtualMachineWinrmListenerToHclTerraform, true)(this._winrmListener.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "WindowsVirtualMachineWinrmListenerList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

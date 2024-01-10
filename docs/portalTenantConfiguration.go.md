@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/portaltenantconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/portaltenantconfiguration"
 
 portaltenantconfiguration.NewPortalTenantConfiguration(scope Construct, id *string, config PortalTenantConfigurationConfig) PortalTenantConfiguration
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/portaltenantconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/portaltenantconfiguration"
 
 portaltenantconfiguration.PortalTenantConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/portaltenantconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/portaltenantconfiguration"
 
 portaltenantconfiguration.PortalTenantConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ portaltenantconfiguration.PortalTenantConfiguration_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/portaltenantconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/portaltenantconfiguration"
 
 portaltenantconfiguration.PortalTenantConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ portaltenantconfiguration.PortalTenantConfiguration_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/portaltenantconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/portaltenantconfiguration"
 
 portaltenantconfiguration.PortalTenantConfiguration_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -753,7 +760,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/portaltenantconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/portaltenantconfiguration"
 
 &portaltenantconfiguration.PortalTenantConfigurationConfig {
 	Connection: interface{},
@@ -765,7 +772,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/portaltenantconfi
 	Provisioners: *[]interface{},
 	PrivateMarkdownStorageEnforced: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.portalTenantConfiguration.PortalTenantConfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.portalTenantConfiguration.PortalTenantConfigurationTimeouts,
 }
 ```
 
@@ -902,7 +909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/portaltenantconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/portaltenantconfiguration"
 
 &portaltenantconfiguration.PortalTenantConfigurationTimeouts {
 	Create: *string,
@@ -978,7 +985,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/portaltenantconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/portaltenantconfiguration"
 
 portaltenantconfiguration.NewPortalTenantConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PortalTenantConfigurationTimeoutsOutputReference
 ```

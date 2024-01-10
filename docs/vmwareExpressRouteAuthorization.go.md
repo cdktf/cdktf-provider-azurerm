@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwareexpressrouteauthorization"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwareexpressrouteauthorization"
 
 vmwareexpressrouteauthorization.NewVmwareExpressRouteAuthorization(scope Construct, id *string, config VmwareExpressRouteAuthorizationConfig) VmwareExpressRouteAuthorization
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwareexpressrouteauthorization"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwareexpressrouteauthorization"
 
 vmwareexpressrouteauthorization.VmwareExpressRouteAuthorization_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwareexpressrouteauthorization"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwareexpressrouteauthorization"
 
 vmwareexpressrouteauthorization.VmwareExpressRouteAuthorization_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ vmwareexpressrouteauthorization.VmwareExpressRouteAuthorization_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwareexpressrouteauthorization"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwareexpressrouteauthorization"
 
 vmwareexpressrouteauthorization.VmwareExpressRouteAuthorization_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ vmwareexpressrouteauthorization.VmwareExpressRouteAuthorization_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorization.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwareexpressrouteauthorization"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwareexpressrouteauthorization"
 
 vmwareexpressrouteauthorization.VmwareExpressRouteAuthorization_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -797,7 +804,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorizationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwareexpressrouteauthorization"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwareexpressrouteauthorization"
 
 &vmwareexpressrouteauthorization.VmwareExpressRouteAuthorizationConfig {
 	Connection: interface{},
@@ -810,7 +817,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwareexpressrout
 	Name: *string,
 	PrivateCloudId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorizationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorizationTimeouts,
 }
 ```
 
@@ -960,7 +967,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorizationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwareexpressrouteauthorization"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwareexpressrouteauthorization"
 
 &vmwareexpressrouteauthorization.VmwareExpressRouteAuthorizationTimeouts {
 	Create: *string,
@@ -1022,7 +1029,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vmwareExpressRouteAuthorization.VmwareExpressRouteAuthorizationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwareexpressrouteauthorization"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwareexpressrouteauthorization"
 
 vmwareexpressrouteauthorization.NewVmwareExpressRouteAuthorizationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareExpressRouteAuthorizationTimeoutsOutputReference
 ```

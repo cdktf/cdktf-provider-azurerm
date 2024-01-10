@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterstoragedefender"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterstoragedefender"
 
 securitycenterstoragedefender.NewSecurityCenterStorageDefender(scope Construct, id *string, config SecurityCenterStorageDefenderConfig) SecurityCenterStorageDefender
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -131,6 +132,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.toMetadata"></a>
 
@@ -426,7 +433,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterstoragedefender"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterstoragedefender"
 
 securitycenterstoragedefender.SecurityCenterStorageDefender_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterstoragedefender"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterstoragedefender"
 
 securitycenterstoragedefender.SecurityCenterStorageDefender_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ securitycenterstoragedefender.SecurityCenterStorageDefender_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterstoragedefender"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterstoragedefender"
 
 securitycenterstoragedefender.SecurityCenterStorageDefender_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +493,7 @@ securitycenterstoragedefender.SecurityCenterStorageDefender_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefender.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterstoragedefender"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterstoragedefender"
 
 securitycenterstoragedefender.SecurityCenterStorageDefender_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -869,7 +876,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefenderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterstoragedefender"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterstoragedefender"
 
 &securitycenterstoragedefender.SecurityCenterStorageDefenderConfig {
 	Connection: interface{},
@@ -885,7 +892,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycentersto
 	MalwareScanningOnUploadEnabled: interface{},
 	OverrideSubscriptionSettingsEnabled: interface{},
 	SensitiveDataDiscoveryEnabled: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.securityCenterStorageDefender.SecurityCenterStorageDefenderTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.securityCenterStorageDefender.SecurityCenterStorageDefenderTimeouts,
 }
 ```
 
@@ -1074,7 +1081,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefenderTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterstoragedefender"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterstoragedefender"
 
 &securitycenterstoragedefender.SecurityCenterStorageDefenderTimeouts {
 	Create: *string,
@@ -1150,7 +1157,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.securityCenterStorageDefender.SecurityCenterStorageDefenderTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterstoragedefender"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterstoragedefender"
 
 securitycenterstoragedefender.NewSecurityCenterStorageDefenderTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecurityCenterStorageDefenderTimeoutsOutputReference
 ```

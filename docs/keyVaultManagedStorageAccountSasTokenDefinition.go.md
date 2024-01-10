@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/keyvaultmanagedstorageaccountsastokendefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedstorageaccountsastokendefinition"
 
 keyvaultmanagedstorageaccountsastokendefinition.NewKeyVaultManagedStorageAccountSasTokenDefinition(scope Construct, id *string, config KeyVaultManagedStorageAccountSasTokenDefinitionConfig) KeyVaultManagedStorageAccountSasTokenDefinition
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.toMetadata"></a>
 
@@ -405,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/keyvaultmanagedstorageaccountsastokendefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedstorageaccountsastokendefinition"
 
 keyvaultmanagedstorageaccountsastokendefinition.KeyVaultManagedStorageAccountSasTokenDefinition_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/keyvaultmanagedstorageaccountsastokendefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedstorageaccountsastokendefinition"
 
 keyvaultmanagedstorageaccountsastokendefinition.KeyVaultManagedStorageAccountSasTokenDefinition_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ keyvaultmanagedstorageaccountsastokendefinition.KeyVaultManagedStorageAccountSas
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/keyvaultmanagedstorageaccountsastokendefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedstorageaccountsastokendefinition"
 
 keyvaultmanagedstorageaccountsastokendefinition.KeyVaultManagedStorageAccountSasTokenDefinition_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ keyvaultmanagedstorageaccountsastokendefinition.KeyVaultManagedStorageAccountSas
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinition.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/keyvaultmanagedstorageaccountsastokendefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedstorageaccountsastokendefinition"
 
 keyvaultmanagedstorageaccountsastokendefinition.KeyVaultManagedStorageAccountSasTokenDefinition_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -881,7 +888,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinitionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/keyvaultmanagedstorageaccountsastokendefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedstorageaccountsastokendefinition"
 
 &keyvaultmanagedstorageaccountsastokendefinition.KeyVaultManagedStorageAccountSasTokenDefinitionConfig {
 	Connection: interface{},
@@ -898,7 +905,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/keyvaultmanagedst
 	ValidityPeriod: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinitionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinitionTimeouts,
 }
 ```
 
@@ -1100,7 +1107,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinitionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/keyvaultmanagedstorageaccountsastokendefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedstorageaccountsastokendefinition"
 
 &keyvaultmanagedstorageaccountsastokendefinition.KeyVaultManagedStorageAccountSasTokenDefinitionTimeouts {
 	Create: *string,
@@ -1176,7 +1183,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultManagedStorageAccountSasTokenDefinition.KeyVaultManagedStorageAccountSasTokenDefinitionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/keyvaultmanagedstorageaccountsastokendefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedstorageaccountsastokendefinition"
 
 keyvaultmanagedstorageaccountsastokendefinition.NewKeyVaultManagedStorageAccountSasTokenDefinitionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KeyVaultManagedStorageAccountSasTokenDefinitionTimeoutsOutputReference
 ```

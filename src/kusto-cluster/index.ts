@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/kusto_cluster
 // generated from terraform resource schema
 
@@ -144,6 +139,31 @@ export function kustoClusterIdentityToTerraform(struct?: KustoClusterIdentityOut
   }
 }
 
+
+export function kustoClusterIdentityToHclTerraform(struct?: KustoClusterIdentityOutputReference | KustoClusterIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KustoClusterIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -243,6 +263,31 @@ export function kustoClusterOptimizedAutoScaleToTerraform(struct?: KustoClusterO
   }
 }
 
+
+export function kustoClusterOptimizedAutoScaleToHclTerraform(struct?: KustoClusterOptimizedAutoScaleOutputReference | KustoClusterOptimizedAutoScale): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    maximum_instances: {
+      value: cdktf.numberToHclTerraform(struct!.maximumInstances),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minimum_instances: {
+      value: cdktf.numberToHclTerraform(struct!.minimumInstances),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KustoClusterOptimizedAutoScaleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -327,6 +372,31 @@ export function kustoClusterSkuToTerraform(struct?: KustoClusterSkuOutputReferen
     capacity: cdktf.numberToTerraform(struct!.capacity),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function kustoClusterSkuToHclTerraform(struct?: KustoClusterSkuOutputReference | KustoClusterSku): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    capacity: {
+      value: cdktf.numberToHclTerraform(struct!.capacity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KustoClusterSkuOutputReference extends cdktf.ComplexObject {
@@ -426,6 +496,43 @@ export function kustoClusterTimeoutsToTerraform(struct?: KustoClusterTimeouts | 
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function kustoClusterTimeoutsToHclTerraform(struct?: KustoClusterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KustoClusterTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -577,6 +684,37 @@ export function kustoClusterVirtualNetworkConfigurationToTerraform(struct?: Kust
     engine_public_ip_id: cdktf.stringToTerraform(struct!.enginePublicIpId),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
   }
+}
+
+
+export function kustoClusterVirtualNetworkConfigurationToHclTerraform(struct?: KustoClusterVirtualNetworkConfigurationOutputReference | KustoClusterVirtualNetworkConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    data_management_public_ip_id: {
+      value: cdktf.stringToHclTerraform(struct!.dataManagementPublicIpId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    engine_public_ip_id: {
+      value: cdktf.stringToHclTerraform(struct!.enginePublicIpId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KustoClusterVirtualNetworkConfigurationOutputReference extends cdktf.ComplexObject {
@@ -1157,5 +1295,157 @@ export class KustoCluster extends cdktf.TerraformResource {
       timeouts: kustoClusterTimeoutsToTerraform(this._timeouts.internalValue),
       virtual_network_configuration: kustoClusterVirtualNetworkConfigurationToTerraform(this._virtualNetworkConfiguration.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allowed_fqdns: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._allowedFqdns),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      allowed_ip_ranges: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._allowedIpRanges),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      auto_stop_enabled: {
+        value: cdktf.booleanToHclTerraform(this._autoStopEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      disk_encryption_enabled: {
+        value: cdktf.booleanToHclTerraform(this._diskEncryptionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      double_encryption_enabled: {
+        value: cdktf.booleanToHclTerraform(this._doubleEncryptionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      engine: {
+        value: cdktf.stringToHclTerraform(this._engine),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      language_extensions: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._languageExtensions),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      outbound_network_access_restricted: {
+        value: cdktf.booleanToHclTerraform(this._outboundNetworkAccessRestricted),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      public_ip_type: {
+        value: cdktf.stringToHclTerraform(this._publicIpType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      purge_enabled: {
+        value: cdktf.booleanToHclTerraform(this._purgeEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      streaming_ingestion_enabled: {
+        value: cdktf.booleanToHclTerraform(this._streamingIngestionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      trusted_external_tenants: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._trustedExternalTenants),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      zones: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._zones),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      identity: {
+        value: kustoClusterIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KustoClusterIdentityList",
+      },
+      optimized_auto_scale: {
+        value: kustoClusterOptimizedAutoScaleToHclTerraform(this._optimizedAutoScale.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KustoClusterOptimizedAutoScaleList",
+      },
+      sku: {
+        value: kustoClusterSkuToHclTerraform(this._sku.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KustoClusterSkuList",
+      },
+      timeouts: {
+        value: kustoClusterTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "KustoClusterTimeouts",
+      },
+      virtual_network_configuration: {
+        value: kustoClusterVirtualNetworkConfigurationToHclTerraform(this._virtualNetworkConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KustoClusterVirtualNetworkConfigurationList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

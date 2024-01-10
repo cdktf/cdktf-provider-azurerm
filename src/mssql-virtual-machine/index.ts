@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_virtual_machine
 // generated from terraform resource schema
 
@@ -134,6 +129,43 @@ export function mssqlVirtualMachineAssessmentScheduleToTerraform(struct?: MssqlV
     start_time: cdktf.stringToTerraform(struct!.startTime),
     weekly_interval: cdktf.numberToTerraform(struct!.weeklyInterval),
   }
+}
+
+
+export function mssqlVirtualMachineAssessmentScheduleToHclTerraform(struct?: MssqlVirtualMachineAssessmentScheduleOutputReference | MssqlVirtualMachineAssessmentSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day_of_week: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeek),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    monthly_occurrence: {
+      value: cdktf.numberToHclTerraform(struct!.monthlyOccurrence),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    start_time: {
+      value: cdktf.stringToHclTerraform(struct!.startTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    weekly_interval: {
+      value: cdktf.numberToHclTerraform(struct!.weeklyInterval),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlVirtualMachineAssessmentScheduleOutputReference extends cdktf.ComplexObject {
@@ -273,6 +305,37 @@ export function mssqlVirtualMachineAssessmentToTerraform(struct?: MssqlVirtualMa
   }
 }
 
+
+export function mssqlVirtualMachineAssessmentToHclTerraform(struct?: MssqlVirtualMachineAssessmentOutputReference | MssqlVirtualMachineAssessment): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    run_immediately: {
+      value: cdktf.booleanToHclTerraform(struct!.runImmediately),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    schedule: {
+      value: mssqlVirtualMachineAssessmentScheduleToHclTerraform(struct!.schedule),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MssqlVirtualMachineAssessmentScheduleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MssqlVirtualMachineAssessmentOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -400,6 +463,49 @@ export function mssqlVirtualMachineAutoBackupManualScheduleToTerraform(struct?: 
     full_backup_window_in_hours: cdktf.numberToTerraform(struct!.fullBackupWindowInHours),
     log_backup_frequency_in_minutes: cdktf.numberToTerraform(struct!.logBackupFrequencyInMinutes),
   }
+}
+
+
+export function mssqlVirtualMachineAutoBackupManualScheduleToHclTerraform(struct?: MssqlVirtualMachineAutoBackupManualScheduleOutputReference | MssqlVirtualMachineAutoBackupManualSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    days_of_week: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.daysOfWeek),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    full_backup_frequency: {
+      value: cdktf.stringToHclTerraform(struct!.fullBackupFrequency),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    full_backup_start_hour: {
+      value: cdktf.numberToHclTerraform(struct!.fullBackupStartHour),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    full_backup_window_in_hours: {
+      value: cdktf.numberToHclTerraform(struct!.fullBackupWindowInHours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    log_backup_frequency_in_minutes: {
+      value: cdktf.numberToHclTerraform(struct!.logBackupFrequencyInMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends cdktf.ComplexObject {
@@ -573,6 +679,61 @@ export function mssqlVirtualMachineAutoBackupToTerraform(struct?: MssqlVirtualMa
     system_databases_backup_enabled: cdktf.booleanToTerraform(struct!.systemDatabasesBackupEnabled),
     manual_schedule: mssqlVirtualMachineAutoBackupManualScheduleToTerraform(struct!.manualSchedule),
   }
+}
+
+
+export function mssqlVirtualMachineAutoBackupToHclTerraform(struct?: MssqlVirtualMachineAutoBackupOutputReference | MssqlVirtualMachineAutoBackup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    encryption_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.encryptionEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    encryption_password: {
+      value: cdktf.stringToHclTerraform(struct!.encryptionPassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    retention_period_in_days: {
+      value: cdktf.numberToHclTerraform(struct!.retentionPeriodInDays),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    storage_account_access_key: {
+      value: cdktf.stringToHclTerraform(struct!.storageAccountAccessKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_blob_endpoint: {
+      value: cdktf.stringToHclTerraform(struct!.storageBlobEndpoint),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    system_databases_backup_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.systemDatabasesBackupEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    manual_schedule: {
+      value: mssqlVirtualMachineAutoBackupManualScheduleToHclTerraform(struct!.manualSchedule),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MssqlVirtualMachineAutoBackupManualScheduleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexObject {
@@ -773,6 +934,37 @@ export function mssqlVirtualMachineAutoPatchingToTerraform(struct?: MssqlVirtual
   }
 }
 
+
+export function mssqlVirtualMachineAutoPatchingToHclTerraform(struct?: MssqlVirtualMachineAutoPatchingOutputReference | MssqlVirtualMachineAutoPatching): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day_of_week: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeek),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    maintenance_window_duration_in_minutes: {
+      value: cdktf.numberToHclTerraform(struct!.maintenanceWindowDurationInMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    maintenance_window_starting_hour: {
+      value: cdktf.numberToHclTerraform(struct!.maintenanceWindowStartingHour),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MssqlVirtualMachineAutoPatchingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -886,6 +1078,43 @@ export function mssqlVirtualMachineKeyVaultCredentialToTerraform(struct?: MssqlV
     service_principal_name: cdktf.stringToTerraform(struct!.servicePrincipalName),
     service_principal_secret: cdktf.stringToTerraform(struct!.servicePrincipalSecret),
   }
+}
+
+
+export function mssqlVirtualMachineKeyVaultCredentialToHclTerraform(struct?: MssqlVirtualMachineKeyVaultCredentialOutputReference | MssqlVirtualMachineKeyVaultCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_vault_url: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_principal_name: {
+      value: cdktf.stringToHclTerraform(struct!.servicePrincipalName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_principal_secret: {
+      value: cdktf.stringToHclTerraform(struct!.servicePrincipalSecret),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlVirtualMachineKeyVaultCredentialOutputReference extends cdktf.ComplexObject {
@@ -1035,6 +1264,61 @@ export function mssqlVirtualMachineSqlInstanceToTerraform(struct?: MssqlVirtualM
     max_server_memory_mb: cdktf.numberToTerraform(struct!.maxServerMemoryMb),
     min_server_memory_mb: cdktf.numberToTerraform(struct!.minServerMemoryMb),
   }
+}
+
+
+export function mssqlVirtualMachineSqlInstanceToHclTerraform(struct?: MssqlVirtualMachineSqlInstanceOutputReference | MssqlVirtualMachineSqlInstance): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    adhoc_workloads_optimization_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.adhocWorkloadsOptimizationEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    collation: {
+      value: cdktf.stringToHclTerraform(struct!.collation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    instant_file_initialization_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.instantFileInitializationEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    lock_pages_in_memory_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.lockPagesInMemoryEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    max_dop: {
+      value: cdktf.numberToHclTerraform(struct!.maxDop),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_server_memory_mb: {
+      value: cdktf.numberToHclTerraform(struct!.maxServerMemoryMb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    min_server_memory_mb: {
+      value: cdktf.numberToHclTerraform(struct!.minServerMemoryMb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlVirtualMachineSqlInstanceOutputReference extends cdktf.ComplexObject {
@@ -1239,6 +1523,31 @@ export function mssqlVirtualMachineStorageConfigurationDataSettingsToTerraform(s
   }
 }
 
+
+export function mssqlVirtualMachineStorageConfigurationDataSettingsToHclTerraform(struct?: MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference | MssqlVirtualMachineStorageConfigurationDataSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_file_path: {
+      value: cdktf.stringToHclTerraform(struct!.defaultFilePath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    luns: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.luns),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1323,6 +1632,31 @@ export function mssqlVirtualMachineStorageConfigurationLogSettingsToTerraform(st
     default_file_path: cdktf.stringToTerraform(struct!.defaultFilePath),
     luns: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.luns),
   }
+}
+
+
+export function mssqlVirtualMachineStorageConfigurationLogSettingsToHclTerraform(struct?: MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference | MssqlVirtualMachineStorageConfigurationLogSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_file_path: {
+      value: cdktf.stringToHclTerraform(struct!.defaultFilePath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    luns: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.luns),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference extends cdktf.ComplexObject {
@@ -1434,6 +1768,61 @@ export function mssqlVirtualMachineStorageConfigurationTempDbSettingsToTerraform
     log_file_size_mb: cdktf.numberToTerraform(struct!.logFileSizeMb),
     luns: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.luns),
   }
+}
+
+
+export function mssqlVirtualMachineStorageConfigurationTempDbSettingsToHclTerraform(struct?: MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference | MssqlVirtualMachineStorageConfigurationTempDbSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    data_file_count: {
+      value: cdktf.numberToHclTerraform(struct!.dataFileCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    data_file_growth_in_mb: {
+      value: cdktf.numberToHclTerraform(struct!.dataFileGrowthInMb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    data_file_size_mb: {
+      value: cdktf.numberToHclTerraform(struct!.dataFileSizeMb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    default_file_path: {
+      value: cdktf.stringToHclTerraform(struct!.defaultFilePath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    log_file_growth_mb: {
+      value: cdktf.numberToHclTerraform(struct!.logFileGrowthMb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    log_file_size_mb: {
+      value: cdktf.numberToHclTerraform(struct!.logFileSizeMb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    luns: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.luns),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference extends cdktf.ComplexObject {
@@ -1658,6 +2047,55 @@ export function mssqlVirtualMachineStorageConfigurationToTerraform(struct?: Mssq
   }
 }
 
+
+export function mssqlVirtualMachineStorageConfigurationToHclTerraform(struct?: MssqlVirtualMachineStorageConfigurationOutputReference | MssqlVirtualMachineStorageConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disk_type: {
+      value: cdktf.stringToHclTerraform(struct!.diskType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_workload_type: {
+      value: cdktf.stringToHclTerraform(struct!.storageWorkloadType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    system_db_on_data_disk_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.systemDbOnDataDiskEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    data_settings: {
+      value: mssqlVirtualMachineStorageConfigurationDataSettingsToHclTerraform(struct!.dataSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MssqlVirtualMachineStorageConfigurationDataSettingsList",
+    },
+    log_settings: {
+      value: mssqlVirtualMachineStorageConfigurationLogSettingsToHclTerraform(struct!.logSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MssqlVirtualMachineStorageConfigurationLogSettingsList",
+    },
+    temp_db_settings: {
+      value: mssqlVirtualMachineStorageConfigurationTempDbSettingsToHclTerraform(struct!.tempDbSettings),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MssqlVirtualMachineStorageConfigurationTempDbSettingsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1842,6 +2280,43 @@ export function mssqlVirtualMachineTimeoutsToTerraform(struct?: MssqlVirtualMach
   }
 }
 
+
+export function mssqlVirtualMachineTimeoutsToHclTerraform(struct?: MssqlVirtualMachineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MssqlVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1991,6 +2466,37 @@ export function mssqlVirtualMachineWsfcDomainCredentialToTerraform(struct?: Mssq
     cluster_operator_account_password: cdktf.stringToTerraform(struct!.clusterOperatorAccountPassword),
     sql_service_account_password: cdktf.stringToTerraform(struct!.sqlServiceAccountPassword),
   }
+}
+
+
+export function mssqlVirtualMachineWsfcDomainCredentialToHclTerraform(struct?: MssqlVirtualMachineWsfcDomainCredentialOutputReference | MssqlVirtualMachineWsfcDomainCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cluster_bootstrap_account_password: {
+      value: cdktf.stringToHclTerraform(struct!.clusterBootstrapAccountPassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cluster_operator_account_password: {
+      value: cdktf.stringToHclTerraform(struct!.clusterOperatorAccountPassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sql_service_account_password: {
+      value: cdktf.stringToHclTerraform(struct!.sqlServiceAccountPassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlVirtualMachineWsfcDomainCredentialOutputReference extends cdktf.ComplexObject {
@@ -2462,5 +2968,121 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
       timeouts: mssqlVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
       wsfc_domain_credential: mssqlVirtualMachineWsfcDomainCredentialToTerraform(this._wsfcDomainCredential.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      r_services_enabled: {
+        value: cdktf.booleanToHclTerraform(this._rServicesEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      sql_connectivity_port: {
+        value: cdktf.numberToHclTerraform(this._sqlConnectivityPort),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      sql_connectivity_type: {
+        value: cdktf.stringToHclTerraform(this._sqlConnectivityType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sql_connectivity_update_password: {
+        value: cdktf.stringToHclTerraform(this._sqlConnectivityUpdatePassword),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sql_connectivity_update_username: {
+        value: cdktf.stringToHclTerraform(this._sqlConnectivityUpdateUsername),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sql_license_type: {
+        value: cdktf.stringToHclTerraform(this._sqlLicenseType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sql_virtual_machine_group_id: {
+        value: cdktf.stringToHclTerraform(this._sqlVirtualMachineGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      virtual_machine_id: {
+        value: cdktf.stringToHclTerraform(this._virtualMachineId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      assessment: {
+        value: mssqlVirtualMachineAssessmentToHclTerraform(this._assessment.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlVirtualMachineAssessmentList",
+      },
+      auto_backup: {
+        value: mssqlVirtualMachineAutoBackupToHclTerraform(this._autoBackup.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlVirtualMachineAutoBackupList",
+      },
+      auto_patching: {
+        value: mssqlVirtualMachineAutoPatchingToHclTerraform(this._autoPatching.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlVirtualMachineAutoPatchingList",
+      },
+      key_vault_credential: {
+        value: mssqlVirtualMachineKeyVaultCredentialToHclTerraform(this._keyVaultCredential.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlVirtualMachineKeyVaultCredentialList",
+      },
+      sql_instance: {
+        value: mssqlVirtualMachineSqlInstanceToHclTerraform(this._sqlInstance.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlVirtualMachineSqlInstanceList",
+      },
+      storage_configuration: {
+        value: mssqlVirtualMachineStorageConfigurationToHclTerraform(this._storageConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlVirtualMachineStorageConfigurationList",
+      },
+      timeouts: {
+        value: mssqlVirtualMachineTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MssqlVirtualMachineTimeouts",
+      },
+      wsfc_domain_credential: {
+        value: mssqlVirtualMachineWsfcDomainCredentialToHclTerraform(this._wsfcDomainCredential.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlVirtualMachineWsfcDomainCredentialList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

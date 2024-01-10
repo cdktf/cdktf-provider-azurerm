@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cognitive_account
 // generated from terraform resource schema
 
@@ -148,6 +143,31 @@ export function cognitiveAccountCustomerManagedKeyToTerraform(struct?: Cognitive
   }
 }
 
+
+export function cognitiveAccountCustomerManagedKeyToHclTerraform(struct?: CognitiveAccountCustomerManagedKeyOutputReference | CognitiveAccountCustomerManagedKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.identityClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_key_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CognitiveAccountCustomerManagedKeyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -235,6 +255,31 @@ export function cognitiveAccountIdentityToTerraform(struct?: CognitiveAccountIde
     identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function cognitiveAccountIdentityToHclTerraform(struct?: CognitiveAccountIdentityOutputReference | CognitiveAccountIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CognitiveAccountIdentityOutputReference extends cdktf.ComplexObject {
@@ -334,6 +379,31 @@ export function cognitiveAccountNetworkAclsVirtualNetworkRulesToTerraform(struct
     ignore_missing_vnet_service_endpoint: cdktf.booleanToTerraform(struct!.ignoreMissingVnetServiceEndpoint),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
   }
+}
+
+
+export function cognitiveAccountNetworkAclsVirtualNetworkRulesToHclTerraform(struct?: CognitiveAccountNetworkAclsVirtualNetworkRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ignore_missing_vnet_service_endpoint: {
+      value: cdktf.booleanToHclTerraform(struct!.ignoreMissingVnetServiceEndpoint),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CognitiveAccountNetworkAclsVirtualNetworkRulesOutputReference extends cdktf.ComplexObject {
@@ -464,6 +534,37 @@ export function cognitiveAccountNetworkAclsToTerraform(struct?: CognitiveAccount
   }
 }
 
+
+export function cognitiveAccountNetworkAclsToHclTerraform(struct?: CognitiveAccountNetworkAclsOutputReference | CognitiveAccountNetworkAcls): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_action: {
+      value: cdktf.stringToHclTerraform(struct!.defaultAction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ip_rules: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.ipRules),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    virtual_network_rules: {
+      value: cdktf.listMapperHcl(cognitiveAccountNetworkAclsVirtualNetworkRulesToHclTerraform, true)(struct!.virtualNetworkRules),
+      isBlock: true,
+      type: "set",
+      storageClassType: "CognitiveAccountNetworkAclsVirtualNetworkRulesList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -573,6 +674,31 @@ export function cognitiveAccountStorageToTerraform(struct?: CognitiveAccountStor
     identity_client_id: cdktf.stringToTerraform(struct!.identityClientId),
     storage_account_id: cdktf.stringToTerraform(struct!.storageAccountId),
   }
+}
+
+
+export function cognitiveAccountStorageToHclTerraform(struct?: CognitiveAccountStorage | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.identityClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_account_id: {
+      value: cdktf.stringToHclTerraform(struct!.storageAccountId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CognitiveAccountStorageOutputReference extends cdktf.ComplexObject {
@@ -704,6 +830,43 @@ export function cognitiveAccountTimeoutsToTerraform(struct?: CognitiveAccountTim
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cognitiveAccountTimeoutsToHclTerraform(struct?: CognitiveAccountTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1345,5 +1508,163 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       storage: cdktf.listMapper(cognitiveAccountStorageToTerraform, true)(this._storage.internalValue),
       timeouts: cognitiveAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      custom_question_answering_search_service_id: {
+        value: cdktf.stringToHclTerraform(this._customQuestionAnsweringSearchServiceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      custom_question_answering_search_service_key: {
+        value: cdktf.stringToHclTerraform(this._customQuestionAnsweringSearchServiceKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      custom_subdomain_name: {
+        value: cdktf.stringToHclTerraform(this._customSubdomainName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dynamic_throttling_enabled: {
+        value: cdktf.booleanToHclTerraform(this._dynamicThrottlingEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      fqdns: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._fqdns),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kind: {
+        value: cdktf.stringToHclTerraform(this._kind),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      local_auth_enabled: {
+        value: cdktf.booleanToHclTerraform(this._localAuthEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      metrics_advisor_aad_client_id: {
+        value: cdktf.stringToHclTerraform(this._metricsAdvisorAadClientId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      metrics_advisor_aad_tenant_id: {
+        value: cdktf.stringToHclTerraform(this._metricsAdvisorAadTenantId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      metrics_advisor_super_user_name: {
+        value: cdktf.stringToHclTerraform(this._metricsAdvisorSuperUserName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      metrics_advisor_website_name: {
+        value: cdktf.stringToHclTerraform(this._metricsAdvisorWebsiteName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      outbound_network_access_restricted: {
+        value: cdktf.booleanToHclTerraform(this._outboundNetworkAccessRestricted),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      qna_runtime_endpoint: {
+        value: cdktf.stringToHclTerraform(this._qnaRuntimeEndpoint),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku_name: {
+        value: cdktf.stringToHclTerraform(this._skuName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      customer_managed_key: {
+        value: cognitiveAccountCustomerManagedKeyToHclTerraform(this._customerManagedKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CognitiveAccountCustomerManagedKeyList",
+      },
+      identity: {
+        value: cognitiveAccountIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CognitiveAccountIdentityList",
+      },
+      network_acls: {
+        value: cognitiveAccountNetworkAclsToHclTerraform(this._networkAcls.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CognitiveAccountNetworkAclsList",
+      },
+      storage: {
+        value: cdktf.listMapperHcl(cognitiveAccountStorageToHclTerraform, true)(this._storage.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CognitiveAccountStorageList",
+      },
+      timeouts: {
+        value: cognitiveAccountTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CognitiveAccountTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/managed_application_definition
 // generated from terraform resource schema
 
@@ -96,6 +91,31 @@ export function managedApplicationDefinitionAuthorizationToTerraform(struct?: Ma
     role_definition_id: cdktf.stringToTerraform(struct!.roleDefinitionId),
     service_principal_id: cdktf.stringToTerraform(struct!.servicePrincipalId),
   }
+}
+
+
+export function managedApplicationDefinitionAuthorizationToHclTerraform(struct?: ManagedApplicationDefinitionAuthorization | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    role_definition_id: {
+      value: cdktf.stringToHclTerraform(struct!.roleDefinitionId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_principal_id: {
+      value: cdktf.stringToHclTerraform(struct!.servicePrincipalId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ManagedApplicationDefinitionAuthorizationOutputReference extends cdktf.ComplexObject {
@@ -224,6 +244,43 @@ export function managedApplicationDefinitionTimeoutsToTerraform(struct?: Managed
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function managedApplicationDefinitionTimeoutsToHclTerraform(struct?: ManagedApplicationDefinitionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ManagedApplicationDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -652,5 +709,97 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
       authorization: cdktf.listMapper(managedApplicationDefinitionAuthorizationToTerraform, true)(this._authorization.internalValue),
       timeouts: managedApplicationDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      create_ui_definition: {
+        value: cdktf.stringToHclTerraform(this._createUiDefinition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lock_level: {
+        value: cdktf.stringToHclTerraform(this._lockLevel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      main_template: {
+        value: cdktf.stringToHclTerraform(this._mainTemplate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      package_enabled: {
+        value: cdktf.booleanToHclTerraform(this._packageEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      package_file_uri: {
+        value: cdktf.stringToHclTerraform(this._packageFileUri),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      authorization: {
+        value: cdktf.listMapperHcl(managedApplicationDefinitionAuthorizationToHclTerraform, true)(this._authorization.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ManagedApplicationDefinitionAuthorizationList",
+      },
+      timeouts: {
+        value: managedApplicationDefinitionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ManagedApplicationDefinitionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

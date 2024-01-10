@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/managed_lustre_file_system
 // generated from terraform resource schema
 
@@ -104,6 +99,31 @@ export function managedLustreFileSystemEncryptionKeyToTerraform(struct?: Managed
   }
 }
 
+
+export function managedLustreFileSystemEncryptionKeyToHclTerraform(struct?: ManagedLustreFileSystemEncryptionKeyOutputReference | ManagedLustreFileSystemEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_url: {
+      value: cdktf.stringToHclTerraform(struct!.keyUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.sourceVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ManagedLustreFileSystemEncryptionKeyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -193,6 +213,37 @@ export function managedLustreFileSystemHsmSettingToTerraform(struct?: ManagedLus
     import_prefix: cdktf.stringToTerraform(struct!.importPrefix),
     logging_container_id: cdktf.stringToTerraform(struct!.loggingContainerId),
   }
+}
+
+
+export function managedLustreFileSystemHsmSettingToHclTerraform(struct?: ManagedLustreFileSystemHsmSettingOutputReference | ManagedLustreFileSystemHsmSetting): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    container_id: {
+      value: cdktf.stringToHclTerraform(struct!.containerId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    import_prefix: {
+      value: cdktf.stringToHclTerraform(struct!.importPrefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    logging_container_id: {
+      value: cdktf.stringToHclTerraform(struct!.loggingContainerId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ManagedLustreFileSystemHsmSettingOutputReference extends cdktf.ComplexObject {
@@ -303,6 +354,31 @@ export function managedLustreFileSystemIdentityToTerraform(struct?: ManagedLustr
   }
 }
 
+
+export function managedLustreFileSystemIdentityToHclTerraform(struct?: ManagedLustreFileSystemIdentityOutputReference | ManagedLustreFileSystemIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ManagedLustreFileSystemIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -387,6 +463,31 @@ export function managedLustreFileSystemMaintenanceWindowToTerraform(struct?: Man
     day_of_week: cdktf.stringToTerraform(struct!.dayOfWeek),
     time_of_day_in_utc: cdktf.stringToTerraform(struct!.timeOfDayInUtc),
   }
+}
+
+
+export function managedLustreFileSystemMaintenanceWindowToHclTerraform(struct?: ManagedLustreFileSystemMaintenanceWindowOutputReference | ManagedLustreFileSystemMaintenanceWindow): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day_of_week: {
+      value: cdktf.stringToHclTerraform(struct!.dayOfWeek),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    time_of_day_in_utc: {
+      value: cdktf.stringToHclTerraform(struct!.timeOfDayInUtc),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ManagedLustreFileSystemMaintenanceWindowOutputReference extends cdktf.ComplexObject {
@@ -483,6 +584,43 @@ export function managedLustreFileSystemTimeoutsToTerraform(struct?: ManagedLustr
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function managedLustreFileSystemTimeoutsToHclTerraform(struct?: ManagedLustreFileSystemTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ManagedLustreFileSystemTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -907,5 +1045,97 @@ export class ManagedLustreFileSystem extends cdktf.TerraformResource {
       maintenance_window: managedLustreFileSystemMaintenanceWindowToTerraform(this._maintenanceWindow.internalValue),
       timeouts: managedLustreFileSystemTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku_name: {
+        value: cdktf.stringToHclTerraform(this._skuName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_capacity_in_tb: {
+        value: cdktf.numberToHclTerraform(this._storageCapacityInTb),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      subnet_id: {
+        value: cdktf.stringToHclTerraform(this._subnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      zones: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._zones),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      encryption_key: {
+        value: managedLustreFileSystemEncryptionKeyToHclTerraform(this._encryptionKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ManagedLustreFileSystemEncryptionKeyList",
+      },
+      hsm_setting: {
+        value: managedLustreFileSystemHsmSettingToHclTerraform(this._hsmSetting.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ManagedLustreFileSystemHsmSettingList",
+      },
+      identity: {
+        value: managedLustreFileSystemIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ManagedLustreFileSystemIdentityList",
+      },
+      maintenance_window: {
+        value: managedLustreFileSystemMaintenanceWindowToHclTerraform(this._maintenanceWindow.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ManagedLustreFileSystemMaintenanceWindowList",
+      },
+      timeouts: {
+        value: managedLustreFileSystemTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ManagedLustreFileSystemTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

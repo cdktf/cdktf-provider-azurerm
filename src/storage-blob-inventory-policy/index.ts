@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_blob_inventory_policy
 // generated from terraform resource schema
 
@@ -76,6 +71,55 @@ export function storageBlobInventoryPolicyRulesFilterToTerraform(struct?: Storag
     include_snapshots: cdktf.booleanToTerraform(struct!.includeSnapshots),
     prefix_match: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.prefixMatch),
   }
+}
+
+
+export function storageBlobInventoryPolicyRulesFilterToHclTerraform(struct?: StorageBlobInventoryPolicyRulesFilterOutputReference | StorageBlobInventoryPolicyRulesFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    blob_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.blobTypes),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    exclude_prefixes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludePrefixes),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    include_blob_versions: {
+      value: cdktf.booleanToHclTerraform(struct!.includeBlobVersions),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    include_deleted: {
+      value: cdktf.booleanToHclTerraform(struct!.includeDeleted),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    include_snapshots: {
+      value: cdktf.booleanToHclTerraform(struct!.includeSnapshots),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    prefix_match: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.prefixMatch),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.ComplexObject {
@@ -280,6 +324,61 @@ export function storageBlobInventoryPolicyRulesToTerraform(struct?: StorageBlobI
     storage_container_name: cdktf.stringToTerraform(struct!.storageContainerName),
     filter: storageBlobInventoryPolicyRulesFilterToTerraform(struct!.filter),
   }
+}
+
+
+export function storageBlobInventoryPolicyRulesToHclTerraform(struct?: StorageBlobInventoryPolicyRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    format: {
+      value: cdktf.stringToHclTerraform(struct!.format),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    schedule: {
+      value: cdktf.stringToHclTerraform(struct!.schedule),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    schema_fields: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.schemaFields),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    scope: {
+      value: cdktf.stringToHclTerraform(struct!.scope),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_container_name: {
+      value: cdktf.stringToHclTerraform(struct!.storageContainerName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    filter: {
+      value: storageBlobInventoryPolicyRulesFilterToHclTerraform(struct!.filter),
+      isBlock: true,
+      type: "list",
+      storageClassType: "StorageBlobInventoryPolicyRulesFilterList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StorageBlobInventoryPolicyRulesOutputReference extends cdktf.ComplexObject {
@@ -506,6 +605,43 @@ export function storageBlobInventoryPolicyTimeoutsToTerraform(struct?: StorageBl
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function storageBlobInventoryPolicyTimeoutsToHclTerraform(struct?: StorageBlobInventoryPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StorageBlobInventoryPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -763,5 +899,37 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
       rules: cdktf.listMapper(storageBlobInventoryPolicyRulesToTerraform, true)(this._rules.internalValue),
       timeouts: storageBlobInventoryPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_id: {
+        value: cdktf.stringToHclTerraform(this._storageAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rules: {
+        value: cdktf.listMapperHcl(storageBlobInventoryPolicyRulesToHclTerraform, true)(this._rules.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "StorageBlobInventoryPolicyRulesList",
+      },
+      timeouts: {
+        value: storageBlobInventoryPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "StorageBlobInventoryPolicyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

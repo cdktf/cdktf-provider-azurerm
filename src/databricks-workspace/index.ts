@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/databricks_workspace
 // generated from terraform resource schema
 
@@ -100,6 +95,17 @@ export function databricksWorkspaceManagedDiskIdentityToTerraform(struct?: Datab
   }
 }
 
+
+export function databricksWorkspaceManagedDiskIdentityToHclTerraform(struct?: DatabricksWorkspaceManagedDiskIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DatabricksWorkspaceManagedDiskIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -172,6 +178,17 @@ export function databricksWorkspaceStorageAccountIdentityToTerraform(struct?: Da
   }
   return {
   }
+}
+
+
+export function databricksWorkspaceStorageAccountIdentityToHclTerraform(struct?: DatabricksWorkspaceStorageAccountIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DatabricksWorkspaceStorageAccountIdentityOutputReference extends cdktf.ComplexObject {
@@ -306,6 +323,91 @@ export function databricksWorkspaceCustomParametersToTerraform(struct?: Databric
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
     vnet_address_prefix: cdktf.stringToTerraform(struct!.vnetAddressPrefix),
   }
+}
+
+
+export function databricksWorkspaceCustomParametersToHclTerraform(struct?: DatabricksWorkspaceCustomParametersOutputReference | DatabricksWorkspaceCustomParameters): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    machine_learning_workspace_id: {
+      value: cdktf.stringToHclTerraform(struct!.machineLearningWorkspaceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    nat_gateway_name: {
+      value: cdktf.stringToHclTerraform(struct!.natGatewayName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    no_public_ip: {
+      value: cdktf.booleanToHclTerraform(struct!.noPublicIp),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    private_subnet_name: {
+      value: cdktf.stringToHclTerraform(struct!.privateSubnetName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_subnet_network_security_group_association_id: {
+      value: cdktf.stringToHclTerraform(struct!.privateSubnetNetworkSecurityGroupAssociationId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    public_ip_name: {
+      value: cdktf.stringToHclTerraform(struct!.publicIpName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    public_subnet_name: {
+      value: cdktf.stringToHclTerraform(struct!.publicSubnetName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    public_subnet_network_security_group_association_id: {
+      value: cdktf.stringToHclTerraform(struct!.publicSubnetNetworkSecurityGroupAssociationId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_account_name: {
+      value: cdktf.stringToHclTerraform(struct!.storageAccountName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_account_sku_name: {
+      value: cdktf.stringToHclTerraform(struct!.storageAccountSkuName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_network_id: {
+      value: cdktf.stringToHclTerraform(struct!.virtualNetworkId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vnet_address_prefix: {
+      value: cdktf.stringToHclTerraform(struct!.vnetAddressPrefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.ComplexObject {
@@ -628,6 +730,43 @@ export function databricksWorkspaceTimeoutsToTerraform(struct?: DatabricksWorksp
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function databricksWorkspaceTimeoutsToHclTerraform(struct?: DatabricksWorkspaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DatabricksWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1145,5 +1284,115 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
       custom_parameters: databricksWorkspaceCustomParametersToTerraform(this._customParameters.internalValue),
       timeouts: databricksWorkspaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      customer_managed_key_enabled: {
+        value: cdktf.booleanToHclTerraform(this._customerManagedKeyEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      infrastructure_encryption_enabled: {
+        value: cdktf.booleanToHclTerraform(this._infrastructureEncryptionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      load_balancer_backend_address_pool_id: {
+        value: cdktf.stringToHclTerraform(this._loadBalancerBackendAddressPoolId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      managed_disk_cmk_key_vault_key_id: {
+        value: cdktf.stringToHclTerraform(this._managedDiskCmkKeyVaultKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      managed_disk_cmk_rotation_to_latest_version_enabled: {
+        value: cdktf.booleanToHclTerraform(this._managedDiskCmkRotationToLatestVersionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      managed_resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._managedResourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      managed_services_cmk_key_vault_key_id: {
+        value: cdktf.stringToHclTerraform(this._managedServicesCmkKeyVaultKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_security_group_rules_required: {
+        value: cdktf.stringToHclTerraform(this._networkSecurityGroupRulesRequired),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku: {
+        value: cdktf.stringToHclTerraform(this._sku),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      custom_parameters: {
+        value: databricksWorkspaceCustomParametersToHclTerraform(this._customParameters.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DatabricksWorkspaceCustomParametersList",
+      },
+      timeouts: {
+        value: databricksWorkspaceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DatabricksWorkspaceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

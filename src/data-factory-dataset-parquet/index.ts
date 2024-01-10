@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_factory_dataset_parquet
 // generated from terraform resource schema
 
@@ -130,6 +125,55 @@ export function dataFactoryDatasetParquetAzureBlobFsLocationToTerraform(struct?:
     filename: cdktf.stringToTerraform(struct!.filename),
     path: cdktf.stringToTerraform(struct!.path),
   }
+}
+
+
+export function dataFactoryDatasetParquetAzureBlobFsLocationToHclTerraform(struct?: DataFactoryDatasetParquetAzureBlobFsLocationOutputReference | DataFactoryDatasetParquetAzureBlobFsLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dynamic_file_system_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicFileSystemEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_filename_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicFilenameEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_path_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicPathEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    file_system: {
+      value: cdktf.stringToHclTerraform(struct!.fileSystem),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    filename: {
+      value: cdktf.stringToHclTerraform(struct!.filename),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryDatasetParquetAzureBlobFsLocationOutputReference extends cdktf.ComplexObject {
@@ -332,6 +376,55 @@ export function dataFactoryDatasetParquetAzureBlobStorageLocationToTerraform(str
   }
 }
 
+
+export function dataFactoryDatasetParquetAzureBlobStorageLocationToHclTerraform(struct?: DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference | DataFactoryDatasetParquetAzureBlobStorageLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    container: {
+      value: cdktf.stringToHclTerraform(struct!.container),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    dynamic_container_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicContainerEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_filename_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicFilenameEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_path_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicPathEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    filename: {
+      value: cdktf.stringToHclTerraform(struct!.filename),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -524,6 +617,49 @@ export function dataFactoryDatasetParquetHttpServerLocationToTerraform(struct?: 
   }
 }
 
+
+export function dataFactoryDatasetParquetHttpServerLocationToHclTerraform(struct?: DataFactoryDatasetParquetHttpServerLocationOutputReference | DataFactoryDatasetParquetHttpServerLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dynamic_filename_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicFilenameEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_path_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicPathEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    filename: {
+      value: cdktf.stringToHclTerraform(struct!.filename),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    relative_url: {
+      value: cdktf.stringToHclTerraform(struct!.relativeUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryDatasetParquetHttpServerLocationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -681,6 +817,37 @@ export function dataFactoryDatasetParquetSchemaColumnToTerraform(struct?: DataFa
   }
 }
 
+
+export function dataFactoryDatasetParquetSchemaColumnToHclTerraform(struct?: DataFactoryDatasetParquetSchemaColumn | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryDatasetParquetSchemaColumnOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -832,6 +999,43 @@ export function dataFactoryDatasetParquetTimeoutsToTerraform(struct?: DataFactor
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dataFactoryDatasetParquetTimeoutsToHclTerraform(struct?: DataFactoryDatasetParquetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryDatasetParquetTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1302,5 +1506,109 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
       schema_column: cdktf.listMapper(dataFactoryDatasetParquetSchemaColumnToTerraform, true)(this._schemaColumn.internalValue),
       timeouts: dataFactoryDatasetParquetTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      additional_properties: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._additionalProperties),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      annotations: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._annotations),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      compression_codec: {
+        value: cdktf.stringToHclTerraform(this._compressionCodec),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      compression_level: {
+        value: cdktf.stringToHclTerraform(this._compressionLevel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      data_factory_id: {
+        value: cdktf.stringToHclTerraform(this._dataFactoryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      folder: {
+        value: cdktf.stringToHclTerraform(this._folder),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      linked_service_name: {
+        value: cdktf.stringToHclTerraform(this._linkedServiceName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parameters: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._parameters),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      azure_blob_fs_location: {
+        value: dataFactoryDatasetParquetAzureBlobFsLocationToHclTerraform(this._azureBlobFsLocation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryDatasetParquetAzureBlobFsLocationList",
+      },
+      azure_blob_storage_location: {
+        value: dataFactoryDatasetParquetAzureBlobStorageLocationToHclTerraform(this._azureBlobStorageLocation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryDatasetParquetAzureBlobStorageLocationList",
+      },
+      http_server_location: {
+        value: dataFactoryDatasetParquetHttpServerLocationToHclTerraform(this._httpServerLocation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryDatasetParquetHttpServerLocationList",
+      },
+      schema_column: {
+        value: cdktf.listMapperHcl(dataFactoryDatasetParquetSchemaColumnToHclTerraform, true)(this._schemaColumn.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryDatasetParquetSchemaColumnList",
+      },
+      timeouts: {
+        value: dataFactoryDatasetParquetTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataFactoryDatasetParquetTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

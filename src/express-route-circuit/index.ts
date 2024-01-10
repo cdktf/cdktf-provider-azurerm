@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/express_route_circuit
 // generated from terraform resource schema
 
@@ -96,6 +91,31 @@ export function expressRouteCircuitSkuToTerraform(struct?: ExpressRouteCircuitSk
     family: cdktf.stringToTerraform(struct!.family),
     tier: cdktf.stringToTerraform(struct!.tier),
   }
+}
+
+
+export function expressRouteCircuitSkuToHclTerraform(struct?: ExpressRouteCircuitSkuOutputReference | ExpressRouteCircuitSku): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    family: {
+      value: cdktf.stringToHclTerraform(struct!.family),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tier: {
+      value: cdktf.stringToHclTerraform(struct!.tier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ExpressRouteCircuitSkuOutputReference extends cdktf.ComplexObject {
@@ -192,6 +212,43 @@ export function expressRouteCircuitTimeoutsToTerraform(struct?: ExpressRouteCirc
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function expressRouteCircuitTimeoutsToHclTerraform(struct?: ExpressRouteCircuitTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ExpressRouteCircuitTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -633,5 +690,97 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
       sku: expressRouteCircuitSkuToTerraform(this._sku.internalValue),
       timeouts: expressRouteCircuitTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allow_classic_operations: {
+        value: cdktf.booleanToHclTerraform(this._allowClassicOperations),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      authorization_key: {
+        value: cdktf.stringToHclTerraform(this._authorizationKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      bandwidth_in_gbps: {
+        value: cdktf.numberToHclTerraform(this._bandwidthInGbps),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      bandwidth_in_mbps: {
+        value: cdktf.numberToHclTerraform(this._bandwidthInMbps),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      express_route_port_id: {
+        value: cdktf.stringToHclTerraform(this._expressRoutePortId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peering_location: {
+        value: cdktf.stringToHclTerraform(this._peeringLocation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_provider_name: {
+        value: cdktf.stringToHclTerraform(this._serviceProviderName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      sku: {
+        value: expressRouteCircuitSkuToHclTerraform(this._sku.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ExpressRouteCircuitSkuList",
+      },
+      timeouts: {
+        value: expressRouteCircuitTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ExpressRouteCircuitTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

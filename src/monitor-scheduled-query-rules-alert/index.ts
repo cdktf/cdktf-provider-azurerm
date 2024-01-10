@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_scheduled_query_rules_alert
 // generated from terraform resource schema
 
@@ -125,6 +120,37 @@ export function monitorScheduledQueryRulesAlertActionToTerraform(struct?: Monito
   }
 }
 
+
+export function monitorScheduledQueryRulesAlertActionToHclTerraform(struct?: MonitorScheduledQueryRulesAlertActionOutputReference | MonitorScheduledQueryRulesAlertAction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action_group: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.actionGroup),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    custom_webhook_payload: {
+      value: cdktf.stringToHclTerraform(struct!.customWebhookPayload),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    email_subject: {
+      value: cdktf.stringToHclTerraform(struct!.emailSubject),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorScheduledQueryRulesAlertActionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -244,6 +270,43 @@ export function monitorScheduledQueryRulesAlertTimeoutsToTerraform(struct?: Moni
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function monitorScheduledQueryRulesAlertTimeoutsToHclTerraform(struct?: MonitorScheduledQueryRulesAlertTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorScheduledQueryRulesAlertTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -402,6 +465,43 @@ export function monitorScheduledQueryRulesAlertTriggerMetricTriggerToTerraform(s
   }
 }
 
+
+export function monitorScheduledQueryRulesAlertTriggerMetricTriggerToHclTerraform(struct?: MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference | MonitorScheduledQueryRulesAlertTriggerMetricTrigger): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    metric_column: {
+      value: cdktf.stringToHclTerraform(struct!.metricColumn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    metric_trigger_type: {
+      value: cdktf.stringToHclTerraform(struct!.metricTriggerType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    threshold: {
+      value: cdktf.numberToHclTerraform(struct!.threshold),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -534,6 +634,37 @@ export function monitorScheduledQueryRulesAlertTriggerToTerraform(struct?: Monit
     threshold: cdktf.numberToTerraform(struct!.threshold),
     metric_trigger: monitorScheduledQueryRulesAlertTriggerMetricTriggerToTerraform(struct!.metricTrigger),
   }
+}
+
+
+export function monitorScheduledQueryRulesAlertTriggerToHclTerraform(struct?: MonitorScheduledQueryRulesAlertTriggerOutputReference | MonitorScheduledQueryRulesAlertTrigger): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    threshold: {
+      value: cdktf.numberToHclTerraform(struct!.threshold),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    metric_trigger: {
+      value: monitorScheduledQueryRulesAlertTriggerMetricTriggerToHclTerraform(struct!.metricTrigger),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorScheduledQueryRulesAlertTriggerMetricTriggerList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorScheduledQueryRulesAlertTriggerOutputReference extends cdktf.ComplexObject {
@@ -1002,5 +1133,127 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
       timeouts: monitorScheduledQueryRulesAlertTimeoutsToTerraform(this._timeouts.internalValue),
       trigger: monitorScheduledQueryRulesAlertTriggerToTerraform(this._trigger.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      authorized_resource_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._authorizedResourceIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      auto_mitigation_enabled: {
+        value: cdktf.booleanToHclTerraform(this._autoMitigationEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      data_source_id: {
+        value: cdktf.stringToHclTerraform(this._dataSourceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      frequency: {
+        value: cdktf.numberToHclTerraform(this._frequency),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      query: {
+        value: cdktf.stringToHclTerraform(this._query),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      query_type: {
+        value: cdktf.stringToHclTerraform(this._queryType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      severity: {
+        value: cdktf.numberToHclTerraform(this._severity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      throttling: {
+        value: cdktf.numberToHclTerraform(this._throttling),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      time_window: {
+        value: cdktf.numberToHclTerraform(this._timeWindow),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      action: {
+        value: monitorScheduledQueryRulesAlertActionToHclTerraform(this._action.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorScheduledQueryRulesAlertActionList",
+      },
+      timeouts: {
+        value: monitorScheduledQueryRulesAlertTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MonitorScheduledQueryRulesAlertTimeouts",
+      },
+      trigger: {
+        value: monitorScheduledQueryRulesAlertTriggerToHclTerraform(this._trigger.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorScheduledQueryRulesAlertTriggerList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_group
 // generated from terraform resource schema
 
@@ -141,6 +136,37 @@ export function monitorActionGroupArmRoleReceiverToTerraform(struct?: MonitorAct
     role_id: cdktf.stringToTerraform(struct!.roleId),
     use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
   }
+}
+
+
+export function monitorActionGroupArmRoleReceiverToHclTerraform(struct?: MonitorActionGroupArmRoleReceiver | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    role_id: {
+      value: cdktf.stringToHclTerraform(struct!.roleId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    use_common_alert_schema: {
+      value: cdktf.booleanToHclTerraform(struct!.useCommonAlertSchema),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorActionGroupArmRoleReceiverOutputReference extends cdktf.ComplexObject {
@@ -306,6 +332,61 @@ export function monitorActionGroupAutomationRunbookReceiverToTerraform(struct?: 
     use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
     webhook_resource_id: cdktf.stringToTerraform(struct!.webhookResourceId),
   }
+}
+
+
+export function monitorActionGroupAutomationRunbookReceiverToHclTerraform(struct?: MonitorActionGroupAutomationRunbookReceiver | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    automation_account_id: {
+      value: cdktf.stringToHclTerraform(struct!.automationAccountId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    is_global_runbook: {
+      value: cdktf.booleanToHclTerraform(struct!.isGlobalRunbook),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    runbook_name: {
+      value: cdktf.stringToHclTerraform(struct!.runbookName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_uri: {
+      value: cdktf.stringToHclTerraform(struct!.serviceUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    use_common_alert_schema: {
+      value: cdktf.booleanToHclTerraform(struct!.useCommonAlertSchema),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    webhook_resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.webhookResourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorActionGroupAutomationRunbookReceiverOutputReference extends cdktf.ComplexObject {
@@ -524,6 +605,31 @@ export function monitorActionGroupAzureAppPushReceiverToTerraform(struct?: Monit
   }
 }
 
+
+export function monitorActionGroupAzureAppPushReceiverToHclTerraform(struct?: MonitorActionGroupAzureAppPushReceiver | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    email_address: {
+      value: cdktf.stringToHclTerraform(struct!.emailAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorActionGroupAzureAppPushReceiverOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -655,6 +761,49 @@ export function monitorActionGroupAzureFunctionReceiverToTerraform(struct?: Moni
     name: cdktf.stringToTerraform(struct!.name),
     use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
   }
+}
+
+
+export function monitorActionGroupAzureFunctionReceiverToHclTerraform(struct?: MonitorActionGroupAzureFunctionReceiver | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    function_app_resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.functionAppResourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    function_name: {
+      value: cdktf.stringToHclTerraform(struct!.functionName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    http_trigger_url: {
+      value: cdktf.stringToHclTerraform(struct!.httpTriggerUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    use_common_alert_schema: {
+      value: cdktf.booleanToHclTerraform(struct!.useCommonAlertSchema),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorActionGroupAzureFunctionReceiverOutputReference extends cdktf.ComplexObject {
@@ -840,6 +989,37 @@ export function monitorActionGroupEmailReceiverToTerraform(struct?: MonitorActio
   }
 }
 
+
+export function monitorActionGroupEmailReceiverToHclTerraform(struct?: MonitorActionGroupEmailReceiver | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    email_address: {
+      value: cdktf.stringToHclTerraform(struct!.emailAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    use_common_alert_schema: {
+      value: cdktf.booleanToHclTerraform(struct!.useCommonAlertSchema),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorActionGroupEmailReceiverOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1003,6 +1183,61 @@ export function monitorActionGroupEventHubReceiverToTerraform(struct?: MonitorAc
     tenant_id: cdktf.stringToTerraform(struct!.tenantId),
     use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
   }
+}
+
+
+export function monitorActionGroupEventHubReceiverToHclTerraform(struct?: MonitorActionGroupEventHubReceiver | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    event_hub_id: {
+      value: cdktf.stringToHclTerraform(struct!.eventHubId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    event_hub_name: {
+      value: cdktf.stringToHclTerraform(struct!.eventHubName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    event_hub_namespace: {
+      value: cdktf.stringToHclTerraform(struct!.eventHubNamespace),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subscription_id: {
+      value: cdktf.stringToHclTerraform(struct!.subscriptionId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tenant_id: {
+      value: cdktf.stringToHclTerraform(struct!.tenantId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    use_common_alert_schema: {
+      value: cdktf.booleanToHclTerraform(struct!.useCommonAlertSchema),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorActionGroupEventHubReceiverOutputReference extends cdktf.ComplexObject {
@@ -1251,6 +1486,49 @@ export function monitorActionGroupItsmReceiverToTerraform(struct?: MonitorAction
   }
 }
 
+
+export function monitorActionGroupItsmReceiverToHclTerraform(struct?: MonitorActionGroupItsmReceiver | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    connection_id: {
+      value: cdktf.stringToHclTerraform(struct!.connectionId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    region: {
+      value: cdktf.stringToHclTerraform(struct!.region),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ticket_configuration: {
+      value: cdktf.stringToHclTerraform(struct!.ticketConfiguration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    workspace_id: {
+      value: cdktf.stringToHclTerraform(struct!.workspaceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorActionGroupItsmReceiverOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1436,6 +1714,43 @@ export function monitorActionGroupLogicAppReceiverToTerraform(struct?: MonitorAc
   }
 }
 
+
+export function monitorActionGroupLogicAppReceiverToHclTerraform(struct?: MonitorActionGroupLogicAppReceiver | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    callback_url: {
+      value: cdktf.stringToHclTerraform(struct!.callbackUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.resourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    use_common_alert_schema: {
+      value: cdktf.booleanToHclTerraform(struct!.useCommonAlertSchema),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorActionGroupLogicAppReceiverOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1600,6 +1915,37 @@ export function monitorActionGroupSmsReceiverToTerraform(struct?: MonitorActionG
   }
 }
 
+
+export function monitorActionGroupSmsReceiverToHclTerraform(struct?: MonitorActionGroupSmsReceiver | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    country_code: {
+      value: cdktf.stringToHclTerraform(struct!.countryCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    phone_number: {
+      value: cdktf.stringToHclTerraform(struct!.phoneNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorActionGroupSmsReceiverOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1745,6 +2091,43 @@ export function monitorActionGroupTimeoutsToTerraform(struct?: MonitorActionGrou
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function monitorActionGroupTimeoutsToHclTerraform(struct?: MonitorActionGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorActionGroupTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1898,6 +2281,37 @@ export function monitorActionGroupVoiceReceiverToTerraform(struct?: MonitorActio
   }
 }
 
+
+export function monitorActionGroupVoiceReceiverToHclTerraform(struct?: MonitorActionGroupVoiceReceiver | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    country_code: {
+      value: cdktf.stringToHclTerraform(struct!.countryCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    phone_number: {
+      value: cdktf.stringToHclTerraform(struct!.phoneNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorActionGroupVoiceReceiverOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -2040,6 +2454,37 @@ export function monitorActionGroupWebhookReceiverAadAuthToTerraform(struct?: Mon
   }
 }
 
+
+export function monitorActionGroupWebhookReceiverAadAuthToHclTerraform(struct?: MonitorActionGroupWebhookReceiverAadAuthOutputReference | MonitorActionGroupWebhookReceiverAadAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identifier_uri: {
+      value: cdktf.stringToHclTerraform(struct!.identifierUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    object_id: {
+      value: cdktf.stringToHclTerraform(struct!.objectId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tenant_id: {
+      value: cdktf.stringToHclTerraform(struct!.tenantId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorActionGroupWebhookReceiverAadAuthOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2161,6 +2606,43 @@ export function monitorActionGroupWebhookReceiverToTerraform(struct?: MonitorAct
     use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
     aad_auth: monitorActionGroupWebhookReceiverAadAuthToTerraform(struct!.aadAuth),
   }
+}
+
+
+export function monitorActionGroupWebhookReceiverToHclTerraform(struct?: MonitorActionGroupWebhookReceiver | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_uri: {
+      value: cdktf.stringToHclTerraform(struct!.serviceUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    use_common_alert_schema: {
+      value: cdktf.booleanToHclTerraform(struct!.useCommonAlertSchema),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    aad_auth: {
+      value: monitorActionGroupWebhookReceiverAadAuthToHclTerraform(struct!.aadAuth),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorActionGroupWebhookReceiverAadAuthList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorActionGroupWebhookReceiverOutputReference extends cdktf.ComplexObject {
@@ -2701,5 +3183,127 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
       voice_receiver: cdktf.listMapper(monitorActionGroupVoiceReceiverToTerraform, true)(this._voiceReceiver.internalValue),
       webhook_receiver: cdktf.listMapper(monitorActionGroupWebhookReceiverToTerraform, true)(this._webhookReceiver.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      short_name: {
+        value: cdktf.stringToHclTerraform(this._shortName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      arm_role_receiver: {
+        value: cdktf.listMapperHcl(monitorActionGroupArmRoleReceiverToHclTerraform, true)(this._armRoleReceiver.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorActionGroupArmRoleReceiverList",
+      },
+      automation_runbook_receiver: {
+        value: cdktf.listMapperHcl(monitorActionGroupAutomationRunbookReceiverToHclTerraform, true)(this._automationRunbookReceiver.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorActionGroupAutomationRunbookReceiverList",
+      },
+      azure_app_push_receiver: {
+        value: cdktf.listMapperHcl(monitorActionGroupAzureAppPushReceiverToHclTerraform, true)(this._azureAppPushReceiver.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorActionGroupAzureAppPushReceiverList",
+      },
+      azure_function_receiver: {
+        value: cdktf.listMapperHcl(monitorActionGroupAzureFunctionReceiverToHclTerraform, true)(this._azureFunctionReceiver.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorActionGroupAzureFunctionReceiverList",
+      },
+      email_receiver: {
+        value: cdktf.listMapperHcl(monitorActionGroupEmailReceiverToHclTerraform, true)(this._emailReceiver.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorActionGroupEmailReceiverList",
+      },
+      event_hub_receiver: {
+        value: cdktf.listMapperHcl(monitorActionGroupEventHubReceiverToHclTerraform, true)(this._eventHubReceiver.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorActionGroupEventHubReceiverList",
+      },
+      itsm_receiver: {
+        value: cdktf.listMapperHcl(monitorActionGroupItsmReceiverToHclTerraform, true)(this._itsmReceiver.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorActionGroupItsmReceiverList",
+      },
+      logic_app_receiver: {
+        value: cdktf.listMapperHcl(monitorActionGroupLogicAppReceiverToHclTerraform, true)(this._logicAppReceiver.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorActionGroupLogicAppReceiverList",
+      },
+      sms_receiver: {
+        value: cdktf.listMapperHcl(monitorActionGroupSmsReceiverToHclTerraform, true)(this._smsReceiver.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorActionGroupSmsReceiverList",
+      },
+      timeouts: {
+        value: monitorActionGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MonitorActionGroupTimeouts",
+      },
+      voice_receiver: {
+        value: cdktf.listMapperHcl(monitorActionGroupVoiceReceiverToHclTerraform, true)(this._voiceReceiver.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorActionGroupVoiceReceiverList",
+      },
+      webhook_receiver: {
+        value: cdktf.listMapperHcl(monitorActionGroupWebhookReceiverToHclTerraform, true)(this._webhookReceiver.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorActionGroupWebhookReceiverList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

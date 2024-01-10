@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/key_vault_certificate
 // generated from terraform resource schema
 
@@ -60,6 +55,17 @@ export function keyVaultCertificateCertificateAttributeToTerraform(struct?: KeyV
   }
   return {
   }
+}
+
+
+export function keyVaultCertificateCertificateAttributeToHclTerraform(struct?: KeyVaultCertificateCertificateAttribute): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class KeyVaultCertificateCertificateAttributeOutputReference extends cdktf.ComplexObject {
@@ -161,6 +167,31 @@ export function keyVaultCertificateCertificateToTerraform(struct?: KeyVaultCerti
   }
 }
 
+
+export function keyVaultCertificateCertificateToHclTerraform(struct?: KeyVaultCertificateCertificateOutputReference | KeyVaultCertificateCertificate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    contents: {
+      value: cdktf.stringToHclTerraform(struct!.contents),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KeyVaultCertificateCertificateOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -245,6 +276,25 @@ export function keyVaultCertificateCertificatePolicyIssuerParametersToTerraform(
   }
 }
 
+
+export function keyVaultCertificateCertificatePolicyIssuerParametersToHclTerraform(struct?: KeyVaultCertificateCertificatePolicyIssuerParametersOutputReference | KeyVaultCertificateCertificatePolicyIssuerParameters): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KeyVaultCertificateCertificatePolicyIssuerParametersOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -325,6 +375,49 @@ export function keyVaultCertificateCertificatePolicyKeyPropertiesToTerraform(str
     key_type: cdktf.stringToTerraform(struct!.keyType),
     reuse_key: cdktf.booleanToTerraform(struct!.reuseKey),
   }
+}
+
+
+export function keyVaultCertificateCertificatePolicyKeyPropertiesToHclTerraform(struct?: KeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference | KeyVaultCertificateCertificatePolicyKeyProperties): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    curve: {
+      value: cdktf.stringToHclTerraform(struct!.curve),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    exportable: {
+      value: cdktf.booleanToHclTerraform(struct!.exportable),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    key_size: {
+      value: cdktf.numberToHclTerraform(struct!.keySize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    key_type: {
+      value: cdktf.stringToHclTerraform(struct!.keyType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    reuse_key: {
+      value: cdktf.booleanToHclTerraform(struct!.reuseKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference extends cdktf.ComplexObject {
@@ -471,6 +564,25 @@ export function keyVaultCertificateCertificatePolicyLifetimeActionActionToTerraf
   }
 }
 
+
+export function keyVaultCertificateCertificatePolicyLifetimeActionActionToHclTerraform(struct?: KeyVaultCertificateCertificatePolicyLifetimeActionActionOutputReference | KeyVaultCertificateCertificatePolicyLifetimeActionAction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action_type: {
+      value: cdktf.stringToHclTerraform(struct!.actionType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KeyVaultCertificateCertificatePolicyLifetimeActionActionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -536,6 +648,31 @@ export function keyVaultCertificateCertificatePolicyLifetimeActionTriggerToTerra
     days_before_expiry: cdktf.numberToTerraform(struct!.daysBeforeExpiry),
     lifetime_percentage: cdktf.numberToTerraform(struct!.lifetimePercentage),
   }
+}
+
+
+export function keyVaultCertificateCertificatePolicyLifetimeActionTriggerToHclTerraform(struct?: KeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputReference | KeyVaultCertificateCertificatePolicyLifetimeActionTrigger): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    days_before_expiry: {
+      value: cdktf.numberToHclTerraform(struct!.daysBeforeExpiry),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    lifetime_percentage: {
+      value: cdktf.numberToHclTerraform(struct!.lifetimePercentage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputReference extends cdktf.ComplexObject {
@@ -632,6 +769,31 @@ export function keyVaultCertificateCertificatePolicyLifetimeActionToTerraform(st
     action: keyVaultCertificateCertificatePolicyLifetimeActionActionToTerraform(struct!.action),
     trigger: keyVaultCertificateCertificatePolicyLifetimeActionTriggerToTerraform(struct!.trigger),
   }
+}
+
+
+export function keyVaultCertificateCertificatePolicyLifetimeActionToHclTerraform(struct?: KeyVaultCertificateCertificatePolicyLifetimeAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: keyVaultCertificateCertificatePolicyLifetimeActionActionToHclTerraform(struct!.action),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KeyVaultCertificateCertificatePolicyLifetimeActionActionList",
+    },
+    trigger: {
+      value: keyVaultCertificateCertificatePolicyLifetimeActionTriggerToHclTerraform(struct!.trigger),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KeyVaultCertificateCertificatePolicyLifetimeActionTriggerList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KeyVaultCertificateCertificatePolicyLifetimeActionOutputReference extends cdktf.ComplexObject {
@@ -747,6 +909,25 @@ export function keyVaultCertificateCertificatePolicySecretPropertiesToTerraform(
   }
 }
 
+
+export function keyVaultCertificateCertificatePolicySecretPropertiesToHclTerraform(struct?: KeyVaultCertificateCertificatePolicySecretPropertiesOutputReference | KeyVaultCertificateCertificatePolicySecretProperties): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content_type: {
+      value: cdktf.stringToHclTerraform(struct!.contentType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KeyVaultCertificateCertificatePolicySecretPropertiesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -817,6 +998,37 @@ export function keyVaultCertificateCertificatePolicyX509CertificatePropertiesSub
     emails: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.emails),
     upns: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.upns),
   }
+}
+
+
+export function keyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesToHclTerraform(struct?: KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference | KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dns_names: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.dnsNames),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    emails: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.emails),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    upns: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.upns),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference extends cdktf.ComplexObject {
@@ -948,6 +1160,49 @@ export function keyVaultCertificateCertificatePolicyX509CertificatePropertiesToT
     validity_in_months: cdktf.numberToTerraform(struct!.validityInMonths),
     subject_alternative_names: keyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesToTerraform(struct!.subjectAlternativeNames),
   }
+}
+
+
+export function keyVaultCertificateCertificatePolicyX509CertificatePropertiesToHclTerraform(struct?: KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference | KeyVaultCertificateCertificatePolicyX509CertificateProperties): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    extended_key_usage: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.extendedKeyUsage),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    key_usage: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.keyUsage),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    subject: {
+      value: cdktf.stringToHclTerraform(struct!.subject),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    validity_in_months: {
+      value: cdktf.numberToHclTerraform(struct!.validityInMonths),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    subject_alternative_names: {
+      value: keyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesToHclTerraform(struct!.subjectAlternativeNames),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference extends cdktf.ComplexObject {
@@ -1124,6 +1379,49 @@ export function keyVaultCertificateCertificatePolicyToTerraform(struct?: KeyVaul
   }
 }
 
+
+export function keyVaultCertificateCertificatePolicyToHclTerraform(struct?: KeyVaultCertificateCertificatePolicyOutputReference | KeyVaultCertificateCertificatePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    issuer_parameters: {
+      value: keyVaultCertificateCertificatePolicyIssuerParametersToHclTerraform(struct!.issuerParameters),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KeyVaultCertificateCertificatePolicyIssuerParametersList",
+    },
+    key_properties: {
+      value: keyVaultCertificateCertificatePolicyKeyPropertiesToHclTerraform(struct!.keyProperties),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KeyVaultCertificateCertificatePolicyKeyPropertiesList",
+    },
+    lifetime_action: {
+      value: cdktf.listMapperHcl(keyVaultCertificateCertificatePolicyLifetimeActionToHclTerraform, true)(struct!.lifetimeAction),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KeyVaultCertificateCertificatePolicyLifetimeActionList",
+    },
+    secret_properties: {
+      value: keyVaultCertificateCertificatePolicySecretPropertiesToHclTerraform(struct!.secretProperties),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KeyVaultCertificateCertificatePolicySecretPropertiesList",
+    },
+    x509_certificate_properties: {
+      value: keyVaultCertificateCertificatePolicyX509CertificatePropertiesToHclTerraform(struct!.x509CertificateProperties),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KeyVaultCertificateCertificatePolicyX509CertificatePropertiesList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KeyVaultCertificateCertificatePolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1281,6 +1579,43 @@ export function keyVaultCertificateTimeoutsToTerraform(struct?: KeyVaultCertific
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function keyVaultCertificateTimeoutsToHclTerraform(struct?: KeyVaultCertificateTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KeyVaultCertificateTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1643,5 +1978,55 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
       certificate_policy: keyVaultCertificateCertificatePolicyToTerraform(this._certificatePolicy.internalValue),
       timeouts: keyVaultCertificateTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      key_vault_id: {
+        value: cdktf.stringToHclTerraform(this._keyVaultId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      certificate: {
+        value: keyVaultCertificateCertificateToHclTerraform(this._certificate.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KeyVaultCertificateCertificateList",
+      },
+      certificate_policy: {
+        value: keyVaultCertificateCertificatePolicyToHclTerraform(this._certificatePolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KeyVaultCertificateCertificatePolicyList",
+      },
+      timeouts: {
+        value: keyVaultCertificateTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "KeyVaultCertificateTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

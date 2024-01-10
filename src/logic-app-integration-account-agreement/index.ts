@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/logic_app_integration_account_agreement
 // generated from terraform resource schema
 
@@ -92,6 +87,31 @@ export function logicAppIntegrationAccountAgreementGuestIdentityToTerraform(stru
   }
 }
 
+
+export function logicAppIntegrationAccountAgreementGuestIdentityToHclTerraform(struct?: LogicAppIntegrationAccountAgreementGuestIdentityOutputReference | LogicAppIntegrationAccountAgreementGuestIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    qualifier: {
+      value: cdktf.stringToHclTerraform(struct!.qualifier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LogicAppIntegrationAccountAgreementGuestIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -176,6 +196,31 @@ export function logicAppIntegrationAccountAgreementHostIdentityToTerraform(struc
     qualifier: cdktf.stringToTerraform(struct!.qualifier),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function logicAppIntegrationAccountAgreementHostIdentityToHclTerraform(struct?: LogicAppIntegrationAccountAgreementHostIdentityOutputReference | LogicAppIntegrationAccountAgreementHostIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    qualifier: {
+      value: cdktf.stringToHclTerraform(struct!.qualifier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogicAppIntegrationAccountAgreementHostIdentityOutputReference extends cdktf.ComplexObject {
@@ -272,6 +317,43 @@ export function logicAppIntegrationAccountAgreementTimeoutsToTerraform(struct?: 
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function logicAppIntegrationAccountAgreementTimeoutsToHclTerraform(struct?: LogicAppIntegrationAccountAgreementTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogicAppIntegrationAccountAgreementTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -652,5 +734,85 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
       host_identity: logicAppIntegrationAccountAgreementHostIdentityToTerraform(this._hostIdentity.internalValue),
       timeouts: logicAppIntegrationAccountAgreementTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      agreement_type: {
+        value: cdktf.stringToHclTerraform(this._agreementType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      content: {
+        value: cdktf.stringToHclTerraform(this._content),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      guest_partner_name: {
+        value: cdktf.stringToHclTerraform(this._guestPartnerName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      host_partner_name: {
+        value: cdktf.stringToHclTerraform(this._hostPartnerName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      integration_account_name: {
+        value: cdktf.stringToHclTerraform(this._integrationAccountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      metadata: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._metadata),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      guest_identity: {
+        value: logicAppIntegrationAccountAgreementGuestIdentityToHclTerraform(this._guestIdentity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LogicAppIntegrationAccountAgreementGuestIdentityList",
+      },
+      host_identity: {
+        value: logicAppIntegrationAccountAgreementHostIdentityToHclTerraform(this._hostIdentity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LogicAppIntegrationAccountAgreementHostIdentityList",
+      },
+      timeouts: {
+        value: logicAppIntegrationAccountAgreementTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "LogicAppIntegrationAccountAgreementTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

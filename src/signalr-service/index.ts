@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/signalr_service
 // generated from terraform resource schema
 
@@ -129,6 +124,25 @@ export function signalrServiceCorsToTerraform(struct?: SignalrServiceCors | cdkt
   }
 }
 
+
+export function signalrServiceCorsToHclTerraform(struct?: SignalrServiceCors | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_origins: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedOrigins),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SignalrServiceCorsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -226,6 +240,31 @@ export function signalrServiceIdentityToTerraform(struct?: SignalrServiceIdentit
     identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function signalrServiceIdentityToHclTerraform(struct?: SignalrServiceIdentityOutputReference | SignalrServiceIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SignalrServiceIdentityOutputReference extends cdktf.ComplexObject {
@@ -335,6 +374,43 @@ export function signalrServiceLiveTraceToTerraform(struct?: SignalrServiceLiveTr
     http_request_logs_enabled: cdktf.booleanToTerraform(struct!.httpRequestLogsEnabled),
     messaging_logs_enabled: cdktf.booleanToTerraform(struct!.messagingLogsEnabled),
   }
+}
+
+
+export function signalrServiceLiveTraceToHclTerraform(struct?: SignalrServiceLiveTraceOutputReference | SignalrServiceLiveTrace): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    connectivity_logs_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.connectivityLogsEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    http_request_logs_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.httpRequestLogsEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    messaging_logs_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.messagingLogsEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SignalrServiceLiveTraceOutputReference extends cdktf.ComplexObject {
@@ -473,6 +549,31 @@ export function signalrServiceSkuToTerraform(struct?: SignalrServiceSkuOutputRef
   }
 }
 
+
+export function signalrServiceSkuToHclTerraform(struct?: SignalrServiceSkuOutputReference | SignalrServiceSku): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    capacity: {
+      value: cdktf.numberToHclTerraform(struct!.capacity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SignalrServiceSkuOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -567,6 +668,43 @@ export function signalrServiceTimeoutsToTerraform(struct?: SignalrServiceTimeout
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function signalrServiceTimeoutsToHclTerraform(struct?: SignalrServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SignalrServiceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -728,6 +866,49 @@ export function signalrServiceUpstreamEndpointToTerraform(struct?: SignalrServic
     url_template: cdktf.stringToTerraform(struct!.urlTemplate),
     user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
   }
+}
+
+
+export function signalrServiceUpstreamEndpointToHclTerraform(struct?: SignalrServiceUpstreamEndpoint | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    category_pattern: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.categoryPattern),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    event_pattern: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.eventPattern),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    hub_pattern: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.hubPattern),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    url_template: {
+      value: cdktf.stringToHclTerraform(struct!.urlTemplate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    user_assigned_identity_id: {
+      value: cdktf.stringToHclTerraform(struct!.userAssignedIdentityId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SignalrServiceUpstreamEndpointOutputReference extends cdktf.ComplexObject {
@@ -1357,5 +1538,139 @@ export class SignalrService extends cdktf.TerraformResource {
       timeouts: signalrServiceTimeoutsToTerraform(this._timeouts.internalValue),
       upstream_endpoint: cdktf.listMapper(signalrServiceUpstreamEndpointToTerraform, true)(this._upstreamEndpoint.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      aad_auth_enabled: {
+        value: cdktf.booleanToHclTerraform(this._aadAuthEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      connectivity_logs_enabled: {
+        value: cdktf.booleanToHclTerraform(this._connectivityLogsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      http_request_logs_enabled: {
+        value: cdktf.booleanToHclTerraform(this._httpRequestLogsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      live_trace_enabled: {
+        value: cdktf.booleanToHclTerraform(this._liveTraceEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      local_auth_enabled: {
+        value: cdktf.booleanToHclTerraform(this._localAuthEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      messaging_logs_enabled: {
+        value: cdktf.booleanToHclTerraform(this._messagingLogsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      serverless_connection_timeout_in_seconds: {
+        value: cdktf.numberToHclTerraform(this._serverlessConnectionTimeoutInSeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      service_mode: {
+        value: cdktf.stringToHclTerraform(this._serviceMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tls_client_cert_enabled: {
+        value: cdktf.booleanToHclTerraform(this._tlsClientCertEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      cors: {
+        value: cdktf.listMapperHcl(signalrServiceCorsToHclTerraform, true)(this._cors.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SignalrServiceCorsList",
+      },
+      identity: {
+        value: signalrServiceIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SignalrServiceIdentityList",
+      },
+      live_trace: {
+        value: signalrServiceLiveTraceToHclTerraform(this._liveTrace.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SignalrServiceLiveTraceList",
+      },
+      sku: {
+        value: signalrServiceSkuToHclTerraform(this._sku.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SignalrServiceSkuList",
+      },
+      timeouts: {
+        value: signalrServiceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SignalrServiceTimeouts",
+      },
+      upstream_endpoint: {
+        value: cdktf.listMapperHcl(signalrServiceUpstreamEndpointToHclTerraform, true)(this._upstreamEndpoint.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "SignalrServiceUpstreamEndpointList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

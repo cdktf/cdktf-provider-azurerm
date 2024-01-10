@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/subscription_cost_management_export
 // generated from terraform resource schema
 
@@ -82,6 +77,31 @@ export function subscriptionCostManagementExportExportDataOptionsToTerraform(str
     time_frame: cdktf.stringToTerraform(struct!.timeFrame),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function subscriptionCostManagementExportExportDataOptionsToHclTerraform(struct?: SubscriptionCostManagementExportExportDataOptionsOutputReference | SubscriptionCostManagementExportExportDataOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    time_frame: {
+      value: cdktf.stringToHclTerraform(struct!.timeFrame),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SubscriptionCostManagementExportExportDataOptionsOutputReference extends cdktf.ComplexObject {
@@ -168,6 +188,31 @@ export function subscriptionCostManagementExportExportDataStorageLocationToTerra
     container_id: cdktf.stringToTerraform(struct!.containerId),
     root_folder_path: cdktf.stringToTerraform(struct!.rootFolderPath),
   }
+}
+
+
+export function subscriptionCostManagementExportExportDataStorageLocationToHclTerraform(struct?: SubscriptionCostManagementExportExportDataStorageLocationOutputReference | SubscriptionCostManagementExportExportDataStorageLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    container_id: {
+      value: cdktf.stringToHclTerraform(struct!.containerId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    root_folder_path: {
+      value: cdktf.stringToHclTerraform(struct!.rootFolderPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SubscriptionCostManagementExportExportDataStorageLocationOutputReference extends cdktf.ComplexObject {
@@ -264,6 +309,43 @@ export function subscriptionCostManagementExportTimeoutsToTerraform(struct?: Sub
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function subscriptionCostManagementExportTimeoutsToHclTerraform(struct?: SubscriptionCostManagementExportTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SubscriptionCostManagementExportTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -614,5 +696,73 @@ export class SubscriptionCostManagementExport extends cdktf.TerraformResource {
       export_data_storage_location: subscriptionCostManagementExportExportDataStorageLocationToTerraform(this._exportDataStorageLocation.internalValue),
       timeouts: subscriptionCostManagementExportTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      active: {
+        value: cdktf.booleanToHclTerraform(this._active),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      recurrence_period_end_date: {
+        value: cdktf.stringToHclTerraform(this._recurrencePeriodEndDate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      recurrence_period_start_date: {
+        value: cdktf.stringToHclTerraform(this._recurrencePeriodStartDate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      recurrence_type: {
+        value: cdktf.stringToHclTerraform(this._recurrenceType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subscription_id: {
+        value: cdktf.stringToHclTerraform(this._subscriptionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      export_data_options: {
+        value: subscriptionCostManagementExportExportDataOptionsToHclTerraform(this._exportDataOptions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SubscriptionCostManagementExportExportDataOptionsList",
+      },
+      export_data_storage_location: {
+        value: subscriptionCostManagementExportExportDataStorageLocationToHclTerraform(this._exportDataStorageLocation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SubscriptionCostManagementExportExportDataStorageLocationList",
+      },
+      timeouts: {
+        value: subscriptionCostManagementExportTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SubscriptionCostManagementExportTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

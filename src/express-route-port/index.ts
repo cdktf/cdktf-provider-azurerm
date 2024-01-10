@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/express_route_port
 // generated from terraform resource schema
 
@@ -96,6 +91,31 @@ export function expressRoutePortIdentityToTerraform(struct?: ExpressRoutePortIde
     identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function expressRoutePortIdentityToHclTerraform(struct?: ExpressRoutePortIdentityOutputReference | ExpressRoutePortIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ExpressRoutePortIdentityOutputReference extends cdktf.ComplexObject {
@@ -197,6 +217,49 @@ export function expressRoutePortLink1ToTerraform(struct?: ExpressRoutePortLink1O
     macsec_ckn_keyvault_secret_id: cdktf.stringToTerraform(struct!.macsecCknKeyvaultSecretId),
     macsec_sci_enabled: cdktf.booleanToTerraform(struct!.macsecSciEnabled),
   }
+}
+
+
+export function expressRoutePortLink1ToHclTerraform(struct?: ExpressRoutePortLink1OutputReference | ExpressRoutePortLink1): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    admin_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.adminEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    macsec_cak_keyvault_secret_id: {
+      value: cdktf.stringToHclTerraform(struct!.macsecCakKeyvaultSecretId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    macsec_cipher: {
+      value: cdktf.stringToHclTerraform(struct!.macsecCipher),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    macsec_ckn_keyvault_secret_id: {
+      value: cdktf.stringToHclTerraform(struct!.macsecCknKeyvaultSecretId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    macsec_sci_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.macsecSciEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ExpressRoutePortLink1OutputReference extends cdktf.ComplexObject {
@@ -402,6 +465,49 @@ export function expressRoutePortLink2ToTerraform(struct?: ExpressRoutePortLink2O
   }
 }
 
+
+export function expressRoutePortLink2ToHclTerraform(struct?: ExpressRoutePortLink2OutputReference | ExpressRoutePortLink2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    admin_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.adminEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    macsec_cak_keyvault_secret_id: {
+      value: cdktf.stringToHclTerraform(struct!.macsecCakKeyvaultSecretId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    macsec_cipher: {
+      value: cdktf.stringToHclTerraform(struct!.macsecCipher),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    macsec_ckn_keyvault_secret_id: {
+      value: cdktf.stringToHclTerraform(struct!.macsecCknKeyvaultSecretId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    macsec_sci_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.macsecSciEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ExpressRoutePortLink2OutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -598,6 +704,43 @@ export function expressRoutePortTimeoutsToTerraform(struct?: ExpressRoutePortTim
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function expressRoutePortTimeoutsToHclTerraform(struct?: ExpressRoutePortTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ExpressRoutePortTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1020,5 +1163,91 @@ export class ExpressRoutePort extends cdktf.TerraformResource {
       link2: expressRoutePortLink2ToTerraform(this._link2.internalValue),
       timeouts: expressRoutePortTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bandwidth_in_gbps: {
+        value: cdktf.numberToHclTerraform(this._bandwidthInGbps),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      billing_type: {
+        value: cdktf.stringToHclTerraform(this._billingType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      encapsulation: {
+        value: cdktf.stringToHclTerraform(this._encapsulation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peering_location: {
+        value: cdktf.stringToHclTerraform(this._peeringLocation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      identity: {
+        value: expressRoutePortIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ExpressRoutePortIdentityList",
+      },
+      link1: {
+        value: expressRoutePortLink1ToHclTerraform(this._link1.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ExpressRoutePortLink1List",
+      },
+      link2: {
+        value: expressRoutePortLink2ToHclTerraform(this._link2.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ExpressRoutePortLink2List",
+      },
+      timeouts: {
+        value: expressRoutePortTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ExpressRoutePortTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

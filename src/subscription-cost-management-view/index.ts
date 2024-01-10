@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/subscription_cost_management_view
 // generated from terraform resource schema
 
@@ -92,6 +87,31 @@ export function subscriptionCostManagementViewDatasetAggregationToTerraform(stru
     column_name: cdktf.stringToTerraform(struct!.columnName),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function subscriptionCostManagementViewDatasetAggregationToHclTerraform(struct?: SubscriptionCostManagementViewDatasetAggregation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    column_name: {
+      value: cdktf.stringToHclTerraform(struct!.columnName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SubscriptionCostManagementViewDatasetAggregationOutputReference extends cdktf.ComplexObject {
@@ -212,6 +232,31 @@ export function subscriptionCostManagementViewDatasetGroupingToTerraform(struct?
   }
 }
 
+
+export function subscriptionCostManagementViewDatasetGroupingToHclTerraform(struct?: SubscriptionCostManagementViewDatasetGrouping | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SubscriptionCostManagementViewDatasetGroupingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -328,6 +373,31 @@ export function subscriptionCostManagementViewDatasetSortingToTerraform(struct?:
     direction: cdktf.stringToTerraform(struct!.direction),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function subscriptionCostManagementViewDatasetSortingToHclTerraform(struct?: SubscriptionCostManagementViewDatasetSorting | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    direction: {
+      value: cdktf.stringToHclTerraform(struct!.direction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SubscriptionCostManagementViewDatasetSortingOutputReference extends cdktf.ComplexObject {
@@ -464,6 +534,43 @@ export function subscriptionCostManagementViewDatasetToTerraform(struct?: Subscr
   }
 }
 
+
+export function subscriptionCostManagementViewDatasetToHclTerraform(struct?: SubscriptionCostManagementViewDatasetOutputReference | SubscriptionCostManagementViewDataset): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    granularity: {
+      value: cdktf.stringToHclTerraform(struct!.granularity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    aggregation: {
+      value: cdktf.listMapperHcl(subscriptionCostManagementViewDatasetAggregationToHclTerraform, true)(struct!.aggregation),
+      isBlock: true,
+      type: "set",
+      storageClassType: "SubscriptionCostManagementViewDatasetAggregationList",
+    },
+    grouping: {
+      value: cdktf.listMapperHcl(subscriptionCostManagementViewDatasetGroupingToHclTerraform, true)(struct!.grouping),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SubscriptionCostManagementViewDatasetGroupingList",
+    },
+    sorting: {
+      value: cdktf.listMapperHcl(subscriptionCostManagementViewDatasetSortingToHclTerraform, true)(struct!.sorting),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SubscriptionCostManagementViewDatasetSortingList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SubscriptionCostManagementViewDatasetOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -589,6 +696,25 @@ export function subscriptionCostManagementViewKpiToTerraform(struct?: Subscripti
   }
 }
 
+
+export function subscriptionCostManagementViewKpiToHclTerraform(struct?: SubscriptionCostManagementViewKpi | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SubscriptionCostManagementViewKpiOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -686,6 +812,31 @@ export function subscriptionCostManagementViewPivotToTerraform(struct?: Subscrip
     name: cdktf.stringToTerraform(struct!.name),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function subscriptionCostManagementViewPivotToHclTerraform(struct?: SubscriptionCostManagementViewPivot | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SubscriptionCostManagementViewPivotOutputReference extends cdktf.ComplexObject {
@@ -814,6 +965,43 @@ export function subscriptionCostManagementViewTimeoutsToTerraform(struct?: Subsc
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function subscriptionCostManagementViewTimeoutsToHclTerraform(struct?: SubscriptionCostManagementViewTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SubscriptionCostManagementViewTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1197,5 +1385,85 @@ export class SubscriptionCostManagementView extends cdktf.TerraformResource {
       pivot: cdktf.listMapper(subscriptionCostManagementViewPivotToTerraform, true)(this._pivot.internalValue),
       timeouts: subscriptionCostManagementViewTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      accumulated: {
+        value: cdktf.booleanToHclTerraform(this._accumulated),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      chart_type: {
+        value: cdktf.stringToHclTerraform(this._chartType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      report_type: {
+        value: cdktf.stringToHclTerraform(this._reportType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subscription_id: {
+        value: cdktf.stringToHclTerraform(this._subscriptionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeframe: {
+        value: cdktf.stringToHclTerraform(this._timeframe),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dataset: {
+        value: subscriptionCostManagementViewDatasetToHclTerraform(this._dataset.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SubscriptionCostManagementViewDatasetList",
+      },
+      kpi: {
+        value: cdktf.listMapperHcl(subscriptionCostManagementViewKpiToHclTerraform, true)(this._kpi.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SubscriptionCostManagementViewKpiList",
+      },
+      pivot: {
+        value: cdktf.listMapperHcl(subscriptionCostManagementViewPivotToHclTerraform, true)(this._pivot.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SubscriptionCostManagementViewPivotList",
+      },
+      timeouts: {
+        value: subscriptionCostManagementViewTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SubscriptionCostManagementViewTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/traffic_manager_profile
 // generated from terraform resource schema
 
@@ -86,6 +81,31 @@ export function trafficManagerProfileDnsConfigToTerraform(struct?: TrafficManage
     relative_name: cdktf.stringToTerraform(struct!.relativeName),
     ttl: cdktf.numberToTerraform(struct!.ttl),
   }
+}
+
+
+export function trafficManagerProfileDnsConfigToHclTerraform(struct?: TrafficManagerProfileDnsConfigOutputReference | TrafficManagerProfileDnsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    relative_name: {
+      value: cdktf.stringToHclTerraform(struct!.relativeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ttl: {
+      value: cdktf.numberToHclTerraform(struct!.ttl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class TrafficManagerProfileDnsConfigOutputReference extends cdktf.ComplexObject {
@@ -172,6 +192,31 @@ export function trafficManagerProfileMonitorConfigCustomHeaderToTerraform(struct
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function trafficManagerProfileMonitorConfigCustomHeaderToHclTerraform(struct?: TrafficManagerProfileMonitorConfigCustomHeader | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class TrafficManagerProfileMonitorConfigCustomHeaderOutputReference extends cdktf.ComplexObject {
@@ -322,6 +367,67 @@ export function trafficManagerProfileMonitorConfigToTerraform(struct?: TrafficMa
     tolerated_number_of_failures: cdktf.numberToTerraform(struct!.toleratedNumberOfFailures),
     custom_header: cdktf.listMapper(trafficManagerProfileMonitorConfigCustomHeaderToTerraform, true)(struct!.customHeader),
   }
+}
+
+
+export function trafficManagerProfileMonitorConfigToHclTerraform(struct?: TrafficManagerProfileMonitorConfigOutputReference | TrafficManagerProfileMonitorConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    expected_status_code_ranges: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.expectedStatusCodeRanges),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.intervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    protocol: {
+      value: cdktf.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.timeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    tolerated_number_of_failures: {
+      value: cdktf.numberToHclTerraform(struct!.toleratedNumberOfFailures),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    custom_header: {
+      value: cdktf.listMapperHcl(trafficManagerProfileMonitorConfigCustomHeaderToHclTerraform, true)(struct!.customHeader),
+      isBlock: true,
+      type: "list",
+      storageClassType: "TrafficManagerProfileMonitorConfigCustomHeaderList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.ComplexObject {
@@ -550,6 +656,43 @@ export function trafficManagerProfileTimeoutsToTerraform(struct?: TrafficManager
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function trafficManagerProfileTimeoutsToHclTerraform(struct?: TrafficManagerProfileTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -929,5 +1072,79 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
       monitor_config: trafficManagerProfileMonitorConfigToTerraform(this._monitorConfig.internalValue),
       timeouts: trafficManagerProfileTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_return: {
+        value: cdktf.numberToHclTerraform(this._maxReturn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      profile_status: {
+        value: cdktf.stringToHclTerraform(this._profileStatus),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      traffic_routing_method: {
+        value: cdktf.stringToHclTerraform(this._trafficRoutingMethod),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      traffic_view_enabled: {
+        value: cdktf.booleanToHclTerraform(this._trafficViewEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      dns_config: {
+        value: trafficManagerProfileDnsConfigToHclTerraform(this._dnsConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "TrafficManagerProfileDnsConfigList",
+      },
+      monitor_config: {
+        value: trafficManagerProfileMonitorConfigToHclTerraform(this._monitorConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "TrafficManagerProfileMonitorConfigList",
+      },
+      timeouts: {
+        value: trafficManagerProfileTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "TrafficManagerProfileTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

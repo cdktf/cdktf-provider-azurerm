@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cdn_endpoint_custom_domain
 // generated from terraform resource schema
 
@@ -75,6 +70,37 @@ export function cdnEndpointCustomDomainCdnManagedHttpsToTerraform(struct?: CdnEn
     protocol_type: cdktf.stringToTerraform(struct!.protocolType),
     tls_version: cdktf.stringToTerraform(struct!.tlsVersion),
   }
+}
+
+
+export function cdnEndpointCustomDomainCdnManagedHttpsToHclTerraform(struct?: CdnEndpointCustomDomainCdnManagedHttpsOutputReference | CdnEndpointCustomDomainCdnManagedHttps): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate_type: {
+      value: cdktf.stringToHclTerraform(struct!.certificateType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    protocol_type: {
+      value: cdktf.stringToHclTerraform(struct!.protocolType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tls_version: {
+      value: cdktf.stringToHclTerraform(struct!.tlsVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CdnEndpointCustomDomainCdnManagedHttpsOutputReference extends cdktf.ComplexObject {
@@ -193,6 +219,43 @@ export function cdnEndpointCustomDomainTimeoutsToTerraform(struct?: CdnEndpointC
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cdnEndpointCustomDomainTimeoutsToHclTerraform(struct?: CdnEndpointCustomDomainTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CdnEndpointCustomDomainTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -344,6 +407,37 @@ export function cdnEndpointCustomDomainUserManagedHttpsToTerraform(struct?: CdnE
     key_vault_secret_id: cdktf.stringToTerraform(struct!.keyVaultSecretId),
     tls_version: cdktf.stringToTerraform(struct!.tlsVersion),
   }
+}
+
+
+export function cdnEndpointCustomDomainUserManagedHttpsToHclTerraform(struct?: CdnEndpointCustomDomainUserManagedHttpsOutputReference | CdnEndpointCustomDomainUserManagedHttps): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_vault_certificate_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultCertificateId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_secret_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultSecretId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tls_version: {
+      value: cdktf.stringToHclTerraform(struct!.tlsVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CdnEndpointCustomDomainUserManagedHttpsOutputReference extends cdktf.ComplexObject {
@@ -620,5 +714,55 @@ export class CdnEndpointCustomDomain extends cdktf.TerraformResource {
       timeouts: cdnEndpointCustomDomainTimeoutsToTerraform(this._timeouts.internalValue),
       user_managed_https: cdnEndpointCustomDomainUserManagedHttpsToTerraform(this._userManagedHttps.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cdn_endpoint_id: {
+        value: cdktf.stringToHclTerraform(this._cdnEndpointId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      host_name: {
+        value: cdktf.stringToHclTerraform(this._hostName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cdn_managed_https: {
+        value: cdnEndpointCustomDomainCdnManagedHttpsToHclTerraform(this._cdnManagedHttps.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CdnEndpointCustomDomainCdnManagedHttpsList",
+      },
+      timeouts: {
+        value: cdnEndpointCustomDomainTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CdnEndpointCustomDomainTimeouts",
+      },
+      user_managed_https: {
+        value: cdnEndpointCustomDomainUserManagedHttpsToHclTerraform(this._userManagedHttps.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CdnEndpointCustomDomainUserManagedHttpsList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

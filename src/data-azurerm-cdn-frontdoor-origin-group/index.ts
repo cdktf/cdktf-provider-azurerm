@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/cdn_frontdoor_origin_group
 // generated from terraform resource schema
 
@@ -48,6 +43,17 @@ export function dataAzurermCdnFrontdoorOriginGroupHealthProbeToTerraform(struct?
   }
   return {
   }
+}
+
+
+export function dataAzurermCdnFrontdoorOriginGroupHealthProbeToHclTerraform(struct?: DataAzurermCdnFrontdoorOriginGroupHealthProbe): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermCdnFrontdoorOriginGroupHealthProbeOutputReference extends cdktf.ComplexObject {
@@ -129,6 +135,17 @@ export function dataAzurermCdnFrontdoorOriginGroupLoadBalancingToTerraform(struc
   }
 }
 
+
+export function dataAzurermCdnFrontdoorOriginGroupLoadBalancingToHclTerraform(struct?: DataAzurermCdnFrontdoorOriginGroupLoadBalancing): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermCdnFrontdoorOriginGroupLoadBalancingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -206,6 +223,25 @@ export function dataAzurermCdnFrontdoorOriginGroupTimeoutsToTerraform(struct?: D
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermCdnFrontdoorOriginGroupTimeoutsToHclTerraform(struct?: DataAzurermCdnFrontdoorOriginGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermCdnFrontdoorOriginGroupTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -439,5 +475,43 @@ export class DataAzurermCdnFrontdoorOriginGroup extends cdktf.TerraformDataSourc
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermCdnFrontdoorOriginGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      profile_name: {
+        value: cdktf.stringToHclTerraform(this._profileName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermCdnFrontdoorOriginGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermCdnFrontdoorOriginGroupTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_sql_container
 // generated from terraform resource schema
 
@@ -103,6 +98,25 @@ export function cosmosdbSqlContainerAutoscaleSettingsToTerraform(struct?: Cosmos
   }
 }
 
+
+export function cosmosdbSqlContainerAutoscaleSettingsToHclTerraform(struct?: CosmosdbSqlContainerAutoscaleSettingsOutputReference | CosmosdbSqlContainerAutoscaleSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max_throughput: {
+      value: cdktf.numberToHclTerraform(struct!.maxThroughput),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbSqlContainerAutoscaleSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -176,6 +190,37 @@ export function cosmosdbSqlContainerConflictResolutionPolicyToTerraform(struct?:
     conflict_resolution_procedure: cdktf.stringToTerraform(struct!.conflictResolutionProcedure),
     mode: cdktf.stringToTerraform(struct!.mode),
   }
+}
+
+
+export function cosmosdbSqlContainerConflictResolutionPolicyToHclTerraform(struct?: CosmosdbSqlContainerConflictResolutionPolicyOutputReference | CosmosdbSqlContainerConflictResolutionPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    conflict_resolution_path: {
+      value: cdktf.stringToHclTerraform(struct!.conflictResolutionPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    conflict_resolution_procedure: {
+      value: cdktf.stringToHclTerraform(struct!.conflictResolutionProcedure),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbSqlContainerConflictResolutionPolicyOutputReference extends cdktf.ComplexObject {
@@ -287,6 +332,31 @@ export function cosmosdbSqlContainerIndexingPolicyCompositeIndexIndexToTerraform
     order: cdktf.stringToTerraform(struct!.order),
     path: cdktf.stringToTerraform(struct!.path),
   }
+}
+
+
+export function cosmosdbSqlContainerIndexingPolicyCompositeIndexIndexToHclTerraform(struct?: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    order: {
+      value: cdktf.stringToHclTerraform(struct!.order),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbSqlContainerIndexingPolicyCompositeIndexIndexOutputReference extends cdktf.ComplexObject {
@@ -404,6 +474,25 @@ export function cosmosdbSqlContainerIndexingPolicyCompositeIndexToTerraform(stru
   }
 }
 
+
+export function cosmosdbSqlContainerIndexingPolicyCompositeIndexToHclTerraform(struct?: CosmosdbSqlContainerIndexingPolicyCompositeIndex | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    index: {
+      value: cdktf.listMapperHcl(cosmosdbSqlContainerIndexingPolicyCompositeIndexIndexToHclTerraform, true)(struct!.index),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CosmosdbSqlContainerIndexingPolicyCompositeIndexIndexList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbSqlContainerIndexingPolicyCompositeIndexOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -496,6 +585,25 @@ export function cosmosdbSqlContainerIndexingPolicyExcludedPathToTerraform(struct
   return {
     path: cdktf.stringToTerraform(struct!.path),
   }
+}
+
+
+export function cosmosdbSqlContainerIndexingPolicyExcludedPathToHclTerraform(struct?: CosmosdbSqlContainerIndexingPolicyExcludedPath | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbSqlContainerIndexingPolicyExcludedPathOutputReference extends cdktf.ComplexObject {
@@ -592,6 +700,25 @@ export function cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform(struct
   }
 }
 
+
+export function cosmosdbSqlContainerIndexingPolicyIncludedPathToHclTerraform(struct?: CosmosdbSqlContainerIndexingPolicyIncludedPath | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbSqlContainerIndexingPolicyIncludedPathOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -684,6 +811,25 @@ export function cosmosdbSqlContainerIndexingPolicySpatialIndexToTerraform(struct
   return {
     path: cdktf.stringToTerraform(struct!.path),
   }
+}
+
+
+export function cosmosdbSqlContainerIndexingPolicySpatialIndexToHclTerraform(struct?: CosmosdbSqlContainerIndexingPolicySpatialIndex | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbSqlContainerIndexingPolicySpatialIndexOutputReference extends cdktf.ComplexObject {
@@ -811,6 +957,49 @@ export function cosmosdbSqlContainerIndexingPolicyToTerraform(struct?: CosmosdbS
     included_path: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform, true)(struct!.includedPath),
     spatial_index: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicySpatialIndexToTerraform, true)(struct!.spatialIndex),
   }
+}
+
+
+export function cosmosdbSqlContainerIndexingPolicyToHclTerraform(struct?: CosmosdbSqlContainerIndexingPolicyOutputReference | CosmosdbSqlContainerIndexingPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    indexing_mode: {
+      value: cdktf.stringToHclTerraform(struct!.indexingMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    composite_index: {
+      value: cdktf.listMapperHcl(cosmosdbSqlContainerIndexingPolicyCompositeIndexToHclTerraform, true)(struct!.compositeIndex),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CosmosdbSqlContainerIndexingPolicyCompositeIndexList",
+    },
+    excluded_path: {
+      value: cdktf.listMapperHcl(cosmosdbSqlContainerIndexingPolicyExcludedPathToHclTerraform, true)(struct!.excludedPath),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CosmosdbSqlContainerIndexingPolicyExcludedPathList",
+    },
+    included_path: {
+      value: cdktf.listMapperHcl(cosmosdbSqlContainerIndexingPolicyIncludedPathToHclTerraform, true)(struct!.includedPath),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CosmosdbSqlContainerIndexingPolicyIncludedPathList",
+    },
+    spatial_index: {
+      value: cdktf.listMapperHcl(cosmosdbSqlContainerIndexingPolicySpatialIndexToHclTerraform, true)(struct!.spatialIndex),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CosmosdbSqlContainerIndexingPolicySpatialIndexList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.ComplexObject {
@@ -981,6 +1170,43 @@ export function cosmosdbSqlContainerTimeoutsToTerraform(struct?: CosmosdbSqlCont
   }
 }
 
+
+export function cosmosdbSqlContainerTimeoutsToHclTerraform(struct?: CosmosdbSqlContainerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1120,6 +1346,25 @@ export function cosmosdbSqlContainerUniqueKeyToTerraform(struct?: CosmosdbSqlCon
   return {
     paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.paths),
   }
+}
+
+
+export function cosmosdbSqlContainerUniqueKeyToHclTerraform(struct?: CosmosdbSqlContainerUniqueKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    paths: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.paths),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbSqlContainerUniqueKeyOutputReference extends cdktf.ComplexObject {
@@ -1519,5 +1764,103 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
       timeouts: cosmosdbSqlContainerTimeoutsToTerraform(this._timeouts.internalValue),
       unique_key: cdktf.listMapper(cosmosdbSqlContainerUniqueKeyToTerraform, true)(this._uniqueKey.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      account_name: {
+        value: cdktf.stringToHclTerraform(this._accountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      analytical_storage_ttl: {
+        value: cdktf.numberToHclTerraform(this._analyticalStorageTtl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      database_name: {
+        value: cdktf.stringToHclTerraform(this._databaseName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      default_ttl: {
+        value: cdktf.numberToHclTerraform(this._defaultTtl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      partition_key_path: {
+        value: cdktf.stringToHclTerraform(this._partitionKeyPath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      partition_key_version: {
+        value: cdktf.numberToHclTerraform(this._partitionKeyVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      throughput: {
+        value: cdktf.numberToHclTerraform(this._throughput),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      autoscale_settings: {
+        value: cosmosdbSqlContainerAutoscaleSettingsToHclTerraform(this._autoscaleSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbSqlContainerAutoscaleSettingsList",
+      },
+      conflict_resolution_policy: {
+        value: cosmosdbSqlContainerConflictResolutionPolicyToHclTerraform(this._conflictResolutionPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbSqlContainerConflictResolutionPolicyList",
+      },
+      indexing_policy: {
+        value: cosmosdbSqlContainerIndexingPolicyToHclTerraform(this._indexingPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbSqlContainerIndexingPolicyList",
+      },
+      timeouts: {
+        value: cosmosdbSqlContainerTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CosmosdbSqlContainerTimeouts",
+      },
+      unique_key: {
+        value: cdktf.listMapperHcl(cosmosdbSqlContainerUniqueKeyToHclTerraform, true)(this._uniqueKey.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "CosmosdbSqlContainerUniqueKeyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

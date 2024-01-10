@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkpacketcapture"
 
 networkpacketcapture.NewNetworkPacketCapture(scope Construct, id *string, config NetworkPacketCaptureConfig) NetworkPacketCapture
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -133,6 +134,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.toMetadata"></a>
 
@@ -452,7 +459,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkpacketcapture"
 
 networkpacketcapture.NetworkPacketCapture_IsConstruct(x interface{}) *bool
 ```
@@ -484,7 +491,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkpacketcapture"
 
 networkpacketcapture.NetworkPacketCapture_IsTerraformElement(x interface{}) *bool
 ```
@@ -498,7 +505,7 @@ networkpacketcapture.NetworkPacketCapture_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkpacketcapture"
 
 networkpacketcapture.NetworkPacketCapture_IsTerraformResource(x interface{}) *bool
 ```
@@ -512,7 +519,7 @@ networkpacketcapture.NetworkPacketCapture_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCapture.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkpacketcapture"
 
 networkpacketcapture.NetworkPacketCapture_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -983,7 +990,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkpacketcapture"
 
 &networkpacketcapture.NetworkPacketCaptureConfig {
 	Connection: interface{},
@@ -996,14 +1003,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapt
 	Name: *string,
 	NetworkWatcherName: *string,
 	ResourceGroupName: *string,
-	StorageLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.networkPacketCapture.NetworkPacketCaptureStorageLocation,
+	StorageLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkPacketCapture.NetworkPacketCaptureStorageLocation,
 	TargetResourceId: *string,
 	Filter: interface{},
 	Id: *string,
 	MaximumBytesPerPacket: *f64,
 	MaximumBytesPerSession: *f64,
 	MaximumCaptureDuration: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.networkPacketCapture.NetworkPacketCaptureTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkPacketCapture.NetworkPacketCaptureTimeouts,
 }
 ```
 
@@ -1248,7 +1255,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkpacketcapture"
 
 &networkpacketcapture.NetworkPacketCaptureFilter {
 	Protocol: *string,
@@ -1336,7 +1343,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureStorageLocation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkpacketcapture"
 
 &networkpacketcapture.NetworkPacketCaptureStorageLocation {
 	FilePath: *string,
@@ -1382,7 +1389,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkpacketcapture"
 
 &networkpacketcapture.NetworkPacketCaptureTimeouts {
 	Create: *string,
@@ -1444,7 +1451,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureFilterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkpacketcapture"
 
 networkpacketcapture.NewNetworkPacketCaptureFilterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkPacketCaptureFilterList
 ```
@@ -1485,10 +1492,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureFilterList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureFilterList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureFilterList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureFilterList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureFilterList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureFilterList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureFilterList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1587,7 +1611,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkpacketcapture"
 
 networkpacketcapture.NewNetworkPacketCaptureFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkPacketCaptureFilterOutputReference
 ```
@@ -1992,7 +2016,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureStorageLocationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkpacketcapture"
 
 networkpacketcapture.NewNetworkPacketCaptureStorageLocationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkPacketCaptureStorageLocationOutputReference
 ```
@@ -2310,7 +2334,7 @@ func InternalValue() NetworkPacketCaptureStorageLocation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkPacketCapture.NetworkPacketCaptureTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkpacketcapture"
 
 networkpacketcapture.NewNetworkPacketCaptureTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkPacketCaptureTimeoutsOutputReference
 ```

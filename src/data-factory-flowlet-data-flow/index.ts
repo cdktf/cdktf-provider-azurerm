@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_factory_flowlet_data_flow
 // generated from terraform resource schema
 
@@ -92,6 +87,31 @@ export function dataFactoryFlowletDataFlowSinkDatasetToTerraform(struct?: DataFa
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
   }
+}
+
+
+export function dataFactoryFlowletDataFlowSinkDatasetToHclTerraform(struct?: DataFactoryFlowletDataFlowSinkDatasetOutputReference | DataFactoryFlowletDataFlowSinkDataset): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryFlowletDataFlowSinkDatasetOutputReference extends cdktf.ComplexObject {
@@ -186,6 +206,37 @@ export function dataFactoryFlowletDataFlowSinkFlowletToTerraform(struct?: DataFa
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
   }
+}
+
+
+export function dataFactoryFlowletDataFlowSinkFlowletToHclTerraform(struct?: DataFactoryFlowletDataFlowSinkFlowletOutputReference | DataFactoryFlowletDataFlowSinkFlowlet): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dataset_parameters: {
+      value: cdktf.stringToHclTerraform(struct!.datasetParameters),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryFlowletDataFlowSinkFlowletOutputReference extends cdktf.ComplexObject {
@@ -299,6 +350,31 @@ export function dataFactoryFlowletDataFlowSinkLinkedServiceToTerraform(struct?: 
   }
 }
 
+
+export function dataFactoryFlowletDataFlowSinkLinkedServiceToHclTerraform(struct?: DataFactoryFlowletDataFlowSinkLinkedServiceOutputReference | DataFactoryFlowletDataFlowSinkLinkedService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryFlowletDataFlowSinkLinkedServiceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -388,6 +464,31 @@ export function dataFactoryFlowletDataFlowSinkRejectedLinkedServiceToTerraform(s
   }
 }
 
+
+export function dataFactoryFlowletDataFlowSinkRejectedLinkedServiceToHclTerraform(struct?: DataFactoryFlowletDataFlowSinkRejectedLinkedServiceOutputReference | DataFactoryFlowletDataFlowSinkRejectedLinkedService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryFlowletDataFlowSinkRejectedLinkedServiceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -475,6 +576,31 @@ export function dataFactoryFlowletDataFlowSinkSchemaLinkedServiceToTerraform(str
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
   }
+}
+
+
+export function dataFactoryFlowletDataFlowSinkSchemaLinkedServiceToHclTerraform(struct?: DataFactoryFlowletDataFlowSinkSchemaLinkedServiceOutputReference | DataFactoryFlowletDataFlowSinkSchemaLinkedService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryFlowletDataFlowSinkSchemaLinkedServiceOutputReference extends cdktf.ComplexObject {
@@ -599,6 +725,61 @@ export function dataFactoryFlowletDataFlowSinkToTerraform(struct?: DataFactoryFl
     rejected_linked_service: dataFactoryFlowletDataFlowSinkRejectedLinkedServiceToTerraform(struct!.rejectedLinkedService),
     schema_linked_service: dataFactoryFlowletDataFlowSinkSchemaLinkedServiceToTerraform(struct!.schemaLinkedService),
   }
+}
+
+
+export function dataFactoryFlowletDataFlowSinkToHclTerraform(struct?: DataFactoryFlowletDataFlowSink | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    dataset: {
+      value: dataFactoryFlowletDataFlowSinkDatasetToHclTerraform(struct!.dataset),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryFlowletDataFlowSinkDatasetList",
+    },
+    flowlet: {
+      value: dataFactoryFlowletDataFlowSinkFlowletToHclTerraform(struct!.flowlet),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryFlowletDataFlowSinkFlowletList",
+    },
+    linked_service: {
+      value: dataFactoryFlowletDataFlowSinkLinkedServiceToHclTerraform(struct!.linkedService),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryFlowletDataFlowSinkLinkedServiceList",
+    },
+    rejected_linked_service: {
+      value: dataFactoryFlowletDataFlowSinkRejectedLinkedServiceToHclTerraform(struct!.rejectedLinkedService),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryFlowletDataFlowSinkRejectedLinkedServiceList",
+    },
+    schema_linked_service: {
+      value: dataFactoryFlowletDataFlowSinkSchemaLinkedServiceToHclTerraform(struct!.schemaLinkedService),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryFlowletDataFlowSinkSchemaLinkedServiceList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryFlowletDataFlowSinkOutputReference extends cdktf.ComplexObject {
@@ -832,6 +1013,31 @@ export function dataFactoryFlowletDataFlowSourceDatasetToTerraform(struct?: Data
   }
 }
 
+
+export function dataFactoryFlowletDataFlowSourceDatasetToHclTerraform(struct?: DataFactoryFlowletDataFlowSourceDatasetOutputReference | DataFactoryFlowletDataFlowSourceDataset): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryFlowletDataFlowSourceDatasetOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -924,6 +1130,37 @@ export function dataFactoryFlowletDataFlowSourceFlowletToTerraform(struct?: Data
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
   }
+}
+
+
+export function dataFactoryFlowletDataFlowSourceFlowletToHclTerraform(struct?: DataFactoryFlowletDataFlowSourceFlowletOutputReference | DataFactoryFlowletDataFlowSourceFlowlet): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dataset_parameters: {
+      value: cdktf.stringToHclTerraform(struct!.datasetParameters),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryFlowletDataFlowSourceFlowletOutputReference extends cdktf.ComplexObject {
@@ -1037,6 +1274,31 @@ export function dataFactoryFlowletDataFlowSourceLinkedServiceToTerraform(struct?
   }
 }
 
+
+export function dataFactoryFlowletDataFlowSourceLinkedServiceToHclTerraform(struct?: DataFactoryFlowletDataFlowSourceLinkedServiceOutputReference | DataFactoryFlowletDataFlowSourceLinkedService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryFlowletDataFlowSourceLinkedServiceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1126,6 +1388,31 @@ export function dataFactoryFlowletDataFlowSourceRejectedLinkedServiceToTerraform
   }
 }
 
+
+export function dataFactoryFlowletDataFlowSourceRejectedLinkedServiceToHclTerraform(struct?: DataFactoryFlowletDataFlowSourceRejectedLinkedServiceOutputReference | DataFactoryFlowletDataFlowSourceRejectedLinkedService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryFlowletDataFlowSourceRejectedLinkedServiceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1213,6 +1500,31 @@ export function dataFactoryFlowletDataFlowSourceSchemaLinkedServiceToTerraform(s
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
   }
+}
+
+
+export function dataFactoryFlowletDataFlowSourceSchemaLinkedServiceToHclTerraform(struct?: DataFactoryFlowletDataFlowSourceSchemaLinkedServiceOutputReference | DataFactoryFlowletDataFlowSourceSchemaLinkedService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryFlowletDataFlowSourceSchemaLinkedServiceOutputReference extends cdktf.ComplexObject {
@@ -1337,6 +1649,61 @@ export function dataFactoryFlowletDataFlowSourceToTerraform(struct?: DataFactory
     rejected_linked_service: dataFactoryFlowletDataFlowSourceRejectedLinkedServiceToTerraform(struct!.rejectedLinkedService),
     schema_linked_service: dataFactoryFlowletDataFlowSourceSchemaLinkedServiceToTerraform(struct!.schemaLinkedService),
   }
+}
+
+
+export function dataFactoryFlowletDataFlowSourceToHclTerraform(struct?: DataFactoryFlowletDataFlowSource | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    dataset: {
+      value: dataFactoryFlowletDataFlowSourceDatasetToHclTerraform(struct!.dataset),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryFlowletDataFlowSourceDatasetList",
+    },
+    flowlet: {
+      value: dataFactoryFlowletDataFlowSourceFlowletToHclTerraform(struct!.flowlet),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryFlowletDataFlowSourceFlowletList",
+    },
+    linked_service: {
+      value: dataFactoryFlowletDataFlowSourceLinkedServiceToHclTerraform(struct!.linkedService),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryFlowletDataFlowSourceLinkedServiceList",
+    },
+    rejected_linked_service: {
+      value: dataFactoryFlowletDataFlowSourceRejectedLinkedServiceToHclTerraform(struct!.rejectedLinkedService),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryFlowletDataFlowSourceRejectedLinkedServiceList",
+    },
+    schema_linked_service: {
+      value: dataFactoryFlowletDataFlowSourceSchemaLinkedServiceToHclTerraform(struct!.schemaLinkedService),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryFlowletDataFlowSourceSchemaLinkedServiceList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryFlowletDataFlowSourceOutputReference extends cdktf.ComplexObject {
@@ -1580,6 +1947,43 @@ export function dataFactoryFlowletDataFlowTimeoutsToTerraform(struct?: DataFacto
   }
 }
 
+
+export function dataFactoryFlowletDataFlowTimeoutsToHclTerraform(struct?: DataFactoryFlowletDataFlowTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryFlowletDataFlowTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1726,6 +2130,31 @@ export function dataFactoryFlowletDataFlowTransformationDatasetToTerraform(struc
   }
 }
 
+
+export function dataFactoryFlowletDataFlowTransformationDatasetToHclTerraform(struct?: DataFactoryFlowletDataFlowTransformationDatasetOutputReference | DataFactoryFlowletDataFlowTransformationDataset): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryFlowletDataFlowTransformationDatasetOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1818,6 +2247,37 @@ export function dataFactoryFlowletDataFlowTransformationFlowletToTerraform(struc
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
   }
+}
+
+
+export function dataFactoryFlowletDataFlowTransformationFlowletToHclTerraform(struct?: DataFactoryFlowletDataFlowTransformationFlowletOutputReference | DataFactoryFlowletDataFlowTransformationFlowlet): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dataset_parameters: {
+      value: cdktf.stringToHclTerraform(struct!.datasetParameters),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryFlowletDataFlowTransformationFlowletOutputReference extends cdktf.ComplexObject {
@@ -1931,6 +2391,31 @@ export function dataFactoryFlowletDataFlowTransformationLinkedServiceToTerraform
   }
 }
 
+
+export function dataFactoryFlowletDataFlowTransformationLinkedServiceToHclTerraform(struct?: DataFactoryFlowletDataFlowTransformationLinkedServiceOutputReference | DataFactoryFlowletDataFlowTransformationLinkedService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryFlowletDataFlowTransformationLinkedServiceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2039,6 +2524,49 @@ export function dataFactoryFlowletDataFlowTransformationToTerraform(struct?: Dat
     flowlet: dataFactoryFlowletDataFlowTransformationFlowletToTerraform(struct!.flowlet),
     linked_service: dataFactoryFlowletDataFlowTransformationLinkedServiceToTerraform(struct!.linkedService),
   }
+}
+
+
+export function dataFactoryFlowletDataFlowTransformationToHclTerraform(struct?: DataFactoryFlowletDataFlowTransformation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    dataset: {
+      value: dataFactoryFlowletDataFlowTransformationDatasetToHclTerraform(struct!.dataset),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryFlowletDataFlowTransformationDatasetList",
+    },
+    flowlet: {
+      value: dataFactoryFlowletDataFlowTransformationFlowletToHclTerraform(struct!.flowlet),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryFlowletDataFlowTransformationFlowletList",
+    },
+    linked_service: {
+      value: dataFactoryFlowletDataFlowTransformationLinkedServiceToHclTerraform(struct!.linkedService),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryFlowletDataFlowTransformationLinkedServiceList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryFlowletDataFlowTransformationOutputReference extends cdktf.ComplexObject {
@@ -2481,5 +3009,85 @@ export class DataFactoryFlowletDataFlow extends cdktf.TerraformResource {
       timeouts: dataFactoryFlowletDataFlowTimeoutsToTerraform(this._timeouts.internalValue),
       transformation: cdktf.listMapper(dataFactoryFlowletDataFlowTransformationToTerraform, true)(this._transformation.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      annotations: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._annotations),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      data_factory_id: {
+        value: cdktf.stringToHclTerraform(this._dataFactoryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      folder: {
+        value: cdktf.stringToHclTerraform(this._folder),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      script: {
+        value: cdktf.stringToHclTerraform(this._script),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      script_lines: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._scriptLines),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      sink: {
+        value: cdktf.listMapperHcl(dataFactoryFlowletDataFlowSinkToHclTerraform, true)(this._sink.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryFlowletDataFlowSinkList",
+      },
+      source: {
+        value: cdktf.listMapperHcl(dataFactoryFlowletDataFlowSourceToHclTerraform, true)(this._source.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryFlowletDataFlowSourceList",
+      },
+      timeouts: {
+        value: dataFactoryFlowletDataFlowTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataFactoryFlowletDataFlowTimeouts",
+      },
+      transformation: {
+        value: cdktf.listMapperHcl(dataFactoryFlowletDataFlowTransformationToHclTerraform, true)(this._transformation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryFlowletDataFlowTransformationList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

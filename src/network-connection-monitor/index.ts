@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_connection_monitor
 // generated from terraform resource schema
 
@@ -88,6 +83,31 @@ export function networkConnectionMonitorEndpointFilterItemToTerraform(struct?: N
     address: cdktf.stringToTerraform(struct!.address),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function networkConnectionMonitorEndpointFilterItemToHclTerraform(struct?: NetworkConnectionMonitorEndpointFilterItem | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    address: {
+      value: cdktf.stringToHclTerraform(struct!.address),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkConnectionMonitorEndpointFilterItemOutputReference extends cdktf.ComplexObject {
@@ -216,6 +236,31 @@ export function networkConnectionMonitorEndpointFilterToTerraform(struct?: Netwo
   }
 }
 
+
+export function networkConnectionMonitorEndpointFilterToHclTerraform(struct?: NetworkConnectionMonitorEndpointFilterOutputReference | NetworkConnectionMonitorEndpointFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    item: {
+      value: cdktf.listMapperHcl(networkConnectionMonitorEndpointFilterItemToHclTerraform, true)(struct!.item),
+      isBlock: true,
+      type: "set",
+      storageClassType: "NetworkConnectionMonitorEndpointFilterItemList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetworkConnectionMonitorEndpointFilterOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -338,6 +383,67 @@ export function networkConnectionMonitorEndpointToTerraform(struct?: NetworkConn
     target_resource_type: cdktf.stringToTerraform(struct!.targetResourceType),
     filter: networkConnectionMonitorEndpointFilterToTerraform(struct!.filter),
   }
+}
+
+
+export function networkConnectionMonitorEndpointToHclTerraform(struct?: NetworkConnectionMonitorEndpoint | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    address: {
+      value: cdktf.stringToHclTerraform(struct!.address),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    coverage_level: {
+      value: cdktf.stringToHclTerraform(struct!.coverageLevel),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    excluded_ip_addresses: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludedIpAddresses),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    included_ip_addresses: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.includedIpAddresses),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.targetResourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_resource_type: {
+      value: cdktf.stringToHclTerraform(struct!.targetResourceType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    filter: {
+      value: networkConnectionMonitorEndpointFilterToHclTerraform(struct!.filter),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NetworkConnectionMonitorEndpointFilterList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkConnectionMonitorEndpointOutputReference extends cdktf.ComplexObject {
@@ -593,6 +699,31 @@ export function networkConnectionMonitorTestConfigurationHttpConfigurationReques
   }
 }
 
+
+export function networkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderToHclTerraform(struct?: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -731,6 +862,55 @@ export function networkConnectionMonitorTestConfigurationHttpConfigurationToTerr
     valid_status_code_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.validStatusCodeRanges),
     request_header: cdktf.listMapper(networkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderToTerraform, true)(struct!.requestHeader),
   }
+}
+
+
+export function networkConnectionMonitorTestConfigurationHttpConfigurationToHclTerraform(struct?: NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputReference | NetworkConnectionMonitorTestConfigurationHttpConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    method: {
+      value: cdktf.stringToHclTerraform(struct!.method),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    prefer_https: {
+      value: cdktf.booleanToHclTerraform(struct!.preferHttps),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    valid_status_code_ranges: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.validStatusCodeRanges),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    request_header: {
+      value: cdktf.listMapperHcl(networkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderToHclTerraform, true)(struct!.requestHeader),
+      isBlock: true,
+      type: "set",
+      storageClassType: "NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputReference extends cdktf.ComplexObject {
@@ -908,6 +1088,25 @@ export function networkConnectionMonitorTestConfigurationIcmpConfigurationToTerr
   }
 }
 
+
+export function networkConnectionMonitorTestConfigurationIcmpConfigurationToHclTerraform(struct?: NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputReference | NetworkConnectionMonitorTestConfigurationIcmpConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    trace_route_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.traceRouteEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -976,6 +1175,31 @@ export function networkConnectionMonitorTestConfigurationSuccessThresholdToTerra
     checks_failed_percent: cdktf.numberToTerraform(struct!.checksFailedPercent),
     round_trip_time_ms: cdktf.numberToTerraform(struct!.roundTripTimeMs),
   }
+}
+
+
+export function networkConnectionMonitorTestConfigurationSuccessThresholdToHclTerraform(struct?: NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputReference | NetworkConnectionMonitorTestConfigurationSuccessThreshold): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    checks_failed_percent: {
+      value: cdktf.numberToHclTerraform(struct!.checksFailedPercent),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    round_trip_time_ms: {
+      value: cdktf.numberToHclTerraform(struct!.roundTripTimeMs),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputReference extends cdktf.ComplexObject {
@@ -1073,6 +1297,37 @@ export function networkConnectionMonitorTestConfigurationTcpConfigurationToTerra
     port: cdktf.numberToTerraform(struct!.port),
     trace_route_enabled: cdktf.booleanToTerraform(struct!.traceRouteEnabled),
   }
+}
+
+
+export function networkConnectionMonitorTestConfigurationTcpConfigurationToHclTerraform(struct?: NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputReference | NetworkConnectionMonitorTestConfigurationTcpConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    destination_port_behavior: {
+      value: cdktf.stringToHclTerraform(struct!.destinationPortBehavior),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.numberToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    trace_route_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.traceRouteEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputReference extends cdktf.ComplexObject {
@@ -1222,6 +1477,67 @@ export function networkConnectionMonitorTestConfigurationToTerraform(struct?: Ne
     success_threshold: networkConnectionMonitorTestConfigurationSuccessThresholdToTerraform(struct!.successThreshold),
     tcp_configuration: networkConnectionMonitorTestConfigurationTcpConfigurationToTerraform(struct!.tcpConfiguration),
   }
+}
+
+
+export function networkConnectionMonitorTestConfigurationToHclTerraform(struct?: NetworkConnectionMonitorTestConfiguration | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    preferred_ip_version: {
+      value: cdktf.stringToHclTerraform(struct!.preferredIpVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    protocol: {
+      value: cdktf.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    test_frequency_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.testFrequencyInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    http_configuration: {
+      value: networkConnectionMonitorTestConfigurationHttpConfigurationToHclTerraform(struct!.httpConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NetworkConnectionMonitorTestConfigurationHttpConfigurationList",
+    },
+    icmp_configuration: {
+      value: networkConnectionMonitorTestConfigurationIcmpConfigurationToHclTerraform(struct!.icmpConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NetworkConnectionMonitorTestConfigurationIcmpConfigurationList",
+    },
+    success_threshold: {
+      value: networkConnectionMonitorTestConfigurationSuccessThresholdToHclTerraform(struct!.successThreshold),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NetworkConnectionMonitorTestConfigurationSuccessThresholdList",
+    },
+    tcp_configuration: {
+      value: networkConnectionMonitorTestConfigurationTcpConfigurationToHclTerraform(struct!.tcpConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "NetworkConnectionMonitorTestConfigurationTcpConfigurationList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkConnectionMonitorTestConfigurationOutputReference extends cdktf.ComplexObject {
@@ -1489,6 +1805,49 @@ export function networkConnectionMonitorTestGroupToTerraform(struct?: NetworkCon
   }
 }
 
+
+export function networkConnectionMonitorTestGroupToHclTerraform(struct?: NetworkConnectionMonitorTestGroup | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    destination_endpoints: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.destinationEndpoints),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_endpoints: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.sourceEndpoints),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    test_configuration_names: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.testConfigurationNames),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetworkConnectionMonitorTestGroupOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1675,6 +2034,43 @@ export function networkConnectionMonitorTimeoutsToTerraform(struct?: NetworkConn
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function networkConnectionMonitorTimeoutsToHclTerraform(struct?: NetworkConnectionMonitorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -2046,5 +2442,79 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
       test_group: cdktf.listMapper(networkConnectionMonitorTestGroupToTerraform, true)(this._testGroup.internalValue),
       timeouts: networkConnectionMonitorTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_watcher_id: {
+        value: cdktf.stringToHclTerraform(this._networkWatcherId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      notes: {
+        value: cdktf.stringToHclTerraform(this._notes),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      output_workspace_resource_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._outputWorkspaceResourceIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      endpoint: {
+        value: cdktf.listMapperHcl(networkConnectionMonitorEndpointToHclTerraform, true)(this._endpoint.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "NetworkConnectionMonitorEndpointList",
+      },
+      test_configuration: {
+        value: cdktf.listMapperHcl(networkConnectionMonitorTestConfigurationToHclTerraform, true)(this._testConfiguration.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "NetworkConnectionMonitorTestConfigurationList",
+      },
+      test_group: {
+        value: cdktf.listMapperHcl(networkConnectionMonitorTestGroupToHclTerraform, true)(this._testGroup.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "NetworkConnectionMonitorTestGroupList",
+      },
+      timeouts: {
+        value: networkConnectionMonitorTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NetworkConnectionMonitorTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

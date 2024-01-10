@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cdn_frontdoor_origin_group
 // generated from terraform resource schema
 
@@ -84,6 +79,43 @@ export function cdnFrontdoorOriginGroupHealthProbeToTerraform(struct?: CdnFrontd
     protocol: cdktf.stringToTerraform(struct!.protocol),
     request_type: cdktf.stringToTerraform(struct!.requestType),
   }
+}
+
+
+export function cdnFrontdoorOriginGroupHealthProbeToHclTerraform(struct?: CdnFrontdoorOriginGroupHealthProbeOutputReference | CdnFrontdoorOriginGroupHealthProbe): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.intervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    protocol: {
+      value: cdktf.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    request_type: {
+      value: cdktf.stringToHclTerraform(struct!.requestType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CdnFrontdoorOriginGroupHealthProbeOutputReference extends cdktf.ComplexObject {
@@ -221,6 +253,37 @@ export function cdnFrontdoorOriginGroupLoadBalancingToTerraform(struct?: CdnFron
   }
 }
 
+
+export function cdnFrontdoorOriginGroupLoadBalancingToHclTerraform(struct?: CdnFrontdoorOriginGroupLoadBalancingOutputReference | CdnFrontdoorOriginGroupLoadBalancing): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    additional_latency_in_milliseconds: {
+      value: cdktf.numberToHclTerraform(struct!.additionalLatencyInMilliseconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    sample_size: {
+      value: cdktf.numberToHclTerraform(struct!.sampleSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    successful_samples_required: {
+      value: cdktf.numberToHclTerraform(struct!.successfulSamplesRequired),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CdnFrontdoorOriginGroupLoadBalancingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -343,6 +406,43 @@ export function cdnFrontdoorOriginGroupTimeoutsToTerraform(struct?: CdnFrontdoor
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cdnFrontdoorOriginGroupTimeoutsToHclTerraform(struct?: CdnFrontdoorOriginGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CdnFrontdoorOriginGroupTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -669,5 +769,61 @@ export class CdnFrontdoorOriginGroup extends cdktf.TerraformResource {
       load_balancing: cdnFrontdoorOriginGroupLoadBalancingToTerraform(this._loadBalancing.internalValue),
       timeouts: cdnFrontdoorOriginGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cdn_frontdoor_profile_id: {
+        value: cdktf.stringToHclTerraform(this._cdnFrontdoorProfileId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      restore_traffic_time_to_healed_or_new_endpoint_in_minutes: {
+        value: cdktf.numberToHclTerraform(this._restoreTrafficTimeToHealedOrNewEndpointInMinutes),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      session_affinity_enabled: {
+        value: cdktf.booleanToHclTerraform(this._sessionAffinityEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      health_probe: {
+        value: cdnFrontdoorOriginGroupHealthProbeToHclTerraform(this._healthProbe.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CdnFrontdoorOriginGroupHealthProbeList",
+      },
+      load_balancing: {
+        value: cdnFrontdoorOriginGroupLoadBalancingToHclTerraform(this._loadBalancing.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CdnFrontdoorOriginGroupLoadBalancingList",
+      },
+      timeouts: {
+        value: cdnFrontdoorOriginGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CdnFrontdoorOriginGroupTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

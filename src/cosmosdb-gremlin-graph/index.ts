@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_gremlin_graph
 // generated from terraform resource schema
 
@@ -103,6 +98,25 @@ export function cosmosdbGremlinGraphAutoscaleSettingsToTerraform(struct?: Cosmos
   }
 }
 
+
+export function cosmosdbGremlinGraphAutoscaleSettingsToHclTerraform(struct?: CosmosdbGremlinGraphAutoscaleSettingsOutputReference | CosmosdbGremlinGraphAutoscaleSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max_throughput: {
+      value: cdktf.numberToHclTerraform(struct!.maxThroughput),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbGremlinGraphAutoscaleSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -176,6 +190,37 @@ export function cosmosdbGremlinGraphConflictResolutionPolicyToTerraform(struct?:
     conflict_resolution_procedure: cdktf.stringToTerraform(struct!.conflictResolutionProcedure),
     mode: cdktf.stringToTerraform(struct!.mode),
   }
+}
+
+
+export function cosmosdbGremlinGraphConflictResolutionPolicyToHclTerraform(struct?: CosmosdbGremlinGraphConflictResolutionPolicyOutputReference | CosmosdbGremlinGraphConflictResolutionPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    conflict_resolution_path: {
+      value: cdktf.stringToHclTerraform(struct!.conflictResolutionPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    conflict_resolution_procedure: {
+      value: cdktf.stringToHclTerraform(struct!.conflictResolutionProcedure),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbGremlinGraphConflictResolutionPolicyOutputReference extends cdktf.ComplexObject {
@@ -287,6 +332,31 @@ export function cosmosdbGremlinGraphIndexPolicyCompositeIndexIndexToTerraform(st
     order: cdktf.stringToTerraform(struct!.order),
     path: cdktf.stringToTerraform(struct!.path),
   }
+}
+
+
+export function cosmosdbGremlinGraphIndexPolicyCompositeIndexIndexToHclTerraform(struct?: CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    order: {
+      value: cdktf.stringToHclTerraform(struct!.order),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbGremlinGraphIndexPolicyCompositeIndexIndexOutputReference extends cdktf.ComplexObject {
@@ -404,6 +474,25 @@ export function cosmosdbGremlinGraphIndexPolicyCompositeIndexToTerraform(struct?
   }
 }
 
+
+export function cosmosdbGremlinGraphIndexPolicyCompositeIndexToHclTerraform(struct?: CosmosdbGremlinGraphIndexPolicyCompositeIndex | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    index: {
+      value: cdktf.listMapperHcl(cosmosdbGremlinGraphIndexPolicyCompositeIndexIndexToHclTerraform, true)(struct!.index),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CosmosdbGremlinGraphIndexPolicyCompositeIndexIndexList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbGremlinGraphIndexPolicyCompositeIndexOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -496,6 +585,25 @@ export function cosmosdbGremlinGraphIndexPolicySpatialIndexToTerraform(struct?: 
   return {
     path: cdktf.stringToTerraform(struct!.path),
   }
+}
+
+
+export function cosmosdbGremlinGraphIndexPolicySpatialIndexToHclTerraform(struct?: CosmosdbGremlinGraphIndexPolicySpatialIndex | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbGremlinGraphIndexPolicySpatialIndexOutputReference extends cdktf.ComplexObject {
@@ -624,6 +732,55 @@ export function cosmosdbGremlinGraphIndexPolicyToTerraform(struct?: CosmosdbGrem
     composite_index: cdktf.listMapper(cosmosdbGremlinGraphIndexPolicyCompositeIndexToTerraform, true)(struct!.compositeIndex),
     spatial_index: cdktf.listMapper(cosmosdbGremlinGraphIndexPolicySpatialIndexToTerraform, true)(struct!.spatialIndex),
   }
+}
+
+
+export function cosmosdbGremlinGraphIndexPolicyToHclTerraform(struct?: CosmosdbGremlinGraphIndexPolicyOutputReference | CosmosdbGremlinGraphIndexPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    automatic: {
+      value: cdktf.booleanToHclTerraform(struct!.automatic),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    excluded_paths: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludedPaths),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    included_paths: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.includedPaths),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    indexing_mode: {
+      value: cdktf.stringToHclTerraform(struct!.indexingMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    composite_index: {
+      value: cdktf.listMapperHcl(cosmosdbGremlinGraphIndexPolicyCompositeIndexToHclTerraform, true)(struct!.compositeIndex),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CosmosdbGremlinGraphIndexPolicyCompositeIndexList",
+    },
+    spatial_index: {
+      value: cdktf.listMapperHcl(cosmosdbGremlinGraphIndexPolicySpatialIndexToHclTerraform, true)(struct!.spatialIndex),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CosmosdbGremlinGraphIndexPolicySpatialIndexList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.ComplexObject {
@@ -813,6 +970,43 @@ export function cosmosdbGremlinGraphTimeoutsToTerraform(struct?: CosmosdbGremlin
   }
 }
 
+
+export function cosmosdbGremlinGraphTimeoutsToHclTerraform(struct?: CosmosdbGremlinGraphTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbGremlinGraphTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -952,6 +1146,25 @@ export function cosmosdbGremlinGraphUniqueKeyToTerraform(struct?: CosmosdbGremli
   return {
     paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.paths),
   }
+}
+
+
+export function cosmosdbGremlinGraphUniqueKeyToHclTerraform(struct?: CosmosdbGremlinGraphUniqueKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    paths: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.paths),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbGremlinGraphUniqueKeyOutputReference extends cdktf.ComplexObject {
@@ -1351,5 +1564,103 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
       timeouts: cosmosdbGremlinGraphTimeoutsToTerraform(this._timeouts.internalValue),
       unique_key: cdktf.listMapper(cosmosdbGremlinGraphUniqueKeyToTerraform, true)(this._uniqueKey.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      account_name: {
+        value: cdktf.stringToHclTerraform(this._accountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      analytical_storage_ttl: {
+        value: cdktf.numberToHclTerraform(this._analyticalStorageTtl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      database_name: {
+        value: cdktf.stringToHclTerraform(this._databaseName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      default_ttl: {
+        value: cdktf.numberToHclTerraform(this._defaultTtl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      partition_key_path: {
+        value: cdktf.stringToHclTerraform(this._partitionKeyPath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      partition_key_version: {
+        value: cdktf.numberToHclTerraform(this._partitionKeyVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      throughput: {
+        value: cdktf.numberToHclTerraform(this._throughput),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      autoscale_settings: {
+        value: cosmosdbGremlinGraphAutoscaleSettingsToHclTerraform(this._autoscaleSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbGremlinGraphAutoscaleSettingsList",
+      },
+      conflict_resolution_policy: {
+        value: cosmosdbGremlinGraphConflictResolutionPolicyToHclTerraform(this._conflictResolutionPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbGremlinGraphConflictResolutionPolicyList",
+      },
+      index_policy: {
+        value: cosmosdbGremlinGraphIndexPolicyToHclTerraform(this._indexPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbGremlinGraphIndexPolicyList",
+      },
+      timeouts: {
+        value: cosmosdbGremlinGraphTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CosmosdbGremlinGraphTimeouts",
+      },
+      unique_key: {
+        value: cdktf.listMapperHcl(cosmosdbGremlinGraphUniqueKeyToHclTerraform, true)(this._uniqueKey.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "CosmosdbGremlinGraphUniqueKeyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_account_customer_managed_key
 // generated from terraform resource schema
 
@@ -84,6 +79,43 @@ export function storageAccountCustomerManagedKeyTimeoutsToTerraform(struct?: Sto
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function storageAccountCustomerManagedKeyTimeoutsToHclTerraform(struct?: StorageAccountCustomerManagedKeyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StorageAccountCustomerManagedKeyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -431,5 +463,67 @@ export class StorageAccountCustomerManagedKeyA extends cdktf.TerraformResource {
       user_assigned_identity_id: cdktf.stringToTerraform(this._userAssignedIdentityId),
       timeouts: storageAccountCustomerManagedKeyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      federated_identity_client_id: {
+        value: cdktf.stringToHclTerraform(this._federatedIdentityClientId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      key_name: {
+        value: cdktf.stringToHclTerraform(this._keyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      key_vault_id: {
+        value: cdktf.stringToHclTerraform(this._keyVaultId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      key_vault_uri: {
+        value: cdktf.stringToHclTerraform(this._keyVaultUri),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      key_version: {
+        value: cdktf.stringToHclTerraform(this._keyVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_id: {
+        value: cdktf.stringToHclTerraform(this._storageAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_assigned_identity_id: {
+        value: cdktf.stringToHclTerraform(this._userAssignedIdentityId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: storageAccountCustomerManagedKeyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "StorageAccountCustomerManagedKeyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

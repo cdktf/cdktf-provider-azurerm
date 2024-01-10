@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/container_app_environment
 // generated from terraform resource schema
 
@@ -108,6 +103,43 @@ export function containerAppEnvironmentTimeoutsToTerraform(struct?: ContainerApp
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function containerAppEnvironmentTimeoutsToHclTerraform(struct?: ContainerAppEnvironmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ContainerAppEnvironmentTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -264,6 +296,43 @@ export function containerAppEnvironmentWorkloadProfileToTerraform(struct?: Conta
     name: cdktf.stringToTerraform(struct!.name),
     workload_profile_type: cdktf.stringToTerraform(struct!.workloadProfileType),
   }
+}
+
+
+export function containerAppEnvironmentWorkloadProfileToHclTerraform(struct?: ContainerAppEnvironmentWorkloadProfile | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    maximum_count: {
+      value: cdktf.numberToHclTerraform(struct!.maximumCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minimum_count: {
+      value: cdktf.numberToHclTerraform(struct!.minimumCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    workload_profile_type: {
+      value: cdktf.stringToHclTerraform(struct!.workloadProfileType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ContainerAppEnvironmentWorkloadProfileOutputReference extends cdktf.ComplexObject {
@@ -697,5 +766,85 @@ export class ContainerAppEnvironment extends cdktf.TerraformResource {
       timeouts: containerAppEnvironmentTimeoutsToTerraform(this._timeouts.internalValue),
       workload_profile: cdktf.listMapper(containerAppEnvironmentWorkloadProfileToTerraform, true)(this._workloadProfile.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      dapr_application_insights_connection_string: {
+        value: cdktf.stringToHclTerraform(this._daprApplicationInsightsConnectionString),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      infrastructure_subnet_id: {
+        value: cdktf.stringToHclTerraform(this._infrastructureSubnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      internal_load_balancer_enabled: {
+        value: cdktf.booleanToHclTerraform(this._internalLoadBalancerEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log_analytics_workspace_id: {
+        value: cdktf.stringToHclTerraform(this._logAnalyticsWorkspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      zone_redundancy_enabled: {
+        value: cdktf.booleanToHclTerraform(this._zoneRedundancyEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      timeouts: {
+        value: containerAppEnvironmentTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ContainerAppEnvironmentTimeouts",
+      },
+      workload_profile: {
+        value: cdktf.listMapperHcl(containerAppEnvironmentWorkloadProfileToHclTerraform, true)(this._workloadProfile.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ContainerAppEnvironmentWorkloadProfileList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

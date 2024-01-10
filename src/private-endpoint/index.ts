@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/private_endpoint
 // generated from terraform resource schema
 
@@ -80,6 +75,17 @@ export function privateEndpointCustomDnsConfigsToTerraform(struct?: PrivateEndpo
   }
 }
 
+
+export function privateEndpointCustomDnsConfigsToHclTerraform(struct?: PrivateEndpointCustomDnsConfigs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class PrivateEndpointCustomDnsConfigsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -149,6 +155,17 @@ export function privateEndpointNetworkInterfaceToTerraform(struct?: PrivateEndpo
   }
 }
 
+
+export function privateEndpointNetworkInterfaceToHclTerraform(struct?: PrivateEndpointNetworkInterface): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class PrivateEndpointNetworkInterfaceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -216,6 +233,17 @@ export function privateEndpointPrivateDnsZoneConfigsRecordSetsToTerraform(struct
   }
   return {
   }
+}
+
+
+export function privateEndpointPrivateDnsZoneConfigsRecordSetsToHclTerraform(struct?: PrivateEndpointPrivateDnsZoneConfigsRecordSets): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class PrivateEndpointPrivateDnsZoneConfigsRecordSetsOutputReference extends cdktf.ComplexObject {
@@ -300,6 +328,17 @@ export function privateEndpointPrivateDnsZoneConfigsToTerraform(struct?: Private
   }
   return {
   }
+}
+
+
+export function privateEndpointPrivateDnsZoneConfigsToHclTerraform(struct?: PrivateEndpointPrivateDnsZoneConfigs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class PrivateEndpointPrivateDnsZoneConfigsOutputReference extends cdktf.ComplexObject {
@@ -400,6 +439,43 @@ export function privateEndpointIpConfigurationToTerraform(struct?: PrivateEndpoi
     private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
     subresource_name: cdktf.stringToTerraform(struct!.subresourceName),
   }
+}
+
+
+export function privateEndpointIpConfigurationToHclTerraform(struct?: PrivateEndpointIpConfiguration | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    member_name: {
+      value: cdktf.stringToHclTerraform(struct!.memberName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.privateIpAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subresource_name: {
+      value: cdktf.stringToHclTerraform(struct!.subresourceName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivateEndpointIpConfigurationOutputReference extends cdktf.ComplexObject {
@@ -564,6 +640,31 @@ export function privateEndpointPrivateDnsZoneGroupToTerraform(struct?: PrivateEn
   }
 }
 
+
+export function privateEndpointPrivateDnsZoneGroupToHclTerraform(struct?: PrivateEndpointPrivateDnsZoneGroupOutputReference | PrivateEndpointPrivateDnsZoneGroup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_dns_zone_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.privateDnsZoneIds),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PrivateEndpointPrivateDnsZoneGroupOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -673,6 +774,55 @@ export function privateEndpointPrivateServiceConnectionToTerraform(struct?: Priv
     request_message: cdktf.stringToTerraform(struct!.requestMessage),
     subresource_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.subresourceNames),
   }
+}
+
+
+export function privateEndpointPrivateServiceConnectionToHclTerraform(struct?: PrivateEndpointPrivateServiceConnectionOutputReference | PrivateEndpointPrivateServiceConnection): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    is_manual_connection: {
+      value: cdktf.booleanToHclTerraform(struct!.isManualConnection),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_connection_resource_alias: {
+      value: cdktf.stringToHclTerraform(struct!.privateConnectionResourceAlias),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_connection_resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.privateConnectionResourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    request_message: {
+      value: cdktf.stringToHclTerraform(struct!.requestMessage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subresource_names: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.subresourceNames),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdktf.ComplexObject {
@@ -862,6 +1012,43 @@ export function privateEndpointTimeoutsToTerraform(struct?: PrivateEndpointTimeo
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function privateEndpointTimeoutsToHclTerraform(struct?: PrivateEndpointTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PrivateEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1254,5 +1441,79 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
       private_service_connection: privateEndpointPrivateServiceConnectionToTerraform(this._privateServiceConnection.internalValue),
       timeouts: privateEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      custom_network_interface_name: {
+        value: cdktf.stringToHclTerraform(this._customNetworkInterfaceName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subnet_id: {
+        value: cdktf.stringToHclTerraform(this._subnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      ip_configuration: {
+        value: cdktf.listMapperHcl(privateEndpointIpConfigurationToHclTerraform, true)(this._ipConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PrivateEndpointIpConfigurationList",
+      },
+      private_dns_zone_group: {
+        value: privateEndpointPrivateDnsZoneGroupToHclTerraform(this._privateDnsZoneGroup.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PrivateEndpointPrivateDnsZoneGroupList",
+      },
+      private_service_connection: {
+        value: privateEndpointPrivateServiceConnectionToHclTerraform(this._privateServiceConnection.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PrivateEndpointPrivateServiceConnectionList",
+      },
+      timeouts: {
+        value: privateEndpointTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "PrivateEndpointTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

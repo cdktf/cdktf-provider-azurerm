@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongoroledefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongoroledefinition"
 
 cosmosdbmongoroledefinition.NewCosmosdbMongoRoleDefinition(scope Construct, id *string, config CosmosdbMongoRoleDefinitionConfig) CosmosdbMongoRoleDefinition
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.toMetadata"></a>
 
@@ -425,7 +432,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongoroledefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongoroledefinition"
 
 cosmosdbmongoroledefinition.CosmosdbMongoRoleDefinition_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +464,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongoroledefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongoroledefinition"
 
 cosmosdbmongoroledefinition.CosmosdbMongoRoleDefinition_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +478,7 @@ cosmosdbmongoroledefinition.CosmosdbMongoRoleDefinition_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongoroledefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongoroledefinition"
 
 cosmosdbmongoroledefinition.CosmosdbMongoRoleDefinition_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +492,7 @@ cosmosdbmongoroledefinition.CosmosdbMongoRoleDefinition_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinition.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongoroledefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongoroledefinition"
 
 cosmosdbmongoroledefinition.CosmosdbMongoRoleDefinition_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -846,7 +853,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongoroledefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongoroledefinition"
 
 &cosmosdbmongoroledefinition.CosmosdbMongoRoleDefinitionConfig {
 	Connection: interface{},
@@ -861,7 +868,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongorole
 	Id: *string,
 	InheritedRoleNames: *[]*string,
 	Privilege: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionTimeouts,
 }
 ```
 
@@ -1039,11 +1046,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilege.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongoroledefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongoroledefinition"
 
 &cosmosdbmongoroledefinition.CosmosdbMongoRoleDefinitionPrivilege {
 	Actions: *[]*string,
-	Resource: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilegeResource,
+	Resource: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilegeResource,
 }
 ```
 
@@ -1087,7 +1094,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilegeResource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongoroledefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongoroledefinition"
 
 &cosmosdbmongoroledefinition.CosmosdbMongoRoleDefinitionPrivilegeResource {
 	CollectionName: *string,
@@ -1133,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongoroledefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongoroledefinition"
 
 &cosmosdbmongoroledefinition.CosmosdbMongoRoleDefinitionTimeouts {
 	Create: *string,
@@ -1209,7 +1216,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilegeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongoroledefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongoroledefinition"
 
 cosmosdbmongoroledefinition.NewCosmosdbMongoRoleDefinitionPrivilegeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbMongoRoleDefinitionPrivilegeList
 ```
@@ -1250,10 +1257,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilegeList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilegeList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilegeList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilegeList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilegeList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilegeList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilegeList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1352,7 +1376,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilegeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongoroledefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongoroledefinition"
 
 cosmosdbmongoroledefinition.NewCosmosdbMongoRoleDefinitionPrivilegeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbMongoRoleDefinitionPrivilegeOutputReference
 ```
@@ -1676,7 +1700,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionPrivilegeResourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongoroledefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongoroledefinition"
 
 cosmosdbmongoroledefinition.NewCosmosdbMongoRoleDefinitionPrivilegeResourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbMongoRoleDefinitionPrivilegeResourceOutputReference
 ```
@@ -1983,7 +2007,7 @@ func InternalValue() CosmosdbMongoRoleDefinitionPrivilegeResource
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbMongoRoleDefinition.CosmosdbMongoRoleDefinitionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongoroledefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongoroledefinition"
 
 cosmosdbmongoroledefinition.NewCosmosdbMongoRoleDefinitionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbMongoRoleDefinitionTimeoutsOutputReference
 ```

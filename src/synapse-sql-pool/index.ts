@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/synapse_sql_pool
 // generated from terraform resource schema
 
@@ -92,6 +87,31 @@ export function synapseSqlPoolRestoreToTerraform(struct?: SynapseSqlPoolRestoreO
     point_in_time: cdktf.stringToTerraform(struct!.pointInTime),
     source_database_id: cdktf.stringToTerraform(struct!.sourceDatabaseId),
   }
+}
+
+
+export function synapseSqlPoolRestoreToHclTerraform(struct?: SynapseSqlPoolRestoreOutputReference | SynapseSqlPoolRestore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    point_in_time: {
+      value: cdktf.stringToHclTerraform(struct!.pointInTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_database_id: {
+      value: cdktf.stringToHclTerraform(struct!.sourceDatabaseId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SynapseSqlPoolRestoreOutputReference extends cdktf.ComplexObject {
@@ -188,6 +208,43 @@ export function synapseSqlPoolTimeoutsToTerraform(struct?: SynapseSqlPoolTimeout
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function synapseSqlPoolTimeoutsToHclTerraform(struct?: SynapseSqlPoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SynapseSqlPoolTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -604,5 +661,91 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
       restore: synapseSqlPoolRestoreToTerraform(this._restore.internalValue),
       timeouts: synapseSqlPoolTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      collation: {
+        value: cdktf.stringToHclTerraform(this._collation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      create_mode: {
+        value: cdktf.stringToHclTerraform(this._createMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      data_encrypted: {
+        value: cdktf.booleanToHclTerraform(this._dataEncrypted),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      geo_backup_policy_enabled: {
+        value: cdktf.booleanToHclTerraform(this._geoBackupPolicyEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      recovery_database_id: {
+        value: cdktf.stringToHclTerraform(this._recoveryDatabaseId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku_name: {
+        value: cdktf.stringToHclTerraform(this._skuName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_type: {
+        value: cdktf.stringToHclTerraform(this._storageAccountType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      synapse_workspace_id: {
+        value: cdktf.stringToHclTerraform(this._synapseWorkspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      restore: {
+        value: synapseSqlPoolRestoreToHclTerraform(this._restore.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SynapseSqlPoolRestoreList",
+      },
+      timeouts: {
+        value: synapseSqlPoolTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SynapseSqlPoolTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

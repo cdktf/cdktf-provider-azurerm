@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentineldataconnectorofficepowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectorofficepowerbi"
 
 sentineldataconnectorofficepowerbi.NewSentinelDataConnectorOfficePowerBi(scope Construct, id *string, config SentinelDataConnectorOfficePowerBiConfig) SentinelDataConnectorOfficePowerBi
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.toMetadata"></a>
 
@@ -405,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentineldataconnectorofficepowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectorofficepowerbi"
 
 sentineldataconnectorofficepowerbi.SentinelDataConnectorOfficePowerBi_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentineldataconnectorofficepowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectorofficepowerbi"
 
 sentineldataconnectorofficepowerbi.SentinelDataConnectorOfficePowerBi_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ sentineldataconnectorofficepowerbi.SentinelDataConnectorOfficePowerBi_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentineldataconnectorofficepowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectorofficepowerbi"
 
 sentineldataconnectorofficepowerbi.SentinelDataConnectorOfficePowerBi_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ sentineldataconnectorofficepowerbi.SentinelDataConnectorOfficePowerBi_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBi.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentineldataconnectorofficepowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectorofficepowerbi"
 
 sentineldataconnectorofficepowerbi.SentinelDataConnectorOfficePowerBi_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -804,7 +811,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBiConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentineldataconnectorofficepowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectorofficepowerbi"
 
 &sentineldataconnectorofficepowerbi.SentinelDataConnectorOfficePowerBiConfig {
 	Connection: interface{},
@@ -818,7 +825,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentineldataconne
 	Name: *string,
 	Id: *string,
 	TenantId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBiTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBiTimeouts,
 }
 ```
 
@@ -981,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBiTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentineldataconnectorofficepowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectorofficepowerbi"
 
 &sentineldataconnectorofficepowerbi.SentinelDataConnectorOfficePowerBiTimeouts {
 	Create: *string,
@@ -1043,7 +1050,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelDataConnectorOfficePowerBi.SentinelDataConnectorOfficePowerBiTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentineldataconnectorofficepowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectorofficepowerbi"
 
 sentineldataconnectorofficepowerbi.NewSentinelDataConnectorOfficePowerBiTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelDataConnectorOfficePowerBiTimeoutsOutputReference
 ```

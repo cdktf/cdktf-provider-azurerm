@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/arc_kubernetes_cluster_extension
 // generated from terraform resource schema
 
@@ -83,6 +78,25 @@ export function arcKubernetesClusterExtensionIdentityToTerraform(struct?: ArcKub
   return {
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function arcKubernetesClusterExtensionIdentityToHclTerraform(struct?: ArcKubernetesClusterExtensionIdentityOutputReference | ArcKubernetesClusterExtensionIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ArcKubernetesClusterExtensionIdentityOutputReference extends cdktf.ComplexObject {
@@ -170,6 +184,43 @@ export function arcKubernetesClusterExtensionTimeoutsToTerraform(struct?: ArcKub
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function arcKubernetesClusterExtensionTimeoutsToHclTerraform(struct?: ArcKubernetesClusterExtensionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ArcKubernetesClusterExtensionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -570,5 +621,85 @@ export class ArcKubernetesClusterExtension extends cdktf.TerraformResource {
       identity: arcKubernetesClusterExtensionIdentityToTerraform(this._identity.internalValue),
       timeouts: arcKubernetesClusterExtensionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cluster_id: {
+        value: cdktf.stringToHclTerraform(this._clusterId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      configuration_protected_settings: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._configurationProtectedSettings),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      configuration_settings: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._configurationSettings),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      extension_type: {
+        value: cdktf.stringToHclTerraform(this._extensionType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      release_namespace: {
+        value: cdktf.stringToHclTerraform(this._releaseNamespace),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      release_train: {
+        value: cdktf.stringToHclTerraform(this._releaseTrain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_namespace: {
+        value: cdktf.stringToHclTerraform(this._targetNamespace),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      version: {
+        value: cdktf.stringToHclTerraform(this._version),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      identity: {
+        value: arcKubernetesClusterExtensionIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ArcKubernetesClusterExtensionIdentityList",
+      },
+      timeouts: {
+        value: arcKubernetesClusterExtensionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ArcKubernetesClusterExtensionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

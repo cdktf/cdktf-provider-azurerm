@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_factory_trigger_schedule
 // generated from terraform resource schema
 
@@ -106,6 +101,31 @@ export function dataFactoryTriggerSchedulePipelineToTerraform(struct?: DataFacto
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
   }
+}
+
+
+export function dataFactoryTriggerSchedulePipelineToHclTerraform(struct?: DataFactoryTriggerSchedulePipeline | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryTriggerSchedulePipelineOutputReference extends cdktf.ComplexObject {
@@ -227,6 +247,31 @@ export function dataFactoryTriggerScheduleScheduleMonthlyToTerraform(struct?: Da
     week: cdktf.numberToTerraform(struct!.week),
     weekday: cdktf.stringToTerraform(struct!.weekday),
   }
+}
+
+
+export function dataFactoryTriggerScheduleScheduleMonthlyToHclTerraform(struct?: DataFactoryTriggerScheduleScheduleMonthly | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    week: {
+      value: cdktf.numberToHclTerraform(struct!.week),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    weekday: {
+      value: cdktf.stringToHclTerraform(struct!.weekday),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryTriggerScheduleScheduleMonthlyOutputReference extends cdktf.ComplexObject {
@@ -365,6 +410,49 @@ export function dataFactoryTriggerScheduleScheduleToTerraform(struct?: DataFacto
     minutes: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.minutes),
     monthly: cdktf.listMapper(dataFactoryTriggerScheduleScheduleMonthlyToTerraform, true)(struct!.monthly),
   }
+}
+
+
+export function dataFactoryTriggerScheduleScheduleToHclTerraform(struct?: DataFactoryTriggerScheduleScheduleOutputReference | DataFactoryTriggerScheduleSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    days_of_month: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.daysOfMonth),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+    days_of_week: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.daysOfWeek),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    hours: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.hours),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+    minutes: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.minutes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+    monthly: {
+      value: cdktf.listMapperHcl(dataFactoryTriggerScheduleScheduleMonthlyToHclTerraform, true)(struct!.monthly),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataFactoryTriggerScheduleScheduleMonthlyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryTriggerScheduleScheduleOutputReference extends cdktf.ComplexObject {
@@ -533,6 +621,43 @@ export function dataFactoryTriggerScheduleTimeoutsToTerraform(struct?: DataFacto
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dataFactoryTriggerScheduleTimeoutsToHclTerraform(struct?: DataFactoryTriggerScheduleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryTriggerScheduleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1006,5 +1131,109 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
       schedule: dataFactoryTriggerScheduleScheduleToTerraform(this._schedule.internalValue),
       timeouts: dataFactoryTriggerScheduleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      activated: {
+        value: cdktf.booleanToHclTerraform(this._activated),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      annotations: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._annotations),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      data_factory_id: {
+        value: cdktf.stringToHclTerraform(this._dataFactoryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      end_time: {
+        value: cdktf.stringToHclTerraform(this._endTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      frequency: {
+        value: cdktf.stringToHclTerraform(this._frequency),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      interval: {
+        value: cdktf.numberToHclTerraform(this._interval),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pipeline_name: {
+        value: cdktf.stringToHclTerraform(this._pipelineName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pipeline_parameters: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._pipelineParameters),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      start_time: {
+        value: cdktf.stringToHclTerraform(this._startTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      time_zone: {
+        value: cdktf.stringToHclTerraform(this._timeZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pipeline: {
+        value: cdktf.listMapperHcl(dataFactoryTriggerSchedulePipelineToHclTerraform, true)(this._pipeline.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryTriggerSchedulePipelineList",
+      },
+      schedule: {
+        value: dataFactoryTriggerScheduleScheduleToHclTerraform(this._schedule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryTriggerScheduleScheduleList",
+      },
+      timeouts: {
+        value: dataFactoryTriggerScheduleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataFactoryTriggerScheduleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

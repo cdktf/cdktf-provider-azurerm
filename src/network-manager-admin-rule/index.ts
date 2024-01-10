@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager_admin_rule
 // generated from terraform resource schema
 
@@ -94,6 +89,31 @@ export function networkManagerAdminRuleDestinationToTerraform(struct?: NetworkMa
     address_prefix: cdktf.stringToTerraform(struct!.addressPrefix),
     address_prefix_type: cdktf.stringToTerraform(struct!.addressPrefixType),
   }
+}
+
+
+export function networkManagerAdminRuleDestinationToHclTerraform(struct?: NetworkManagerAdminRuleDestination | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    address_prefix: {
+      value: cdktf.stringToHclTerraform(struct!.addressPrefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_prefix_type: {
+      value: cdktf.stringToHclTerraform(struct!.addressPrefixType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkManagerAdminRuleDestinationOutputReference extends cdktf.ComplexObject {
@@ -212,6 +232,31 @@ export function networkManagerAdminRuleSourceToTerraform(struct?: NetworkManager
     address_prefix: cdktf.stringToTerraform(struct!.addressPrefix),
     address_prefix_type: cdktf.stringToTerraform(struct!.addressPrefixType),
   }
+}
+
+
+export function networkManagerAdminRuleSourceToHclTerraform(struct?: NetworkManagerAdminRuleSource | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    address_prefix: {
+      value: cdktf.stringToHclTerraform(struct!.addressPrefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    address_prefix_type: {
+      value: cdktf.stringToHclTerraform(struct!.addressPrefixType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkManagerAdminRuleSourceOutputReference extends cdktf.ComplexObject {
@@ -340,6 +385,43 @@ export function networkManagerAdminRuleTimeoutsToTerraform(struct?: NetworkManag
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function networkManagerAdminRuleTimeoutsToHclTerraform(struct?: NetworkManagerAdminRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkManagerAdminRuleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -747,5 +829,91 @@ export class NetworkManagerAdminRule extends cdktf.TerraformResource {
       source: cdktf.listMapper(networkManagerAdminRuleSourceToTerraform, true)(this._source.internalValue),
       timeouts: networkManagerAdminRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      action: {
+        value: cdktf.stringToHclTerraform(this._action),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      admin_rule_collection_id: {
+        value: cdktf.stringToHclTerraform(this._adminRuleCollectionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      destination_port_ranges: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._destinationPortRanges),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      direction: {
+        value: cdktf.stringToHclTerraform(this._direction),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      priority: {
+        value: cdktf.numberToHclTerraform(this._priority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      protocol: {
+        value: cdktf.stringToHclTerraform(this._protocol),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_port_ranges: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._sourcePortRanges),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      destination: {
+        value: cdktf.listMapperHcl(networkManagerAdminRuleDestinationToHclTerraform, true)(this._destination.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetworkManagerAdminRuleDestinationList",
+      },
+      source: {
+        value: cdktf.listMapperHcl(networkManagerAdminRuleSourceToHclTerraform, true)(this._source.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetworkManagerAdminRuleSourceList",
+      },
+      timeouts: {
+        value: networkManagerAdminRuleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NetworkManagerAdminRuleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

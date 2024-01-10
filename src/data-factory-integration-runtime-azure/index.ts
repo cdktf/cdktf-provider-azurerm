@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_factory_integration_runtime_azure
 // generated from terraform resource schema
 
@@ -92,6 +87,43 @@ export function dataFactoryIntegrationRuntimeAzureTimeoutsToTerraform(struct?: D
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dataFactoryIntegrationRuntimeAzureTimeoutsToHclTerraform(struct?: DataFactoryIntegrationRuntimeAzureTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -472,5 +504,79 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
       virtual_network_enabled: cdktf.booleanToTerraform(this._virtualNetworkEnabled),
       timeouts: dataFactoryIntegrationRuntimeAzureTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cleanup_enabled: {
+        value: cdktf.booleanToHclTerraform(this._cleanupEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      compute_type: {
+        value: cdktf.stringToHclTerraform(this._computeType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      core_count: {
+        value: cdktf.numberToHclTerraform(this._coreCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      data_factory_id: {
+        value: cdktf.stringToHclTerraform(this._dataFactoryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      time_to_live_min: {
+        value: cdktf.numberToHclTerraform(this._timeToLiveMin),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      virtual_network_enabled: {
+        value: cdktf.booleanToHclTerraform(this._virtualNetworkEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      timeouts: {
+        value: dataFactoryIntegrationRuntimeAzureTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataFactoryIntegrationRuntimeAzureTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

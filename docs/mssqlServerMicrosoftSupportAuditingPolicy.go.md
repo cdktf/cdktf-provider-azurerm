@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlservermicrosoftsupportauditingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlservermicrosoftsupportauditingpolicy"
 
 mssqlservermicrosoftsupportauditingpolicy.NewMssqlServerMicrosoftSupportAuditingPolicy(scope Construct, id *string, config MssqlServerMicrosoftSupportAuditingPolicyConfig) MssqlServerMicrosoftSupportAuditingPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -132,6 +133,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.toMetadata"></a>
 
@@ -433,7 +440,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlservermicrosoftsupportauditingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlservermicrosoftsupportauditingpolicy"
 
 mssqlservermicrosoftsupportauditingpolicy.MssqlServerMicrosoftSupportAuditingPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlservermicrosoftsupportauditingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlservermicrosoftsupportauditingpolicy"
 
 mssqlservermicrosoftsupportauditingpolicy.MssqlServerMicrosoftSupportAuditingPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -479,7 +486,7 @@ mssqlservermicrosoftsupportauditingpolicy.MssqlServerMicrosoftSupportAuditingPol
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlservermicrosoftsupportauditingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlservermicrosoftsupportauditingpolicy"
 
 mssqlservermicrosoftsupportauditingpolicy.MssqlServerMicrosoftSupportAuditingPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -493,7 +500,7 @@ mssqlservermicrosoftsupportauditingpolicy.MssqlServerMicrosoftSupportAuditingPol
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlservermicrosoftsupportauditingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlservermicrosoftsupportauditingpolicy"
 
 mssqlservermicrosoftsupportauditingpolicy.MssqlServerMicrosoftSupportAuditingPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -898,7 +905,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlservermicrosoftsupportauditingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlservermicrosoftsupportauditingpolicy"
 
 &mssqlservermicrosoftsupportauditingpolicy.MssqlServerMicrosoftSupportAuditingPolicyConfig {
 	Connection: interface{},
@@ -915,7 +922,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlservermicros
 	LogMonitoringEnabled: interface{},
 	StorageAccountAccessKey: *string,
 	StorageAccountSubscriptionId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicyTimeouts,
 }
 ```
 
@@ -1117,7 +1124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlservermicrosoftsupportauditingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlservermicrosoftsupportauditingpolicy"
 
 &mssqlservermicrosoftsupportauditingpolicy.MssqlServerMicrosoftSupportAuditingPolicyTimeouts {
 	Create: *string,
@@ -1193,7 +1200,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlServerMicrosoftSupportAuditingPolicy.MssqlServerMicrosoftSupportAuditingPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlservermicrosoftsupportauditingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlservermicrosoftsupportauditingpolicy"
 
 mssqlservermicrosoftsupportauditingpolicy.NewMssqlServerMicrosoftSupportAuditingPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlServerMicrosoftSupportAuditingPolicyTimeoutsOutputReference
 ```

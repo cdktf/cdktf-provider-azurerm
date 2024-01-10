@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/nginx_configuration
 // generated from terraform resource schema
 
@@ -70,6 +65,31 @@ export function nginxConfigurationConfigFileToTerraform(struct?: NginxConfigurat
     content: cdktf.stringToTerraform(struct!.content),
     virtual_path: cdktf.stringToTerraform(struct!.virtualPath),
   }
+}
+
+
+export function nginxConfigurationConfigFileToHclTerraform(struct?: NginxConfigurationConfigFile | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content: {
+      value: cdktf.stringToHclTerraform(struct!.content),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_path: {
+      value: cdktf.stringToHclTerraform(struct!.virtualPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NginxConfigurationConfigFileOutputReference extends cdktf.ComplexObject {
@@ -188,6 +208,31 @@ export function nginxConfigurationProtectedFileToTerraform(struct?: NginxConfigu
     content: cdktf.stringToTerraform(struct!.content),
     virtual_path: cdktf.stringToTerraform(struct!.virtualPath),
   }
+}
+
+
+export function nginxConfigurationProtectedFileToHclTerraform(struct?: NginxConfigurationProtectedFile | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content: {
+      value: cdktf.stringToHclTerraform(struct!.content),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_path: {
+      value: cdktf.stringToHclTerraform(struct!.virtualPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NginxConfigurationProtectedFileOutputReference extends cdktf.ComplexObject {
@@ -316,6 +361,43 @@ export function nginxConfigurationTimeoutsToTerraform(struct?: NginxConfiguratio
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function nginxConfigurationTimeoutsToHclTerraform(struct?: NginxConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NginxConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -627,5 +709,55 @@ export class NginxConfiguration extends cdktf.TerraformResource {
       protected_file: cdktf.listMapper(nginxConfigurationProtectedFileToTerraform, true)(this._protectedFile.internalValue),
       timeouts: nginxConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      nginx_deployment_id: {
+        value: cdktf.stringToHclTerraform(this._nginxDeploymentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      package_data: {
+        value: cdktf.stringToHclTerraform(this._packageData),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      root_file: {
+        value: cdktf.stringToHclTerraform(this._rootFile),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      config_file: {
+        value: cdktf.listMapperHcl(nginxConfigurationConfigFileToHclTerraform, true)(this._configFile.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "NginxConfigurationConfigFileList",
+      },
+      protected_file: {
+        value: cdktf.listMapperHcl(nginxConfigurationProtectedFileToHclTerraform, true)(this._protectedFile.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "NginxConfigurationProtectedFileList",
+      },
+      timeouts: {
+        value: nginxConfigurationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NginxConfigurationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

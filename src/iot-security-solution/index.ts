@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/iot_security_solution
 // generated from terraform resource schema
 
@@ -110,6 +105,31 @@ export function iotSecuritySolutionAdditionalWorkspaceToTerraform(struct?: IotSe
     data_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.dataTypes),
     workspace_id: cdktf.stringToTerraform(struct!.workspaceId),
   }
+}
+
+
+export function iotSecuritySolutionAdditionalWorkspaceToHclTerraform(struct?: IotSecuritySolutionAdditionalWorkspace | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    data_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.dataTypes),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    workspace_id: {
+      value: cdktf.stringToHclTerraform(struct!.workspaceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class IotSecuritySolutionAdditionalWorkspaceOutputReference extends cdktf.ComplexObject {
@@ -298,6 +318,115 @@ export function iotSecuritySolutionRecommendationsEnabledToTerraform(struct?: Io
     shared_credentials: cdktf.booleanToTerraform(struct!.sharedCredentials),
     vulnerable_tls_cipher_suite: cdktf.booleanToTerraform(struct!.vulnerableTlsCipherSuite),
   }
+}
+
+
+export function iotSecuritySolutionRecommendationsEnabledToHclTerraform(struct?: IotSecuritySolutionRecommendationsEnabledOutputReference | IotSecuritySolutionRecommendationsEnabled): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    acr_authentication: {
+      value: cdktf.booleanToHclTerraform(struct!.acrAuthentication),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    agent_send_unutilized_msg: {
+      value: cdktf.booleanToHclTerraform(struct!.agentSendUnutilizedMsg),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    baseline: {
+      value: cdktf.booleanToHclTerraform(struct!.baseline),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    edge_hub_mem_optimize: {
+      value: cdktf.booleanToHclTerraform(struct!.edgeHubMemOptimize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    edge_logging_option: {
+      value: cdktf.booleanToHclTerraform(struct!.edgeLoggingOption),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    inconsistent_module_settings: {
+      value: cdktf.booleanToHclTerraform(struct!.inconsistentModuleSettings),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    install_agent: {
+      value: cdktf.booleanToHclTerraform(struct!.installAgent),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ip_filter_deny_all: {
+      value: cdktf.booleanToHclTerraform(struct!.ipFilterDenyAll),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ip_filter_permissive_rule: {
+      value: cdktf.booleanToHclTerraform(struct!.ipFilterPermissiveRule),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    open_ports: {
+      value: cdktf.booleanToHclTerraform(struct!.openPorts),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    permissive_firewall_policy: {
+      value: cdktf.booleanToHclTerraform(struct!.permissiveFirewallPolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    permissive_input_firewall_rules: {
+      value: cdktf.booleanToHclTerraform(struct!.permissiveInputFirewallRules),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    permissive_output_firewall_rules: {
+      value: cdktf.booleanToHclTerraform(struct!.permissiveOutputFirewallRules),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    privileged_docker_options: {
+      value: cdktf.booleanToHclTerraform(struct!.privilegedDockerOptions),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    shared_credentials: {
+      value: cdktf.booleanToHclTerraform(struct!.sharedCredentials),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    vulnerable_tls_cipher_suite: {
+      value: cdktf.booleanToHclTerraform(struct!.vulnerableTlsCipherSuite),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cdktf.ComplexObject {
@@ -708,6 +837,43 @@ export function iotSecuritySolutionTimeoutsToTerraform(struct?: IotSecuritySolut
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function iotSecuritySolutionTimeoutsToHclTerraform(struct?: IotSecuritySolutionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class IotSecuritySolutionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1190,5 +1356,115 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
       recommendations_enabled: iotSecuritySolutionRecommendationsEnabledToTerraform(this._recommendationsEnabled.internalValue),
       timeouts: iotSecuritySolutionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      disabled_data_sources: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._disabledDataSources),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      events_to_export: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._eventsToExport),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      iothub_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._iothubIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log_analytics_workspace_id: {
+        value: cdktf.stringToHclTerraform(this._logAnalyticsWorkspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log_unmasked_ips_enabled: {
+        value: cdktf.booleanToHclTerraform(this._logUnmaskedIpsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      query_for_resources: {
+        value: cdktf.stringToHclTerraform(this._queryForResources),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      query_subscription_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._querySubscriptionIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      additional_workspace: {
+        value: cdktf.listMapperHcl(iotSecuritySolutionAdditionalWorkspaceToHclTerraform, true)(this._additionalWorkspace.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "IotSecuritySolutionAdditionalWorkspaceList",
+      },
+      recommendations_enabled: {
+        value: iotSecuritySolutionRecommendationsEnabledToHclTerraform(this._recommendationsEnabled.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "IotSecuritySolutionRecommendationsEnabledList",
+      },
+      timeouts: {
+        value: iotSecuritySolutionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "IotSecuritySolutionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

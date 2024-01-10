@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxcertificate"
 
 nginxcertificate.NewNginxCertificate(scope Construct, id *string, config NginxCertificateConfig) NginxCertificate
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxcertificate"
 
 nginxcertificate.NginxCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxcertificate"
 
 nginxcertificate.NginxCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ nginxcertificate.NginxCertificate_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxcertificate"
 
 nginxcertificate.NginxCertificate_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ nginxcertificate.NginxCertificate_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxcertificate"
 
 nginxcertificate.NginxCertificate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -841,7 +848,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxcertificate"
 
 &nginxcertificate.NginxCertificateConfig {
 	Connection: interface{},
@@ -857,7 +864,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxcertificate"
 	Name: *string,
 	NginxDeploymentId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.nginxCertificate.NginxCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.nginxCertificate.NginxCertificateTimeouts,
 }
 ```
 
@@ -1046,7 +1053,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxcertificate"
 
 &nginxcertificate.NginxCertificateTimeouts {
 	Create: *string,
@@ -1122,7 +1129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxCertificate.NginxCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxcertificate"
 
 nginxcertificate.NewNginxCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NginxCertificateTimeoutsOutputReference
 ```

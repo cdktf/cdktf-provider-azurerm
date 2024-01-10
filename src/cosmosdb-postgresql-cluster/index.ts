@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_postgresql_cluster
 // generated from terraform resource schema
 
@@ -147,6 +142,37 @@ export function cosmosdbPostgresqlClusterMaintenanceWindowToTerraform(struct?: C
   }
 }
 
+
+export function cosmosdbPostgresqlClusterMaintenanceWindowToHclTerraform(struct?: CosmosdbPostgresqlClusterMaintenanceWindowOutputReference | CosmosdbPostgresqlClusterMaintenanceWindow): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day_of_week: {
+      value: cdktf.numberToHclTerraform(struct!.dayOfWeek),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    start_hour: {
+      value: cdktf.numberToHclTerraform(struct!.startHour),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    start_minute: {
+      value: cdktf.numberToHclTerraform(struct!.startMinute),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbPostgresqlClusterMaintenanceWindowOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -269,6 +295,43 @@ export function cosmosdbPostgresqlClusterTimeoutsToTerraform(struct?: CosmosdbPo
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cosmosdbPostgresqlClusterTimeoutsToHclTerraform(struct?: CosmosdbPostgresqlClusterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbPostgresqlClusterTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -903,5 +966,163 @@ export class CosmosdbPostgresqlCluster extends cdktf.TerraformResource {
       maintenance_window: cosmosdbPostgresqlClusterMaintenanceWindowToTerraform(this._maintenanceWindow.internalValue),
       timeouts: cosmosdbPostgresqlClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      administrator_login_password: {
+        value: cdktf.stringToHclTerraform(this._administratorLoginPassword),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      citus_version: {
+        value: cdktf.stringToHclTerraform(this._citusVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      coordinator_public_ip_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._coordinatorPublicIpAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      coordinator_server_edition: {
+        value: cdktf.stringToHclTerraform(this._coordinatorServerEdition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      coordinator_storage_quota_in_mb: {
+        value: cdktf.numberToHclTerraform(this._coordinatorStorageQuotaInMb),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      coordinator_vcore_count: {
+        value: cdktf.numberToHclTerraform(this._coordinatorVcoreCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      ha_enabled: {
+        value: cdktf.booleanToHclTerraform(this._haEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      node_count: {
+        value: cdktf.numberToHclTerraform(this._nodeCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      node_public_ip_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._nodePublicIpAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      node_server_edition: {
+        value: cdktf.stringToHclTerraform(this._nodeServerEdition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      node_storage_quota_in_mb: {
+        value: cdktf.numberToHclTerraform(this._nodeStorageQuotaInMb),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      node_vcores: {
+        value: cdktf.numberToHclTerraform(this._nodeVcores),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      point_in_time_in_utc: {
+        value: cdktf.stringToHclTerraform(this._pointInTimeInUtc),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      preferred_primary_zone: {
+        value: cdktf.stringToHclTerraform(this._preferredPrimaryZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      shards_on_coordinator_enabled: {
+        value: cdktf.booleanToHclTerraform(this._shardsOnCoordinatorEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      source_location: {
+        value: cdktf.stringToHclTerraform(this._sourceLocation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_resource_id: {
+        value: cdktf.stringToHclTerraform(this._sourceResourceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sql_version: {
+        value: cdktf.stringToHclTerraform(this._sqlVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      maintenance_window: {
+        value: cosmosdbPostgresqlClusterMaintenanceWindowToHclTerraform(this._maintenanceWindow.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbPostgresqlClusterMaintenanceWindowList",
+      },
+      timeouts: {
+        value: cosmosdbPostgresqlClusterTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CosmosdbPostgresqlClusterTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

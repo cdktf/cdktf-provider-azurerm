@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule
 // generated from terraform resource schema
 
@@ -83,6 +78,37 @@ export function newRelicTagRuleLogTagFilterToTerraform(struct?: NewRelicTagRuleL
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function newRelicTagRuleLogTagFilterToHclTerraform(struct?: NewRelicTagRuleLogTagFilter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NewRelicTagRuleLogTagFilterOutputReference extends cdktf.ComplexObject {
@@ -225,6 +251,37 @@ export function newRelicTagRuleMetricTagFilterToTerraform(struct?: NewRelicTagRu
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function newRelicTagRuleMetricTagFilterToHclTerraform(struct?: NewRelicTagRuleMetricTagFilter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NewRelicTagRuleMetricTagFilterOutputReference extends cdktf.ComplexObject {
@@ -372,6 +429,43 @@ export function newRelicTagRuleTimeoutsToTerraform(struct?: NewRelicTagRuleTimeo
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function newRelicTagRuleTimeoutsToHclTerraform(struct?: NewRelicTagRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NewRelicTagRuleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -722,5 +816,67 @@ export class NewRelicTagRule extends cdktf.TerraformResource {
       metric_tag_filter: cdktf.listMapper(newRelicTagRuleMetricTagFilterToTerraform, true)(this._metricTagFilter.internalValue),
       timeouts: newRelicTagRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      activity_log_enabled: {
+        value: cdktf.booleanToHclTerraform(this._activityLogEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      azure_active_directory_log_enabled: {
+        value: cdktf.booleanToHclTerraform(this._azureActiveDirectoryLogEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      metric_enabled: {
+        value: cdktf.booleanToHclTerraform(this._metricEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      monitor_id: {
+        value: cdktf.stringToHclTerraform(this._monitorId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subscription_log_enabled: {
+        value: cdktf.booleanToHclTerraform(this._subscriptionLogEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      log_tag_filter: {
+        value: cdktf.listMapperHcl(newRelicTagRuleLogTagFilterToHclTerraform, true)(this._logTagFilter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NewRelicTagRuleLogTagFilterList",
+      },
+      metric_tag_filter: {
+        value: cdktf.listMapperHcl(newRelicTagRuleMetricTagFilterToHclTerraform, true)(this._metricTagFilter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NewRelicTagRuleMetricTagFilterList",
+      },
+      timeouts: {
+        value: newRelicTagRuleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NewRelicTagRuleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

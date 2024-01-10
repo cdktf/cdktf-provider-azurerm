@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/dev_test_schedule
 // generated from terraform resource schema
 
@@ -99,6 +94,25 @@ export function devTestScheduleDailyRecurrenceToTerraform(struct?: DevTestSchedu
   }
 }
 
+
+export function devTestScheduleDailyRecurrenceToHclTerraform(struct?: DevTestScheduleDailyRecurrenceOutputReference | DevTestScheduleDailyRecurrence): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    time: {
+      value: cdktf.stringToHclTerraform(struct!.time),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DevTestScheduleDailyRecurrenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -159,6 +173,25 @@ export function devTestScheduleHourlyRecurrenceToTerraform(struct?: DevTestSched
   return {
     minute: cdktf.numberToTerraform(struct!.minute),
   }
+}
+
+
+export function devTestScheduleHourlyRecurrenceToHclTerraform(struct?: DevTestScheduleHourlyRecurrenceOutputReference | DevTestScheduleHourlyRecurrence): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    minute: {
+      value: cdktf.numberToHclTerraform(struct!.minute),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DevTestScheduleHourlyRecurrenceOutputReference extends cdktf.ComplexObject {
@@ -231,6 +264,37 @@ export function devTestScheduleNotificationSettingsToTerraform(struct?: DevTestS
     time_in_minutes: cdktf.numberToTerraform(struct!.timeInMinutes),
     webhook_url: cdktf.stringToTerraform(struct!.webhookUrl),
   }
+}
+
+
+export function devTestScheduleNotificationSettingsToHclTerraform(struct?: DevTestScheduleNotificationSettingsOutputReference | DevTestScheduleNotificationSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    status: {
+      value: cdktf.stringToHclTerraform(struct!.status),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    time_in_minutes: {
+      value: cdktf.numberToHclTerraform(struct!.timeInMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    webhook_url: {
+      value: cdktf.stringToHclTerraform(struct!.webhookUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DevTestScheduleNotificationSettingsOutputReference extends cdktf.ComplexObject {
@@ -355,6 +419,43 @@ export function devTestScheduleTimeoutsToTerraform(struct?: DevTestScheduleTimeo
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function devTestScheduleTimeoutsToHclTerraform(struct?: DevTestScheduleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DevTestScheduleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -501,6 +602,31 @@ export function devTestScheduleWeeklyRecurrenceToTerraform(struct?: DevTestSched
     time: cdktf.stringToTerraform(struct!.time),
     week_days: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekDays),
   }
+}
+
+
+export function devTestScheduleWeeklyRecurrenceToHclTerraform(struct?: DevTestScheduleWeeklyRecurrenceOutputReference | DevTestScheduleWeeklyRecurrence): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    time: {
+      value: cdktf.stringToHclTerraform(struct!.time),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    week_days: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.weekDays),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DevTestScheduleWeeklyRecurrenceOutputReference extends cdktf.ComplexObject {
@@ -866,5 +992,97 @@ export class DevTestSchedule extends cdktf.TerraformResource {
       timeouts: devTestScheduleTimeoutsToTerraform(this._timeouts.internalValue),
       weekly_recurrence: devTestScheduleWeeklyRecurrenceToTerraform(this._weeklyRecurrence.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lab_name: {
+        value: cdktf.stringToHclTerraform(this._labName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      status: {
+        value: cdktf.stringToHclTerraform(this._status),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      task_type: {
+        value: cdktf.stringToHclTerraform(this._taskType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      time_zone_id: {
+        value: cdktf.stringToHclTerraform(this._timeZoneId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      daily_recurrence: {
+        value: devTestScheduleDailyRecurrenceToHclTerraform(this._dailyRecurrence.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DevTestScheduleDailyRecurrenceList",
+      },
+      hourly_recurrence: {
+        value: devTestScheduleHourlyRecurrenceToHclTerraform(this._hourlyRecurrence.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DevTestScheduleHourlyRecurrenceList",
+      },
+      notification_settings: {
+        value: devTestScheduleNotificationSettingsToHclTerraform(this._notificationSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DevTestScheduleNotificationSettingsList",
+      },
+      timeouts: {
+        value: devTestScheduleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DevTestScheduleTimeouts",
+      },
+      weekly_recurrence: {
+        value: devTestScheduleWeeklyRecurrenceToHclTerraform(this._weeklyRecurrence.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DevTestScheduleWeeklyRecurrenceList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

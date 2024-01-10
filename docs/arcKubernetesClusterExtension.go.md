@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesclusterextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesclusterextension"
 
 arckubernetesclusterextension.NewArcKubernetesClusterExtension(scope Construct, id *string, config ArcKubernetesClusterExtensionConfig) ArcKubernetesClusterExtension
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -134,6 +135,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.toMetadata"></a>
 
@@ -453,7 +460,7 @@ func ResetVersion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesclusterextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesclusterextension"
 
 arckubernetesclusterextension.ArcKubernetesClusterExtension_IsConstruct(x interface{}) *bool
 ```
@@ -485,7 +492,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesclusterextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesclusterextension"
 
 arckubernetesclusterextension.ArcKubernetesClusterExtension_IsTerraformElement(x interface{}) *bool
 ```
@@ -499,7 +506,7 @@ arckubernetesclusterextension.ArcKubernetesClusterExtension_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesclusterextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesclusterextension"
 
 arckubernetesclusterextension.ArcKubernetesClusterExtension_IsTerraformResource(x interface{}) *bool
 ```
@@ -513,7 +520,7 @@ arckubernetesclusterextension.ArcKubernetesClusterExtension_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtension.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesclusterextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesclusterextension"
 
 arckubernetesclusterextension.ArcKubernetesClusterExtension_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1017,7 +1024,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtensionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesclusterextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesclusterextension"
 
 &arckubernetesclusterextension.ArcKubernetesClusterExtensionConfig {
 	Connection: interface{},
@@ -1029,7 +1036,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesclus
 	Provisioners: *[]interface{},
 	ClusterId: *string,
 	ExtensionType: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.arcKubernetesClusterExtension.ArcKubernetesClusterExtensionIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtensionIdentity,
 	Name: *string,
 	ConfigurationProtectedSettings: *map[string]*string,
 	ConfigurationSettings: *map[string]*string,
@@ -1037,7 +1044,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesclus
 	ReleaseNamespace: *string,
 	ReleaseTrain: *string,
 	TargetNamespace: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.arcKubernetesClusterExtension.ArcKubernetesClusterExtensionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtensionTimeouts,
 	Version: *string,
 }
 ```
@@ -1294,7 +1301,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtensionIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesclusterextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesclusterextension"
 
 &arckubernetesclusterextension.ArcKubernetesClusterExtensionIdentity {
 	Type: *string,
@@ -1326,7 +1333,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtensionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesclusterextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesclusterextension"
 
 &arckubernetesclusterextension.ArcKubernetesClusterExtensionTimeouts {
 	Create: *string,
@@ -1402,7 +1409,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtensionIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesclusterextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesclusterextension"
 
 arckubernetesclusterextension.NewArcKubernetesClusterExtensionIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ArcKubernetesClusterExtensionIdentityOutputReference
 ```
@@ -1695,7 +1702,7 @@ func InternalValue() ArcKubernetesClusterExtensionIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesClusterExtension.ArcKubernetesClusterExtensionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesclusterextension"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesclusterextension"
 
 arckubernetesclusterextension.NewArcKubernetesClusterExtensionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ArcKubernetesClusterExtensionTimeoutsOutputReference
 ```

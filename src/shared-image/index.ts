@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/shared_image
 // generated from terraform resource schema
 
@@ -161,6 +156,37 @@ export function sharedImageIdentifierToTerraform(struct?: SharedImageIdentifierO
   }
 }
 
+
+export function sharedImageIdentifierToHclTerraform(struct?: SharedImageIdentifierOutputReference | SharedImageIdentifier): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    offer: {
+      value: cdktf.stringToHclTerraform(struct!.offer),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    publisher: {
+      value: cdktf.stringToHclTerraform(struct!.publisher),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sku: {
+      value: cdktf.stringToHclTerraform(struct!.sku),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SharedImageIdentifierOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -269,6 +295,37 @@ export function sharedImagePurchasePlanToTerraform(struct?: SharedImagePurchaseP
     product: cdktf.stringToTerraform(struct!.product),
     publisher: cdktf.stringToTerraform(struct!.publisher),
   }
+}
+
+
+export function sharedImagePurchasePlanToHclTerraform(struct?: SharedImagePurchasePlanOutputReference | SharedImagePurchasePlan): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    product: {
+      value: cdktf.stringToHclTerraform(struct!.product),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    publisher: {
+      value: cdktf.stringToHclTerraform(struct!.publisher),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SharedImagePurchasePlanOutputReference extends cdktf.ComplexObject {
@@ -390,6 +447,43 @@ export function sharedImageTimeoutsToTerraform(struct?: SharedImageTimeouts | cd
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function sharedImageTimeoutsToHclTerraform(struct?: SharedImageTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SharedImageTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1067,5 +1161,181 @@ export class SharedImage extends cdktf.TerraformResource {
       purchase_plan: sharedImagePurchasePlanToTerraform(this._purchasePlan.internalValue),
       timeouts: sharedImageTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      accelerated_network_support_enabled: {
+        value: cdktf.booleanToHclTerraform(this._acceleratedNetworkSupportEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      architecture: {
+        value: cdktf.stringToHclTerraform(this._architecture),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      confidential_vm_enabled: {
+        value: cdktf.booleanToHclTerraform(this._confidentialVmEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      confidential_vm_supported: {
+        value: cdktf.booleanToHclTerraform(this._confidentialVmSupported),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disk_types_not_allowed: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._diskTypesNotAllowed),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      end_of_life_date: {
+        value: cdktf.stringToHclTerraform(this._endOfLifeDate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      eula: {
+        value: cdktf.stringToHclTerraform(this._eula),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gallery_name: {
+        value: cdktf.stringToHclTerraform(this._galleryName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      hyper_v_generation: {
+        value: cdktf.stringToHclTerraform(this._hyperVGeneration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_recommended_memory_in_gb: {
+        value: cdktf.numberToHclTerraform(this._maxRecommendedMemoryInGb),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      max_recommended_vcpu_count: {
+        value: cdktf.numberToHclTerraform(this._maxRecommendedVcpuCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      min_recommended_memory_in_gb: {
+        value: cdktf.numberToHclTerraform(this._minRecommendedMemoryInGb),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      min_recommended_vcpu_count: {
+        value: cdktf.numberToHclTerraform(this._minRecommendedVcpuCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      os_type: {
+        value: cdktf.stringToHclTerraform(this._osType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      privacy_statement_uri: {
+        value: cdktf.stringToHclTerraform(this._privacyStatementUri),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      release_note_uri: {
+        value: cdktf.stringToHclTerraform(this._releaseNoteUri),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      specialized: {
+        value: cdktf.booleanToHclTerraform(this._specialized),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      trusted_launch_enabled: {
+        value: cdktf.booleanToHclTerraform(this._trustedLaunchEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      trusted_launch_supported: {
+        value: cdktf.booleanToHclTerraform(this._trustedLaunchSupported),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      identifier: {
+        value: sharedImageIdentifierToHclTerraform(this._identifier.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SharedImageIdentifierList",
+      },
+      purchase_plan: {
+        value: sharedImagePurchasePlanToHclTerraform(this._purchasePlan.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SharedImagePurchasePlanList",
+      },
+      timeouts: {
+        value: sharedImageTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SharedImageTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

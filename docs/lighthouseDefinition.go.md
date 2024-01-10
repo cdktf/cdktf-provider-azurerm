@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinition(scope Construct, id *string, config LighthouseDefinitionConfig) LighthouseDefinition
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -134,6 +135,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.toMetadata"></a>
 
@@ -465,7 +472,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.LighthouseDefinition_IsConstruct(x interface{}) *bool
 ```
@@ -497,7 +504,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.LighthouseDefinition_IsTerraformElement(x interface{}) *bool
 ```
@@ -511,7 +518,7 @@ lighthousedefinition.LighthouseDefinition_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.LighthouseDefinition_IsTerraformResource(x interface{}) *bool
 ```
@@ -525,7 +532,7 @@ lighthousedefinition.LighthouseDefinition_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.LighthouseDefinition_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -974,7 +981,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionAuthorization {
 	PrincipalId: *string,
@@ -1048,7 +1055,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionConfig {
 	Connection: interface{},
@@ -1066,8 +1073,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinit
 	EligibleAuthorization: interface{},
 	Id: *string,
 	LighthouseDefinitionId: *string,
-	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.lighthouseDefinition.LighthouseDefinitionPlan,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.lighthouseDefinition.LighthouseDefinitionTimeouts,
+	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.lighthouseDefinition.LighthouseDefinitionPlan,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.lighthouseDefinition.LighthouseDefinitionTimeouts,
 }
 ```
 
@@ -1301,12 +1308,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionEligibleAuthorization {
 	PrincipalId: *string,
 	RoleDefinitionId: *string,
-	JustInTimeAccessPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy,
+	JustInTimeAccessPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy,
 	PrincipalDisplayName: *string,
 }
 ```
@@ -1377,7 +1384,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy {
 	Approver: interface{},
@@ -1439,7 +1446,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover {
 	PrincipalId: *string,
@@ -1485,7 +1492,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionPlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionPlan {
 	Name: *string,
@@ -1559,7 +1566,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionTimeouts {
 	Create: *string,
@@ -1635,7 +1642,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionAuthorizationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionAuthorizationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LighthouseDefinitionAuthorizationList
 ```
@@ -1676,10 +1683,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionAuthorizationList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionAuthorizationList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionAuthorizationList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionAuthorizationList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionAuthorizationList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionAuthorizationList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionAuthorizationList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1778,7 +1802,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionAuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionAuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LighthouseDefinitionAuthorizationOutputReference
 ```
@@ -2147,7 +2171,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList
 ```
@@ -2188,10 +2212,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -2290,7 +2331,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverOutputReference
 ```
@@ -2608,7 +2649,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyOutputReference
 ```
@@ -2957,7 +2998,7 @@ func InternalValue() LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionEligibleAuthorizationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LighthouseDefinitionEligibleAuthorizationList
 ```
@@ -2998,10 +3039,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -3100,7 +3158,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionEligibleAuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LighthouseDefinitionEligibleAuthorizationOutputReference
 ```
@@ -3482,7 +3540,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionPlanOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionPlanOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LighthouseDefinitionPlanOutputReference
 ```
@@ -3819,7 +3877,7 @@ func InternalValue() LighthouseDefinitionPlan
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LighthouseDefinitionTimeoutsOutputReference
 ```

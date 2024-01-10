@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/app_service_source_control
 // generated from terraform resource schema
 
@@ -98,6 +93,31 @@ export function appServiceSourceControlGithubActionConfigurationCodeConfiguratio
     runtime_stack: cdktf.stringToTerraform(struct!.runtimeStack),
     runtime_version: cdktf.stringToTerraform(struct!.runtimeVersion),
   }
+}
+
+
+export function appServiceSourceControlGithubActionConfigurationCodeConfigurationToHclTerraform(struct?: AppServiceSourceControlGithubActionConfigurationCodeConfigurationOutputReference | AppServiceSourceControlGithubActionConfigurationCodeConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    runtime_stack: {
+      value: cdktf.stringToHclTerraform(struct!.runtimeStack),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    runtime_version: {
+      value: cdktf.stringToHclTerraform(struct!.runtimeVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppServiceSourceControlGithubActionConfigurationCodeConfigurationOutputReference extends cdktf.ComplexObject {
@@ -202,6 +222,43 @@ export function appServiceSourceControlGithubActionConfigurationContainerConfigu
     registry_url: cdktf.stringToTerraform(struct!.registryUrl),
     registry_username: cdktf.stringToTerraform(struct!.registryUsername),
   }
+}
+
+
+export function appServiceSourceControlGithubActionConfigurationContainerConfigurationToHclTerraform(struct?: AppServiceSourceControlGithubActionConfigurationContainerConfigurationOutputReference | AppServiceSourceControlGithubActionConfigurationContainerConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    image_name: {
+      value: cdktf.stringToHclTerraform(struct!.imageName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    registry_password: {
+      value: cdktf.stringToHclTerraform(struct!.registryPassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    registry_url: {
+      value: cdktf.stringToHclTerraform(struct!.registryUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    registry_username: {
+      value: cdktf.stringToHclTerraform(struct!.registryUsername),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppServiceSourceControlGithubActionConfigurationContainerConfigurationOutputReference extends cdktf.ComplexObject {
@@ -345,6 +402,37 @@ export function appServiceSourceControlGithubActionConfigurationToTerraform(stru
   }
 }
 
+
+export function appServiceSourceControlGithubActionConfigurationToHclTerraform(struct?: AppServiceSourceControlGithubActionConfigurationOutputReference | AppServiceSourceControlGithubActionConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    generate_workflow_file: {
+      value: cdktf.booleanToHclTerraform(struct!.generateWorkflowFile),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    code_configuration: {
+      value: appServiceSourceControlGithubActionConfigurationCodeConfigurationToHclTerraform(struct!.codeConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AppServiceSourceControlGithubActionConfigurationCodeConfigurationList",
+    },
+    container_configuration: {
+      value: appServiceSourceControlGithubActionConfigurationContainerConfigurationToHclTerraform(struct!.containerConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AppServiceSourceControlGithubActionConfigurationContainerConfigurationList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppServiceSourceControlGithubActionConfigurationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -467,6 +555,37 @@ export function appServiceSourceControlTimeoutsToTerraform(struct?: AppServiceSo
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function appServiceSourceControlTimeoutsToHclTerraform(struct?: AppServiceSourceControlTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppServiceSourceControlTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -823,5 +942,73 @@ export class AppServiceSourceControlA extends cdktf.TerraformResource {
       github_action_configuration: appServiceSourceControlGithubActionConfigurationToTerraform(this._githubActionConfiguration.internalValue),
       timeouts: appServiceSourceControlTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      app_id: {
+        value: cdktf.stringToHclTerraform(this._appId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      branch: {
+        value: cdktf.stringToHclTerraform(this._branch),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      repo_url: {
+        value: cdktf.stringToHclTerraform(this._repoUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rollback_enabled: {
+        value: cdktf.booleanToHclTerraform(this._rollbackEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      use_local_git: {
+        value: cdktf.booleanToHclTerraform(this._useLocalGit),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      use_manual_integration: {
+        value: cdktf.booleanToHclTerraform(this._useManualIntegration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      use_mercurial: {
+        value: cdktf.booleanToHclTerraform(this._useMercurial),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      github_action_configuration: {
+        value: appServiceSourceControlGithubActionConfigurationToHclTerraform(this._githubActionConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppServiceSourceControlGithubActionConfigurationList",
+      },
+      timeouts: {
+        value: appServiceSourceControlTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AppServiceSourceControlTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

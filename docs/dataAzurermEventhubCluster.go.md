@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 dataazurermeventhubcluster.NewDataAzurermEventhubCluster(scope Construct, id *string, config DataAzurermEventhubClusterConfig) DataAzurermEventhubCluster
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -121,6 +122,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.toMetadata"></a>
 
@@ -294,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 dataazurermeventhubcluster.DataAzurermEventhubCluster_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 dataazurermeventhubcluster.DataAzurermEventhubCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +349,7 @@ dataazurermeventhubcluster.DataAzurermEventhubCluster_IsTerraformElement(x inter
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 dataazurermeventhubcluster.DataAzurermEventhubCluster_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +363,7 @@ dataazurermeventhubcluster.DataAzurermEventhubCluster_IsTerraformDataSource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 dataazurermeventhubcluster.DataAzurermEventhubCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -671,7 +680,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 &dataazurermeventhubcluster.DataAzurermEventhubClusterConfig {
 	Connection: interface{},
@@ -684,7 +693,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventh
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermEventhubCluster.DataAzurermEventhubClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterTimeouts,
 }
 ```
 
@@ -834,7 +843,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 &dataazurermeventhubcluster.DataAzurermEventhubClusterTimeouts {
 	Read: *string,
@@ -868,7 +877,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventhubcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubcluster"
 
 dataazurermeventhubcluster.NewDataAzurermEventhubClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermEventhubClusterTimeoutsOutputReference
 ```

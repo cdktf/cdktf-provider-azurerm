@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/logic_app_workflow
 // generated from terraform resource schema
 
@@ -99,6 +94,25 @@ export function logicAppWorkflowAccessControlActionToTerraform(struct?: LogicApp
   }
 }
 
+
+export function logicAppWorkflowAccessControlActionToHclTerraform(struct?: LogicAppWorkflowAccessControlActionOutputReference | LogicAppWorkflowAccessControlAction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_caller_ip_address_range: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedCallerIpAddressRange),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LogicAppWorkflowAccessControlActionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -159,6 +173,25 @@ export function logicAppWorkflowAccessControlContentToTerraform(struct?: LogicAp
   return {
     allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedCallerIpAddressRange),
   }
+}
+
+
+export function logicAppWorkflowAccessControlContentToHclTerraform(struct?: LogicAppWorkflowAccessControlContentOutputReference | LogicAppWorkflowAccessControlContent): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_caller_ip_address_range: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedCallerIpAddressRange),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogicAppWorkflowAccessControlContentOutputReference extends cdktf.ComplexObject {
@@ -226,6 +259,31 @@ export function logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClai
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimToHclTerraform(struct?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimOutputReference extends cdktf.ComplexObject {
@@ -348,6 +406,31 @@ export function logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyToTe
   }
 }
 
+
+export function logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyToHclTerraform(struct?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    claim: {
+      value: cdktf.listMapperHcl(logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimToHclTerraform, true)(struct!.claim),
+      isBlock: true,
+      type: "set",
+      storageClassType: "LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -468,6 +551,31 @@ export function logicAppWorkflowAccessControlTriggerToTerraform(struct?: LogicAp
   }
 }
 
+
+export function logicAppWorkflowAccessControlTriggerToHclTerraform(struct?: LogicAppWorkflowAccessControlTriggerOutputReference | LogicAppWorkflowAccessControlTrigger): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_caller_ip_address_range: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedCallerIpAddressRange),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    open_authentication_policy: {
+      value: cdktf.listMapperHcl(logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyToHclTerraform, true)(struct!.openAuthenticationPolicy),
+      isBlock: true,
+      type: "set",
+      storageClassType: "LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -550,6 +658,25 @@ export function logicAppWorkflowAccessControlWorkflowManagementToTerraform(struc
   return {
     allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedCallerIpAddressRange),
   }
+}
+
+
+export function logicAppWorkflowAccessControlWorkflowManagementToHclTerraform(struct?: LogicAppWorkflowAccessControlWorkflowManagementOutputReference | LogicAppWorkflowAccessControlWorkflowManagement): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_caller_ip_address_range: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedCallerIpAddressRange),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogicAppWorkflowAccessControlWorkflowManagementOutputReference extends cdktf.ComplexObject {
@@ -635,6 +762,43 @@ export function logicAppWorkflowAccessControlToTerraform(struct?: LogicAppWorkfl
     trigger: logicAppWorkflowAccessControlTriggerToTerraform(struct!.trigger),
     workflow_management: logicAppWorkflowAccessControlWorkflowManagementToTerraform(struct!.workflowManagement),
   }
+}
+
+
+export function logicAppWorkflowAccessControlToHclTerraform(struct?: LogicAppWorkflowAccessControlOutputReference | LogicAppWorkflowAccessControl): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: logicAppWorkflowAccessControlActionToHclTerraform(struct!.action),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LogicAppWorkflowAccessControlActionList",
+    },
+    content: {
+      value: logicAppWorkflowAccessControlContentToHclTerraform(struct!.content),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LogicAppWorkflowAccessControlContentList",
+    },
+    trigger: {
+      value: logicAppWorkflowAccessControlTriggerToHclTerraform(struct!.trigger),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LogicAppWorkflowAccessControlTriggerList",
+    },
+    workflow_management: {
+      value: logicAppWorkflowAccessControlWorkflowManagementToHclTerraform(struct!.workflowManagement),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LogicAppWorkflowAccessControlWorkflowManagementList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexObject {
@@ -773,6 +937,31 @@ export function logicAppWorkflowIdentityToTerraform(struct?: LogicAppWorkflowIde
   }
 }
 
+
+export function logicAppWorkflowIdentityToHclTerraform(struct?: LogicAppWorkflowIdentityOutputReference | LogicAppWorkflowIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LogicAppWorkflowIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -880,6 +1069,43 @@ export function logicAppWorkflowTimeoutsToTerraform(struct?: LogicAppWorkflowTim
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function logicAppWorkflowTimeoutsToHclTerraform(struct?: LogicAppWorkflowTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1357,5 +1583,103 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
       identity: logicAppWorkflowIdentityToTerraform(this._identity.internalValue),
       timeouts: logicAppWorkflowTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      integration_service_environment_id: {
+        value: cdktf.stringToHclTerraform(this._integrationServiceEnvironmentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      logic_app_integration_account_id: {
+        value: cdktf.stringToHclTerraform(this._logicAppIntegrationAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parameters: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._parameters),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      workflow_parameters: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._workflowParameters),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      workflow_schema: {
+        value: cdktf.stringToHclTerraform(this._workflowSchema),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      workflow_version: {
+        value: cdktf.stringToHclTerraform(this._workflowVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      access_control: {
+        value: logicAppWorkflowAccessControlToHclTerraform(this._accessControl.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LogicAppWorkflowAccessControlList",
+      },
+      identity: {
+        value: logicAppWorkflowIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LogicAppWorkflowIdentityList",
+      },
+      timeouts: {
+        value: logicAppWorkflowTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "LogicAppWorkflowTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

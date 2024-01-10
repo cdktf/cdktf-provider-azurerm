@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.NewLogzMonitor(scope Construct, id *string, config LogzMonitorConfig) LogzMonitor
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitor.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitor.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitor.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitor.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitor.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitor.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitor.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -133,6 +134,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitor.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitor.toMetadata"></a>
 
@@ -452,7 +459,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitor.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.LogzMonitor_IsConstruct(x interface{}) *bool
 ```
@@ -484,7 +491,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitor.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.LogzMonitor_IsTerraformElement(x interface{}) *bool
 ```
@@ -498,7 +505,7 @@ logzmonitor.LogzMonitor_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitor.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.LogzMonitor_IsTerraformResource(x interface{}) *bool
 ```
@@ -512,7 +519,7 @@ logzmonitor.LogzMonitor_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitor.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.LogzMonitor_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1005,7 +1012,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 &logzmonitor.LogzMonitorConfig {
 	Connection: interface{},
@@ -1017,15 +1024,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
 	Provisioners: *[]interface{},
 	Location: *string,
 	Name: *string,
-	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.logzMonitor.LogzMonitorPlan,
+	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logzMonitor.LogzMonitorPlan,
 	ResourceGroupName: *string,
-	User: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.logzMonitor.LogzMonitorUser,
+	User: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logzMonitor.LogzMonitorUser,
 	CompanyName: *string,
 	Enabled: interface{},
 	EnterpriseAppId: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.logzMonitor.LogzMonitorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logzMonitor.LogzMonitorTimeouts,
 }
 ```
 
@@ -1270,7 +1277,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorPlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 &logzmonitor.LogzMonitorPlan {
 	BillingCycle: *string,
@@ -1344,7 +1351,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 &logzmonitor.LogzMonitorTimeouts {
 	Create: *string,
@@ -1418,7 +1425,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorUser.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 &logzmonitor.LogzMonitorUser {
 	Email: *string,
@@ -1494,7 +1501,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorPlanOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.NewLogzMonitorPlanOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogzMonitorPlanOutputReference
 ```
@@ -1838,7 +1845,7 @@ func InternalValue() LogzMonitorPlan
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.NewLogzMonitorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogzMonitorTimeoutsOutputReference
 ```
@@ -2203,7 +2210,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorUserOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.NewLogzMonitorUserOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogzMonitorUserOutputReference
 ```

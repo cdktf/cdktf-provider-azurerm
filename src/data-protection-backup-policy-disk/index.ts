@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk
 // generated from terraform resource schema
 
@@ -67,6 +62,25 @@ export function dataProtectionBackupPolicyDiskRetentionRuleCriteriaToTerraform(s
   return {
     absolute_criteria: cdktf.stringToTerraform(struct!.absoluteCriteria),
   }
+}
+
+
+export function dataProtectionBackupPolicyDiskRetentionRuleCriteriaToHclTerraform(struct?: DataProtectionBackupPolicyDiskRetentionRuleCriteriaOutputReference | DataProtectionBackupPolicyDiskRetentionRuleCriteria): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    absolute_criteria: {
+      value: cdktf.stringToHclTerraform(struct!.absoluteCriteria),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataProtectionBackupPolicyDiskRetentionRuleCriteriaOutputReference extends cdktf.ComplexObject {
@@ -149,6 +163,43 @@ export function dataProtectionBackupPolicyDiskRetentionRuleToTerraform(struct?: 
     priority: cdktf.numberToTerraform(struct!.priority),
     criteria: dataProtectionBackupPolicyDiskRetentionRuleCriteriaToTerraform(struct!.criteria),
   }
+}
+
+
+export function dataProtectionBackupPolicyDiskRetentionRuleToHclTerraform(struct?: DataProtectionBackupPolicyDiskRetentionRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    duration: {
+      value: cdktf.stringToHclTerraform(struct!.duration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    priority: {
+      value: cdktf.numberToHclTerraform(struct!.priority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    criteria: {
+      value: dataProtectionBackupPolicyDiskRetentionRuleCriteriaToHclTerraform(struct!.criteria),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataProtectionBackupPolicyDiskRetentionRuleCriteriaList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataProtectionBackupPolicyDiskRetentionRuleOutputReference extends cdktf.ComplexObject {
@@ -310,6 +361,37 @@ export function dataProtectionBackupPolicyDiskTimeoutsToTerraform(struct?: DataP
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataProtectionBackupPolicyDiskTimeoutsToHclTerraform(struct?: DataProtectionBackupPolicyDiskTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataProtectionBackupPolicyDiskTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -611,5 +693,61 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
       retention_rule: cdktf.listMapper(dataProtectionBackupPolicyDiskRetentionRuleToTerraform, true)(this._retentionRule.internalValue),
       timeouts: dataProtectionBackupPolicyDiskTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      backup_repeating_time_intervals: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._backupRepeatingTimeIntervals),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      default_retention_duration: {
+        value: cdktf.stringToHclTerraform(this._defaultRetentionDuration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      time_zone: {
+        value: cdktf.stringToHclTerraform(this._timeZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vault_id: {
+        value: cdktf.stringToHclTerraform(this._vaultId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      retention_rule: {
+        value: cdktf.listMapperHcl(dataProtectionBackupPolicyDiskRetentionRuleToHclTerraform, true)(this._retentionRule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataProtectionBackupPolicyDiskRetentionRuleList",
+      },
+      timeouts: {
+        value: dataProtectionBackupPolicyDiskTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataProtectionBackupPolicyDiskTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

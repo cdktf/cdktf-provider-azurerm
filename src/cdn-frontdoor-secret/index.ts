@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cdn_frontdoor_secret
 // generated from terraform resource schema
 
@@ -55,6 +50,25 @@ export function cdnFrontdoorSecretSecretCustomerCertificateToTerraform(struct?: 
   return {
     key_vault_certificate_id: cdktf.stringToTerraform(struct!.keyVaultCertificateId),
   }
+}
+
+
+export function cdnFrontdoorSecretSecretCustomerCertificateToHclTerraform(struct?: CdnFrontdoorSecretSecretCustomerCertificate | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_vault_certificate_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultCertificateId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CdnFrontdoorSecretSecretCustomerCertificateOutputReference extends cdktf.ComplexObject {
@@ -158,6 +172,25 @@ export function cdnFrontdoorSecretSecretToTerraform(struct?: CdnFrontdoorSecretS
   }
 }
 
+
+export function cdnFrontdoorSecretSecretToHclTerraform(struct?: CdnFrontdoorSecretSecretOutputReference | CdnFrontdoorSecretSecret): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    customer_certificate: {
+      value: cdktf.listMapperHcl(cdnFrontdoorSecretSecretCustomerCertificateToHclTerraform, true)(struct!.customerCertificate),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CdnFrontdoorSecretSecretCustomerCertificateList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CdnFrontdoorSecretSecretOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -228,6 +261,37 @@ export function cdnFrontdoorSecretTimeoutsToTerraform(struct?: CdnFrontdoorSecre
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function cdnFrontdoorSecretTimeoutsToHclTerraform(struct?: CdnFrontdoorSecretTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CdnFrontdoorSecretTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -483,5 +547,43 @@ export class CdnFrontdoorSecret extends cdktf.TerraformResource {
       secret: cdnFrontdoorSecretSecretToTerraform(this._secret.internalValue),
       timeouts: cdnFrontdoorSecretTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cdn_frontdoor_profile_id: {
+        value: cdktf.stringToHclTerraform(this._cdnFrontdoorProfileId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      secret: {
+        value: cdnFrontdoorSecretSecretToHclTerraform(this._secret.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CdnFrontdoorSecretSecretList",
+      },
+      timeouts: {
+        value: cdnFrontdoorSecretTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CdnFrontdoorSecretTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

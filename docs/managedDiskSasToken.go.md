@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
 
 manageddisksastoken.NewManagedDiskSasToken(scope Construct, id *string, config ManagedDiskSasTokenConfig) ManagedDiskSasToken
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
 
 manageddisksastoken.ManagedDiskSasToken_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
 
 manageddisksastoken.ManagedDiskSasToken_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ manageddisksastoken.ManagedDiskSasToken_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
 
 manageddisksastoken.ManagedDiskSasToken_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ manageddisksastoken.ManagedDiskSasToken_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasToken.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
 
 manageddisksastoken.ManagedDiskSasToken_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -808,7 +815,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasTokenConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
 
 &manageddisksastoken.ManagedDiskSasTokenConfig {
 	Connection: interface{},
@@ -822,7 +829,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/manageddisksastok
 	DurationInSeconds: *f64,
 	ManagedDiskId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.managedDiskSasToken.ManagedDiskSasTokenTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.managedDiskSasToken.ManagedDiskSasTokenTimeouts,
 }
 ```
 
@@ -985,7 +992,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasTokenTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
 
 &manageddisksastoken.ManagedDiskSasTokenTimeouts {
 	Create: *string,
@@ -1047,7 +1054,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managedDiskSasToken.ManagedDiskSasTokenTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/manageddisksastoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/manageddisksastoken"
 
 manageddisksastoken.NewManagedDiskSasTokenTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ManagedDiskSasTokenTimeoutsOutputReference
 ```

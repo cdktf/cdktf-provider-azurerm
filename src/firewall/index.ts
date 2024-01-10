@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/firewall
 // generated from terraform resource schema
 
@@ -117,6 +112,37 @@ export function firewallIpConfigurationToTerraform(struct?: FirewallIpConfigurat
     public_ip_address_id: cdktf.stringToTerraform(struct!.publicIpAddressId),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
   }
+}
+
+
+export function firewallIpConfigurationToHclTerraform(struct?: FirewallIpConfiguration | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    public_ip_address_id: {
+      value: cdktf.stringToHclTerraform(struct!.publicIpAddressId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirewallIpConfigurationOutputReference extends cdktf.ComplexObject {
@@ -272,6 +298,37 @@ export function firewallManagementIpConfigurationToTerraform(struct?: FirewallMa
   }
 }
 
+
+export function firewallManagementIpConfigurationToHclTerraform(struct?: FirewallManagementIpConfigurationOutputReference | FirewallManagementIpConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    public_ip_address_id: {
+      value: cdktf.stringToHclTerraform(struct!.publicIpAddressId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class FirewallManagementIpConfigurationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -390,6 +447,43 @@ export function firewallTimeoutsToTerraform(struct?: FirewallTimeouts | cdktf.IR
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function firewallTimeoutsToHclTerraform(struct?: FirewallTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -536,6 +630,31 @@ export function firewallVirtualHubToTerraform(struct?: FirewallVirtualHubOutputR
     public_ip_count: cdktf.numberToTerraform(struct!.publicIpCount),
     virtual_hub_id: cdktf.stringToTerraform(struct!.virtualHubId),
   }
+}
+
+
+export function firewallVirtualHubToHclTerraform(struct?: FirewallVirtualHubOutputReference | FirewallVirtualHub): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    public_ip_count: {
+      value: cdktf.numberToHclTerraform(struct!.publicIpCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    virtual_hub_id: {
+      value: cdktf.stringToHclTerraform(struct!.virtualHubId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirewallVirtualHubOutputReference extends cdktf.ComplexObject {
@@ -971,5 +1090,115 @@ export class Firewall extends cdktf.TerraformResource {
       timeouts: firewallTimeoutsToTerraform(this._timeouts.internalValue),
       virtual_hub: firewallVirtualHubToTerraform(this._virtualHub.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      dns_proxy_enabled: {
+        value: cdktf.booleanToHclTerraform(this._dnsProxyEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      dns_servers: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._dnsServers),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      firewall_policy_id: {
+        value: cdktf.stringToHclTerraform(this._firewallPolicyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      private_ip_ranges: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._privateIpRanges),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku_name: {
+        value: cdktf.stringToHclTerraform(this._skuName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku_tier: {
+        value: cdktf.stringToHclTerraform(this._skuTier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      threat_intel_mode: {
+        value: cdktf.stringToHclTerraform(this._threatIntelMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      zones: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._zones),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      ip_configuration: {
+        value: cdktf.listMapperHcl(firewallIpConfigurationToHclTerraform, true)(this._ipConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirewallIpConfigurationList",
+      },
+      management_ip_configuration: {
+        value: firewallManagementIpConfigurationToHclTerraform(this._managementIpConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirewallManagementIpConfigurationList",
+      },
+      timeouts: {
+        value: firewallTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "FirewallTimeouts",
+      },
+      virtual_hub: {
+        value: firewallVirtualHubToHclTerraform(this._virtualHub.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirewallVirtualHubList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

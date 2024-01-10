@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitor(scope Construct, id *string, config NetworkConnectionMonitorConfig) NetworkConnectionMonitor
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -133,6 +134,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.toMetadata"></a>
 
@@ -458,7 +465,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NetworkConnectionMonitor_IsConstruct(x interface{}) *bool
 ```
@@ -490,7 +497,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NetworkConnectionMonitor_IsTerraformElement(x interface{}) *bool
 ```
@@ -504,7 +511,7 @@ networkconnectionmonitor.NetworkConnectionMonitor_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NetworkConnectionMonitor_IsTerraformResource(x interface{}) *bool
 ```
@@ -518,7 +525,7 @@ networkconnectionmonitor.NetworkConnectionMonitor_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitor.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NetworkConnectionMonitor_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -989,7 +996,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 &networkconnectionmonitor.NetworkConnectionMonitorConfig {
 	Connection: interface{},
@@ -1009,7 +1016,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnection
 	Notes: *string,
 	OutputWorkspaceResourceIds: *[]*string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.networkConnectionMonitor.NetworkConnectionMonitorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkConnectionMonitor.NetworkConnectionMonitorTimeouts,
 }
 ```
 
@@ -1256,14 +1263,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 &networkconnectionmonitor.NetworkConnectionMonitorEndpoint {
 	Name: *string,
 	Address: *string,
 	CoverageLevel: *string,
 	ExcludedIpAddresses: *[]*string,
-	Filter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilter,
+	Filter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilter,
 	IncludedIpAddresses: *[]*string,
 	TargetResourceId: *string,
 	TargetResourceType: *string,
@@ -1388,7 +1395,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 &networkconnectionmonitor.NetworkConnectionMonitorEndpointFilter {
 	Item: interface{},
@@ -1436,7 +1443,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilterItem.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 &networkconnectionmonitor.NetworkConnectionMonitorEndpointFilterItem {
 	Address: *string,
@@ -1482,16 +1489,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 &networkconnectionmonitor.NetworkConnectionMonitorTestConfiguration {
 	Name: *string,
 	Protocol: *string,
-	HttpConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfiguration,
-	IcmpConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationIcmpConfiguration,
+	HttpConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfiguration,
+	IcmpConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationIcmpConfiguration,
 	PreferredIpVersion: *string,
-	SuccessThreshold: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationSuccessThreshold,
-	TcpConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationTcpConfiguration,
+	SuccessThreshold: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationSuccessThreshold,
+	TcpConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationTcpConfiguration,
 	TestFrequencyInSeconds: *f64,
 }
 ```
@@ -1620,7 +1627,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 &networkconnectionmonitor.NetworkConnectionMonitorTestConfigurationHttpConfiguration {
 	Method: *string,
@@ -1724,7 +1731,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 &networkconnectionmonitor.NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader {
 	Name: *string,
@@ -1770,7 +1777,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationIcmpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 &networkconnectionmonitor.NetworkConnectionMonitorTestConfigurationIcmpConfiguration {
 	TraceRouteEnabled: interface{},
@@ -1802,7 +1809,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationSuccessThreshold.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 &networkconnectionmonitor.NetworkConnectionMonitorTestConfigurationSuccessThreshold {
 	ChecksFailedPercent: *f64,
@@ -1848,7 +1855,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationTcpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 &networkconnectionmonitor.NetworkConnectionMonitorTestConfigurationTcpConfiguration {
 	Port: *f64,
@@ -1908,7 +1915,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 &networkconnectionmonitor.NetworkConnectionMonitorTestGroup {
 	DestinationEndpoints: *[]*string,
@@ -1996,7 +2003,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 &networkconnectionmonitor.NetworkConnectionMonitorTimeouts {
 	Create: *string,
@@ -2072,7 +2079,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilterItemList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorEndpointFilterItemList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkConnectionMonitorEndpointFilterItemList
 ```
@@ -2113,10 +2120,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilterItemList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilterItemList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilterItemList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilterItemList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilterItemList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilterItemList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilterItemList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -2215,7 +2239,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilterItemOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorEndpointFilterItemOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkConnectionMonitorEndpointFilterItemOutputReference
 ```
@@ -2540,7 +2564,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorEndpointFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectionMonitorEndpointFilterOutputReference
 ```
@@ -2860,7 +2884,7 @@ func InternalValue() NetworkConnectionMonitorEndpointFilter
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorEndpointList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkConnectionMonitorEndpointList
 ```
@@ -2901,10 +2925,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -3003,7 +3044,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorEndpointOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorEndpointOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkConnectionMonitorEndpointOutputReference
 ```
@@ -3508,7 +3549,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorTestConfigurationHttpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputReference
 ```
@@ -3944,7 +3985,7 @@ func InternalValue() NetworkConnectionMonitorTestConfigurationHttpConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderList
 ```
@@ -3985,10 +4026,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -4087,7 +4145,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderOutputReference
 ```
@@ -4398,7 +4456,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputReference
 ```
@@ -4676,7 +4734,7 @@ func InternalValue() NetworkConnectionMonitorTestConfigurationIcmpConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorTestConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkConnectionMonitorTestConfigurationList
 ```
@@ -4717,10 +4775,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -4819,7 +4894,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorTestConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkConnectionMonitorTestConfigurationOutputReference
 ```
@@ -5356,7 +5431,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorTestConfigurationSuccessThresholdOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputReference
 ```
@@ -5663,7 +5738,7 @@ func InternalValue() NetworkConnectionMonitorTestConfigurationSuccessThreshold
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorTestConfigurationTcpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputReference
 ```
@@ -5992,7 +6067,7 @@ func InternalValue() NetworkConnectionMonitorTestConfigurationTcpConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestGroupList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorTestGroupList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkConnectionMonitorTestGroupList
 ```
@@ -6033,10 +6108,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestGroupList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestGroupList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestGroupList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestGroupList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestGroupList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestGroupList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestGroupList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -6135,7 +6227,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTestGroupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorTestGroupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkConnectionMonitorTestGroupOutputReference
 ```
@@ -6519,7 +6611,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkConnectionMonitor.NetworkConnectionMonitorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkconnectionmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkconnectionmonitor"
 
 networkconnectionmonitor.NewNetworkConnectionMonitorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectionMonitorTimeoutsOutputReference
 ```

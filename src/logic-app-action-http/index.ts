@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/logic_app_action_http
 // generated from terraform resource schema
 
@@ -80,6 +75,31 @@ export function logicAppActionHttpRunAfterToTerraform(struct?: LogicAppActionHtt
     action_name: cdktf.stringToTerraform(struct!.actionName),
     action_result: cdktf.stringToTerraform(struct!.actionResult),
   }
+}
+
+
+export function logicAppActionHttpRunAfterToHclTerraform(struct?: LogicAppActionHttpRunAfter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action_name: {
+      value: cdktf.stringToHclTerraform(struct!.actionName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    action_result: {
+      value: cdktf.stringToHclTerraform(struct!.actionResult),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogicAppActionHttpRunAfterOutputReference extends cdktf.ComplexObject {
@@ -208,6 +228,43 @@ export function logicAppActionHttpTimeoutsToTerraform(struct?: LogicAppActionHtt
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function logicAppActionHttpTimeoutsToHclTerraform(struct?: LogicAppActionHttpTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogicAppActionHttpTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -567,5 +624,73 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
       run_after: cdktf.listMapper(logicAppActionHttpRunAfterToTerraform, true)(this._runAfter.internalValue),
       timeouts: logicAppActionHttpTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      body: {
+        value: cdktf.stringToHclTerraform(this._body),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      headers: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._headers),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      logic_app_id: {
+        value: cdktf.stringToHclTerraform(this._logicAppId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      method: {
+        value: cdktf.stringToHclTerraform(this._method),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      queries: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._queries),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      uri: {
+        value: cdktf.stringToHclTerraform(this._uri),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      run_after: {
+        value: cdktf.listMapperHcl(logicAppActionHttpRunAfterToHclTerraform, true)(this._runAfter.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "LogicAppActionHttpRunAfterList",
+      },
+      timeouts: {
+        value: logicAppActionHttpTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "LogicAppActionHttpTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

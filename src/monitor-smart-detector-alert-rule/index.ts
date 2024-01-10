@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_smart_detector_alert_rule
 // generated from terraform resource schema
 
@@ -97,6 +92,37 @@ export function monitorSmartDetectorAlertRuleActionGroupToTerraform(struct?: Mon
     ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ids),
     webhook_payload: cdktf.stringToTerraform(struct!.webhookPayload),
   }
+}
+
+
+export function monitorSmartDetectorAlertRuleActionGroupToHclTerraform(struct?: MonitorSmartDetectorAlertRuleActionGroupOutputReference | MonitorSmartDetectorAlertRuleActionGroup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    email_subject: {
+      value: cdktf.stringToHclTerraform(struct!.emailSubject),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.ids),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    webhook_payload: {
+      value: cdktf.stringToHclTerraform(struct!.webhookPayload),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorSmartDetectorAlertRuleActionGroupOutputReference extends cdktf.ComplexObject {
@@ -218,6 +244,43 @@ export function monitorSmartDetectorAlertRuleTimeoutsToTerraform(struct?: Monito
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function monitorSmartDetectorAlertRuleTimeoutsToHclTerraform(struct?: MonitorSmartDetectorAlertRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorSmartDetectorAlertRuleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -622,5 +685,91 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
       action_group: monitorSmartDetectorAlertRuleActionGroupToTerraform(this._actionGroup.internalValue),
       timeouts: monitorSmartDetectorAlertRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      detector_type: {
+        value: cdktf.stringToHclTerraform(this._detectorType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      frequency: {
+        value: cdktf.stringToHclTerraform(this._frequency),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scope_resource_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._scopeResourceIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      severity: {
+        value: cdktf.stringToHclTerraform(this._severity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      throttling_duration: {
+        value: cdktf.stringToHclTerraform(this._throttlingDuration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      action_group: {
+        value: monitorSmartDetectorAlertRuleActionGroupToHclTerraform(this._actionGroup.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorSmartDetectorAlertRuleActionGroupList",
+      },
+      timeouts: {
+        value: monitorSmartDetectorAlertRuleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MonitorSmartDetectorAlertRuleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelalexa"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelalexa"
 
 botchannelalexa.NewBotChannelAlexa(scope Construct, id *string, config BotChannelAlexaConfig) BotChannelAlexa
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelalexa"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelalexa"
 
 botchannelalexa.BotChannelAlexa_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelalexa"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelalexa"
 
 botchannelalexa.BotChannelAlexa_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ botchannelalexa.BotChannelAlexa_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelalexa"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelalexa"
 
 botchannelalexa.BotChannelAlexa_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ botchannelalexa.BotChannelAlexa_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelalexa"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelalexa"
 
 botchannelalexa.BotChannelAlexa_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -819,7 +826,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelalexa"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelalexa"
 
 &botchannelalexa.BotChannelAlexaConfig {
 	Connection: interface{},
@@ -834,7 +841,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelalexa"
 	ResourceGroupName: *string,
 	SkillId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.botChannelAlexa.BotChannelAlexaTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.botChannelAlexa.BotChannelAlexaTimeouts,
 }
 ```
 
@@ -1010,7 +1017,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelalexa"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelalexa"
 
 &botchannelalexa.BotChannelAlexaTimeouts {
 	Create: *string,
@@ -1086,7 +1093,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelalexa"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelalexa"
 
 botchannelalexa.NewBotChannelAlexaTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BotChannelAlexaTimeoutsOutputReference
 ```

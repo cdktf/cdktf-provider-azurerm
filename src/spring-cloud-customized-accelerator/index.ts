@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/spring_cloud_customized_accelerator
 // generated from terraform resource schema
 
@@ -80,6 +75,31 @@ export function springCloudCustomizedAcceleratorGitRepositoryBasicAuthToTerrafor
     password: cdktf.stringToTerraform(struct!.password),
     username: cdktf.stringToTerraform(struct!.username),
   }
+}
+
+
+export function springCloudCustomizedAcceleratorGitRepositoryBasicAuthToHclTerraform(struct?: SpringCloudCustomizedAcceleratorGitRepositoryBasicAuthOutputReference | SpringCloudCustomizedAcceleratorGitRepositoryBasicAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudCustomizedAcceleratorGitRepositoryBasicAuthOutputReference extends cdktf.ComplexObject {
@@ -171,6 +191,37 @@ export function springCloudCustomizedAcceleratorGitRepositorySshAuthToTerraform(
     host_key_algorithm: cdktf.stringToTerraform(struct!.hostKeyAlgorithm),
     private_key: cdktf.stringToTerraform(struct!.privateKey),
   }
+}
+
+
+export function springCloudCustomizedAcceleratorGitRepositorySshAuthToHclTerraform(struct?: SpringCloudCustomizedAcceleratorGitRepositorySshAuthOutputReference | SpringCloudCustomizedAcceleratorGitRepositorySshAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    host_key: {
+      value: cdktf.stringToHclTerraform(struct!.hostKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_key_algorithm: {
+      value: cdktf.stringToHclTerraform(struct!.hostKeyAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_key: {
+      value: cdktf.stringToHclTerraform(struct!.privateKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudCustomizedAcceleratorGitRepositorySshAuthOutputReference extends cdktf.ComplexObject {
@@ -321,6 +372,73 @@ export function springCloudCustomizedAcceleratorGitRepositoryToTerraform(struct?
     basic_auth: springCloudCustomizedAcceleratorGitRepositoryBasicAuthToTerraform(struct!.basicAuth),
     ssh_auth: springCloudCustomizedAcceleratorGitRepositorySshAuthToTerraform(struct!.sshAuth),
   }
+}
+
+
+export function springCloudCustomizedAcceleratorGitRepositoryToHclTerraform(struct?: SpringCloudCustomizedAcceleratorGitRepositoryOutputReference | SpringCloudCustomizedAcceleratorGitRepository): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    branch: {
+      value: cdktf.stringToHclTerraform(struct!.branch),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ca_certificate_id: {
+      value: cdktf.stringToHclTerraform(struct!.caCertificateId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    commit: {
+      value: cdktf.stringToHclTerraform(struct!.commit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    git_tag: {
+      value: cdktf.stringToHclTerraform(struct!.gitTag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.intervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    basic_auth: {
+      value: springCloudCustomizedAcceleratorGitRepositoryBasicAuthToHclTerraform(struct!.basicAuth),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SpringCloudCustomizedAcceleratorGitRepositoryBasicAuthList",
+    },
+    ssh_auth: {
+      value: springCloudCustomizedAcceleratorGitRepositorySshAuthToHclTerraform(struct!.sshAuth),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SpringCloudCustomizedAcceleratorGitRepositorySshAuthList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudCustomizedAcceleratorGitRepositoryOutputReference extends cdktf.ComplexObject {
@@ -574,6 +692,43 @@ export function springCloudCustomizedAcceleratorTimeoutsToTerraform(struct?: Spr
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function springCloudCustomizedAcceleratorTimeoutsToHclTerraform(struct?: SpringCloudCustomizedAcceleratorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudCustomizedAcceleratorTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -936,5 +1091,73 @@ export class SpringCloudCustomizedAccelerator extends cdktf.TerraformResource {
       git_repository: springCloudCustomizedAcceleratorGitRepositoryToTerraform(this._gitRepository.internalValue),
       timeouts: springCloudCustomizedAcceleratorTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      accelerator_tags: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._acceleratorTags),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      accelerator_type: {
+        value: cdktf.stringToHclTerraform(this._acceleratorType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      icon_url: {
+        value: cdktf.stringToHclTerraform(this._iconUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      spring_cloud_accelerator_id: {
+        value: cdktf.stringToHclTerraform(this._springCloudAcceleratorId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      git_repository: {
+        value: springCloudCustomizedAcceleratorGitRepositoryToHclTerraform(this._gitRepository.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudCustomizedAcceleratorGitRepositoryList",
+      },
+      timeouts: {
+        value: springCloudCustomizedAcceleratorTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SpringCloudCustomizedAcceleratorTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

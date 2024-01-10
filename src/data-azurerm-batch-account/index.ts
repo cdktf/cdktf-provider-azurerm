@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/batch_account
 // generated from terraform resource schema
 
@@ -53,6 +48,25 @@ export function dataAzurermBatchAccountEncryptionToTerraform(struct?: DataAzurer
   return {
     key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
   }
+}
+
+
+export function dataAzurermBatchAccountEncryptionToHclTerraform(struct?: DataAzurermBatchAccountEncryption | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_vault_key_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermBatchAccountEncryptionOutputReference extends cdktf.ComplexObject {
@@ -147,6 +161,17 @@ export function dataAzurermBatchAccountKeyVaultReferenceToTerraform(struct?: Dat
   }
 }
 
+
+export function dataAzurermBatchAccountKeyVaultReferenceToHclTerraform(struct?: DataAzurermBatchAccountKeyVaultReference): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermBatchAccountKeyVaultReferenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -219,6 +244,25 @@ export function dataAzurermBatchAccountTimeoutsToTerraform(struct?: DataAzurermB
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermBatchAccountTimeoutsToHclTerraform(struct?: DataAzurermBatchAccountTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermBatchAccountTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -470,5 +514,43 @@ export class DataAzurermBatchAccount extends cdktf.TerraformDataSource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermBatchAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      encryption: {
+        value: cdktf.listMapperHcl(dataAzurermBatchAccountEncryptionToHclTerraform, false)(this._encryption.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataAzurermBatchAccountEncryptionList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermBatchAccountTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermBatchAccountTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/relayhybridconnectionauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relayhybridconnectionauthorizationrule"
 
 relayhybridconnectionauthorizationrule.NewRelayHybridConnectionAuthorizationRule(scope Construct, id *string, config RelayHybridConnectionAuthorizationRuleConfig) RelayHybridConnectionAuthorizationRule
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.toMetadata"></a>
 
@@ -419,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/relayhybridconnectionauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relayhybridconnectionauthorizationrule"
 
 relayhybridconnectionauthorizationrule.RelayHybridConnectionAuthorizationRule_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/relayhybridconnectionauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relayhybridconnectionauthorizationrule"
 
 relayhybridconnectionauthorizationrule.RelayHybridConnectionAuthorizationRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ relayhybridconnectionauthorizationrule.RelayHybridConnectionAuthorizationRule_Is
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/relayhybridconnectionauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relayhybridconnectionauthorizationrule"
 
 relayhybridconnectionauthorizationrule.RelayHybridConnectionAuthorizationRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +486,7 @@ relayhybridconnectionauthorizationrule.RelayHybridConnectionAuthorizationRule_Is
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/relayhybridconnectionauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relayhybridconnectionauthorizationrule"
 
 relayhybridconnectionauthorizationrule.RelayHybridConnectionAuthorizationRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -950,7 +957,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/relayhybridconnectionauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relayhybridconnectionauthorizationrule"
 
 &relayhybridconnectionauthorizationrule.RelayHybridConnectionAuthorizationRuleConfig {
 	Connection: interface{},
@@ -968,7 +975,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/relayhybridconnec
 	Listen: interface{},
 	Manage: interface{},
 	Send: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRuleTimeouts,
 }
 ```
 
@@ -1183,7 +1190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/relayhybridconnectionauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relayhybridconnectionauthorizationrule"
 
 &relayhybridconnectionauthorizationrule.RelayHybridConnectionAuthorizationRuleTimeouts {
 	Create: *string,
@@ -1259,7 +1266,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.relayHybridConnectionAuthorizationRule.RelayHybridConnectionAuthorizationRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/relayhybridconnectionauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relayhybridconnectionauthorizationrule"
 
 relayhybridconnectionauthorizationrule.NewRelayHybridConnectionAuthorizationRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RelayHybridConnectionAuthorizationRuleTimeoutsOutputReference
 ```

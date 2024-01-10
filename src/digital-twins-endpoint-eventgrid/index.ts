@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/digital_twins_endpoint_eventgrid
 // generated from terraform resource schema
 
@@ -80,6 +75,43 @@ export function digitalTwinsEndpointEventgridTimeoutsToTerraform(struct?: Digita
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function digitalTwinsEndpointEventgridTimeoutsToHclTerraform(struct?: DigitalTwinsEndpointEventgridTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DigitalTwinsEndpointEventgridTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -400,5 +432,61 @@ export class DigitalTwinsEndpointEventgrid extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       timeouts: digitalTwinsEndpointEventgridTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      dead_letter_storage_secret: {
+        value: cdktf.stringToHclTerraform(this._deadLetterStorageSecret),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      digital_twins_id: {
+        value: cdktf.stringToHclTerraform(this._digitalTwinsId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      eventgrid_topic_endpoint: {
+        value: cdktf.stringToHclTerraform(this._eventgridTopicEndpoint),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      eventgrid_topic_primary_access_key: {
+        value: cdktf.stringToHclTerraform(this._eventgridTopicPrimaryAccessKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      eventgrid_topic_secondary_access_key: {
+        value: cdktf.stringToHclTerraform(this._eventgridTopicSecondaryAccessKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: digitalTwinsEndpointEventgridTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DigitalTwinsEndpointEventgridTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

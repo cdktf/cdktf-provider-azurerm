@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/virtual_machine_data_disk_attachment
 // generated from terraform resource schema
 
@@ -80,6 +75,43 @@ export function virtualMachineDataDiskAttachmentTimeoutsToTerraform(struct?: Vir
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function virtualMachineDataDiskAttachmentTimeoutsToHclTerraform(struct?: VirtualMachineDataDiskAttachmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VirtualMachineDataDiskAttachmentTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -403,5 +435,61 @@ export class VirtualMachineDataDiskAttachment extends cdktf.TerraformResource {
       write_accelerator_enabled: cdktf.booleanToTerraform(this._writeAcceleratorEnabled),
       timeouts: virtualMachineDataDiskAttachmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      caching: {
+        value: cdktf.stringToHclTerraform(this._caching),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      create_option: {
+        value: cdktf.stringToHclTerraform(this._createOption),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lun: {
+        value: cdktf.numberToHclTerraform(this._lun),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      managed_disk_id: {
+        value: cdktf.stringToHclTerraform(this._managedDiskId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      virtual_machine_id: {
+        value: cdktf.stringToHclTerraform(this._virtualMachineId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      write_accelerator_enabled: {
+        value: cdktf.booleanToHclTerraform(this._writeAcceleratorEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      timeouts: {
+        value: virtualMachineDataDiskAttachmentTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "VirtualMachineDataDiskAttachmentTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

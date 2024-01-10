@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelasticsearch"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticcloudelasticsearch"
 
 elasticcloudelasticsearch.NewElasticCloudElasticsearch(scope Construct, id *string, config ElasticCloudElasticsearchConfig) ElasticCloudElasticsearch
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -131,6 +132,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.toMetadata"></a>
 
@@ -432,7 +439,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelasticsearch"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticcloudelasticsearch"
 
 elasticcloudelasticsearch.ElasticCloudElasticsearch_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelasticsearch"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticcloudelasticsearch"
 
 elasticcloudelasticsearch.ElasticCloudElasticsearch_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +485,7 @@ elasticcloudelasticsearch.ElasticCloudElasticsearch_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelasticsearch"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticcloudelasticsearch"
 
 elasticcloudelasticsearch.ElasticCloudElasticsearch_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +499,7 @@ elasticcloudelasticsearch.ElasticCloudElasticsearch_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearch.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelasticsearch"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticcloudelasticsearch"
 
 elasticcloudelasticsearch.ElasticCloudElasticsearch_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1007,7 +1014,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelasticsearch"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticcloudelasticsearch"
 
 &elasticcloudelasticsearch.ElasticCloudElasticsearchConfig {
 	Connection: interface{},
@@ -1023,10 +1030,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelast
 	ResourceGroupName: *string,
 	SkuName: *string,
 	Id: *string,
-	Logs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.elasticCloudElasticsearch.ElasticCloudElasticsearchLogs,
+	Logs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchLogs,
 	MonitoringEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.elasticCloudElasticsearch.ElasticCloudElasticsearchTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchTimeouts,
 }
 ```
 
@@ -1256,7 +1263,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchLogs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelasticsearch"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticcloudelasticsearch"
 
 &elasticcloudelasticsearch.ElasticCloudElasticsearchLogs {
 	FilteringTag: interface{},
@@ -1332,7 +1339,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchLogsFilteringTag.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelasticsearch"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticcloudelasticsearch"
 
 &elasticcloudelasticsearch.ElasticCloudElasticsearchLogsFilteringTag {
 	Action: *string,
@@ -1392,7 +1399,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelasticsearch"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticcloudelasticsearch"
 
 &elasticcloudelasticsearch.ElasticCloudElasticsearchTimeouts {
 	Create: *string,
@@ -1468,7 +1475,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchLogsFilteringTagList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelasticsearch"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticcloudelasticsearch"
 
 elasticcloudelasticsearch.NewElasticCloudElasticsearchLogsFilteringTagList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ElasticCloudElasticsearchLogsFilteringTagList
 ```
@@ -1509,10 +1516,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchLogsFilteringTagList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchLogsFilteringTagList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchLogsFilteringTagList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchLogsFilteringTagList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchLogsFilteringTagList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchLogsFilteringTagList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchLogsFilteringTagList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1611,7 +1635,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchLogsFilteringTagOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelasticsearch"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticcloudelasticsearch"
 
 elasticcloudelasticsearch.NewElasticCloudElasticsearchLogsFilteringTagOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ElasticCloudElasticsearchLogsFilteringTagOutputReference
 ```
@@ -1944,7 +1968,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchLogsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelasticsearch"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticcloudelasticsearch"
 
 elasticcloudelasticsearch.NewElasticCloudElasticsearchLogsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ElasticCloudElasticsearchLogsOutputReference
 ```
@@ -2322,7 +2346,7 @@ func InternalValue() ElasticCloudElasticsearchLogs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.elasticCloudElasticsearch.ElasticCloudElasticsearchTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/elasticcloudelasticsearch"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticcloudelasticsearch"
 
 elasticcloudelasticsearch.NewElasticCloudElasticsearchTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ElasticCloudElasticsearchTimeoutsOutputReference
 ```

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_identity_provider_aadb2c
 // generated from terraform resource schema
 
@@ -100,6 +95,43 @@ export function apiManagementIdentityProviderAadb2CTimeoutsToTerraform(struct?: 
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function apiManagementIdentityProviderAadb2CTimeoutsToHclTerraform(struct?: ApiManagementIdentityProviderAadb2CTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementIdentityProviderAadb2CTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -498,5 +530,91 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
       signup_policy: cdktf.stringToTerraform(this._signupPolicy),
       timeouts: apiManagementIdentityProviderAadb2CTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allowed_tenant: {
+        value: cdktf.stringToHclTerraform(this._allowedTenant),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      api_management_name: {
+        value: cdktf.stringToHclTerraform(this._apiManagementName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      authority: {
+        value: cdktf.stringToHclTerraform(this._authority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_id: {
+        value: cdktf.stringToHclTerraform(this._clientId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_secret: {
+        value: cdktf.stringToHclTerraform(this._clientSecret),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      password_reset_policy: {
+        value: cdktf.stringToHclTerraform(this._passwordResetPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      profile_editing_policy: {
+        value: cdktf.stringToHclTerraform(this._profileEditingPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      signin_policy: {
+        value: cdktf.stringToHclTerraform(this._signinPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      signin_tenant: {
+        value: cdktf.stringToHclTerraform(this._signinTenant),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      signup_policy: {
+        value: cdktf.stringToHclTerraform(this._signupPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: apiManagementIdentityProviderAadb2CTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ApiManagementIdentityProviderAadb2CTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

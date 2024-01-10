@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbcassandracluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandracluster"
 
 cosmosdbcassandracluster.NewCosmosdbCassandraCluster(scope Construct, id *string, config CosmosdbCassandraClusterConfig) CosmosdbCassandraCluster
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -137,6 +138,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.toMetadata"></a>
 
@@ -474,7 +481,7 @@ func ResetVersion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbcassandracluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandracluster"
 
 cosmosdbcassandracluster.CosmosdbCassandraCluster_IsConstruct(x interface{}) *bool
 ```
@@ -506,7 +513,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbcassandracluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandracluster"
 
 cosmosdbcassandracluster.CosmosdbCassandraCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -520,7 +527,7 @@ cosmosdbcassandracluster.CosmosdbCassandraCluster_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbcassandracluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandracluster"
 
 cosmosdbcassandracluster.CosmosdbCassandraCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -534,7 +541,7 @@ cosmosdbcassandracluster.CosmosdbCassandraCluster_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbcassandracluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandracluster"
 
 cosmosdbcassandracluster.CosmosdbCassandraCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1115,7 +1122,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbcassandracluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandracluster"
 
 &cosmosdbcassandracluster.CosmosdbCassandraClusterConfig {
 	Connection: interface{},
@@ -1136,10 +1143,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbcassandra
 	ExternalSeedNodeIpAddresses: *[]*string,
 	HoursBetweenBackups: *f64,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbCassandraCluster.CosmosdbCassandraClusterIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbCassandraCluster.CosmosdbCassandraClusterIdentity,
 	RepairEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbCassandraCluster.CosmosdbCassandraClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbCassandraCluster.CosmosdbCassandraClusterTimeouts,
 	Version: *string,
 }
 ```
@@ -1448,7 +1455,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraClusterIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbcassandracluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandracluster"
 
 &cosmosdbcassandracluster.CosmosdbCassandraClusterIdentity {
 	Type: *string,
@@ -1480,7 +1487,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbcassandracluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandracluster"
 
 &cosmosdbcassandracluster.CosmosdbCassandraClusterTimeouts {
 	Create: *string,
@@ -1556,7 +1563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraClusterIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbcassandracluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandracluster"
 
 cosmosdbcassandracluster.NewCosmosdbCassandraClusterIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbCassandraClusterIdentityOutputReference
 ```
@@ -1849,7 +1856,7 @@ func InternalValue() CosmosdbCassandraClusterIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraCluster.CosmosdbCassandraClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbcassandracluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandracluster"
 
 cosmosdbcassandracluster.NewCosmosdbCassandraClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbCassandraClusterTimeoutsOutputReference
 ```

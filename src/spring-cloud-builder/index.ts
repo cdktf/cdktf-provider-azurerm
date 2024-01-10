@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/spring_cloud_builder
 // generated from terraform resource schema
 
@@ -66,6 +61,31 @@ export function springCloudBuilderBuildPackGroupToTerraform(struct?: SpringCloud
     build_pack_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.buildPackIds),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function springCloudBuilderBuildPackGroupToHclTerraform(struct?: SpringCloudBuilderBuildPackGroup | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    build_pack_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.buildPackIds),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudBuilderBuildPackGroupOutputReference extends cdktf.ComplexObject {
@@ -192,6 +212,31 @@ export function springCloudBuilderStackToTerraform(struct?: SpringCloudBuilderSt
   }
 }
 
+
+export function springCloudBuilderStackToHclTerraform(struct?: SpringCloudBuilderStackOutputReference | SpringCloudBuilderStack): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SpringCloudBuilderStackOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -286,6 +331,43 @@ export function springCloudBuilderTimeoutsToTerraform(struct?: SpringCloudBuilde
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function springCloudBuilderTimeoutsToHclTerraform(struct?: SpringCloudBuilderTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudBuilderTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -573,5 +655,49 @@ export class SpringCloudBuilder extends cdktf.TerraformResource {
       stack: springCloudBuilderStackToTerraform(this._stack.internalValue),
       timeouts: springCloudBuilderTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      spring_cloud_service_id: {
+        value: cdktf.stringToHclTerraform(this._springCloudServiceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      build_pack_group: {
+        value: cdktf.listMapperHcl(springCloudBuilderBuildPackGroupToHclTerraform, true)(this._buildPackGroup.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "SpringCloudBuilderBuildPackGroupList",
+      },
+      stack: {
+        value: springCloudBuilderStackToHclTerraform(this._stack.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudBuilderStackList",
+      },
+      timeouts: {
+        value: springCloudBuilderTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SpringCloudBuilderTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

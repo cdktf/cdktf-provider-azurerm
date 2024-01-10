@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/sentinel_threat_intelligence_indicator
 // generated from terraform resource schema
 
@@ -124,6 +119,17 @@ export function sentinelThreatIntelligenceIndicatorParsedPatternPatternTypeValue
   }
 }
 
+
+export function sentinelThreatIntelligenceIndicatorParsedPatternPatternTypeValuesToHclTerraform(struct?: SentinelThreatIntelligenceIndicatorParsedPatternPatternTypeValues): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class SentinelThreatIntelligenceIndicatorParsedPatternPatternTypeValuesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -191,6 +197,17 @@ export function sentinelThreatIntelligenceIndicatorParsedPatternToTerraform(stru
   }
   return {
   }
+}
+
+
+export function sentinelThreatIntelligenceIndicatorParsedPatternToHclTerraform(struct?: SentinelThreatIntelligenceIndicatorParsedPattern): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class SentinelThreatIntelligenceIndicatorParsedPatternOutputReference extends cdktf.ComplexObject {
@@ -281,6 +298,43 @@ export function sentinelThreatIntelligenceIndicatorExternalReferenceToTerraform(
     source_name: cdktf.stringToTerraform(struct!.sourceName),
     url: cdktf.stringToTerraform(struct!.url),
   }
+}
+
+
+export function sentinelThreatIntelligenceIndicatorExternalReferenceToHclTerraform(struct?: SentinelThreatIntelligenceIndicatorExternalReference | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    hashes: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.hashes),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    source_name: {
+      value: cdktf.stringToHclTerraform(struct!.sourceName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelThreatIntelligenceIndicatorExternalReferenceOutputReference extends cdktf.ComplexObject {
@@ -461,6 +515,37 @@ export function sentinelThreatIntelligenceIndicatorGranularMarkingToTerraform(st
   }
 }
 
+
+export function sentinelThreatIntelligenceIndicatorGranularMarkingToHclTerraform(struct?: SentinelThreatIntelligenceIndicatorGranularMarking | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    language: {
+      value: cdktf.stringToHclTerraform(struct!.language),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    marking_ref: {
+      value: cdktf.stringToHclTerraform(struct!.markingRef),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    selectors: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.selectors),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SentinelThreatIntelligenceIndicatorGranularMarkingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -602,6 +687,25 @@ export function sentinelThreatIntelligenceIndicatorKillChainPhaseToTerraform(str
   }
 }
 
+
+export function sentinelThreatIntelligenceIndicatorKillChainPhaseToHclTerraform(struct?: SentinelThreatIntelligenceIndicatorKillChainPhase | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SentinelThreatIntelligenceIndicatorKillChainPhaseOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -712,6 +816,43 @@ export function sentinelThreatIntelligenceIndicatorTimeoutsToTerraform(struct?: 
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function sentinelThreatIntelligenceIndicatorTimeoutsToHclTerraform(struct?: SentinelThreatIntelligenceIndicatorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelThreatIntelligenceIndicatorTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1322,5 +1463,145 @@ export class SentinelThreatIntelligenceIndicator extends cdktf.TerraformResource
       kill_chain_phase: cdktf.listMapper(sentinelThreatIntelligenceIndicatorKillChainPhaseToTerraform, true)(this._killChainPhase.internalValue),
       timeouts: sentinelThreatIntelligenceIndicatorTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      confidence: {
+        value: cdktf.numberToHclTerraform(this._confidence),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      created_by: {
+        value: cdktf.stringToHclTerraform(this._createdBy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      extension: {
+        value: cdktf.stringToHclTerraform(this._extension),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      language: {
+        value: cdktf.stringToHclTerraform(this._language),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      object_marking_refs: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._objectMarkingRefs),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      pattern: {
+        value: cdktf.stringToHclTerraform(this._pattern),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pattern_type: {
+        value: cdktf.stringToHclTerraform(this._patternType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pattern_version: {
+        value: cdktf.stringToHclTerraform(this._patternVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      revoked: {
+        value: cdktf.booleanToHclTerraform(this._revoked),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      source: {
+        value: cdktf.stringToHclTerraform(this._source),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._tags),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      threat_types: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._threatTypes),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      validate_from_utc: {
+        value: cdktf.stringToHclTerraform(this._validateFromUtc),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      validate_until_utc: {
+        value: cdktf.stringToHclTerraform(this._validateUntilUtc),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      workspace_id: {
+        value: cdktf.stringToHclTerraform(this._workspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      external_reference: {
+        value: cdktf.listMapperHcl(sentinelThreatIntelligenceIndicatorExternalReferenceToHclTerraform, true)(this._externalReference.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelThreatIntelligenceIndicatorExternalReferenceList",
+      },
+      granular_marking: {
+        value: cdktf.listMapperHcl(sentinelThreatIntelligenceIndicatorGranularMarkingToHclTerraform, true)(this._granularMarking.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelThreatIntelligenceIndicatorGranularMarkingList",
+      },
+      kill_chain_phase: {
+        value: cdktf.listMapperHcl(sentinelThreatIntelligenceIndicatorKillChainPhaseToHclTerraform, true)(this._killChainPhase.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelThreatIntelligenceIndicatorKillChainPhaseList",
+      },
+      timeouts: {
+        value: sentinelThreatIntelligenceIndicatorTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SentinelThreatIntelligenceIndicatorTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

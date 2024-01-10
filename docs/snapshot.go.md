@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.snapshot.Snapshot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 snapshot.NewSnapshot(scope Construct, id *string, config SnapshotConfig) Snapshot
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.snapshot.Snapshot.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -135,6 +136,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.snapshot.Snapshot.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.snapshot.Snapshot.toMetadata"></a>
 
@@ -460,7 +467,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.snapshot.Snapshot.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 snapshot.Snapshot_IsConstruct(x interface{}) *bool
 ```
@@ -492,7 +499,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.snapshot.Snapshot.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 snapshot.Snapshot_IsTerraformElement(x interface{}) *bool
 ```
@@ -506,7 +513,7 @@ snapshot.Snapshot_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.snapshot.Snapshot.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 snapshot.Snapshot_IsTerraformResource(x interface{}) *bool
 ```
@@ -520,7 +527,7 @@ snapshot.Snapshot_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.snapshot.Snapshot.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 snapshot.Snapshot_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1046,7 +1053,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.snapshot.SnapshotConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 &snapshot.SnapshotConfig {
 	Connection: interface{},
@@ -1061,14 +1068,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
 	Name: *string,
 	ResourceGroupName: *string,
 	DiskSizeGb: *f64,
-	EncryptionSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.snapshot.SnapshotEncryptionSettings,
+	EncryptionSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.snapshot.SnapshotEncryptionSettings,
 	Id: *string,
 	IncrementalEnabled: interface{},
 	SourceResourceId: *string,
 	SourceUri: *string,
 	StorageAccountId: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.snapshot.SnapshotTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.snapshot.SnapshotTimeouts,
 }
 ```
 
@@ -1337,12 +1344,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.snapshot.SnapshotEncryptionSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 &snapshot.SnapshotEncryptionSettings {
-	DiskEncryptionKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.snapshot.SnapshotEncryptionSettingsDiskEncryptionKey,
+	DiskEncryptionKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.snapshot.SnapshotEncryptionSettingsDiskEncryptionKey,
 	Enabled: interface{},
-	KeyEncryptionKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.snapshot.SnapshotEncryptionSettingsKeyEncryptionKey,
+	KeyEncryptionKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.snapshot.SnapshotEncryptionSettingsKeyEncryptionKey,
 }
 ```
 
@@ -1401,7 +1408,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.snapshot.SnapshotEncryptionSettingsDiskEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 &snapshot.SnapshotEncryptionSettingsDiskEncryptionKey {
 	SecretUrl: *string,
@@ -1447,7 +1454,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.snapshot.SnapshotEncryptionSettingsKeyEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 &snapshot.SnapshotEncryptionSettingsKeyEncryptionKey {
 	KeyUrl: *string,
@@ -1493,7 +1500,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.snapshot.SnapshotTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 &snapshot.SnapshotTimeouts {
 	Create: *string,
@@ -1569,7 +1576,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.snapshot.SnapshotEncryptionSettingsDiskEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 snapshot.NewSnapshotEncryptionSettingsDiskEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SnapshotEncryptionSettingsDiskEncryptionKeyOutputReference
 ```
@@ -1862,7 +1869,7 @@ func InternalValue() SnapshotEncryptionSettingsDiskEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.snapshot.SnapshotEncryptionSettingsKeyEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 snapshot.NewSnapshotEncryptionSettingsKeyEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SnapshotEncryptionSettingsKeyEncryptionKeyOutputReference
 ```
@@ -2155,7 +2162,7 @@ func InternalValue() SnapshotEncryptionSettingsKeyEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.snapshot.SnapshotEncryptionSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 snapshot.NewSnapshotEncryptionSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SnapshotEncryptionSettingsOutputReference
 ```
@@ -2517,7 +2524,7 @@ func InternalValue() SnapshotEncryptionSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.snapshot.SnapshotTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/snapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/snapshot"
 
 snapshot.NewSnapshotTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SnapshotTimeoutsOutputReference
 ```

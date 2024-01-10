@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimeazure"
 
 datafactoryintegrationruntimeazure.NewDataFactoryIntegrationRuntimeAzure(scope Construct, id *string, config DataFactoryIntegrationRuntimeAzureConfig) DataFactoryIntegrationRuntimeAzure
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -133,6 +134,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.toMetadata"></a>
 
@@ -440,7 +447,7 @@ func ResetVirtualNetworkEnabled()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimeazure"
 
 datafactoryintegrationruntimeazure.DataFactoryIntegrationRuntimeAzure_IsConstruct(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimeazure"
 
 datafactoryintegrationruntimeazure.DataFactoryIntegrationRuntimeAzure_IsTerraformElement(x interface{}) *bool
 ```
@@ -486,7 +493,7 @@ datafactoryintegrationruntimeazure.DataFactoryIntegrationRuntimeAzure_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimeazure"
 
 datafactoryintegrationruntimeazure.DataFactoryIntegrationRuntimeAzure_IsTerraformResource(x interface{}) *bool
 ```
@@ -500,7 +507,7 @@ datafactoryintegrationruntimeazure.DataFactoryIntegrationRuntimeAzure_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzure.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimeazure"
 
 datafactoryintegrationruntimeazure.DataFactoryIntegrationRuntimeAzure_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -971,7 +978,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzureConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimeazure"
 
 &datafactoryintegrationruntimeazure.DataFactoryIntegrationRuntimeAzureConfig {
 	Connection: interface{},
@@ -989,7 +996,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegr
 	CoreCount: *f64,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzureTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzureTimeouts,
 	TimeToLiveMin: *f64,
 	VirtualNetworkEnabled: interface{},
 }
@@ -1232,7 +1239,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzureTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimeazure"
 
 &datafactoryintegrationruntimeazure.DataFactoryIntegrationRuntimeAzureTimeouts {
 	Create: *string,
@@ -1308,7 +1315,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzure.DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimeazure"
 
 datafactoryintegrationruntimeazure.NewDataFactoryIntegrationRuntimeAzureTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference
 ```

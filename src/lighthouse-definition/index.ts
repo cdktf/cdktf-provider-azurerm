@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/lighthouse_definition
 // generated from terraform resource schema
 
@@ -94,6 +89,43 @@ export function lighthouseDefinitionAuthorizationToTerraform(struct?: Lighthouse
     principal_id: cdktf.stringToTerraform(struct!.principalId),
     role_definition_id: cdktf.stringToTerraform(struct!.roleDefinitionId),
   }
+}
+
+
+export function lighthouseDefinitionAuthorizationToHclTerraform(struct?: LighthouseDefinitionAuthorization | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    delegated_role_definition_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.delegatedRoleDefinitionIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    principal_display_name: {
+      value: cdktf.stringToHclTerraform(struct!.principalDisplayName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    principal_id: {
+      value: cdktf.stringToHclTerraform(struct!.principalId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    role_definition_id: {
+      value: cdktf.stringToHclTerraform(struct!.roleDefinitionId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LighthouseDefinitionAuthorizationOutputReference extends cdktf.ComplexObject {
@@ -258,6 +290,31 @@ export function lighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyA
   }
 }
 
+
+export function lighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverToHclTerraform(struct?: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    principal_display_name: {
+      value: cdktf.stringToHclTerraform(struct!.principalDisplayName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    principal_id: {
+      value: cdktf.stringToHclTerraform(struct!.principalId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -386,6 +443,37 @@ export function lighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyT
   }
 }
 
+
+export function lighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyToHclTerraform(struct?: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyOutputReference | LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    maximum_activation_duration: {
+      value: cdktf.stringToHclTerraform(struct!.maximumActivationDuration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    multi_factor_auth_provider: {
+      value: cdktf.stringToHclTerraform(struct!.multiFactorAuthProvider),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    approver: {
+      value: cdktf.listMapperHcl(lighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverToHclTerraform, true)(struct!.approver),
+      isBlock: true,
+      type: "set",
+      storageClassType: "LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -510,6 +598,43 @@ export function lighthouseDefinitionEligibleAuthorizationToTerraform(struct?: Li
     role_definition_id: cdktf.stringToTerraform(struct!.roleDefinitionId),
     just_in_time_access_policy: lighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyToTerraform(struct!.justInTimeAccessPolicy),
   }
+}
+
+
+export function lighthouseDefinitionEligibleAuthorizationToHclTerraform(struct?: LighthouseDefinitionEligibleAuthorization | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    principal_display_name: {
+      value: cdktf.stringToHclTerraform(struct!.principalDisplayName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    principal_id: {
+      value: cdktf.stringToHclTerraform(struct!.principalId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    role_definition_id: {
+      value: cdktf.stringToHclTerraform(struct!.roleDefinitionId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    just_in_time_access_policy: {
+      value: lighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyToHclTerraform(struct!.justInTimeAccessPolicy),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LighthouseDefinitionEligibleAuthorizationOutputReference extends cdktf.ComplexObject {
@@ -684,6 +809,43 @@ export function lighthouseDefinitionPlanToTerraform(struct?: LighthouseDefinitio
   }
 }
 
+
+export function lighthouseDefinitionPlanToHclTerraform(struct?: LighthouseDefinitionPlanOutputReference | LighthouseDefinitionPlan): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    product: {
+      value: cdktf.stringToHclTerraform(struct!.product),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    publisher: {
+      value: cdktf.stringToHclTerraform(struct!.publisher),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LighthouseDefinitionPlanOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -816,6 +978,43 @@ export function lighthouseDefinitionTimeoutsToTerraform(struct?: LighthouseDefin
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function lighthouseDefinitionTimeoutsToHclTerraform(struct?: LighthouseDefinitionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LighthouseDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1175,5 +1374,73 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
       plan: lighthouseDefinitionPlanToTerraform(this._plan.internalValue),
       timeouts: lighthouseDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lighthouse_definition_id: {
+        value: cdktf.stringToHclTerraform(this._lighthouseDefinitionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      managing_tenant_id: {
+        value: cdktf.stringToHclTerraform(this._managingTenantId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scope: {
+        value: cdktf.stringToHclTerraform(this._scope),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      authorization: {
+        value: cdktf.listMapperHcl(lighthouseDefinitionAuthorizationToHclTerraform, true)(this._authorization.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "LighthouseDefinitionAuthorizationList",
+      },
+      eligible_authorization: {
+        value: cdktf.listMapperHcl(lighthouseDefinitionEligibleAuthorizationToHclTerraform, true)(this._eligibleAuthorization.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "LighthouseDefinitionEligibleAuthorizationList",
+      },
+      plan: {
+        value: lighthouseDefinitionPlanToHclTerraform(this._plan.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LighthouseDefinitionPlanList",
+      },
+      timeouts: {
+        value: lighthouseDefinitionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "LighthouseDefinitionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

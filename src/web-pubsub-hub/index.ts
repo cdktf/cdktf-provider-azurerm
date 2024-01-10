@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/web_pubsub_hub
 // generated from terraform resource schema
 
@@ -65,6 +60,25 @@ export function webPubsubHubEventHandlerAuthToTerraform(struct?: WebPubsubHubEve
   return {
     managed_identity_id: cdktf.stringToTerraform(struct!.managedIdentityId),
   }
+}
+
+
+export function webPubsubHubEventHandlerAuthToHclTerraform(struct?: WebPubsubHubEventHandlerAuthOutputReference | WebPubsubHubEventHandlerAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    managed_identity_id: {
+      value: cdktf.stringToHclTerraform(struct!.managedIdentityId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class WebPubsubHubEventHandlerAuthOutputReference extends cdktf.ComplexObject {
@@ -144,6 +158,43 @@ export function webPubsubHubEventHandlerToTerraform(struct?: WebPubsubHubEventHa
     user_event_pattern: cdktf.stringToTerraform(struct!.userEventPattern),
     auth: webPubsubHubEventHandlerAuthToTerraform(struct!.auth),
   }
+}
+
+
+export function webPubsubHubEventHandlerToHclTerraform(struct?: WebPubsubHubEventHandler | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    system_events: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.systemEvents),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    url_template: {
+      value: cdktf.stringToHclTerraform(struct!.urlTemplate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    user_event_pattern: {
+      value: cdktf.stringToHclTerraform(struct!.userEventPattern),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    auth: {
+      value: webPubsubHubEventHandlerAuthToHclTerraform(struct!.auth),
+      isBlock: true,
+      type: "list",
+      storageClassType: "WebPubsubHubEventHandlerAuthList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class WebPubsubHubEventHandlerOutputReference extends cdktf.ComplexObject {
@@ -321,6 +372,43 @@ export function webPubsubHubEventListenerToTerraform(struct?: WebPubsubHubEventL
   }
 }
 
+
+export function webPubsubHubEventListenerToHclTerraform(struct?: WebPubsubHubEventListener | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    eventhub_name: {
+      value: cdktf.stringToHclTerraform(struct!.eventhubName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    eventhub_namespace_name: {
+      value: cdktf.stringToHclTerraform(struct!.eventhubNamespaceName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    system_event_name_filter: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.systemEventNameFilter),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    user_event_name_filter: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.userEventNameFilter),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class WebPubsubHubEventListenerOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -491,6 +579,43 @@ export function webPubsubHubTimeoutsToTerraform(struct?: WebPubsubHubTimeouts | 
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function webPubsubHubTimeoutsToHclTerraform(struct?: WebPubsubHubTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class WebPubsubHubTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -802,5 +927,55 @@ export class WebPubsubHub extends cdktf.TerraformResource {
       event_listener: cdktf.listMapper(webPubsubHubEventListenerToTerraform, true)(this._eventListener.internalValue),
       timeouts: webPubsubHubTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      anonymous_connections_enabled: {
+        value: cdktf.booleanToHclTerraform(this._anonymousConnectionsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      web_pubsub_id: {
+        value: cdktf.stringToHclTerraform(this._webPubsubId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      event_handler: {
+        value: cdktf.listMapperHcl(webPubsubHubEventHandlerToHclTerraform, true)(this._eventHandler.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "WebPubsubHubEventHandlerList",
+      },
+      event_listener: {
+        value: cdktf.listMapperHcl(webPubsubHubEventListenerToHclTerraform, true)(this._eventListener.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "WebPubsubHubEventListenerList",
+      },
+      timeouts: {
+        value: webPubsubHubTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "WebPubsubHubTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

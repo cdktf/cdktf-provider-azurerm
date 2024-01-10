@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/sentinel_alert_rule_anomaly_duplicate
 // generated from terraform resource schema
 
@@ -82,6 +77,17 @@ export function sentinelAlertRuleAnomalyDuplicateRequiredDataConnectorToTerrafor
   }
 }
 
+
+export function sentinelAlertRuleAnomalyDuplicateRequiredDataConnectorToHclTerraform(struct?: SentinelAlertRuleAnomalyDuplicateRequiredDataConnector): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class SentinelAlertRuleAnomalyDuplicateRequiredDataConnectorOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -159,6 +165,31 @@ export function sentinelAlertRuleAnomalyDuplicateMultiSelectObservationToTerrafo
     name: cdktf.stringToTerraform(struct!.name),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
+}
+
+
+export function sentinelAlertRuleAnomalyDuplicateMultiSelectObservationToHclTerraform(struct?: SentinelAlertRuleAnomalyDuplicateMultiSelectObservation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelAlertRuleAnomalyDuplicateMultiSelectObservationOutputReference extends cdktf.ComplexObject {
@@ -292,6 +323,37 @@ export function sentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservationTo
     name: cdktf.stringToTerraform(struct!.name),
     prioritize: cdktf.stringToTerraform(struct!.prioritize),
   }
+}
+
+
+export function sentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservationToHclTerraform(struct?: SentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    exclude: {
+      value: cdktf.stringToHclTerraform(struct!.exclude),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    prioritize: {
+      value: cdktf.stringToHclTerraform(struct!.prioritize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservationOutputReference extends cdktf.ComplexObject {
@@ -442,6 +504,31 @@ export function sentinelAlertRuleAnomalyDuplicateSingleSelectObservationToTerraf
   }
 }
 
+
+export function sentinelAlertRuleAnomalyDuplicateSingleSelectObservationToHclTerraform(struct?: SentinelAlertRuleAnomalyDuplicateSingleSelectObservation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SentinelAlertRuleAnomalyDuplicateSingleSelectObservationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -568,6 +655,31 @@ export function sentinelAlertRuleAnomalyDuplicateThresholdObservationToTerraform
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function sentinelAlertRuleAnomalyDuplicateThresholdObservationToHclTerraform(struct?: SentinelAlertRuleAnomalyDuplicateThresholdObservation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelAlertRuleAnomalyDuplicateThresholdObservationOutputReference extends cdktf.ComplexObject {
@@ -711,6 +823,43 @@ export function sentinelAlertRuleAnomalyDuplicateTimeoutsToTerraform(struct?: Se
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function sentinelAlertRuleAnomalyDuplicateTimeoutsToHclTerraform(struct?: SentinelAlertRuleAnomalyDuplicateTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelAlertRuleAnomalyDuplicateTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1136,5 +1285,79 @@ export class SentinelAlertRuleAnomalyDuplicate extends cdktf.TerraformResource {
       threshold_observation: cdktf.listMapper(sentinelAlertRuleAnomalyDuplicateThresholdObservationToTerraform, true)(this._thresholdObservation.internalValue),
       timeouts: sentinelAlertRuleAnomalyDuplicateTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      built_in_rule_id: {
+        value: cdktf.stringToHclTerraform(this._builtInRuleId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log_analytics_workspace_id: {
+        value: cdktf.stringToHclTerraform(this._logAnalyticsWorkspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mode: {
+        value: cdktf.stringToHclTerraform(this._mode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      multi_select_observation: {
+        value: cdktf.listMapperHcl(sentinelAlertRuleAnomalyDuplicateMultiSelectObservationToHclTerraform, true)(this._multiSelectObservation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelAlertRuleAnomalyDuplicateMultiSelectObservationList",
+      },
+      prioritized_exclude_observation: {
+        value: cdktf.listMapperHcl(sentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservationToHclTerraform, true)(this._prioritizedExcludeObservation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservationList",
+      },
+      single_select_observation: {
+        value: cdktf.listMapperHcl(sentinelAlertRuleAnomalyDuplicateSingleSelectObservationToHclTerraform, true)(this._singleSelectObservation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelAlertRuleAnomalyDuplicateSingleSelectObservationList",
+      },
+      threshold_observation: {
+        value: cdktf.listMapperHcl(sentinelAlertRuleAnomalyDuplicateThresholdObservationToHclTerraform, true)(this._thresholdObservation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelAlertRuleAnomalyDuplicateThresholdObservationList",
+      },
+      timeouts: {
+        value: sentinelAlertRuleAnomalyDuplicateTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SentinelAlertRuleAnomalyDuplicateTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

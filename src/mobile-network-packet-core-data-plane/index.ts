@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mobile_network_packet_core_data_plane
 // generated from terraform resource schema
 
@@ -88,6 +83,43 @@ export function mobileNetworkPacketCoreDataPlaneTimeoutsToTerraform(struct?: Mob
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function mobileNetworkPacketCoreDataPlaneTimeoutsToHclTerraform(struct?: MobileNetworkPacketCoreDataPlaneTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MobileNetworkPacketCoreDataPlaneTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -450,5 +482,73 @@ export class MobileNetworkPacketCoreDataPlane extends cdktf.TerraformResource {
       user_plane_access_name: cdktf.stringToTerraform(this._userPlaneAccessName),
       timeouts: mobileNetworkPacketCoreDataPlaneTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mobile_network_packet_core_control_plane_id: {
+        value: cdktf.stringToHclTerraform(this._mobileNetworkPacketCoreControlPlaneId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      user_plane_access_ipv4_address: {
+        value: cdktf.stringToHclTerraform(this._userPlaneAccessIpv4Address),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_plane_access_ipv4_gateway: {
+        value: cdktf.stringToHclTerraform(this._userPlaneAccessIpv4Gateway),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_plane_access_ipv4_subnet: {
+        value: cdktf.stringToHclTerraform(this._userPlaneAccessIpv4Subnet),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_plane_access_name: {
+        value: cdktf.stringToHclTerraform(this._userPlaneAccessName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: mobileNetworkPacketCoreDataPlaneTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MobileNetworkPacketCoreDataPlaneTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/firewall_policy
 // generated from terraform resource schema
 
@@ -130,6 +125,31 @@ export function firewallPolicyDnsToTerraform(struct?: FirewallPolicyDnsOutputRef
   }
 }
 
+
+export function firewallPolicyDnsToHclTerraform(struct?: FirewallPolicyDnsOutputReference | FirewallPolicyDns): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    proxy_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.proxyEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    servers: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.servers),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -240,6 +260,55 @@ export function firewallPolicyExplicitProxyToTerraform(struct?: FirewallPolicyEx
     pac_file: cdktf.stringToTerraform(struct!.pacFile),
     pac_file_port: cdktf.numberToTerraform(struct!.pacFilePort),
   }
+}
+
+
+export function firewallPolicyExplicitProxyToHclTerraform(struct?: FirewallPolicyExplicitProxyOutputReference | FirewallPolicyExplicitProxy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enable_pac_file: {
+      value: cdktf.booleanToHclTerraform(struct!.enablePacFile),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    http_port: {
+      value: cdktf.numberToHclTerraform(struct!.httpPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    https_port: {
+      value: cdktf.numberToHclTerraform(struct!.httpsPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    pac_file: {
+      value: cdktf.stringToHclTerraform(struct!.pacFile),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    pac_file_port: {
+      value: cdktf.numberToHclTerraform(struct!.pacFilePort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirewallPolicyExplicitProxyOutputReference extends cdktf.ComplexObject {
@@ -422,6 +491,31 @@ export function firewallPolicyIdentityToTerraform(struct?: FirewallPolicyIdentit
   }
 }
 
+
+export function firewallPolicyIdentityToHclTerraform(struct?: FirewallPolicyIdentityOutputReference | FirewallPolicyIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -522,6 +616,31 @@ export function firewallPolicyInsightsLogAnalyticsWorkspaceToTerraform(struct?: 
     firewall_location: cdktf.stringToTerraform(struct!.firewallLocation),
     id: cdktf.stringToTerraform(struct!.id),
   }
+}
+
+
+export function firewallPolicyInsightsLogAnalyticsWorkspaceToHclTerraform(struct?: FirewallPolicyInsightsLogAnalyticsWorkspace | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    firewall_location: {
+      value: cdktf.stringToHclTerraform(struct!.firewallLocation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirewallPolicyInsightsLogAnalyticsWorkspaceOutputReference extends cdktf.ComplexObject {
@@ -652,6 +771,43 @@ export function firewallPolicyInsightsToTerraform(struct?: FirewallPolicyInsight
     retention_in_days: cdktf.numberToTerraform(struct!.retentionInDays),
     log_analytics_workspace: cdktf.listMapper(firewallPolicyInsightsLogAnalyticsWorkspaceToTerraform, true)(struct!.logAnalyticsWorkspace),
   }
+}
+
+
+export function firewallPolicyInsightsToHclTerraform(struct?: FirewallPolicyInsightsOutputReference | FirewallPolicyInsights): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_log_analytics_workspace_id: {
+      value: cdktf.stringToHclTerraform(struct!.defaultLogAnalyticsWorkspaceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    retention_in_days: {
+      value: cdktf.numberToHclTerraform(struct!.retentionInDays),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    log_analytics_workspace: {
+      value: cdktf.listMapperHcl(firewallPolicyInsightsLogAnalyticsWorkspaceToHclTerraform, true)(struct!.logAnalyticsWorkspace),
+      isBlock: true,
+      type: "list",
+      storageClassType: "FirewallPolicyInsightsLogAnalyticsWorkspaceList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirewallPolicyInsightsOutputReference extends cdktf.ComplexObject {
@@ -785,6 +941,31 @@ export function firewallPolicyIntrusionDetectionSignatureOverridesToTerraform(st
     id: cdktf.stringToTerraform(struct!.id),
     state: cdktf.stringToTerraform(struct!.state),
   }
+}
+
+
+export function firewallPolicyIntrusionDetectionSignatureOverridesToHclTerraform(struct?: FirewallPolicyIntrusionDetectionSignatureOverrides | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    state: {
+      value: cdktf.stringToHclTerraform(struct!.state),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirewallPolicyIntrusionDetectionSignatureOverridesOutputReference extends cdktf.ComplexObject {
@@ -939,6 +1120,67 @@ export function firewallPolicyIntrusionDetectionTrafficBypassToTerraform(struct?
     source_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceAddresses),
     source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceIpGroups),
   }
+}
+
+
+export function firewallPolicyIntrusionDetectionTrafficBypassToHclTerraform(struct?: FirewallPolicyIntrusionDetectionTrafficBypass | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    destination_addresses: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.destinationAddresses),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    destination_ip_groups: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.destinationIpGroups),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    destination_ports: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.destinationPorts),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    protocol: {
+      value: cdktf.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_addresses: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.sourceAddresses),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    source_ip_groups: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.sourceIpGroups),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirewallPolicyIntrusionDetectionTrafficBypassOutputReference extends cdktf.ComplexObject {
@@ -1205,6 +1447,43 @@ export function firewallPolicyIntrusionDetectionToTerraform(struct?: FirewallPol
   }
 }
 
+
+export function firewallPolicyIntrusionDetectionToHclTerraform(struct?: FirewallPolicyIntrusionDetectionOutputReference | FirewallPolicyIntrusionDetection): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_ranges: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.privateRanges),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    signature_overrides: {
+      value: cdktf.listMapperHcl(firewallPolicyIntrusionDetectionSignatureOverridesToHclTerraform, true)(struct!.signatureOverrides),
+      isBlock: true,
+      type: "list",
+      storageClassType: "FirewallPolicyIntrusionDetectionSignatureOverridesList",
+    },
+    traffic_bypass: {
+      value: cdktf.listMapperHcl(firewallPolicyIntrusionDetectionTrafficBypassToHclTerraform, true)(struct!.trafficBypass),
+      isBlock: true,
+      type: "list",
+      storageClassType: "FirewallPolicyIntrusionDetectionTrafficBypassList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1341,6 +1620,31 @@ export function firewallPolicyThreatIntelligenceAllowlistStructToTerraform(struc
   }
 }
 
+
+export function firewallPolicyThreatIntelligenceAllowlistStructToHclTerraform(struct?: FirewallPolicyThreatIntelligenceAllowlistStructOutputReference | FirewallPolicyThreatIntelligenceAllowlistStruct): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    fqdns: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.fqdns),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    ip_addresses: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.ipAddresses),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class FirewallPolicyThreatIntelligenceAllowlistStructOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1441,6 +1745,43 @@ export function firewallPolicyTimeoutsToTerraform(struct?: FirewallPolicyTimeout
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function firewallPolicyTimeoutsToHclTerraform(struct?: FirewallPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirewallPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1587,6 +1928,31 @@ export function firewallPolicyTlsCertificateToTerraform(struct?: FirewallPolicyT
     key_vault_secret_id: cdktf.stringToTerraform(struct!.keyVaultSecretId),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function firewallPolicyTlsCertificateToHclTerraform(struct?: FirewallPolicyTlsCertificateOutputReference | FirewallPolicyTlsCertificate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_vault_secret_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultSecretId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FirewallPolicyTlsCertificateOutputReference extends cdktf.ComplexObject {
@@ -2066,5 +2432,127 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       timeouts: firewallPolicyTimeoutsToTerraform(this._timeouts.internalValue),
       tls_certificate: firewallPolicyTlsCertificateToTerraform(this._tlsCertificate.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      auto_learn_private_ranges_enabled: {
+        value: cdktf.booleanToHclTerraform(this._autoLearnPrivateRangesEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      base_policy_id: {
+        value: cdktf.stringToHclTerraform(this._basePolicyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      private_ip_ranges: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._privateIpRanges),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku: {
+        value: cdktf.stringToHclTerraform(this._sku),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sql_redirect_allowed: {
+        value: cdktf.booleanToHclTerraform(this._sqlRedirectAllowed),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      threat_intelligence_mode: {
+        value: cdktf.stringToHclTerraform(this._threatIntelligenceMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dns: {
+        value: firewallPolicyDnsToHclTerraform(this._dns.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirewallPolicyDnsList",
+      },
+      explicit_proxy: {
+        value: firewallPolicyExplicitProxyToHclTerraform(this._explicitProxy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirewallPolicyExplicitProxyList",
+      },
+      identity: {
+        value: firewallPolicyIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirewallPolicyIdentityList",
+      },
+      insights: {
+        value: firewallPolicyInsightsToHclTerraform(this._insights.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirewallPolicyInsightsList",
+      },
+      intrusion_detection: {
+        value: firewallPolicyIntrusionDetectionToHclTerraform(this._intrusionDetection.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirewallPolicyIntrusionDetectionList",
+      },
+      threat_intelligence_allowlist: {
+        value: firewallPolicyThreatIntelligenceAllowlistStructToHclTerraform(this._threatIntelligenceAllowlist.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirewallPolicyThreatIntelligenceAllowlistStructList",
+      },
+      timeouts: {
+        value: firewallPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "FirewallPolicyTimeouts",
+      },
+      tls_certificate: {
+        value: firewallPolicyTlsCertificateToHclTerraform(this._tlsCertificate.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FirewallPolicyTlsCertificateList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

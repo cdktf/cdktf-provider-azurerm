@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/images
 // generated from terraform resource schema
 
@@ -44,6 +39,17 @@ export function dataAzurermImagesImagesDataDiskToTerraform(struct?: DataAzurermI
   }
   return {
   }
+}
+
+
+export function dataAzurermImagesImagesDataDiskToHclTerraform(struct?: DataAzurermImagesImagesDataDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermImagesImagesDataDiskOutputReference extends cdktf.ComplexObject {
@@ -128,6 +134,17 @@ export function dataAzurermImagesImagesOsDiskToTerraform(struct?: DataAzurermIma
   }
   return {
   }
+}
+
+
+export function dataAzurermImagesImagesOsDiskToHclTerraform(struct?: DataAzurermImagesImagesOsDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermImagesImagesOsDiskOutputReference extends cdktf.ComplexObject {
@@ -222,6 +239,17 @@ export function dataAzurermImagesImagesToTerraform(struct?: DataAzurermImagesIma
   }
   return {
   }
+}
+
+
+export function dataAzurermImagesImagesToHclTerraform(struct?: DataAzurermImagesImages): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermImagesImagesOutputReference extends cdktf.ComplexObject {
@@ -319,6 +347,25 @@ export function dataAzurermImagesTimeoutsToTerraform(struct?: DataAzurermImagesT
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermImagesTimeoutsToHclTerraform(struct?: DataAzurermImagesTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermImagesTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -519,5 +566,37 @@ export class DataAzurermImages extends cdktf.TerraformDataSource {
       tags_filter: cdktf.hashMapper(cdktf.stringToTerraform)(this._tagsFilter),
       timeouts: dataAzurermImagesTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags_filter: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tagsFilter),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      timeouts: {
+        value: dataAzurermImagesTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermImagesTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }
