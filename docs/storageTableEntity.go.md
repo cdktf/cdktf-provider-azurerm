@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 storagetableentity.NewStorageTableEntity(scope Construct, id *string, config StorageTableEntityConfig) StorageTableEntity
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 storagetableentity.StorageTableEntity_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 storagetableentity.StorageTableEntity_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ storagetableentity.StorageTableEntity_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 storagetableentity.StorageTableEntity_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ storagetableentity.StorageTableEntity_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 storagetableentity.StorageTableEntity_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -848,7 +848,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntityConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 &storagetableentity.StorageTableEntityConfig {
 	Connection: interface{},
@@ -864,7 +864,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetableentity"
 	StorageAccountName: *string,
 	TableName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageTableEntity.StorageTableEntityTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.storageTableEntity.StorageTableEntityTimeouts,
 }
 ```
 
@@ -1053,7 +1053,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntityTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 &storagetableentity.StorageTableEntityTimeouts {
 	Create: *string,
@@ -1129,7 +1129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntityTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 storagetableentity.NewStorageTableEntityTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageTableEntityTimeoutsOutputReference
 ```
