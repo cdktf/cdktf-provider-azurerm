@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicy(scope Construct, id *string, config MediaStreamingPolicyConfig) MediaStreamingPolicy
 ```
@@ -492,7 +492,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.MediaStreamingPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -524,7 +524,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.MediaStreamingPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -538,7 +538,7 @@ mediastreamingpolicy.MediaStreamingPolicy_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.MediaStreamingPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -552,7 +552,7 @@ mediastreamingpolicy.MediaStreamingPolicy_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.MediaStreamingPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1001,13 +1001,13 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCbcs {
-	ClearKeyEncryption: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryption,
-	DefaultContentKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey,
-	DrmFairplay: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay,
-	EnabledProtocols: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols,
+	ClearKeyEncryption: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryption,
+	DefaultContentKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey,
+	DrmFairplay: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay,
+	EnabledProtocols: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols,
 }
 ```
 
@@ -1083,7 +1083,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryption {
 	CustomKeysAcquisitionUrlTemplate: *string,
@@ -1115,7 +1115,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey {
 	Label: *string,
@@ -1161,7 +1161,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay {
 	AllowPersistentLicense: interface{},
@@ -1207,7 +1207,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols {
 	Dash: interface{},
@@ -1281,16 +1281,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCenc.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCenc {
-	ClearKeyEncryption: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencClearKeyEncryption,
+	ClearKeyEncryption: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencClearKeyEncryption,
 	ClearTrack: interface{},
 	ContentKeyToTrackMapping: interface{},
-	DefaultContentKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencDefaultContentKey,
-	DrmPlayready: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencDrmPlayready,
+	DefaultContentKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencDefaultContentKey,
+	DrmPlayready: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencDrmPlayready,
 	DrmWidevineCustomLicenseAcquisitionUrlTemplate: *string,
-	EnabledProtocols: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencEnabledProtocols,
+	EnabledProtocols: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencEnabledProtocols,
 }
 ```
 
@@ -1409,7 +1409,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencClearKeyEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCencClearKeyEncryption {
 	CustomKeysAcquisitionUrlTemplate: *string,
@@ -1441,7 +1441,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencClearTrack.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCencClearTrack {
 	Condition: interface{},
@@ -1475,7 +1475,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencClearTrackCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCencClearTrackCondition {
 	Operation: *string,
@@ -1535,7 +1535,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMapping {
 	Track: interface{},
@@ -1597,7 +1597,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrack.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrack {
 	Condition: interface{},
@@ -1631,7 +1631,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackCondition {
 	Operation: *string,
@@ -1691,7 +1691,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencDefaultContentKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCencDefaultContentKey {
 	Label: *string,
@@ -1737,7 +1737,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencDrmPlayready.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCencDrmPlayready {
 	CustomAttributes: *string,
@@ -1783,7 +1783,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencEnabledProtocols.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyCommonEncryptionCencEnabledProtocols {
 	Dash: interface{},
@@ -1857,7 +1857,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyConfig {
 	Connection: interface{},
@@ -1870,13 +1870,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
 	MediaServicesAccountName: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	CommonEncryptionCbcs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcs,
-	CommonEncryptionCenc: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCenc,
+	CommonEncryptionCbcs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcs,
+	CommonEncryptionCenc: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCenc,
 	DefaultContentKeyPolicyName: *string,
-	EnvelopeEncryption: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyEnvelopeEncryption,
+	EnvelopeEncryption: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyEnvelopeEncryption,
 	Id: *string,
-	NoEncryptionEnabledProtocols: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyNoEncryptionEnabledProtocols,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyTimeouts,
+	NoEncryptionEnabledProtocols: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyNoEncryptionEnabledProtocols,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyTimeouts,
 }
 ```
 
@@ -2112,12 +2112,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyEnvelopeEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyEnvelopeEncryption {
 	CustomKeysAcquisitionUrlTemplate: *string,
-	DefaultContentKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyEnvelopeEncryptionDefaultContentKey,
-	EnabledProtocols: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaStreamingPolicy.MediaStreamingPolicyEnvelopeEncryptionEnabledProtocols,
+	DefaultContentKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyEnvelopeEncryptionDefaultContentKey,
+	EnabledProtocols: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaStreamingPolicy.MediaStreamingPolicyEnvelopeEncryptionEnabledProtocols,
 }
 ```
 
@@ -2176,7 +2176,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyEnvelopeEncryptionDefaultContentKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyEnvelopeEncryptionDefaultContentKey {
 	Label: *string,
@@ -2222,7 +2222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyEnvelopeEncryptionEnabledProtocols.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyEnvelopeEncryptionEnabledProtocols {
 	Dash: interface{},
@@ -2296,7 +2296,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyNoEncryptionEnabledProtocols.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyNoEncryptionEnabledProtocols {
 	Dash: interface{},
@@ -2370,7 +2370,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 &mediastreamingpolicy.MediaStreamingPolicyTimeouts {
 	Create: *string,
@@ -2432,7 +2432,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryptionOutputReference
 ```
@@ -2703,7 +2703,7 @@ func InternalValue() MediaStreamingPolicyCommonEncryptionCbcsClearKeyEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference
 ```
@@ -3010,7 +3010,7 @@ func InternalValue() MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference
 ```
@@ -3317,7 +3317,7 @@ func InternalValue() MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference
 ```
@@ -3682,7 +3682,7 @@ func InternalValue() MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCbcsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCbcsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyCommonEncryptionCbcsOutputReference
 ```
@@ -4099,7 +4099,7 @@ func InternalValue() MediaStreamingPolicyCommonEncryptionCbcs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyCommonEncryptionCencClearKeyEncryptionOutputReference
 ```
@@ -4370,7 +4370,7 @@ func InternalValue() MediaStreamingPolicyCommonEncryptionCencClearKeyEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencClearTrackConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencClearTrackConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaStreamingPolicyCommonEncryptionCencClearTrackConditionList
 ```
@@ -4530,7 +4530,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencClearTrackConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencClearTrackConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaStreamingPolicyCommonEncryptionCencClearTrackConditionOutputReference
 ```
@@ -4863,7 +4863,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencClearTrackList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencClearTrackList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaStreamingPolicyCommonEncryptionCencClearTrackList
 ```
@@ -5023,7 +5023,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencClearTrackOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencClearTrackOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaStreamingPolicyCommonEncryptionCencClearTrackOutputReference
 ```
@@ -5325,7 +5325,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingList
 ```
@@ -5485,7 +5485,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingOutputReference
 ```
@@ -5845,7 +5845,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionList
 ```
@@ -6005,7 +6005,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackConditionOutputReference
 ```
@@ -6338,7 +6338,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackList
 ```
@@ -6498,7 +6498,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaStreamingPolicyCommonEncryptionCencContentKeyToTrackMappingTrackOutputReference
 ```
@@ -6800,7 +6800,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference
 ```
@@ -7107,7 +7107,7 @@ func InternalValue() MediaStreamingPolicyCommonEncryptionCencDefaultContentKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference
 ```
@@ -7414,7 +7414,7 @@ func InternalValue() MediaStreamingPolicyCommonEncryptionCencDrmPlayready
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference
 ```
@@ -7779,7 +7779,7 @@ func InternalValue() MediaStreamingPolicyCommonEncryptionCencEnabledProtocols
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyCommonEncryptionCencOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyCommonEncryptionCencOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyCommonEncryptionCencOutputReference
 ```
@@ -8309,7 +8309,7 @@ func InternalValue() MediaStreamingPolicyCommonEncryptionCenc
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyEnvelopeEncryptionDefaultContentKeyOutputReference
 ```
@@ -8616,7 +8616,7 @@ func InternalValue() MediaStreamingPolicyEnvelopeEncryptionDefaultContentKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyEnvelopeEncryptionEnabledProtocolsOutputReference
 ```
@@ -8981,7 +8981,7 @@ func InternalValue() MediaStreamingPolicyEnvelopeEncryptionEnabledProtocols
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyEnvelopeEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyEnvelopeEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyEnvelopeEncryptionOutputReference
 ```
@@ -9343,7 +9343,7 @@ func InternalValue() MediaStreamingPolicyEnvelopeEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference
 ```
@@ -9708,7 +9708,7 @@ func InternalValue() MediaStreamingPolicyNoEncryptionEnabledProtocols
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaStreamingPolicy.MediaStreamingPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediastreamingpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediastreamingpolicy"
 
 mediastreamingpolicy.NewMediaStreamingPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaStreamingPolicyTimeoutsOutputReference
 ```
