@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroup(scope Construct, id *string, config ContainerGroupConfig) ContainerGroup
 ```
@@ -615,7 +615,7 @@ func ResetZones()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.containerGroup.ContainerGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.ContainerGroup_IsConstruct(x interface{}) *bool
 ```
@@ -647,7 +647,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.containerGroup.ContainerGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.ContainerGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -661,7 +661,7 @@ containergroup.ContainerGroup_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.containerGroup.ContainerGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.ContainerGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -675,7 +675,7 @@ containergroup.ContainerGroup_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.containerGroup.ContainerGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.ContainerGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1454,7 +1454,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupConfig {
 	Connection: interface{},
@@ -1469,13 +1469,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
 	Name: *string,
 	OsType: *string,
 	ResourceGroupName: *string,
-	Diagnostics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerGroup.ContainerGroupDiagnostics,
-	DnsConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerGroup.ContainerGroupDnsConfig,
+	Diagnostics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupDiagnostics,
+	DnsConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupDnsConfig,
 	DnsNameLabel: *string,
 	DnsNameLabelReusePolicy: *string,
 	ExposedPort: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerGroup.ContainerGroupIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupIdentity,
 	ImageRegistryCredential: interface{},
 	InitContainer: interface{},
 	IpAddressType: *string,
@@ -1486,7 +1486,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
 	Sku: *string,
 	SubnetIds: *[]*string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerGroup.ContainerGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupTimeouts,
 	Zones: *[]*string,
 }
 ```
@@ -1909,7 +1909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainer {
 	Cpu: *f64,
@@ -1919,12 +1919,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
 	Commands: *[]*string,
 	CpuLimit: *f64,
 	EnvironmentVariables: *map[string]*string,
-	Gpu: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerGroup.ContainerGroupContainerGpu,
-	GpuLimit: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerGroup.ContainerGroupContainerGpuLimit,
-	LivenessProbe: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerGroup.ContainerGroupContainerLivenessProbe,
+	Gpu: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupContainerGpu,
+	GpuLimit: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupContainerGpuLimit,
+	LivenessProbe: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupContainerLivenessProbe,
 	MemoryLimit: *f64,
 	Ports: interface{},
-	ReadinessProbe: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerGroup.ContainerGroupContainerReadinessProbe,
+	ReadinessProbe: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupContainerReadinessProbe,
 	SecureEnvironmentVariables: *map[string]*string,
 	Security: interface{},
 	Volume: interface{},
@@ -2165,7 +2165,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpu.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerGpu {
 	Count: *f64,
@@ -2211,7 +2211,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpuLimit.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerGpuLimit {
 	Count: *f64,
@@ -2257,7 +2257,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerLivenessProbe {
 	Exec: *[]*string,
@@ -2375,7 +2375,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerLivenessProbeHttpGet {
 	HttpHeaders: *map[string]*string,
@@ -2449,7 +2449,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerPorts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerPorts {
 	Port: *f64,
@@ -2495,7 +2495,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerReadinessProbe {
 	Exec: *[]*string,
@@ -2613,7 +2613,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerReadinessProbeHttpGet {
 	HttpHeaders: *map[string]*string,
@@ -2687,7 +2687,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerSecurity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerSecurity {
 	PrivilegeEnabled: interface{},
@@ -2719,13 +2719,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerVolume {
 	MountPath: *string,
 	Name: *string,
 	EmptyDir: interface{},
-	GitRepo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerGroup.ContainerGroupContainerVolumeGitRepo,
+	GitRepo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupContainerVolumeGitRepo,
 	ReadOnly: interface{},
 	Secret: *map[string]*string,
 	ShareName: *string,
@@ -2865,7 +2865,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeGitRepo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerVolumeGitRepo {
 	Url: *string,
@@ -2925,10 +2925,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnostics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupDiagnostics {
-	LogAnalytics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerGroup.ContainerGroupDiagnosticsLogAnalytics,
+	LogAnalytics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalytics,
 }
 ```
 
@@ -2959,7 +2959,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalytics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupDiagnosticsLogAnalytics {
 	WorkspaceId: *string,
@@ -3033,7 +3033,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupDnsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupDnsConfig {
 	Nameservers: *[]*string,
@@ -3093,7 +3093,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupExposedPort.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupExposedPort {
 	Port: *f64,
@@ -3139,7 +3139,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupIdentity {
 	Type: *string,
@@ -3185,7 +3185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupImageRegistryCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupImageRegistryCredential {
 	Server: *string,
@@ -3261,7 +3261,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupInitContainer {
 	Image: *string,
@@ -3381,7 +3381,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerSecurity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupInitContainerSecurity {
 	PrivilegeEnabled: interface{},
@@ -3413,13 +3413,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupInitContainerVolume {
 	MountPath: *string,
 	Name: *string,
 	EmptyDir: interface{},
-	GitRepo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerGroup.ContainerGroupInitContainerVolumeGitRepo,
+	GitRepo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupInitContainerVolumeGitRepo,
 	ReadOnly: interface{},
 	Secret: *map[string]*string,
 	ShareName: *string,
@@ -3559,7 +3559,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeGitRepo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupInitContainerVolumeGitRepo {
 	Url: *string,
@@ -3619,7 +3619,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupTimeouts {
 	Create: *string,
@@ -3695,7 +3695,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpuLimitOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerGpuLimitOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupContainerGpuLimitOutputReference
 ```
@@ -4002,7 +4002,7 @@ func InternalValue() ContainerGroupContainerGpuLimit
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpuOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerGpuOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupContainerGpuOutputReference
 ```
@@ -4309,7 +4309,7 @@ func InternalValue() ContainerGroupContainerGpu
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupContainerList
 ```
@@ -4469,7 +4469,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerLivenessProbeHttpGetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupContainerLivenessProbeHttpGetList
 ```
@@ -4629,7 +4629,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerLivenessProbeHttpGetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupContainerLivenessProbeHttpGetOutputReference
 ```
@@ -5012,7 +5012,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerLivenessProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupContainerLivenessProbeOutputReference
 ```
@@ -5477,7 +5477,7 @@ func InternalValue() ContainerGroupContainerLivenessProbe
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupContainerOutputReference
 ```
@@ -6271,7 +6271,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerPortsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerPortsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupContainerPortsList
 ```
@@ -6431,7 +6431,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerPortsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerPortsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupContainerPortsOutputReference
 ```
@@ -6756,7 +6756,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerReadinessProbeHttpGetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupContainerReadinessProbeHttpGetList
 ```
@@ -6916,7 +6916,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerReadinessProbeHttpGetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupContainerReadinessProbeHttpGetOutputReference
 ```
@@ -7299,7 +7299,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerReadinessProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupContainerReadinessProbeOutputReference
 ```
@@ -7764,7 +7764,7 @@ func InternalValue() ContainerGroupContainerReadinessProbe
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerSecurityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerSecurityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupContainerSecurityList
 ```
@@ -7924,7 +7924,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerSecurityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerSecurityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupContainerSecurityOutputReference
 ```
@@ -8213,7 +8213,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeGitRepoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerVolumeGitRepoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupContainerVolumeGitRepoOutputReference
 ```
@@ -8542,7 +8542,7 @@ func InternalValue() ContainerGroupContainerVolumeGitRepo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerVolumeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupContainerVolumeList
 ```
@@ -8702,7 +8702,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupContainerVolumeOutputReference
 ```
@@ -9229,7 +9229,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalyticsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupDiagnosticsLogAnalyticsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupDiagnosticsLogAnalyticsOutputReference
 ```
@@ -9580,7 +9580,7 @@ func InternalValue() ContainerGroupDiagnosticsLogAnalytics
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupDiagnosticsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupDiagnosticsOutputReference
 ```
@@ -9864,7 +9864,7 @@ func InternalValue() ContainerGroupDiagnostics
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupDnsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupDnsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupDnsConfigOutputReference
 ```
@@ -10193,7 +10193,7 @@ func InternalValue() ContainerGroupDnsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupExposedPortList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupExposedPortList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupExposedPortList
 ```
@@ -10353,7 +10353,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupExposedPortOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupExposedPortOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupExposedPortOutputReference
 ```
@@ -10678,7 +10678,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupIdentityOutputReference
 ```
@@ -11000,7 +11000,7 @@ func InternalValue() ContainerGroupIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupImageRegistryCredentialList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupImageRegistryCredentialList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupImageRegistryCredentialList
 ```
@@ -11160,7 +11160,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupImageRegistryCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupImageRegistryCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupImageRegistryCredentialOutputReference
 ```
@@ -11536,7 +11536,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupInitContainerList
 ```
@@ -11696,7 +11696,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupInitContainerOutputReference
 ```
@@ -12178,7 +12178,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerSecurityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerSecurityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupInitContainerSecurityList
 ```
@@ -12338,7 +12338,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerSecurityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerSecurityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupInitContainerSecurityOutputReference
 ```
@@ -12627,7 +12627,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeGitRepoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerVolumeGitRepoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupInitContainerVolumeGitRepoOutputReference
 ```
@@ -12956,7 +12956,7 @@ func InternalValue() ContainerGroupInitContainerVolumeGitRepo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerVolumeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupInitContainerVolumeList
 ```
@@ -13116,7 +13116,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupInitContainerVolumeOutputReference
 ```
@@ -13643,7 +13643,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupTimeoutsOutputReference
 ```
