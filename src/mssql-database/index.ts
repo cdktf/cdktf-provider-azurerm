@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,170 +13,295 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#auto_pause_delay_in_minutes MssqlDatabase#auto_pause_delay_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#auto_pause_delay_in_minutes MssqlDatabase#auto_pause_delay_in_minutes}
   */
   readonly autoPauseDelayInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#collation MssqlDatabase#collation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#collation MssqlDatabase#collation}
   */
   readonly collation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#create_mode MssqlDatabase#create_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#create_mode MssqlDatabase#create_mode}
   */
   readonly createMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#creation_source_database_id MssqlDatabase#creation_source_database_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#creation_source_database_id MssqlDatabase#creation_source_database_id}
   */
   readonly creationSourceDatabaseId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#elastic_pool_id MssqlDatabase#elastic_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#elastic_pool_id MssqlDatabase#elastic_pool_id}
   */
   readonly elasticPoolId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#enclave_type MssqlDatabase#enclave_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#enclave_type MssqlDatabase#enclave_type}
   */
   readonly enclaveType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#geo_backup_enabled MssqlDatabase#geo_backup_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#geo_backup_enabled MssqlDatabase#geo_backup_enabled}
   */
   readonly geoBackupEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#id MssqlDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#id MssqlDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#ledger_enabled MssqlDatabase#ledger_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#ledger_enabled MssqlDatabase#ledger_enabled}
   */
   readonly ledgerEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#license_type MssqlDatabase#license_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#license_type MssqlDatabase#license_type}
   */
   readonly licenseType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#maintenance_configuration_name MssqlDatabase#maintenance_configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#maintenance_configuration_name MssqlDatabase#maintenance_configuration_name}
   */
   readonly maintenanceConfigurationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#max_size_gb MssqlDatabase#max_size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#max_size_gb MssqlDatabase#max_size_gb}
   */
   readonly maxSizeGb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#min_capacity MssqlDatabase#min_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#min_capacity MssqlDatabase#min_capacity}
   */
   readonly minCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#name MssqlDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#name MssqlDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#read_replica_count MssqlDatabase#read_replica_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#read_replica_count MssqlDatabase#read_replica_count}
   */
   readonly readReplicaCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#read_scale MssqlDatabase#read_scale}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#read_scale MssqlDatabase#read_scale}
   */
   readonly readScale?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#recover_database_id MssqlDatabase#recover_database_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#recover_database_id MssqlDatabase#recover_database_id}
   */
   readonly recoverDatabaseId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#restore_dropped_database_id MssqlDatabase#restore_dropped_database_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#restore_dropped_database_id MssqlDatabase#restore_dropped_database_id}
   */
   readonly restoreDroppedDatabaseId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#restore_point_in_time MssqlDatabase#restore_point_in_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#restore_point_in_time MssqlDatabase#restore_point_in_time}
   */
   readonly restorePointInTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#sample_name MssqlDatabase#sample_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#sample_name MssqlDatabase#sample_name}
   */
   readonly sampleName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#server_id MssqlDatabase#server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#server_id MssqlDatabase#server_id}
   */
   readonly serverId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#sku_name MssqlDatabase#sku_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#sku_name MssqlDatabase#sku_name}
   */
   readonly skuName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#storage_account_type MssqlDatabase#storage_account_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#storage_account_type MssqlDatabase#storage_account_type}
   */
   readonly storageAccountType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#tags MssqlDatabase#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#tags MssqlDatabase#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#transparent_data_encryption_enabled MssqlDatabase#transparent_data_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#transparent_data_encryption_enabled MssqlDatabase#transparent_data_encryption_enabled}
   */
   readonly transparentDataEncryptionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#zone_redundant MssqlDatabase#zone_redundant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#transparent_data_encryption_key_automatic_rotation_enabled MssqlDatabase#transparent_data_encryption_key_automatic_rotation_enabled}
+  */
+  readonly transparentDataEncryptionKeyAutomaticRotationEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#transparent_data_encryption_key_vault_key_id MssqlDatabase#transparent_data_encryption_key_vault_key_id}
+  */
+  readonly transparentDataEncryptionKeyVaultKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#zone_redundant MssqlDatabase#zone_redundant}
   */
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
+  * identity block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#identity MssqlDatabase#identity}
+  */
+  readonly identity?: MssqlDatabaseIdentity;
+  /**
   * import block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#import MssqlDatabase#import}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#import MssqlDatabase#import}
   */
   readonly import?: MssqlDatabaseImport;
   /**
   * long_term_retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#long_term_retention_policy MssqlDatabase#long_term_retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#long_term_retention_policy MssqlDatabase#long_term_retention_policy}
   */
   readonly longTermRetentionPolicy?: MssqlDatabaseLongTermRetentionPolicy;
   /**
   * short_term_retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#short_term_retention_policy MssqlDatabase#short_term_retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#short_term_retention_policy MssqlDatabase#short_term_retention_policy}
   */
   readonly shortTermRetentionPolicy?: MssqlDatabaseShortTermRetentionPolicy;
   /**
   * threat_detection_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#threat_detection_policy MssqlDatabase#threat_detection_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#threat_detection_policy MssqlDatabase#threat_detection_policy}
   */
   readonly threatDetectionPolicy?: MssqlDatabaseThreatDetectionPolicy;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#timeouts MssqlDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#timeouts MssqlDatabase#timeouts}
   */
   readonly timeouts?: MssqlDatabaseTimeouts;
 }
+export interface MssqlDatabaseIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#identity_ids MssqlDatabase#identity_ids}
+  */
+  readonly identityIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#type MssqlDatabase#type}
+  */
+  readonly type: string;
+}
+
+export function mssqlDatabaseIdentityToTerraform(struct?: MssqlDatabaseIdentityOutputReference | MssqlDatabaseIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function mssqlDatabaseIdentityToHclTerraform(struct?: MssqlDatabaseIdentityOutputReference | MssqlDatabaseIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MssqlDatabaseIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MssqlDatabaseIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlDatabaseIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
+  // identity_ids - computed: false, optional: false, required: true
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
 export interface MssqlDatabaseImport {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#administrator_login MssqlDatabase#administrator_login}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#administrator_login MssqlDatabase#administrator_login}
   */
   readonly administratorLogin: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#administrator_login_password MssqlDatabase#administrator_login_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#administrator_login_password MssqlDatabase#administrator_login_password}
   */
   readonly administratorLoginPassword: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#authentication_type MssqlDatabase#authentication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#authentication_type MssqlDatabase#authentication_type}
   */
   readonly authenticationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#storage_account_id MssqlDatabase#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#storage_account_id MssqlDatabase#storage_account_id}
   */
   readonly storageAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#storage_key MssqlDatabase#storage_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#storage_key MssqlDatabase#storage_key}
   */
   readonly storageKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#storage_key_type MssqlDatabase#storage_key_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#storage_key_type MssqlDatabase#storage_key_type}
   */
   readonly storageKeyType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#storage_uri MssqlDatabase#storage_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#storage_uri MssqlDatabase#storage_uri}
   */
   readonly storageUri: string;
 }
@@ -416,19 +541,19 @@ export class MssqlDatabaseImportOutputReference extends cdktf.ComplexObject {
 }
 export interface MssqlDatabaseLongTermRetentionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#monthly_retention MssqlDatabase#monthly_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#monthly_retention MssqlDatabase#monthly_retention}
   */
   readonly monthlyRetention?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#week_of_year MssqlDatabase#week_of_year}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#week_of_year MssqlDatabase#week_of_year}
   */
   readonly weekOfYear?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#weekly_retention MssqlDatabase#weekly_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#weekly_retention MssqlDatabase#weekly_retention}
   */
   readonly weeklyRetention?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#yearly_retention MssqlDatabase#yearly_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#yearly_retention MssqlDatabase#yearly_retention}
   */
   readonly yearlyRetention?: string;
 }
@@ -599,11 +724,11 @@ export class MssqlDatabaseLongTermRetentionPolicyOutputReference extends cdktf.C
 }
 export interface MssqlDatabaseShortTermRetentionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#backup_interval_in_hours MssqlDatabase#backup_interval_in_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#backup_interval_in_hours MssqlDatabase#backup_interval_in_hours}
   */
   readonly backupIntervalInHours?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#retention_days MssqlDatabase#retention_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#retention_days MssqlDatabase#retention_days}
   */
   readonly retentionDays: number;
 }
@@ -713,31 +838,31 @@ export class MssqlDatabaseShortTermRetentionPolicyOutputReference extends cdktf.
 }
 export interface MssqlDatabaseThreatDetectionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#disabled_alerts MssqlDatabase#disabled_alerts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#disabled_alerts MssqlDatabase#disabled_alerts}
   */
   readonly disabledAlerts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#email_account_admins MssqlDatabase#email_account_admins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#email_account_admins MssqlDatabase#email_account_admins}
   */
   readonly emailAccountAdmins?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#email_addresses MssqlDatabase#email_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#email_addresses MssqlDatabase#email_addresses}
   */
   readonly emailAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#retention_days MssqlDatabase#retention_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#retention_days MssqlDatabase#retention_days}
   */
   readonly retentionDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#state MssqlDatabase#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#state MssqlDatabase#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#storage_account_access_key MssqlDatabase#storage_account_access_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#storage_account_access_key MssqlDatabase#storage_account_access_key}
   */
   readonly storageAccountAccessKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#storage_endpoint MssqlDatabase#storage_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#storage_endpoint MssqlDatabase#storage_endpoint}
   */
   readonly storageEndpoint?: string;
 }
@@ -995,19 +1120,19 @@ export class MssqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Com
 }
 export interface MssqlDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#create MssqlDatabase#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#create MssqlDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#delete MssqlDatabase#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#delete MssqlDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#read MssqlDatabase#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#read MssqlDatabase#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#update MssqlDatabase#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#update MssqlDatabase#update}
   */
   readonly update?: string;
 }
@@ -1188,7 +1313,7 @@ export class MssqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database azurerm_mssql_database}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database azurerm_mssql_database}
 */
 export class MssqlDatabase extends cdktf.TerraformResource {
 
@@ -1204,7 +1329,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MssqlDatabase resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MssqlDatabase to import
-  * @param importFromId The id of the existing MssqlDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MssqlDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MssqlDatabase to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1216,7 +1341,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mssql_database azurerm_mssql_database} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_database azurerm_mssql_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1227,7 +1352,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.86.0',
+        providerVersion: '3.87.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1263,7 +1388,10 @@ export class MssqlDatabase extends cdktf.TerraformResource {
     this._storageAccountType = config.storageAccountType;
     this._tags = config.tags;
     this._transparentDataEncryptionEnabled = config.transparentDataEncryptionEnabled;
+    this._transparentDataEncryptionKeyAutomaticRotationEnabled = config.transparentDataEncryptionKeyAutomaticRotationEnabled;
+    this._transparentDataEncryptionKeyVaultKeyId = config.transparentDataEncryptionKeyVaultKeyId;
     this._zoneRedundant = config.zoneRedundant;
+    this._identity.internalValue = config.identity;
     this._import.internalValue = config.import;
     this._longTermRetentionPolicy.internalValue = config.longTermRetentionPolicy;
     this._shortTermRetentionPolicy.internalValue = config.shortTermRetentionPolicy;
@@ -1669,6 +1797,38 @@ export class MssqlDatabase extends cdktf.TerraformResource {
     return this._transparentDataEncryptionEnabled;
   }
 
+  // transparent_data_encryption_key_automatic_rotation_enabled - computed: false, optional: true, required: false
+  private _transparentDataEncryptionKeyAutomaticRotationEnabled?: boolean | cdktf.IResolvable; 
+  public get transparentDataEncryptionKeyAutomaticRotationEnabled() {
+    return this.getBooleanAttribute('transparent_data_encryption_key_automatic_rotation_enabled');
+  }
+  public set transparentDataEncryptionKeyAutomaticRotationEnabled(value: boolean | cdktf.IResolvable) {
+    this._transparentDataEncryptionKeyAutomaticRotationEnabled = value;
+  }
+  public resetTransparentDataEncryptionKeyAutomaticRotationEnabled() {
+    this._transparentDataEncryptionKeyAutomaticRotationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transparentDataEncryptionKeyAutomaticRotationEnabledInput() {
+    return this._transparentDataEncryptionKeyAutomaticRotationEnabled;
+  }
+
+  // transparent_data_encryption_key_vault_key_id - computed: false, optional: true, required: false
+  private _transparentDataEncryptionKeyVaultKeyId?: string; 
+  public get transparentDataEncryptionKeyVaultKeyId() {
+    return this.getStringAttribute('transparent_data_encryption_key_vault_key_id');
+  }
+  public set transparentDataEncryptionKeyVaultKeyId(value: string) {
+    this._transparentDataEncryptionKeyVaultKeyId = value;
+  }
+  public resetTransparentDataEncryptionKeyVaultKeyId() {
+    this._transparentDataEncryptionKeyVaultKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transparentDataEncryptionKeyVaultKeyIdInput() {
+    return this._transparentDataEncryptionKeyVaultKeyId;
+  }
+
   // zone_redundant - computed: true, optional: true, required: false
   private _zoneRedundant?: boolean | cdktf.IResolvable; 
   public get zoneRedundant() {
@@ -1683,6 +1843,22 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get zoneRedundantInput() {
     return this._zoneRedundant;
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity = new MssqlDatabaseIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: MssqlDatabaseIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
   }
 
   // import - computed: false, optional: true, required: false
@@ -1796,7 +1972,10 @@ export class MssqlDatabase extends cdktf.TerraformResource {
       storage_account_type: cdktf.stringToTerraform(this._storageAccountType),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       transparent_data_encryption_enabled: cdktf.booleanToTerraform(this._transparentDataEncryptionEnabled),
+      transparent_data_encryption_key_automatic_rotation_enabled: cdktf.booleanToTerraform(this._transparentDataEncryptionKeyAutomaticRotationEnabled),
+      transparent_data_encryption_key_vault_key_id: cdktf.stringToTerraform(this._transparentDataEncryptionKeyVaultKeyId),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
+      identity: mssqlDatabaseIdentityToTerraform(this._identity.internalValue),
       import: mssqlDatabaseImportToTerraform(this._import.internalValue),
       long_term_retention_policy: mssqlDatabaseLongTermRetentionPolicyToTerraform(this._longTermRetentionPolicy.internalValue),
       short_term_retention_policy: mssqlDatabaseShortTermRetentionPolicyToTerraform(this._shortTermRetentionPolicy.internalValue),
@@ -1957,11 +2136,29 @@ export class MssqlDatabase extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "boolean",
       },
+      transparent_data_encryption_key_automatic_rotation_enabled: {
+        value: cdktf.booleanToHclTerraform(this._transparentDataEncryptionKeyAutomaticRotationEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      transparent_data_encryption_key_vault_key_id: {
+        value: cdktf.stringToHclTerraform(this._transparentDataEncryptionKeyVaultKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       zone_redundant: {
         value: cdktf.booleanToHclTerraform(this._zoneRedundant),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
+      },
+      identity: {
+        value: mssqlDatabaseIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlDatabaseIdentityList",
       },
       import: {
         value: mssqlDatabaseImportToHclTerraform(this._import.internalValue),

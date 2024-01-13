@@ -785,6 +785,7 @@ Object.defineProperty(exports, 'securityCenterAutomation', { get: function () { 
 Object.defineProperty(exports, 'securityCenterContact', { get: function () { return require('./security-center-contact'); } });
 Object.defineProperty(exports, 'securityCenterServerVulnerabilityAssessment', { get: function () { return require('./security-center-server-vulnerability-assessment'); } });
 Object.defineProperty(exports, 'securityCenterServerVulnerabilityAssessmentVirtualMachine', { get: function () { return require('./security-center-server-vulnerability-assessment-virtual-machine'); } });
+Object.defineProperty(exports, 'securityCenterServerVulnerabilityAssessmentsSetting', { get: function () { return require('./security-center-server-vulnerability-assessments-setting'); } });
 Object.defineProperty(exports, 'securityCenterSetting', { get: function () { return require('./security-center-setting'); } });
 Object.defineProperty(exports, 'securityCenterStorageDefender', { get: function () { return require('./security-center-storage-defender'); } });
 Object.defineProperty(exports, 'securityCenterSubscriptionPricing', { get: function () { return require('./security-center-subscription-pricing'); } });
@@ -1257,6 +1258,7 @@ Object.defineProperty(exports, 'dataAzurermNetappVolumeGroupSapHana', { get: fun
 Object.defineProperty(exports, 'dataAzurermNetappVolumeQuotaRule', { get: function () { return require('./data-azurerm-netapp-volume-quota-rule'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkDdosProtectionPlan', { get: function () { return require('./data-azurerm-network-ddos-protection-plan'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkInterface', { get: function () { return require('./data-azurerm-network-interface'); } });
+Object.defineProperty(exports, 'dataAzurermNetworkManager', { get: function () { return require('./data-azurerm-network-manager'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkManagerNetworkGroup', { get: function () { return require('./data-azurerm-network-manager-network-group'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkSecurityGroup', { get: function () { return require('./data-azurerm-network-security-group'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkServiceTags', { get: function () { return require('./data-azurerm-network-service-tags'); } });
