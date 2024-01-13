@@ -4,12 +4,12 @@
 
 ### NewRelicTagRule <a name="NewRelicTagRule" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule azurerm_new_relic_tag_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule azurerm_new_relic_tag_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewNewRelicTagRule(scope Construct, id *string, config NewRelicTagRuleConfig) NewRelicTagRule
 ```
@@ -473,7 +473,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewRelicTagRule_IsConstruct(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewRelicTagRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -519,7 +519,7 @@ newrelictagrule.NewRelicTagRule_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewRelicTagRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -533,7 +533,7 @@ newrelictagrule.NewRelicTagRule_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewRelicTagRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -562,7 +562,7 @@ The construct id used in the generated config for the NewRelicTagRule to import.
 
 The id of the existing NewRelicTagRule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -960,7 +960,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 &newrelictagrule.NewRelicTagRuleConfig {
 	Connection: interface{},
@@ -978,7 +978,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
 	MetricEnabled: interface{},
 	MetricTagFilter: interface{},
 	SubscriptionLogEnabled: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.newRelicTagRule.NewRelicTagRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.newRelicTagRule.NewRelicTagRuleTimeouts,
 }
 ```
 
@@ -993,14 +993,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
 | <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.monitorId">MonitorId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#monitor_id NewRelicTagRule#monitor_id}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.activityLogEnabled">ActivityLogEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#activity_log_enabled NewRelicTagRule#activity_log_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.azureActiveDirectoryLogEnabled">AzureActiveDirectoryLogEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#azure_active_directory_log_enabled NewRelicTagRule#azure_active_directory_log_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#id NewRelicTagRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.monitorId">MonitorId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#monitor_id NewRelicTagRule#monitor_id}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.activityLogEnabled">ActivityLogEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#activity_log_enabled NewRelicTagRule#activity_log_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.azureActiveDirectoryLogEnabled">AzureActiveDirectoryLogEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#azure_active_directory_log_enabled NewRelicTagRule#azure_active_directory_log_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#id NewRelicTagRule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.logTagFilter">LogTagFilter</a></code> | <code>interface{}</code> | log_tag_filter block. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.metricEnabled">MetricEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#metric_enabled NewRelicTagRule#metric_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.metricEnabled">MetricEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#metric_enabled NewRelicTagRule#metric_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.metricTagFilter">MetricTagFilter</a></code> | <code>interface{}</code> | metric_tag_filter block. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.subscriptionLogEnabled">SubscriptionLogEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#subscription_log_enabled NewRelicTagRule#subscription_log_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.subscriptionLogEnabled">SubscriptionLogEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#subscription_log_enabled NewRelicTagRule#subscription_log_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleTimeouts">NewRelicTagRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1083,7 +1083,7 @@ MonitorId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#monitor_id NewRelicTagRule#monitor_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#monitor_id NewRelicTagRule#monitor_id}.
 
 ---
 
@@ -1095,7 +1095,7 @@ ActivityLogEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#activity_log_enabled NewRelicTagRule#activity_log_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#activity_log_enabled NewRelicTagRule#activity_log_enabled}.
 
 ---
 
@@ -1107,7 +1107,7 @@ AzureActiveDirectoryLogEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#azure_active_directory_log_enabled NewRelicTagRule#azure_active_directory_log_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#azure_active_directory_log_enabled NewRelicTagRule#azure_active_directory_log_enabled}.
 
 ---
 
@@ -1119,7 +1119,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#id NewRelicTagRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#id NewRelicTagRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1136,7 +1136,7 @@ LogTagFilter interface{}
 
 log_tag_filter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#log_tag_filter NewRelicTagRule#log_tag_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#log_tag_filter NewRelicTagRule#log_tag_filter}
 
 ---
 
@@ -1148,7 +1148,7 @@ MetricEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#metric_enabled NewRelicTagRule#metric_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#metric_enabled NewRelicTagRule#metric_enabled}.
 
 ---
 
@@ -1162,7 +1162,7 @@ MetricTagFilter interface{}
 
 metric_tag_filter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#metric_tag_filter NewRelicTagRule#metric_tag_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#metric_tag_filter NewRelicTagRule#metric_tag_filter}
 
 ---
 
@@ -1174,7 +1174,7 @@ SubscriptionLogEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#subscription_log_enabled NewRelicTagRule#subscription_log_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#subscription_log_enabled NewRelicTagRule#subscription_log_enabled}.
 
 ---
 
@@ -1188,7 +1188,7 @@ Timeouts NewRelicTagRuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#timeouts NewRelicTagRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#timeouts NewRelicTagRule#timeouts}
 
 ---
 
@@ -1197,7 +1197,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleLogTagFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 &newrelictagrule.NewRelicTagRuleLogTagFilter {
 	Action: *string,
@@ -1210,9 +1210,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleLogTagFilter.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#action NewRelicTagRule#action}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleLogTagFilter.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#name NewRelicTagRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleLogTagFilter.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#value NewRelicTagRule#value}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleLogTagFilter.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#action NewRelicTagRule#action}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleLogTagFilter.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#name NewRelicTagRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleLogTagFilter.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#value NewRelicTagRule#value}. |
 
 ---
 
@@ -1224,7 +1224,7 @@ Action *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#action NewRelicTagRule#action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#action NewRelicTagRule#action}.
 
 ---
 
@@ -1236,7 +1236,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#name NewRelicTagRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#name NewRelicTagRule#name}.
 
 ---
 
@@ -1248,7 +1248,7 @@ Value *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#value NewRelicTagRule#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#value NewRelicTagRule#value}.
 
 ---
 
@@ -1257,7 +1257,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleMetricTagFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 &newrelictagrule.NewRelicTagRuleMetricTagFilter {
 	Action: *string,
@@ -1270,9 +1270,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleMetricTagFilter.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#action NewRelicTagRule#action}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleMetricTagFilter.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#name NewRelicTagRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleMetricTagFilter.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#value NewRelicTagRule#value}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleMetricTagFilter.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#action NewRelicTagRule#action}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleMetricTagFilter.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#name NewRelicTagRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleMetricTagFilter.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#value NewRelicTagRule#value}. |
 
 ---
 
@@ -1284,7 +1284,7 @@ Action *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#action NewRelicTagRule#action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#action NewRelicTagRule#action}.
 
 ---
 
@@ -1296,7 +1296,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#name NewRelicTagRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#name NewRelicTagRule#name}.
 
 ---
 
@@ -1308,7 +1308,7 @@ Value *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#value NewRelicTagRule#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#value NewRelicTagRule#value}.
 
 ---
 
@@ -1317,7 +1317,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 &newrelictagrule.NewRelicTagRuleTimeouts {
 	Create: *string,
@@ -1331,10 +1331,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#create NewRelicTagRule#create}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#delete NewRelicTagRule#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#read NewRelicTagRule#read}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#update NewRelicTagRule#update}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#create NewRelicTagRule#create}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#delete NewRelicTagRule#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#read NewRelicTagRule#read}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#update NewRelicTagRule#update}. |
 
 ---
 
@@ -1346,7 +1346,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#create NewRelicTagRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#create NewRelicTagRule#create}.
 
 ---
 
@@ -1358,7 +1358,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#delete NewRelicTagRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#delete NewRelicTagRule#delete}.
 
 ---
 
@@ -1370,7 +1370,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#read NewRelicTagRule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#read NewRelicTagRule#read}.
 
 ---
 
@@ -1382,7 +1382,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_tag_rule#update NewRelicTagRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_tag_rule#update NewRelicTagRule#update}.
 
 ---
 
@@ -1393,7 +1393,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleLogTagFilterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewNewRelicTagRuleLogTagFilterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NewRelicTagRuleLogTagFilterList
 ```
@@ -1553,7 +1553,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleLogTagFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewNewRelicTagRuleLogTagFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NewRelicTagRuleLogTagFilterOutputReference
 ```
@@ -1886,7 +1886,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleMetricTagFilterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewNewRelicTagRuleMetricTagFilterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NewRelicTagRuleMetricTagFilterList
 ```
@@ -2046,7 +2046,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleMetricTagFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewNewRelicTagRuleMetricTagFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NewRelicTagRuleMetricTagFilterOutputReference
 ```
@@ -2379,7 +2379,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewNewRelicTagRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NewRelicTagRuleTimeoutsOutputReference
 ```

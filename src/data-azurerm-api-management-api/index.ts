@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/api_management_api
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/api_management_api
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,32 +8,32 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermApiManagementApiConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/api_management_api#api_management_name DataAzurermApiManagementApi#api_management_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/api_management_api#api_management_name DataAzurermApiManagementApi#api_management_name}
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/api_management_api#id DataAzurermApiManagementApi#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/api_management_api#id DataAzurermApiManagementApi#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/api_management_api#name DataAzurermApiManagementApi#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/api_management_api#name DataAzurermApiManagementApi#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/api_management_api#resource_group_name DataAzurermApiManagementApi#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/api_management_api#resource_group_name DataAzurermApiManagementApi#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/api_management_api#revision DataAzurermApiManagementApi#revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/api_management_api#revision DataAzurermApiManagementApi#revision}
   */
   readonly revision: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/api_management_api#timeouts DataAzurermApiManagementApi#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/api_management_api#timeouts DataAzurermApiManagementApi#timeouts}
   */
   readonly timeouts?: DataAzurermApiManagementApiTimeouts;
 }
@@ -124,7 +119,7 @@ export class DataAzurermApiManagementApiSubscriptionKeyParameterNamesList extend
 }
 export interface DataAzurermApiManagementApiTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/api_management_api#read DataAzurermApiManagementApi#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/api_management_api#read DataAzurermApiManagementApi#read}
   */
   readonly read?: string;
 }
@@ -218,7 +213,7 @@ export class DataAzurermApiManagementApiTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/api_management_api azurerm_api_management_api}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/api_management_api azurerm_api_management_api}
 */
 export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
 
@@ -234,7 +229,7 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermApiManagementApi resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermApiManagementApi to import
-  * @param importFromId The id of the existing DataAzurermApiManagementApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/api_management_api#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermApiManagementApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/api_management_api#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermApiManagementApi to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -246,7 +241,7 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/api_management_api azurerm_api_management_api} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/api_management_api azurerm_api_management_api} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -257,7 +252,7 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_api_management_api',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.86.0',
+        providerVersion: '3.87.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

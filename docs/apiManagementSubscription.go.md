@@ -4,12 +4,12 @@
 
 ### ApiManagementSubscription <a name="ApiManagementSubscription" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscription"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription azurerm_api_management_subscription}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription azurerm_api_management_subscription}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
 
 apimanagementsubscription.NewApiManagementSubscription(scope Construct, id *string, config ApiManagementSubscriptionConfig) ApiManagementSubscription
 ```
@@ -461,7 +461,7 @@ func ResetUserId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscription.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
 
 apimanagementsubscription.ApiManagementSubscription_IsConstruct(x interface{}) *bool
 ```
@@ -493,7 +493,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscription.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
 
 apimanagementsubscription.ApiManagementSubscription_IsTerraformElement(x interface{}) *bool
 ```
@@ -507,7 +507,7 @@ apimanagementsubscription.ApiManagementSubscription_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscription.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
 
 apimanagementsubscription.ApiManagementSubscription_IsTerraformResource(x interface{}) *bool
 ```
@@ -521,7 +521,7 @@ apimanagementsubscription.ApiManagementSubscription_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscription.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
 
 apimanagementsubscription.ApiManagementSubscription_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -550,7 +550,7 @@ The construct id used in the generated config for the ApiManagementSubscription 
 
 The id of the existing ApiManagementSubscription that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1036,7 +1036,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
 
 &apimanagementsubscription.ApiManagementSubscriptionConfig {
 	Connection: interface{},
@@ -1057,7 +1057,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementsubs
 	SecondaryKey: *string,
 	State: *string,
 	SubscriptionId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.apiManagementSubscription.ApiManagementSubscriptionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeouts,
 	UserId: *string,
 }
 ```
@@ -1073,19 +1073,19 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementsubs
 | <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.apiManagementName">ApiManagementName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#api_management_name ApiManagementSubscription#api_management_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#display_name ApiManagementSubscription#display_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#resource_group_name ApiManagementSubscription#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.allowTracing">AllowTracing</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#allow_tracing ApiManagementSubscription#allow_tracing}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.apiId">ApiId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#api_id ApiManagementSubscription#api_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#id ApiManagementSubscription#id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.primaryKey">PrimaryKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#primary_key ApiManagementSubscription#primary_key}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.productId">ProductId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#product_id ApiManagementSubscription#product_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.secondaryKey">SecondaryKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#secondary_key ApiManagementSubscription#secondary_key}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.state">State</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#state ApiManagementSubscription#state}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.subscriptionId">SubscriptionId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#subscription_id ApiManagementSubscription#subscription_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.apiManagementName">ApiManagementName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#api_management_name ApiManagementSubscription#api_management_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#display_name ApiManagementSubscription#display_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#resource_group_name ApiManagementSubscription#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.allowTracing">AllowTracing</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#allow_tracing ApiManagementSubscription#allow_tracing}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.apiId">ApiId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#api_id ApiManagementSubscription#api_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#id ApiManagementSubscription#id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.primaryKey">PrimaryKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#primary_key ApiManagementSubscription#primary_key}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.productId">ProductId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#product_id ApiManagementSubscription#product_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.secondaryKey">SecondaryKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#secondary_key ApiManagementSubscription#secondary_key}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.state">State</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#state ApiManagementSubscription#state}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.subscriptionId">SubscriptionId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#subscription_id ApiManagementSubscription#subscription_id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeouts">ApiManagementSubscriptionTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.userId">UserId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#user_id ApiManagementSubscription#user_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionConfig.property.userId">UserId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#user_id ApiManagementSubscription#user_id}. |
 
 ---
 
@@ -1167,7 +1167,7 @@ ApiManagementName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#api_management_name ApiManagementSubscription#api_management_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#api_management_name ApiManagementSubscription#api_management_name}.
 
 ---
 
@@ -1179,7 +1179,7 @@ DisplayName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#display_name ApiManagementSubscription#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#display_name ApiManagementSubscription#display_name}.
 
 ---
 
@@ -1191,7 +1191,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#resource_group_name ApiManagementSubscription#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#resource_group_name ApiManagementSubscription#resource_group_name}.
 
 ---
 
@@ -1203,7 +1203,7 @@ AllowTracing interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#allow_tracing ApiManagementSubscription#allow_tracing}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#allow_tracing ApiManagementSubscription#allow_tracing}.
 
 ---
 
@@ -1215,7 +1215,7 @@ ApiId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#api_id ApiManagementSubscription#api_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#api_id ApiManagementSubscription#api_id}.
 
 ---
 
@@ -1227,7 +1227,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#id ApiManagementSubscription#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#id ApiManagementSubscription#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1242,7 +1242,7 @@ PrimaryKey *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#primary_key ApiManagementSubscription#primary_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#primary_key ApiManagementSubscription#primary_key}.
 
 ---
 
@@ -1254,7 +1254,7 @@ ProductId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#product_id ApiManagementSubscription#product_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#product_id ApiManagementSubscription#product_id}.
 
 ---
 
@@ -1266,7 +1266,7 @@ SecondaryKey *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#secondary_key ApiManagementSubscription#secondary_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#secondary_key ApiManagementSubscription#secondary_key}.
 
 ---
 
@@ -1278,7 +1278,7 @@ State *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#state ApiManagementSubscription#state}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#state ApiManagementSubscription#state}.
 
 ---
 
@@ -1290,7 +1290,7 @@ SubscriptionId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#subscription_id ApiManagementSubscription#subscription_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#subscription_id ApiManagementSubscription#subscription_id}.
 
 ---
 
@@ -1304,7 +1304,7 @@ Timeouts ApiManagementSubscriptionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#timeouts ApiManagementSubscription#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#timeouts ApiManagementSubscription#timeouts}
 
 ---
 
@@ -1316,7 +1316,7 @@ UserId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#user_id ApiManagementSubscription#user_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#user_id ApiManagementSubscription#user_id}.
 
 ---
 
@@ -1325,7 +1325,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
 
 &apimanagementsubscription.ApiManagementSubscriptionTimeouts {
 	Create: *string,
@@ -1339,10 +1339,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementsubs
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#create ApiManagementSubscription#create}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#delete ApiManagementSubscription#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#read ApiManagementSubscription#read}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#update ApiManagementSubscription#update}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#create ApiManagementSubscription#create}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#delete ApiManagementSubscription#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#read ApiManagementSubscription#read}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#update ApiManagementSubscription#update}. |
 
 ---
 
@@ -1354,7 +1354,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#create ApiManagementSubscription#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#create ApiManagementSubscription#create}.
 
 ---
 
@@ -1366,7 +1366,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#delete ApiManagementSubscription#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#delete ApiManagementSubscription#delete}.
 
 ---
 
@@ -1378,7 +1378,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#read ApiManagementSubscription#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#read ApiManagementSubscription#read}.
 
 ---
 
@@ -1390,7 +1390,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/api_management_subscription#update ApiManagementSubscription#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/api_management_subscription#update ApiManagementSubscription#update}.
 
 ---
 
@@ -1401,7 +1401,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementSubscription.ApiManagementSubscriptionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementsubscription"
 
 apimanagementsubscription.NewApiManagementSubscriptionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementSubscriptionTimeoutsOutputReference
 ```

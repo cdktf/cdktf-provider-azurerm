@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,102 +8,102 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkSecurityGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#id NetworkSecurityGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#id NetworkSecurityGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#location NetworkSecurityGroup#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#location NetworkSecurityGroup#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#name NetworkSecurityGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#name NetworkSecurityGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#resource_group_name NetworkSecurityGroup#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#resource_group_name NetworkSecurityGroup#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#security_rule NetworkSecurityGroup#security_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#security_rule NetworkSecurityGroup#security_rule}
   */
   readonly securityRule?: NetworkSecurityGroupSecurityRule[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#tags NetworkSecurityGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#tags NetworkSecurityGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#timeouts NetworkSecurityGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#timeouts NetworkSecurityGroup#timeouts}
   */
   readonly timeouts?: NetworkSecurityGroupTimeouts;
 }
 export interface NetworkSecurityGroupSecurityRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#access NetworkSecurityGroup#access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#access NetworkSecurityGroup#access}
   */
   readonly access?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#description NetworkSecurityGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#description NetworkSecurityGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#destination_address_prefix NetworkSecurityGroup#destination_address_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#destination_address_prefix NetworkSecurityGroup#destination_address_prefix}
   */
   readonly destinationAddressPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#destination_address_prefixes NetworkSecurityGroup#destination_address_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#destination_address_prefixes NetworkSecurityGroup#destination_address_prefixes}
   */
   readonly destinationAddressPrefixes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#destination_application_security_group_ids NetworkSecurityGroup#destination_application_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#destination_application_security_group_ids NetworkSecurityGroup#destination_application_security_group_ids}
   */
   readonly destinationApplicationSecurityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#destination_port_range NetworkSecurityGroup#destination_port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#destination_port_range NetworkSecurityGroup#destination_port_range}
   */
   readonly destinationPortRange?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#destination_port_ranges NetworkSecurityGroup#destination_port_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#destination_port_ranges NetworkSecurityGroup#destination_port_ranges}
   */
   readonly destinationPortRanges?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#direction NetworkSecurityGroup#direction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#direction NetworkSecurityGroup#direction}
   */
   readonly direction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#name NetworkSecurityGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#name NetworkSecurityGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#priority NetworkSecurityGroup#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#priority NetworkSecurityGroup#priority}
   */
   readonly priority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#protocol NetworkSecurityGroup#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#protocol NetworkSecurityGroup#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#source_address_prefix NetworkSecurityGroup#source_address_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#source_address_prefix NetworkSecurityGroup#source_address_prefix}
   */
   readonly sourceAddressPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#source_address_prefixes NetworkSecurityGroup#source_address_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#source_address_prefixes NetworkSecurityGroup#source_address_prefixes}
   */
   readonly sourceAddressPrefixes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#source_application_security_group_ids NetworkSecurityGroup#source_application_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#source_application_security_group_ids NetworkSecurityGroup#source_application_security_group_ids}
   */
   readonly sourceApplicationSecurityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#source_port_range NetworkSecurityGroup#source_port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#source_port_range NetworkSecurityGroup#source_port_range}
   */
   readonly sourcePortRange?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#source_port_ranges NetworkSecurityGroup#source_port_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#source_port_ranges NetworkSecurityGroup#source_port_ranges}
   */
   readonly sourcePortRanges?: string[];
 }
@@ -659,19 +654,19 @@ export class NetworkSecurityGroupSecurityRuleList extends cdktf.ComplexList {
 }
 export interface NetworkSecurityGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#create NetworkSecurityGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#create NetworkSecurityGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#delete NetworkSecurityGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#delete NetworkSecurityGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#read NetworkSecurityGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#read NetworkSecurityGroup#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#update NetworkSecurityGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#update NetworkSecurityGroup#update}
   */
   readonly update?: string;
 }
@@ -852,7 +847,7 @@ export class NetworkSecurityGroupTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group azurerm_network_security_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group azurerm_network_security_group}
 */
 export class NetworkSecurityGroup extends cdktf.TerraformResource {
 
@@ -868,7 +863,7 @@ export class NetworkSecurityGroup extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkSecurityGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkSecurityGroup to import
-  * @param importFromId The id of the existing NetworkSecurityGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkSecurityGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkSecurityGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -880,7 +875,7 @@ export class NetworkSecurityGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_security_group azurerm_network_security_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_security_group azurerm_network_security_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -891,7 +886,7 @@ export class NetworkSecurityGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_security_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.86.0',
+        providerVersion: '3.87.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

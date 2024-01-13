@@ -1,3 +1,3 @@
 # `azurerm_private_dns_zone`
 
-Refer to the Terraform Registry for docs: [`azurerm_private_dns_zone`](https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/private_dns_zone).
+Refer to the Terraform Registry for docs: [`azurerm_private_dns_zone`](https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/private_dns_zone).

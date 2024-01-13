@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,82 +8,82 @@ import * as cdktf from 'cdktf';
 
 export interface NewRelicMonitorConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#account_creation_source NewRelicMonitor#account_creation_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#account_creation_source NewRelicMonitor#account_creation_source}
   */
   readonly accountCreationSource?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#account_id NewRelicMonitor#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#account_id NewRelicMonitor#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#id NewRelicMonitor#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#id NewRelicMonitor#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#ingestion_key NewRelicMonitor#ingestion_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#ingestion_key NewRelicMonitor#ingestion_key}
   */
   readonly ingestionKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#location NewRelicMonitor#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#location NewRelicMonitor#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#name NewRelicMonitor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#name NewRelicMonitor#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#org_creation_source NewRelicMonitor#org_creation_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#org_creation_source NewRelicMonitor#org_creation_source}
   */
   readonly orgCreationSource?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#organization_id NewRelicMonitor#organization_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#organization_id NewRelicMonitor#organization_id}
   */
   readonly organizationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#resource_group_name NewRelicMonitor#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#resource_group_name NewRelicMonitor#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#user_id NewRelicMonitor#user_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#user_id NewRelicMonitor#user_id}
   */
   readonly userId?: string;
   /**
   * plan block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#plan NewRelicMonitor#plan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#plan NewRelicMonitor#plan}
   */
   readonly plan: NewRelicMonitorPlan;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#timeouts NewRelicMonitor#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#timeouts NewRelicMonitor#timeouts}
   */
   readonly timeouts?: NewRelicMonitorTimeouts;
   /**
   * user block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#user NewRelicMonitor#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#user NewRelicMonitor#user}
   */
   readonly user: NewRelicMonitorUser;
 }
 export interface NewRelicMonitorPlan {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#billing_cycle NewRelicMonitor#billing_cycle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#billing_cycle NewRelicMonitor#billing_cycle}
   */
   readonly billingCycle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#effective_date NewRelicMonitor#effective_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#effective_date NewRelicMonitor#effective_date}
   */
   readonly effectiveDate: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#plan_id NewRelicMonitor#plan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#plan_id NewRelicMonitor#plan_id}
   */
   readonly planId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#usage_type NewRelicMonitor#usage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#usage_type NewRelicMonitor#usage_type}
   */
   readonly usageType?: string;
 }
@@ -256,15 +251,15 @@ export class NewRelicMonitorPlanOutputReference extends cdktf.ComplexObject {
 }
 export interface NewRelicMonitorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#create NewRelicMonitor#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#create NewRelicMonitor#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#delete NewRelicMonitor#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#delete NewRelicMonitor#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#read NewRelicMonitor#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#read NewRelicMonitor#read}
   */
   readonly read?: string;
 }
@@ -416,19 +411,19 @@ export class NewRelicMonitorTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 export interface NewRelicMonitorUser {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#email NewRelicMonitor#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#email NewRelicMonitor#email}
   */
   readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#first_name NewRelicMonitor#first_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#first_name NewRelicMonitor#first_name}
   */
   readonly firstName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#last_name NewRelicMonitor#last_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#last_name NewRelicMonitor#last_name}
   */
   readonly lastName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#phone_number NewRelicMonitor#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#phone_number NewRelicMonitor#phone_number}
   */
   readonly phoneNumber: string;
 }
@@ -587,7 +582,7 @@ export class NewRelicMonitorUserOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor azurerm_new_relic_monitor}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor azurerm_new_relic_monitor}
 */
 export class NewRelicMonitor extends cdktf.TerraformResource {
 
@@ -603,7 +598,7 @@ export class NewRelicMonitor extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NewRelicMonitor resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NewRelicMonitor to import
-  * @param importFromId The id of the existing NewRelicMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NewRelicMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NewRelicMonitor to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -615,7 +610,7 @@ export class NewRelicMonitor extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/new_relic_monitor azurerm_new_relic_monitor} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/new_relic_monitor azurerm_new_relic_monitor} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -626,7 +621,7 @@ export class NewRelicMonitor extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_new_relic_monitor',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.86.0',
+        providerVersion: '3.87.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
