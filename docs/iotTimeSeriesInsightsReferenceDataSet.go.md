@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsReferenceDataSet.IotTimeSeriesInsightsReferenceDataSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/iottimeseriesinsightsreferencedataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsreferencedataset"
 
 iottimeseriesinsightsreferencedataset.NewIotTimeSeriesInsightsReferenceDataSet(scope Construct, id *string, config IotTimeSeriesInsightsReferenceDataSetConfig) IotTimeSeriesInsightsReferenceDataSet
 ```
@@ -432,7 +432,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsReferenceDataSet.IotTimeSeriesInsightsReferenceDataSet.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/iottimeseriesinsightsreferencedataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsreferencedataset"
 
 iottimeseriesinsightsreferencedataset.IotTimeSeriesInsightsReferenceDataSet_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsReferenceDataSet.IotTimeSeriesInsightsReferenceDataSet.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/iottimeseriesinsightsreferencedataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsreferencedataset"
 
 iottimeseriesinsightsreferencedataset.IotTimeSeriesInsightsReferenceDataSet_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ iottimeseriesinsightsreferencedataset.IotTimeSeriesInsightsReferenceDataSet_IsTe
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsReferenceDataSet.IotTimeSeriesInsightsReferenceDataSet.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/iottimeseriesinsightsreferencedataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsreferencedataset"
 
 iottimeseriesinsightsreferencedataset.IotTimeSeriesInsightsReferenceDataSet_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ iottimeseriesinsightsreferencedataset.IotTimeSeriesInsightsReferenceDataSet_IsTe
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsReferenceDataSet.IotTimeSeriesInsightsReferenceDataSet.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/iottimeseriesinsightsreferencedataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsreferencedataset"
 
 iottimeseriesinsightsreferencedataset.IotTimeSeriesInsightsReferenceDataSet_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -897,7 +897,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsReferenceDataSet.IotTimeSeriesInsightsReferenceDataSetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/iottimeseriesinsightsreferencedataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsreferencedataset"
 
 &iottimeseriesinsightsreferencedataset.IotTimeSeriesInsightsReferenceDataSetConfig {
 	Connection: interface{},
@@ -914,7 +914,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/iottimeseriesinsi
 	DataStringComparisonBehavior: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.iotTimeSeriesInsightsReferenceDataSet.IotTimeSeriesInsightsReferenceDataSetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.iotTimeSeriesInsightsReferenceDataSet.IotTimeSeriesInsightsReferenceDataSetTimeouts,
 }
 ```
 
@@ -1118,7 +1118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsReferenceDataSet.IotTimeSeriesInsightsReferenceDataSetKeyProperty.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/iottimeseriesinsightsreferencedataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsreferencedataset"
 
 &iottimeseriesinsightsreferencedataset.IotTimeSeriesInsightsReferenceDataSetKeyProperty {
 	Name: *string,
@@ -1164,7 +1164,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsReferenceDataSet.IotTimeSeriesInsightsReferenceDataSetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/iottimeseriesinsightsreferencedataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsreferencedataset"
 
 &iottimeseriesinsightsreferencedataset.IotTimeSeriesInsightsReferenceDataSetTimeouts {
 	Create: *string,
@@ -1240,7 +1240,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsReferenceDataSet.IotTimeSeriesInsightsReferenceDataSetKeyPropertyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/iottimeseriesinsightsreferencedataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsreferencedataset"
 
 iottimeseriesinsightsreferencedataset.NewIotTimeSeriesInsightsReferenceDataSetKeyPropertyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IotTimeSeriesInsightsReferenceDataSetKeyPropertyList
 ```
@@ -1400,7 +1400,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsReferenceDataSet.IotTimeSeriesInsightsReferenceDataSetKeyPropertyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/iottimeseriesinsightsreferencedataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsreferencedataset"
 
 iottimeseriesinsightsreferencedataset.NewIotTimeSeriesInsightsReferenceDataSetKeyPropertyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IotTimeSeriesInsightsReferenceDataSetKeyPropertyOutputReference
 ```
@@ -1711,7 +1711,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsReferenceDataSet.IotTimeSeriesInsightsReferenceDataSetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/iottimeseriesinsightsreferencedataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsreferencedataset"
 
 iottimeseriesinsightsreferencedataset.NewIotTimeSeriesInsightsReferenceDataSetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IotTimeSeriesInsightsReferenceDataSetTimeoutsOutputReference
 ```
