@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsstreaminputeventhubv2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsstreaminputeventhubv2"
 
 streamanalyticsstreaminputeventhubv2.NewStreamAnalyticsStreamInputEventhubV2(scope Construct, id *string, config StreamAnalyticsStreamInputEventhubV2Config) StreamAnalyticsStreamInputEventhubV2
 ```
@@ -453,7 +453,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsstreaminputeventhubv2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsstreaminputeventhubv2"
 
 streamanalyticsstreaminputeventhubv2.StreamAnalyticsStreamInputEventhubV2_IsConstruct(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsstreaminputeventhubv2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsstreaminputeventhubv2"
 
 streamanalyticsstreaminputeventhubv2.StreamAnalyticsStreamInputEventhubV2_IsTerraformElement(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ streamanalyticsstreaminputeventhubv2.StreamAnalyticsStreamInputEventhubV2_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsstreaminputeventhubv2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsstreaminputeventhubv2"
 
 streamanalyticsstreaminputeventhubv2.StreamAnalyticsStreamInputEventhubV2_IsTerraformResource(x interface{}) *bool
 ```
@@ -513,7 +513,7 @@ streamanalyticsstreaminputeventhubv2.StreamAnalyticsStreamInputEventhubV2_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsstreaminputeventhubv2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsstreaminputeventhubv2"
 
 streamanalyticsstreaminputeventhubv2.StreamAnalyticsStreamInputEventhubV2_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1006,7 +1006,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2Config.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsstreaminputeventhubv2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsstreaminputeventhubv2"
 
 &streamanalyticsstreaminputeventhubv2.StreamAnalyticsStreamInputEventhubV2Config {
 	Connection: interface{},
@@ -1018,7 +1018,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsstream
 	Provisioners: *[]interface{},
 	EventhubName: *string,
 	Name: *string,
-	Serialization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2Serialization,
+	Serialization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2Serialization,
 	ServicebusNamespace: *string,
 	StreamAnalyticsJobId: *string,
 	AuthenticationMode: *string,
@@ -1027,7 +1027,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsstream
 	PartitionKey: *string,
 	SharedAccessPolicyKey: *string,
 	SharedAccessPolicyName: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2Timeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2Timeouts,
 }
 ```
 
@@ -1283,7 +1283,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2Serialization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsstreaminputeventhubv2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsstreaminputeventhubv2"
 
 &streamanalyticsstreaminputeventhubv2.StreamAnalyticsStreamInputEventhubV2Serialization {
 	Type: *string,
@@ -1343,7 +1343,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2Timeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsstreaminputeventhubv2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsstreaminputeventhubv2"
 
 &streamanalyticsstreaminputeventhubv2.StreamAnalyticsStreamInputEventhubV2Timeouts {
 	Create: *string,
@@ -1419,7 +1419,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2SerializationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsstreaminputeventhubv2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsstreaminputeventhubv2"
 
 streamanalyticsstreaminputeventhubv2.NewStreamAnalyticsStreamInputEventhubV2SerializationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsStreamInputEventhubV2SerializationOutputReference
 ```
@@ -1748,7 +1748,7 @@ func InternalValue() StreamAnalyticsStreamInputEventhubV2Serialization
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsStreamInputEventhubV2.StreamAnalyticsStreamInputEventhubV2TimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsstreaminputeventhubv2"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsstreaminputeventhubv2"
 
 streamanalyticsstreaminputeventhubv2.NewStreamAnalyticsStreamInputEventhubV2TimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsStreamInputEventhubV2TimeoutsOutputReference
 ```

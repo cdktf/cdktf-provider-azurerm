@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/spatialanchorsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/spatialanchorsaccount"
 
 spatialanchorsaccount.NewSpatialAnchorsAccount(scope Construct, id *string, config SpatialAnchorsAccountConfig) SpatialAnchorsAccount
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/spatialanchorsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/spatialanchorsaccount"
 
 spatialanchorsaccount.SpatialAnchorsAccount_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/spatialanchorsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/spatialanchorsaccount"
 
 spatialanchorsaccount.SpatialAnchorsAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ spatialanchorsaccount.SpatialAnchorsAccount_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/spatialanchorsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/spatialanchorsaccount"
 
 spatialanchorsaccount.SpatialAnchorsAccount_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ spatialanchorsaccount.SpatialAnchorsAccount_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccount.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/spatialanchorsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/spatialanchorsaccount"
 
 spatialanchorsaccount.SpatialAnchorsAccount_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -855,7 +855,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/spatialanchorsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/spatialanchorsaccount"
 
 &spatialanchorsaccount.SpatialAnchorsAccountConfig {
 	Connection: interface{},
@@ -870,7 +870,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/spatialanchorsaccount
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.spatialAnchorsAccount.SpatialAnchorsAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.spatialAnchorsAccount.SpatialAnchorsAccountTimeouts,
 }
 ```
 
@@ -1046,7 +1046,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/spatialanchorsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/spatialanchorsaccount"
 
 &spatialanchorsaccount.SpatialAnchorsAccountTimeouts {
 	Create: *string,
@@ -1122,7 +1122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.spatialAnchorsAccount.SpatialAnchorsAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/spatialanchorsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/spatialanchorsaccount"
 
 spatialanchorsaccount.NewSpatialAnchorsAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpatialAnchorsAccountTimeoutsOutputReference
 ```
