@@ -39,7 +39,10 @@ The Maven package is available at [https://mvnrepository.com/artifact/com.hashic
 
 The go package is generated into the [`github.com/cdktf/cdktf-provider-azurerm-go`](https://github.com/cdktf/cdktf-provider-azurerm-go) package.
 
-`go get github.com/cdktf/cdktf-provider-azurerm-go/azurerm`
+`go get github.com/cdktf/cdktf-provider-azurerm-go/azurerm/<version>`
+
+Where `<version>` is the version of the prebuilt provider you would like to use e.g. `v11`. The full module name can be found
+within the [go.mod](https://github.com/cdktf/cdktf-provider-azurerm-go/blob/main/azurerm/go.mod#L1) file.
 
 ## Docs
 
