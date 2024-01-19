@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSchedule.AutomationSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationschedule"
 
 automationschedule.NewAutomationSchedule(scope Construct, id *string, config AutomationScheduleConfig) AutomationSchedule
 ```
@@ -474,7 +474,7 @@ func ResetWeekDays()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationSchedule.AutomationSchedule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationschedule"
 
 automationschedule.AutomationSchedule_IsConstruct(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationSchedule.AutomationSchedule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationschedule"
 
 automationschedule.AutomationSchedule_IsTerraformElement(x interface{}) *bool
 ```
@@ -520,7 +520,7 @@ automationschedule.AutomationSchedule_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationSchedule.AutomationSchedule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationschedule"
 
 automationschedule.AutomationSchedule_IsTerraformResource(x interface{}) *bool
 ```
@@ -534,7 +534,7 @@ automationschedule.AutomationSchedule_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.automationSchedule.AutomationSchedule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationschedule"
 
 automationschedule.AutomationSchedule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1071,7 +1071,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSchedule.AutomationScheduleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationschedule"
 
 &automationschedule.AutomationScheduleConfig {
 	Connection: interface{},
@@ -1092,7 +1092,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationschedul
 	MonthDays: *[]*f64,
 	MonthlyOccurrence: interface{},
 	StartTime: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.automationSchedule.AutomationScheduleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationSchedule.AutomationScheduleTimeouts,
 	Timezone: *string,
 	WeekDays: *[]*string,
 }
@@ -1376,7 +1376,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSchedule.AutomationScheduleMonthlyOccurrence.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationschedule"
 
 &automationschedule.AutomationScheduleMonthlyOccurrence {
 	Day: *string,
@@ -1422,7 +1422,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSchedule.AutomationScheduleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationschedule"
 
 &automationschedule.AutomationScheduleTimeouts {
 	Create: *string,
@@ -1498,7 +1498,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSchedule.AutomationScheduleMonthlyOccurrenceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationschedule"
 
 automationschedule.NewAutomationScheduleMonthlyOccurrenceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AutomationScheduleMonthlyOccurrenceList
 ```
@@ -1658,7 +1658,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSchedule.AutomationScheduleMonthlyOccurrenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationschedule"
 
 automationschedule.NewAutomationScheduleMonthlyOccurrenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AutomationScheduleMonthlyOccurrenceOutputReference
 ```
@@ -1969,7 +1969,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSchedule.AutomationScheduleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationschedule"
 
 automationschedule.NewAutomationScheduleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationScheduleTimeoutsOutputReference
 ```
