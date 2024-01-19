@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/mysql_server
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/mysql_server
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMysqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/mysql_server#id DataAzurermMysqlServer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/mysql_server#id DataAzurermMysqlServer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/mysql_server#name DataAzurermMysqlServer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/mysql_server#name DataAzurermMysqlServer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/mysql_server#resource_group_name DataAzurermMysqlServer#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/mysql_server#resource_group_name DataAzurermMysqlServer#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/mysql_server#timeouts DataAzurermMysqlServer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/mysql_server#timeouts DataAzurermMysqlServer#timeouts}
   */
   readonly timeouts?: DataAzurermMysqlServerTimeouts;
 }
@@ -226,7 +221,7 @@ export class DataAzurermMysqlServerThreatDetectionPolicyList extends cdktf.Compl
 }
 export interface DataAzurermMysqlServerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/mysql_server#read DataAzurermMysqlServer#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/mysql_server#read DataAzurermMysqlServer#read}
   */
   readonly read?: string;
 }
@@ -320,7 +315,7 @@ export class DataAzurermMysqlServerTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/mysql_server azurerm_mysql_server}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/mysql_server azurerm_mysql_server}
 */
 export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
@@ -336,7 +331,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermMysqlServer resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermMysqlServer to import
-  * @param importFromId The id of the existing DataAzurermMysqlServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/mysql_server#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermMysqlServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/mysql_server#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermMysqlServer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -348,7 +343,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/data-sources/mysql_server azurerm_mysql_server} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/mysql_server azurerm_mysql_server} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -359,7 +354,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_mysql_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.87.0',
+        providerVersion: '3.88.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
