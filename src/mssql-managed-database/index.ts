@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,52 +13,58 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlManagedDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#id MssqlManagedDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#id MssqlManagedDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#managed_instance_id MssqlManagedDatabase#managed_instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#managed_instance_id MssqlManagedDatabase#managed_instance_id}
   */
   readonly managedInstanceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#name MssqlManagedDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#name MssqlManagedDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#short_term_retention_days MssqlManagedDatabase#short_term_retention_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#short_term_retention_days MssqlManagedDatabase#short_term_retention_days}
   */
   readonly shortTermRetentionDays?: number;
   /**
   * long_term_retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#long_term_retention_policy MssqlManagedDatabase#long_term_retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#long_term_retention_policy MssqlManagedDatabase#long_term_retention_policy}
   */
   readonly longTermRetentionPolicy?: MssqlManagedDatabaseLongTermRetentionPolicy;
   /**
+  * point_in_time_restore block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#point_in_time_restore MssqlManagedDatabase#point_in_time_restore}
+  */
+  readonly pointInTimeRestore?: MssqlManagedDatabasePointInTimeRestore;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#timeouts MssqlManagedDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#timeouts MssqlManagedDatabase#timeouts}
   */
   readonly timeouts?: MssqlManagedDatabaseTimeouts;
 }
 export interface MssqlManagedDatabaseLongTermRetentionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#monthly_retention MssqlManagedDatabase#monthly_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#monthly_retention MssqlManagedDatabase#monthly_retention}
   */
   readonly monthlyRetention?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#week_of_year MssqlManagedDatabase#week_of_year}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#week_of_year MssqlManagedDatabase#week_of_year}
   */
   readonly weekOfYear?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#weekly_retention MssqlManagedDatabase#weekly_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#weekly_retention MssqlManagedDatabase#weekly_retention}
   */
   readonly weeklyRetention?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#yearly_retention MssqlManagedDatabase#yearly_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#yearly_retention MssqlManagedDatabase#yearly_retention}
   */
   readonly yearlyRetention?: string;
 }
@@ -227,21 +233,132 @@ export class MssqlManagedDatabaseLongTermRetentionPolicyOutputReference extends 
     return this._yearlyRetention;
   }
 }
+export interface MssqlManagedDatabasePointInTimeRestore {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#restore_point_in_time MssqlManagedDatabase#restore_point_in_time}
+  */
+  readonly restorePointInTime: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#source_database_id MssqlManagedDatabase#source_database_id}
+  */
+  readonly sourceDatabaseId: string;
+}
+
+export function mssqlManagedDatabasePointInTimeRestoreToTerraform(struct?: MssqlManagedDatabasePointInTimeRestoreOutputReference | MssqlManagedDatabasePointInTimeRestore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    restore_point_in_time: cdktf.stringToTerraform(struct!.restorePointInTime),
+    source_database_id: cdktf.stringToTerraform(struct!.sourceDatabaseId),
+  }
+}
+
+
+export function mssqlManagedDatabasePointInTimeRestoreToHclTerraform(struct?: MssqlManagedDatabasePointInTimeRestoreOutputReference | MssqlManagedDatabasePointInTimeRestore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    restore_point_in_time: {
+      value: cdktf.stringToHclTerraform(struct!.restorePointInTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_database_id: {
+      value: cdktf.stringToHclTerraform(struct!.sourceDatabaseId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MssqlManagedDatabasePointInTimeRestoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MssqlManagedDatabasePointInTimeRestore | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._restorePointInTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.restorePointInTime = this._restorePointInTime;
+    }
+    if (this._sourceDatabaseId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceDatabaseId = this._sourceDatabaseId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlManagedDatabasePointInTimeRestore | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._restorePointInTime = undefined;
+      this._sourceDatabaseId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._restorePointInTime = value.restorePointInTime;
+      this._sourceDatabaseId = value.sourceDatabaseId;
+    }
+  }
+
+  // restore_point_in_time - computed: false, optional: false, required: true
+  private _restorePointInTime?: string; 
+  public get restorePointInTime() {
+    return this.getStringAttribute('restore_point_in_time');
+  }
+  public set restorePointInTime(value: string) {
+    this._restorePointInTime = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restorePointInTimeInput() {
+    return this._restorePointInTime;
+  }
+
+  // source_database_id - computed: false, optional: false, required: true
+  private _sourceDatabaseId?: string; 
+  public get sourceDatabaseId() {
+    return this.getStringAttribute('source_database_id');
+  }
+  public set sourceDatabaseId(value: string) {
+    this._sourceDatabaseId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceDatabaseIdInput() {
+    return this._sourceDatabaseId;
+  }
+}
 export interface MssqlManagedDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#create MssqlManagedDatabase#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#create MssqlManagedDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#delete MssqlManagedDatabase#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#delete MssqlManagedDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#read MssqlManagedDatabase#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#read MssqlManagedDatabase#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#update MssqlManagedDatabase#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#update MssqlManagedDatabase#update}
   */
   readonly update?: string;
 }
@@ -422,7 +539,7 @@ export class MssqlManagedDatabaseTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database azurerm_mssql_managed_database}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database azurerm_mssql_managed_database}
 */
 export class MssqlManagedDatabase extends cdktf.TerraformResource {
 
@@ -438,7 +555,7 @@ export class MssqlManagedDatabase extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MssqlManagedDatabase resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MssqlManagedDatabase to import
-  * @param importFromId The id of the existing MssqlManagedDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MssqlManagedDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MssqlManagedDatabase to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -450,7 +567,7 @@ export class MssqlManagedDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/mssql_managed_database azurerm_mssql_managed_database} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/mssql_managed_database azurerm_mssql_managed_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -461,7 +578,7 @@ export class MssqlManagedDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_managed_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.87.0',
+        providerVersion: '3.88.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -477,6 +594,7 @@ export class MssqlManagedDatabase extends cdktf.TerraformResource {
     this._name = config.name;
     this._shortTermRetentionDays = config.shortTermRetentionDays;
     this._longTermRetentionPolicy.internalValue = config.longTermRetentionPolicy;
+    this._pointInTimeRestore.internalValue = config.pointInTimeRestore;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -558,6 +676,22 @@ export class MssqlManagedDatabase extends cdktf.TerraformResource {
     return this._longTermRetentionPolicy.internalValue;
   }
 
+  // point_in_time_restore - computed: false, optional: true, required: false
+  private _pointInTimeRestore = new MssqlManagedDatabasePointInTimeRestoreOutputReference(this, "point_in_time_restore");
+  public get pointInTimeRestore() {
+    return this._pointInTimeRestore;
+  }
+  public putPointInTimeRestore(value: MssqlManagedDatabasePointInTimeRestore) {
+    this._pointInTimeRestore.internalValue = value;
+  }
+  public resetPointInTimeRestore() {
+    this._pointInTimeRestore.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pointInTimeRestoreInput() {
+    return this._pointInTimeRestore.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new MssqlManagedDatabaseTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -585,6 +719,7 @@ export class MssqlManagedDatabase extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       short_term_retention_days: cdktf.numberToTerraform(this._shortTermRetentionDays),
       long_term_retention_policy: mssqlManagedDatabaseLongTermRetentionPolicyToTerraform(this._longTermRetentionPolicy.internalValue),
+      point_in_time_restore: mssqlManagedDatabasePointInTimeRestoreToTerraform(this._pointInTimeRestore.internalValue),
       timeouts: mssqlManagedDatabaseTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -620,6 +755,12 @@ export class MssqlManagedDatabase extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "MssqlManagedDatabaseLongTermRetentionPolicyList",
+      },
+      point_in_time_restore: {
+        value: mssqlManagedDatabasePointInTimeRestoreToHclTerraform(this._pointInTimeRestore.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlManagedDatabasePointInTimeRestoreList",
       },
       timeouts: {
         value: mssqlManagedDatabaseTimeoutsToHclTerraform(this._timeouts.internalValue),

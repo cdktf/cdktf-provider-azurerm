@@ -879,6 +879,7 @@ Object.defineProperty(exports, 'springCloudContainerDeployment', { get: function
 Object.defineProperty(exports, 'springCloudCustomDomain', { get: function () { return require('./spring-cloud-custom-domain'); } });
 Object.defineProperty(exports, 'springCloudCustomizedAccelerator', { get: function () { return require('./spring-cloud-customized-accelerator'); } });
 Object.defineProperty(exports, 'springCloudDevToolPortal', { get: function () { return require('./spring-cloud-dev-tool-portal'); } });
+Object.defineProperty(exports, 'springCloudDynatraceApplicationPerformanceMonitoring', { get: function () { return require('./spring-cloud-dynatrace-application-performance-monitoring'); } });
 Object.defineProperty(exports, 'springCloudGateway', { get: function () { return require('./spring-cloud-gateway'); } });
 Object.defineProperty(exports, 'springCloudGatewayCustomDomain', { get: function () { return require('./spring-cloud-gateway-custom-domain'); } });
 Object.defineProperty(exports, 'springCloudGatewayRouteConfig', { get: function () { return require('./spring-cloud-gateway-route-config'); } });
@@ -1011,6 +1012,7 @@ Object.defineProperty(exports, 'virtualMachine', { get: function () { return req
 Object.defineProperty(exports, 'virtualMachineDataDiskAttachment', { get: function () { return require('./virtual-machine-data-disk-attachment'); } });
 Object.defineProperty(exports, 'virtualMachineExtension', { get: function () { return require('./virtual-machine-extension'); } });
 Object.defineProperty(exports, 'virtualMachinePacketCapture', { get: function () { return require('./virtual-machine-packet-capture'); } });
+Object.defineProperty(exports, 'virtualMachineRunCommand', { get: function () { return require('./virtual-machine-run-command'); } });
 Object.defineProperty(exports, 'virtualMachineScaleSet', { get: function () { return require('./virtual-machine-scale-set'); } });
 Object.defineProperty(exports, 'virtualMachineScaleSetExtension', { get: function () { return require('./virtual-machine-scale-set-extension'); } });
 Object.defineProperty(exports, 'virtualMachineScaleSetPacketCapture', { get: function () { return require('./virtual-machine-scale-set-packet-capture'); } });
@@ -1263,6 +1265,7 @@ Object.defineProperty(exports, 'dataAzurermNetworkManagerNetworkGroup', { get: f
 Object.defineProperty(exports, 'dataAzurermNetworkSecurityGroup', { get: function () { return require('./data-azurerm-network-security-group'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkServiceTags', { get: function () { return require('./data-azurerm-network-service-tags'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkWatcher', { get: function () { return require('./data-azurerm-network-watcher'); } });
+Object.defineProperty(exports, 'dataAzurermNginxDeployment', { get: function () { return require('./data-azurerm-nginx-deployment'); } });
 Object.defineProperty(exports, 'dataAzurermNotificationHub', { get: function () { return require('./data-azurerm-notification-hub'); } });
 Object.defineProperty(exports, 'dataAzurermNotificationHubNamespace', { get: function () { return require('./data-azurerm-notification-hub-namespace'); } });
 Object.defineProperty(exports, 'dataAzurermOrchestratedVirtualMachineScaleSet', { get: function () { return require('./data-azurerm-orchestrated-virtual-machine-scale-set'); } });

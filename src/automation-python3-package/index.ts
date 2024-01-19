@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,66 +13,66 @@ import * as cdktf from 'cdktf';
 
 export interface AutomationPython3PackageConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#automation_account_name AutomationPython3Package#automation_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#automation_account_name AutomationPython3Package#automation_account_name}
   */
   readonly automationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#content_uri AutomationPython3Package#content_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#content_uri AutomationPython3Package#content_uri}
   */
   readonly contentUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#content_version AutomationPython3Package#content_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#content_version AutomationPython3Package#content_version}
   */
   readonly contentVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#hash_algorithm AutomationPython3Package#hash_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#hash_algorithm AutomationPython3Package#hash_algorithm}
   */
   readonly hashAlgorithm?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#hash_value AutomationPython3Package#hash_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#hash_value AutomationPython3Package#hash_value}
   */
   readonly hashValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#id AutomationPython3Package#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#id AutomationPython3Package#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#name AutomationPython3Package#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#name AutomationPython3Package#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#resource_group_name AutomationPython3Package#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#resource_group_name AutomationPython3Package#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#tags AutomationPython3Package#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#tags AutomationPython3Package#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#timeouts AutomationPython3Package#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#timeouts AutomationPython3Package#timeouts}
   */
   readonly timeouts?: AutomationPython3PackageTimeouts;
 }
 export interface AutomationPython3PackageTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#create AutomationPython3Package#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#create AutomationPython3Package#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#delete AutomationPython3Package#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#delete AutomationPython3Package#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#read AutomationPython3Package#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#read AutomationPython3Package#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#update AutomationPython3Package#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#update AutomationPython3Package#update}
   */
   readonly update?: string;
 }
@@ -253,7 +253,7 @@ export class AutomationPython3PackageTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package azurerm_automation_python3_package}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package azurerm_automation_python3_package}
 */
 export class AutomationPython3Package extends cdktf.TerraformResource {
 
@@ -269,7 +269,7 @@ export class AutomationPython3Package extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AutomationPython3Package resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AutomationPython3Package to import
-  * @param importFromId The id of the existing AutomationPython3Package that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AutomationPython3Package that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AutomationPython3Package to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -281,7 +281,7 @@ export class AutomationPython3Package extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/automation_python3_package azurerm_automation_python3_package} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_python3_package azurerm_automation_python3_package} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -292,7 +292,7 @@ export class AutomationPython3Package extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automation_python3_package',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.87.0',
+        providerVersion: '3.88.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,48 +13,48 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkProfileConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#id NetworkProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#id NetworkProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#location NetworkProfile#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#location NetworkProfile#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#name NetworkProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#name NetworkProfile#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#resource_group_name NetworkProfile#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#resource_group_name NetworkProfile#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#tags NetworkProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#tags NetworkProfile#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * container_network_interface block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#container_network_interface NetworkProfile#container_network_interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#container_network_interface NetworkProfile#container_network_interface}
   */
   readonly containerNetworkInterface: NetworkProfileContainerNetworkInterface;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#timeouts NetworkProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#timeouts NetworkProfile#timeouts}
   */
   readonly timeouts?: NetworkProfileTimeouts;
 }
 export interface NetworkProfileContainerNetworkInterfaceIpConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#name NetworkProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#name NetworkProfile#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#subnet_id NetworkProfile#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#subnet_id NetworkProfile#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -193,13 +193,13 @@ export class NetworkProfileContainerNetworkInterfaceIpConfigurationList extends 
 }
 export interface NetworkProfileContainerNetworkInterface {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#name NetworkProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#name NetworkProfile#name}
   */
   readonly name: string;
   /**
   * ip_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#ip_configuration NetworkProfile#ip_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#ip_configuration NetworkProfile#ip_configuration}
   */
   readonly ipConfiguration: NetworkProfileContainerNetworkInterfaceIpConfiguration[] | cdktf.IResolvable;
 }
@@ -306,19 +306,19 @@ export class NetworkProfileContainerNetworkInterfaceOutputReference extends cdkt
 }
 export interface NetworkProfileTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#create NetworkProfile#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#create NetworkProfile#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#delete NetworkProfile#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#delete NetworkProfile#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#read NetworkProfile#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#read NetworkProfile#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#update NetworkProfile#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#update NetworkProfile#update}
   */
   readonly update?: string;
 }
@@ -499,7 +499,7 @@ export class NetworkProfileTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile azurerm_network_profile}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile azurerm_network_profile}
 */
 export class NetworkProfile extends cdktf.TerraformResource {
 
@@ -515,7 +515,7 @@ export class NetworkProfile extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkProfile resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkProfile to import
-  * @param importFromId The id of the existing NetworkProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -527,7 +527,7 @@ export class NetworkProfile extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/network_profile azurerm_network_profile} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/network_profile azurerm_network_profile} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -538,7 +538,7 @@ export class NetworkProfile extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_profile',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.87.0',
+        providerVersion: '3.88.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

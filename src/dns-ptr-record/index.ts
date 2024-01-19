@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,58 +13,58 @@ import * as cdktf from 'cdktf';
 
 export interface DnsPtrRecordConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record#id DnsPtrRecord#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record#id DnsPtrRecord#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record#name DnsPtrRecord#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record#name DnsPtrRecord#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record#records DnsPtrRecord#records}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record#records DnsPtrRecord#records}
   */
   readonly records: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record#resource_group_name DnsPtrRecord#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record#resource_group_name DnsPtrRecord#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record#tags DnsPtrRecord#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record#tags DnsPtrRecord#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record#ttl DnsPtrRecord#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record#ttl DnsPtrRecord#ttl}
   */
   readonly ttl: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record#zone_name DnsPtrRecord#zone_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record#zone_name DnsPtrRecord#zone_name}
   */
   readonly zoneName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record#timeouts DnsPtrRecord#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record#timeouts DnsPtrRecord#timeouts}
   */
   readonly timeouts?: DnsPtrRecordTimeouts;
 }
 export interface DnsPtrRecordTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record#create DnsPtrRecord#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record#create DnsPtrRecord#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record#delete DnsPtrRecord#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record#delete DnsPtrRecord#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record#read DnsPtrRecord#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record#read DnsPtrRecord#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record#update DnsPtrRecord#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record#update DnsPtrRecord#update}
   */
   readonly update?: string;
 }
@@ -245,7 +245,7 @@ export class DnsPtrRecordTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record azurerm_dns_ptr_record}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record azurerm_dns_ptr_record}
 */
 export class DnsPtrRecord extends cdktf.TerraformResource {
 
@@ -261,7 +261,7 @@ export class DnsPtrRecord extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DnsPtrRecord resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DnsPtrRecord to import
-  * @param importFromId The id of the existing DnsPtrRecord that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DnsPtrRecord that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DnsPtrRecord to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -273,7 +273,7 @@ export class DnsPtrRecord extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.87.0/docs/resources/dns_ptr_record azurerm_dns_ptr_record} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/dns_ptr_record azurerm_dns_ptr_record} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -284,7 +284,7 @@ export class DnsPtrRecord extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dns_ptr_record',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.87.0',
+        providerVersion: '3.88.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
