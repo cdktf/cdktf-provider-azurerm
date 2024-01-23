@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/signalrservicecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/signalrservicecustomdomain"
 
 signalrservicecustomdomain.NewSignalrServiceCustomDomain(scope Construct, id *string, config SignalrServiceCustomDomainConfig) SignalrServiceCustomDomain
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/signalrservicecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/signalrservicecustomdomain"
 
 signalrservicecustomdomain.SignalrServiceCustomDomain_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/signalrservicecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/signalrservicecustomdomain"
 
 signalrservicecustomdomain.SignalrServiceCustomDomain_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ signalrservicecustomdomain.SignalrServiceCustomDomain_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/signalrservicecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/signalrservicecustomdomain"
 
 signalrservicecustomdomain.SignalrServiceCustomDomain_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ signalrservicecustomdomain.SignalrServiceCustomDomain_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/signalrservicecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/signalrservicecustomdomain"
 
 signalrservicecustomdomain.SignalrServiceCustomDomain_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -826,7 +826,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/signalrservicecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/signalrservicecustomdomain"
 
 &signalrservicecustomdomain.SignalrServiceCustomDomainConfig {
 	Connection: interface{},
@@ -841,7 +841,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/signalrservicecustomd
 	SignalrCustomCertificateId: *string,
 	SignalrServiceId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.signalrServiceCustomDomain.SignalrServiceCustomDomainTimeouts,
 }
 ```
 
@@ -1017,7 +1017,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/signalrservicecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/signalrservicecustomdomain"
 
 &signalrservicecustomdomain.SignalrServiceCustomDomainTimeouts {
 	Create: *string,
@@ -1079,7 +1079,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/signalrservicecustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/signalrservicecustomdomain"
 
 signalrservicecustomdomain.NewSignalrServiceCustomDomainTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SignalrServiceCustomDomainTimeoutsOutputReference
 ```

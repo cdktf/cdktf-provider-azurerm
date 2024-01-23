@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springclouddevtoolportal"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springclouddevtoolportal"
 
 springclouddevtoolportal.NewSpringCloudDevToolPortal(scope Construct, id *string, config SpringCloudDevToolPortalConfig) SpringCloudDevToolPortal
 ```
@@ -446,7 +446,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springclouddevtoolportal"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springclouddevtoolportal"
 
 springclouddevtoolportal.SpringCloudDevToolPortal_IsConstruct(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springclouddevtoolportal"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springclouddevtoolportal"
 
 springclouddevtoolportal.SpringCloudDevToolPortal_IsTerraformElement(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ springclouddevtoolportal.SpringCloudDevToolPortal_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springclouddevtoolportal"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springclouddevtoolportal"
 
 springclouddevtoolportal.SpringCloudDevToolPortal_IsTerraformResource(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ springclouddevtoolportal.SpringCloudDevToolPortal_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springclouddevtoolportal"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springclouddevtoolportal"
 
 springclouddevtoolportal.SpringCloudDevToolPortal_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -911,7 +911,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springclouddevtoolportal"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springclouddevtoolportal"
 
 &springclouddevtoolportal.SpringCloudDevToolPortalConfig {
 	Connection: interface{},
@@ -927,8 +927,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springclouddevtoolpor
 	ApplicationLiveViewEnabled: interface{},
 	Id: *string,
 	PublicNetworkAccessEnabled: interface{},
-	Sso: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalSso,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeouts,
+	Sso: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.springCloudDevToolPortal.SpringCloudDevToolPortalSso,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.springCloudDevToolPortal.SpringCloudDevToolPortalTimeouts,
 }
 ```
 
@@ -1132,7 +1132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalSso.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springclouddevtoolportal"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springclouddevtoolportal"
 
 &springclouddevtoolportal.SpringCloudDevToolPortalSso {
 	ClientId: *string,
@@ -1206,7 +1206,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springclouddevtoolportal"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springclouddevtoolportal"
 
 &springclouddevtoolportal.SpringCloudDevToolPortalTimeouts {
 	Create: *string,
@@ -1282,7 +1282,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalSsoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springclouddevtoolportal"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springclouddevtoolportal"
 
 springclouddevtoolportal.NewSpringCloudDevToolPortalSsoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudDevToolPortalSsoOutputReference
 ```
@@ -1647,7 +1647,7 @@ func InternalValue() SpringCloudDevToolPortalSso
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springclouddevtoolportal"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springclouddevtoolportal"
 
 springclouddevtoolportal.NewSpringCloudDevToolPortalTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudDevToolPortalTimeoutsOutputReference
 ```
