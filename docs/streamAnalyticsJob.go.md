@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsJob.StreamAnalyticsJob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsjob"
 
 streamanalyticsjob.NewStreamAnalyticsJob(scope Construct, id *string, config StreamAnalyticsJobConfig) StreamAnalyticsJob
 ```
@@ -522,7 +522,7 @@ func ResetType()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.streamAnalyticsJob.StreamAnalyticsJob.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsjob"
 
 streamanalyticsjob.StreamAnalyticsJob_IsConstruct(x interface{}) *bool
 ```
@@ -554,7 +554,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.streamAnalyticsJob.StreamAnalyticsJob.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsjob"
 
 streamanalyticsjob.StreamAnalyticsJob_IsTerraformElement(x interface{}) *bool
 ```
@@ -568,7 +568,7 @@ streamanalyticsjob.StreamAnalyticsJob_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.streamAnalyticsJob.StreamAnalyticsJob.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsjob"
 
 streamanalyticsjob.StreamAnalyticsJob_IsTerraformResource(x interface{}) *bool
 ```
@@ -582,7 +582,7 @@ streamanalyticsjob.StreamAnalyticsJob_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.streamAnalyticsJob.StreamAnalyticsJob.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsjob"
 
 streamanalyticsjob.StreamAnalyticsJob_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1240,7 +1240,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsJob.StreamAnalyticsJobConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsjob"
 
 &streamanalyticsjob.StreamAnalyticsJobConfig {
 	Connection: interface{},
@@ -1261,13 +1261,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjo
 	EventsOutOfOrderMaxDelayInSeconds: *f64,
 	EventsOutOfOrderPolicy: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.streamAnalyticsJob.StreamAnalyticsJobIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsJob.StreamAnalyticsJobIdentity,
 	JobStorageAccount: interface{},
 	OutputErrorPolicy: *string,
 	StreamAnalyticsClusterId: *string,
 	StreamingUnits: *f64,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.streamAnalyticsJob.StreamAnalyticsJobTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsJob.StreamAnalyticsJobTimeouts,
 	Type: *string,
 }
 ```
@@ -1617,7 +1617,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsJob.StreamAnalyticsJobIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsjob"
 
 &streamanalyticsjob.StreamAnalyticsJobIdentity {
 	Type: *string,
@@ -1649,7 +1649,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsJob.StreamAnalyticsJobJobStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsjob"
 
 &streamanalyticsjob.StreamAnalyticsJobJobStorageAccount {
 	AccountKey: *string,
@@ -1709,7 +1709,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsJob.StreamAnalyticsJobTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsjob"
 
 &streamanalyticsjob.StreamAnalyticsJobTimeouts {
 	Create: *string,
@@ -1785,7 +1785,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsJob.StreamAnalyticsJobIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsjob"
 
 streamanalyticsjob.NewStreamAnalyticsJobIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsJobIdentityOutputReference
 ```
@@ -2078,7 +2078,7 @@ func InternalValue() StreamAnalyticsJobIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsJob.StreamAnalyticsJobJobStorageAccountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsjob"
 
 streamanalyticsjob.NewStreamAnalyticsJobJobStorageAccountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StreamAnalyticsJobJobStorageAccountList
 ```
@@ -2238,7 +2238,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsJob.StreamAnalyticsJobJobStorageAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsjob"
 
 streamanalyticsjob.NewStreamAnalyticsJobJobStorageAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StreamAnalyticsJobJobStorageAccountOutputReference
 ```
@@ -2578,7 +2578,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsJob.StreamAnalyticsJobTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticsjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsjob"
 
 streamanalyticsjob.NewStreamAnalyticsJobTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsJobTimeoutsOutputReference
 ```
