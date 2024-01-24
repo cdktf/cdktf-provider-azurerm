@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.elasticSan.ElasticSan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsan"
 
 elasticsan.NewElasticSan(scope Construct, id *string, config ElasticSanConfig) ElasticSan
 ```
@@ -439,7 +439,7 @@ func ResetZones()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.elasticSan.ElasticSan.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsan"
 
 elasticsan.ElasticSan_IsConstruct(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.elasticSan.ElasticSan.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsan"
 
 elasticsan.ElasticSan_IsTerraformElement(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ elasticsan.ElasticSan_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.elasticSan.ElasticSan.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsan"
 
 elasticsan.ElasticSan_IsTerraformResource(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ elasticsan.ElasticSan_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.elasticSan.ElasticSan.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsan"
 
 elasticsan.ElasticSan_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1003,7 +1003,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.elasticSan.ElasticSanConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsan"
 
 &elasticsan.ElasticSanConfig {
 	Connection: interface{},
@@ -1017,11 +1017,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsan"
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.elasticSan.ElasticSanSku,
+	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.elasticSan.ElasticSanSku,
 	ExtendedSizeInTib: *f64,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.elasticSan.ElasticSanTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.elasticSan.ElasticSanTimeouts,
 	Zones: *[]*string,
 }
 ```
@@ -1252,7 +1252,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.elasticSan.ElasticSanSku.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsan"
 
 &elasticsan.ElasticSanSku {
 	Name: *string,
@@ -1298,7 +1298,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.elasticSan.ElasticSanTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsan"
 
 &elasticsan.ElasticSanTimeouts {
 	Create: *string,
@@ -1374,7 +1374,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.elasticSan.ElasticSanSkuOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsan"
 
 elasticsan.NewElasticSanSkuOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ElasticSanSkuOutputReference
 ```
@@ -1674,7 +1674,7 @@ func InternalValue() ElasticSanSku
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.elasticSan.ElasticSanTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsan"
 
 elasticsan.NewElasticSanTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ElasticSanTimeoutsOutputReference
 ```
