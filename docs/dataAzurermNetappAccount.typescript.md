@@ -4,7 +4,7 @@
 
 ### DataAzurermNetappAccount <a name="DataAzurermNetappAccount" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/netapp_account azurerm_netapp_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account azurerm_netapp_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.Initializer"></a>
 
@@ -67,8 +67,10 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.getStringAttribute">getStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.putIdentity">putIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.putTimeouts">putTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.resetId">resetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.resetIdentity">resetIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.resetTimeouts">resetTimeouts</a></code> | *No description.* |
 
 ---
@@ -265,6 +267,18 @@ public interpolationForAttribute(terraformAttribute: string): IResolvable
 
 ---
 
+##### `putIdentity` <a name="putIdentity" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.putIdentity"></a>
+
+```typescript
+public putIdentity(value: DataAzurermNetappAccountIdentity): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.putIdentity.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentity">DataAzurermNetappAccountIdentity</a>
+
+---
+
 ##### `putTimeouts` <a name="putTimeouts" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.putTimeouts"></a>
 
 ```typescript
@@ -281,6 +295,12 @@ public putTimeouts(value: DataAzurermNetappAccountTimeouts): void
 
 ```typescript
 public resetId(): void
+```
+
+##### `resetIdentity` <a name="resetIdentity" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.resetIdentity"></a>
+
+```typescript
+public resetIdentity(): void
 ```
 
 ##### `resetTimeouts` <a name="resetTimeouts" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.resetTimeouts"></a>
@@ -392,7 +412,7 @@ The construct id used in the generated config for the DataAzurermNetappAccount t
 
 The id of the existing DataAzurermNetappAccount that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/netapp_account#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -420,8 +440,11 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference">DataAzurermNetappAccountIdentityOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.location">location</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.tags">tags</a></code> | <code>cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeoutsOutputReference">DataAzurermNetappAccountTimeoutsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.identityInput">identityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentity">DataAzurermNetappAccountIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
@@ -554,6 +577,16 @@ public readonly provider: TerraformProvider;
 
 ---
 
+##### `identity`<sup>Required</sup> <a name="identity" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.identity"></a>
+
+```typescript
+public readonly identity: DataAzurermNetappAccountIdentityOutputReference;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference">DataAzurermNetappAccountIdentityOutputReference</a>
+
+---
+
 ##### `location`<sup>Required</sup> <a name="location" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.location"></a>
 
 ```typescript
@@ -564,6 +597,16 @@ public readonly location: string;
 
 ---
 
+##### `tags`<sup>Required</sup> <a name="tags" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.tags"></a>
+
+```typescript
+public readonly tags: StringMap;
+```
+
+- *Type:* cdktf.StringMap
+
+---
+
 ##### `timeouts`<sup>Required</sup> <a name="timeouts" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.timeouts"></a>
 
 ```typescript
@@ -571,6 +614,16 @@ public readonly timeouts: DataAzurermNetappAccountTimeoutsOutputReference;
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeoutsOutputReference">DataAzurermNetappAccountTimeoutsOutputReference</a>
+
+---
+
+##### `identityInput`<sup>Optional</sup> <a name="identityInput" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccount.property.identityInput"></a>
+
+```typescript
+public readonly identityInput: DataAzurermNetappAccountIdentity;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentity">DataAzurermNetappAccountIdentity</a>
 
 ---
 
@@ -685,9 +738,10 @@ const dataAzurermNetappAccountConfig: dataAzurermNetappAccount.DataAzurermNetapp
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/netapp_account#name DataAzurermNetappAccount#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/netapp_account#resource_group_name DataAzurermNetappAccount#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/netapp_account#id DataAzurermNetappAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#name DataAzurermNetappAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#resource_group_name DataAzurermNetappAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#id DataAzurermNetappAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentity">DataAzurermNetappAccountIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeouts">DataAzurermNetappAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -770,7 +824,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/netapp_account#name DataAzurermNetappAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#name DataAzurermNetappAccount#name}.
 
 ---
 
@@ -782,7 +836,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/netapp_account#resource_group_name DataAzurermNetappAccount#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#resource_group_name DataAzurermNetappAccount#resource_group_name}.
 
 ---
 
@@ -794,10 +848,24 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/netapp_account#id DataAzurermNetappAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#id DataAzurermNetappAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `identity`<sup>Optional</sup> <a name="identity" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountConfig.property.identity"></a>
+
+```typescript
+public readonly identity: DataAzurermNetappAccountIdentity;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentity">DataAzurermNetappAccountIdentity</a>
+
+identity block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#identity DataAzurermNetappAccount#identity}
 
 ---
 
@@ -811,7 +879,50 @@ public readonly timeouts: DataAzurermNetappAccountTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/netapp_account#timeouts DataAzurermNetappAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#timeouts DataAzurermNetappAccount#timeouts}
+
+---
+
+### DataAzurermNetappAccountIdentity <a name="DataAzurermNetappAccountIdentity" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentity"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentity.Initializer"></a>
+
+```typescript
+import { dataAzurermNetappAccount } from '@cdktf/provider-azurerm'
+
+const dataAzurermNetappAccountIdentity: dataAzurermNetappAccount.DataAzurermNetappAccountIdentity = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentity.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#type DataAzurermNetappAccount#type}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentity.property.identityIds">identityIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#identity_ids DataAzurermNetappAccount#identity_ids}. |
+
+---
+
+##### `type`<sup>Required</sup> <a name="type" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentity.property.type"></a>
+
+```typescript
+public readonly type: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#type DataAzurermNetappAccount#type}.
+
+---
+
+##### `identityIds`<sup>Optional</sup> <a name="identityIds" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentity.property.identityIds"></a>
+
+```typescript
+public readonly identityIds: string[];
+```
+
+- *Type:* string[]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#identity_ids DataAzurermNetappAccount#identity_ids}.
 
 ---
 
@@ -829,7 +940,7 @@ const dataAzurermNetappAccountTimeouts: dataAzurermNetappAccount.DataAzurermNeta
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/netapp_account#read DataAzurermNetappAccount#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#read DataAzurermNetappAccount#read}. |
 
 ---
 
@@ -841,11 +952,333 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/netapp_account#read DataAzurermNetappAccount#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/netapp_account#read DataAzurermNetappAccount#read}.
 
 ---
 
 ## Classes <a name="Classes" id="Classes"></a>
+
+### DataAzurermNetappAccountIdentityOutputReference <a name="DataAzurermNetappAccountIdentityOutputReference" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.Initializer"></a>
+
+```typescript
+import { dataAzurermNetappAccount } from '@cdktf/provider-azurerm'
+
+new dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.resetIdentityIds">resetIdentityIds</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetIdentityIds` <a name="resetIdentityIds" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.resetIdentityIds"></a>
+
+```typescript
+public resetIdentityIds(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.principalId">principalId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.tenantId">tenantId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.identityIdsInput">identityIdsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.typeInput">typeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.identityIds">identityIds</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.type">type</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentity">DataAzurermNetappAccountIdentity</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `principalId`<sup>Required</sup> <a name="principalId" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.principalId"></a>
+
+```typescript
+public readonly principalId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `tenantId`<sup>Required</sup> <a name="tenantId" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.tenantId"></a>
+
+```typescript
+public readonly tenantId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `identityIdsInput`<sup>Optional</sup> <a name="identityIdsInput" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.identityIdsInput"></a>
+
+```typescript
+public readonly identityIdsInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `typeInput`<sup>Optional</sup> <a name="typeInput" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.typeInput"></a>
+
+```typescript
+public readonly typeInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `identityIds`<sup>Required</sup> <a name="identityIds" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.identityIds"></a>
+
+```typescript
+public readonly identityIds: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `type`<sup>Required</sup> <a name="type" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.type"></a>
+
+```typescript
+public readonly type: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentityOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: DataAzurermNetappAccountIdentity;
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountIdentity">DataAzurermNetappAccountIdentity</a>
+
+---
+
 
 ### DataAzurermNetappAccountTimeoutsOutputReference <a name="DataAzurermNetappAccountTimeoutsOutputReference" id="@cdktf/provider-azurerm.dataAzurermNetappAccount.DataAzurermNetappAccountTimeoutsOutputReference"></a>
 

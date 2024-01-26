@@ -175,6 +175,7 @@ Object.defineProperty(exports, 'cdnFrontdoorRuleSet', { get: function () { retur
 Object.defineProperty(exports, 'cdnFrontdoorSecret', { get: function () { return require('./cdn-frontdoor-secret'); } });
 Object.defineProperty(exports, 'cdnFrontdoorSecurityPolicy', { get: function () { return require('./cdn-frontdoor-security-policy'); } });
 Object.defineProperty(exports, 'cdnProfile', { get: function () { return require('./cdn-profile'); } });
+Object.defineProperty(exports, 'chaosStudioTarget', { get: function () { return require('./chaos-studio-target'); } });
 Object.defineProperty(exports, 'cognitiveAccount', { get: function () { return require('./cognitive-account'); } });
 Object.defineProperty(exports, 'cognitiveAccountCustomerManagedKey', { get: function () { return require('./cognitive-account-customer-managed-key'); } });
 Object.defineProperty(exports, 'cognitiveDeployment', { get: function () { return require('./cognitive-deployment'); } });
@@ -340,6 +341,7 @@ Object.defineProperty(exports, 'dnsTxtRecord', { get: function () { return requi
 Object.defineProperty(exports, 'dnsZone', { get: function () { return require('./dns-zone'); } });
 Object.defineProperty(exports, 'elasticCloudElasticsearch', { get: function () { return require('./elastic-cloud-elasticsearch'); } });
 Object.defineProperty(exports, 'elasticSan', { get: function () { return require('./elastic-san'); } });
+Object.defineProperty(exports, 'elasticSanVolumeGroup', { get: function () { return require('./elastic-san-volume-group'); } });
 Object.defineProperty(exports, 'emailCommunicationService', { get: function () { return require('./email-communication-service'); } });
 Object.defineProperty(exports, 'eventgridDomain', { get: function () { return require('./eventgrid-domain'); } });
 Object.defineProperty(exports, 'eventgridDomainTopic', { get: function () { return require('./eventgrid-domain-topic'); } });
@@ -642,6 +644,7 @@ Object.defineProperty(exports, 'natGateway', { get: function () { return require
 Object.defineProperty(exports, 'natGatewayPublicIpAssociation', { get: function () { return require('./nat-gateway-public-ip-association'); } });
 Object.defineProperty(exports, 'natGatewayPublicIpPrefixAssociation', { get: function () { return require('./nat-gateway-public-ip-prefix-association'); } });
 Object.defineProperty(exports, 'netappAccount', { get: function () { return require('./netapp-account'); } });
+Object.defineProperty(exports, 'netappAccountEncryption', { get: function () { return require('./netapp-account-encryption'); } });
 Object.defineProperty(exports, 'netappPool', { get: function () { return require('./netapp-pool'); } });
 Object.defineProperty(exports, 'netappSnapshot', { get: function () { return require('./netapp-snapshot'); } });
 Object.defineProperty(exports, 'netappSnapshotPolicy', { get: function () { return require('./netapp-snapshot-policy'); } });
@@ -744,6 +747,7 @@ Object.defineProperty(exports, 'publicIpPrefix', { get: function () { return req
 Object.defineProperty(exports, 'purviewAccount', { get: function () { return require('./purview-account'); } });
 Object.defineProperty(exports, 'recoveryServicesVault', { get: function () { return require('./recovery-services-vault'); } });
 Object.defineProperty(exports, 'recoveryServicesVaultResourceGuardAssociation', { get: function () { return require('./recovery-services-vault-resource-guard-association'); } });
+Object.defineProperty(exports, 'redhatOpenshiftCluster', { get: function () { return require('./redhat-openshift-cluster'); } });
 Object.defineProperty(exports, 'redisCache', { get: function () { return require('./redis-cache'); } });
 Object.defineProperty(exports, 'redisEnterpriseCluster', { get: function () { return require('./redis-enterprise-cluster'); } });
 Object.defineProperty(exports, 'redisEnterpriseDatabase', { get: function () { return require('./redis-enterprise-database'); } });
@@ -1123,6 +1127,8 @@ Object.defineProperty(exports, 'dataAzurermCosmosdbSqlDatabase', { get: function
 Object.defineProperty(exports, 'dataAzurermCosmosdbSqlRoleDefinition', { get: function () { return require('./data-azurerm-cosmosdb-sql-role-definition'); } });
 Object.defineProperty(exports, 'dataAzurermDashboardGrafana', { get: function () { return require('./data-azurerm-dashboard-grafana'); } });
 Object.defineProperty(exports, 'dataAzurermDataFactory', { get: function () { return require('./data-azurerm-data-factory'); } });
+Object.defineProperty(exports, 'dataAzurermDataFactoryTriggerSchedule', { get: function () { return require('./data-azurerm-data-factory-trigger-schedule'); } });
+Object.defineProperty(exports, 'dataAzurermDataFactoryTriggerSchedules', { get: function () { return require('./data-azurerm-data-factory-trigger-schedules'); } });
 Object.defineProperty(exports, 'dataAzurermDataProtectionBackupVault', { get: function () { return require('./data-azurerm-data-protection-backup-vault'); } });
 Object.defineProperty(exports, 'dataAzurermDataShare', { get: function () { return require('./data-azurerm-data-share'); } });
 Object.defineProperty(exports, 'dataAzurermDataShareAccount', { get: function () { return require('./data-azurerm-data-share-account'); } });
@@ -1185,6 +1191,7 @@ Object.defineProperty(exports, 'dataAzurermIothubDps', { get: function () { retu
 Object.defineProperty(exports, 'dataAzurermIothubDpsSharedAccessPolicy', { get: function () { return require('./data-azurerm-iothub-dps-shared-access-policy'); } });
 Object.defineProperty(exports, 'dataAzurermIothubSharedAccessPolicy', { get: function () { return require('./data-azurerm-iothub-shared-access-policy'); } });
 Object.defineProperty(exports, 'dataAzurermIpGroup', { get: function () { return require('./data-azurerm-ip-group'); } });
+Object.defineProperty(exports, 'dataAzurermIpGroups', { get: function () { return require('./data-azurerm-ip-groups'); } });
 Object.defineProperty(exports, 'dataAzurermKeyVault', { get: function () { return require('./data-azurerm-key-vault'); } });
 Object.defineProperty(exports, 'dataAzurermKeyVaultAccessPolicy', { get: function () { return require('./data-azurerm-key-vault-access-policy'); } });
 Object.defineProperty(exports, 'dataAzurermKeyVaultCertificate', { get: function () { return require('./data-azurerm-key-vault-certificate'); } });
@@ -1252,6 +1259,7 @@ Object.defineProperty(exports, 'dataAzurermMysqlFlexibleServer', { get: function
 Object.defineProperty(exports, 'dataAzurermMysqlServer', { get: function () { return require('./data-azurerm-mysql-server'); } });
 Object.defineProperty(exports, 'dataAzurermNatGateway', { get: function () { return require('./data-azurerm-nat-gateway'); } });
 Object.defineProperty(exports, 'dataAzurermNetappAccount', { get: function () { return require('./data-azurerm-netapp-account'); } });
+Object.defineProperty(exports, 'dataAzurermNetappAccountEncryption', { get: function () { return require('./data-azurerm-netapp-account-encryption'); } });
 Object.defineProperty(exports, 'dataAzurermNetappPool', { get: function () { return require('./data-azurerm-netapp-pool'); } });
 Object.defineProperty(exports, 'dataAzurermNetappSnapshot', { get: function () { return require('./data-azurerm-netapp-snapshot'); } });
 Object.defineProperty(exports, 'dataAzurermNetappSnapshotPolicy', { get: function () { return require('./data-azurerm-netapp-snapshot-policy'); } });
@@ -1265,6 +1273,7 @@ Object.defineProperty(exports, 'dataAzurermNetworkManagerNetworkGroup', { get: f
 Object.defineProperty(exports, 'dataAzurermNetworkSecurityGroup', { get: function () { return require('./data-azurerm-network-security-group'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkServiceTags', { get: function () { return require('./data-azurerm-network-service-tags'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkWatcher', { get: function () { return require('./data-azurerm-network-watcher'); } });
+Object.defineProperty(exports, 'dataAzurermNginxCertificate', { get: function () { return require('./data-azurerm-nginx-certificate'); } });
 Object.defineProperty(exports, 'dataAzurermNginxDeployment', { get: function () { return require('./data-azurerm-nginx-deployment'); } });
 Object.defineProperty(exports, 'dataAzurermNotificationHub', { get: function () { return require('./data-azurerm-notification-hub'); } });
 Object.defineProperty(exports, 'dataAzurermNotificationHubNamespace', { get: function () { return require('./data-azurerm-notification-hub-namespace'); } });

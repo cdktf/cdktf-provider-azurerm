@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,64 +13,70 @@ import * as cdktf from 'cdktf';
 
 export interface NetappAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#id NetappAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#id NetappAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#location NetappAccount#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#location NetappAccount#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#name NetappAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#name NetappAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#resource_group_name NetappAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#resource_group_name NetappAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#tags NetappAccount#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#tags NetappAccount#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * active_directory block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#active_directory NetappAccount#active_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#active_directory NetappAccount#active_directory}
   */
   readonly activeDirectory?: NetappAccountActiveDirectory;
   /**
+  * identity block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#identity NetappAccount#identity}
+  */
+  readonly identity?: NetappAccountIdentity;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#timeouts NetappAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#timeouts NetappAccount#timeouts}
   */
   readonly timeouts?: NetappAccountTimeouts;
 }
 export interface NetappAccountActiveDirectory {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#dns_servers NetappAccount#dns_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#dns_servers NetappAccount#dns_servers}
   */
   readonly dnsServers: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#domain NetappAccount#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#domain NetappAccount#domain}
   */
   readonly domain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#organizational_unit NetappAccount#organizational_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#organizational_unit NetappAccount#organizational_unit}
   */
   readonly organizationalUnit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#password NetappAccount#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#password NetappAccount#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#smb_server_name NetappAccount#smb_server_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#smb_server_name NetappAccount#smb_server_name}
   */
   readonly smbServerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#username NetappAccount#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#username NetappAccount#username}
   */
   readonly username: string;
 }
@@ -282,21 +288,145 @@ export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexOb
     return this._username;
   }
 }
+export interface NetappAccountIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#identity_ids NetappAccount#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#type NetappAccount#type}
+  */
+  readonly type: string;
+}
+
+export function netappAccountIdentityToTerraform(struct?: NetappAccountIdentityOutputReference | NetappAccountIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function netappAccountIdentityToHclTerraform(struct?: NetappAccountIdentityOutputReference | NetappAccountIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class NetappAccountIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetappAccountIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetappAccountIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
 export interface NetappAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#create NetappAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#create NetappAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#delete NetappAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#delete NetappAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#read NetappAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#read NetappAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#update NetappAccount#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#update NetappAccount#update}
   */
   readonly update?: string;
 }
@@ -477,7 +607,7 @@ export class NetappAccountTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account azurerm_netapp_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account azurerm_netapp_account}
 */
 export class NetappAccount extends cdktf.TerraformResource {
 
@@ -493,7 +623,7 @@ export class NetappAccount extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetappAccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetappAccount to import
-  * @param importFromId The id of the existing NetappAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetappAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetappAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -505,7 +635,7 @@ export class NetappAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/netapp_account azurerm_netapp_account} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/netapp_account azurerm_netapp_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -516,7 +646,7 @@ export class NetappAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_netapp_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.88.0',
+        providerVersion: '3.89.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -533,6 +663,7 @@ export class NetappAccount extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._activeDirectory.internalValue = config.activeDirectory;
+    this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -627,6 +758,22 @@ export class NetappAccount extends cdktf.TerraformResource {
     return this._activeDirectory.internalValue;
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity = new NetappAccountIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: NetappAccountIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new NetappAccountTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -655,6 +802,7 @@ export class NetappAccount extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       active_directory: netappAccountActiveDirectoryToTerraform(this._activeDirectory.internalValue),
+      identity: netappAccountIdentityToTerraform(this._identity.internalValue),
       timeouts: netappAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -696,6 +844,12 @@ export class NetappAccount extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "NetappAccountActiveDirectoryList",
+      },
+      identity: {
+        value: netappAccountIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetappAccountIdentityList",
       },
       timeouts: {
         value: netappAccountTimeoutsToHclTerraform(this._timeouts.internalValue),
