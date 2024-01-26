@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,81 +8,81 @@ import * as cdktf from 'cdktf';
 
 export interface AutomationScheduleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#automation_account_name AutomationSchedule#automation_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#automation_account_name AutomationSchedule#automation_account_name}
   */
   readonly automationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#description AutomationSchedule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#description AutomationSchedule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#expiry_time AutomationSchedule#expiry_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#expiry_time AutomationSchedule#expiry_time}
   */
   readonly expiryTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#frequency AutomationSchedule#frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#frequency AutomationSchedule#frequency}
   */
   readonly frequency: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#id AutomationSchedule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#id AutomationSchedule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#interval AutomationSchedule#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#interval AutomationSchedule#interval}
   */
   readonly interval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#month_days AutomationSchedule#month_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#month_days AutomationSchedule#month_days}
   */
   readonly monthDays?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#name AutomationSchedule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#name AutomationSchedule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#resource_group_name AutomationSchedule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#resource_group_name AutomationSchedule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#start_time AutomationSchedule#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#start_time AutomationSchedule#start_time}
   */
   readonly startTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#timezone AutomationSchedule#timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#timezone AutomationSchedule#timezone}
   */
   readonly timezone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#week_days AutomationSchedule#week_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#week_days AutomationSchedule#week_days}
   */
   readonly weekDays?: string[];
   /**
   * monthly_occurrence block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#monthly_occurrence AutomationSchedule#monthly_occurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#monthly_occurrence AutomationSchedule#monthly_occurrence}
   */
-  readonly monthlyOccurrence?: AutomationScheduleMonthlyOccurrence[] | cdktf.IResolvable;
+  readonly monthlyOccurrence?: AutomationScheduleMonthlyOccurrence;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#timeouts AutomationSchedule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#timeouts AutomationSchedule#timeouts}
   */
   readonly timeouts?: AutomationScheduleTimeouts;
 }
 export interface AutomationScheduleMonthlyOccurrence {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#day AutomationSchedule#day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#day AutomationSchedule#day}
   */
   readonly day: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#occurrence AutomationSchedule#occurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#occurrence AutomationSchedule#occurrence}
   */
   readonly occurrence: number;
 }
 
-export function automationScheduleMonthlyOccurrenceToTerraform(struct?: AutomationScheduleMonthlyOccurrence | cdktf.IResolvable): any {
+export function automationScheduleMonthlyOccurrenceToTerraform(struct?: AutomationScheduleMonthlyOccurrenceOutputReference | AutomationScheduleMonthlyOccurrence): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -99,7 +94,7 @@ export function automationScheduleMonthlyOccurrenceToTerraform(struct?: Automati
 }
 
 
-export function automationScheduleMonthlyOccurrenceToHclTerraform(struct?: AutomationScheduleMonthlyOccurrence | cdktf.IResolvable): any {
+export function automationScheduleMonthlyOccurrenceToHclTerraform(struct?: AutomationScheduleMonthlyOccurrenceOutputReference | AutomationScheduleMonthlyOccurrence): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -125,22 +120,16 @@ export function automationScheduleMonthlyOccurrenceToHclTerraform(struct?: Autom
 
 export class AutomationScheduleMonthlyOccurrenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AutomationScheduleMonthlyOccurrence | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): AutomationScheduleMonthlyOccurrence | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._day !== undefined) {
@@ -154,20 +143,14 @@ export class AutomationScheduleMonthlyOccurrenceOutputReference extends cdktf.Co
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AutomationScheduleMonthlyOccurrence | cdktf.IResolvable | undefined) {
+  public set internalValue(value: AutomationScheduleMonthlyOccurrence | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
       this._day = undefined;
       this._occurrence = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
       this._day = value.day;
       this._occurrence = value.occurrence;
     }
@@ -199,41 +182,21 @@ export class AutomationScheduleMonthlyOccurrenceOutputReference extends cdktf.Co
     return this._occurrence;
   }
 }
-
-export class AutomationScheduleMonthlyOccurrenceList extends cdktf.ComplexList {
-  public internalValue? : AutomationScheduleMonthlyOccurrence[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): AutomationScheduleMonthlyOccurrenceOutputReference {
-    return new AutomationScheduleMonthlyOccurrenceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface AutomationScheduleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#create AutomationSchedule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#create AutomationSchedule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#delete AutomationSchedule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#delete AutomationSchedule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#read AutomationSchedule#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#read AutomationSchedule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#update AutomationSchedule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#update AutomationSchedule#update}
   */
   readonly update?: string;
 }
@@ -414,7 +377,7 @@ export class AutomationScheduleTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule azurerm_automation_schedule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule azurerm_automation_schedule}
 */
 export class AutomationSchedule extends cdktf.TerraformResource {
 
@@ -430,7 +393,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AutomationSchedule resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AutomationSchedule to import
-  * @param importFromId The id of the existing AutomationSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AutomationSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AutomationSchedule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -442,7 +405,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/resources/automation_schedule azurerm_automation_schedule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/automation_schedule azurerm_automation_schedule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -453,7 +416,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automation_schedule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.88.0',
+        providerVersion: '3.89.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -665,11 +628,11 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // monthly_occurrence - computed: false, optional: true, required: false
-  private _monthlyOccurrence = new AutomationScheduleMonthlyOccurrenceList(this, "monthly_occurrence", false);
+  private _monthlyOccurrence = new AutomationScheduleMonthlyOccurrenceOutputReference(this, "monthly_occurrence");
   public get monthlyOccurrence() {
     return this._monthlyOccurrence;
   }
-  public putMonthlyOccurrence(value: AutomationScheduleMonthlyOccurrence[] | cdktf.IResolvable) {
+  public putMonthlyOccurrence(value: AutomationScheduleMonthlyOccurrence) {
     this._monthlyOccurrence.internalValue = value;
   }
   public resetMonthlyOccurrence() {
@@ -714,7 +677,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
       start_time: cdktf.stringToTerraform(this._startTime),
       timezone: cdktf.stringToTerraform(this._timezone),
       week_days: cdktf.listMapper(cdktf.stringToTerraform, false)(this._weekDays),
-      monthly_occurrence: cdktf.listMapper(automationScheduleMonthlyOccurrenceToTerraform, true)(this._monthlyOccurrence.internalValue),
+      monthly_occurrence: automationScheduleMonthlyOccurrenceToTerraform(this._monthlyOccurrence.internalValue),
       timeouts: automationScheduleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -794,7 +757,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
         storageClassType: "stringList",
       },
       monthly_occurrence: {
-        value: cdktf.listMapperHcl(automationScheduleMonthlyOccurrenceToHclTerraform, true)(this._monthlyOccurrence.internalValue),
+        value: automationScheduleMonthlyOccurrenceToHclTerraform(this._monthlyOccurrence.internalValue),
         isBlock: true,
         type: "list",
         storageClassType: "AutomationScheduleMonthlyOccurrenceList",

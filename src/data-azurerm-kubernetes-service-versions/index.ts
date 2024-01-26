@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/kubernetes_service_versions
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/kubernetes_service_versions
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,34 +8,34 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermKubernetesServiceVersionsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/kubernetes_service_versions#id DataAzurermKubernetesServiceVersions#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/kubernetes_service_versions#id DataAzurermKubernetesServiceVersions#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/kubernetes_service_versions#include_preview DataAzurermKubernetesServiceVersions#include_preview}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/kubernetes_service_versions#include_preview DataAzurermKubernetesServiceVersions#include_preview}
   */
   readonly includePreview?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/kubernetes_service_versions#location DataAzurermKubernetesServiceVersions#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/kubernetes_service_versions#location DataAzurermKubernetesServiceVersions#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/kubernetes_service_versions#version_prefix DataAzurermKubernetesServiceVersions#version_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/kubernetes_service_versions#version_prefix DataAzurermKubernetesServiceVersions#version_prefix}
   */
   readonly versionPrefix?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/kubernetes_service_versions#timeouts DataAzurermKubernetesServiceVersions#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/kubernetes_service_versions#timeouts DataAzurermKubernetesServiceVersions#timeouts}
   */
   readonly timeouts?: DataAzurermKubernetesServiceVersionsTimeouts;
 }
 export interface DataAzurermKubernetesServiceVersionsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/kubernetes_service_versions#read DataAzurermKubernetesServiceVersions#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/kubernetes_service_versions#read DataAzurermKubernetesServiceVersions#read}
   */
   readonly read?: string;
 }
@@ -134,7 +129,7 @@ export class DataAzurermKubernetesServiceVersionsTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/kubernetes_service_versions azurerm_kubernetes_service_versions}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/kubernetes_service_versions azurerm_kubernetes_service_versions}
 */
 export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSource {
 
@@ -150,7 +145,7 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   * Generates CDKTF code for importing a DataAzurermKubernetesServiceVersions resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermKubernetesServiceVersions to import
-  * @param importFromId The id of the existing DataAzurermKubernetesServiceVersions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/kubernetes_service_versions#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermKubernetesServiceVersions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/kubernetes_service_versions#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermKubernetesServiceVersions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -162,7 +157,7 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/kubernetes_service_versions azurerm_kubernetes_service_versions} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/kubernetes_service_versions azurerm_kubernetes_service_versions} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -173,7 +168,7 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
       terraformResourceType: 'azurerm_kubernetes_service_versions',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.88.0',
+        providerVersion: '3.89.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

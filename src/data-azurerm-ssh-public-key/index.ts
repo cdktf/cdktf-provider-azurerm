@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/ssh_public_key
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/ssh_public_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,34 +8,34 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSshPublicKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/ssh_public_key#id DataAzurermSshPublicKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/ssh_public_key#id DataAzurermSshPublicKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/ssh_public_key#name DataAzurermSshPublicKey#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/ssh_public_key#name DataAzurermSshPublicKey#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/ssh_public_key#resource_group_name DataAzurermSshPublicKey#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/ssh_public_key#resource_group_name DataAzurermSshPublicKey#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/ssh_public_key#tags DataAzurermSshPublicKey#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/ssh_public_key#tags DataAzurermSshPublicKey#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/ssh_public_key#timeouts DataAzurermSshPublicKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/ssh_public_key#timeouts DataAzurermSshPublicKey#timeouts}
   */
   readonly timeouts?: DataAzurermSshPublicKeyTimeouts;
 }
 export interface DataAzurermSshPublicKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/ssh_public_key#read DataAzurermSshPublicKey#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/ssh_public_key#read DataAzurermSshPublicKey#read}
   */
   readonly read?: string;
 }
@@ -134,7 +129,7 @@ export class DataAzurermSshPublicKeyTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/ssh_public_key azurerm_ssh_public_key}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/ssh_public_key azurerm_ssh_public_key}
 */
 export class DataAzurermSshPublicKey extends cdktf.TerraformDataSource {
 
@@ -150,7 +145,7 @@ export class DataAzurermSshPublicKey extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermSshPublicKey resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermSshPublicKey to import
-  * @param importFromId The id of the existing DataAzurermSshPublicKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/ssh_public_key#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermSshPublicKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/ssh_public_key#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermSshPublicKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -162,7 +157,7 @@ export class DataAzurermSshPublicKey extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.88.0/docs/data-sources/ssh_public_key azurerm_ssh_public_key} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/ssh_public_key azurerm_ssh_public_key} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -173,7 +168,7 @@ export class DataAzurermSshPublicKey extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_ssh_public_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.88.0',
+        providerVersion: '3.89.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
