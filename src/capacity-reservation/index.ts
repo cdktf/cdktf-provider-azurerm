@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,48 +8,48 @@ import * as cdktf from 'cdktf';
 
 export interface CapacityReservationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#capacity_reservation_group_id CapacityReservation#capacity_reservation_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#capacity_reservation_group_id CapacityReservation#capacity_reservation_group_id}
   */
   readonly capacityReservationGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#id CapacityReservation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#id CapacityReservation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#name CapacityReservation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#name CapacityReservation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#tags CapacityReservation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#tags CapacityReservation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#zone CapacityReservation#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#zone CapacityReservation#zone}
   */
   readonly zone?: string;
   /**
   * sku block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#sku CapacityReservation#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#sku CapacityReservation#sku}
   */
   readonly sku: CapacityReservationSku;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#timeouts CapacityReservation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#timeouts CapacityReservation#timeouts}
   */
   readonly timeouts?: CapacityReservationTimeouts;
 }
 export interface CapacityReservationSku {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#capacity CapacityReservation#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#capacity CapacityReservation#capacity}
   */
   readonly capacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#name CapacityReservation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#name CapacityReservation#name}
   */
   readonly name: string;
 }
@@ -161,19 +156,19 @@ export class CapacityReservationSkuOutputReference extends cdktf.ComplexObject {
 }
 export interface CapacityReservationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#create CapacityReservation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#create CapacityReservation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#delete CapacityReservation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#delete CapacityReservation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#read CapacityReservation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#read CapacityReservation#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#update CapacityReservation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#update CapacityReservation#update}
   */
   readonly update?: string;
 }
@@ -354,7 +349,7 @@ export class CapacityReservationTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation azurerm_capacity_reservation}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation azurerm_capacity_reservation}
 */
 export class CapacityReservation extends cdktf.TerraformResource {
 
@@ -370,7 +365,7 @@ export class CapacityReservation extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CapacityReservation resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CapacityReservation to import
-  * @param importFromId The id of the existing CapacityReservation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CapacityReservation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CapacityReservation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -382,7 +377,7 @@ export class CapacityReservation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/capacity_reservation azurerm_capacity_reservation} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/capacity_reservation azurerm_capacity_reservation} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -393,7 +388,7 @@ export class CapacityReservation extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_capacity_reservation',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.89.0',
+        providerVersion: '3.90.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

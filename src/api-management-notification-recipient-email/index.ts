@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/api_management_notification_recipient_email
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/api_management_notification_recipient_email
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +8,42 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementNotificationRecipientEmailConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/api_management_notification_recipient_email#api_management_id ApiManagementNotificationRecipientEmail#api_management_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/api_management_notification_recipient_email#api_management_id ApiManagementNotificationRecipientEmail#api_management_id}
   */
   readonly apiManagementId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/api_management_notification_recipient_email#email ApiManagementNotificationRecipientEmail#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/api_management_notification_recipient_email#email ApiManagementNotificationRecipientEmail#email}
   */
   readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/api_management_notification_recipient_email#id ApiManagementNotificationRecipientEmail#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/api_management_notification_recipient_email#id ApiManagementNotificationRecipientEmail#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/api_management_notification_recipient_email#notification_type ApiManagementNotificationRecipientEmail#notification_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/api_management_notification_recipient_email#notification_type ApiManagementNotificationRecipientEmail#notification_type}
   */
   readonly notificationType: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/api_management_notification_recipient_email#timeouts ApiManagementNotificationRecipientEmail#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/api_management_notification_recipient_email#timeouts ApiManagementNotificationRecipientEmail#timeouts}
   */
   readonly timeouts?: ApiManagementNotificationRecipientEmailTimeouts;
 }
 export interface ApiManagementNotificationRecipientEmailTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/api_management_notification_recipient_email#create ApiManagementNotificationRecipientEmail#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/api_management_notification_recipient_email#create ApiManagementNotificationRecipientEmail#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/api_management_notification_recipient_email#delete ApiManagementNotificationRecipientEmail#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/api_management_notification_recipient_email#delete ApiManagementNotificationRecipientEmail#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/api_management_notification_recipient_email#read ApiManagementNotificationRecipientEmail#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/api_management_notification_recipient_email#read ApiManagementNotificationRecipientEmail#read}
   */
   readonly read?: string;
 }
@@ -200,7 +195,7 @@ export class ApiManagementNotificationRecipientEmailTimeoutsOutputReference exte
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/api_management_notification_recipient_email azurerm_api_management_notification_recipient_email}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/api_management_notification_recipient_email azurerm_api_management_notification_recipient_email}
 */
 export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformResource {
 
@@ -216,7 +211,7 @@ export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformReso
   * Generates CDKTF code for importing a ApiManagementNotificationRecipientEmail resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApiManagementNotificationRecipientEmail to import
-  * @param importFromId The id of the existing ApiManagementNotificationRecipientEmail that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/api_management_notification_recipient_email#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApiManagementNotificationRecipientEmail that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/api_management_notification_recipient_email#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApiManagementNotificationRecipientEmail to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -228,7 +223,7 @@ export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformReso
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/api_management_notification_recipient_email azurerm_api_management_notification_recipient_email} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/api_management_notification_recipient_email azurerm_api_management_notification_recipient_email} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -239,7 +234,7 @@ export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformReso
       terraformResourceType: 'azurerm_api_management_notification_recipient_email',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.89.0',
+        providerVersion: '3.90.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

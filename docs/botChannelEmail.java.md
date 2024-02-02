@@ -4,7 +4,7 @@
 
 ### BotChannelEmail <a name="BotChannelEmail" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email azurerm_bot_channel_email}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email azurerm_bot_channel_email}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer"></a>
 
@@ -25,10 +25,11 @@ BotChannelEmail.Builder.create(Construct scope, java.lang.String id)
 //  .provisioners(RemoteExecProvisioner>)
     .botName(java.lang.String)
     .emailAddress(java.lang.String)
-    .emailPassword(java.lang.String)
     .location(java.lang.String)
     .resourceGroupName(java.lang.String)
+//  .emailPassword(java.lang.String)
 //  .id(java.lang.String)
+//  .magicCode(java.lang.String)
 //  .timeouts(BotChannelEmailTimeouts)
     .build();
 ```
@@ -44,12 +45,13 @@ BotChannelEmail.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.botName">botName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#bot_name BotChannelEmail#bot_name}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.emailAddress">emailAddress</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#email_address BotChannelEmail#email_address}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.emailPassword">emailPassword</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#email_password BotChannelEmail#email_password}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#location BotChannelEmail#location}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#resource_group_name BotChannelEmail#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#id BotChannelEmail#id}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.botName">botName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#bot_name BotChannelEmail#bot_name}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.emailAddress">emailAddress</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#email_address BotChannelEmail#email_address}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#location BotChannelEmail#location}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#resource_group_name BotChannelEmail#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.emailPassword">emailPassword</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#email_password BotChannelEmail#email_password}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#id BotChannelEmail#id}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.magicCode">magicCode</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#magic_code BotChannelEmail#magic_code}. |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailTimeouts">BotChannelEmailTimeouts</a></code> | timeouts block. |
 
 ---
@@ -118,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#bot_name BotChannelEmail#bot_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#bot_name BotChannelEmail#bot_name}.
 
 ---
 
@@ -126,15 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#email_address BotChannelEmail#email_address}.
-
----
-
-##### `emailPassword`<sup>Required</sup> <a name="emailPassword" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.emailPassword"></a>
-
-- *Type:* java.lang.String
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#email_password BotChannelEmail#email_password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#email_address BotChannelEmail#email_address}.
 
 ---
 
@@ -142,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#location BotChannelEmail#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#location BotChannelEmail#location}.
 
 ---
 
@@ -150,7 +144,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#resource_group_name BotChannelEmail#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#resource_group_name BotChannelEmail#resource_group_name}.
+
+---
+
+##### `emailPassword`<sup>Optional</sup> <a name="emailPassword" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.emailPassword"></a>
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#email_password BotChannelEmail#email_password}.
 
 ---
 
@@ -158,10 +160,18 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#id BotChannelEmail#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#id BotChannelEmail#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `magicCode`<sup>Optional</sup> <a name="magicCode" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.Initializer.parameter.magicCode"></a>
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#magic_code BotChannelEmail#magic_code}.
 
 ---
 
@@ -171,7 +181,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#timeouts BotChannelEmail#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#timeouts BotChannelEmail#timeouts}
 
 ---
 
@@ -203,7 +213,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.moveTo">moveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.putTimeouts">putTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.resetEmailPassword">resetEmailPassword</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.resetId">resetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.resetMagicCode">resetMagicCode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.resetTimeouts">resetTimeouts</a></code> | *No description.* |
 
 ---
@@ -510,10 +522,22 @@ public void putTimeouts(BotChannelEmailTimeouts value)
 
 ---
 
+##### `resetEmailPassword` <a name="resetEmailPassword" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.resetEmailPassword"></a>
+
+```java
+public void resetEmailPassword()
+```
+
 ##### `resetId` <a name="resetId" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.resetId"></a>
 
 ```java
 public void resetId()
+```
+
+##### `resetMagicCode` <a name="resetMagicCode" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.resetMagicCode"></a>
+
+```java
+public void resetMagicCode()
 ```
 
 ##### `resetTimeouts` <a name="resetTimeouts" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.resetTimeouts"></a>
@@ -625,7 +649,7 @@ The construct id used in the generated config for the BotChannelEmail to import.
 
 The id of the existing BotChannelEmail that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -661,6 +685,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.emailPasswordInput">emailPasswordInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.locationInput">locationInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.magicCodeInput">magicCodeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailTimeouts">BotChannelEmailTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.botName">botName</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -668,6 +693,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.emailPassword">emailPassword</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.location">location</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.magicCode">magicCode</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | *No description.* |
 
 ---
@@ -874,6 +900,16 @@ public java.lang.String getLocationInput();
 
 ---
 
+##### `magicCodeInput`<sup>Optional</sup> <a name="magicCodeInput" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.magicCodeInput"></a>
+
+```java
+public java.lang.String getMagicCodeInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `resourceGroupNameInput`<sup>Optional</sup> <a name="resourceGroupNameInput" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.resourceGroupNameInput"></a>
 
 ```java
@@ -944,6 +980,16 @@ public java.lang.String getLocation();
 
 ---
 
+##### `magicCode`<sup>Required</sup> <a name="magicCode" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.magicCode"></a>
+
+```java
+public java.lang.String getMagicCode();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `resourceGroupName`<sup>Required</sup> <a name="resourceGroupName" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmail.property.resourceGroupName"></a>
 
 ```java
@@ -995,10 +1041,11 @@ BotChannelEmailConfig.builder()
 //  .provisioners(RemoteExecProvisioner>)
     .botName(java.lang.String)
     .emailAddress(java.lang.String)
-    .emailPassword(java.lang.String)
     .location(java.lang.String)
     .resourceGroupName(java.lang.String)
+//  .emailPassword(java.lang.String)
 //  .id(java.lang.String)
+//  .magicCode(java.lang.String)
 //  .timeouts(BotChannelEmailTimeouts)
     .build();
 ```
@@ -1014,12 +1061,13 @@ BotChannelEmailConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.botName">botName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#bot_name BotChannelEmail#bot_name}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.emailAddress">emailAddress</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#email_address BotChannelEmail#email_address}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.emailPassword">emailPassword</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#email_password BotChannelEmail#email_password}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#location BotChannelEmail#location}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#resource_group_name BotChannelEmail#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#id BotChannelEmail#id}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.botName">botName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#bot_name BotChannelEmail#bot_name}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.emailAddress">emailAddress</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#email_address BotChannelEmail#email_address}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#location BotChannelEmail#location}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#resource_group_name BotChannelEmail#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.emailPassword">emailPassword</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#email_password BotChannelEmail#email_password}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#id BotChannelEmail#id}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.magicCode">magicCode</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#magic_code BotChannelEmail#magic_code}. |
 | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailTimeouts">BotChannelEmailTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1102,7 +1150,7 @@ public java.lang.String getBotName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#bot_name BotChannelEmail#bot_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#bot_name BotChannelEmail#bot_name}.
 
 ---
 
@@ -1114,19 +1162,7 @@ public java.lang.String getEmailAddress();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#email_address BotChannelEmail#email_address}.
-
----
-
-##### `emailPassword`<sup>Required</sup> <a name="emailPassword" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.emailPassword"></a>
-
-```java
-public java.lang.String getEmailPassword();
-```
-
-- *Type:* java.lang.String
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#email_password BotChannelEmail#email_password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#email_address BotChannelEmail#email_address}.
 
 ---
 
@@ -1138,7 +1174,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#location BotChannelEmail#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#location BotChannelEmail#location}.
 
 ---
 
@@ -1150,7 +1186,19 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#resource_group_name BotChannelEmail#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#resource_group_name BotChannelEmail#resource_group_name}.
+
+---
+
+##### `emailPassword`<sup>Optional</sup> <a name="emailPassword" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.emailPassword"></a>
+
+```java
+public java.lang.String getEmailPassword();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#email_password BotChannelEmail#email_password}.
 
 ---
 
@@ -1162,10 +1210,22 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#id BotChannelEmail#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#id BotChannelEmail#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `magicCode`<sup>Optional</sup> <a name="magicCode" id="@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailConfig.property.magicCode"></a>
+
+```java
+public java.lang.String getMagicCode();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#magic_code BotChannelEmail#magic_code}.
 
 ---
 
@@ -1179,7 +1239,7 @@ public BotChannelEmailTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#timeouts BotChannelEmail#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#timeouts BotChannelEmail#timeouts}
 
 ---
 
@@ -1202,10 +1262,10 @@ BotChannelEmailTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#create BotChannelEmail#create}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#delete BotChannelEmail#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#read BotChannelEmail#read}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#update BotChannelEmail#update}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#create BotChannelEmail#create}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#delete BotChannelEmail#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#read BotChannelEmail#read}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelEmail.BotChannelEmailTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#update BotChannelEmail#update}. |
 
 ---
 
@@ -1217,7 +1277,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#create BotChannelEmail#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#create BotChannelEmail#create}.
 
 ---
 
@@ -1229,7 +1289,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#delete BotChannelEmail#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#delete BotChannelEmail#delete}.
 
 ---
 
@@ -1241,7 +1301,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#read BotChannelEmail#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#read BotChannelEmail#read}.
 
 ---
 
@@ -1253,7 +1313,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/bot_channel_email#update BotChannelEmail#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/bot_channel_email#update BotChannelEmail#update}.
 
 ---
 

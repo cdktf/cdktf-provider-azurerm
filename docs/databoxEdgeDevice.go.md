@@ -4,12 +4,12 @@
 
 ### DataboxEdgeDevice <a name="DataboxEdgeDevice" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device azurerm_databox_edge_device}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device azurerm_databox_edge_device}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.NewDataboxEdgeDevice(scope Construct, id *string, config DataboxEdgeDeviceConfig) DataboxEdgeDevice
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.DataboxEdgeDevice_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.DataboxEdgeDevice_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ databoxedgedevice.DataboxEdgeDevice_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.DataboxEdgeDevice_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ databoxedgedevice.DataboxEdgeDevice_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.DataboxEdgeDevice_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the DataboxEdgeDevice to impor
 
 The id of the existing DataboxEdgeDevice that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -866,7 +866,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 &databoxedgedevice.DataboxEdgeDeviceConfig {
 	Connection: interface{},
@@ -882,7 +882,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice
 	SkuName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.databoxEdgeDevice.DataboxEdgeDeviceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts,
 }
 ```
 
@@ -897,12 +897,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.skuName">SkuName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.skuName">SkuName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts">DataboxEdgeDeviceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -985,7 +985,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}.
 
 ---
 
@@ -997,7 +997,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}.
 
 ---
 
@@ -1009,7 +1009,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}.
 
 ---
 
@@ -1021,7 +1021,7 @@ SkuName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}.
 
 ---
 
@@ -1033,7 +1033,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1048,7 +1048,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}.
 
 ---
 
@@ -1062,7 +1062,7 @@ Timeouts DataboxEdgeDeviceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#timeouts DataboxEdgeDevice#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#timeouts DataboxEdgeDevice#timeouts}
 
 ---
 
@@ -1071,7 +1071,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceDeviceProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 &databoxedgedevice.DataboxEdgeDeviceDeviceProperties {
 
@@ -1084,7 +1084,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 &databoxedgedevice.DataboxEdgeDeviceTimeouts {
 	Create: *string,
@@ -1098,10 +1098,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#create DataboxEdgeDevice#create}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#delete DataboxEdgeDevice#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#read DataboxEdgeDevice#read}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#update DataboxEdgeDevice#update}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#create DataboxEdgeDevice#create}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#delete DataboxEdgeDevice#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#read DataboxEdgeDevice#read}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#update DataboxEdgeDevice#update}. |
 
 ---
 
@@ -1113,7 +1113,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#create DataboxEdgeDevice#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#create DataboxEdgeDevice#create}.
 
 ---
 
@@ -1125,7 +1125,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#delete DataboxEdgeDevice#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#delete DataboxEdgeDevice#delete}.
 
 ---
 
@@ -1137,7 +1137,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#read DataboxEdgeDevice#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#read DataboxEdgeDevice#read}.
 
 ---
 
@@ -1149,7 +1149,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/databox_edge_device#update DataboxEdgeDevice#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databox_edge_device#update DataboxEdgeDevice#update}.
 
 ---
 
@@ -1160,7 +1160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceDevicePropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.NewDataboxEdgeDeviceDevicePropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataboxEdgeDeviceDevicePropertiesList
 ```
@@ -1309,7 +1309,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceDevicePropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.NewDataboxEdgeDeviceDevicePropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataboxEdgeDeviceDevicePropertiesOutputReference
 ```
@@ -1697,7 +1697,7 @@ func InternalValue() DataboxEdgeDeviceDeviceProperties
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.NewDataboxEdgeDeviceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataboxEdgeDeviceTimeoutsOutputReference
 ```

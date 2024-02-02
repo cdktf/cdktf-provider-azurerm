@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,60 +8,60 @@ import * as cdktf from 'cdktf';
 
 export interface ElasticSanConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#base_size_in_tib ElasticSan#base_size_in_tib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#base_size_in_tib ElasticSan#base_size_in_tib}
   */
   readonly baseSizeInTib: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#extended_size_in_tib ElasticSan#extended_size_in_tib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#extended_size_in_tib ElasticSan#extended_size_in_tib}
   */
   readonly extendedSizeInTib?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#id ElasticSan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#id ElasticSan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#location ElasticSan#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#location ElasticSan#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#name ElasticSan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#name ElasticSan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#resource_group_name ElasticSan#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#resource_group_name ElasticSan#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#tags ElasticSan#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#tags ElasticSan#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#zones ElasticSan#zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#zones ElasticSan#zones}
   */
   readonly zones?: string[];
   /**
   * sku block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#sku ElasticSan#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#sku ElasticSan#sku}
   */
   readonly sku: ElasticSanSku;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#timeouts ElasticSan#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#timeouts ElasticSan#timeouts}
   */
   readonly timeouts?: ElasticSanTimeouts;
 }
 export interface ElasticSanSku {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#name ElasticSan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#name ElasticSan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#tier ElasticSan#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#tier ElasticSan#tier}
   */
   readonly tier?: string;
 }
@@ -176,19 +171,19 @@ export class ElasticSanSkuOutputReference extends cdktf.ComplexObject {
 }
 export interface ElasticSanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#create ElasticSan#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#create ElasticSan#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#delete ElasticSan#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#delete ElasticSan#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#read ElasticSan#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#read ElasticSan#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#update ElasticSan#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#update ElasticSan#update}
   */
   readonly update?: string;
 }
@@ -369,7 +364,7 @@ export class ElasticSanTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san azurerm_elastic_san}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san azurerm_elastic_san}
 */
 export class ElasticSan extends cdktf.TerraformResource {
 
@@ -385,7 +380,7 @@ export class ElasticSan extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ElasticSan resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ElasticSan to import
-  * @param importFromId The id of the existing ElasticSan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ElasticSan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ElasticSan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -397,7 +392,7 @@ export class ElasticSan extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/elastic_san azurerm_elastic_san} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/elastic_san azurerm_elastic_san} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -408,7 +403,7 @@ export class ElasticSan extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_elastic_san',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.89.0',
+        providerVersion: '3.90.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
