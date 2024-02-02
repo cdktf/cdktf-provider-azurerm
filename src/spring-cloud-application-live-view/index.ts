@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/spring_cloud_application_live_view
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/spring_cloud_application_live_view
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,38 +13,38 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudApplicationLiveViewConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/spring_cloud_application_live_view#id SpringCloudApplicationLiveView#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/spring_cloud_application_live_view#id SpringCloudApplicationLiveView#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/spring_cloud_application_live_view#name SpringCloudApplicationLiveView#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/spring_cloud_application_live_view#name SpringCloudApplicationLiveView#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/spring_cloud_application_live_view#spring_cloud_service_id SpringCloudApplicationLiveView#spring_cloud_service_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/spring_cloud_application_live_view#spring_cloud_service_id SpringCloudApplicationLiveView#spring_cloud_service_id}
   */
   readonly springCloudServiceId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/spring_cloud_application_live_view#timeouts SpringCloudApplicationLiveView#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/spring_cloud_application_live_view#timeouts SpringCloudApplicationLiveView#timeouts}
   */
   readonly timeouts?: SpringCloudApplicationLiveViewTimeouts;
 }
 export interface SpringCloudApplicationLiveViewTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/spring_cloud_application_live_view#create SpringCloudApplicationLiveView#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/spring_cloud_application_live_view#create SpringCloudApplicationLiveView#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/spring_cloud_application_live_view#delete SpringCloudApplicationLiveView#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/spring_cloud_application_live_view#delete SpringCloudApplicationLiveView#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/spring_cloud_application_live_view#read SpringCloudApplicationLiveView#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/spring_cloud_application_live_view#read SpringCloudApplicationLiveView#read}
   */
   readonly read?: string;
 }
@@ -196,7 +196,7 @@ export class SpringCloudApplicationLiveViewTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/spring_cloud_application_live_view azurerm_spring_cloud_application_live_view}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/spring_cloud_application_live_view azurerm_spring_cloud_application_live_view}
 */
 export class SpringCloudApplicationLiveView extends cdktf.TerraformResource {
 
@@ -212,7 +212,7 @@ export class SpringCloudApplicationLiveView extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SpringCloudApplicationLiveView resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SpringCloudApplicationLiveView to import
-  * @param importFromId The id of the existing SpringCloudApplicationLiveView that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/spring_cloud_application_live_view#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SpringCloudApplicationLiveView that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/spring_cloud_application_live_view#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SpringCloudApplicationLiveView to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -224,7 +224,7 @@ export class SpringCloudApplicationLiveView extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/spring_cloud_application_live_view azurerm_spring_cloud_application_live_view} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/spring_cloud_application_live_view azurerm_spring_cloud_application_live_view} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -235,7 +235,7 @@ export class SpringCloudApplicationLiveView extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_application_live_view',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.89.0',
+        providerVersion: '3.90.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

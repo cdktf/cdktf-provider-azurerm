@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/role_definition
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/data-sources/role_definition
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,28 +13,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermRoleDefinitionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/role_definition#id DataAzurermRoleDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/data-sources/role_definition#id DataAzurermRoleDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/role_definition#name DataAzurermRoleDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/data-sources/role_definition#name DataAzurermRoleDefinition#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/role_definition#role_definition_id DataAzurermRoleDefinition#role_definition_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/data-sources/role_definition#role_definition_id DataAzurermRoleDefinition#role_definition_id}
   */
   readonly roleDefinitionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/role_definition#scope DataAzurermRoleDefinition#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/data-sources/role_definition#scope DataAzurermRoleDefinition#scope}
   */
   readonly scope?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/role_definition#timeouts DataAzurermRoleDefinition#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/data-sources/role_definition#timeouts DataAzurermRoleDefinition#timeouts}
   */
   readonly timeouts?: DataAzurermRoleDefinitionTimeouts;
 }
@@ -130,7 +130,7 @@ export class DataAzurermRoleDefinitionPermissionsList extends cdktf.ComplexList 
 }
 export interface DataAzurermRoleDefinitionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/role_definition#read DataAzurermRoleDefinition#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/data-sources/role_definition#read DataAzurermRoleDefinition#read}
   */
   readonly read?: string;
 }
@@ -224,7 +224,7 @@ export class DataAzurermRoleDefinitionTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/role_definition azurerm_role_definition}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/data-sources/role_definition azurerm_role_definition}
 */
 export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
 
@@ -240,7 +240,7 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermRoleDefinition resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermRoleDefinition to import
-  * @param importFromId The id of the existing DataAzurermRoleDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/role_definition#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermRoleDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/data-sources/role_definition#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermRoleDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -252,7 +252,7 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/data-sources/role_definition azurerm_role_definition} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/data-sources/role_definition azurerm_role_definition} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -263,7 +263,7 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_role_definition',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.89.0',
+        providerVersion: '3.90.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

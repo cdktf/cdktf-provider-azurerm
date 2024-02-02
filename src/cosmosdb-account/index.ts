@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,166 +13,170 @@ import * as cdktf from 'cdktf';
 
 export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#access_key_metadata_writes_enabled CosmosdbAccount#access_key_metadata_writes_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#access_key_metadata_writes_enabled CosmosdbAccount#access_key_metadata_writes_enabled}
   */
   readonly accessKeyMetadataWritesEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#analytical_storage_enabled CosmosdbAccount#analytical_storage_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#analytical_storage_enabled CosmosdbAccount#analytical_storage_enabled}
   */
   readonly analyticalStorageEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#create_mode CosmosdbAccount#create_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#create_mode CosmosdbAccount#create_mode}
   */
   readonly createMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#default_identity_type CosmosdbAccount#default_identity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#default_identity_type CosmosdbAccount#default_identity_type}
   */
   readonly defaultIdentityType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#enable_automatic_failover CosmosdbAccount#enable_automatic_failover}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#enable_automatic_failover CosmosdbAccount#enable_automatic_failover}
   */
   readonly enableAutomaticFailover?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#enable_free_tier CosmosdbAccount#enable_free_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#enable_free_tier CosmosdbAccount#enable_free_tier}
   */
   readonly enableFreeTier?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#enable_multiple_write_locations CosmosdbAccount#enable_multiple_write_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#enable_multiple_write_locations CosmosdbAccount#enable_multiple_write_locations}
   */
   readonly enableMultipleWriteLocations?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#id CosmosdbAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#id CosmosdbAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#ip_range_filter CosmosdbAccount#ip_range_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#ip_range_filter CosmosdbAccount#ip_range_filter}
   */
   readonly ipRangeFilter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#is_virtual_network_filter_enabled CosmosdbAccount#is_virtual_network_filter_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#is_virtual_network_filter_enabled CosmosdbAccount#is_virtual_network_filter_enabled}
   */
   readonly isVirtualNetworkFilterEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#key_vault_key_id CosmosdbAccount#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#key_vault_key_id CosmosdbAccount#key_vault_key_id}
   */
   readonly keyVaultKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#kind CosmosdbAccount#kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#kind CosmosdbAccount#kind}
   */
   readonly kind?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#local_authentication_disabled CosmosdbAccount#local_authentication_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#local_authentication_disabled CosmosdbAccount#local_authentication_disabled}
   */
   readonly localAuthenticationDisabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#location CosmosdbAccount#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#location CosmosdbAccount#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#mongo_server_version CosmosdbAccount#mongo_server_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#mongo_server_version CosmosdbAccount#mongo_server_version}
   */
   readonly mongoServerVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#name CosmosdbAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#name CosmosdbAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#network_acl_bypass_for_azure_services CosmosdbAccount#network_acl_bypass_for_azure_services}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#network_acl_bypass_for_azure_services CosmosdbAccount#network_acl_bypass_for_azure_services}
   */
   readonly networkAclBypassForAzureServices?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#network_acl_bypass_ids CosmosdbAccount#network_acl_bypass_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#network_acl_bypass_ids CosmosdbAccount#network_acl_bypass_ids}
   */
   readonly networkAclBypassIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#offer_type CosmosdbAccount#offer_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#offer_type CosmosdbAccount#offer_type}
   */
   readonly offerType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#public_network_access_enabled CosmosdbAccount#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#partition_merge_enabled CosmosdbAccount#partition_merge_enabled}
+  */
+  readonly partitionMergeEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#public_network_access_enabled CosmosdbAccount#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#resource_group_name CosmosdbAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#resource_group_name CosmosdbAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#tags CosmosdbAccount#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#tags CosmosdbAccount#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * analytical_storage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#analytical_storage CosmosdbAccount#analytical_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#analytical_storage CosmosdbAccount#analytical_storage}
   */
   readonly analyticalStorage?: CosmosdbAccountAnalyticalStorage;
   /**
   * backup block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#backup CosmosdbAccount#backup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#backup CosmosdbAccount#backup}
   */
   readonly backup?: CosmosdbAccountBackup;
   /**
   * capabilities block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#capabilities CosmosdbAccount#capabilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#capabilities CosmosdbAccount#capabilities}
   */
   readonly capabilities?: CosmosdbAccountCapabilities[] | cdktf.IResolvable;
   /**
   * capacity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#capacity CosmosdbAccount#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#capacity CosmosdbAccount#capacity}
   */
   readonly capacity?: CosmosdbAccountCapacity;
   /**
   * consistency_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#consistency_policy CosmosdbAccount#consistency_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#consistency_policy CosmosdbAccount#consistency_policy}
   */
   readonly consistencyPolicy: CosmosdbAccountConsistencyPolicy;
   /**
   * cors_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#cors_rule CosmosdbAccount#cors_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#cors_rule CosmosdbAccount#cors_rule}
   */
   readonly corsRule?: CosmosdbAccountCorsRule;
   /**
   * geo_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#geo_location CosmosdbAccount#geo_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#geo_location CosmosdbAccount#geo_location}
   */
   readonly geoLocation: CosmosdbAccountGeoLocation[] | cdktf.IResolvable;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#identity CosmosdbAccount#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#identity CosmosdbAccount#identity}
   */
   readonly identity?: CosmosdbAccountIdentity;
   /**
   * restore block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#restore CosmosdbAccount#restore}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#restore CosmosdbAccount#restore}
   */
   readonly restore?: CosmosdbAccountRestore;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#timeouts CosmosdbAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#timeouts CosmosdbAccount#timeouts}
   */
   readonly timeouts?: CosmosdbAccountTimeouts;
   /**
   * virtual_network_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#virtual_network_rule CosmosdbAccount#virtual_network_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#virtual_network_rule CosmosdbAccount#virtual_network_rule}
   */
   readonly virtualNetworkRule?: CosmosdbAccountVirtualNetworkRule[] | cdktf.IResolvable;
 }
 export interface CosmosdbAccountAnalyticalStorage {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#schema_type CosmosdbAccount#schema_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#schema_type CosmosdbAccount#schema_type}
   */
   readonly schemaType: string;
 }
@@ -253,19 +257,19 @@ export class CosmosdbAccountAnalyticalStorageOutputReference extends cdktf.Compl
 }
 export interface CosmosdbAccountBackup {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#interval_in_minutes CosmosdbAccount#interval_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#interval_in_minutes CosmosdbAccount#interval_in_minutes}
   */
   readonly intervalInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#retention_in_hours CosmosdbAccount#retention_in_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#retention_in_hours CosmosdbAccount#retention_in_hours}
   */
   readonly retentionInHours?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#storage_redundancy CosmosdbAccount#storage_redundancy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#storage_redundancy CosmosdbAccount#storage_redundancy}
   */
   readonly storageRedundancy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#type CosmosdbAccount#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#type CosmosdbAccount#type}
   */
   readonly type: string;
 }
@@ -433,7 +437,7 @@ export class CosmosdbAccountBackupOutputReference extends cdktf.ComplexObject {
 }
 export interface CosmosdbAccountCapabilities {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#name CosmosdbAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#name CosmosdbAccount#name}
   */
   readonly name: string;
 }
@@ -546,7 +550,7 @@ export class CosmosdbAccountCapabilitiesList extends cdktf.ComplexList {
 }
 export interface CosmosdbAccountCapacity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#total_throughput_limit CosmosdbAccount#total_throughput_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#total_throughput_limit CosmosdbAccount#total_throughput_limit}
   */
   readonly totalThroughputLimit: number;
 }
@@ -627,15 +631,15 @@ export class CosmosdbAccountCapacityOutputReference extends cdktf.ComplexObject 
 }
 export interface CosmosdbAccountConsistencyPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#consistency_level CosmosdbAccount#consistency_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#consistency_level CosmosdbAccount#consistency_level}
   */
   readonly consistencyLevel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#max_interval_in_seconds CosmosdbAccount#max_interval_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#max_interval_in_seconds CosmosdbAccount#max_interval_in_seconds}
   */
   readonly maxIntervalInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#max_staleness_prefix CosmosdbAccount#max_staleness_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#max_staleness_prefix CosmosdbAccount#max_staleness_prefix}
   */
   readonly maxStalenessPrefix?: number;
 }
@@ -774,23 +778,23 @@ export class CosmosdbAccountConsistencyPolicyOutputReference extends cdktf.Compl
 }
 export interface CosmosdbAccountCorsRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#allowed_headers CosmosdbAccount#allowed_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#allowed_headers CosmosdbAccount#allowed_headers}
   */
   readonly allowedHeaders: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#allowed_methods CosmosdbAccount#allowed_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#allowed_methods CosmosdbAccount#allowed_methods}
   */
   readonly allowedMethods: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#allowed_origins CosmosdbAccount#allowed_origins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#allowed_origins CosmosdbAccount#allowed_origins}
   */
   readonly allowedOrigins: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#exposed_headers CosmosdbAccount#exposed_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#exposed_headers CosmosdbAccount#exposed_headers}
   */
   readonly exposedHeaders: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#max_age_in_seconds CosmosdbAccount#max_age_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#max_age_in_seconds CosmosdbAccount#max_age_in_seconds}
   */
   readonly maxAgeInSeconds?: number;
 }
@@ -978,15 +982,15 @@ export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject 
 }
 export interface CosmosdbAccountGeoLocation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#failover_priority CosmosdbAccount#failover_priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#failover_priority CosmosdbAccount#failover_priority}
   */
   readonly failoverPriority: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#location CosmosdbAccount#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#location CosmosdbAccount#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#zone_redundant CosmosdbAccount#zone_redundant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#zone_redundant CosmosdbAccount#zone_redundant}
   */
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
 }
@@ -1159,11 +1163,11 @@ export class CosmosdbAccountGeoLocationList extends cdktf.ComplexList {
 }
 export interface CosmosdbAccountIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#identity_ids CosmosdbAccount#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#identity_ids CosmosdbAccount#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#type CosmosdbAccount#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#type CosmosdbAccount#type}
   */
   readonly type: string;
 }
@@ -1283,11 +1287,11 @@ export class CosmosdbAccountIdentityOutputReference extends cdktf.ComplexObject 
 }
 export interface CosmosdbAccountRestoreDatabase {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#collection_names CosmosdbAccount#collection_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#collection_names CosmosdbAccount#collection_names}
   */
   readonly collectionNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#name CosmosdbAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#name CosmosdbAccount#name}
   */
   readonly name: string;
 }
@@ -1427,21 +1431,177 @@ export class CosmosdbAccountRestoreDatabaseList extends cdktf.ComplexList {
     return new CosmosdbAccountRestoreDatabaseOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface CosmosdbAccountRestoreGremlinDatabase {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#graph_names CosmosdbAccount#graph_names}
+  */
+  readonly graphNames?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#name CosmosdbAccount#name}
+  */
+  readonly name: string;
+}
+
+export function cosmosdbAccountRestoreGremlinDatabaseToTerraform(struct?: CosmosdbAccountRestoreGremlinDatabase | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    graph_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.graphNames),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+
+export function cosmosdbAccountRestoreGremlinDatabaseToHclTerraform(struct?: CosmosdbAccountRestoreGremlinDatabase | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    graph_names: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.graphNames),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CosmosdbAccountRestoreGremlinDatabaseOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbAccountRestoreGremlinDatabase | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._graphNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.graphNames = this._graphNames;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbAccountRestoreGremlinDatabase | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._graphNames = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._graphNames = value.graphNames;
+      this._name = value.name;
+    }
+  }
+
+  // graph_names - computed: false, optional: true, required: false
+  private _graphNames?: string[]; 
+  public get graphNames() {
+    return this.getListAttribute('graph_names');
+  }
+  public set graphNames(value: string[]) {
+    this._graphNames = value;
+  }
+  public resetGraphNames() {
+    this._graphNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get graphNamesInput() {
+    return this._graphNames;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class CosmosdbAccountRestoreGremlinDatabaseList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbAccountRestoreGremlinDatabase[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbAccountRestoreGremlinDatabaseOutputReference {
+    return new CosmosdbAccountRestoreGremlinDatabaseOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbAccountRestore {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#restore_timestamp_in_utc CosmosdbAccount#restore_timestamp_in_utc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#restore_timestamp_in_utc CosmosdbAccount#restore_timestamp_in_utc}
   */
   readonly restoreTimestampInUtc: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#source_cosmosdb_account_id CosmosdbAccount#source_cosmosdb_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#source_cosmosdb_account_id CosmosdbAccount#source_cosmosdb_account_id}
   */
   readonly sourceCosmosdbAccountId: string;
   /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#tables_to_restore CosmosdbAccount#tables_to_restore}
+  */
+  readonly tablesToRestore?: string[];
+  /**
   * database block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#database CosmosdbAccount#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#database CosmosdbAccount#database}
   */
   readonly database?: CosmosdbAccountRestoreDatabase[] | cdktf.IResolvable;
+  /**
+  * gremlin_database block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#gremlin_database CosmosdbAccount#gremlin_database}
+  */
+  readonly gremlinDatabase?: CosmosdbAccountRestoreGremlinDatabase[] | cdktf.IResolvable;
 }
 
 export function cosmosdbAccountRestoreToTerraform(struct?: CosmosdbAccountRestoreOutputReference | CosmosdbAccountRestore): any {
@@ -1452,7 +1612,9 @@ export function cosmosdbAccountRestoreToTerraform(struct?: CosmosdbAccountRestor
   return {
     restore_timestamp_in_utc: cdktf.stringToTerraform(struct!.restoreTimestampInUtc),
     source_cosmosdb_account_id: cdktf.stringToTerraform(struct!.sourceCosmosdbAccountId),
+    tables_to_restore: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tablesToRestore),
     database: cdktf.listMapper(cosmosdbAccountRestoreDatabaseToTerraform, true)(struct!.database),
+    gremlin_database: cdktf.listMapper(cosmosdbAccountRestoreGremlinDatabaseToTerraform, true)(struct!.gremlinDatabase),
   }
 }
 
@@ -1475,11 +1637,23 @@ export function cosmosdbAccountRestoreToHclTerraform(struct?: CosmosdbAccountRes
       type: "simple",
       storageClassType: "string",
     },
+    tables_to_restore: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.tablesToRestore),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
     database: {
       value: cdktf.listMapperHcl(cosmosdbAccountRestoreDatabaseToHclTerraform, true)(struct!.database),
       isBlock: true,
       type: "set",
       storageClassType: "CosmosdbAccountRestoreDatabaseList",
+    },
+    gremlin_database: {
+      value: cdktf.listMapperHcl(cosmosdbAccountRestoreGremlinDatabaseToHclTerraform, true)(struct!.gremlinDatabase),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CosmosdbAccountRestoreGremlinDatabaseList",
     },
   };
 
@@ -1509,9 +1683,17 @@ export class CosmosdbAccountRestoreOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.sourceCosmosdbAccountId = this._sourceCosmosdbAccountId;
     }
+    if (this._tablesToRestore !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tablesToRestore = this._tablesToRestore;
+    }
     if (this._database?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.database = this._database?.internalValue;
+    }
+    if (this._gremlinDatabase?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gremlinDatabase = this._gremlinDatabase?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1521,13 +1703,17 @@ export class CosmosdbAccountRestoreOutputReference extends cdktf.ComplexObject {
       this.isEmptyObject = false;
       this._restoreTimestampInUtc = undefined;
       this._sourceCosmosdbAccountId = undefined;
+      this._tablesToRestore = undefined;
       this._database.internalValue = undefined;
+      this._gremlinDatabase.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._restoreTimestampInUtc = value.restoreTimestampInUtc;
       this._sourceCosmosdbAccountId = value.sourceCosmosdbAccountId;
+      this._tablesToRestore = value.tablesToRestore;
       this._database.internalValue = value.database;
+      this._gremlinDatabase.internalValue = value.gremlinDatabase;
     }
   }
 
@@ -1557,6 +1743,22 @@ export class CosmosdbAccountRestoreOutputReference extends cdktf.ComplexObject {
     return this._sourceCosmosdbAccountId;
   }
 
+  // tables_to_restore - computed: false, optional: true, required: false
+  private _tablesToRestore?: string[]; 
+  public get tablesToRestore() {
+    return this.getListAttribute('tables_to_restore');
+  }
+  public set tablesToRestore(value: string[]) {
+    this._tablesToRestore = value;
+  }
+  public resetTablesToRestore() {
+    this._tablesToRestore = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tablesToRestoreInput() {
+    return this._tablesToRestore;
+  }
+
   // database - computed: false, optional: true, required: false
   private _database = new CosmosdbAccountRestoreDatabaseList(this, "database", true);
   public get database() {
@@ -1572,22 +1774,38 @@ export class CosmosdbAccountRestoreOutputReference extends cdktf.ComplexObject {
   public get databaseInput() {
     return this._database.internalValue;
   }
+
+  // gremlin_database - computed: false, optional: true, required: false
+  private _gremlinDatabase = new CosmosdbAccountRestoreGremlinDatabaseList(this, "gremlin_database", false);
+  public get gremlinDatabase() {
+    return this._gremlinDatabase;
+  }
+  public putGremlinDatabase(value: CosmosdbAccountRestoreGremlinDatabase[] | cdktf.IResolvable) {
+    this._gremlinDatabase.internalValue = value;
+  }
+  public resetGremlinDatabase() {
+    this._gremlinDatabase.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gremlinDatabaseInput() {
+    return this._gremlinDatabase.internalValue;
+  }
 }
 export interface CosmosdbAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#create CosmosdbAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#create CosmosdbAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#delete CosmosdbAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#delete CosmosdbAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#read CosmosdbAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#read CosmosdbAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#update CosmosdbAccount#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#update CosmosdbAccount#update}
   */
   readonly update?: string;
 }
@@ -1768,14 +1986,14 @@ export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 export interface CosmosdbAccountVirtualNetworkRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#id CosmosdbAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#id CosmosdbAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#ignore_missing_vnet_service_endpoint CosmosdbAccount#ignore_missing_vnet_service_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#ignore_missing_vnet_service_endpoint CosmosdbAccount#ignore_missing_vnet_service_endpoint}
   */
   readonly ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable;
 }
@@ -1917,7 +2135,7 @@ export class CosmosdbAccountVirtualNetworkRuleList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account azurerm_cosmosdb_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account azurerm_cosmosdb_account}
 */
 export class CosmosdbAccount extends cdktf.TerraformResource {
 
@@ -1933,7 +2151,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CosmosdbAccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CosmosdbAccount to import
-  * @param importFromId The id of the existing CosmosdbAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CosmosdbAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CosmosdbAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1945,7 +2163,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.89.0/docs/resources/cosmosdb_account azurerm_cosmosdb_account} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/cosmosdb_account azurerm_cosmosdb_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1956,7 +2174,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cosmosdb_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.89.0',
+        providerVersion: '3.90.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1986,6 +2204,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     this._networkAclBypassForAzureServices = config.networkAclBypassForAzureServices;
     this._networkAclBypassIds = config.networkAclBypassIds;
     this._offerType = config.offerType;
+    this._partitionMergeEnabled = config.partitionMergeEnabled;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
@@ -2311,6 +2530,22 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     return this._offerType;
   }
 
+  // partition_merge_enabled - computed: false, optional: true, required: false
+  private _partitionMergeEnabled?: boolean | cdktf.IResolvable; 
+  public get partitionMergeEnabled() {
+    return this.getBooleanAttribute('partition_merge_enabled');
+  }
+  public set partitionMergeEnabled(value: boolean | cdktf.IResolvable) {
+    this._partitionMergeEnabled = value;
+  }
+  public resetPartitionMergeEnabled() {
+    this._partitionMergeEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partitionMergeEnabledInput() {
+    return this._partitionMergeEnabled;
+  }
+
   // primary_key - computed: true, optional: false, required: false
   public get primaryKey() {
     return this.getStringAttribute('primary_key');
@@ -2621,6 +2856,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       network_acl_bypass_for_azure_services: cdktf.booleanToTerraform(this._networkAclBypassForAzureServices),
       network_acl_bypass_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._networkAclBypassIds),
       offer_type: cdktf.stringToTerraform(this._offerType),
+      partition_merge_enabled: cdktf.booleanToTerraform(this._partitionMergeEnabled),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
@@ -2753,6 +2989,12 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      partition_merge_enabled: {
+        value: cdktf.booleanToHclTerraform(this._partitionMergeEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       public_network_access_enabled: {
         value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),

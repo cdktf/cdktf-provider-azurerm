@@ -454,6 +454,7 @@ Object.defineProperty(exports, 'kubernetesClusterExtension', { get: function () 
 Object.defineProperty(exports, 'kubernetesClusterNodePool', { get: function () { return require('./kubernetes-cluster-node-pool'); } });
 Object.defineProperty(exports, 'kubernetesClusterTrustedAccessRoleBinding', { get: function () { return require('./kubernetes-cluster-trusted-access-role-binding'); } });
 Object.defineProperty(exports, 'kubernetesFleetManager', { get: function () { return require('./kubernetes-fleet-manager'); } });
+Object.defineProperty(exports, 'kubernetesFleetUpdateStrategy', { get: function () { return require('./kubernetes-fleet-update-strategy'); } });
 Object.defineProperty(exports, 'kubernetesFluxConfiguration', { get: function () { return require('./kubernetes-flux-configuration'); } });
 Object.defineProperty(exports, 'kustoAttachedDatabaseConfiguration', { get: function () { return require('./kusto-attached-database-configuration'); } });
 Object.defineProperty(exports, 'kustoCluster', { get: function () { return require('./kusto-cluster'); } });
@@ -858,6 +859,7 @@ Object.defineProperty(exports, 'siteRecoveryReplicatedVm', { get: function () { 
 Object.defineProperty(exports, 'siteRecoveryReplicationPolicy', { get: function () { return require('./site-recovery-replication-policy'); } });
 Object.defineProperty(exports, 'siteRecoveryReplicationRecoveryPlan', { get: function () { return require('./site-recovery-replication-recovery-plan'); } });
 Object.defineProperty(exports, 'siteRecoveryServicesVaultHypervSite', { get: function () { return require('./site-recovery-services-vault-hyperv-site'); } });
+Object.defineProperty(exports, 'siteRecoveryVmwareReplicatedVm', { get: function () { return require('./site-recovery-vmware-replicated-vm'); } });
 Object.defineProperty(exports, 'siteRecoveryVmwareReplicationPolicy', { get: function () { return require('./site-recovery-vmware-replication-policy'); } });
 Object.defineProperty(exports, 'siteRecoveryVmwareReplicationPolicyAssociation', { get: function () { return require('./site-recovery-vmware-replication-policy-association'); } });
 Object.defineProperty(exports, 'snapshot', { get: function () { return require('./snapshot'); } });
@@ -884,10 +886,12 @@ Object.defineProperty(exports, 'springCloudCustomDomain', { get: function () { r
 Object.defineProperty(exports, 'springCloudCustomizedAccelerator', { get: function () { return require('./spring-cloud-customized-accelerator'); } });
 Object.defineProperty(exports, 'springCloudDevToolPortal', { get: function () { return require('./spring-cloud-dev-tool-portal'); } });
 Object.defineProperty(exports, 'springCloudDynatraceApplicationPerformanceMonitoring', { get: function () { return require('./spring-cloud-dynatrace-application-performance-monitoring'); } });
+Object.defineProperty(exports, 'springCloudElasticApplicationPerformanceMonitoring', { get: function () { return require('./spring-cloud-elastic-application-performance-monitoring'); } });
 Object.defineProperty(exports, 'springCloudGateway', { get: function () { return require('./spring-cloud-gateway'); } });
 Object.defineProperty(exports, 'springCloudGatewayCustomDomain', { get: function () { return require('./spring-cloud-gateway-custom-domain'); } });
 Object.defineProperty(exports, 'springCloudGatewayRouteConfig', { get: function () { return require('./spring-cloud-gateway-route-config'); } });
 Object.defineProperty(exports, 'springCloudJavaDeployment', { get: function () { return require('./spring-cloud-java-deployment'); } });
+Object.defineProperty(exports, 'springCloudNewRelicApplicationPerformanceMonitoring', { get: function () { return require('./spring-cloud-new-relic-application-performance-monitoring'); } });
 Object.defineProperty(exports, 'springCloudService', { get: function () { return require('./spring-cloud-service'); } });
 Object.defineProperty(exports, 'springCloudStorage', { get: function () { return require('./spring-cloud-storage'); } });
 Object.defineProperty(exports, 'sqlActiveDirectoryAdministrator', { get: function () { return require('./sql-active-directory-administrator'); } });
@@ -1274,6 +1278,7 @@ Object.defineProperty(exports, 'dataAzurermNetworkSecurityGroup', { get: functio
 Object.defineProperty(exports, 'dataAzurermNetworkServiceTags', { get: function () { return require('./data-azurerm-network-service-tags'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkWatcher', { get: function () { return require('./data-azurerm-network-watcher'); } });
 Object.defineProperty(exports, 'dataAzurermNginxCertificate', { get: function () { return require('./data-azurerm-nginx-certificate'); } });
+Object.defineProperty(exports, 'dataAzurermNginxConfiguration', { get: function () { return require('./data-azurerm-nginx-configuration'); } });
 Object.defineProperty(exports, 'dataAzurermNginxDeployment', { get: function () { return require('./data-azurerm-nginx-deployment'); } });
 Object.defineProperty(exports, 'dataAzurermNotificationHub', { get: function () { return require('./data-azurerm-notification-hub'); } });
 Object.defineProperty(exports, 'dataAzurermNotificationHubNamespace', { get: function () { return require('./data-azurerm-notification-hub-namespace'); } });
@@ -1377,6 +1382,7 @@ Object.defineProperty(exports, 'dataAzurermTrafficManagerGeographicalLocation', 
 Object.defineProperty(exports, 'dataAzurermTrafficManagerProfile', { get: function () { return require('./data-azurerm-traffic-manager-profile'); } });
 Object.defineProperty(exports, 'dataAzurermUserAssignedIdentity', { get: function () { return require('./data-azurerm-user-assigned-identity'); } });
 Object.defineProperty(exports, 'dataAzurermVirtualDesktopHostPool', { get: function () { return require('./data-azurerm-virtual-desktop-host-pool'); } });
+Object.defineProperty(exports, 'dataAzurermVirtualDesktopWorkspace', { get: function () { return require('./data-azurerm-virtual-desktop-workspace'); } });
 Object.defineProperty(exports, 'dataAzurermVirtualHub', { get: function () { return require('./data-azurerm-virtual-hub'); } });
 Object.defineProperty(exports, 'dataAzurermVirtualHubConnection', { get: function () { return require('./data-azurerm-virtual-hub-connection'); } });
 Object.defineProperty(exports, 'dataAzurermVirtualHubRouteTable', { get: function () { return require('./data-azurerm-virtual-hub-route-table'); } });
