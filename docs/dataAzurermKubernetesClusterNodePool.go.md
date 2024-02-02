@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesClusterNodePool.DataAzurermKubernetesClusterNodePool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetesclusternodepool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermkubernetesclusternodepool"
 
 dataazurermkubernetesclusternodepool.NewDataAzurermKubernetesClusterNodePool(scope Construct, id *string, config DataAzurermKubernetesClusterNodePoolConfig) DataAzurermKubernetesClusterNodePool
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermKubernetesClusterNodePool.DataAzurermKubernetesClusterNodePool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetesclusternodepool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermkubernetesclusternodepool"
 
 dataazurermkubernetesclusternodepool.DataAzurermKubernetesClusterNodePool_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermKubernetesClusterNodePool.DataAzurermKubernetesClusterNodePool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetesclusternodepool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermkubernetesclusternodepool"
 
 dataazurermkubernetesclusternodepool.DataAzurermKubernetesClusterNodePool_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermkubernetesclusternodepool.DataAzurermKubernetesClusterNodePool_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermKubernetesClusterNodePool.DataAzurermKubernetesClusterNodePool.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetesclusternodepool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermkubernetesclusternodepool"
 
 dataazurermkubernetesclusternodepool.DataAzurermKubernetesClusterNodePool_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermkubernetesclusternodepool.DataAzurermKubernetesClusterNodePool_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermKubernetesClusterNodePool.DataAzurermKubernetesClusterNodePool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetesclusternodepool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermkubernetesclusternodepool"
 
 dataazurermkubernetesclusternodepool.DataAzurermKubernetesClusterNodePool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -933,7 +933,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesClusterNodePool.DataAzurermKubernetesClusterNodePoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetesclusternodepool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermkubernetesclusternodepool"
 
 &dataazurermkubernetesclusternodepool.DataAzurermKubernetesClusterNodePoolConfig {
 	Connection: interface{},
@@ -947,7 +947,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetes
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermKubernetesClusterNodePool.DataAzurermKubernetesClusterNodePoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermKubernetesClusterNodePool.DataAzurermKubernetesClusterNodePoolTimeouts,
 }
 ```
 
@@ -1110,7 +1110,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesClusterNodePool.DataAzurermKubernetesClusterNodePoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetesclusternodepool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermkubernetesclusternodepool"
 
 &dataazurermkubernetesclusternodepool.DataAzurermKubernetesClusterNodePoolTimeouts {
 	Read: *string,
@@ -1142,7 +1142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesClusterNodePool.DataAzurermKubernetesClusterNodePoolUpgradeSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetesclusternodepool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermkubernetesclusternodepool"
 
 &dataazurermkubernetesclusternodepool.DataAzurermKubernetesClusterNodePoolUpgradeSettings {
 
@@ -1157,7 +1157,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetes
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesClusterNodePool.DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetesclusternodepool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermkubernetesclusternodepool"
 
 dataazurermkubernetesclusternodepool.NewDataAzurermKubernetesClusterNodePoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference
 ```
@@ -1435,7 +1435,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesClusterNodePool.DataAzurermKubernetesClusterNodePoolUpgradeSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetesclusternodepool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermkubernetesclusternodepool"
 
 dataazurermkubernetesclusternodepool.NewDataAzurermKubernetesClusterNodePoolUpgradeSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterNodePoolUpgradeSettingsList
 ```
@@ -1584,7 +1584,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesClusterNodePool.DataAzurermKubernetesClusterNodePoolUpgradeSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetesclusternodepool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermkubernetesclusternodepool"
 
 dataazurermkubernetesclusternodepool.NewDataAzurermKubernetesClusterNodePoolUpgradeSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterNodePoolUpgradeSettingsOutputReference
 ```
