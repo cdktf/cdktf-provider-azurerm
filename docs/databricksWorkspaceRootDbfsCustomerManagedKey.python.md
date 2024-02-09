@@ -4,7 +4,7 @@
 
 ### DatabricksWorkspaceRootDbfsCustomerManagedKey <a name="DatabricksWorkspaceRootDbfsCustomerManagedKey" id="@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKey"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key azurerm_databricks_workspace_root_dbfs_customer_managed_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key azurerm_databricks_workspace_root_dbfs_customer_managed_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKey.Initializer"></a>
 
@@ -39,9 +39,9 @@ databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustome
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKey.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKey.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKey.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKey.Initializer.parameter.keyVaultKeyId">key_vault_key_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#key_vault_key_id DatabricksWorkspaceRootDbfsCustomerManagedKey#key_vault_key_id}. |
-| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKey.Initializer.parameter.workspaceId">workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#workspace_id DatabricksWorkspaceRootDbfsCustomerManagedKey#workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKey.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#id DatabricksWorkspaceRootDbfsCustomerManagedKey#id}. |
+| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKey.Initializer.parameter.keyVaultKeyId">key_vault_key_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#key_vault_key_id DatabricksWorkspaceRootDbfsCustomerManagedKey#key_vault_key_id}. |
+| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKey.Initializer.parameter.workspaceId">workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#workspace_id DatabricksWorkspaceRootDbfsCustomerManagedKey#workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKey.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#id DatabricksWorkspaceRootDbfsCustomerManagedKey#id}. |
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKey.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyTimeouts">DatabricksWorkspaceRootDbfsCustomerManagedKeyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#key_vault_key_id DatabricksWorkspaceRootDbfsCustomerManagedKey#key_vault_key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#key_vault_key_id DatabricksWorkspaceRootDbfsCustomerManagedKey#key_vault_key_id}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#workspace_id DatabricksWorkspaceRootDbfsCustomerManagedKey#workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#workspace_id DatabricksWorkspaceRootDbfsCustomerManagedKey#workspace_id}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#id DatabricksWorkspaceRootDbfsCustomerManagedKey#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#id DatabricksWorkspaceRootDbfsCustomerManagedKey#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -139,7 +139,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#timeouts DatabricksWorkspaceRootDbfsCustomerManagedKey#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#timeouts DatabricksWorkspaceRootDbfsCustomerManagedKey#timeouts}
 
 ---
 
@@ -516,7 +516,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#create DatabricksWorkspaceRootDbfsCustomerManagedKey#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#create DatabricksWorkspaceRootDbfsCustomerManagedKey#create}.
 
 ---
 
@@ -524,7 +524,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#delete DatabricksWorkspaceRootDbfsCustomerManagedKey#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#delete DatabricksWorkspaceRootDbfsCustomerManagedKey#delete}.
 
 ---
 
@@ -532,7 +532,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#read DatabricksWorkspaceRootDbfsCustomerManagedKey#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#read DatabricksWorkspaceRootDbfsCustomerManagedKey#read}.
 
 ---
 
@@ -540,7 +540,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#update DatabricksWorkspaceRootDbfsCustomerManagedKey#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#update DatabricksWorkspaceRootDbfsCustomerManagedKey#update}.
 
 ---
 
@@ -670,7 +670,7 @@ The construct id used in the generated config for the DatabricksWorkspaceRootDbf
 
 The id of the existing DatabricksWorkspaceRootDbfsCustomerManagedKey that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -986,9 +986,9 @@ databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustome
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyConfig.property.keyVaultKeyId">key_vault_key_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#key_vault_key_id DatabricksWorkspaceRootDbfsCustomerManagedKey#key_vault_key_id}. |
-| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyConfig.property.workspaceId">workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#workspace_id DatabricksWorkspaceRootDbfsCustomerManagedKey#workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#id DatabricksWorkspaceRootDbfsCustomerManagedKey#id}. |
+| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyConfig.property.keyVaultKeyId">key_vault_key_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#key_vault_key_id DatabricksWorkspaceRootDbfsCustomerManagedKey#key_vault_key_id}. |
+| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyConfig.property.workspaceId">workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#workspace_id DatabricksWorkspaceRootDbfsCustomerManagedKey#workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#id DatabricksWorkspaceRootDbfsCustomerManagedKey#id}. |
 | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyTimeouts">DatabricksWorkspaceRootDbfsCustomerManagedKeyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1071,7 +1071,7 @@ key_vault_key_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#key_vault_key_id DatabricksWorkspaceRootDbfsCustomerManagedKey#key_vault_key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#key_vault_key_id DatabricksWorkspaceRootDbfsCustomerManagedKey#key_vault_key_id}.
 
 ---
 
@@ -1083,7 +1083,7 @@ workspace_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#workspace_id DatabricksWorkspaceRootDbfsCustomerManagedKey#workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#workspace_id DatabricksWorkspaceRootDbfsCustomerManagedKey#workspace_id}.
 
 ---
 
@@ -1095,7 +1095,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#id DatabricksWorkspaceRootDbfsCustomerManagedKey#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#id DatabricksWorkspaceRootDbfsCustomerManagedKey#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1112,7 +1112,7 @@ timeouts: DatabricksWorkspaceRootDbfsCustomerManagedKeyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#timeouts DatabricksWorkspaceRootDbfsCustomerManagedKey#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#timeouts DatabricksWorkspaceRootDbfsCustomerManagedKey#timeouts}
 
 ---
 
@@ -1135,10 +1135,10 @@ databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustome
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#create DatabricksWorkspaceRootDbfsCustomerManagedKey#create}. |
-| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#delete DatabricksWorkspaceRootDbfsCustomerManagedKey#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#read DatabricksWorkspaceRootDbfsCustomerManagedKey#read}. |
-| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#update DatabricksWorkspaceRootDbfsCustomerManagedKey#update}. |
+| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#create DatabricksWorkspaceRootDbfsCustomerManagedKey#create}. |
+| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#delete DatabricksWorkspaceRootDbfsCustomerManagedKey#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#read DatabricksWorkspaceRootDbfsCustomerManagedKey#read}. |
+| <code><a href="#@cdktf/provider-azurerm.databricksWorkspaceRootDbfsCustomerManagedKey.DatabricksWorkspaceRootDbfsCustomerManagedKeyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#update DatabricksWorkspaceRootDbfsCustomerManagedKey#update}. |
 
 ---
 
@@ -1150,7 +1150,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#create DatabricksWorkspaceRootDbfsCustomerManagedKey#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#create DatabricksWorkspaceRootDbfsCustomerManagedKey#create}.
 
 ---
 
@@ -1162,7 +1162,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#delete DatabricksWorkspaceRootDbfsCustomerManagedKey#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#delete DatabricksWorkspaceRootDbfsCustomerManagedKey#delete}.
 
 ---
 
@@ -1174,7 +1174,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#read DatabricksWorkspaceRootDbfsCustomerManagedKey#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#read DatabricksWorkspaceRootDbfsCustomerManagedKey#read}.
 
 ---
 
@@ -1186,7 +1186,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#update DatabricksWorkspaceRootDbfsCustomerManagedKey#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/databricks_workspace_root_dbfs_customer_managed_key#update DatabricksWorkspaceRootDbfsCustomerManagedKey#update}.
 
 ---
 

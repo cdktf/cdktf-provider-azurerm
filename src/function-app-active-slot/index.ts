@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/function_app_active_slot
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/function_app_active_slot
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface FunctionAppActiveSlotConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/function_app_active_slot#id FunctionAppActiveSlot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/function_app_active_slot#id FunctionAppActiveSlot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,37 +22,37 @@ export interface FunctionAppActiveSlotConfig extends cdktf.TerraformMetaArgument
   /**
   * The swap action should overwrite the Production slot's network configuration with the configuration from this slot. Defaults to `true`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/function_app_active_slot#overwrite_network_config FunctionAppActiveSlot#overwrite_network_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/function_app_active_slot#overwrite_network_config FunctionAppActiveSlot#overwrite_network_config}
   */
   readonly overwriteNetworkConfig?: boolean | cdktf.IResolvable;
   /**
   * The ID of the Slot to swap with `Production`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/function_app_active_slot#slot_id FunctionAppActiveSlot#slot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/function_app_active_slot#slot_id FunctionAppActiveSlot#slot_id}
   */
   readonly slotId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/function_app_active_slot#timeouts FunctionAppActiveSlot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/function_app_active_slot#timeouts FunctionAppActiveSlot#timeouts}
   */
   readonly timeouts?: FunctionAppActiveSlotTimeouts;
 }
 export interface FunctionAppActiveSlotTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/function_app_active_slot#create FunctionAppActiveSlot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/function_app_active_slot#create FunctionAppActiveSlot#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/function_app_active_slot#delete FunctionAppActiveSlot#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/function_app_active_slot#delete FunctionAppActiveSlot#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/function_app_active_slot#read FunctionAppActiveSlot#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/function_app_active_slot#read FunctionAppActiveSlot#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/function_app_active_slot#update FunctionAppActiveSlot#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/function_app_active_slot#update FunctionAppActiveSlot#update}
   */
   readonly update?: string;
 }
@@ -233,7 +233,7 @@ export class FunctionAppActiveSlotTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/function_app_active_slot azurerm_function_app_active_slot}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/function_app_active_slot azurerm_function_app_active_slot}
 */
 export class FunctionAppActiveSlot extends cdktf.TerraformResource {
 
@@ -249,7 +249,7 @@ export class FunctionAppActiveSlot extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FunctionAppActiveSlot resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FunctionAppActiveSlot to import
-  * @param importFromId The id of the existing FunctionAppActiveSlot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/function_app_active_slot#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FunctionAppActiveSlot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/function_app_active_slot#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FunctionAppActiveSlot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -261,7 +261,7 @@ export class FunctionAppActiveSlot extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/function_app_active_slot azurerm_function_app_active_slot} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/function_app_active_slot azurerm_function_app_active_slot} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -272,7 +272,7 @@ export class FunctionAppActiveSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_function_app_active_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.90.0',
+        providerVersion: '3.91.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

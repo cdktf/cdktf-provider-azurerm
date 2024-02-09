@@ -4,7 +4,7 @@
 
 ### LogAnalyticsWorkspaceTable <a name="LogAnalyticsWorkspaceTable" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table azurerm_log_analytics_workspace_table}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table azurerm_log_analytics_workspace_table}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.Initializer"></a>
 
@@ -78,6 +78,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.resetPlan">resetPlan</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.resetRetentionInDays">resetRetentionInDays</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.resetTimeouts">resetTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.resetTotalRetentionInDays">resetTotalRetentionInDays</a></code> | *No description.* |
 
 ---
 
@@ -405,6 +406,12 @@ public resetRetentionInDays(): void
 public resetTimeouts(): void
 ```
 
+##### `resetTotalRetentionInDays` <a name="resetTotalRetentionInDays" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.resetTotalRetentionInDays"></a>
+
+```typescript
+public resetTotalRetentionInDays(): void
+```
+
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
 | **Name** | **Description** |
@@ -508,7 +515,7 @@ The construct id used in the generated config for the LogAnalyticsWorkspaceTable
 
 The id of the existing LogAnalyticsWorkspaceTable that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -544,11 +551,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.planInput">planInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.retentionInDaysInput">retentionInDaysInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableTimeouts">LogAnalyticsWorkspaceTableTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.totalRetentionInDaysInput">totalRetentionInDaysInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.workspaceIdInput">workspaceIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.plan">plan</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.retentionInDays">retentionInDays</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.totalRetentionInDays">totalRetentionInDays</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.workspaceId">workspaceId</a></code> | <code>string</code> | *No description.* |
 
 ---
@@ -755,6 +764,16 @@ public readonly timeoutsInput: IResolvable | LogAnalyticsWorkspaceTableTimeouts;
 
 ---
 
+##### `totalRetentionInDaysInput`<sup>Optional</sup> <a name="totalRetentionInDaysInput" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.totalRetentionInDaysInput"></a>
+
+```typescript
+public readonly totalRetentionInDaysInput: number;
+```
+
+- *Type:* number
+
+---
+
 ##### `workspaceIdInput`<sup>Optional</sup> <a name="workspaceIdInput" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.workspaceIdInput"></a>
 
 ```typescript
@@ -799,6 +818,16 @@ public readonly plan: string;
 
 ```typescript
 public readonly retentionInDays: number;
+```
+
+- *Type:* number
+
+---
+
+##### `totalRetentionInDays`<sup>Required</sup> <a name="totalRetentionInDays" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTable.property.totalRetentionInDays"></a>
+
+```typescript
+public readonly totalRetentionInDays: number;
 ```
 
 - *Type:* number
@@ -856,12 +885,13 @@ const logAnalyticsWorkspaceTableConfig: logAnalyticsWorkspaceTable.LogAnalyticsW
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#name LogAnalyticsWorkspaceTable#name}. |
-| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.workspaceId">workspaceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#workspace_id LogAnalyticsWorkspaceTable#workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#id LogAnalyticsWorkspaceTable#id}. |
-| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.plan">plan</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#plan LogAnalyticsWorkspaceTable#plan}. |
-| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.retentionInDays">retentionInDays</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#retention_in_days LogAnalyticsWorkspaceTable#retention_in_days}. |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#name LogAnalyticsWorkspaceTable#name}. |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.workspaceId">workspaceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#workspace_id LogAnalyticsWorkspaceTable#workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#id LogAnalyticsWorkspaceTable#id}. |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.plan">plan</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#plan LogAnalyticsWorkspaceTable#plan}. |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.retentionInDays">retentionInDays</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#retention_in_days LogAnalyticsWorkspaceTable#retention_in_days}. |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableTimeouts">LogAnalyticsWorkspaceTableTimeouts</a></code> | timeouts block. |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.totalRetentionInDays">totalRetentionInDays</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#total_retention_in_days LogAnalyticsWorkspaceTable#total_retention_in_days}. |
 
 ---
 
@@ -943,7 +973,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#name LogAnalyticsWorkspaceTable#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#name LogAnalyticsWorkspaceTable#name}.
 
 ---
 
@@ -955,7 +985,7 @@ public readonly workspaceId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#workspace_id LogAnalyticsWorkspaceTable#workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#workspace_id LogAnalyticsWorkspaceTable#workspace_id}.
 
 ---
 
@@ -967,7 +997,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#id LogAnalyticsWorkspaceTable#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#id LogAnalyticsWorkspaceTable#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -982,7 +1012,7 @@ public readonly plan: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#plan LogAnalyticsWorkspaceTable#plan}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#plan LogAnalyticsWorkspaceTable#plan}.
 
 ---
 
@@ -994,7 +1024,7 @@ public readonly retentionInDays: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#retention_in_days LogAnalyticsWorkspaceTable#retention_in_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#retention_in_days LogAnalyticsWorkspaceTable#retention_in_days}.
 
 ---
 
@@ -1008,7 +1038,19 @@ public readonly timeouts: LogAnalyticsWorkspaceTableTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#timeouts LogAnalyticsWorkspaceTable#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#timeouts LogAnalyticsWorkspaceTable#timeouts}
+
+---
+
+##### `totalRetentionInDays`<sup>Optional</sup> <a name="totalRetentionInDays" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableConfig.property.totalRetentionInDays"></a>
+
+```typescript
+public readonly totalRetentionInDays: number;
+```
+
+- *Type:* number
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#total_retention_in_days LogAnalyticsWorkspaceTable#total_retention_in_days}.
 
 ---
 
@@ -1026,10 +1068,10 @@ const logAnalyticsWorkspaceTableTimeouts: logAnalyticsWorkspaceTable.LogAnalytic
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#create LogAnalyticsWorkspaceTable#create}. |
-| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#delete LogAnalyticsWorkspaceTable#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#read LogAnalyticsWorkspaceTable#read}. |
-| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#update LogAnalyticsWorkspaceTable#update}. |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#create LogAnalyticsWorkspaceTable#create}. |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#delete LogAnalyticsWorkspaceTable#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#read LogAnalyticsWorkspaceTable#read}. |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsWorkspaceTable.LogAnalyticsWorkspaceTableTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#update LogAnalyticsWorkspaceTable#update}. |
 
 ---
 
@@ -1041,7 +1083,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#create LogAnalyticsWorkspaceTable#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#create LogAnalyticsWorkspaceTable#create}.
 
 ---
 
@@ -1053,7 +1095,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#delete LogAnalyticsWorkspaceTable#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#delete LogAnalyticsWorkspaceTable#delete}.
 
 ---
 
@@ -1065,7 +1107,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#read LogAnalyticsWorkspaceTable#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#read LogAnalyticsWorkspaceTable#read}.
 
 ---
 
@@ -1077,7 +1119,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/log_analytics_workspace_table#update LogAnalyticsWorkspaceTable#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/log_analytics_workspace_table#update LogAnalyticsWorkspaceTable#update}.
 
 ---
 

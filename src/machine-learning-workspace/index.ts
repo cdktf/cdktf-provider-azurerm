@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,110 +13,120 @@ import * as cdktf from 'cdktf';
 
 export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#application_insights_id MachineLearningWorkspace#application_insights_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#application_insights_id MachineLearningWorkspace#application_insights_id}
   */
   readonly applicationInsightsId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#container_registry_id MachineLearningWorkspace#container_registry_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#container_registry_id MachineLearningWorkspace#container_registry_id}
   */
   readonly containerRegistryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#description MachineLearningWorkspace#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#description MachineLearningWorkspace#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#friendly_name MachineLearningWorkspace#friendly_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#friendly_name MachineLearningWorkspace#friendly_name}
   */
   readonly friendlyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#high_business_impact MachineLearningWorkspace#high_business_impact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#high_business_impact MachineLearningWorkspace#high_business_impact}
   */
   readonly highBusinessImpact?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#id MachineLearningWorkspace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#id MachineLearningWorkspace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#image_build_compute_name MachineLearningWorkspace#image_build_compute_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#image_build_compute_name MachineLearningWorkspace#image_build_compute_name}
   */
   readonly imageBuildComputeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#key_vault_id MachineLearningWorkspace#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#key_vault_id MachineLearningWorkspace#key_vault_id}
   */
   readonly keyVaultId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#location MachineLearningWorkspace#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#kind MachineLearningWorkspace#kind}
+  */
+  readonly kind?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#location MachineLearningWorkspace#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#name MachineLearningWorkspace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#name MachineLearningWorkspace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#primary_user_assigned_identity MachineLearningWorkspace#primary_user_assigned_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#primary_user_assigned_identity MachineLearningWorkspace#primary_user_assigned_identity}
   */
   readonly primaryUserAssignedIdentity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#public_access_behind_virtual_network_enabled MachineLearningWorkspace#public_access_behind_virtual_network_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#public_access_behind_virtual_network_enabled MachineLearningWorkspace#public_access_behind_virtual_network_enabled}
   */
   readonly publicAccessBehindVirtualNetworkEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#public_network_access_enabled MachineLearningWorkspace#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#public_network_access_enabled MachineLearningWorkspace#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#resource_group_name MachineLearningWorkspace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#resource_group_name MachineLearningWorkspace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#sku_name MachineLearningWorkspace#sku_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#sku_name MachineLearningWorkspace#sku_name}
   */
   readonly skuName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#storage_account_id MachineLearningWorkspace#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#storage_account_id MachineLearningWorkspace#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#tags MachineLearningWorkspace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#tags MachineLearningWorkspace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#v1_legacy_mode_enabled MachineLearningWorkspace#v1_legacy_mode_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#v1_legacy_mode_enabled MachineLearningWorkspace#v1_legacy_mode_enabled}
   */
   readonly v1LegacyModeEnabled?: boolean | cdktf.IResolvable;
   /**
   * encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#encryption MachineLearningWorkspace#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#encryption MachineLearningWorkspace#encryption}
   */
   readonly encryption?: MachineLearningWorkspaceEncryption;
   /**
+  * feature_store block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#feature_store MachineLearningWorkspace#feature_store}
+  */
+  readonly featureStore?: MachineLearningWorkspaceFeatureStore;
+  /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#identity MachineLearningWorkspace#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#identity MachineLearningWorkspace#identity}
   */
   readonly identity: MachineLearningWorkspaceIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#timeouts MachineLearningWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#timeouts MachineLearningWorkspace#timeouts}
   */
   readonly timeouts?: MachineLearningWorkspaceTimeouts;
 }
 export interface MachineLearningWorkspaceEncryption {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#key_id MachineLearningWorkspace#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#key_id MachineLearningWorkspace#key_id}
   */
   readonly keyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#key_vault_id MachineLearningWorkspace#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#key_vault_id MachineLearningWorkspace#key_vault_id}
   */
   readonly keyVaultId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#user_assigned_identity_id MachineLearningWorkspace#user_assigned_identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#user_assigned_identity_id MachineLearningWorkspace#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId?: string;
 }
@@ -250,13 +260,163 @@ export class MachineLearningWorkspaceEncryptionOutputReference extends cdktf.Com
     return this._userAssignedIdentityId;
   }
 }
+export interface MachineLearningWorkspaceFeatureStore {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#computer_spark_runtime_version MachineLearningWorkspace#computer_spark_runtime_version}
+  */
+  readonly computerSparkRuntimeVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#offline_connection_name MachineLearningWorkspace#offline_connection_name}
+  */
+  readonly offlineConnectionName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#online_connection_name MachineLearningWorkspace#online_connection_name}
+  */
+  readonly onlineConnectionName?: string;
+}
+
+export function machineLearningWorkspaceFeatureStoreToTerraform(struct?: MachineLearningWorkspaceFeatureStoreOutputReference | MachineLearningWorkspaceFeatureStore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    computer_spark_runtime_version: cdktf.stringToTerraform(struct!.computerSparkRuntimeVersion),
+    offline_connection_name: cdktf.stringToTerraform(struct!.offlineConnectionName),
+    online_connection_name: cdktf.stringToTerraform(struct!.onlineConnectionName),
+  }
+}
+
+
+export function machineLearningWorkspaceFeatureStoreToHclTerraform(struct?: MachineLearningWorkspaceFeatureStoreOutputReference | MachineLearningWorkspaceFeatureStore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    computer_spark_runtime_version: {
+      value: cdktf.stringToHclTerraform(struct!.computerSparkRuntimeVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    offline_connection_name: {
+      value: cdktf.stringToHclTerraform(struct!.offlineConnectionName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    online_connection_name: {
+      value: cdktf.stringToHclTerraform(struct!.onlineConnectionName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MachineLearningWorkspaceFeatureStoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MachineLearningWorkspaceFeatureStore | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._computerSparkRuntimeVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.computerSparkRuntimeVersion = this._computerSparkRuntimeVersion;
+    }
+    if (this._offlineConnectionName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.offlineConnectionName = this._offlineConnectionName;
+    }
+    if (this._onlineConnectionName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.onlineConnectionName = this._onlineConnectionName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MachineLearningWorkspaceFeatureStore | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._computerSparkRuntimeVersion = undefined;
+      this._offlineConnectionName = undefined;
+      this._onlineConnectionName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._computerSparkRuntimeVersion = value.computerSparkRuntimeVersion;
+      this._offlineConnectionName = value.offlineConnectionName;
+      this._onlineConnectionName = value.onlineConnectionName;
+    }
+  }
+
+  // computer_spark_runtime_version - computed: false, optional: true, required: false
+  private _computerSparkRuntimeVersion?: string; 
+  public get computerSparkRuntimeVersion() {
+    return this.getStringAttribute('computer_spark_runtime_version');
+  }
+  public set computerSparkRuntimeVersion(value: string) {
+    this._computerSparkRuntimeVersion = value;
+  }
+  public resetComputerSparkRuntimeVersion() {
+    this._computerSparkRuntimeVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get computerSparkRuntimeVersionInput() {
+    return this._computerSparkRuntimeVersion;
+  }
+
+  // offline_connection_name - computed: false, optional: true, required: false
+  private _offlineConnectionName?: string; 
+  public get offlineConnectionName() {
+    return this.getStringAttribute('offline_connection_name');
+  }
+  public set offlineConnectionName(value: string) {
+    this._offlineConnectionName = value;
+  }
+  public resetOfflineConnectionName() {
+    this._offlineConnectionName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get offlineConnectionNameInput() {
+    return this._offlineConnectionName;
+  }
+
+  // online_connection_name - computed: false, optional: true, required: false
+  private _onlineConnectionName?: string; 
+  public get onlineConnectionName() {
+    return this.getStringAttribute('online_connection_name');
+  }
+  public set onlineConnectionName(value: string) {
+    this._onlineConnectionName = value;
+  }
+  public resetOnlineConnectionName() {
+    this._onlineConnectionName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get onlineConnectionNameInput() {
+    return this._onlineConnectionName;
+  }
+}
 export interface MachineLearningWorkspaceIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#identity_ids MachineLearningWorkspace#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#identity_ids MachineLearningWorkspace#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#type MachineLearningWorkspace#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#type MachineLearningWorkspace#type}
   */
   readonly type: string;
 }
@@ -376,19 +536,19 @@ export class MachineLearningWorkspaceIdentityOutputReference extends cdktf.Compl
 }
 export interface MachineLearningWorkspaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#create MachineLearningWorkspace#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#create MachineLearningWorkspace#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#delete MachineLearningWorkspace#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#delete MachineLearningWorkspace#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#read MachineLearningWorkspace#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#read MachineLearningWorkspace#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#update MachineLearningWorkspace#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#update MachineLearningWorkspace#update}
   */
   readonly update?: string;
 }
@@ -569,7 +729,7 @@ export class MachineLearningWorkspaceTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace azurerm_machine_learning_workspace}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace azurerm_machine_learning_workspace}
 */
 export class MachineLearningWorkspace extends cdktf.TerraformResource {
 
@@ -585,7 +745,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MachineLearningWorkspace resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MachineLearningWorkspace to import
-  * @param importFromId The id of the existing MachineLearningWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MachineLearningWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MachineLearningWorkspace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -597,7 +757,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/machine_learning_workspace azurerm_machine_learning_workspace} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/machine_learning_workspace azurerm_machine_learning_workspace} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -608,7 +768,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_machine_learning_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.90.0',
+        providerVersion: '3.91.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -627,6 +787,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     this._id = config.id;
     this._imageBuildComputeName = config.imageBuildComputeName;
     this._keyVaultId = config.keyVaultId;
+    this._kind = config.kind;
     this._location = config.location;
     this._name = config.name;
     this._primaryUserAssignedIdentity = config.primaryUserAssignedIdentity;
@@ -638,6 +799,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._v1LegacyModeEnabled = config.v1LegacyModeEnabled;
     this._encryption.internalValue = config.encryption;
+    this._featureStore.internalValue = config.featureStore;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -771,6 +933,22 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get keyVaultIdInput() {
     return this._keyVaultId;
+  }
+
+  // kind - computed: false, optional: true, required: false
+  private _kind?: string; 
+  public get kind() {
+    return this.getStringAttribute('kind');
+  }
+  public set kind(value: string) {
+    this._kind = value;
+  }
+  public resetKind() {
+    this._kind = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kindInput() {
+    return this._kind;
   }
 
   // location - computed: false, optional: false, required: true
@@ -942,6 +1120,22 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     return this._encryption.internalValue;
   }
 
+  // feature_store - computed: false, optional: true, required: false
+  private _featureStore = new MachineLearningWorkspaceFeatureStoreOutputReference(this, "feature_store");
+  public get featureStore() {
+    return this._featureStore;
+  }
+  public putFeatureStore(value: MachineLearningWorkspaceFeatureStore) {
+    this._featureStore.internalValue = value;
+  }
+  public resetFeatureStore() {
+    this._featureStore.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get featureStoreInput() {
+    return this._featureStore.internalValue;
+  }
+
   // identity - computed: false, optional: false, required: true
   private _identity = new MachineLearningWorkspaceIdentityOutputReference(this, "identity");
   public get identity() {
@@ -985,6 +1179,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       image_build_compute_name: cdktf.stringToTerraform(this._imageBuildComputeName),
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
+      kind: cdktf.stringToTerraform(this._kind),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       primary_user_assigned_identity: cdktf.stringToTerraform(this._primaryUserAssignedIdentity),
@@ -996,6 +1191,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       v1_legacy_mode_enabled: cdktf.booleanToTerraform(this._v1LegacyModeEnabled),
       encryption: machineLearningWorkspaceEncryptionToTerraform(this._encryption.internalValue),
+      feature_store: machineLearningWorkspaceFeatureStoreToTerraform(this._featureStore.internalValue),
       identity: machineLearningWorkspaceIdentityToTerraform(this._identity.internalValue),
       timeouts: machineLearningWorkspaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -1047,6 +1243,12 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
       },
       key_vault_id: {
         value: cdktf.stringToHclTerraform(this._keyVaultId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kind: {
+        value: cdktf.stringToHclTerraform(this._kind),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
@@ -1116,6 +1318,12 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "MachineLearningWorkspaceEncryptionList",
+      },
+      feature_store: {
+        value: machineLearningWorkspaceFeatureStoreToHclTerraform(this._featureStore.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MachineLearningWorkspaceFeatureStoreList",
       },
       identity: {
         value: machineLearningWorkspaceIdentityToHclTerraform(this._identity.internalValue),

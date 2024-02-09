@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,108 +13,108 @@ import * as cdktf from 'cdktf';
 
 export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#aad_auth_enabled SignalrService#aad_auth_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#aad_auth_enabled SignalrService#aad_auth_enabled}
   */
   readonly aadAuthEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#connectivity_logs_enabled SignalrService#connectivity_logs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#connectivity_logs_enabled SignalrService#connectivity_logs_enabled}
   */
   readonly connectivityLogsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#http_request_logs_enabled SignalrService#http_request_logs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#http_request_logs_enabled SignalrService#http_request_logs_enabled}
   */
   readonly httpRequestLogsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#id SignalrService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#id SignalrService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#live_trace_enabled SignalrService#live_trace_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#live_trace_enabled SignalrService#live_trace_enabled}
   */
   readonly liveTraceEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#local_auth_enabled SignalrService#local_auth_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#local_auth_enabled SignalrService#local_auth_enabled}
   */
   readonly localAuthEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#location SignalrService#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#location SignalrService#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#messaging_logs_enabled SignalrService#messaging_logs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#messaging_logs_enabled SignalrService#messaging_logs_enabled}
   */
   readonly messagingLogsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#name SignalrService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#name SignalrService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#public_network_access_enabled SignalrService#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#public_network_access_enabled SignalrService#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#resource_group_name SignalrService#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#resource_group_name SignalrService#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#serverless_connection_timeout_in_seconds SignalrService#serverless_connection_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#serverless_connection_timeout_in_seconds SignalrService#serverless_connection_timeout_in_seconds}
   */
   readonly serverlessConnectionTimeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#service_mode SignalrService#service_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#service_mode SignalrService#service_mode}
   */
   readonly serviceMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#tags SignalrService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#tags SignalrService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#tls_client_cert_enabled SignalrService#tls_client_cert_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#tls_client_cert_enabled SignalrService#tls_client_cert_enabled}
   */
   readonly tlsClientCertEnabled?: boolean | cdktf.IResolvable;
   /**
   * cors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#cors SignalrService#cors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#cors SignalrService#cors}
   */
   readonly cors?: SignalrServiceCors[] | cdktf.IResolvable;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#identity SignalrService#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#identity SignalrService#identity}
   */
   readonly identity?: SignalrServiceIdentity;
   /**
   * live_trace block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#live_trace SignalrService#live_trace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#live_trace SignalrService#live_trace}
   */
   readonly liveTrace?: SignalrServiceLiveTrace;
   /**
   * sku block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#sku SignalrService#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#sku SignalrService#sku}
   */
   readonly sku: SignalrServiceSku;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#timeouts SignalrService#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#timeouts SignalrService#timeouts}
   */
   readonly timeouts?: SignalrServiceTimeouts;
   /**
   * upstream_endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#upstream_endpoint SignalrService#upstream_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#upstream_endpoint SignalrService#upstream_endpoint}
   */
   readonly upstreamEndpoint?: SignalrServiceUpstreamEndpoint[] | cdktf.IResolvable;
 }
 export interface SignalrServiceCors {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#allowed_origins SignalrService#allowed_origins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#allowed_origins SignalrService#allowed_origins}
   */
   readonly allowedOrigins: string[];
 }
@@ -227,11 +227,11 @@ export class SignalrServiceCorsList extends cdktf.ComplexList {
 }
 export interface SignalrServiceIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#identity_ids SignalrService#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#identity_ids SignalrService#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#type SignalrService#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#type SignalrService#type}
   */
   readonly type: string;
 }
@@ -351,19 +351,19 @@ export class SignalrServiceIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface SignalrServiceLiveTrace {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#connectivity_logs_enabled SignalrService#connectivity_logs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#connectivity_logs_enabled SignalrService#connectivity_logs_enabled}
   */
   readonly connectivityLogsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#enabled SignalrService#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#enabled SignalrService#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#http_request_logs_enabled SignalrService#http_request_logs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#http_request_logs_enabled SignalrService#http_request_logs_enabled}
   */
   readonly httpRequestLogsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#messaging_logs_enabled SignalrService#messaging_logs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#messaging_logs_enabled SignalrService#messaging_logs_enabled}
   */
   readonly messagingLogsEnabled?: boolean | cdktf.IResolvable;
 }
@@ -534,11 +534,11 @@ export class SignalrServiceLiveTraceOutputReference extends cdktf.ComplexObject 
 }
 export interface SignalrServiceSku {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#capacity SignalrService#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#capacity SignalrService#capacity}
   */
   readonly capacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#name SignalrService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#name SignalrService#name}
   */
   readonly name: string;
 }
@@ -645,19 +645,19 @@ export class SignalrServiceSkuOutputReference extends cdktf.ComplexObject {
 }
 export interface SignalrServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#create SignalrService#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#create SignalrService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#delete SignalrService#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#delete SignalrService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#read SignalrService#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#read SignalrService#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#update SignalrService#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#update SignalrService#update}
   */
   readonly update?: string;
 }
@@ -838,23 +838,23 @@ export class SignalrServiceTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 export interface SignalrServiceUpstreamEndpoint {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#category_pattern SignalrService#category_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#category_pattern SignalrService#category_pattern}
   */
   readonly categoryPattern: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#event_pattern SignalrService#event_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#event_pattern SignalrService#event_pattern}
   */
   readonly eventPattern: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#hub_pattern SignalrService#hub_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#hub_pattern SignalrService#hub_pattern}
   */
   readonly hubPattern: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#url_template SignalrService#url_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#url_template SignalrService#url_template}
   */
   readonly urlTemplate: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#user_assigned_identity_id SignalrService#user_assigned_identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#user_assigned_identity_id SignalrService#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId?: string;
 }
@@ -1074,7 +1074,7 @@ export class SignalrServiceUpstreamEndpointList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service azurerm_signalr_service}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service azurerm_signalr_service}
 */
 export class SignalrService extends cdktf.TerraformResource {
 
@@ -1090,7 +1090,7 @@ export class SignalrService extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SignalrService resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SignalrService to import
-  * @param importFromId The id of the existing SignalrService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SignalrService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SignalrService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1102,7 +1102,7 @@ export class SignalrService extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/signalr_service azurerm_signalr_service} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/signalr_service azurerm_signalr_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1113,7 +1113,7 @@ export class SignalrService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_signalr_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.90.0',
+        providerVersion: '3.91.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

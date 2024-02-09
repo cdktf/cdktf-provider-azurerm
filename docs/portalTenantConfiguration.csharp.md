@@ -4,7 +4,7 @@
 
 ### PortalTenantConfiguration <a name="PortalTenantConfiguration" id="@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration azurerm_portal_tenant_configuration}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration azurerm_portal_tenant_configuration}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfiguration.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the PortalTenantConfiguration 
 
 The id of the existing PortalTenantConfiguration that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -787,8 +787,8 @@ new PortalTenantConfigurationConfig {
 | <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationConfig.property.privateMarkdownStorageEnforced">PrivateMarkdownStorageEnforced</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#private_markdown_storage_enforced PortalTenantConfiguration#private_markdown_storage_enforced}. |
-| <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#id PortalTenantConfiguration#id}. |
+| <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationConfig.property.privateMarkdownStorageEnforced">PrivateMarkdownStorageEnforced</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#private_markdown_storage_enforced PortalTenantConfiguration#private_markdown_storage_enforced}. |
+| <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#id PortalTenantConfiguration#id}. |
 | <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationTimeouts">PortalTenantConfigurationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -871,7 +871,7 @@ public object PrivateMarkdownStorageEnforced { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#private_markdown_storage_enforced PortalTenantConfiguration#private_markdown_storage_enforced}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#private_markdown_storage_enforced PortalTenantConfiguration#private_markdown_storage_enforced}.
 
 ---
 
@@ -883,7 +883,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#id PortalTenantConfiguration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#id PortalTenantConfiguration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -900,7 +900,7 @@ public PortalTenantConfigurationTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#timeouts PortalTenantConfiguration#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#timeouts PortalTenantConfiguration#timeouts}
 
 ---
 
@@ -923,10 +923,10 @@ new PortalTenantConfigurationTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#create PortalTenantConfiguration#create}. |
-| <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#delete PortalTenantConfiguration#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#read PortalTenantConfiguration#read}. |
-| <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#update PortalTenantConfiguration#update}. |
+| <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#create PortalTenantConfiguration#create}. |
+| <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#delete PortalTenantConfiguration#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#read PortalTenantConfiguration#read}. |
+| <code><a href="#@cdktf/provider-azurerm.portalTenantConfiguration.PortalTenantConfigurationTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#update PortalTenantConfiguration#update}. |
 
 ---
 
@@ -938,7 +938,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#create PortalTenantConfiguration#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#create PortalTenantConfiguration#create}.
 
 ---
 
@@ -950,7 +950,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#delete PortalTenantConfiguration#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#delete PortalTenantConfiguration#delete}.
 
 ---
 
@@ -962,7 +962,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#read PortalTenantConfiguration#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#read PortalTenantConfiguration#read}.
 
 ---
 
@@ -974,7 +974,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.90.0/docs/resources/portal_tenant_configuration#update PortalTenantConfiguration#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/portal_tenant_configuration#update PortalTenantConfiguration#update}.
 
 ---
 

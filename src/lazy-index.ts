@@ -175,6 +175,8 @@ Object.defineProperty(exports, 'cdnFrontdoorRuleSet', { get: function () { retur
 Object.defineProperty(exports, 'cdnFrontdoorSecret', { get: function () { return require('./cdn-frontdoor-secret'); } });
 Object.defineProperty(exports, 'cdnFrontdoorSecurityPolicy', { get: function () { return require('./cdn-frontdoor-security-policy'); } });
 Object.defineProperty(exports, 'cdnProfile', { get: function () { return require('./cdn-profile'); } });
+Object.defineProperty(exports, 'chaosStudioCapability', { get: function () { return require('./chaos-studio-capability'); } });
+Object.defineProperty(exports, 'chaosStudioExperiment', { get: function () { return require('./chaos-studio-experiment'); } });
 Object.defineProperty(exports, 'chaosStudioTarget', { get: function () { return require('./chaos-studio-target'); } });
 Object.defineProperty(exports, 'cognitiveAccount', { get: function () { return require('./cognitive-account'); } });
 Object.defineProperty(exports, 'cognitiveAccountCustomerManagedKey', { get: function () { return require('./cognitive-account-customer-managed-key'); } });
@@ -285,6 +287,7 @@ Object.defineProperty(exports, 'dataProtectionBackupInstanceDisk', { get: functi
 Object.defineProperty(exports, 'dataProtectionBackupInstancePostgresql', { get: function () { return require('./data-protection-backup-instance-postgresql'); } });
 Object.defineProperty(exports, 'dataProtectionBackupPolicyBlobStorage', { get: function () { return require('./data-protection-backup-policy-blob-storage'); } });
 Object.defineProperty(exports, 'dataProtectionBackupPolicyDisk', { get: function () { return require('./data-protection-backup-policy-disk'); } });
+Object.defineProperty(exports, 'dataProtectionBackupPolicyKubernetesCluster', { get: function () { return require('./data-protection-backup-policy-kubernetes-cluster'); } });
 Object.defineProperty(exports, 'dataProtectionBackupPolicyPostgresql', { get: function () { return require('./data-protection-backup-policy-postgresql'); } });
 Object.defineProperty(exports, 'dataProtectionBackupVault', { get: function () { return require('./data-protection-backup-vault'); } });
 Object.defineProperty(exports, 'dataProtectionResourceGuard', { get: function () { return require('./data-protection-resource-guard'); } });
@@ -310,6 +313,7 @@ Object.defineProperty(exports, 'dedicatedHardwareSecurityModule', { get: functio
 Object.defineProperty(exports, 'dedicatedHost', { get: function () { return require('./dedicated-host'); } });
 Object.defineProperty(exports, 'dedicatedHostGroup', { get: function () { return require('./dedicated-host-group'); } });
 Object.defineProperty(exports, 'devCenter', { get: function () { return require('./dev-center'); } });
+Object.defineProperty(exports, 'devCenterGallery', { get: function () { return require('./dev-center-gallery'); } });
 Object.defineProperty(exports, 'devCenterProject', { get: function () { return require('./dev-center-project'); } });
 Object.defineProperty(exports, 'devTestGlobalVmShutdownSchedule', { get: function () { return require('./dev-test-global-vm-shutdown-schedule'); } });
 Object.defineProperty(exports, 'devTestLab', { get: function () { return require('./dev-test-lab'); } });
@@ -417,6 +421,7 @@ Object.defineProperty(exports, 'iotTimeSeriesInsightsReferenceDataSet', { get: f
 Object.defineProperty(exports, 'iotTimeSeriesInsightsStandardEnvironment', { get: function () { return require('./iot-time-series-insights-standard-environment'); } });
 Object.defineProperty(exports, 'iotcentralApplication', { get: function () { return require('./iotcentral-application'); } });
 Object.defineProperty(exports, 'iotcentralApplicationNetworkRuleSet', { get: function () { return require('./iotcentral-application-network-rule-set'); } });
+Object.defineProperty(exports, 'iotcentralOrganization', { get: function () { return require('./iotcentral-organization'); } });
 Object.defineProperty(exports, 'iothub', { get: function () { return require('./iothub'); } });
 Object.defineProperty(exports, 'iothubCertificate', { get: function () { return require('./iothub-certificate'); } });
 Object.defineProperty(exports, 'iothubConsumerGroup', { get: function () { return require('./iothub-consumer-group'); } });
@@ -454,6 +459,7 @@ Object.defineProperty(exports, 'kubernetesClusterExtension', { get: function () 
 Object.defineProperty(exports, 'kubernetesClusterNodePool', { get: function () { return require('./kubernetes-cluster-node-pool'); } });
 Object.defineProperty(exports, 'kubernetesClusterTrustedAccessRoleBinding', { get: function () { return require('./kubernetes-cluster-trusted-access-role-binding'); } });
 Object.defineProperty(exports, 'kubernetesFleetManager', { get: function () { return require('./kubernetes-fleet-manager'); } });
+Object.defineProperty(exports, 'kubernetesFleetMember', { get: function () { return require('./kubernetes-fleet-member'); } });
 Object.defineProperty(exports, 'kubernetesFleetUpdateStrategy', { get: function () { return require('./kubernetes-fleet-update-strategy'); } });
 Object.defineProperty(exports, 'kubernetesFluxConfiguration', { get: function () { return require('./kubernetes-flux-configuration'); } });
 Object.defineProperty(exports, 'kustoAttachedDatabaseConfiguration', { get: function () { return require('./kusto-attached-database-configuration'); } });
@@ -871,6 +877,7 @@ Object.defineProperty(exports, 'springCloudApiPortal', { get: function () { retu
 Object.defineProperty(exports, 'springCloudApiPortalCustomDomain', { get: function () { return require('./spring-cloud-api-portal-custom-domain'); } });
 Object.defineProperty(exports, 'springCloudApp', { get: function () { return require('./spring-cloud-app'); } });
 Object.defineProperty(exports, 'springCloudAppCosmosdbAssociation', { get: function () { return require('./spring-cloud-app-cosmosdb-association'); } });
+Object.defineProperty(exports, 'springCloudAppDynamicsApplicationPerformanceMonitoring', { get: function () { return require('./spring-cloud-app-dynamics-application-performance-monitoring'); } });
 Object.defineProperty(exports, 'springCloudAppMysqlAssociation', { get: function () { return require('./spring-cloud-app-mysql-association'); } });
 Object.defineProperty(exports, 'springCloudAppRedisAssociation', { get: function () { return require('./spring-cloud-app-redis-association'); } });
 Object.defineProperty(exports, 'springCloudApplicationInsightsApplicationPerformanceMonitoring', { get: function () { return require('./spring-cloud-application-insights-application-performance-monitoring'); } });
@@ -1143,6 +1150,7 @@ Object.defineProperty(exports, 'dataAzurermDataShareDatasetKustoDatabase', { get
 Object.defineProperty(exports, 'dataAzurermDatabaseMigrationProject', { get: function () { return require('./data-azurerm-database-migration-project'); } });
 Object.defineProperty(exports, 'dataAzurermDatabaseMigrationService', { get: function () { return require('./data-azurerm-database-migration-service'); } });
 Object.defineProperty(exports, 'dataAzurermDataboxEdgeDevice', { get: function () { return require('./data-azurerm-databox-edge-device'); } });
+Object.defineProperty(exports, 'dataAzurermDatabricksAccessConnector', { get: function () { return require('./data-azurerm-databricks-access-connector'); } });
 Object.defineProperty(exports, 'dataAzurermDatabricksWorkspace', { get: function () { return require('./data-azurerm-databricks-workspace'); } });
 Object.defineProperty(exports, 'dataAzurermDatabricksWorkspacePrivateEndpointConnection', { get: function () { return require('./data-azurerm-databricks-workspace-private-endpoint-connection'); } });
 Object.defineProperty(exports, 'dataAzurermDedicatedHost', { get: function () { return require('./data-azurerm-dedicated-host'); } });
