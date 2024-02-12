@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_alert_rule_threat_intelligence
 // generated from terraform resource schema
 

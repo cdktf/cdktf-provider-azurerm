@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscription(scope Construct, id *string, config EventgridSystemTopicEventSubscriptionConfig) EventgridSystemTopicEventSubscription
 ```
@@ -668,7 +668,7 @@ func ResetWebhookEndpoint()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscription.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscription_IsConstruct(x interface{}) *bool
 ```
@@ -700,7 +700,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscription.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscription_IsTerraformElement(x interface{}) *bool
 ```
@@ -714,7 +714,7 @@ eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscription_IsTe
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscription.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscription_IsTerraformResource(x interface{}) *bool
 ```
@@ -728,7 +728,7 @@ eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscription_IsTe
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscription.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscription_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1485,7 +1485,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilter {
 	BoolEquals: interface{},
@@ -1807,7 +1807,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterBoolEquals.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterBoolEquals {
 	Key: *string,
@@ -1853,7 +1853,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNull.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNull {
 	Key: *string,
@@ -1885,7 +1885,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefined.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefined {
 	Key: *string,
@@ -1917,7 +1917,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThan {
 	Key: *string,
@@ -1963,7 +1963,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals {
 	Key: *string,
@@ -2009,7 +2009,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberIn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberIn {
 	Key: *string,
@@ -2055,7 +2055,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRange {
 	Key: *string,
@@ -2101,7 +2101,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThan {
 	Key: *string,
@@ -2147,7 +2147,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEquals.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEquals {
 	Key: *string,
@@ -2193,7 +2193,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotIn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotIn {
 	Key: *string,
@@ -2239,7 +2239,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRange {
 	Key: *string,
@@ -2285,7 +2285,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringBeginsWith.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringBeginsWith {
 	Key: *string,
@@ -2331,7 +2331,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringContains.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringContains {
 	Key: *string,
@@ -2377,7 +2377,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringEndsWith.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringEndsWith {
 	Key: *string,
@@ -2423,7 +2423,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringIn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringIn {
 	Key: *string,
@@ -2469,7 +2469,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWith.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWith {
 	Key: *string,
@@ -2515,7 +2515,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContains.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContains {
 	Key: *string,
@@ -2561,7 +2561,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWith.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWith {
 	Key: *string,
@@ -2607,7 +2607,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotIn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotIn {
 	Key: *string,
@@ -2653,7 +2653,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAzureFunctionEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionAzureFunctionEndpoint {
 	FunctionId: *string,
@@ -2713,7 +2713,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionConfig {
 	Connection: interface{},
@@ -2726,11 +2726,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemto
 	Name: *string,
 	ResourceGroupName: *string,
 	SystemTopic: *string,
-	AdvancedFilter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilter,
+	AdvancedFilter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilter,
 	AdvancedFilteringOnArraysEnabled: interface{},
-	AzureFunctionEndpoint: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAzureFunctionEndpoint,
-	DeadLetterIdentity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionDeadLetterIdentity,
-	DeliveryIdentity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionDeliveryIdentity,
+	AzureFunctionEndpoint: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAzureFunctionEndpoint,
+	DeadLetterIdentity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionDeadLetterIdentity,
+	DeliveryIdentity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionDeliveryIdentity,
 	DeliveryProperty: interface{},
 	EventDeliverySchema: *string,
 	EventhubEndpointId: *string,
@@ -2739,14 +2739,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemto
 	Id: *string,
 	IncludedEventTypes: *[]*string,
 	Labels: *[]*string,
-	RetryPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionRetryPolicy,
+	RetryPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionRetryPolicy,
 	ServiceBusQueueEndpointId: *string,
 	ServiceBusTopicEndpointId: *string,
-	StorageBlobDeadLetterDestination: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestination,
-	StorageQueueEndpoint: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionStorageQueueEndpoint,
-	SubjectFilter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionSubjectFilter,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionTimeouts,
-	WebhookEndpoint: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionWebhookEndpoint,
+	StorageBlobDeadLetterDestination: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestination,
+	StorageQueueEndpoint: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionStorageQueueEndpoint,
+	SubjectFilter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionSubjectFilter,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionTimeouts,
+	WebhookEndpoint: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionWebhookEndpoint,
 }
 ```
 
@@ -3176,7 +3176,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionDeadLetterIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionDeadLetterIdentity {
 	Type: *string,
@@ -3222,7 +3222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionDeliveryIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionDeliveryIdentity {
 	Type: *string,
@@ -3268,7 +3268,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionDeliveryProperty.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionDeliveryProperty {
 	HeaderName: *string,
@@ -3356,7 +3356,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionRetryPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionRetryPolicy {
 	EventTimeToLive: *f64,
@@ -3402,7 +3402,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestination.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestination {
 	StorageAccountId: *string,
@@ -3448,7 +3448,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionStorageQueueEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionStorageQueueEndpoint {
 	QueueName: *string,
@@ -3508,7 +3508,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionSubjectFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionSubjectFilter {
 	CaseSensitive: interface{},
@@ -3568,7 +3568,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionTimeouts {
 	Create: *string,
@@ -3642,7 +3642,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionWebhookEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 &eventgridsystemtopiceventsubscription.EventgridSystemTopicEventSubscriptionWebhookEndpoint {
 	Url: *string,
@@ -3732,7 +3732,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterBoolEqualsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterBoolEqualsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterBoolEqualsList
 ```
@@ -3892,7 +3892,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterBoolEqualsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterBoolEqualsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterBoolEqualsOutputReference
 ```
@@ -4203,7 +4203,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNullList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNullList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNullList
 ```
@@ -4363,7 +4363,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNullOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNullOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNullOutputReference
 ```
@@ -4652,7 +4652,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefinedList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefinedList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefinedList
 ```
@@ -4812,7 +4812,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefinedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefinedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefinedOutputReference
 ```
@@ -5101,7 +5101,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanList
 ```
@@ -5261,7 +5261,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsList
 ```
@@ -5421,7 +5421,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsOutputReference
 ```
@@ -5732,7 +5732,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOutputReference
 ```
@@ -6043,7 +6043,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberInList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberInList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberInList
 ```
@@ -6203,7 +6203,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberInOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberInOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberInOutputReference
 ```
@@ -6514,7 +6514,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRangeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRangeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRangeList
 ```
@@ -6674,7 +6674,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRangeOutputReference
 ```
@@ -6985,7 +6985,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanList
 ```
@@ -7145,7 +7145,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqualsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqualsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqualsList
 ```
@@ -7305,7 +7305,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqualsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqualsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqualsOutputReference
 ```
@@ -7616,7 +7616,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOutputReference
 ```
@@ -7927,7 +7927,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInList
 ```
@@ -8087,7 +8087,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInOutputReference
 ```
@@ -8398,7 +8398,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRangeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRangeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRangeList
 ```
@@ -8558,7 +8558,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRangeOutputReference
 ```
@@ -8869,7 +8869,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridSystemTopicEventSubscriptionAdvancedFilterOutputReference
 ```
@@ -9916,7 +9916,7 @@ func InternalValue() EventgridSystemTopicEventSubscriptionAdvancedFilter
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringBeginsWithList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringBeginsWithList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringBeginsWithList
 ```
@@ -10076,7 +10076,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringBeginsWithOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringBeginsWithOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringBeginsWithOutputReference
 ```
@@ -10387,7 +10387,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringContainsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringContainsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringContainsList
 ```
@@ -10547,7 +10547,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringContainsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringContainsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringContainsOutputReference
 ```
@@ -10858,7 +10858,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringEndsWithList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringEndsWithList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringEndsWithList
 ```
@@ -11018,7 +11018,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringEndsWithOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringEndsWithOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringEndsWithOutputReference
 ```
@@ -11329,7 +11329,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringInList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringInList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringInList
 ```
@@ -11489,7 +11489,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringInOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringInOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringInOutputReference
 ```
@@ -11800,7 +11800,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWithList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWithList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWithList
 ```
@@ -11960,7 +11960,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWithOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWithOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWithOutputReference
 ```
@@ -12271,7 +12271,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContainsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContainsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContainsList
 ```
@@ -12431,7 +12431,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContainsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContainsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContainsOutputReference
 ```
@@ -12742,7 +12742,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWithList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWithList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWithList
 ```
@@ -12902,7 +12902,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWithOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWithOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWithOutputReference
 ```
@@ -13213,7 +13213,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotInList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringNotInList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotInList
 ```
@@ -13373,7 +13373,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotInOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAdvancedFilterStringNotInOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotInOutputReference
 ```
@@ -13684,7 +13684,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionAzureFunctionEndpointOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionAzureFunctionEndpointOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridSystemTopicEventSubscriptionAzureFunctionEndpointOutputReference
 ```
@@ -14013,7 +14013,7 @@ func InternalValue() EventgridSystemTopicEventSubscriptionAzureFunctionEndpoint
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionDeadLetterIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionDeadLetterIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridSystemTopicEventSubscriptionDeadLetterIdentityOutputReference
 ```
@@ -14313,7 +14313,7 @@ func InternalValue() EventgridSystemTopicEventSubscriptionDeadLetterIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionDeliveryIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionDeliveryIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridSystemTopicEventSubscriptionDeliveryIdentityOutputReference
 ```
@@ -14613,7 +14613,7 @@ func InternalValue() EventgridSystemTopicEventSubscriptionDeliveryIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionDeliveryPropertyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionDeliveryPropertyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridSystemTopicEventSubscriptionDeliveryPropertyList
 ```
@@ -14773,7 +14773,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionDeliveryPropertyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionDeliveryPropertyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridSystemTopicEventSubscriptionDeliveryPropertyOutputReference
 ```
@@ -15171,7 +15171,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionRetryPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionRetryPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridSystemTopicEventSubscriptionRetryPolicyOutputReference
 ```
@@ -15464,7 +15464,7 @@ func InternalValue() EventgridSystemTopicEventSubscriptionRetryPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestinationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestinationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestinationOutputReference
 ```
@@ -15757,7 +15757,7 @@ func InternalValue() EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterD
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionStorageQueueEndpointOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionStorageQueueEndpointOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridSystemTopicEventSubscriptionStorageQueueEndpointOutputReference
 ```
@@ -16079,7 +16079,7 @@ func InternalValue() EventgridSystemTopicEventSubscriptionStorageQueueEndpoint
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionSubjectFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionSubjectFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridSystemTopicEventSubscriptionSubjectFilterOutputReference
 ```
@@ -16415,7 +16415,7 @@ func InternalValue() EventgridSystemTopicEventSubscriptionSubjectFilter
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridSystemTopicEventSubscriptionTimeoutsOutputReference
 ```
@@ -16780,7 +16780,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription.EventgridSystemTopicEventSubscriptionWebhookEndpointOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/eventgridsystemtopiceventsubscription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventgridsystemtopiceventsubscription"
 
 eventgridsystemtopiceventsubscription.NewEventgridSystemTopicEventSubscriptionWebhookEndpointOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridSystemTopicEventSubscriptionWebhookEndpointOutputReference
 ```
