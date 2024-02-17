@@ -4,12 +4,12 @@
 
 ### PaloAltoLocalRulestackPrefixList <a name="PaloAltoLocalRulestackPrefixList" id="@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixList"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list azurerm_palo_alto_local_rulestack_prefix_list}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list azurerm_palo_alto_local_rulestack_prefix_list}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/paloaltolocalrulestackprefixlist"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackprefixlist"
 
 paloaltolocalrulestackprefixlist.NewPaloAltoLocalRulestackPrefixList(scope Construct, id *string, config PaloAltoLocalRulestackPrefixListConfig) PaloAltoLocalRulestackPrefixList
 ```
@@ -419,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixList.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/paloaltolocalrulestackprefixlist"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackprefixlist"
 
 paloaltolocalrulestackprefixlist.PaloAltoLocalRulestackPrefixList_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixList.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/paloaltolocalrulestackprefixlist"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackprefixlist"
 
 paloaltolocalrulestackprefixlist.PaloAltoLocalRulestackPrefixList_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ paloaltolocalrulestackprefixlist.PaloAltoLocalRulestackPrefixList_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixList.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/paloaltolocalrulestackprefixlist"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackprefixlist"
 
 paloaltolocalrulestackprefixlist.PaloAltoLocalRulestackPrefixList_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ paloaltolocalrulestackprefixlist.PaloAltoLocalRulestackPrefixList_IsTerraformRes
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixList.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/paloaltolocalrulestackprefixlist"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackprefixlist"
 
 paloaltolocalrulestackprefixlist.PaloAltoLocalRulestackPrefixList_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -508,7 +508,7 @@ The construct id used in the generated config for the PaloAltoLocalRulestackPref
 
 The id of the existing PaloAltoLocalRulestackPrefixList that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -862,7 +862,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/paloaltolocalrulestackprefixlist"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackprefixlist"
 
 &paloaltolocalrulestackprefixlist.PaloAltoLocalRulestackPrefixListConfig {
 	Connection: interface{},
@@ -878,7 +878,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/paloaltolocalrule
 	AuditComment: *string,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListTimeouts,
 }
 ```
 
@@ -893,12 +893,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/paloaltolocalrule
 | <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#name PaloAltoLocalRulestackPrefixList#name}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.prefixList">PrefixList</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#prefix_list PaloAltoLocalRulestackPrefixList#prefix_list}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.rulestackId">RulestackId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#rulestack_id PaloAltoLocalRulestackPrefixList#rulestack_id}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.auditComment">AuditComment</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#audit_comment PaloAltoLocalRulestackPrefixList#audit_comment}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#description PaloAltoLocalRulestackPrefixList#description}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#id PaloAltoLocalRulestackPrefixList#id}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#name PaloAltoLocalRulestackPrefixList#name}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.prefixList">PrefixList</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#prefix_list PaloAltoLocalRulestackPrefixList#prefix_list}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.rulestackId">RulestackId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#rulestack_id PaloAltoLocalRulestackPrefixList#rulestack_id}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.auditComment">AuditComment</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#audit_comment PaloAltoLocalRulestackPrefixList#audit_comment}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#description PaloAltoLocalRulestackPrefixList#description}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#id PaloAltoLocalRulestackPrefixList#id}. |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListTimeouts">PaloAltoLocalRulestackPrefixListTimeouts</a></code> | timeouts block. |
 
 ---
@@ -981,7 +981,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#name PaloAltoLocalRulestackPrefixList#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#name PaloAltoLocalRulestackPrefixList#name}.
 
 ---
 
@@ -993,7 +993,7 @@ PrefixList *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#prefix_list PaloAltoLocalRulestackPrefixList#prefix_list}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#prefix_list PaloAltoLocalRulestackPrefixList#prefix_list}.
 
 ---
 
@@ -1005,7 +1005,7 @@ RulestackId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#rulestack_id PaloAltoLocalRulestackPrefixList#rulestack_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#rulestack_id PaloAltoLocalRulestackPrefixList#rulestack_id}.
 
 ---
 
@@ -1017,7 +1017,7 @@ AuditComment *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#audit_comment PaloAltoLocalRulestackPrefixList#audit_comment}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#audit_comment PaloAltoLocalRulestackPrefixList#audit_comment}.
 
 ---
 
@@ -1029,7 +1029,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#description PaloAltoLocalRulestackPrefixList#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#description PaloAltoLocalRulestackPrefixList#description}.
 
 ---
 
@@ -1041,7 +1041,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#id PaloAltoLocalRulestackPrefixList#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#id PaloAltoLocalRulestackPrefixList#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1058,7 +1058,7 @@ Timeouts PaloAltoLocalRulestackPrefixListTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#timeouts PaloAltoLocalRulestackPrefixList#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#timeouts PaloAltoLocalRulestackPrefixList#timeouts}
 
 ---
 
@@ -1067,7 +1067,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/paloaltolocalrulestackprefixlist"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackprefixlist"
 
 &paloaltolocalrulestackprefixlist.PaloAltoLocalRulestackPrefixListTimeouts {
 	Create: *string,
@@ -1081,10 +1081,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/paloaltolocalrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#create PaloAltoLocalRulestackPrefixList#create}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#delete PaloAltoLocalRulestackPrefixList#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#read PaloAltoLocalRulestackPrefixList#read}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#update PaloAltoLocalRulestackPrefixList#update}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#create PaloAltoLocalRulestackPrefixList#create}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#delete PaloAltoLocalRulestackPrefixList#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#read PaloAltoLocalRulestackPrefixList#read}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#update PaloAltoLocalRulestackPrefixList#update}. |
 
 ---
 
@@ -1096,7 +1096,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#create PaloAltoLocalRulestackPrefixList#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#create PaloAltoLocalRulestackPrefixList#create}.
 
 ---
 
@@ -1108,7 +1108,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#delete PaloAltoLocalRulestackPrefixList#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#delete PaloAltoLocalRulestackPrefixList#delete}.
 
 ---
 
@@ -1120,7 +1120,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#read PaloAltoLocalRulestackPrefixList#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#read PaloAltoLocalRulestackPrefixList#read}.
 
 ---
 
@@ -1132,7 +1132,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/palo_alto_local_rulestack_prefix_list#update PaloAltoLocalRulestackPrefixList#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/palo_alto_local_rulestack_prefix_list#update PaloAltoLocalRulestackPrefixList#update}.
 
 ---
 
@@ -1143,7 +1143,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoLocalRulestackPrefixList.PaloAltoLocalRulestackPrefixListTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/paloaltolocalrulestackprefixlist"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackprefixlist"
 
 paloaltolocalrulestackprefixlist.NewPaloAltoLocalRulestackPrefixListTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PaloAltoLocalRulestackPrefixListTimeoutsOutputReference
 ```

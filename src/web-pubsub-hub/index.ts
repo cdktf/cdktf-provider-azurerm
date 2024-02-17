@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface WebPubsubHubConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#anonymous_connections_enabled WebPubsubHub#anonymous_connections_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#anonymous_connections_enabled WebPubsubHub#anonymous_connections_enabled}
   */
   readonly anonymousConnectionsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#id WebPubsubHub#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#id WebPubsubHub#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#name WebPubsubHub#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#name WebPubsubHub#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#web_pubsub_id WebPubsubHub#web_pubsub_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#web_pubsub_id WebPubsubHub#web_pubsub_id}
   */
   readonly webPubsubId: string;
   /**
   * event_handler block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#event_handler WebPubsubHub#event_handler}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#event_handler WebPubsubHub#event_handler}
   */
   readonly eventHandler?: WebPubsubHubEventHandler[] | cdktf.IResolvable;
   /**
   * event_listener block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#event_listener WebPubsubHub#event_listener}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#event_listener WebPubsubHub#event_listener}
   */
   readonly eventListener?: WebPubsubHubEventListener[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#timeouts WebPubsubHub#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#timeouts WebPubsubHub#timeouts}
   */
   readonly timeouts?: WebPubsubHubTimeouts;
 }
 export interface WebPubsubHubEventHandlerAuth {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#managed_identity_id WebPubsubHub#managed_identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#managed_identity_id WebPubsubHub#managed_identity_id}
   */
   readonly managedIdentityId: string;
 }
@@ -133,21 +128,21 @@ export class WebPubsubHubEventHandlerAuthOutputReference extends cdktf.ComplexOb
 }
 export interface WebPubsubHubEventHandler {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#system_events WebPubsubHub#system_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#system_events WebPubsubHub#system_events}
   */
   readonly systemEvents?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#url_template WebPubsubHub#url_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#url_template WebPubsubHub#url_template}
   */
   readonly urlTemplate: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#user_event_pattern WebPubsubHub#user_event_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#user_event_pattern WebPubsubHub#user_event_pattern}
   */
   readonly userEventPattern?: string;
   /**
   * auth block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#auth WebPubsubHub#auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#auth WebPubsubHub#auth}
   */
   readonly auth?: WebPubsubHubEventHandlerAuth;
 }
@@ -347,19 +342,19 @@ export class WebPubsubHubEventHandlerList extends cdktf.ComplexList {
 }
 export interface WebPubsubHubEventListener {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#eventhub_name WebPubsubHub#eventhub_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#eventhub_name WebPubsubHub#eventhub_name}
   */
   readonly eventhubName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#eventhub_namespace_name WebPubsubHub#eventhub_namespace_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#eventhub_namespace_name WebPubsubHub#eventhub_namespace_name}
   */
   readonly eventhubNamespaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#system_event_name_filter WebPubsubHub#system_event_name_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#system_event_name_filter WebPubsubHub#system_event_name_filter}
   */
   readonly systemEventNameFilter?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#user_event_name_filter WebPubsubHub#user_event_name_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#user_event_name_filter WebPubsubHub#user_event_name_filter}
   */
   readonly userEventNameFilter?: string[];
 }
@@ -556,19 +551,19 @@ export class WebPubsubHubEventListenerList extends cdktf.ComplexList {
 }
 export interface WebPubsubHubTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#create WebPubsubHub#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#create WebPubsubHub#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#delete WebPubsubHub#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#delete WebPubsubHub#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#read WebPubsubHub#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#read WebPubsubHub#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#update WebPubsubHub#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#update WebPubsubHub#update}
   */
   readonly update?: string;
 }
@@ -749,7 +744,7 @@ export class WebPubsubHubTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub azurerm_web_pubsub_hub}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub azurerm_web_pubsub_hub}
 */
 export class WebPubsubHub extends cdktf.TerraformResource {
 
@@ -765,7 +760,7 @@ export class WebPubsubHub extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a WebPubsubHub resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the WebPubsubHub to import
-  * @param importFromId The id of the existing WebPubsubHub that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing WebPubsubHub that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the WebPubsubHub to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -777,7 +772,7 @@ export class WebPubsubHub extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/web_pubsub_hub azurerm_web_pubsub_hub} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_pubsub_hub azurerm_web_pubsub_hub} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -788,7 +783,7 @@ export class WebPubsubHub extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_web_pubsub_hub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.91.0',
+        providerVersion: '3.92.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

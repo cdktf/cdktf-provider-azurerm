@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,58 +8,58 @@ import * as cdktf from 'cdktf';
 
 export interface SqlActiveDirectoryAdministratorConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator#azuread_authentication_only SqlActiveDirectoryAdministrator#azuread_authentication_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator#azuread_authentication_only SqlActiveDirectoryAdministrator#azuread_authentication_only}
   */
   readonly azureadAuthenticationOnly?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator#id SqlActiveDirectoryAdministrator#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator#id SqlActiveDirectoryAdministrator#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator#login SqlActiveDirectoryAdministrator#login}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator#login SqlActiveDirectoryAdministrator#login}
   */
   readonly login: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator#object_id SqlActiveDirectoryAdministrator#object_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator#object_id SqlActiveDirectoryAdministrator#object_id}
   */
   readonly objectId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator#resource_group_name SqlActiveDirectoryAdministrator#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator#resource_group_name SqlActiveDirectoryAdministrator#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator#server_name SqlActiveDirectoryAdministrator#server_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator#server_name SqlActiveDirectoryAdministrator#server_name}
   */
   readonly serverName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator#tenant_id SqlActiveDirectoryAdministrator#tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator#tenant_id SqlActiveDirectoryAdministrator#tenant_id}
   */
   readonly tenantId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator#timeouts SqlActiveDirectoryAdministrator#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator#timeouts SqlActiveDirectoryAdministrator#timeouts}
   */
   readonly timeouts?: SqlActiveDirectoryAdministratorTimeouts;
 }
 export interface SqlActiveDirectoryAdministratorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator#create SqlActiveDirectoryAdministrator#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator#create SqlActiveDirectoryAdministrator#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator#delete SqlActiveDirectoryAdministrator#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator#delete SqlActiveDirectoryAdministrator#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator#read SqlActiveDirectoryAdministrator#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator#read SqlActiveDirectoryAdministrator#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator#update SqlActiveDirectoryAdministrator#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator#update SqlActiveDirectoryAdministrator#update}
   */
   readonly update?: string;
 }
@@ -245,7 +240,7 @@ export class SqlActiveDirectoryAdministratorTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator azurerm_sql_active_directory_administrator}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator azurerm_sql_active_directory_administrator}
 */
 export class SqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
 
@@ -261,7 +256,7 @@ export class SqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SqlActiveDirectoryAdministrator resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SqlActiveDirectoryAdministrator to import
-  * @param importFromId The id of the existing SqlActiveDirectoryAdministrator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SqlActiveDirectoryAdministrator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SqlActiveDirectoryAdministrator to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -273,7 +268,7 @@ export class SqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sql_active_directory_administrator azurerm_sql_active_directory_administrator} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sql_active_directory_administrator azurerm_sql_active_directory_administrator} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -284,7 +279,7 @@ export class SqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sql_active_directory_administrator',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.91.0',
+        providerVersion: '3.92.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

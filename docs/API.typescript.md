@@ -557,6 +557,7 @@ The following submodules are available:
 - [dataAzurermTrafficManagerGeographicalLocation](./dataAzurermTrafficManagerGeographicalLocation.typescript.md)
 - [dataAzurermTrafficManagerProfile](./dataAzurermTrafficManagerProfile.typescript.md)
 - [dataAzurermUserAssignedIdentity](./dataAzurermUserAssignedIdentity.typescript.md)
+- [dataAzurermVirtualDesktopApplicationGroup](./dataAzurermVirtualDesktopApplicationGroup.typescript.md)
 - [dataAzurermVirtualDesktopHostPool](./dataAzurermVirtualDesktopHostPool.typescript.md)
 - [dataAzurermVirtualDesktopWorkspace](./dataAzurermVirtualDesktopWorkspace.typescript.md)
 - [dataAzurermVirtualHub](./dataAzurermVirtualHub.typescript.md)

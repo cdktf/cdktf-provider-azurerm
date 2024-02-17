@@ -4,12 +4,12 @@
 
 ### ContainerAppEnvironment <a name="ContainerAppEnvironment" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment azurerm_container_app_environment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment azurerm_container_app_environment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
 
 containerappenvironment.NewContainerAppEnvironment(scope Construct, id *string, config ContainerAppEnvironmentConfig) ContainerAppEnvironment
 ```
@@ -77,6 +77,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.putWorkloadProfile">PutWorkloadProfile</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.resetDaprApplicationInsightsConnectionString">ResetDaprApplicationInsightsConnectionString</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.resetId">ResetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.resetInfrastructureResourceGroupName">ResetInfrastructureResourceGroupName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.resetInfrastructureSubnetId">ResetInfrastructureSubnetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.resetInternalLoadBalancerEnabled">ResetInternalLoadBalancerEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.resetLogAnalyticsWorkspaceId">ResetLogAnalyticsWorkspaceId</a></code> | *No description.* |
@@ -411,6 +412,12 @@ func ResetDaprApplicationInsightsConnectionString()
 func ResetId()
 ```
 
+##### `ResetInfrastructureResourceGroupName` <a name="ResetInfrastructureResourceGroupName" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.resetInfrastructureResourceGroupName"></a>
+
+```go
+func ResetInfrastructureResourceGroupName()
+```
+
 ##### `ResetInfrastructureSubnetId` <a name="ResetInfrastructureSubnetId" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.resetInfrastructureSubnetId"></a>
 
 ```go
@@ -467,7 +474,7 @@ func ResetZoneRedundancyEnabled()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
 
 containerappenvironment.ContainerAppEnvironment_IsConstruct(x interface{}) *bool
 ```
@@ -499,7 +506,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
 
 containerappenvironment.ContainerAppEnvironment_IsTerraformElement(x interface{}) *bool
 ```
@@ -513,7 +520,7 @@ containerappenvironment.ContainerAppEnvironment_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
 
 containerappenvironment.ContainerAppEnvironment_IsTerraformResource(x interface{}) *bool
 ```
@@ -527,7 +534,7 @@ containerappenvironment.ContainerAppEnvironment_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
 
 containerappenvironment.ContainerAppEnvironment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -556,7 +563,7 @@ The construct id used in the generated config for the ContainerAppEnvironment to
 
 The id of the existing ContainerAppEnvironment that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -595,6 +602,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.workloadProfile">WorkloadProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfileList">ContainerAppEnvironmentWorkloadProfileList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.daprApplicationInsightsConnectionStringInput">DaprApplicationInsightsConnectionStringInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.infrastructureResourceGroupNameInput">InfrastructureResourceGroupNameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.infrastructureSubnetIdInput">InfrastructureSubnetIdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.internalLoadBalancerEnabledInput">InternalLoadBalancerEnabledInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.locationInput">LocationInput</a></code> | <code>*string</code> | *No description.* |
@@ -607,6 +615,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.zoneRedundancyEnabledInput">ZoneRedundancyEnabledInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.daprApplicationInsightsConnectionString">DaprApplicationInsightsConnectionString</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.id">Id</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.infrastructureResourceGroupName">InfrastructureResourceGroupName</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.infrastructureSubnetId">InfrastructureSubnetId</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.internalLoadBalancerEnabled">InternalLoadBalancerEnabled</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.location">Location</a></code> | <code>*string</code> | *No description.* |
@@ -850,6 +859,16 @@ func IdInput() *string
 
 ---
 
+##### `InfrastructureResourceGroupNameInput`<sup>Optional</sup> <a name="InfrastructureResourceGroupNameInput" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.infrastructureResourceGroupNameInput"></a>
+
+```go
+func InfrastructureResourceGroupNameInput() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `InfrastructureSubnetIdInput`<sup>Optional</sup> <a name="InfrastructureSubnetIdInput" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.infrastructureSubnetIdInput"></a>
 
 ```go
@@ -970,6 +989,16 @@ func Id() *string
 
 ---
 
+##### `InfrastructureResourceGroupName`<sup>Required</sup> <a name="InfrastructureResourceGroupName" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.infrastructureResourceGroupName"></a>
+
+```go
+func InfrastructureResourceGroupName() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `InfrastructureSubnetId`<sup>Required</sup> <a name="InfrastructureSubnetId" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.property.infrastructureSubnetId"></a>
 
 ```go
@@ -1075,7 +1104,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
 
 &containerappenvironment.ContainerAppEnvironmentConfig {
 	Connection: interface{},
@@ -1090,11 +1119,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvir
 	ResourceGroupName: *string,
 	DaprApplicationInsightsConnectionString: *string,
 	Id: *string,
+	InfrastructureResourceGroupName: *string,
 	InfrastructureSubnetId: *string,
 	InternalLoadBalancerEnabled: interface{},
 	LogAnalyticsWorkspaceId: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerAppEnvironment.ContainerAppEnvironmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeouts,
 	WorkloadProfile: interface{},
 	ZoneRedundancyEnabled: interface{},
 }
@@ -1111,18 +1141,19 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvir
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#location ContainerAppEnvironment#location}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#location ContainerAppEnvironment#location}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.name">Name</a></code> | <code>*string</code> | The name of the Container Apps Managed Environment. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#resource_group_name ContainerAppEnvironment#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#resource_group_name ContainerAppEnvironment#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.daprApplicationInsightsConnectionString">DaprApplicationInsightsConnectionString</a></code> | <code>*string</code> | Application Insights connection string used by Dapr to export Service to Service communication telemetry. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#id ContainerAppEnvironment#id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#id ContainerAppEnvironment#id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.infrastructureResourceGroupName">InfrastructureResourceGroupName</a></code> | <code>*string</code> | Name of the platform-managed resource group created for the Managed Environment to host infrastructure resources. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.infrastructureSubnetId">InfrastructureSubnetId</a></code> | <code>*string</code> | The existing Subnet to use for the Container Apps Control Plane. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.internalLoadBalancerEnabled">InternalLoadBalancerEnabled</a></code> | <code>interface{}</code> | Should the Container Environment operate in Internal Load Balancing Mode? |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>*string</code> | The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#tags ContainerAppEnvironment#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#tags ContainerAppEnvironment#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeouts">ContainerAppEnvironmentTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.workloadProfile">WorkloadProfile</a></code> | <code>interface{}</code> | workload_profile block. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.zoneRedundancyEnabled">ZoneRedundancyEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#zone_redundancy_enabled ContainerAppEnvironment#zone_redundancy_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.zoneRedundancyEnabled">ZoneRedundancyEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#zone_redundancy_enabled ContainerAppEnvironment#zone_redundancy_enabled}. |
 
 ---
 
@@ -1204,7 +1235,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#location ContainerAppEnvironment#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#location ContainerAppEnvironment#location}.
 
 ---
 
@@ -1218,7 +1249,7 @@ Name *string
 
 The name of the Container Apps Managed Environment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#name ContainerAppEnvironment#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#name ContainerAppEnvironment#name}
 
 ---
 
@@ -1230,7 +1261,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#resource_group_name ContainerAppEnvironment#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#resource_group_name ContainerAppEnvironment#resource_group_name}.
 
 ---
 
@@ -1244,7 +1275,7 @@ DaprApplicationInsightsConnectionString *string
 
 Application Insights connection string used by Dapr to export Service to Service communication telemetry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#dapr_application_insights_connection_string ContainerAppEnvironment#dapr_application_insights_connection_string}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#dapr_application_insights_connection_string ContainerAppEnvironment#dapr_application_insights_connection_string}
 
 ---
 
@@ -1256,10 +1287,26 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#id ContainerAppEnvironment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#id ContainerAppEnvironment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `InfrastructureResourceGroupName`<sup>Optional</sup> <a name="InfrastructureResourceGroupName" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.property.infrastructureResourceGroupName"></a>
+
+```go
+InfrastructureResourceGroupName *string
+```
+
+- *Type:* *string
+
+Name of the platform-managed resource group created for the Managed Environment to host infrastructure resources.
+
+**Note:** Only valid if a `workload_profile` is specified. If `infrastructure_subnet_id` is specified, this resource group will be created in the same subscription as `infrastructure_subnet_id`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#infrastructure_resource_group_name ContainerAppEnvironment#infrastructure_resource_group_name}
 
 ---
 
@@ -1275,7 +1322,7 @@ The existing Subnet to use for the Container Apps Control Plane.
 
 **NOTE:** The Subnet must have a `/21` or larger address space.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#infrastructure_subnet_id ContainerAppEnvironment#infrastructure_subnet_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#infrastructure_subnet_id ContainerAppEnvironment#infrastructure_subnet_id}
 
 ---
 
@@ -1291,7 +1338,7 @@ Should the Container Environment operate in Internal Load Balancing Mode?
 
 Defaults to `false`. **Note:** can only be set to `true` if `infrastructure_subnet_id` is specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#internal_load_balancer_enabled ContainerAppEnvironment#internal_load_balancer_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#internal_load_balancer_enabled ContainerAppEnvironment#internal_load_balancer_enabled}
 
 ---
 
@@ -1305,7 +1352,7 @@ LogAnalyticsWorkspaceId *string
 
 The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#log_analytics_workspace_id ContainerAppEnvironment#log_analytics_workspace_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#log_analytics_workspace_id ContainerAppEnvironment#log_analytics_workspace_id}
 
 ---
 
@@ -1317,7 +1364,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#tags ContainerAppEnvironment#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#tags ContainerAppEnvironment#tags}.
 
 ---
 
@@ -1331,7 +1378,7 @@ Timeouts ContainerAppEnvironmentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#timeouts ContainerAppEnvironment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#timeouts ContainerAppEnvironment#timeouts}
 
 ---
 
@@ -1345,7 +1392,7 @@ WorkloadProfile interface{}
 
 workload_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#workload_profile ContainerAppEnvironment#workload_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#workload_profile ContainerAppEnvironment#workload_profile}
 
 ---
 
@@ -1357,7 +1404,7 @@ ZoneRedundancyEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#zone_redundancy_enabled ContainerAppEnvironment#zone_redundancy_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#zone_redundancy_enabled ContainerAppEnvironment#zone_redundancy_enabled}.
 
 ---
 
@@ -1366,7 +1413,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
 
 &containerappenvironment.ContainerAppEnvironmentTimeouts {
 	Create: *string,
@@ -1380,10 +1427,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvir
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#create ContainerAppEnvironment#create}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#delete ContainerAppEnvironment#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#read ContainerAppEnvironment#read}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#update ContainerAppEnvironment#update}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#create ContainerAppEnvironment#create}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#delete ContainerAppEnvironment#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#read ContainerAppEnvironment#read}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#update ContainerAppEnvironment#update}. |
 
 ---
 
@@ -1395,7 +1442,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#create ContainerAppEnvironment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#create ContainerAppEnvironment#create}.
 
 ---
 
@@ -1407,7 +1454,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#delete ContainerAppEnvironment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#delete ContainerAppEnvironment#delete}.
 
 ---
 
@@ -1419,7 +1466,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#read ContainerAppEnvironment#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#read ContainerAppEnvironment#read}.
 
 ---
 
@@ -1431,7 +1478,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#update ContainerAppEnvironment#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#update ContainerAppEnvironment#update}.
 
 ---
 
@@ -1440,7 +1487,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
 
 &containerappenvironment.ContainerAppEnvironmentWorkloadProfile {
 	MaximumCount: *f64,
@@ -1454,10 +1501,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvir
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfile.property.maximumCount">MaximumCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#maximum_count ContainerAppEnvironment#maximum_count}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfile.property.minimumCount">MinimumCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#minimum_count ContainerAppEnvironment#minimum_count}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfile.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#name ContainerAppEnvironment#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfile.property.workloadProfileType">WorkloadProfileType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#workload_profile_type ContainerAppEnvironment#workload_profile_type}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfile.property.maximumCount">MaximumCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#maximum_count ContainerAppEnvironment#maximum_count}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfile.property.minimumCount">MinimumCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#minimum_count ContainerAppEnvironment#minimum_count}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfile.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#name ContainerAppEnvironment#name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfile.property.workloadProfileType">WorkloadProfileType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#workload_profile_type ContainerAppEnvironment#workload_profile_type}. |
 
 ---
 
@@ -1469,7 +1516,7 @@ MaximumCount *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#maximum_count ContainerAppEnvironment#maximum_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#maximum_count ContainerAppEnvironment#maximum_count}.
 
 ---
 
@@ -1481,7 +1528,7 @@ MinimumCount *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#minimum_count ContainerAppEnvironment#minimum_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#minimum_count ContainerAppEnvironment#minimum_count}.
 
 ---
 
@@ -1493,7 +1540,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#name ContainerAppEnvironment#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#name ContainerAppEnvironment#name}.
 
 ---
 
@@ -1505,7 +1552,7 @@ WorkloadProfileType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/container_app_environment#workload_profile_type ContainerAppEnvironment#workload_profile_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/container_app_environment#workload_profile_type ContainerAppEnvironment#workload_profile_type}.
 
 ---
 
@@ -1516,7 +1563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
 
 containerappenvironment.NewContainerAppEnvironmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppEnvironmentTimeoutsOutputReference
 ```
@@ -1881,7 +1928,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
 
 containerappenvironment.NewContainerAppEnvironmentWorkloadProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppEnvironmentWorkloadProfileList
 ```
@@ -2041,7 +2088,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
 
 containerappenvironment.NewContainerAppEnvironmentWorkloadProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppEnvironmentWorkloadProfileOutputReference
 ```

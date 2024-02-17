@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/disk_pool_iscsi_target_lun
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/disk_pool_iscsi_target_lun
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +8,42 @@ import * as cdktf from 'cdktf';
 
 export interface DiskPoolIscsiTargetLunConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/disk_pool_iscsi_target_lun#disk_pool_managed_disk_attachment_id DiskPoolIscsiTargetLun#disk_pool_managed_disk_attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/disk_pool_iscsi_target_lun#disk_pool_managed_disk_attachment_id DiskPoolIscsiTargetLun#disk_pool_managed_disk_attachment_id}
   */
   readonly diskPoolManagedDiskAttachmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/disk_pool_iscsi_target_lun#id DiskPoolIscsiTargetLun#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/disk_pool_iscsi_target_lun#id DiskPoolIscsiTargetLun#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/disk_pool_iscsi_target_lun#iscsi_target_id DiskPoolIscsiTargetLun#iscsi_target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/disk_pool_iscsi_target_lun#iscsi_target_id DiskPoolIscsiTargetLun#iscsi_target_id}
   */
   readonly iscsiTargetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/disk_pool_iscsi_target_lun#name DiskPoolIscsiTargetLun#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/disk_pool_iscsi_target_lun#name DiskPoolIscsiTargetLun#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/disk_pool_iscsi_target_lun#timeouts DiskPoolIscsiTargetLun#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/disk_pool_iscsi_target_lun#timeouts DiskPoolIscsiTargetLun#timeouts}
   */
   readonly timeouts?: DiskPoolIscsiTargetLunTimeouts;
 }
 export interface DiskPoolIscsiTargetLunTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/disk_pool_iscsi_target_lun#create DiskPoolIscsiTargetLun#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/disk_pool_iscsi_target_lun#create DiskPoolIscsiTargetLun#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/disk_pool_iscsi_target_lun#delete DiskPoolIscsiTargetLun#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/disk_pool_iscsi_target_lun#delete DiskPoolIscsiTargetLun#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/disk_pool_iscsi_target_lun#read DiskPoolIscsiTargetLun#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/disk_pool_iscsi_target_lun#read DiskPoolIscsiTargetLun#read}
   */
   readonly read?: string;
 }
@@ -200,7 +195,7 @@ export class DiskPoolIscsiTargetLunTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/disk_pool_iscsi_target_lun azurerm_disk_pool_iscsi_target_lun}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/disk_pool_iscsi_target_lun azurerm_disk_pool_iscsi_target_lun}
 */
 export class DiskPoolIscsiTargetLun extends cdktf.TerraformResource {
 
@@ -216,7 +211,7 @@ export class DiskPoolIscsiTargetLun extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DiskPoolIscsiTargetLun resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DiskPoolIscsiTargetLun to import
-  * @param importFromId The id of the existing DiskPoolIscsiTargetLun that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/disk_pool_iscsi_target_lun#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DiskPoolIscsiTargetLun that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/disk_pool_iscsi_target_lun#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DiskPoolIscsiTargetLun to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -228,7 +223,7 @@ export class DiskPoolIscsiTargetLun extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/disk_pool_iscsi_target_lun azurerm_disk_pool_iscsi_target_lun} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/disk_pool_iscsi_target_lun azurerm_disk_pool_iscsi_target_lun} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -239,7 +234,7 @@ export class DiskPoolIscsiTargetLun extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_disk_pool_iscsi_target_lun',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.91.0',
+        providerVersion: '3.92.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

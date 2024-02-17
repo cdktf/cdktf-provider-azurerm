@@ -4,12 +4,12 @@
 
 ### StorageMoverSourceEndpoint <a name="StorageMoverSourceEndpoint" id="@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpoint"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint azurerm_storage_mover_source_endpoint}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint azurerm_storage_mover_source_endpoint}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagemoversourceendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoversourceendpoint"
 
 storagemoversourceendpoint.NewStorageMoverSourceEndpoint(scope Construct, id *string, config StorageMoverSourceEndpointConfig) StorageMoverSourceEndpoint
 ```
@@ -426,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpoint.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagemoversourceendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoversourceendpoint"
 
 storagemoversourceendpoint.StorageMoverSourceEndpoint_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpoint.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagemoversourceendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoversourceendpoint"
 
 storagemoversourceendpoint.StorageMoverSourceEndpoint_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ storagemoversourceendpoint.StorageMoverSourceEndpoint_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpoint.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagemoversourceendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoversourceendpoint"
 
 storagemoversourceendpoint.StorageMoverSourceEndpoint_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ storagemoversourceendpoint.StorageMoverSourceEndpoint_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpoint.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagemoversourceendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoversourceendpoint"
 
 storagemoversourceendpoint.StorageMoverSourceEndpoint_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -515,7 +515,7 @@ The construct id used in the generated config for the StorageMoverSourceEndpoint
 
 The id of the existing StorageMoverSourceEndpoint that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -891,7 +891,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagemoversourceendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoversourceendpoint"
 
 &storagemoversourceendpoint.StorageMoverSourceEndpointConfig {
 	Connection: interface{},
@@ -908,7 +908,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagemoversourc
 	Export: *string,
 	Id: *string,
 	NfsVersion: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.storageMoverSourceEndpoint.StorageMoverSourceEndpointTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointTimeouts,
 }
 ```
 
@@ -923,13 +923,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagemoversourc
 | <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.host">Host</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#host StorageMoverSourceEndpoint#host}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#name StorageMoverSourceEndpoint#name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.storageMoverId">StorageMoverId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#storage_mover_id StorageMoverSourceEndpoint#storage_mover_id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#description StorageMoverSourceEndpoint#description}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.export">Export</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#export StorageMoverSourceEndpoint#export}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#id StorageMoverSourceEndpoint#id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.nfsVersion">NfsVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#nfs_version StorageMoverSourceEndpoint#nfs_version}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.host">Host</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#host StorageMoverSourceEndpoint#host}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#name StorageMoverSourceEndpoint#name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.storageMoverId">StorageMoverId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#storage_mover_id StorageMoverSourceEndpoint#storage_mover_id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#description StorageMoverSourceEndpoint#description}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.export">Export</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#export StorageMoverSourceEndpoint#export}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#id StorageMoverSourceEndpoint#id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.nfsVersion">NfsVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#nfs_version StorageMoverSourceEndpoint#nfs_version}. |
 | <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointTimeouts">StorageMoverSourceEndpointTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1012,7 +1012,7 @@ Host *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#host StorageMoverSourceEndpoint#host}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#host StorageMoverSourceEndpoint#host}.
 
 ---
 
@@ -1024,7 +1024,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#name StorageMoverSourceEndpoint#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#name StorageMoverSourceEndpoint#name}.
 
 ---
 
@@ -1036,7 +1036,7 @@ StorageMoverId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#storage_mover_id StorageMoverSourceEndpoint#storage_mover_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#storage_mover_id StorageMoverSourceEndpoint#storage_mover_id}.
 
 ---
 
@@ -1048,7 +1048,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#description StorageMoverSourceEndpoint#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#description StorageMoverSourceEndpoint#description}.
 
 ---
 
@@ -1060,7 +1060,7 @@ Export *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#export StorageMoverSourceEndpoint#export}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#export StorageMoverSourceEndpoint#export}.
 
 ---
 
@@ -1072,7 +1072,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#id StorageMoverSourceEndpoint#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#id StorageMoverSourceEndpoint#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1087,7 +1087,7 @@ NfsVersion *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#nfs_version StorageMoverSourceEndpoint#nfs_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#nfs_version StorageMoverSourceEndpoint#nfs_version}.
 
 ---
 
@@ -1101,7 +1101,7 @@ Timeouts StorageMoverSourceEndpointTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#timeouts StorageMoverSourceEndpoint#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#timeouts StorageMoverSourceEndpoint#timeouts}
 
 ---
 
@@ -1110,7 +1110,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagemoversourceendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoversourceendpoint"
 
 &storagemoversourceendpoint.StorageMoverSourceEndpointTimeouts {
 	Create: *string,
@@ -1124,10 +1124,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagemoversourc
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#create StorageMoverSourceEndpoint#create}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#delete StorageMoverSourceEndpoint#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#read StorageMoverSourceEndpoint#read}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#update StorageMoverSourceEndpoint#update}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#create StorageMoverSourceEndpoint#create}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#delete StorageMoverSourceEndpoint#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#read StorageMoverSourceEndpoint#read}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#update StorageMoverSourceEndpoint#update}. |
 
 ---
 
@@ -1139,7 +1139,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#create StorageMoverSourceEndpoint#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#create StorageMoverSourceEndpoint#create}.
 
 ---
 
@@ -1151,7 +1151,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#delete StorageMoverSourceEndpoint#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#delete StorageMoverSourceEndpoint#delete}.
 
 ---
 
@@ -1163,7 +1163,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#read StorageMoverSourceEndpoint#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#read StorageMoverSourceEndpoint#read}.
 
 ---
 
@@ -1175,7 +1175,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/storage_mover_source_endpoint#update StorageMoverSourceEndpoint#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/storage_mover_source_endpoint#update StorageMoverSourceEndpoint#update}.
 
 ---
 
@@ -1186,7 +1186,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageMoverSourceEndpoint.StorageMoverSourceEndpointTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagemoversourceendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoversourceendpoint"
 
 storagemoversourceendpoint.NewStorageMoverSourceEndpointTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageMoverSourceEndpointTimeoutsOutputReference
 ```

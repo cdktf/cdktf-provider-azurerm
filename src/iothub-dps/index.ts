@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,80 +8,80 @@ import * as cdktf from 'cdktf';
 
 export interface IothubDpsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#allocation_policy IothubDps#allocation_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#allocation_policy IothubDps#allocation_policy}
   */
   readonly allocationPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#data_residency_enabled IothubDps#data_residency_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#data_residency_enabled IothubDps#data_residency_enabled}
   */
   readonly dataResidencyEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#id IothubDps#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#id IothubDps#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#location IothubDps#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#location IothubDps#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#name IothubDps#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#name IothubDps#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#public_network_access_enabled IothubDps#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#public_network_access_enabled IothubDps#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#resource_group_name IothubDps#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#resource_group_name IothubDps#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#tags IothubDps#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#tags IothubDps#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * ip_filter_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#ip_filter_rule IothubDps#ip_filter_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#ip_filter_rule IothubDps#ip_filter_rule}
   */
   readonly ipFilterRule?: IothubDpsIpFilterRule[] | cdktf.IResolvable;
   /**
   * linked_hub block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#linked_hub IothubDps#linked_hub}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#linked_hub IothubDps#linked_hub}
   */
   readonly linkedHub?: IothubDpsLinkedHub[] | cdktf.IResolvable;
   /**
   * sku block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#sku IothubDps#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#sku IothubDps#sku}
   */
   readonly sku: IothubDpsSku;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#timeouts IothubDps#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#timeouts IothubDps#timeouts}
   */
   readonly timeouts?: IothubDpsTimeouts;
 }
 export interface IothubDpsIpFilterRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#action IothubDps#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#action IothubDps#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#ip_mask IothubDps#ip_mask}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#ip_mask IothubDps#ip_mask}
   */
   readonly ipMask: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#name IothubDps#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#name IothubDps#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#target IothubDps#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#target IothubDps#target}
   */
   readonly target?: string;
 }
@@ -280,19 +275,19 @@ export class IothubDpsIpFilterRuleList extends cdktf.ComplexList {
 }
 export interface IothubDpsLinkedHub {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#allocation_weight IothubDps#allocation_weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#allocation_weight IothubDps#allocation_weight}
   */
   readonly allocationWeight?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#apply_allocation_policy IothubDps#apply_allocation_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#apply_allocation_policy IothubDps#apply_allocation_policy}
   */
   readonly applyAllocationPolicy?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#connection_string IothubDps#connection_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#connection_string IothubDps#connection_string}
   */
   readonly connectionString: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#location IothubDps#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#location IothubDps#location}
   */
   readonly location: string;
 }
@@ -494,11 +489,11 @@ export class IothubDpsLinkedHubList extends cdktf.ComplexList {
 }
 export interface IothubDpsSku {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#capacity IothubDps#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#capacity IothubDps#capacity}
   */
   readonly capacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#name IothubDps#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#name IothubDps#name}
   */
   readonly name: string;
 }
@@ -605,19 +600,19 @@ export class IothubDpsSkuOutputReference extends cdktf.ComplexObject {
 }
 export interface IothubDpsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#create IothubDps#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#create IothubDps#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#delete IothubDps#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#delete IothubDps#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#read IothubDps#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#read IothubDps#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#update IothubDps#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#update IothubDps#update}
   */
   readonly update?: string;
 }
@@ -798,7 +793,7 @@ export class IothubDpsTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps azurerm_iothub_dps}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps azurerm_iothub_dps}
 */
 export class IothubDps extends cdktf.TerraformResource {
 
@@ -814,7 +809,7 @@ export class IothubDps extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IothubDps resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IothubDps to import
-  * @param importFromId The id of the existing IothubDps that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IothubDps that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IothubDps to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -826,7 +821,7 @@ export class IothubDps extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/iothub_dps azurerm_iothub_dps} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/iothub_dps azurerm_iothub_dps} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -837,7 +832,7 @@ export class IothubDps extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_iothub_dps',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.91.0',
+        providerVersion: '3.92.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

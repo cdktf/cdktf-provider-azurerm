@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,58 +8,58 @@ import * as cdktf from 'cdktf';
 
 export interface KustoDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database#cluster_name KustoDatabase#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database#cluster_name KustoDatabase#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database#hot_cache_period KustoDatabase#hot_cache_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database#hot_cache_period KustoDatabase#hot_cache_period}
   */
   readonly hotCachePeriod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database#id KustoDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database#id KustoDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database#location KustoDatabase#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database#location KustoDatabase#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database#name KustoDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database#name KustoDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database#resource_group_name KustoDatabase#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database#resource_group_name KustoDatabase#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database#soft_delete_period KustoDatabase#soft_delete_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database#soft_delete_period KustoDatabase#soft_delete_period}
   */
   readonly softDeletePeriod?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database#timeouts KustoDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database#timeouts KustoDatabase#timeouts}
   */
   readonly timeouts?: KustoDatabaseTimeouts;
 }
 export interface KustoDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database#create KustoDatabase#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database#create KustoDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database#delete KustoDatabase#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database#delete KustoDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database#read KustoDatabase#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database#read KustoDatabase#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database#update KustoDatabase#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database#update KustoDatabase#update}
   */
   readonly update?: string;
 }
@@ -245,7 +240,7 @@ export class KustoDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database azurerm_kusto_database}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database azurerm_kusto_database}
 */
 export class KustoDatabase extends cdktf.TerraformResource {
 
@@ -261,7 +256,7 @@ export class KustoDatabase extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a KustoDatabase resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the KustoDatabase to import
-  * @param importFromId The id of the existing KustoDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing KustoDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the KustoDatabase to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -273,7 +268,7 @@ export class KustoDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/kusto_database azurerm_kusto_database} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/kusto_database azurerm_kusto_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -284,7 +279,7 @@ export class KustoDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kusto_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.91.0',
+        providerVersion: '3.92.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
