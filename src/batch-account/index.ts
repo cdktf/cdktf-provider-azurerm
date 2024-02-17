@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,84 +13,84 @@ import * as cdktf from 'cdktf';
 
 export interface BatchAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#allowed_authentication_modes BatchAccount#allowed_authentication_modes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#allowed_authentication_modes BatchAccount#allowed_authentication_modes}
   */
   readonly allowedAuthenticationModes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#encryption BatchAccount#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#encryption BatchAccount#encryption}
   */
   readonly encryption?: BatchAccountEncryption[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#id BatchAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#id BatchAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#location BatchAccount#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#location BatchAccount#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#name BatchAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#name BatchAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#pool_allocation_mode BatchAccount#pool_allocation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#pool_allocation_mode BatchAccount#pool_allocation_mode}
   */
   readonly poolAllocationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#public_network_access_enabled BatchAccount#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#public_network_access_enabled BatchAccount#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#resource_group_name BatchAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#resource_group_name BatchAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#storage_account_authentication_mode BatchAccount#storage_account_authentication_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#storage_account_authentication_mode BatchAccount#storage_account_authentication_mode}
   */
   readonly storageAccountAuthenticationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#storage_account_id BatchAccount#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#storage_account_id BatchAccount#storage_account_id}
   */
   readonly storageAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#storage_account_node_identity BatchAccount#storage_account_node_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#storage_account_node_identity BatchAccount#storage_account_node_identity}
   */
   readonly storageAccountNodeIdentity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#tags BatchAccount#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#tags BatchAccount#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#identity BatchAccount#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#identity BatchAccount#identity}
   */
   readonly identity?: BatchAccountIdentity;
   /**
   * key_vault_reference block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#key_vault_reference BatchAccount#key_vault_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#key_vault_reference BatchAccount#key_vault_reference}
   */
   readonly keyVaultReference?: BatchAccountKeyVaultReference;
   /**
   * network_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#network_profile BatchAccount#network_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#network_profile BatchAccount#network_profile}
   */
   readonly networkProfile?: BatchAccountNetworkProfile;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#timeouts BatchAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#timeouts BatchAccount#timeouts}
   */
   readonly timeouts?: BatchAccountTimeouts;
 }
 export interface BatchAccountEncryption {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#key_vault_key_id BatchAccount#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#key_vault_key_id BatchAccount#key_vault_key_id}
   */
   readonly keyVaultKeyId?: string;
 }
@@ -206,11 +206,11 @@ export class BatchAccountEncryptionList extends cdktf.ComplexList {
 }
 export interface BatchAccountIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#identity_ids BatchAccount#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#identity_ids BatchAccount#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#type BatchAccount#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#type BatchAccount#type}
   */
   readonly type: string;
 }
@@ -330,14 +330,14 @@ export class BatchAccountIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface BatchAccountKeyVaultReference {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#id BatchAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#id BatchAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#url BatchAccount#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#url BatchAccount#url}
   */
   readonly url: string;
 }
@@ -444,11 +444,11 @@ export class BatchAccountKeyVaultReferenceOutputReference extends cdktf.ComplexO
 }
 export interface BatchAccountNetworkProfileAccountAccessIpRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#action BatchAccount#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#action BatchAccount#action}
   */
   readonly action?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#ip_range BatchAccount#ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#ip_range BatchAccount#ip_range}
   */
   readonly ipRange: string;
 }
@@ -590,13 +590,13 @@ export class BatchAccountNetworkProfileAccountAccessIpRuleList extends cdktf.Com
 }
 export interface BatchAccountNetworkProfileAccountAccess {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#default_action BatchAccount#default_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#default_action BatchAccount#default_action}
   */
   readonly defaultAction?: string;
   /**
   * ip_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#ip_rule BatchAccount#ip_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#ip_rule BatchAccount#ip_rule}
   */
   readonly ipRule?: BatchAccountNetworkProfileAccountAccessIpRule[] | cdktf.IResolvable;
 }
@@ -709,11 +709,11 @@ export class BatchAccountNetworkProfileAccountAccessOutputReference extends cdkt
 }
 export interface BatchAccountNetworkProfileNodeManagementAccessIpRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#action BatchAccount#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#action BatchAccount#action}
   */
   readonly action?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#ip_range BatchAccount#ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#ip_range BatchAccount#ip_range}
   */
   readonly ipRange: string;
 }
@@ -855,13 +855,13 @@ export class BatchAccountNetworkProfileNodeManagementAccessIpRuleList extends cd
 }
 export interface BatchAccountNetworkProfileNodeManagementAccess {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#default_action BatchAccount#default_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#default_action BatchAccount#default_action}
   */
   readonly defaultAction?: string;
   /**
   * ip_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#ip_rule BatchAccount#ip_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#ip_rule BatchAccount#ip_rule}
   */
   readonly ipRule?: BatchAccountNetworkProfileNodeManagementAccessIpRule[] | cdktf.IResolvable;
 }
@@ -976,13 +976,13 @@ export interface BatchAccountNetworkProfile {
   /**
   * account_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#account_access BatchAccount#account_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#account_access BatchAccount#account_access}
   */
   readonly accountAccess?: BatchAccountNetworkProfileAccountAccess;
   /**
   * node_management_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#node_management_access BatchAccount#node_management_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#node_management_access BatchAccount#node_management_access}
   */
   readonly nodeManagementAccess?: BatchAccountNetworkProfileNodeManagementAccess;
 }
@@ -1095,19 +1095,19 @@ export class BatchAccountNetworkProfileOutputReference extends cdktf.ComplexObje
 }
 export interface BatchAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#create BatchAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#create BatchAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#delete BatchAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#delete BatchAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#read BatchAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#read BatchAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#update BatchAccount#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#update BatchAccount#update}
   */
   readonly update?: string;
 }
@@ -1288,7 +1288,7 @@ export class BatchAccountTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account azurerm_batch_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account azurerm_batch_account}
 */
 export class BatchAccount extends cdktf.TerraformResource {
 
@@ -1304,7 +1304,7 @@ export class BatchAccount extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BatchAccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BatchAccount to import
-  * @param importFromId The id of the existing BatchAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BatchAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BatchAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1316,7 +1316,7 @@ export class BatchAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/batch_account azurerm_batch_account} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/batch_account azurerm_batch_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1327,7 +1327,7 @@ export class BatchAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_batch_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.91.0',
+        providerVersion: '3.92.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

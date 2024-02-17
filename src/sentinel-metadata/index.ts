@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,122 +13,122 @@ import * as cdktf from 'cdktf';
 
 export interface SentinelMetadataConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#content_id SentinelMetadata#content_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#content_id SentinelMetadata#content_id}
   */
   readonly contentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#content_schema_version SentinelMetadata#content_schema_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#content_schema_version SentinelMetadata#content_schema_version}
   */
   readonly contentSchemaVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#custom_version SentinelMetadata#custom_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#custom_version SentinelMetadata#custom_version}
   */
   readonly customVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#dependency SentinelMetadata#dependency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#dependency SentinelMetadata#dependency}
   */
   readonly dependency?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#first_publish_date SentinelMetadata#first_publish_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#first_publish_date SentinelMetadata#first_publish_date}
   */
   readonly firstPublishDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#icon_id SentinelMetadata#icon_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#icon_id SentinelMetadata#icon_id}
   */
   readonly iconId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#id SentinelMetadata#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#id SentinelMetadata#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#kind SentinelMetadata#kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#kind SentinelMetadata#kind}
   */
   readonly kind: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#last_publish_date SentinelMetadata#last_publish_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#last_publish_date SentinelMetadata#last_publish_date}
   */
   readonly lastPublishDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#name SentinelMetadata#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#name SentinelMetadata#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#parent_id SentinelMetadata#parent_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#parent_id SentinelMetadata#parent_id}
   */
   readonly parentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#preview_images SentinelMetadata#preview_images}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#preview_images SentinelMetadata#preview_images}
   */
   readonly previewImages?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#preview_images_dark SentinelMetadata#preview_images_dark}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#preview_images_dark SentinelMetadata#preview_images_dark}
   */
   readonly previewImagesDark?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#providers SentinelMetadata#providers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#providers SentinelMetadata#providers}
   */
   readonly providers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#threat_analysis_tactics SentinelMetadata#threat_analysis_tactics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#threat_analysis_tactics SentinelMetadata#threat_analysis_tactics}
   */
   readonly threatAnalysisTactics?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#threat_analysis_techniques SentinelMetadata#threat_analysis_techniques}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#threat_analysis_techniques SentinelMetadata#threat_analysis_techniques}
   */
   readonly threatAnalysisTechniques?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#version SentinelMetadata#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#version SentinelMetadata#version}
   */
   readonly version?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#workspace_id SentinelMetadata#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#workspace_id SentinelMetadata#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * author block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#author SentinelMetadata#author}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#author SentinelMetadata#author}
   */
   readonly author?: SentinelMetadataAuthor;
   /**
   * category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#category SentinelMetadata#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#category SentinelMetadata#category}
   */
   readonly category?: SentinelMetadataCategory;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#source SentinelMetadata#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#source SentinelMetadata#source}
   */
   readonly source?: SentinelMetadataSource;
   /**
   * support block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#support SentinelMetadata#support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#support SentinelMetadata#support}
   */
   readonly support?: SentinelMetadataSupport;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#timeouts SentinelMetadata#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#timeouts SentinelMetadata#timeouts}
   */
   readonly timeouts?: SentinelMetadataTimeouts;
 }
 export interface SentinelMetadataAuthor {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#email SentinelMetadata#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#email SentinelMetadata#email}
   */
   readonly email?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#link SentinelMetadata#link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#link SentinelMetadata#link}
   */
   readonly link?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#name SentinelMetadata#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#name SentinelMetadata#name}
   */
   readonly name?: string;
 }
@@ -270,11 +270,11 @@ export class SentinelMetadataAuthorOutputReference extends cdktf.ComplexObject {
 }
 export interface SentinelMetadataCategory {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#domains SentinelMetadata#domains}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#domains SentinelMetadata#domains}
   */
   readonly domains?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#verticals SentinelMetadata#verticals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#verticals SentinelMetadata#verticals}
   */
   readonly verticals?: string[];
 }
@@ -387,18 +387,18 @@ export class SentinelMetadataCategoryOutputReference extends cdktf.ComplexObject
 }
 export interface SentinelMetadataSource {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#id SentinelMetadata#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#id SentinelMetadata#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#kind SentinelMetadata#kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#kind SentinelMetadata#kind}
   */
   readonly kind: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#name SentinelMetadata#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#name SentinelMetadata#name}
   */
   readonly name?: string;
 }
@@ -537,19 +537,19 @@ export class SentinelMetadataSourceOutputReference extends cdktf.ComplexObject {
 }
 export interface SentinelMetadataSupport {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#email SentinelMetadata#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#email SentinelMetadata#email}
   */
   readonly email?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#link SentinelMetadata#link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#link SentinelMetadata#link}
   */
   readonly link?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#name SentinelMetadata#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#name SentinelMetadata#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#tier SentinelMetadata#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#tier SentinelMetadata#tier}
   */
   readonly tier: string;
 }
@@ -717,19 +717,19 @@ export class SentinelMetadataSupportOutputReference extends cdktf.ComplexObject 
 }
 export interface SentinelMetadataTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#create SentinelMetadata#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#create SentinelMetadata#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#delete SentinelMetadata#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#delete SentinelMetadata#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#read SentinelMetadata#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#read SentinelMetadata#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#update SentinelMetadata#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#update SentinelMetadata#update}
   */
   readonly update?: string;
 }
@@ -910,7 +910,7 @@ export class SentinelMetadataTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata azurerm_sentinel_metadata}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata azurerm_sentinel_metadata}
 */
 export class SentinelMetadata extends cdktf.TerraformResource {
 
@@ -926,7 +926,7 @@ export class SentinelMetadata extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SentinelMetadata resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SentinelMetadata to import
-  * @param importFromId The id of the existing SentinelMetadata that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SentinelMetadata that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SentinelMetadata to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -938,7 +938,7 @@ export class SentinelMetadata extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.91.0/docs/resources/sentinel_metadata azurerm_sentinel_metadata} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/sentinel_metadata azurerm_sentinel_metadata} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -949,7 +949,7 @@ export class SentinelMetadata extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sentinel_metadata',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.91.0',
+        providerVersion: '3.92.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -1389,6 +1389,7 @@ export * as dataAzurermTenantTemplateDeployment from './data-azurerm-tenant-temp
 export * as dataAzurermTrafficManagerGeographicalLocation from './data-azurerm-traffic-manager-geographical-location';
 export * as dataAzurermTrafficManagerProfile from './data-azurerm-traffic-manager-profile';
 export * as dataAzurermUserAssignedIdentity from './data-azurerm-user-assigned-identity';
+export * as dataAzurermVirtualDesktopApplicationGroup from './data-azurerm-virtual-desktop-application-group';
 export * as dataAzurermVirtualDesktopHostPool from './data-azurerm-virtual-desktop-host-pool';
 export * as dataAzurermVirtualDesktopWorkspace from './data-azurerm-virtual-desktop-workspace';
 export * as dataAzurermVirtualHub from './data-azurerm-virtual-hub';

@@ -557,6 +557,7 @@ The following submodules are available:
 - [dataAzurermTrafficManagerGeographicalLocation](./dataAzurermTrafficManagerGeographicalLocation.csharp.md)
 - [dataAzurermTrafficManagerProfile](./dataAzurermTrafficManagerProfile.csharp.md)
 - [dataAzurermUserAssignedIdentity](./dataAzurermUserAssignedIdentity.csharp.md)
+- [dataAzurermVirtualDesktopApplicationGroup](./dataAzurermVirtualDesktopApplicationGroup.csharp.md)
 - [dataAzurermVirtualDesktopHostPool](./dataAzurermVirtualDesktopHostPool.csharp.md)
 - [dataAzurermVirtualDesktopWorkspace](./dataAzurermVirtualDesktopWorkspace.csharp.md)
 - [dataAzurermVirtualHub](./dataAzurermVirtualHub.csharp.md)

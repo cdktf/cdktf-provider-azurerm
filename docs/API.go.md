@@ -557,6 +557,7 @@ The following submodules are available:
 - [dataAzurermTrafficManagerGeographicalLocation](./dataAzurermTrafficManagerGeographicalLocation.go.md)
 - [dataAzurermTrafficManagerProfile](./dataAzurermTrafficManagerProfile.go.md)
 - [dataAzurermUserAssignedIdentity](./dataAzurermUserAssignedIdentity.go.md)
+- [dataAzurermVirtualDesktopApplicationGroup](./dataAzurermVirtualDesktopApplicationGroup.go.md)
 - [dataAzurermVirtualDesktopHostPool](./dataAzurermVirtualDesktopHostPool.go.md)
 - [dataAzurermVirtualDesktopWorkspace](./dataAzurermVirtualDesktopWorkspace.go.md)
 - [dataAzurermVirtualHub](./dataAzurermVirtualHub.go.md)

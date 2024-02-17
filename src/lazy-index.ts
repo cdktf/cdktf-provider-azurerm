@@ -1389,6 +1389,7 @@ Object.defineProperty(exports, 'dataAzurermTenantTemplateDeployment', { get: fun
 Object.defineProperty(exports, 'dataAzurermTrafficManagerGeographicalLocation', { get: function () { return require('./data-azurerm-traffic-manager-geographical-location'); } });
 Object.defineProperty(exports, 'dataAzurermTrafficManagerProfile', { get: function () { return require('./data-azurerm-traffic-manager-profile'); } });
 Object.defineProperty(exports, 'dataAzurermUserAssignedIdentity', { get: function () { return require('./data-azurerm-user-assigned-identity'); } });
+Object.defineProperty(exports, 'dataAzurermVirtualDesktopApplicationGroup', { get: function () { return require('./data-azurerm-virtual-desktop-application-group'); } });
 Object.defineProperty(exports, 'dataAzurermVirtualDesktopHostPool', { get: function () { return require('./data-azurerm-virtual-desktop-host-pool'); } });
 Object.defineProperty(exports, 'dataAzurermVirtualDesktopWorkspace', { get: function () { return require('./data-azurerm-virtual-desktop-workspace'); } });
 Object.defineProperty(exports, 'dataAzurermVirtualHub', { get: function () { return require('./data-azurerm-virtual-hub'); } });
