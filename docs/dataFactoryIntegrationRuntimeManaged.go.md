@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManaged.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 datafactoryintegrationruntimemanaged.NewDataFactoryIntegrationRuntimeManaged(scope Construct, id *string, config DataFactoryIntegrationRuntimeManagedConfig) DataFactoryIntegrationRuntimeManaged
 ```
@@ -500,7 +500,7 @@ func ResetVnetIntegration()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManaged.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 datafactoryintegrationruntimemanaged.DataFactoryIntegrationRuntimeManaged_IsConstruct(x interface{}) *bool
 ```
@@ -532,7 +532,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManaged.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 datafactoryintegrationruntimemanaged.DataFactoryIntegrationRuntimeManaged_IsTerraformElement(x interface{}) *bool
 ```
@@ -546,7 +546,7 @@ datafactoryintegrationruntimemanaged.DataFactoryIntegrationRuntimeManaged_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManaged.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 datafactoryintegrationruntimemanaged.DataFactoryIntegrationRuntimeManaged_IsTerraformResource(x interface{}) *bool
 ```
@@ -560,7 +560,7 @@ datafactoryintegrationruntimemanaged.DataFactoryIntegrationRuntimeManaged_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManaged.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 datafactoryintegrationruntimemanaged.DataFactoryIntegrationRuntimeManaged_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1097,7 +1097,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedCatalogInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 &datafactoryintegrationruntimemanaged.DataFactoryIntegrationRuntimeManagedCatalogInfo {
 	ServerEndpoint: *string,
@@ -1171,7 +1171,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 &datafactoryintegrationruntimemanaged.DataFactoryIntegrationRuntimeManagedConfig {
 	Connection: interface{},
@@ -1185,16 +1185,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegratio
 	Location: *string,
 	Name: *string,
 	NodeSize: *string,
-	CatalogInfo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedCatalogInfo,
-	CustomSetupScript: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedCustomSetupScript,
+	CatalogInfo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedCatalogInfo,
+	CustomSetupScript: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedCustomSetupScript,
 	Description: *string,
 	Edition: *string,
 	Id: *string,
 	LicenseType: *string,
 	MaxParallelExecutionsPerNode: *f64,
 	NumberOfNodes: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedTimeouts,
-	VnetIntegration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedVnetIntegration,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedTimeouts,
+	VnetIntegration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedVnetIntegration,
 }
 ```
 
@@ -1480,7 +1480,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedCustomSetupScript.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 &datafactoryintegrationruntimemanaged.DataFactoryIntegrationRuntimeManagedCustomSetupScript {
 	BlobContainerUri: *string,
@@ -1526,7 +1526,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 &datafactoryintegrationruntimemanaged.DataFactoryIntegrationRuntimeManagedTimeouts {
 	Create: *string,
@@ -1600,7 +1600,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedVnetIntegration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 &datafactoryintegrationruntimemanaged.DataFactoryIntegrationRuntimeManagedVnetIntegration {
 	SubnetName: *string,
@@ -1648,7 +1648,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 datafactoryintegrationruntimemanaged.NewDataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference
 ```
@@ -2006,7 +2006,7 @@ func InternalValue() DataFactoryIntegrationRuntimeManagedCatalogInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 datafactoryintegrationruntimemanaged.NewDataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference
 ```
@@ -2299,7 +2299,7 @@ func InternalValue() DataFactoryIntegrationRuntimeManagedCustomSetupScript
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 datafactoryintegrationruntimemanaged.NewDataFactoryIntegrationRuntimeManagedTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference
 ```
@@ -2664,7 +2664,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeManaged.DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryintegrationruntimemanaged"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimemanaged"
 
 datafactoryintegrationruntimemanaged.NewDataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference
 ```
