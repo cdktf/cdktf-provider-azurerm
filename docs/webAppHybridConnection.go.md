@@ -4,12 +4,12 @@
 
 ### WebAppHybridConnection <a name="WebAppHybridConnection" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection azurerm_web_app_hybrid_connection}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection azurerm_web_app_hybrid_connection}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/webapphybridconnection"
 
 webapphybridconnection.NewWebAppHybridConnection(scope Construct, id *string, config WebAppHybridConnectionConfig) WebAppHybridConnection
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/webapphybridconnection"
 
 webapphybridconnection.WebAppHybridConnection_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/webapphybridconnection"
 
 webapphybridconnection.WebAppHybridConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ webapphybridconnection.WebAppHybridConnection_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/webapphybridconnection"
 
 webapphybridconnection.WebAppHybridConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ webapphybridconnection.WebAppHybridConnection_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/webapphybridconnection"
 
 webapphybridconnection.WebAppHybridConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the WebAppHybridConnection to 
 
 The id of the existing WebAppHybridConnection that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -910,7 +910,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/webapphybridconnection"
 
 &webapphybridconnection.WebAppHybridConnectionConfig {
 	Connection: interface{},
@@ -926,7 +926,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconne
 	WebAppId: *string,
 	Id: *string,
 	SendKeyName: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.webAppHybridConnection.WebAppHybridConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.webAppHybridConnection.WebAppHybridConnectionTimeouts,
 }
 ```
 
@@ -945,7 +945,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconne
 | <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionConfig.property.port">Port</a></code> | <code>*f64</code> | The port to use for the endpoint. |
 | <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionConfig.property.relayId">RelayId</a></code> | <code>*string</code> | The ID of the Relay Hybrid Connection to use. |
 | <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionConfig.property.webAppId">WebAppId</a></code> | <code>*string</code> | The ID of the Web App for this Hybrid Connection. |
-| <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#id WebAppHybridConnection#id}. |
+| <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#id WebAppHybridConnection#id}. |
 | <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionConfig.property.sendKeyName">SendKeyName</a></code> | <code>*string</code> | The name of the Relay key with `Send` permission to use. Defaults to `RootManageSharedAccessKey`. |
 | <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionTimeouts">WebAppHybridConnectionTimeouts</a></code> | timeouts block. |
 
@@ -1031,7 +1031,7 @@ Hostname *string
 
 The hostname of the endpoint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#hostname WebAppHybridConnection#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#hostname WebAppHybridConnection#hostname}
 
 ---
 
@@ -1045,7 +1045,7 @@ Port *f64
 
 The port to use for the endpoint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#port WebAppHybridConnection#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#port WebAppHybridConnection#port}
 
 ---
 
@@ -1059,7 +1059,7 @@ RelayId *string
 
 The ID of the Relay Hybrid Connection to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#relay_id WebAppHybridConnection#relay_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#relay_id WebAppHybridConnection#relay_id}
 
 ---
 
@@ -1073,7 +1073,7 @@ WebAppId *string
 
 The ID of the Web App for this Hybrid Connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#web_app_id WebAppHybridConnection#web_app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#web_app_id WebAppHybridConnection#web_app_id}
 
 ---
 
@@ -1085,7 +1085,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#id WebAppHybridConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#id WebAppHybridConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1102,7 +1102,7 @@ SendKeyName *string
 
 The name of the Relay key with `Send` permission to use. Defaults to `RootManageSharedAccessKey`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#send_key_name WebAppHybridConnection#send_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#send_key_name WebAppHybridConnection#send_key_name}
 
 ---
 
@@ -1116,7 +1116,7 @@ Timeouts WebAppHybridConnectionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#timeouts WebAppHybridConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#timeouts WebAppHybridConnection#timeouts}
 
 ---
 
@@ -1125,7 +1125,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/webapphybridconnection"
 
 &webapphybridconnection.WebAppHybridConnectionTimeouts {
 	Create: *string,
@@ -1139,10 +1139,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconne
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#create WebAppHybridConnection#create}. |
-| <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#delete WebAppHybridConnection#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#read WebAppHybridConnection#read}. |
-| <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#update WebAppHybridConnection#update}. |
+| <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#create WebAppHybridConnection#create}. |
+| <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#delete WebAppHybridConnection#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#read WebAppHybridConnection#read}. |
+| <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#update WebAppHybridConnection#update}. |
 
 ---
 
@@ -1154,7 +1154,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#create WebAppHybridConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#create WebAppHybridConnection#create}.
 
 ---
 
@@ -1166,7 +1166,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#delete WebAppHybridConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#delete WebAppHybridConnection#delete}.
 
 ---
 
@@ -1178,7 +1178,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#read WebAppHybridConnection#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#read WebAppHybridConnection#read}.
 
 ---
 
@@ -1190,7 +1190,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/web_app_hybrid_connection#update WebAppHybridConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/web_app_hybrid_connection#update WebAppHybridConnection#update}.
 
 ---
 
@@ -1201,7 +1201,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/webapphybridconnection"
 
 webapphybridconnection.NewWebAppHybridConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WebAppHybridConnectionTimeoutsOutputReference
 ```
