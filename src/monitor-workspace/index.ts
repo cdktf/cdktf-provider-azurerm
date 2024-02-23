@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +13,54 @@ import * as cdktf from 'cdktf';
 
 export interface MonitorWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace#id MonitorWorkspace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace#id MonitorWorkspace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace#location MonitorWorkspace#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace#location MonitorWorkspace#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace#name MonitorWorkspace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace#name MonitorWorkspace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace#public_network_access_enabled MonitorWorkspace#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace#public_network_access_enabled MonitorWorkspace#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace#resource_group_name MonitorWorkspace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace#resource_group_name MonitorWorkspace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace#tags MonitorWorkspace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace#tags MonitorWorkspace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace#timeouts MonitorWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace#timeouts MonitorWorkspace#timeouts}
   */
   readonly timeouts?: MonitorWorkspaceTimeouts;
 }
 export interface MonitorWorkspaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace#create MonitorWorkspace#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace#create MonitorWorkspace#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace#delete MonitorWorkspace#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace#delete MonitorWorkspace#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace#read MonitorWorkspace#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace#read MonitorWorkspace#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace#update MonitorWorkspace#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace#update MonitorWorkspace#update}
   */
   readonly update?: string;
 }
@@ -241,7 +241,7 @@ export class MonitorWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace azurerm_monitor_workspace}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace azurerm_monitor_workspace}
 */
 export class MonitorWorkspace extends cdktf.TerraformResource {
 
@@ -257,7 +257,7 @@ export class MonitorWorkspace extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MonitorWorkspace resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MonitorWorkspace to import
-  * @param importFromId The id of the existing MonitorWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MonitorWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MonitorWorkspace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -269,7 +269,7 @@ export class MonitorWorkspace extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/resources/monitor_workspace azurerm_monitor_workspace} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/monitor_workspace azurerm_monitor_workspace} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -280,7 +280,7 @@ export class MonitorWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.92.0',
+        providerVersion: '3.93.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

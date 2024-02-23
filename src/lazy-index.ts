@@ -313,6 +313,7 @@ Object.defineProperty(exports, 'dedicatedHardwareSecurityModule', { get: functio
 Object.defineProperty(exports, 'dedicatedHost', { get: function () { return require('./dedicated-host'); } });
 Object.defineProperty(exports, 'dedicatedHostGroup', { get: function () { return require('./dedicated-host-group'); } });
 Object.defineProperty(exports, 'devCenter', { get: function () { return require('./dev-center'); } });
+Object.defineProperty(exports, 'devCenterCatalog', { get: function () { return require('./dev-center-catalog'); } });
 Object.defineProperty(exports, 'devCenterGallery', { get: function () { return require('./dev-center-gallery'); } });
 Object.defineProperty(exports, 'devCenterProject', { get: function () { return require('./dev-center-project'); } });
 Object.defineProperty(exports, 'devTestGlobalVmShutdownSchedule', { get: function () { return require('./dev-test-global-vm-shutdown-schedule'); } });
@@ -999,6 +1000,7 @@ Object.defineProperty(exports, 'synapseWorkspaceKey', { get: function () { retur
 Object.defineProperty(exports, 'synapseWorkspaceSecurityAlertPolicy', { get: function () { return require('./synapse-workspace-security-alert-policy'); } });
 Object.defineProperty(exports, 'synapseWorkspaceSqlAadAdmin', { get: function () { return require('./synapse-workspace-sql-aad-admin'); } });
 Object.defineProperty(exports, 'synapseWorkspaceVulnerabilityAssessment', { get: function () { return require('./synapse-workspace-vulnerability-assessment'); } });
+Object.defineProperty(exports, 'systemCenterVirtualMachineManagerServer', { get: function () { return require('./system-center-virtual-machine-manager-server'); } });
 Object.defineProperty(exports, 'templateDeployment', { get: function () { return require('./template-deployment'); } });
 Object.defineProperty(exports, 'tenantTemplateDeployment', { get: function () { return require('./tenant-template-deployment'); } });
 Object.defineProperty(exports, 'trafficManagerAzureEndpoint', { get: function () { return require('./traffic-manager-azure-endpoint'); } });
@@ -1184,6 +1186,7 @@ Object.defineProperty(exports, 'dataAzurermEventhubNamespace', { get: function (
 Object.defineProperty(exports, 'dataAzurermEventhubNamespaceAuthorizationRule', { get: function () { return require('./data-azurerm-eventhub-namespace-authorization-rule'); } });
 Object.defineProperty(exports, 'dataAzurermEventhubSas', { get: function () { return require('./data-azurerm-eventhub-sas'); } });
 Object.defineProperty(exports, 'dataAzurermExpressRouteCircuit', { get: function () { return require('./data-azurerm-express-route-circuit'); } });
+Object.defineProperty(exports, 'dataAzurermExpressRouteCircuitPeering', { get: function () { return require('./data-azurerm-express-route-circuit-peering'); } });
 Object.defineProperty(exports, 'dataAzurermExtendedLocations', { get: function () { return require('./data-azurerm-extended-locations'); } });
 Object.defineProperty(exports, 'dataAzurermFirewall', { get: function () { return require('./data-azurerm-firewall'); } });
 Object.defineProperty(exports, 'dataAzurermFirewallPolicy', { get: function () { return require('./data-azurerm-firewall-policy'); } });
@@ -1377,6 +1380,7 @@ Object.defineProperty(exports, 'dataAzurermStorageManagementPolicy', { get: func
 Object.defineProperty(exports, 'dataAzurermStorageShare', { get: function () { return require('./data-azurerm-storage-share'); } });
 Object.defineProperty(exports, 'dataAzurermStorageSync', { get: function () { return require('./data-azurerm-storage-sync'); } });
 Object.defineProperty(exports, 'dataAzurermStorageSyncGroup', { get: function () { return require('./data-azurerm-storage-sync-group'); } });
+Object.defineProperty(exports, 'dataAzurermStorageTableEntities', { get: function () { return require('./data-azurerm-storage-table-entities'); } });
 Object.defineProperty(exports, 'dataAzurermStorageTableEntity', { get: function () { return require('./data-azurerm-storage-table-entity'); } });
 Object.defineProperty(exports, 'dataAzurermStreamAnalyticsJob', { get: function () { return require('./data-azurerm-stream-analytics-job'); } });
 Object.defineProperty(exports, 'dataAzurermSubnet', { get: function () { return require('./data-azurerm-subnet'); } });

@@ -4,7 +4,7 @@
 
 ### DataAzurermServicebusNamespace <a name="DataAzurermServicebusNamespace" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/data-sources/servicebus_namespace azurerm_servicebus_namespace}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/servicebus_namespace azurerm_servicebus_namespace}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.Initializer"></a>
 
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermServicebusNames
 
 The id of the existing DataAzurermServicebusNamespace that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/data-sources/servicebus_namespace#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/servicebus_namespace#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -427,6 +427,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.defaultSecondaryKey">defaultSecondaryKey</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.endpoint">endpoint</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.location">location</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.premiumMessagingPartitions">premiumMessagingPartitions</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.sku">sku</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.tags">tags</a></code> | <code>cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceTimeoutsOutputReference">DataAzurermServicebusNamespaceTimeoutsOutputReference</a></code> | *No description.* |
@@ -633,6 +634,16 @@ public readonly location: string;
 
 ---
 
+##### `premiumMessagingPartitions`<sup>Required</sup> <a name="premiumMessagingPartitions" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.premiumMessagingPartitions"></a>
+
+```typescript
+public readonly premiumMessagingPartitions: number;
+```
+
+- *Type:* number
+
+---
+
 ##### `sku`<sup>Required</sup> <a name="sku" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.property.sku"></a>
 
 ```typescript
@@ -784,9 +795,9 @@ const dataAzurermServicebusNamespaceConfig: dataAzurermServicebusNamespace.DataA
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/data-sources/servicebus_namespace#name DataAzurermServicebusNamespace#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/data-sources/servicebus_namespace#resource_group_name DataAzurermServicebusNamespace#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/data-sources/servicebus_namespace#id DataAzurermServicebusNamespace#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/servicebus_namespace#name DataAzurermServicebusNamespace#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/servicebus_namespace#resource_group_name DataAzurermServicebusNamespace#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/servicebus_namespace#id DataAzurermServicebusNamespace#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceTimeouts">DataAzurermServicebusNamespaceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -869,7 +880,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/data-sources/servicebus_namespace#name DataAzurermServicebusNamespace#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/servicebus_namespace#name DataAzurermServicebusNamespace#name}.
 
 ---
 
@@ -881,7 +892,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/data-sources/servicebus_namespace#resource_group_name DataAzurermServicebusNamespace#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/servicebus_namespace#resource_group_name DataAzurermServicebusNamespace#resource_group_name}.
 
 ---
 
@@ -893,7 +904,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/data-sources/servicebus_namespace#id DataAzurermServicebusNamespace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/servicebus_namespace#id DataAzurermServicebusNamespace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -910,7 +921,7 @@ public readonly timeouts: DataAzurermServicebusNamespaceTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/data-sources/servicebus_namespace#timeouts DataAzurermServicebusNamespace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/servicebus_namespace#timeouts DataAzurermServicebusNamespace#timeouts}
 
 ---
 
@@ -928,7 +939,7 @@ const dataAzurermServicebusNamespaceTimeouts: dataAzurermServicebusNamespace.Dat
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/data-sources/servicebus_namespace#read DataAzurermServicebusNamespace#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/servicebus_namespace#read DataAzurermServicebusNamespace#read}. |
 
 ---
 
@@ -940,7 +951,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.92.0/docs/data-sources/servicebus_namespace#read DataAzurermServicebusNamespace#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/servicebus_namespace#read DataAzurermServicebusNamespace#read}.
 
 ---
 
