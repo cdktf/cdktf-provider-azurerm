@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsLinkedService.LogAnalyticsLinkedService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticslinkedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticslinkedservice"
 
 loganalyticslinkedservice.NewLogAnalyticsLinkedService(scope Construct, id *string, config LogAnalyticsLinkedServiceConfig) LogAnalyticsLinkedService
 ```
@@ -419,7 +419,7 @@ func ResetWriteAccessId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logAnalyticsLinkedService.LogAnalyticsLinkedService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticslinkedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticslinkedservice"
 
 loganalyticslinkedservice.LogAnalyticsLinkedService_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logAnalyticsLinkedService.LogAnalyticsLinkedService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticslinkedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticslinkedservice"
 
 loganalyticslinkedservice.LogAnalyticsLinkedService_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ loganalyticslinkedservice.LogAnalyticsLinkedService_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logAnalyticsLinkedService.LogAnalyticsLinkedService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticslinkedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticslinkedservice"
 
 loganalyticslinkedservice.LogAnalyticsLinkedService_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ loganalyticslinkedservice.LogAnalyticsLinkedService_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.logAnalyticsLinkedService.LogAnalyticsLinkedService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticslinkedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticslinkedservice"
 
 loganalyticslinkedservice.LogAnalyticsLinkedService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -851,7 +851,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logAnalyticsLinkedService.LogAnalyticsLinkedServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticslinkedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticslinkedservice"
 
 &loganalyticslinkedservice.LogAnalyticsLinkedServiceConfig {
 	Connection: interface{},
@@ -865,7 +865,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticslinkedser
 	WorkspaceId: *string,
 	Id: *string,
 	ReadAccessId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logAnalyticsLinkedService.LogAnalyticsLinkedServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.logAnalyticsLinkedService.LogAnalyticsLinkedServiceTimeouts,
 	WriteAccessId: *string,
 }
 ```
@@ -1042,7 +1042,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logAnalyticsLinkedService.LogAnalyticsLinkedServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticslinkedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticslinkedservice"
 
 &loganalyticslinkedservice.LogAnalyticsLinkedServiceTimeouts {
 	Create: *string,
@@ -1118,7 +1118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsLinkedService.LogAnalyticsLinkedServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticslinkedservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticslinkedservice"
 
 loganalyticslinkedservice.NewLogAnalyticsLinkedServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogAnalyticsLinkedServiceTimeoutsOutputReference
 ```
