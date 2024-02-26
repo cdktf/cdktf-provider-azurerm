@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/dev_test_linux_virtual_machine
 // generated from terraform resource schema
 
