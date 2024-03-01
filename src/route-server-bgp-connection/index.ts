@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/route_server_bgp_connection
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/route_server_bgp_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +13,46 @@ import * as cdktf from 'cdktf';
 
 export interface RouteServerBgpConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/route_server_bgp_connection#id RouteServerBgpConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/route_server_bgp_connection#id RouteServerBgpConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/route_server_bgp_connection#name RouteServerBgpConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/route_server_bgp_connection#name RouteServerBgpConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/route_server_bgp_connection#peer_asn RouteServerBgpConnection#peer_asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/route_server_bgp_connection#peer_asn RouteServerBgpConnection#peer_asn}
   */
   readonly peerAsn: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/route_server_bgp_connection#peer_ip RouteServerBgpConnection#peer_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/route_server_bgp_connection#peer_ip RouteServerBgpConnection#peer_ip}
   */
   readonly peerIp: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/route_server_bgp_connection#route_server_id RouteServerBgpConnection#route_server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/route_server_bgp_connection#route_server_id RouteServerBgpConnection#route_server_id}
   */
   readonly routeServerId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/route_server_bgp_connection#timeouts RouteServerBgpConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/route_server_bgp_connection#timeouts RouteServerBgpConnection#timeouts}
   */
   readonly timeouts?: RouteServerBgpConnectionTimeouts;
 }
 export interface RouteServerBgpConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/route_server_bgp_connection#create RouteServerBgpConnection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/route_server_bgp_connection#create RouteServerBgpConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/route_server_bgp_connection#delete RouteServerBgpConnection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/route_server_bgp_connection#delete RouteServerBgpConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/route_server_bgp_connection#read RouteServerBgpConnection#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/route_server_bgp_connection#read RouteServerBgpConnection#read}
   */
   readonly read?: string;
 }
@@ -204,7 +204,7 @@ export class RouteServerBgpConnectionTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/route_server_bgp_connection azurerm_route_server_bgp_connection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/route_server_bgp_connection azurerm_route_server_bgp_connection}
 */
 export class RouteServerBgpConnection extends cdktf.TerraformResource {
 
@@ -220,7 +220,7 @@ export class RouteServerBgpConnection extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a RouteServerBgpConnection resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the RouteServerBgpConnection to import
-  * @param importFromId The id of the existing RouteServerBgpConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/route_server_bgp_connection#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing RouteServerBgpConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/route_server_bgp_connection#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the RouteServerBgpConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -232,7 +232,7 @@ export class RouteServerBgpConnection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/route_server_bgp_connection azurerm_route_server_bgp_connection} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/route_server_bgp_connection azurerm_route_server_bgp_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -243,7 +243,7 @@ export class RouteServerBgpConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_route_server_bgp_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.93.0',
+        providerVersion: '3.94.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

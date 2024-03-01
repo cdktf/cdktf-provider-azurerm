@@ -806,6 +806,7 @@ The following submodules are available:
 - [kubernetesClusterTrustedAccessRoleBinding](./kubernetesClusterTrustedAccessRoleBinding.csharp.md)
 - [kubernetesFleetManager](./kubernetesFleetManager.csharp.md)
 - [kubernetesFleetMember](./kubernetesFleetMember.csharp.md)
+- [kubernetesFleetUpdateRun](./kubernetesFleetUpdateRun.csharp.md)
 - [kubernetesFleetUpdateStrategy](./kubernetesFleetUpdateStrategy.csharp.md)
 - [kubernetesFluxConfiguration](./kubernetesFluxConfiguration.csharp.md)
 - [kustoAttachedDatabaseConfiguration](./kustoAttachedDatabaseConfiguration.csharp.md)

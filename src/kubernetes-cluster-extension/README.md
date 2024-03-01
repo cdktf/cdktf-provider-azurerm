@@ -1,3 +1,3 @@
 # `azurerm_kubernetes_cluster_extension`
 
-Refer to the Terraform Registry for docs: [`azurerm_kubernetes_cluster_extension`](https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/kubernetes_cluster_extension).
+Refer to the Terraform Registry for docs: [`azurerm_kubernetes_cluster_extension`](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/kubernetes_cluster_extension).

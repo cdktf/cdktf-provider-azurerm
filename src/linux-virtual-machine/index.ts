@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,226 +13,240 @@ import * as cdktf from 'cdktf';
 
 export interface LinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#admin_password LinuxVirtualMachine#admin_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#admin_password LinuxVirtualMachine#admin_password}
   */
   readonly adminPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#admin_username LinuxVirtualMachine#admin_username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#admin_username LinuxVirtualMachine#admin_username}
   */
   readonly adminUsername: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#allow_extension_operations LinuxVirtualMachine#allow_extension_operations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#allow_extension_operations LinuxVirtualMachine#allow_extension_operations}
   */
   readonly allowExtensionOperations?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#availability_set_id LinuxVirtualMachine#availability_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#availability_set_id LinuxVirtualMachine#availability_set_id}
   */
   readonly availabilitySetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#bypass_platform_safety_checks_on_user_schedule_enabled LinuxVirtualMachine#bypass_platform_safety_checks_on_user_schedule_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#bypass_platform_safety_checks_on_user_schedule_enabled LinuxVirtualMachine#bypass_platform_safety_checks_on_user_schedule_enabled}
   */
   readonly bypassPlatformSafetyChecksOnUserScheduleEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#capacity_reservation_group_id LinuxVirtualMachine#capacity_reservation_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#capacity_reservation_group_id LinuxVirtualMachine#capacity_reservation_group_id}
   */
   readonly capacityReservationGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#computer_name LinuxVirtualMachine#computer_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#computer_name LinuxVirtualMachine#computer_name}
   */
   readonly computerName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#custom_data LinuxVirtualMachine#custom_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#custom_data LinuxVirtualMachine#custom_data}
   */
   readonly customData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#dedicated_host_group_id LinuxVirtualMachine#dedicated_host_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#dedicated_host_group_id LinuxVirtualMachine#dedicated_host_group_id}
   */
   readonly dedicatedHostGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#dedicated_host_id LinuxVirtualMachine#dedicated_host_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#dedicated_host_id LinuxVirtualMachine#dedicated_host_id}
   */
   readonly dedicatedHostId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#disable_password_authentication LinuxVirtualMachine#disable_password_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#disable_password_authentication LinuxVirtualMachine#disable_password_authentication}
   */
   readonly disablePasswordAuthentication?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#edge_zone LinuxVirtualMachine#edge_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#disk_controller_type LinuxVirtualMachine#disk_controller_type}
+  */
+  readonly diskControllerType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#edge_zone LinuxVirtualMachine#edge_zone}
   */
   readonly edgeZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#encryption_at_host_enabled LinuxVirtualMachine#encryption_at_host_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#encryption_at_host_enabled LinuxVirtualMachine#encryption_at_host_enabled}
   */
   readonly encryptionAtHostEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#eviction_policy LinuxVirtualMachine#eviction_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#eviction_policy LinuxVirtualMachine#eviction_policy}
   */
   readonly evictionPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#extensions_time_budget LinuxVirtualMachine#extensions_time_budget}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#extensions_time_budget LinuxVirtualMachine#extensions_time_budget}
   */
   readonly extensionsTimeBudget?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#id LinuxVirtualMachine#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#id LinuxVirtualMachine#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#license_type LinuxVirtualMachine#license_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#license_type LinuxVirtualMachine#license_type}
   */
   readonly licenseType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#location LinuxVirtualMachine#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#location LinuxVirtualMachine#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#max_bid_price LinuxVirtualMachine#max_bid_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#max_bid_price LinuxVirtualMachine#max_bid_price}
   */
   readonly maxBidPrice?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#name LinuxVirtualMachine#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#name LinuxVirtualMachine#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#network_interface_ids LinuxVirtualMachine#network_interface_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#network_interface_ids LinuxVirtualMachine#network_interface_ids}
   */
   readonly networkInterfaceIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#patch_assessment_mode LinuxVirtualMachine#patch_assessment_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#patch_assessment_mode LinuxVirtualMachine#patch_assessment_mode}
   */
   readonly patchAssessmentMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#patch_mode LinuxVirtualMachine#patch_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#patch_mode LinuxVirtualMachine#patch_mode}
   */
   readonly patchMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#platform_fault_domain LinuxVirtualMachine#platform_fault_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#platform_fault_domain LinuxVirtualMachine#platform_fault_domain}
   */
   readonly platformFaultDomain?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#priority LinuxVirtualMachine#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#priority LinuxVirtualMachine#priority}
   */
   readonly priority?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#provision_vm_agent LinuxVirtualMachine#provision_vm_agent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#provision_vm_agent LinuxVirtualMachine#provision_vm_agent}
   */
   readonly provisionVmAgent?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#proximity_placement_group_id LinuxVirtualMachine#proximity_placement_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#proximity_placement_group_id LinuxVirtualMachine#proximity_placement_group_id}
   */
   readonly proximityPlacementGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#reboot_setting LinuxVirtualMachine#reboot_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#reboot_setting LinuxVirtualMachine#reboot_setting}
   */
   readonly rebootSetting?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#resource_group_name LinuxVirtualMachine#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#resource_group_name LinuxVirtualMachine#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#secure_boot_enabled LinuxVirtualMachine#secure_boot_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#secure_boot_enabled LinuxVirtualMachine#secure_boot_enabled}
   */
   readonly secureBootEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#size LinuxVirtualMachine#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#size LinuxVirtualMachine#size}
   */
   readonly size: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#source_image_id LinuxVirtualMachine#source_image_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#source_image_id LinuxVirtualMachine#source_image_id}
   */
   readonly sourceImageId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#tags LinuxVirtualMachine#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#tags LinuxVirtualMachine#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#user_data LinuxVirtualMachine#user_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#user_data LinuxVirtualMachine#user_data}
   */
   readonly userData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#virtual_machine_scale_set_id LinuxVirtualMachine#virtual_machine_scale_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#virtual_machine_scale_set_id LinuxVirtualMachine#virtual_machine_scale_set_id}
   */
   readonly virtualMachineScaleSetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#vtpm_enabled LinuxVirtualMachine#vtpm_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#vm_agent_platform_updates_enabled LinuxVirtualMachine#vm_agent_platform_updates_enabled}
+  */
+  readonly vmAgentPlatformUpdatesEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#vtpm_enabled LinuxVirtualMachine#vtpm_enabled}
   */
   readonly vtpmEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#zone LinuxVirtualMachine#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#zone LinuxVirtualMachine#zone}
   */
   readonly zone?: string;
   /**
   * additional_capabilities block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#additional_capabilities LinuxVirtualMachine#additional_capabilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#additional_capabilities LinuxVirtualMachine#additional_capabilities}
   */
   readonly additionalCapabilities?: LinuxVirtualMachineAdditionalCapabilities;
   /**
   * admin_ssh_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#admin_ssh_key LinuxVirtualMachine#admin_ssh_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#admin_ssh_key LinuxVirtualMachine#admin_ssh_key}
   */
   readonly adminSshKey?: LinuxVirtualMachineAdminSshKey[] | cdktf.IResolvable;
   /**
   * boot_diagnostics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#boot_diagnostics LinuxVirtualMachine#boot_diagnostics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#boot_diagnostics LinuxVirtualMachine#boot_diagnostics}
   */
   readonly bootDiagnostics?: LinuxVirtualMachineBootDiagnostics;
   /**
   * gallery_application block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#gallery_application LinuxVirtualMachine#gallery_application}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#gallery_application LinuxVirtualMachine#gallery_application}
   */
   readonly galleryApplication?: LinuxVirtualMachineGalleryApplication[] | cdktf.IResolvable;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#identity LinuxVirtualMachine#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#identity LinuxVirtualMachine#identity}
   */
   readonly identity?: LinuxVirtualMachineIdentity;
   /**
   * os_disk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#os_disk LinuxVirtualMachine#os_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#os_disk LinuxVirtualMachine#os_disk}
   */
   readonly osDisk: LinuxVirtualMachineOsDisk;
   /**
+  * os_image_notification block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#os_image_notification LinuxVirtualMachine#os_image_notification}
+  */
+  readonly osImageNotification?: LinuxVirtualMachineOsImageNotification;
+  /**
   * plan block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#plan LinuxVirtualMachine#plan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#plan LinuxVirtualMachine#plan}
   */
   readonly plan?: LinuxVirtualMachinePlan;
   /**
   * secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#secret LinuxVirtualMachine#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#secret LinuxVirtualMachine#secret}
   */
   readonly secret?: LinuxVirtualMachineSecret[] | cdktf.IResolvable;
   /**
   * source_image_reference block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#source_image_reference LinuxVirtualMachine#source_image_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#source_image_reference LinuxVirtualMachine#source_image_reference}
   */
   readonly sourceImageReference?: LinuxVirtualMachineSourceImageReference;
   /**
   * termination_notification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#termination_notification LinuxVirtualMachine#termination_notification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#termination_notification LinuxVirtualMachine#termination_notification}
   */
   readonly terminationNotification?: LinuxVirtualMachineTerminationNotification;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#timeouts LinuxVirtualMachine#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#timeouts LinuxVirtualMachine#timeouts}
   */
   readonly timeouts?: LinuxVirtualMachineTimeouts;
 }
 export interface LinuxVirtualMachineAdditionalCapabilities {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#ultra_ssd_enabled LinuxVirtualMachine#ultra_ssd_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#ultra_ssd_enabled LinuxVirtualMachine#ultra_ssd_enabled}
   */
   readonly ultraSsdEnabled?: boolean | cdktf.IResolvable;
 }
@@ -316,11 +330,11 @@ export class LinuxVirtualMachineAdditionalCapabilitiesOutputReference extends cd
 }
 export interface LinuxVirtualMachineAdminSshKey {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#public_key LinuxVirtualMachine#public_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#public_key LinuxVirtualMachine#public_key}
   */
   readonly publicKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#username LinuxVirtualMachine#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#username LinuxVirtualMachine#username}
   */
   readonly username: string;
 }
@@ -459,7 +473,7 @@ export class LinuxVirtualMachineAdminSshKeyList extends cdktf.ComplexList {
 }
 export interface LinuxVirtualMachineBootDiagnostics {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#storage_account_uri LinuxVirtualMachine#storage_account_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#storage_account_uri LinuxVirtualMachine#storage_account_uri}
   */
   readonly storageAccountUri?: string;
 }
@@ -543,19 +557,27 @@ export class LinuxVirtualMachineBootDiagnosticsOutputReference extends cdktf.Com
 }
 export interface LinuxVirtualMachineGalleryApplication {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#configuration_blob_uri LinuxVirtualMachine#configuration_blob_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#automatic_upgrade_enabled LinuxVirtualMachine#automatic_upgrade_enabled}
+  */
+  readonly automaticUpgradeEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#configuration_blob_uri LinuxVirtualMachine#configuration_blob_uri}
   */
   readonly configurationBlobUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#order LinuxVirtualMachine#order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#order LinuxVirtualMachine#order}
   */
   readonly order?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#tag LinuxVirtualMachine#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#tag LinuxVirtualMachine#tag}
   */
   readonly tag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#version_id LinuxVirtualMachine#version_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#treat_failure_as_deployment_failure_enabled LinuxVirtualMachine#treat_failure_as_deployment_failure_enabled}
+  */
+  readonly treatFailureAsDeploymentFailureEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#version_id LinuxVirtualMachine#version_id}
   */
   readonly versionId: string;
 }
@@ -566,9 +588,11 @@ export function linuxVirtualMachineGalleryApplicationToTerraform(struct?: LinuxV
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    automatic_upgrade_enabled: cdktf.booleanToTerraform(struct!.automaticUpgradeEnabled),
     configuration_blob_uri: cdktf.stringToTerraform(struct!.configurationBlobUri),
     order: cdktf.numberToTerraform(struct!.order),
     tag: cdktf.stringToTerraform(struct!.tag),
+    treat_failure_as_deployment_failure_enabled: cdktf.booleanToTerraform(struct!.treatFailureAsDeploymentFailureEnabled),
     version_id: cdktf.stringToTerraform(struct!.versionId),
   }
 }
@@ -580,6 +604,12 @@ export function linuxVirtualMachineGalleryApplicationToHclTerraform(struct?: Lin
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
+    automatic_upgrade_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.automaticUpgradeEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
     configuration_blob_uri: {
       value: cdktf.stringToHclTerraform(struct!.configurationBlobUri),
       isBlock: false,
@@ -597,6 +627,12 @@ export function linuxVirtualMachineGalleryApplicationToHclTerraform(struct?: Lin
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    treat_failure_as_deployment_failure_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.treatFailureAsDeploymentFailureEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
     },
     version_id: {
       value: cdktf.stringToHclTerraform(struct!.versionId),
@@ -630,6 +666,10 @@ export class LinuxVirtualMachineGalleryApplicationOutputReference extends cdktf.
     }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._automaticUpgradeEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.automaticUpgradeEnabled = this._automaticUpgradeEnabled;
+    }
     if (this._configurationBlobUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.configurationBlobUri = this._configurationBlobUri;
@@ -642,6 +682,10 @@ export class LinuxVirtualMachineGalleryApplicationOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.tag = this._tag;
     }
+    if (this._treatFailureAsDeploymentFailureEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.treatFailureAsDeploymentFailureEnabled = this._treatFailureAsDeploymentFailureEnabled;
+    }
     if (this._versionId !== undefined) {
       hasAnyValues = true;
       internalValueResult.versionId = this._versionId;
@@ -653,9 +697,11 @@ export class LinuxVirtualMachineGalleryApplicationOutputReference extends cdktf.
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
+      this._automaticUpgradeEnabled = undefined;
       this._configurationBlobUri = undefined;
       this._order = undefined;
       this._tag = undefined;
+      this._treatFailureAsDeploymentFailureEnabled = undefined;
       this._versionId = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -665,11 +711,29 @@ export class LinuxVirtualMachineGalleryApplicationOutputReference extends cdktf.
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
+      this._automaticUpgradeEnabled = value.automaticUpgradeEnabled;
       this._configurationBlobUri = value.configurationBlobUri;
       this._order = value.order;
       this._tag = value.tag;
+      this._treatFailureAsDeploymentFailureEnabled = value.treatFailureAsDeploymentFailureEnabled;
       this._versionId = value.versionId;
     }
+  }
+
+  // automatic_upgrade_enabled - computed: false, optional: true, required: false
+  private _automaticUpgradeEnabled?: boolean | cdktf.IResolvable; 
+  public get automaticUpgradeEnabled() {
+    return this.getBooleanAttribute('automatic_upgrade_enabled');
+  }
+  public set automaticUpgradeEnabled(value: boolean | cdktf.IResolvable) {
+    this._automaticUpgradeEnabled = value;
+  }
+  public resetAutomaticUpgradeEnabled() {
+    this._automaticUpgradeEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticUpgradeEnabledInput() {
+    return this._automaticUpgradeEnabled;
   }
 
   // configuration_blob_uri - computed: false, optional: true, required: false
@@ -720,6 +784,22 @@ export class LinuxVirtualMachineGalleryApplicationOutputReference extends cdktf.
     return this._tag;
   }
 
+  // treat_failure_as_deployment_failure_enabled - computed: false, optional: true, required: false
+  private _treatFailureAsDeploymentFailureEnabled?: boolean | cdktf.IResolvable; 
+  public get treatFailureAsDeploymentFailureEnabled() {
+    return this.getBooleanAttribute('treat_failure_as_deployment_failure_enabled');
+  }
+  public set treatFailureAsDeploymentFailureEnabled(value: boolean | cdktf.IResolvable) {
+    this._treatFailureAsDeploymentFailureEnabled = value;
+  }
+  public resetTreatFailureAsDeploymentFailureEnabled() {
+    this._treatFailureAsDeploymentFailureEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get treatFailureAsDeploymentFailureEnabledInput() {
+    return this._treatFailureAsDeploymentFailureEnabled;
+  }
+
   // version_id - computed: false, optional: false, required: true
   private _versionId?: string; 
   public get versionId() {
@@ -755,11 +835,11 @@ export class LinuxVirtualMachineGalleryApplicationList extends cdktf.ComplexList
 }
 export interface LinuxVirtualMachineIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#identity_ids LinuxVirtualMachine#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#identity_ids LinuxVirtualMachine#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#type LinuxVirtualMachine#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#type LinuxVirtualMachine#type}
   */
   readonly type: string;
 }
@@ -879,11 +959,11 @@ export class LinuxVirtualMachineIdentityOutputReference extends cdktf.ComplexObj
 }
 export interface LinuxVirtualMachineOsDiskDiffDiskSettings {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#option LinuxVirtualMachine#option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#option LinuxVirtualMachine#option}
   */
   readonly option: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#placement LinuxVirtualMachine#placement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#placement LinuxVirtualMachine#placement}
   */
   readonly placement?: string;
 }
@@ -993,41 +1073,41 @@ export class LinuxVirtualMachineOsDiskDiffDiskSettingsOutputReference extends cd
 }
 export interface LinuxVirtualMachineOsDisk {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#caching LinuxVirtualMachine#caching}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#caching LinuxVirtualMachine#caching}
   */
   readonly caching: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#disk_encryption_set_id LinuxVirtualMachine#disk_encryption_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#disk_encryption_set_id LinuxVirtualMachine#disk_encryption_set_id}
   */
   readonly diskEncryptionSetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#disk_size_gb LinuxVirtualMachine#disk_size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#disk_size_gb LinuxVirtualMachine#disk_size_gb}
   */
   readonly diskSizeGb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#name LinuxVirtualMachine#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#name LinuxVirtualMachine#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#secure_vm_disk_encryption_set_id LinuxVirtualMachine#secure_vm_disk_encryption_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#secure_vm_disk_encryption_set_id LinuxVirtualMachine#secure_vm_disk_encryption_set_id}
   */
   readonly secureVmDiskEncryptionSetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#security_encryption_type LinuxVirtualMachine#security_encryption_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#security_encryption_type LinuxVirtualMachine#security_encryption_type}
   */
   readonly securityEncryptionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#storage_account_type LinuxVirtualMachine#storage_account_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#storage_account_type LinuxVirtualMachine#storage_account_type}
   */
   readonly storageAccountType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#write_accelerator_enabled LinuxVirtualMachine#write_accelerator_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#write_accelerator_enabled LinuxVirtualMachine#write_accelerator_enabled}
   */
   readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
   /**
   * diff_disk_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#diff_disk_settings LinuxVirtualMachine#diff_disk_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#diff_disk_settings LinuxVirtualMachine#diff_disk_settings}
   */
   readonly diffDiskSettings?: LinuxVirtualMachineOsDiskDiffDiskSettings;
 }
@@ -1335,17 +1415,101 @@ export class LinuxVirtualMachineOsDiskOutputReference extends cdktf.ComplexObjec
     return this._diffDiskSettings.internalValue;
   }
 }
+export interface LinuxVirtualMachineOsImageNotification {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#timeout LinuxVirtualMachine#timeout}
+  */
+  readonly timeout?: string;
+}
+
+export function linuxVirtualMachineOsImageNotificationToTerraform(struct?: LinuxVirtualMachineOsImageNotificationOutputReference | LinuxVirtualMachineOsImageNotification): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    timeout: cdktf.stringToTerraform(struct!.timeout),
+  }
+}
+
+
+export function linuxVirtualMachineOsImageNotificationToHclTerraform(struct?: LinuxVirtualMachineOsImageNotificationOutputReference | LinuxVirtualMachineOsImageNotification): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    timeout: {
+      value: cdktf.stringToHclTerraform(struct!.timeout),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class LinuxVirtualMachineOsImageNotificationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): LinuxVirtualMachineOsImageNotification | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._timeout !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineOsImageNotification | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._timeout = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._timeout = value.timeout;
+    }
+  }
+
+  // timeout - computed: false, optional: true, required: false
+  private _timeout?: string; 
+  public get timeout() {
+    return this.getStringAttribute('timeout');
+  }
+  public set timeout(value: string) {
+    this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout;
+  }
+}
 export interface LinuxVirtualMachinePlan {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#name LinuxVirtualMachine#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#name LinuxVirtualMachine#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#product LinuxVirtualMachine#product}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#product LinuxVirtualMachine#product}
   */
   readonly product: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#publisher LinuxVirtualMachine#publisher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#publisher LinuxVirtualMachine#publisher}
   */
   readonly publisher: string;
 }
@@ -1478,7 +1642,7 @@ export class LinuxVirtualMachinePlanOutputReference extends cdktf.ComplexObject 
 }
 export interface LinuxVirtualMachineSecretCertificate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#url LinuxVirtualMachine#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#url LinuxVirtualMachine#url}
   */
   readonly url: string;
 }
@@ -1591,13 +1755,13 @@ export class LinuxVirtualMachineSecretCertificateList extends cdktf.ComplexList 
 }
 export interface LinuxVirtualMachineSecret {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#key_vault_id LinuxVirtualMachine#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#key_vault_id LinuxVirtualMachine#key_vault_id}
   */
   readonly keyVaultId: string;
   /**
   * certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#certificate LinuxVirtualMachine#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#certificate LinuxVirtualMachine#certificate}
   */
   readonly certificate: LinuxVirtualMachineSecretCertificate[] | cdktf.IResolvable;
 }
@@ -1736,19 +1900,19 @@ export class LinuxVirtualMachineSecretList extends cdktf.ComplexList {
 }
 export interface LinuxVirtualMachineSourceImageReference {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#offer LinuxVirtualMachine#offer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#offer LinuxVirtualMachine#offer}
   */
   readonly offer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#publisher LinuxVirtualMachine#publisher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#publisher LinuxVirtualMachine#publisher}
   */
   readonly publisher: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#sku LinuxVirtualMachine#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#sku LinuxVirtualMachine#sku}
   */
   readonly sku: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#version LinuxVirtualMachine#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#version LinuxVirtualMachine#version}
   */
   readonly version: string;
 }
@@ -1907,11 +2071,11 @@ export class LinuxVirtualMachineSourceImageReferenceOutputReference extends cdkt
 }
 export interface LinuxVirtualMachineTerminationNotification {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#enabled LinuxVirtualMachine#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#enabled LinuxVirtualMachine#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#timeout LinuxVirtualMachine#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#timeout LinuxVirtualMachine#timeout}
   */
   readonly timeout?: string;
 }
@@ -2021,19 +2185,19 @@ export class LinuxVirtualMachineTerminationNotificationOutputReference extends c
 }
 export interface LinuxVirtualMachineTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#create LinuxVirtualMachine#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#create LinuxVirtualMachine#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#delete LinuxVirtualMachine#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#delete LinuxVirtualMachine#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#read LinuxVirtualMachine#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#read LinuxVirtualMachine#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#update LinuxVirtualMachine#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#update LinuxVirtualMachine#update}
   */
   readonly update?: string;
 }
@@ -2214,7 +2378,7 @@ export class LinuxVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine azurerm_linux_virtual_machine}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine azurerm_linux_virtual_machine}
 */
 export class LinuxVirtualMachine extends cdktf.TerraformResource {
 
@@ -2230,7 +2394,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a LinuxVirtualMachine resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the LinuxVirtualMachine to import
-  * @param importFromId The id of the existing LinuxVirtualMachine that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing LinuxVirtualMachine that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the LinuxVirtualMachine to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2242,7 +2406,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/linux_virtual_machine azurerm_linux_virtual_machine} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/linux_virtual_machine azurerm_linux_virtual_machine} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2253,7 +2417,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_virtual_machine',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.93.0',
+        providerVersion: '3.94.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2275,6 +2439,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     this._dedicatedHostGroupId = config.dedicatedHostGroupId;
     this._dedicatedHostId = config.dedicatedHostId;
     this._disablePasswordAuthentication = config.disablePasswordAuthentication;
+    this._diskControllerType = config.diskControllerType;
     this._edgeZone = config.edgeZone;
     this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
@@ -2299,6 +2464,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._userData = config.userData;
     this._virtualMachineScaleSetId = config.virtualMachineScaleSetId;
+    this._vmAgentPlatformUpdatesEnabled = config.vmAgentPlatformUpdatesEnabled;
     this._vtpmEnabled = config.vtpmEnabled;
     this._zone = config.zone;
     this._additionalCapabilities.internalValue = config.additionalCapabilities;
@@ -2307,6 +2473,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     this._galleryApplication.internalValue = config.galleryApplication;
     this._identity.internalValue = config.identity;
     this._osDisk.internalValue = config.osDisk;
+    this._osImageNotification.internalValue = config.osImageNotification;
     this._plan.internalValue = config.plan;
     this._secret.internalValue = config.secret;
     this._sourceImageReference.internalValue = config.sourceImageReference;
@@ -2489,6 +2656,22 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get disablePasswordAuthenticationInput() {
     return this._disablePasswordAuthentication;
+  }
+
+  // disk_controller_type - computed: true, optional: true, required: false
+  private _diskControllerType?: string; 
+  public get diskControllerType() {
+    return this.getStringAttribute('disk_controller_type');
+  }
+  public set diskControllerType(value: string) {
+    this._diskControllerType = value;
+  }
+  public resetDiskControllerType() {
+    this._diskControllerType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskControllerTypeInput() {
+    return this._diskControllerType;
   }
 
   // edge_zone - computed: false, optional: true, required: false
@@ -2885,6 +3068,22 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     return this._virtualMachineScaleSetId;
   }
 
+  // vm_agent_platform_updates_enabled - computed: false, optional: true, required: false
+  private _vmAgentPlatformUpdatesEnabled?: boolean | cdktf.IResolvable; 
+  public get vmAgentPlatformUpdatesEnabled() {
+    return this.getBooleanAttribute('vm_agent_platform_updates_enabled');
+  }
+  public set vmAgentPlatformUpdatesEnabled(value: boolean | cdktf.IResolvable) {
+    this._vmAgentPlatformUpdatesEnabled = value;
+  }
+  public resetVmAgentPlatformUpdatesEnabled() {
+    this._vmAgentPlatformUpdatesEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vmAgentPlatformUpdatesEnabledInput() {
+    return this._vmAgentPlatformUpdatesEnabled;
+  }
+
   // vtpm_enabled - computed: false, optional: true, required: false
   private _vtpmEnabled?: boolean | cdktf.IResolvable; 
   public get vtpmEnabled() {
@@ -3010,6 +3209,22 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     return this._osDisk.internalValue;
   }
 
+  // os_image_notification - computed: false, optional: true, required: false
+  private _osImageNotification = new LinuxVirtualMachineOsImageNotificationOutputReference(this, "os_image_notification");
+  public get osImageNotification() {
+    return this._osImageNotification;
+  }
+  public putOsImageNotification(value: LinuxVirtualMachineOsImageNotification) {
+    this._osImageNotification.internalValue = value;
+  }
+  public resetOsImageNotification() {
+    this._osImageNotification.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osImageNotificationInput() {
+    return this._osImageNotification.internalValue;
+  }
+
   // plan - computed: false, optional: true, required: false
   private _plan = new LinuxVirtualMachinePlanOutputReference(this, "plan");
   public get plan() {
@@ -3107,6 +3322,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       dedicated_host_group_id: cdktf.stringToTerraform(this._dedicatedHostGroupId),
       dedicated_host_id: cdktf.stringToTerraform(this._dedicatedHostId),
       disable_password_authentication: cdktf.booleanToTerraform(this._disablePasswordAuthentication),
+      disk_controller_type: cdktf.stringToTerraform(this._diskControllerType),
       edge_zone: cdktf.stringToTerraform(this._edgeZone),
       encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
@@ -3131,6 +3347,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       user_data: cdktf.stringToTerraform(this._userData),
       virtual_machine_scale_set_id: cdktf.stringToTerraform(this._virtualMachineScaleSetId),
+      vm_agent_platform_updates_enabled: cdktf.booleanToTerraform(this._vmAgentPlatformUpdatesEnabled),
       vtpm_enabled: cdktf.booleanToTerraform(this._vtpmEnabled),
       zone: cdktf.stringToTerraform(this._zone),
       additional_capabilities: linuxVirtualMachineAdditionalCapabilitiesToTerraform(this._additionalCapabilities.internalValue),
@@ -3139,6 +3356,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       gallery_application: cdktf.listMapper(linuxVirtualMachineGalleryApplicationToTerraform, true)(this._galleryApplication.internalValue),
       identity: linuxVirtualMachineIdentityToTerraform(this._identity.internalValue),
       os_disk: linuxVirtualMachineOsDiskToTerraform(this._osDisk.internalValue),
+      os_image_notification: linuxVirtualMachineOsImageNotificationToTerraform(this._osImageNotification.internalValue),
       plan: linuxVirtualMachinePlanToTerraform(this._plan.internalValue),
       secret: cdktf.listMapper(linuxVirtualMachineSecretToTerraform, true)(this._secret.internalValue),
       source_image_reference: linuxVirtualMachineSourceImageReferenceToTerraform(this._sourceImageReference.internalValue),
@@ -3214,6 +3432,12 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
+      },
+      disk_controller_type: {
+        value: cdktf.stringToHclTerraform(this._diskControllerType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
       },
       edge_zone: {
         value: cdktf.stringToHclTerraform(this._edgeZone),
@@ -3359,6 +3583,12 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
+      vm_agent_platform_updates_enabled: {
+        value: cdktf.booleanToHclTerraform(this._vmAgentPlatformUpdatesEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
       vtpm_enabled: {
         value: cdktf.booleanToHclTerraform(this._vtpmEnabled),
         isBlock: false,
@@ -3406,6 +3636,12 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "LinuxVirtualMachineOsDiskList",
+      },
+      os_image_notification: {
+        value: linuxVirtualMachineOsImageNotificationToHclTerraform(this._osImageNotification.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LinuxVirtualMachineOsImageNotificationList",
       },
       plan: {
         value: linuxVirtualMachinePlanToHclTerraform(this._plan.internalValue),

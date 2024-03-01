@@ -461,6 +461,7 @@ export * as kubernetesClusterNodePool from './kubernetes-cluster-node-pool';
 export * as kubernetesClusterTrustedAccessRoleBinding from './kubernetes-cluster-trusted-access-role-binding';
 export * as kubernetesFleetManager from './kubernetes-fleet-manager';
 export * as kubernetesFleetMember from './kubernetes-fleet-member';
+export * as kubernetesFleetUpdateRun from './kubernetes-fleet-update-run';
 export * as kubernetesFleetUpdateStrategy from './kubernetes-fleet-update-strategy';
 export * as kubernetesFluxConfiguration from './kubernetes-flux-configuration';
 export * as kustoAttachedDatabaseConfiguration from './kusto-attached-database-configuration';

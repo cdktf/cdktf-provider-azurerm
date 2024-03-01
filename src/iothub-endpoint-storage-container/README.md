@@ -1,3 +1,3 @@
 # `azurerm_iothub_endpoint_storage_container`
 
-Refer to the Terraform Registry for docs: [`azurerm_iothub_endpoint_storage_container`](https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/iothub_endpoint_storage_container).
+Refer to the Terraform Registry for docs: [`azurerm_iothub_endpoint_storage_container`](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/iothub_endpoint_storage_container).

@@ -806,6 +806,7 @@ The following submodules are available:
 - [kubernetesClusterTrustedAccessRoleBinding](./kubernetesClusterTrustedAccessRoleBinding.typescript.md)
 - [kubernetesFleetManager](./kubernetesFleetManager.typescript.md)
 - [kubernetesFleetMember](./kubernetesFleetMember.typescript.md)
+- [kubernetesFleetUpdateRun](./kubernetesFleetUpdateRun.typescript.md)
 - [kubernetesFleetUpdateStrategy](./kubernetesFleetUpdateStrategy.typescript.md)
 - [kubernetesFluxConfiguration](./kubernetesFluxConfiguration.typescript.md)
 - [kustoAttachedDatabaseConfiguration](./kustoAttachedDatabaseConfiguration.typescript.md)

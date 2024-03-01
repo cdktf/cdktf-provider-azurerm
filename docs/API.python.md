@@ -806,6 +806,7 @@ The following submodules are available:
 - [kubernetesClusterTrustedAccessRoleBinding](./kubernetesClusterTrustedAccessRoleBinding.python.md)
 - [kubernetesFleetManager](./kubernetesFleetManager.python.md)
 - [kubernetesFleetMember](./kubernetesFleetMember.python.md)
+- [kubernetesFleetUpdateRun](./kubernetesFleetUpdateRun.python.md)
 - [kubernetesFleetUpdateStrategy](./kubernetesFleetUpdateStrategy.python.md)
 - [kubernetesFluxConfiguration](./kubernetesFluxConfiguration.python.md)
 - [kustoAttachedDatabaseConfiguration](./kustoAttachedDatabaseConfiguration.python.md)

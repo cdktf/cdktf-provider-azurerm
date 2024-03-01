@@ -1,3 +1,3 @@
 # `azurerm_disk_pool`
 
-Refer to the Terraform Registry for docs: [`azurerm_disk_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_pool).
+Refer to the Terraform Registry for docs: [`azurerm_disk_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_pool).
