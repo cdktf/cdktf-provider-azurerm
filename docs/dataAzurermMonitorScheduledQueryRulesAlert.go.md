@@ -4,12 +4,12 @@
 
 ### DataAzurermMonitorScheduledQueryRulesAlert <a name="DataAzurermMonitorScheduledQueryRulesAlert" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlert"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/monitor_scheduled_query_rules_alert azurerm_monitor_scheduled_query_rules_alert}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/monitor_scheduled_query_rules_alert azurerm_monitor_scheduled_query_rules_alert}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlert.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 dataazurermmonitorscheduledqueryrulesalert.NewDataAzurermMonitorScheduledQueryRulesAlert(scope Construct, id *string, config DataAzurermMonitorScheduledQueryRulesAlertConfig) DataAzurermMonitorScheduledQueryRulesAlert
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlert.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 dataazurermmonitorscheduledqueryrulesalert.DataAzurermMonitorScheduledQueryRulesAlert_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlert.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 dataazurermmonitorscheduledqueryrulesalert.DataAzurermMonitorScheduledQueryRulesAlert_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermmonitorscheduledqueryrulesalert.DataAzurermMonitorScheduledQueryRules
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlert.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 dataazurermmonitorscheduledqueryrulesalert.DataAzurermMonitorScheduledQueryRulesAlert_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermmonitorscheduledqueryrulesalert.DataAzurermMonitorScheduledQueryRules
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlert.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 dataazurermmonitorscheduledqueryrulesalert.DataAzurermMonitorScheduledQueryRulesAlert_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermMonitorSchedule
 
 The id of the existing DataAzurermMonitorScheduledQueryRulesAlert that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/monitor_scheduled_query_rules_alert#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/monitor_scheduled_query_rules_alert#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -812,7 +812,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 &dataazurermmonitorscheduledqueryrulesalert.DataAzurermMonitorScheduledQueryRulesAlertAction {
 
@@ -825,7 +825,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 &dataazurermmonitorscheduledqueryrulesalert.DataAzurermMonitorScheduledQueryRulesAlertConfig {
 	Connection: interface{},
@@ -838,7 +838,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonito
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertTimeouts,
 }
 ```
 
@@ -853,9 +853,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonito
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/monitor_scheduled_query_rules_alert#name DataAzurermMonitorScheduledQueryRulesAlert#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/monitor_scheduled_query_rules_alert#resource_group_name DataAzurermMonitorScheduledQueryRulesAlert#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/monitor_scheduled_query_rules_alert#id DataAzurermMonitorScheduledQueryRulesAlert#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/monitor_scheduled_query_rules_alert#name DataAzurermMonitorScheduledQueryRulesAlert#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/monitor_scheduled_query_rules_alert#resource_group_name DataAzurermMonitorScheduledQueryRulesAlert#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/monitor_scheduled_query_rules_alert#id DataAzurermMonitorScheduledQueryRulesAlert#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertTimeouts">DataAzurermMonitorScheduledQueryRulesAlertTimeouts</a></code> | timeouts block. |
 
 ---
@@ -938,7 +938,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/monitor_scheduled_query_rules_alert#name DataAzurermMonitorScheduledQueryRulesAlert#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/monitor_scheduled_query_rules_alert#name DataAzurermMonitorScheduledQueryRulesAlert#name}.
 
 ---
 
@@ -950,7 +950,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/monitor_scheduled_query_rules_alert#resource_group_name DataAzurermMonitorScheduledQueryRulesAlert#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/monitor_scheduled_query_rules_alert#resource_group_name DataAzurermMonitorScheduledQueryRulesAlert#resource_group_name}.
 
 ---
 
@@ -962,7 +962,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/monitor_scheduled_query_rules_alert#id DataAzurermMonitorScheduledQueryRulesAlert#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/monitor_scheduled_query_rules_alert#id DataAzurermMonitorScheduledQueryRulesAlert#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -979,7 +979,7 @@ Timeouts DataAzurermMonitorScheduledQueryRulesAlertTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/monitor_scheduled_query_rules_alert#timeouts DataAzurermMonitorScheduledQueryRulesAlert#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/monitor_scheduled_query_rules_alert#timeouts DataAzurermMonitorScheduledQueryRulesAlert#timeouts}
 
 ---
 
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 &dataazurermmonitorscheduledqueryrulesalert.DataAzurermMonitorScheduledQueryRulesAlertTimeouts {
 	Read: *string,
@@ -999,7 +999,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonito
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/monitor_scheduled_query_rules_alert#read DataAzurermMonitorScheduledQueryRulesAlert#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/monitor_scheduled_query_rules_alert#read DataAzurermMonitorScheduledQueryRulesAlert#read}. |
 
 ---
 
@@ -1011,7 +1011,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/monitor_scheduled_query_rules_alert#read DataAzurermMonitorScheduledQueryRulesAlert#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/monitor_scheduled_query_rules_alert#read DataAzurermMonitorScheduledQueryRulesAlert#read}.
 
 ---
 
@@ -1020,7 +1020,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertTrigger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 &dataazurermmonitorscheduledqueryrulesalert.DataAzurermMonitorScheduledQueryRulesAlertTrigger {
 
@@ -1033,7 +1033,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertTriggerMetricTrigger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 &dataazurermmonitorscheduledqueryrulesalert.DataAzurermMonitorScheduledQueryRulesAlertTriggerMetricTrigger {
 
@@ -1048,7 +1048,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonito
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 dataazurermmonitorscheduledqueryrulesalert.NewDataAzurermMonitorScheduledQueryRulesAlertActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorScheduledQueryRulesAlertActionList
 ```
@@ -1197,7 +1197,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 dataazurermmonitorscheduledqueryrulesalert.NewDataAzurermMonitorScheduledQueryRulesAlertActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorScheduledQueryRulesAlertActionOutputReference
 ```
@@ -1497,7 +1497,7 @@ func InternalValue() DataAzurermMonitorScheduledQueryRulesAlertAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 dataazurermmonitorscheduledqueryrulesalert.NewDataAzurermMonitorScheduledQueryRulesAlertTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMonitorScheduledQueryRulesAlertTimeoutsOutputReference
 ```
@@ -1775,7 +1775,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertTriggerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 dataazurermmonitorscheduledqueryrulesalert.NewDataAzurermMonitorScheduledQueryRulesAlertTriggerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorScheduledQueryRulesAlertTriggerList
 ```
@@ -1924,7 +1924,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertTriggerMetricTriggerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 dataazurermmonitorscheduledqueryrulesalert.NewDataAzurermMonitorScheduledQueryRulesAlertTriggerMetricTriggerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorScheduledQueryRulesAlertTriggerMetricTriggerList
 ```
@@ -2073,7 +2073,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 dataazurermmonitorscheduledqueryrulesalert.NewDataAzurermMonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference
 ```
@@ -2384,7 +2384,7 @@ func InternalValue() DataAzurermMonitorScheduledQueryRulesAlertTriggerMetricTrig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorScheduledQueryRulesAlert.DataAzurermMonitorScheduledQueryRulesAlertTriggerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmonitorscheduledqueryrulesalert"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitorscheduledqueryrulesalert"
 
 dataazurermmonitorscheduledqueryrulesalert.NewDataAzurermMonitorScheduledQueryRulesAlertTriggerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorScheduledQueryRulesAlertTriggerOutputReference
 ```

@@ -806,6 +806,7 @@ The following submodules are available:
 - [kubernetesClusterTrustedAccessRoleBinding](./kubernetesClusterTrustedAccessRoleBinding.go.md)
 - [kubernetesFleetManager](./kubernetesFleetManager.go.md)
 - [kubernetesFleetMember](./kubernetesFleetMember.go.md)
+- [kubernetesFleetUpdateRun](./kubernetesFleetUpdateRun.go.md)
 - [kubernetesFleetUpdateStrategy](./kubernetesFleetUpdateStrategy.go.md)
 - [kubernetesFluxConfiguration](./kubernetesFluxConfiguration.go.md)
 - [kustoAttachedDatabaseConfiguration](./kustoAttachedDatabaseConfiguration.go.md)

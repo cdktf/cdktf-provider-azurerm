@@ -4,12 +4,12 @@
 
 ### LogicAppActionCustom <a name="LogicAppActionCustom" id="@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustom"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom azurerm_logic_app_action_custom}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom azurerm_logic_app_action_custom}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustom.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/logicappactioncustom"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactioncustom"
 
 logicappactioncustom.NewLogicAppActionCustom(scope Construct, id *string, config LogicAppActionCustomConfig) LogicAppActionCustom
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustom.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/logicappactioncustom"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactioncustom"
 
 logicappactioncustom.LogicAppActionCustom_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustom.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/logicappactioncustom"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactioncustom"
 
 logicappactioncustom.LogicAppActionCustom_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ logicappactioncustom.LogicAppActionCustom_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustom.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/logicappactioncustom"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactioncustom"
 
 logicappactioncustom.LogicAppActionCustom_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ logicappactioncustom.LogicAppActionCustom_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustom.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/logicappactioncustom"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactioncustom"
 
 logicappactioncustom.LogicAppActionCustom_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -494,7 +494,7 @@ The construct id used in the generated config for the LogicAppActionCustom to im
 
 The id of the existing LogicAppActionCustom that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -804,7 +804,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/logicappactioncustom"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactioncustom"
 
 &logicappactioncustom.LogicAppActionCustomConfig {
 	Connection: interface{},
@@ -818,7 +818,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/logicappactioncus
 	LogicAppId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.logicAppActionCustom.LogicAppActionCustomTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logicAppActionCustom.LogicAppActionCustomTimeouts,
 }
 ```
 
@@ -833,10 +833,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/logicappactioncus
 | <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomConfig.property.body">Body</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#body LogicAppActionCustom#body}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomConfig.property.logicAppId">LogicAppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#logic_app_id LogicAppActionCustom#logic_app_id}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#name LogicAppActionCustom#name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#id LogicAppActionCustom#id}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomConfig.property.body">Body</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#body LogicAppActionCustom#body}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomConfig.property.logicAppId">LogicAppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#logic_app_id LogicAppActionCustom#logic_app_id}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#name LogicAppActionCustom#name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#id LogicAppActionCustom#id}. |
 | <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomTimeouts">LogicAppActionCustomTimeouts</a></code> | timeouts block. |
 
 ---
@@ -919,7 +919,7 @@ Body *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#body LogicAppActionCustom#body}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#body LogicAppActionCustom#body}.
 
 ---
 
@@ -931,7 +931,7 @@ LogicAppId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#logic_app_id LogicAppActionCustom#logic_app_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#logic_app_id LogicAppActionCustom#logic_app_id}.
 
 ---
 
@@ -943,7 +943,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#name LogicAppActionCustom#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#name LogicAppActionCustom#name}.
 
 ---
 
@@ -955,7 +955,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#id LogicAppActionCustom#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#id LogicAppActionCustom#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -972,7 +972,7 @@ Timeouts LogicAppActionCustomTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#timeouts LogicAppActionCustom#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#timeouts LogicAppActionCustom#timeouts}
 
 ---
 
@@ -981,7 +981,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/logicappactioncustom"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactioncustom"
 
 &logicappactioncustom.LogicAppActionCustomTimeouts {
 	Create: *string,
@@ -995,10 +995,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/logicappactioncus
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#create LogicAppActionCustom#create}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#delete LogicAppActionCustom#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#read LogicAppActionCustom#read}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#update LogicAppActionCustom#update}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#create LogicAppActionCustom#create}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#delete LogicAppActionCustom#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#read LogicAppActionCustom#read}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#update LogicAppActionCustom#update}. |
 
 ---
 
@@ -1010,7 +1010,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#create LogicAppActionCustom#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#create LogicAppActionCustom#create}.
 
 ---
 
@@ -1022,7 +1022,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#delete LogicAppActionCustom#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#delete LogicAppActionCustom#delete}.
 
 ---
 
@@ -1034,7 +1034,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#read LogicAppActionCustom#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#read LogicAppActionCustom#read}.
 
 ---
 
@@ -1046,7 +1046,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/logic_app_action_custom#update LogicAppActionCustom#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/logic_app_action_custom#update LogicAppActionCustom#update}.
 
 ---
 
@@ -1057,7 +1057,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppActionCustom.LogicAppActionCustomTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/logicappactioncustom"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactioncustom"
 
 logicappactioncustom.NewLogicAppActionCustomTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogicAppActionCustomTimeoutsOutputReference
 ```

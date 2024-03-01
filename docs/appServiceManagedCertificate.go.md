@@ -4,12 +4,12 @@
 
 ### AppServiceManagedCertificate <a name="AppServiceManagedCertificate" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate azurerm_app_service_managed_certificate}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate azurerm_app_service_managed_certificate}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicemanagedcertificate"
 
 appservicemanagedcertificate.NewAppServiceManagedCertificate(scope Construct, id *string, config AppServiceManagedCertificateConfig) AppServiceManagedCertificate
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicemanagedcertificate"
 
 appservicemanagedcertificate.AppServiceManagedCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicemanagedcertificate"
 
 appservicemanagedcertificate.AppServiceManagedCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ appservicemanagedcertificate.AppServiceManagedCertificate_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicemanagedcertificate"
 
 appservicemanagedcertificate.AppServiceManagedCertificate_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ appservicemanagedcertificate.AppServiceManagedCertificate_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicemanagedcertificate"
 
 appservicemanagedcertificate.AppServiceManagedCertificate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the AppServiceManagedCertifica
 
 The id of the existing AppServiceManagedCertificate that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -877,7 +877,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicemanagedcertificate"
 
 &appservicemanagedcertificate.AppServiceManagedCertificateConfig {
 	Connection: interface{},
@@ -890,7 +890,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanaged
 	CustomHostnameBindingId: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts,
 }
 ```
 
@@ -905,9 +905,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanaged
 | <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateConfig.property.customHostnameBindingId">CustomHostnameBindingId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#custom_hostname_binding_id AppServiceManagedCertificate#custom_hostname_binding_id}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#id AppServiceManagedCertificate#id}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#tags AppServiceManagedCertificate#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateConfig.property.customHostnameBindingId">CustomHostnameBindingId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#custom_hostname_binding_id AppServiceManagedCertificate#custom_hostname_binding_id}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#id AppServiceManagedCertificate#id}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#tags AppServiceManagedCertificate#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts">AppServiceManagedCertificateTimeouts</a></code> | timeouts block. |
 
 ---
@@ -990,7 +990,7 @@ CustomHostnameBindingId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#custom_hostname_binding_id AppServiceManagedCertificate#custom_hostname_binding_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#custom_hostname_binding_id AppServiceManagedCertificate#custom_hostname_binding_id}.
 
 ---
 
@@ -1002,7 +1002,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#id AppServiceManagedCertificate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#id AppServiceManagedCertificate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1017,7 +1017,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#tags AppServiceManagedCertificate#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#tags AppServiceManagedCertificate#tags}.
 
 ---
 
@@ -1031,7 +1031,7 @@ Timeouts AppServiceManagedCertificateTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#timeouts AppServiceManagedCertificate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#timeouts AppServiceManagedCertificate#timeouts}
 
 ---
 
@@ -1040,7 +1040,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicemanagedcertificate"
 
 &appservicemanagedcertificate.AppServiceManagedCertificateTimeouts {
 	Create: *string,
@@ -1054,10 +1054,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanaged
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#create AppServiceManagedCertificate#create}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#delete AppServiceManagedCertificate#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#read AppServiceManagedCertificate#read}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#update AppServiceManagedCertificate#update}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#create AppServiceManagedCertificate#create}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#delete AppServiceManagedCertificate#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#read AppServiceManagedCertificate#read}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#update AppServiceManagedCertificate#update}. |
 
 ---
 
@@ -1069,7 +1069,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#create AppServiceManagedCertificate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#create AppServiceManagedCertificate#create}.
 
 ---
 
@@ -1081,7 +1081,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#delete AppServiceManagedCertificate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#delete AppServiceManagedCertificate#delete}.
 
 ---
 
@@ -1093,7 +1093,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#read AppServiceManagedCertificate#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#read AppServiceManagedCertificate#read}.
 
 ---
 
@@ -1105,7 +1105,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/app_service_managed_certificate#update AppServiceManagedCertificate#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/app_service_managed_certificate#update AppServiceManagedCertificate#update}.
 
 ---
 
@@ -1116,7 +1116,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicemanagedcertificate"
 
 appservicemanagedcertificate.NewAppServiceManagedCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceManagedCertificateTimeoutsOutputReference
 ```

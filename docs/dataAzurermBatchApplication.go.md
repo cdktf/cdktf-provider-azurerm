@@ -4,12 +4,12 @@
 
 ### DataAzurermBatchApplication <a name="DataAzurermBatchApplication" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/batch_application azurerm_batch_application}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/batch_application azurerm_batch_application}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchapplication"
 
 dataazurermbatchapplication.NewDataAzurermBatchApplication(scope Construct, id *string, config DataAzurermBatchApplicationConfig) DataAzurermBatchApplication
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchapplication"
 
 dataazurermbatchapplication.DataAzurermBatchApplication_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchapplication"
 
 dataazurermbatchapplication.DataAzurermBatchApplication_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermbatchapplication.DataAzurermBatchApplication_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchapplication"
 
 dataazurermbatchapplication.DataAzurermBatchApplication_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermbatchapplication.DataAzurermBatchApplication_IsTerraformDataSource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplication.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchapplication"
 
 dataazurermbatchapplication.DataAzurermBatchApplication_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermBatchApplicatio
 
 The id of the existing DataAzurermBatchApplication that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/batch_application#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/batch_application#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -713,7 +713,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchapplication"
 
 &dataazurermbatchapplication.DataAzurermBatchApplicationConfig {
 	Connection: interface{},
@@ -727,7 +727,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermbatcha
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts,
 }
 ```
 
@@ -742,10 +742,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermbatcha
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/batch_application#account_name DataAzurermBatchApplication#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/batch_application#name DataAzurermBatchApplication#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/batch_application#resource_group_name DataAzurermBatchApplication#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/batch_application#id DataAzurermBatchApplication#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/batch_application#account_name DataAzurermBatchApplication#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/batch_application#name DataAzurermBatchApplication#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/batch_application#resource_group_name DataAzurermBatchApplication#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/batch_application#id DataAzurermBatchApplication#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts">DataAzurermBatchApplicationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -828,7 +828,7 @@ AccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/batch_application#account_name DataAzurermBatchApplication#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/batch_application#account_name DataAzurermBatchApplication#account_name}.
 
 ---
 
@@ -840,7 +840,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/batch_application#name DataAzurermBatchApplication#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/batch_application#name DataAzurermBatchApplication#name}.
 
 ---
 
@@ -852,7 +852,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/batch_application#resource_group_name DataAzurermBatchApplication#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/batch_application#resource_group_name DataAzurermBatchApplication#resource_group_name}.
 
 ---
 
@@ -864,7 +864,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/batch_application#id DataAzurermBatchApplication#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/batch_application#id DataAzurermBatchApplication#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -881,7 +881,7 @@ Timeouts DataAzurermBatchApplicationTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/batch_application#timeouts DataAzurermBatchApplication#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/batch_application#timeouts DataAzurermBatchApplication#timeouts}
 
 ---
 
@@ -890,7 +890,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchapplication"
 
 &dataazurermbatchapplication.DataAzurermBatchApplicationTimeouts {
 	Read: *string,
@@ -901,7 +901,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermbatcha
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/batch_application#read DataAzurermBatchApplication#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/batch_application#read DataAzurermBatchApplication#read}. |
 
 ---
 
@@ -913,7 +913,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/data-sources/batch_application#read DataAzurermBatchApplication#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/batch_application#read DataAzurermBatchApplication#read}.
 
 ---
 
@@ -924,7 +924,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchApplication.DataAzurermBatchApplicationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermbatchapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchapplication"
 
 dataazurermbatchapplication.NewDataAzurermBatchApplicationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermBatchApplicationTimeoutsOutputReference
 ```

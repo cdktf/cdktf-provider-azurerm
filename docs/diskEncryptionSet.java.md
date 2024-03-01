@@ -4,7 +4,7 @@
 
 ### DiskEncryptionSet <a name="DiskEncryptionSet" id="@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set azurerm_disk_encryption_set}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set azurerm_disk_encryption_set}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer"></a>
 
@@ -50,15 +50,15 @@ DiskEncryptionSet.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetIdentity">DiskEncryptionSetIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.keyVaultKeyId">keyVaultKeyId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#key_vault_key_id DiskEncryptionSet#key_vault_key_id}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#location DiskEncryptionSet#location}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#name DiskEncryptionSet#name}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#resource_group_name DiskEncryptionSet#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.autoKeyRotationEnabled">autoKeyRotationEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#auto_key_rotation_enabled DiskEncryptionSet#auto_key_rotation_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.encryptionType">encryptionType</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#encryption_type DiskEncryptionSet#encryption_type}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.federatedClientId">federatedClientId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#federated_client_id DiskEncryptionSet#federated_client_id}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#id DiskEncryptionSet#id}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#tags DiskEncryptionSet#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.keyVaultKeyId">keyVaultKeyId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#key_vault_key_id DiskEncryptionSet#key_vault_key_id}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#location DiskEncryptionSet#location}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#name DiskEncryptionSet#name}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#resource_group_name DiskEncryptionSet#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.autoKeyRotationEnabled">autoKeyRotationEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#auto_key_rotation_enabled DiskEncryptionSet#auto_key_rotation_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.encryptionType">encryptionType</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#encryption_type DiskEncryptionSet#encryption_type}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.federatedClientId">federatedClientId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#federated_client_id DiskEncryptionSet#federated_client_id}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#id DiskEncryptionSet#id}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#tags DiskEncryptionSet#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSet.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetTimeouts">DiskEncryptionSetTimeouts</a></code> | timeouts block. |
 
 ---
@@ -129,7 +129,7 @@ Must be unique amongst siblings in the same scope
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#identity DiskEncryptionSet#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#identity DiskEncryptionSet#identity}
 
 ---
 
@@ -137,7 +137,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#key_vault_key_id DiskEncryptionSet#key_vault_key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#key_vault_key_id DiskEncryptionSet#key_vault_key_id}.
 
 ---
 
@@ -145,7 +145,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#location DiskEncryptionSet#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#location DiskEncryptionSet#location}.
 
 ---
 
@@ -153,7 +153,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#name DiskEncryptionSet#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#name DiskEncryptionSet#name}.
 
 ---
 
@@ -161,7 +161,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#resource_group_name DiskEncryptionSet#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#resource_group_name DiskEncryptionSet#resource_group_name}.
 
 ---
 
@@ -169,7 +169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#auto_key_rotation_enabled DiskEncryptionSet#auto_key_rotation_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#auto_key_rotation_enabled DiskEncryptionSet#auto_key_rotation_enabled}.
 
 ---
 
@@ -177,7 +177,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#encryption_type DiskEncryptionSet#encryption_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#encryption_type DiskEncryptionSet#encryption_type}.
 
 ---
 
@@ -185,7 +185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#federated_client_id DiskEncryptionSet#federated_client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#federated_client_id DiskEncryptionSet#federated_client_id}.
 
 ---
 
@@ -193,7 +193,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#id DiskEncryptionSet#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#id DiskEncryptionSet#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -204,7 +204,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#tags DiskEncryptionSet#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#tags DiskEncryptionSet#tags}.
 
 ---
 
@@ -214,7 +214,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#timeouts DiskEncryptionSet#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#timeouts DiskEncryptionSet#timeouts}
 
 ---
 
@@ -709,7 +709,7 @@ The construct id used in the generated config for the DiskEncryptionSet to impor
 
 The id of the existing DiskEncryptionSet that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1203,15 +1203,15 @@ DiskEncryptionSetConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetIdentity">DiskEncryptionSetIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.keyVaultKeyId">keyVaultKeyId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#key_vault_key_id DiskEncryptionSet#key_vault_key_id}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#location DiskEncryptionSet#location}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#name DiskEncryptionSet#name}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#resource_group_name DiskEncryptionSet#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.autoKeyRotationEnabled">autoKeyRotationEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#auto_key_rotation_enabled DiskEncryptionSet#auto_key_rotation_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.encryptionType">encryptionType</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#encryption_type DiskEncryptionSet#encryption_type}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.federatedClientId">federatedClientId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#federated_client_id DiskEncryptionSet#federated_client_id}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#id DiskEncryptionSet#id}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#tags DiskEncryptionSet#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.keyVaultKeyId">keyVaultKeyId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#key_vault_key_id DiskEncryptionSet#key_vault_key_id}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#location DiskEncryptionSet#location}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#name DiskEncryptionSet#name}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#resource_group_name DiskEncryptionSet#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.autoKeyRotationEnabled">autoKeyRotationEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#auto_key_rotation_enabled DiskEncryptionSet#auto_key_rotation_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.encryptionType">encryptionType</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#encryption_type DiskEncryptionSet#encryption_type}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.federatedClientId">federatedClientId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#federated_client_id DiskEncryptionSet#federated_client_id}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#id DiskEncryptionSet#id}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#tags DiskEncryptionSet#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetTimeouts">DiskEncryptionSetTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1296,7 +1296,7 @@ public DiskEncryptionSetIdentity getIdentity();
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#identity DiskEncryptionSet#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#identity DiskEncryptionSet#identity}
 
 ---
 
@@ -1308,7 +1308,7 @@ public java.lang.String getKeyVaultKeyId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#key_vault_key_id DiskEncryptionSet#key_vault_key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#key_vault_key_id DiskEncryptionSet#key_vault_key_id}.
 
 ---
 
@@ -1320,7 +1320,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#location DiskEncryptionSet#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#location DiskEncryptionSet#location}.
 
 ---
 
@@ -1332,7 +1332,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#name DiskEncryptionSet#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#name DiskEncryptionSet#name}.
 
 ---
 
@@ -1344,7 +1344,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#resource_group_name DiskEncryptionSet#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#resource_group_name DiskEncryptionSet#resource_group_name}.
 
 ---
 
@@ -1356,7 +1356,7 @@ public java.lang.Object getAutoKeyRotationEnabled();
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#auto_key_rotation_enabled DiskEncryptionSet#auto_key_rotation_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#auto_key_rotation_enabled DiskEncryptionSet#auto_key_rotation_enabled}.
 
 ---
 
@@ -1368,7 +1368,7 @@ public java.lang.String getEncryptionType();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#encryption_type DiskEncryptionSet#encryption_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#encryption_type DiskEncryptionSet#encryption_type}.
 
 ---
 
@@ -1380,7 +1380,7 @@ public java.lang.String getFederatedClientId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#federated_client_id DiskEncryptionSet#federated_client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#federated_client_id DiskEncryptionSet#federated_client_id}.
 
 ---
 
@@ -1392,7 +1392,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#id DiskEncryptionSet#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#id DiskEncryptionSet#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1407,7 +1407,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTags();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#tags DiskEncryptionSet#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#tags DiskEncryptionSet#tags}.
 
 ---
 
@@ -1421,7 +1421,7 @@ public DiskEncryptionSetTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#timeouts DiskEncryptionSet#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#timeouts DiskEncryptionSet#timeouts}
 
 ---
 
@@ -1442,8 +1442,8 @@ DiskEncryptionSetIdentity.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetIdentity.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#type DiskEncryptionSet#type}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetIdentity.property.identityIds">identityIds</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#identity_ids DiskEncryptionSet#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetIdentity.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#type DiskEncryptionSet#type}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetIdentity.property.identityIds">identityIds</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#identity_ids DiskEncryptionSet#identity_ids}. |
 
 ---
 
@@ -1455,7 +1455,7 @@ public java.lang.String getType();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#type DiskEncryptionSet#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#type DiskEncryptionSet#type}.
 
 ---
 
@@ -1467,7 +1467,7 @@ public java.util.List<java.lang.String> getIdentityIds();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#identity_ids DiskEncryptionSet#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#identity_ids DiskEncryptionSet#identity_ids}.
 
 ---
 
@@ -1490,10 +1490,10 @@ DiskEncryptionSetTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#create DiskEncryptionSet#create}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#delete DiskEncryptionSet#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#read DiskEncryptionSet#read}. |
-| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#update DiskEncryptionSet#update}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#create DiskEncryptionSet#create}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#delete DiskEncryptionSet#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#read DiskEncryptionSet#read}. |
+| <code><a href="#@cdktf/provider-azurerm.diskEncryptionSet.DiskEncryptionSetTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#update DiskEncryptionSet#update}. |
 
 ---
 
@@ -1505,7 +1505,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#create DiskEncryptionSet#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#create DiskEncryptionSet#create}.
 
 ---
 
@@ -1517,7 +1517,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#delete DiskEncryptionSet#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#delete DiskEncryptionSet#delete}.
 
 ---
 
@@ -1529,7 +1529,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#read DiskEncryptionSet#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#read DiskEncryptionSet#read}.
 
 ---
 
@@ -1541,7 +1541,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/disk_encryption_set#update DiskEncryptionSet#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/disk_encryption_set#update DiskEncryptionSet#update}.
 
 ---
 

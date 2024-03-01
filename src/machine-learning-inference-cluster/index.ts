@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,66 +8,66 @@ import * as cdktf from 'cdktf';
 
 export interface MachineLearningInferenceClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#cluster_purpose MachineLearningInferenceCluster#cluster_purpose}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#cluster_purpose MachineLearningInferenceCluster#cluster_purpose}
   */
   readonly clusterPurpose?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#description MachineLearningInferenceCluster#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#description MachineLearningInferenceCluster#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#id MachineLearningInferenceCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#id MachineLearningInferenceCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#kubernetes_cluster_id MachineLearningInferenceCluster#kubernetes_cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#kubernetes_cluster_id MachineLearningInferenceCluster#kubernetes_cluster_id}
   */
   readonly kubernetesClusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#location MachineLearningInferenceCluster#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#location MachineLearningInferenceCluster#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#machine_learning_workspace_id MachineLearningInferenceCluster#machine_learning_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#machine_learning_workspace_id MachineLearningInferenceCluster#machine_learning_workspace_id}
   */
   readonly machineLearningWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#name MachineLearningInferenceCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#name MachineLearningInferenceCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#tags MachineLearningInferenceCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#tags MachineLearningInferenceCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#identity MachineLearningInferenceCluster#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#identity MachineLearningInferenceCluster#identity}
   */
   readonly identity?: MachineLearningInferenceClusterIdentity;
   /**
   * ssl block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#ssl MachineLearningInferenceCluster#ssl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#ssl MachineLearningInferenceCluster#ssl}
   */
   readonly ssl?: MachineLearningInferenceClusterSsl;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#timeouts MachineLearningInferenceCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#timeouts MachineLearningInferenceCluster#timeouts}
   */
   readonly timeouts?: MachineLearningInferenceClusterTimeouts;
 }
 export interface MachineLearningInferenceClusterIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#identity_ids MachineLearningInferenceCluster#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#identity_ids MachineLearningInferenceCluster#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#type MachineLearningInferenceCluster#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#type MachineLearningInferenceCluster#type}
   */
   readonly type: string;
 }
@@ -192,23 +187,23 @@ export class MachineLearningInferenceClusterIdentityOutputReference extends cdkt
 }
 export interface MachineLearningInferenceClusterSsl {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#cert MachineLearningInferenceCluster#cert}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#cert MachineLearningInferenceCluster#cert}
   */
   readonly cert?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#cname MachineLearningInferenceCluster#cname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#cname MachineLearningInferenceCluster#cname}
   */
   readonly cname?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#key MachineLearningInferenceCluster#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#key MachineLearningInferenceCluster#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#leaf_domain_label MachineLearningInferenceCluster#leaf_domain_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#leaf_domain_label MachineLearningInferenceCluster#leaf_domain_label}
   */
   readonly leafDomainLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#overwrite_existing_domain MachineLearningInferenceCluster#overwrite_existing_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#overwrite_existing_domain MachineLearningInferenceCluster#overwrite_existing_domain}
   */
   readonly overwriteExistingDomain?: boolean | cdktf.IResolvable;
 }
@@ -408,15 +403,15 @@ export class MachineLearningInferenceClusterSslOutputReference extends cdktf.Com
 }
 export interface MachineLearningInferenceClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#create MachineLearningInferenceCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#create MachineLearningInferenceCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#delete MachineLearningInferenceCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#delete MachineLearningInferenceCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#read MachineLearningInferenceCluster#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#read MachineLearningInferenceCluster#read}
   */
   readonly read?: string;
 }
@@ -568,7 +563,7 @@ export class MachineLearningInferenceClusterTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster azurerm_machine_learning_inference_cluster}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster azurerm_machine_learning_inference_cluster}
 */
 export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
 
@@ -584,7 +579,7 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MachineLearningInferenceCluster resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MachineLearningInferenceCluster to import
-  * @param importFromId The id of the existing MachineLearningInferenceCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MachineLearningInferenceCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MachineLearningInferenceCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -596,7 +591,7 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.93.0/docs/resources/machine_learning_inference_cluster azurerm_machine_learning_inference_cluster} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/machine_learning_inference_cluster azurerm_machine_learning_inference_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -607,7 +602,7 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_machine_learning_inference_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.93.0',
+        providerVersion: '3.94.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
