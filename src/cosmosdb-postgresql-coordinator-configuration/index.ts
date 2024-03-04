@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/cosmosdb_postgresql_coordinator_configuration
 // generated from terraform resource schema
 
