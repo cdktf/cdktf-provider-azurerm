@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlbrule"
 
 dataazurermlbrule.NewDataAzurermLbRule(scope Construct, id *string, config DataAzurermLbRuleConfig) DataAzurermLbRule
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlbrule"
 
 dataazurermlbrule.DataAzurermLbRule_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlbrule"
 
 dataazurermlbrule.DataAzurermLbRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermlbrule.DataAzurermLbRule_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlbrule"
 
 dataazurermlbrule.DataAzurermLbRule_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermlbrule.DataAzurermLbRule_IsTerraformDataSource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlbrule"
 
 dataazurermlbrule.DataAzurermLbRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -779,7 +779,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlbrule"
 
 &dataazurermlbrule.DataAzurermLbRuleConfig {
 	Connection: interface{},
@@ -792,7 +792,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbrule"
 	LoadbalancerId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermLbRule.DataAzurermLbRuleTimeouts,
 }
 ```
 
@@ -942,7 +942,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlbrule"
 
 &dataazurermlbrule.DataAzurermLbRuleTimeouts {
 	Read: *string,
@@ -976,7 +976,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLbRule.DataAzurermLbRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlbrule"
 
 dataazurermlbrule.NewDataAzurermLbRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermLbRuleTimeoutsOutputReference
 ```
