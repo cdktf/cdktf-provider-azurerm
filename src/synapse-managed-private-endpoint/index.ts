@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/synapse_managed_private_endpoint
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/synapse_managed_private_endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface SynapseManagedPrivateEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/synapse_managed_private_endpoint#id SynapseManagedPrivateEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/synapse_managed_private_endpoint#id SynapseManagedPrivateEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/synapse_managed_private_endpoint#name SynapseManagedPrivateEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/synapse_managed_private_endpoint#name SynapseManagedPrivateEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/synapse_managed_private_endpoint#subresource_name SynapseManagedPrivateEndpoint#subresource_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/synapse_managed_private_endpoint#subresource_name SynapseManagedPrivateEndpoint#subresource_name}
   */
   readonly subresourceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/synapse_managed_private_endpoint#synapse_workspace_id SynapseManagedPrivateEndpoint#synapse_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/synapse_managed_private_endpoint#synapse_workspace_id SynapseManagedPrivateEndpoint#synapse_workspace_id}
   */
   readonly synapseWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/synapse_managed_private_endpoint#target_resource_id SynapseManagedPrivateEndpoint#target_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/synapse_managed_private_endpoint#target_resource_id SynapseManagedPrivateEndpoint#target_resource_id}
   */
   readonly targetResourceId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/synapse_managed_private_endpoint#timeouts SynapseManagedPrivateEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/synapse_managed_private_endpoint#timeouts SynapseManagedPrivateEndpoint#timeouts}
   */
   readonly timeouts?: SynapseManagedPrivateEndpointTimeouts;
 }
 export interface SynapseManagedPrivateEndpointTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/synapse_managed_private_endpoint#create SynapseManagedPrivateEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/synapse_managed_private_endpoint#create SynapseManagedPrivateEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/synapse_managed_private_endpoint#delete SynapseManagedPrivateEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/synapse_managed_private_endpoint#delete SynapseManagedPrivateEndpoint#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/synapse_managed_private_endpoint#read SynapseManagedPrivateEndpoint#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/synapse_managed_private_endpoint#read SynapseManagedPrivateEndpoint#read}
   */
   readonly read?: string;
 }
@@ -204,7 +199,7 @@ export class SynapseManagedPrivateEndpointTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/synapse_managed_private_endpoint azurerm_synapse_managed_private_endpoint}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/synapse_managed_private_endpoint azurerm_synapse_managed_private_endpoint}
 */
 export class SynapseManagedPrivateEndpoint extends cdktf.TerraformResource {
 
@@ -220,7 +215,7 @@ export class SynapseManagedPrivateEndpoint extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SynapseManagedPrivateEndpoint resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SynapseManagedPrivateEndpoint to import
-  * @param importFromId The id of the existing SynapseManagedPrivateEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/synapse_managed_private_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SynapseManagedPrivateEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/synapse_managed_private_endpoint#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SynapseManagedPrivateEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -232,7 +227,7 @@ export class SynapseManagedPrivateEndpoint extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/synapse_managed_private_endpoint azurerm_synapse_managed_private_endpoint} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/synapse_managed_private_endpoint azurerm_synapse_managed_private_endpoint} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -243,7 +238,7 @@ export class SynapseManagedPrivateEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_managed_private_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.94.0',
+        providerVersion: '3.95.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

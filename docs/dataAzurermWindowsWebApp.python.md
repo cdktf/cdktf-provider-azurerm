@@ -4,7 +4,7 @@
 
 ### DataAzurermWindowsWebApp <a name="DataAzurermWindowsWebApp" id="@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app azurerm_windows_web_app}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app azurerm_windows_web_app}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.Initializer"></a>
 
@@ -39,9 +39,9 @@ dataAzurermWindowsWebApp.DataAzurermWindowsWebApp(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#name DataAzurermWindowsWebApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#resource_group_name DataAzurermWindowsWebApp#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#id DataAzurermWindowsWebApp#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#name DataAzurermWindowsWebApp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#resource_group_name DataAzurermWindowsWebApp#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#id DataAzurermWindowsWebApp#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebApp.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeouts">DataAzurermWindowsWebAppTimeouts</a></code> | timeouts block. |
 
 ---
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#name DataAzurermWindowsWebApp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#name DataAzurermWindowsWebApp#name}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#resource_group_name DataAzurermWindowsWebApp#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#resource_group_name DataAzurermWindowsWebApp#resource_group_name}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#id DataAzurermWindowsWebApp#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#id DataAzurermWindowsWebApp#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -139,7 +139,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#timeouts DataAzurermWindowsWebApp#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#timeouts DataAzurermWindowsWebApp#timeouts}
 
 ---
 
@@ -399,7 +399,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#read DataAzurermWindowsWebApp#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#read DataAzurermWindowsWebApp#read}.
 
 ---
 
@@ -529,7 +529,7 @@ The construct id used in the generated config for the DataAzurermWindowsWebApp t
 
 The id of the existing DataAzurermWindowsWebApp that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1395,9 +1395,9 @@ dataAzurermWindowsWebApp.DataAzurermWindowsWebAppConfig(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#name DataAzurermWindowsWebApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#resource_group_name DataAzurermWindowsWebApp#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#id DataAzurermWindowsWebApp#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#name DataAzurermWindowsWebApp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#resource_group_name DataAzurermWindowsWebApp#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#id DataAzurermWindowsWebApp#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeouts">DataAzurermWindowsWebAppTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1480,7 +1480,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#name DataAzurermWindowsWebApp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#name DataAzurermWindowsWebApp#name}.
 
 ---
 
@@ -1492,7 +1492,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#resource_group_name DataAzurermWindowsWebApp#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#resource_group_name DataAzurermWindowsWebApp#resource_group_name}.
 
 ---
 
@@ -1504,7 +1504,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#id DataAzurermWindowsWebApp#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#id DataAzurermWindowsWebApp#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1521,7 +1521,7 @@ timeouts: DataAzurermWindowsWebAppTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#timeouts DataAzurermWindowsWebApp#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#timeouts DataAzurermWindowsWebApp#timeouts}
 
 ---
 
@@ -1838,7 +1838,7 @@ dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#read DataAzurermWindowsWebApp#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#read DataAzurermWindowsWebApp#read}. |
 
 ---
 
@@ -1850,7 +1850,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/data-sources/windows_web_app#read DataAzurermWindowsWebApp#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/data-sources/windows_web_app#read DataAzurermWindowsWebApp#read}.
 
 ---
 
@@ -21630,6 +21630,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigIpRestrictionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigIpRestrictionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigIpRestrictionOutputReference.property.action">action</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigIpRestrictionOutputReference.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigIpRestrictionOutputReference.property.headers">headers</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigIpRestrictionHeadersList">DataAzurermWindowsWebAppSiteConfigIpRestrictionHeadersList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigIpRestrictionOutputReference.property.ipAddress">ip_address</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigIpRestrictionOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -21668,6 +21669,16 @@ fqn: str
 
 ```python
 action: str
+```
+
+- *Type:* str
+
+---
+
+##### `description`<sup>Required</sup> <a name="description" id="@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigIpRestrictionOutputReference.property.description"></a>
+
+```python
+description: str
 ```
 
 - *Type:* str
@@ -22176,6 +22187,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.healthCheckPath">health_check_path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.http2Enabled">http2_enabled</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.ipRestriction">ip_restriction</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigIpRestrictionList">DataAzurermWindowsWebAppSiteConfigIpRestrictionList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.ipRestrictionDefaultAction">ip_restriction_default_action</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.loadBalancingMode">load_balancing_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.localMysqlEnabled">local_mysql_enabled</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.managedPipelineMode">managed_pipeline_mode</a></code> | <code>str</code> | *No description.* |
@@ -22183,6 +22195,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.remoteDebuggingVersion">remote_debugging_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.scmIpRestriction">scm_ip_restriction</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigScmIpRestrictionList">DataAzurermWindowsWebAppSiteConfigScmIpRestrictionList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.scmIpRestrictionDefaultAction">scm_ip_restriction_default_action</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.scmMinimumTlsVersion">scm_minimum_tls_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.scmType">scm_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
@@ -22390,6 +22403,16 @@ ip_restriction: DataAzurermWindowsWebAppSiteConfigIpRestrictionList
 
 ---
 
+##### `ip_restriction_default_action`<sup>Required</sup> <a name="ip_restriction_default_action" id="@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.ipRestrictionDefaultAction"></a>
+
+```python
+ip_restriction_default_action: str
+```
+
+- *Type:* str
+
+---
+
 ##### `load_balancing_mode`<sup>Required</sup> <a name="load_balancing_mode" id="@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.loadBalancingMode"></a>
 
 ```python
@@ -22457,6 +22480,16 @@ scm_ip_restriction: DataAzurermWindowsWebAppSiteConfigScmIpRestrictionList
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigScmIpRestrictionList">DataAzurermWindowsWebAppSiteConfigScmIpRestrictionList</a>
+
+---
+
+##### `scm_ip_restriction_default_action`<sup>Required</sup> <a name="scm_ip_restriction_default_action" id="@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigOutputReference.property.scmIpRestrictionDefaultAction"></a>
+
+```python
+scm_ip_restriction_default_action: str
+```
+
+- *Type:* str
 
 ---
 
@@ -23473,6 +23506,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.action">action</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.headers">headers</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigScmIpRestrictionHeadersList">DataAzurermWindowsWebAppSiteConfigScmIpRestrictionHeadersList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.ipAddress">ip_address</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -23511,6 +23545,16 @@ fqn: str
 
 ```python
 action: str
+```
+
+- *Type:* str
+
+---
+
+##### `description`<sup>Required</sup> <a name="description" id="@cdktf/provider-azurerm.dataAzurermWindowsWebApp.DataAzurermWindowsWebAppSiteConfigScmIpRestrictionOutputReference.property.description"></a>
+
+```python
+description: str
 ```
 
 - *Type:* str

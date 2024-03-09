@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,110 +8,110 @@ import * as cdktf from 'cdktf';
 
 export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#admin_enabled ContainerRegistry#admin_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#admin_enabled ContainerRegistry#admin_enabled}
   */
   readonly adminEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#anonymous_pull_enabled ContainerRegistry#anonymous_pull_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#anonymous_pull_enabled ContainerRegistry#anonymous_pull_enabled}
   */
   readonly anonymousPullEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#data_endpoint_enabled ContainerRegistry#data_endpoint_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#data_endpoint_enabled ContainerRegistry#data_endpoint_enabled}
   */
   readonly dataEndpointEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#encryption ContainerRegistry#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#encryption ContainerRegistry#encryption}
   */
   readonly encryption?: ContainerRegistryEncryption[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#export_policy_enabled ContainerRegistry#export_policy_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#export_policy_enabled ContainerRegistry#export_policy_enabled}
   */
   readonly exportPolicyEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#id ContainerRegistry#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#id ContainerRegistry#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#location ContainerRegistry#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#location ContainerRegistry#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#name ContainerRegistry#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#name ContainerRegistry#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#network_rule_bypass_option ContainerRegistry#network_rule_bypass_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#network_rule_bypass_option ContainerRegistry#network_rule_bypass_option}
   */
   readonly networkRuleBypassOption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#network_rule_set ContainerRegistry#network_rule_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#network_rule_set ContainerRegistry#network_rule_set}
   */
   readonly networkRuleSet?: ContainerRegistryNetworkRuleSet[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#public_network_access_enabled ContainerRegistry#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#public_network_access_enabled ContainerRegistry#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#quarantine_policy_enabled ContainerRegistry#quarantine_policy_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#quarantine_policy_enabled ContainerRegistry#quarantine_policy_enabled}
   */
   readonly quarantinePolicyEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#resource_group_name ContainerRegistry#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#resource_group_name ContainerRegistry#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#retention_policy ContainerRegistry#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#retention_policy ContainerRegistry#retention_policy}
   */
   readonly retentionPolicy?: ContainerRegistryRetentionPolicy[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#sku ContainerRegistry#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#sku ContainerRegistry#sku}
   */
   readonly sku: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#tags ContainerRegistry#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#tags ContainerRegistry#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#trust_policy ContainerRegistry#trust_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#trust_policy ContainerRegistry#trust_policy}
   */
   readonly trustPolicy?: ContainerRegistryTrustPolicy[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#zone_redundancy_enabled ContainerRegistry#zone_redundancy_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#zone_redundancy_enabled ContainerRegistry#zone_redundancy_enabled}
   */
   readonly zoneRedundancyEnabled?: boolean | cdktf.IResolvable;
   /**
   * georeplications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#georeplications ContainerRegistry#georeplications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#georeplications ContainerRegistry#georeplications}
   */
   readonly georeplications?: ContainerRegistryGeoreplications[] | cdktf.IResolvable;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#identity ContainerRegistry#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#identity ContainerRegistry#identity}
   */
   readonly identity?: ContainerRegistryIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#timeouts ContainerRegistry#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#timeouts ContainerRegistry#timeouts}
   */
   readonly timeouts?: ContainerRegistryTimeouts;
 }
 export interface ContainerRegistryEncryption {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#enabled ContainerRegistry#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#enabled ContainerRegistry#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#identity_client_id ContainerRegistry#identity_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#identity_client_id ContainerRegistry#identity_client_id}
   */
   readonly identityClientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#key_vault_key_id ContainerRegistry#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#key_vault_key_id ContainerRegistry#key_vault_key_id}
   */
   readonly keyVaultKeyId?: string;
 }
@@ -290,11 +285,11 @@ export class ContainerRegistryEncryptionList extends cdktf.ComplexList {
 }
 export interface ContainerRegistryNetworkRuleSetIpRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#action ContainerRegistry#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#action ContainerRegistry#action}
   */
   readonly action?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#ip_range ContainerRegistry#ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#ip_range ContainerRegistry#ip_range}
   */
   readonly ipRange?: string;
 }
@@ -439,11 +434,11 @@ export class ContainerRegistryNetworkRuleSetIpRuleList extends cdktf.ComplexList
 }
 export interface ContainerRegistryNetworkRuleSetVirtualNetwork {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#action ContainerRegistry#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#action ContainerRegistry#action}
   */
   readonly action?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#subnet_id ContainerRegistry#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#subnet_id ContainerRegistry#subnet_id}
   */
   readonly subnetId?: string;
 }
@@ -588,15 +583,15 @@ export class ContainerRegistryNetworkRuleSetVirtualNetworkList extends cdktf.Com
 }
 export interface ContainerRegistryNetworkRuleSet {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#default_action ContainerRegistry#default_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#default_action ContainerRegistry#default_action}
   */
   readonly defaultAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#ip_rule ContainerRegistry#ip_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#ip_rule ContainerRegistry#ip_rule}
   */
   readonly ipRule?: ContainerRegistryNetworkRuleSetIpRule[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#virtual_network ContainerRegistry#virtual_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#virtual_network ContainerRegistry#virtual_network}
   */
   readonly virtualNetwork?: ContainerRegistryNetworkRuleSetVirtualNetwork[] | cdktf.IResolvable;
 }
@@ -770,11 +765,11 @@ export class ContainerRegistryNetworkRuleSetList extends cdktf.ComplexList {
 }
 export interface ContainerRegistryRetentionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#days ContainerRegistry#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#days ContainerRegistry#days}
   */
   readonly days?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#enabled ContainerRegistry#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#enabled ContainerRegistry#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
 }
@@ -919,7 +914,7 @@ export class ContainerRegistryRetentionPolicyList extends cdktf.ComplexList {
 }
 export interface ContainerRegistryTrustPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#enabled ContainerRegistry#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#enabled ContainerRegistry#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
 }
@@ -1035,19 +1030,19 @@ export class ContainerRegistryTrustPolicyList extends cdktf.ComplexList {
 }
 export interface ContainerRegistryGeoreplications {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#location ContainerRegistry#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#location ContainerRegistry#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#regional_endpoint_enabled ContainerRegistry#regional_endpoint_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#regional_endpoint_enabled ContainerRegistry#regional_endpoint_enabled}
   */
   readonly regionalEndpointEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#tags ContainerRegistry#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#tags ContainerRegistry#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#zone_redundancy_enabled ContainerRegistry#zone_redundancy_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#zone_redundancy_enabled ContainerRegistry#zone_redundancy_enabled}
   */
   readonly zoneRedundancyEnabled?: boolean | cdktf.IResolvable;
 }
@@ -1247,11 +1242,11 @@ export class ContainerRegistryGeoreplicationsList extends cdktf.ComplexList {
 }
 export interface ContainerRegistryIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#identity_ids ContainerRegistry#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#identity_ids ContainerRegistry#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#type ContainerRegistry#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#type ContainerRegistry#type}
   */
   readonly type: string;
 }
@@ -1371,19 +1366,19 @@ export class ContainerRegistryIdentityOutputReference extends cdktf.ComplexObjec
 }
 export interface ContainerRegistryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#create ContainerRegistry#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#create ContainerRegistry#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#delete ContainerRegistry#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#delete ContainerRegistry#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#read ContainerRegistry#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#read ContainerRegistry#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#update ContainerRegistry#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#update ContainerRegistry#update}
   */
   readonly update?: string;
 }
@@ -1564,7 +1559,7 @@ export class ContainerRegistryTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry azurerm_container_registry}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry azurerm_container_registry}
 */
 export class ContainerRegistry extends cdktf.TerraformResource {
 
@@ -1580,7 +1575,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ContainerRegistry resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerRegistry to import
-  * @param importFromId The id of the existing ContainerRegistry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerRegistry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerRegistry to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1592,7 +1587,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry azurerm_container_registry} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/container_registry azurerm_container_registry} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1603,7 +1598,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_registry',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.94.0',
+        providerVersion: '3.95.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
