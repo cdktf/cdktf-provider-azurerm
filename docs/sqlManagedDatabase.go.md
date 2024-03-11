@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanageddatabase"
 
 sqlmanageddatabase.NewSqlManagedDatabase(scope Construct, id *string, config SqlManagedDatabaseConfig) SqlManagedDatabase
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanageddatabase"
 
 sqlmanageddatabase.SqlManagedDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanageddatabase"
 
 sqlmanageddatabase.SqlManagedDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ sqlmanageddatabase.SqlManagedDatabase_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanageddatabase"
 
 sqlmanageddatabase.SqlManagedDatabase_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ sqlmanageddatabase.SqlManagedDatabase_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanageddatabase"
 
 sqlmanageddatabase.SqlManagedDatabase_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -804,7 +804,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanageddatabase"
 
 &sqlmanageddatabase.SqlManagedDatabaseConfig {
 	Connection: interface{},
@@ -818,7 +818,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanageddatabas
 	Name: *string,
 	SqlManagedInstanceId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.sqlManagedDatabase.SqlManagedDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeouts,
 }
 ```
 
@@ -981,7 +981,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanageddatabase"
 
 &sqlmanageddatabase.SqlManagedDatabaseTimeouts {
 	Create: *string,
@@ -1043,7 +1043,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanageddatabase"
 
 sqlmanageddatabase.NewSqlManagedDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlManagedDatabaseTimeoutsOutputReference
 ```
