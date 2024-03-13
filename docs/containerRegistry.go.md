@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistry(scope Construct, id *string, config ContainerRegistryConfig) ContainerRegistry
 ```
@@ -588,7 +588,7 @@ func ResetZoneRedundancyEnabled()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistry.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.ContainerRegistry_IsConstruct(x interface{}) *bool
 ```
@@ -620,7 +620,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistry.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.ContainerRegistry_IsTerraformElement(x interface{}) *bool
 ```
@@ -634,7 +634,7 @@ containerregistry.ContainerRegistry_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistry.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.ContainerRegistry_IsTerraformResource(x interface{}) *bool
 ```
@@ -648,7 +648,7 @@ containerregistry.ContainerRegistry_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistry.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.ContainerRegistry_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1372,7 +1372,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 &containerregistry.ContainerRegistryConfig {
 	Connection: interface{},
@@ -1393,14 +1393,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
 	ExportPolicyEnabled: interface{},
 	Georeplications: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistry.ContainerRegistryIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerRegistry.ContainerRegistryIdentity,
 	NetworkRuleBypassOption: *string,
 	NetworkRuleSet: interface{},
 	PublicNetworkAccessEnabled: interface{},
 	QuarantinePolicyEnabled: interface{},
 	RetentionPolicy: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistry.ContainerRegistryTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerRegistry.ContainerRegistryTimeouts,
 	TrustPolicy: interface{},
 	ZoneRedundancyEnabled: interface{},
 }
@@ -1777,7 +1777,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 &containerregistry.ContainerRegistryEncryption {
 	Enabled: interface{},
@@ -1837,7 +1837,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryGeoreplications.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 &containerregistry.ContainerRegistryGeoreplications {
 	Location: *string,
@@ -1911,7 +1911,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 &containerregistry.ContainerRegistryIdentity {
 	Type: *string,
@@ -1957,7 +1957,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryNetworkRuleSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 &containerregistry.ContainerRegistryNetworkRuleSet {
 	DefaultAction: *string,
@@ -2017,7 +2017,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryNetworkRuleSetIpRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 &containerregistry.ContainerRegistryNetworkRuleSetIpRule {
 	Action: *string,
@@ -2063,7 +2063,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryNetworkRuleSetVirtualNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 &containerregistry.ContainerRegistryNetworkRuleSetVirtualNetwork {
 	Action: *string,
@@ -2109,7 +2109,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 &containerregistry.ContainerRegistryRetentionPolicy {
 	Days: *f64,
@@ -2155,7 +2155,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 &containerregistry.ContainerRegistryTimeouts {
 	Create: *string,
@@ -2229,7 +2229,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryTrustPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 &containerregistry.ContainerRegistryTrustPolicy {
 	Enabled: interface{},
@@ -2263,7 +2263,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryEncryptionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryEncryptionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerRegistryEncryptionList
 ```
@@ -2423,7 +2423,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerRegistryEncryptionOutputReference
 ```
@@ -2777,7 +2777,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryGeoreplicationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryGeoreplicationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerRegistryGeoreplicationsList
 ```
@@ -2937,7 +2937,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryGeoreplicationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryGeoreplicationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerRegistryGeoreplicationsOutputReference
 ```
@@ -3313,7 +3313,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryIdentityOutputReference
 ```
@@ -3635,7 +3635,7 @@ func InternalValue() ContainerRegistryIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryNetworkRuleSetIpRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryNetworkRuleSetIpRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerRegistryNetworkRuleSetIpRuleList
 ```
@@ -3795,7 +3795,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryNetworkRuleSetIpRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryNetworkRuleSetIpRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerRegistryNetworkRuleSetIpRuleOutputReference
 ```
@@ -4120,7 +4120,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryNetworkRuleSetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryNetworkRuleSetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerRegistryNetworkRuleSetList
 ```
@@ -4280,7 +4280,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryNetworkRuleSetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryNetworkRuleSetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerRegistryNetworkRuleSetOutputReference
 ```
@@ -4660,7 +4660,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryNetworkRuleSetVirtualNetworkList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryNetworkRuleSetVirtualNetworkList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerRegistryNetworkRuleSetVirtualNetworkList
 ```
@@ -4820,7 +4820,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryNetworkRuleSetVirtualNetworkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryNetworkRuleSetVirtualNetworkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerRegistryNetworkRuleSetVirtualNetworkOutputReference
 ```
@@ -5145,7 +5145,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryRetentionPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryRetentionPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerRegistryRetentionPolicyList
 ```
@@ -5305,7 +5305,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerRegistryRetentionPolicyOutputReference
 ```
@@ -5630,7 +5630,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTimeoutsOutputReference
 ```
@@ -5995,7 +5995,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryTrustPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryTrustPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerRegistryTrustPolicyList
 ```
@@ -6155,7 +6155,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistry.ContainerRegistryTrustPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistry"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerregistry"
 
 containerregistry.NewContainerRegistryTrustPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerRegistryTrustPolicyOutputReference
 ```
