@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +8,54 @@ import * as cdktf from 'cdktf';
 
 export interface CosmosdbCassandraTableConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#analytical_storage_ttl CosmosdbCassandraTable#analytical_storage_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#analytical_storage_ttl CosmosdbCassandraTable#analytical_storage_ttl}
   */
   readonly analyticalStorageTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#cassandra_keyspace_id CosmosdbCassandraTable#cassandra_keyspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#cassandra_keyspace_id CosmosdbCassandraTable#cassandra_keyspace_id}
   */
   readonly cassandraKeyspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#default_ttl CosmosdbCassandraTable#default_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#default_ttl CosmosdbCassandraTable#default_ttl}
   */
   readonly defaultTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#id CosmosdbCassandraTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#id CosmosdbCassandraTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#name CosmosdbCassandraTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#name CosmosdbCassandraTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#throughput CosmosdbCassandraTable#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#throughput CosmosdbCassandraTable#throughput}
   */
   readonly throughput?: number;
   /**
   * autoscale_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#autoscale_settings CosmosdbCassandraTable#autoscale_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#autoscale_settings CosmosdbCassandraTable#autoscale_settings}
   */
   readonly autoscaleSettings?: CosmosdbCassandraTableAutoscaleSettings;
   /**
   * schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#schema CosmosdbCassandraTable#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#schema CosmosdbCassandraTable#schema}
   */
   readonly schema: CosmosdbCassandraTableSchema;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#timeouts CosmosdbCassandraTable#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#timeouts CosmosdbCassandraTable#timeouts}
   */
   readonly timeouts?: CosmosdbCassandraTableTimeouts;
 }
 export interface CosmosdbCassandraTableAutoscaleSettings {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#max_throughput CosmosdbCassandraTable#max_throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#max_throughput CosmosdbCassandraTable#max_throughput}
   */
   readonly maxThroughput?: number;
 }
@@ -144,11 +139,11 @@ export class CosmosdbCassandraTableAutoscaleSettingsOutputReference extends cdkt
 }
 export interface CosmosdbCassandraTableSchemaClusterKey {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#name CosmosdbCassandraTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#name CosmosdbCassandraTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#order_by CosmosdbCassandraTable#order_by}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#order_by CosmosdbCassandraTable#order_by}
   */
   readonly orderBy: string;
 }
@@ -287,11 +282,11 @@ export class CosmosdbCassandraTableSchemaClusterKeyList extends cdktf.ComplexLis
 }
 export interface CosmosdbCassandraTableSchemaColumn {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#name CosmosdbCassandraTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#name CosmosdbCassandraTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#type CosmosdbCassandraTable#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#type CosmosdbCassandraTable#type}
   */
   readonly type: string;
 }
@@ -430,7 +425,7 @@ export class CosmosdbCassandraTableSchemaColumnList extends cdktf.ComplexList {
 }
 export interface CosmosdbCassandraTableSchemaPartitionKey {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#name CosmosdbCassandraTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#name CosmosdbCassandraTable#name}
   */
   readonly name: string;
 }
@@ -545,19 +540,19 @@ export interface CosmosdbCassandraTableSchema {
   /**
   * cluster_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#cluster_key CosmosdbCassandraTable#cluster_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#cluster_key CosmosdbCassandraTable#cluster_key}
   */
   readonly clusterKey?: CosmosdbCassandraTableSchemaClusterKey[] | cdktf.IResolvable;
   /**
   * column block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#column CosmosdbCassandraTable#column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#column CosmosdbCassandraTable#column}
   */
   readonly column: CosmosdbCassandraTableSchemaColumn[] | cdktf.IResolvable;
   /**
   * partition_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#partition_key CosmosdbCassandraTable#partition_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#partition_key CosmosdbCassandraTable#partition_key}
   */
   readonly partitionKey: CosmosdbCassandraTableSchemaPartitionKey[] | cdktf.IResolvable;
 }
@@ -693,19 +688,19 @@ export class CosmosdbCassandraTableSchemaOutputReference extends cdktf.ComplexOb
 }
 export interface CosmosdbCassandraTableTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#create CosmosdbCassandraTable#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#create CosmosdbCassandraTable#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#delete CosmosdbCassandraTable#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#delete CosmosdbCassandraTable#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#read CosmosdbCassandraTable#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#read CosmosdbCassandraTable#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#update CosmosdbCassandraTable#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#update CosmosdbCassandraTable#update}
   */
   readonly update?: string;
 }
@@ -886,7 +881,7 @@ export class CosmosdbCassandraTableTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table azurerm_cosmosdb_cassandra_table}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table azurerm_cosmosdb_cassandra_table}
 */
 export class CosmosdbCassandraTable extends cdktf.TerraformResource {
 
@@ -902,7 +897,7 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CosmosdbCassandraTable resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CosmosdbCassandraTable to import
-  * @param importFromId The id of the existing CosmosdbCassandraTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CosmosdbCassandraTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CosmosdbCassandraTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -914,7 +909,7 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.95.0/docs/resources/cosmosdb_cassandra_table azurerm_cosmosdb_cassandra_table} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/cosmosdb_cassandra_table azurerm_cosmosdb_cassandra_table} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -925,7 +920,7 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cosmosdb_cassandra_table',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.95.0',
+        providerVersion: '3.96.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
