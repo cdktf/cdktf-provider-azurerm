@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/iot_time_series_insights_gen2_environment
 // generated from terraform resource schema
 
