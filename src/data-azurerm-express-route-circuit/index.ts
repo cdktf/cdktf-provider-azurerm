@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/data-sources/express_route_circuit
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/express_route_circuit
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermExpressRouteCircuitConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/data-sources/express_route_circuit#id DataAzurermExpressRouteCircuit#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/express_route_circuit#id DataAzurermExpressRouteCircuit#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/data-sources/express_route_circuit#name DataAzurermExpressRouteCircuit#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/express_route_circuit#name DataAzurermExpressRouteCircuit#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/data-sources/express_route_circuit#resource_group_name DataAzurermExpressRouteCircuit#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/express_route_circuit#resource_group_name DataAzurermExpressRouteCircuit#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/data-sources/express_route_circuit#timeouts DataAzurermExpressRouteCircuit#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/express_route_circuit#timeouts DataAzurermExpressRouteCircuit#timeouts}
   */
   readonly timeouts?: DataAzurermExpressRouteCircuitTimeouts;
 }
@@ -306,7 +306,7 @@ export class DataAzurermExpressRouteCircuitSkuList extends cdktf.ComplexList {
 }
 export interface DataAzurermExpressRouteCircuitTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/data-sources/express_route_circuit#read DataAzurermExpressRouteCircuit#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/express_route_circuit#read DataAzurermExpressRouteCircuit#read}
   */
   readonly read?: string;
 }
@@ -400,7 +400,7 @@ export class DataAzurermExpressRouteCircuitTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/data-sources/express_route_circuit azurerm_express_route_circuit}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/express_route_circuit azurerm_express_route_circuit}
 */
 export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
 
@@ -416,7 +416,7 @@ export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermExpressRouteCircuit resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermExpressRouteCircuit to import
-  * @param importFromId The id of the existing DataAzurermExpressRouteCircuit that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/data-sources/express_route_circuit#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermExpressRouteCircuit that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/express_route_circuit#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermExpressRouteCircuit to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -428,7 +428,7 @@ export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/data-sources/express_route_circuit azurerm_express_route_circuit} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/express_route_circuit azurerm_express_route_circuit} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -439,7 +439,7 @@ export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_express_route_circuit',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.96.0',
+        providerVersion: '3.97.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

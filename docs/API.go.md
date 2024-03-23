@@ -694,6 +694,7 @@ The following submodules are available:
 - [dnsZone](./dnsZone.go.md)
 - [elasticCloudElasticsearch](./elasticCloudElasticsearch.go.md)
 - [elasticSan](./elasticSan.go.md)
+- [elasticSanVolume](./elasticSanVolume.go.md)
 - [elasticSanVolumeGroup](./elasticSanVolumeGroup.go.md)
 - [emailCommunicationService](./emailCommunicationService.go.md)
 - [eventgridDomain](./eventgridDomain.go.md)

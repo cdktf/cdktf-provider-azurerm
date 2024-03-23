@@ -694,6 +694,7 @@ The following submodules are available:
 - [dnsZone](./dnsZone.java.md)
 - [elasticCloudElasticsearch](./elasticCloudElasticsearch.java.md)
 - [elasticSan](./elasticSan.java.md)
+- [elasticSanVolume](./elasticSanVolume.java.md)
 - [elasticSanVolumeGroup](./elasticSanVolumeGroup.java.md)
 - [emailCommunicationService](./emailCommunicationService.java.md)
 - [eventgridDomain](./eventgridDomain.java.md)

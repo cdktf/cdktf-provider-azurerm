@@ -348,6 +348,7 @@ export * as dnsTxtRecord from './dns-txt-record';
 export * as dnsZone from './dns-zone';
 export * as elasticCloudElasticsearch from './elastic-cloud-elasticsearch';
 export * as elasticSan from './elastic-san';
+export * as elasticSanVolume from './elastic-san-volume';
 export * as elasticSanVolumeGroup from './elastic-san-volume-group';
 export * as emailCommunicationService from './email-communication-service';
 export * as eventgridDomain from './eventgrid-domain';

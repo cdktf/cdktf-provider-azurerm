@@ -348,6 +348,7 @@ Object.defineProperty(exports, 'dnsTxtRecord', { get: function () { return requi
 Object.defineProperty(exports, 'dnsZone', { get: function () { return require('./dns-zone'); } });
 Object.defineProperty(exports, 'elasticCloudElasticsearch', { get: function () { return require('./elastic-cloud-elasticsearch'); } });
 Object.defineProperty(exports, 'elasticSan', { get: function () { return require('./elastic-san'); } });
+Object.defineProperty(exports, 'elasticSanVolume', { get: function () { return require('./elastic-san-volume'); } });
 Object.defineProperty(exports, 'elasticSanVolumeGroup', { get: function () { return require('./elastic-san-volume-group'); } });
 Object.defineProperty(exports, 'emailCommunicationService', { get: function () { return require('./email-communication-service'); } });
 Object.defineProperty(exports, 'eventgridDomain', { get: function () { return require('./eventgrid-domain'); } });

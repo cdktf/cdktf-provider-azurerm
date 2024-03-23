@@ -694,6 +694,7 @@ The following submodules are available:
 - [dnsZone](./dnsZone.python.md)
 - [elasticCloudElasticsearch](./elasticCloudElasticsearch.python.md)
 - [elasticSan](./elasticSan.python.md)
+- [elasticSanVolume](./elasticSanVolume.python.md)
 - [elasticSanVolumeGroup](./elasticSanVolumeGroup.python.md)
 - [emailCommunicationService](./emailCommunicationService.python.md)
 - [eventgridDomain](./eventgridDomain.python.md)

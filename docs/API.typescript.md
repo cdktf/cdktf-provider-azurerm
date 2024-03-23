@@ -694,6 +694,7 @@ The following submodules are available:
 - [dnsZone](./dnsZone.typescript.md)
 - [elasticCloudElasticsearch](./elasticCloudElasticsearch.typescript.md)
 - [elasticSan](./elasticSan.typescript.md)
+- [elasticSanVolume](./elasticSanVolume.typescript.md)
 - [elasticSanVolumeGroup](./elasticSanVolumeGroup.typescript.md)
 - [emailCommunicationService](./emailCommunicationService.typescript.md)
 - [eventgridDomain](./eventgridDomain.typescript.md)

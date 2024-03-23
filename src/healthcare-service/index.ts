@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,78 +13,88 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#access_policy_object_ids HealthcareService#access_policy_object_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#access_policy_object_ids HealthcareService#access_policy_object_ids}
   */
   readonly accessPolicyObjectIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#cosmosdb_key_vault_key_versionless_id HealthcareService#cosmosdb_key_vault_key_versionless_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#configuration_export_storage_account_name HealthcareService#configuration_export_storage_account_name}
+  */
+  readonly configurationExportStorageAccountName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#cosmosdb_key_vault_key_versionless_id HealthcareService#cosmosdb_key_vault_key_versionless_id}
   */
   readonly cosmosdbKeyVaultKeyVersionlessId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#cosmosdb_throughput HealthcareService#cosmosdb_throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#cosmosdb_throughput HealthcareService#cosmosdb_throughput}
   */
   readonly cosmosdbThroughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#id HealthcareService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#id HealthcareService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#kind HealthcareService#kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#kind HealthcareService#kind}
   */
   readonly kind?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#location HealthcareService#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#location HealthcareService#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#name HealthcareService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#name HealthcareService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#public_network_access_enabled HealthcareService#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#public_network_access_enabled HealthcareService#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#resource_group_name HealthcareService#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#resource_group_name HealthcareService#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#tags HealthcareService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#tags HealthcareService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * authentication_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#authentication_configuration HealthcareService#authentication_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#authentication_configuration HealthcareService#authentication_configuration}
   */
   readonly authenticationConfiguration?: HealthcareServiceAuthenticationConfiguration;
   /**
   * cors_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#cors_configuration HealthcareService#cors_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#cors_configuration HealthcareService#cors_configuration}
   */
   readonly corsConfiguration?: HealthcareServiceCorsConfiguration;
   /**
+  * identity block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#identity HealthcareService#identity}
+  */
+  readonly identity?: HealthcareServiceIdentity;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#timeouts HealthcareService#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#timeouts HealthcareService#timeouts}
   */
   readonly timeouts?: HealthcareServiceTimeouts;
 }
 export interface HealthcareServiceAuthenticationConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#audience HealthcareService#audience}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#audience HealthcareService#audience}
   */
   readonly audience?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#authority HealthcareService#authority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#authority HealthcareService#authority}
   */
   readonly authority?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#smart_proxy_enabled HealthcareService#smart_proxy_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#smart_proxy_enabled HealthcareService#smart_proxy_enabled}
   */
   readonly smartProxyEnabled?: boolean | cdktf.IResolvable;
 }
@@ -226,23 +236,23 @@ export class HealthcareServiceAuthenticationConfigurationOutputReference extends
 }
 export interface HealthcareServiceCorsConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#allow_credentials HealthcareService#allow_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#allow_credentials HealthcareService#allow_credentials}
   */
   readonly allowCredentials?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#allowed_headers HealthcareService#allowed_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#allowed_headers HealthcareService#allowed_headers}
   */
   readonly allowedHeaders?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#allowed_methods HealthcareService#allowed_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#allowed_methods HealthcareService#allowed_methods}
   */
   readonly allowedMethods?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#allowed_origins HealthcareService#allowed_origins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#allowed_origins HealthcareService#allowed_origins}
   */
   readonly allowedOrigins?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#max_age_in_seconds HealthcareService#max_age_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#max_age_in_seconds HealthcareService#max_age_in_seconds}
   */
   readonly maxAgeInSeconds?: number;
 }
@@ -440,21 +450,112 @@ export class HealthcareServiceCorsConfigurationOutputReference extends cdktf.Com
     return this._maxAgeInSeconds;
   }
 }
+export interface HealthcareServiceIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#type HealthcareService#type}
+  */
+  readonly type: string;
+}
+
+export function healthcareServiceIdentityToTerraform(struct?: HealthcareServiceIdentityOutputReference | HealthcareServiceIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function healthcareServiceIdentityToHclTerraform(struct?: HealthcareServiceIdentityOutputReference | HealthcareServiceIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class HealthcareServiceIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): HealthcareServiceIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HealthcareServiceIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._type = value.type;
+    }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
 export interface HealthcareServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#create HealthcareService#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#create HealthcareService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#delete HealthcareService#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#delete HealthcareService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#read HealthcareService#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#read HealthcareService#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#update HealthcareService#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#update HealthcareService#update}
   */
   readonly update?: string;
 }
@@ -635,7 +736,7 @@ export class HealthcareServiceTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service azurerm_healthcare_service}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service azurerm_healthcare_service}
 */
 export class HealthcareService extends cdktf.TerraformResource {
 
@@ -651,7 +752,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a HealthcareService resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the HealthcareService to import
-  * @param importFromId The id of the existing HealthcareService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing HealthcareService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the HealthcareService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -663,7 +764,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service azurerm_healthcare_service} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service azurerm_healthcare_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -674,7 +775,7 @@ export class HealthcareService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_healthcare_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.96.0',
+        providerVersion: '3.97.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -686,6 +787,7 @@ export class HealthcareService extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._accessPolicyObjectIds = config.accessPolicyObjectIds;
+    this._configurationExportStorageAccountName = config.configurationExportStorageAccountName;
     this._cosmosdbKeyVaultKeyVersionlessId = config.cosmosdbKeyVaultKeyVersionlessId;
     this._cosmosdbThroughput = config.cosmosdbThroughput;
     this._id = config.id;
@@ -697,6 +799,7 @@ export class HealthcareService extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._authenticationConfiguration.internalValue = config.authenticationConfiguration;
     this._corsConfiguration.internalValue = config.corsConfiguration;
+    this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -718,6 +821,22 @@ export class HealthcareService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get accessPolicyObjectIdsInput() {
     return this._accessPolicyObjectIds;
+  }
+
+  // configuration_export_storage_account_name - computed: false, optional: true, required: false
+  private _configurationExportStorageAccountName?: string; 
+  public get configurationExportStorageAccountName() {
+    return this.getStringAttribute('configuration_export_storage_account_name');
+  }
+  public set configurationExportStorageAccountName(value: string) {
+    this._configurationExportStorageAccountName = value;
+  }
+  public resetConfigurationExportStorageAccountName() {
+    this._configurationExportStorageAccountName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configurationExportStorageAccountNameInput() {
+    return this._configurationExportStorageAccountName;
   }
 
   // cosmosdb_key_vault_key_versionless_id - computed: false, optional: true, required: false
@@ -887,6 +1006,22 @@ export class HealthcareService extends cdktf.TerraformResource {
     return this._corsConfiguration.internalValue;
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity = new HealthcareServiceIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: HealthcareServiceIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new HealthcareServiceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -910,6 +1045,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       access_policy_object_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._accessPolicyObjectIds),
+      configuration_export_storage_account_name: cdktf.stringToTerraform(this._configurationExportStorageAccountName),
       cosmosdb_key_vault_key_versionless_id: cdktf.stringToTerraform(this._cosmosdbKeyVaultKeyVersionlessId),
       cosmosdb_throughput: cdktf.numberToTerraform(this._cosmosdbThroughput),
       id: cdktf.stringToTerraform(this._id),
@@ -921,6 +1057,7 @@ export class HealthcareService extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       authentication_configuration: healthcareServiceAuthenticationConfigurationToTerraform(this._authenticationConfiguration.internalValue),
       cors_configuration: healthcareServiceCorsConfigurationToTerraform(this._corsConfiguration.internalValue),
+      identity: healthcareServiceIdentityToTerraform(this._identity.internalValue),
       timeouts: healthcareServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -932,6 +1069,12 @@ export class HealthcareService extends cdktf.TerraformResource {
         isBlock: false,
         type: "set",
         storageClassType: "stringList",
+      },
+      configuration_export_storage_account_name: {
+        value: cdktf.stringToHclTerraform(this._configurationExportStorageAccountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
       },
       cosmosdb_key_vault_key_versionless_id: {
         value: cdktf.stringToHclTerraform(this._cosmosdbKeyVaultKeyVersionlessId),
@@ -998,6 +1141,12 @@ export class HealthcareService extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "HealthcareServiceCorsConfigurationList",
+      },
+      identity: {
+        value: healthcareServiceIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HealthcareServiceIdentityList",
       },
       timeouts: {
         value: healthcareServiceTimeoutsToHclTerraform(this._timeouts.internalValue),
