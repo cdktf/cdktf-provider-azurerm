@@ -4,12 +4,12 @@
 
 ### NetappAccount <a name="NetappAccount" id="@cdktf/provider-azurerm.netappAccount.NetappAccount"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account azurerm_netapp_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account azurerm_netapp_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappAccount.NetappAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NewNetappAccount(scope Construct, id *string, config NetappAccountConfig) NetappAccount
 ```
@@ -452,7 +452,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.netappAccount.NetappAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NetappAccount_IsConstruct(x interface{}) *bool
 ```
@@ -484,7 +484,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.netappAccount.NetappAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NetappAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -498,7 +498,7 @@ netappaccount.NetappAccount_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.netappAccount.NetappAccount.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NetappAccount_IsTerraformResource(x interface{}) *bool
 ```
@@ -512,7 +512,7 @@ netappaccount.NetappAccount_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.netappAccount.NetappAccount.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NetappAccount_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -541,7 +541,7 @@ The construct id used in the generated config for the NetappAccount to import.
 
 The id of the existing NetappAccount that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -917,7 +917,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 &netappaccount.NetappAccountActiveDirectory {
 	DnsServers: *[]*string,
@@ -925,7 +925,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
 	Password: *string,
 	SmbServerName: *string,
 	Username: *string,
+	AesEncryptionEnabled: interface{},
+	KerberosAdName: *string,
+	KerberosKdcIp: *string,
+	LdapOverTlsEnabled: interface{},
+	LdapSigningEnabled: interface{},
+	LocalNfsUsersWithLdapAllowed: interface{},
 	OrganizationalUnit: *string,
+	ServerRootCaCertificate: *string,
+	SiteName: *string,
 }
 ```
 
@@ -933,12 +941,20 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.dnsServers">DnsServers</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#dns_servers NetappAccount#dns_servers}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.domain">Domain</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#domain NetappAccount#domain}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.password">Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#password NetappAccount#password}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.smbServerName">SmbServerName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#smb_server_name NetappAccount#smb_server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.username">Username</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#username NetappAccount#username}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.organizationalUnit">OrganizationalUnit</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#organizational_unit NetappAccount#organizational_unit}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.dnsServers">DnsServers</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#dns_servers NetappAccount#dns_servers}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.domain">Domain</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#domain NetappAccount#domain}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.password">Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#password NetappAccount#password}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.smbServerName">SmbServerName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#smb_server_name NetappAccount#smb_server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.username">Username</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#username NetappAccount#username}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.aesEncryptionEnabled">AesEncryptionEnabled</a></code> | <code>interface{}</code> | If enabled, AES encryption will be enabled for SMB communication. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.kerberosAdName">KerberosAdName</a></code> | <code>*string</code> | Name of the active directory machine. This optional parameter is used only while creating kerberos volume. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.kerberosKdcIp">KerberosKdcIp</a></code> | <code>*string</code> | IP address of the KDC server (usually same the DC). |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.ldapOverTlsEnabled">LdapOverTlsEnabled</a></code> | <code>interface{}</code> | Specifies whether or not the LDAP traffic needs to be secured via TLS. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.ldapSigningEnabled">LdapSigningEnabled</a></code> | <code>interface{}</code> | Specifies whether or not the LDAP traffic needs to be signed. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.localNfsUsersWithLdapAllowed">LocalNfsUsersWithLdapAllowed</a></code> | <code>interface{}</code> | If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.organizationalUnit">OrganizationalUnit</a></code> | <code>*string</code> | The Organizational Unit (OU) within the Windows Active Directory where machines will be created. If blank, defaults to 'CN=Computers'. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.serverRootCaCertificate">ServerRootCaCertificate</a></code> | <code>*string</code> | When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.siteName">SiteName</a></code> | <code>*string</code> | The Active Directory site the service will limit Domain Controller discovery to. If blank, defaults to 'Default-First-Site-Name'. |
 
 ---
 
@@ -950,7 +966,7 @@ DnsServers *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#dns_servers NetappAccount#dns_servers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#dns_servers NetappAccount#dns_servers}.
 
 ---
 
@@ -962,7 +978,7 @@ Domain *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#domain NetappAccount#domain}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#domain NetappAccount#domain}.
 
 ---
 
@@ -974,7 +990,7 @@ Password *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#password NetappAccount#password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#password NetappAccount#password}.
 
 ---
 
@@ -986,7 +1002,7 @@ SmbServerName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#smb_server_name NetappAccount#smb_server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#smb_server_name NetappAccount#smb_server_name}.
 
 ---
 
@@ -998,7 +1014,93 @@ Username *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#username NetappAccount#username}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#username NetappAccount#username}.
+
+---
+
+##### `AesEncryptionEnabled`<sup>Optional</sup> <a name="AesEncryptionEnabled" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.aesEncryptionEnabled"></a>
+
+```go
+AesEncryptionEnabled interface{}
+```
+
+- *Type:* interface{}
+
+If enabled, AES encryption will be enabled for SMB communication.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#aes_encryption_enabled NetappAccount#aes_encryption_enabled}
+
+---
+
+##### `KerberosAdName`<sup>Optional</sup> <a name="KerberosAdName" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.kerberosAdName"></a>
+
+```go
+KerberosAdName *string
+```
+
+- *Type:* *string
+
+Name of the active directory machine. This optional parameter is used only while creating kerberos volume.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#kerberos_ad_name NetappAccount#kerberos_ad_name}
+
+---
+
+##### `KerberosKdcIp`<sup>Optional</sup> <a name="KerberosKdcIp" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.kerberosKdcIp"></a>
+
+```go
+KerberosKdcIp *string
+```
+
+- *Type:* *string
+
+IP address of the KDC server (usually same the DC).
+
+This optional parameter is used only while creating kerberos volume.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#kerberos_kdc_ip NetappAccount#kerberos_kdc_ip}
+
+---
+
+##### `LdapOverTlsEnabled`<sup>Optional</sup> <a name="LdapOverTlsEnabled" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.ldapOverTlsEnabled"></a>
+
+```go
+LdapOverTlsEnabled interface{}
+```
+
+- *Type:* interface{}
+
+Specifies whether or not the LDAP traffic needs to be secured via TLS.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#ldap_over_tls_enabled NetappAccount#ldap_over_tls_enabled}
+
+---
+
+##### `LdapSigningEnabled`<sup>Optional</sup> <a name="LdapSigningEnabled" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.ldapSigningEnabled"></a>
+
+```go
+LdapSigningEnabled interface{}
+```
+
+- *Type:* interface{}
+
+Specifies whether or not the LDAP traffic needs to be signed.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#ldap_signing_enabled NetappAccount#ldap_signing_enabled}
+
+---
+
+##### `LocalNfsUsersWithLdapAllowed`<sup>Optional</sup> <a name="LocalNfsUsersWithLdapAllowed" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.localNfsUsersWithLdapAllowed"></a>
+
+```go
+LocalNfsUsersWithLdapAllowed interface{}
+```
+
+- *Type:* interface{}
+
+If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#local_nfs_users_with_ldap_allowed NetappAccount#local_nfs_users_with_ldap_allowed}
 
 ---
 
@@ -1010,7 +1112,37 @@ OrganizationalUnit *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#organizational_unit NetappAccount#organizational_unit}.
+The Organizational Unit (OU) within the Windows Active Directory where machines will be created. If blank, defaults to 'CN=Computers'.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#organizational_unit NetappAccount#organizational_unit}
+
+---
+
+##### `ServerRootCaCertificate`<sup>Optional</sup> <a name="ServerRootCaCertificate" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.serverRootCaCertificate"></a>
+
+```go
+ServerRootCaCertificate *string
+```
+
+- *Type:* *string
+
+When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#server_root_ca_certificate NetappAccount#server_root_ca_certificate}
+
+---
+
+##### `SiteName`<sup>Optional</sup> <a name="SiteName" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.property.siteName"></a>
+
+```go
+SiteName *string
+```
+
+- *Type:* *string
+
+The Active Directory site the service will limit Domain Controller discovery to. If blank, defaults to 'Default-First-Site-Name'.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#site_name NetappAccount#site_name}
 
 ---
 
@@ -1019,7 +1151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 &netappaccount.NetappAccountConfig {
 	Connection: interface{},
@@ -1032,11 +1164,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.netappAccount.NetappAccountActiveDirectory,
+	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappAccount.NetappAccountActiveDirectory,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.netappAccount.NetappAccountIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappAccount.NetappAccountIdentity,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.netappAccount.NetappAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappAccount.NetappAccountTimeouts,
 }
 ```
 
@@ -1051,13 +1183,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#location NetappAccount#location}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#name NetappAccount#name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#resource_group_name NetappAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#location NetappAccount#location}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#name NetappAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#resource_group_name NetappAccount#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.activeDirectory">ActiveDirectory</a></code> | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory">NetappAccountActiveDirectory</a></code> | active_directory block. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#id NetappAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#id NetappAccount#id}. |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountIdentity">NetappAccountIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#tags NetappAccount#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#tags NetappAccount#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountTimeouts">NetappAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1140,7 +1272,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#location NetappAccount#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#location NetappAccount#location}.
 
 ---
 
@@ -1152,7 +1284,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#name NetappAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#name NetappAccount#name}.
 
 ---
 
@@ -1164,7 +1296,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#resource_group_name NetappAccount#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#resource_group_name NetappAccount#resource_group_name}.
 
 ---
 
@@ -1178,7 +1310,7 @@ ActiveDirectory NetappAccountActiveDirectory
 
 active_directory block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#active_directory NetappAccount#active_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#active_directory NetappAccount#active_directory}
 
 ---
 
@@ -1190,7 +1322,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#id NetappAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#id NetappAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1207,7 +1339,7 @@ Identity NetappAccountIdentity
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#identity NetappAccount#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#identity NetappAccount#identity}
 
 ---
 
@@ -1219,7 +1351,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#tags NetappAccount#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#tags NetappAccount#tags}.
 
 ---
 
@@ -1233,7 +1365,7 @@ Timeouts NetappAccountTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#timeouts NetappAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#timeouts NetappAccount#timeouts}
 
 ---
 
@@ -1242,7 +1374,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappAccount.NetappAccountIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 &netappaccount.NetappAccountIdentity {
 	Type: *string,
@@ -1254,8 +1386,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#type NetappAccount#type}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#identity_ids NetappAccount#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#type NetappAccount#type}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#identity_ids NetappAccount#identity_ids}. |
 
 ---
 
@@ -1267,7 +1399,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#type NetappAccount#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#type NetappAccount#type}.
 
 ---
 
@@ -1279,7 +1411,7 @@ IdentityIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#identity_ids NetappAccount#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#identity_ids NetappAccount#identity_ids}.
 
 ---
 
@@ -1288,7 +1420,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappAccount.NetappAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 &netappaccount.NetappAccountTimeouts {
 	Create: *string,
@@ -1302,10 +1434,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#create NetappAccount#create}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#delete NetappAccount#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#read NetappAccount#read}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#update NetappAccount#update}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#create NetappAccount#create}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#delete NetappAccount#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#read NetappAccount#read}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#update NetappAccount#update}. |
 
 ---
 
@@ -1317,7 +1449,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#create NetappAccount#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#create NetappAccount#create}.
 
 ---
 
@@ -1329,7 +1461,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#delete NetappAccount#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#delete NetappAccount#delete}.
 
 ---
 
@@ -1341,7 +1473,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#read NetappAccount#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#read NetappAccount#read}.
 
 ---
 
@@ -1353,7 +1485,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/netapp_account#update NetappAccount#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_account#update NetappAccount#update}.
 
 ---
 
@@ -1364,7 +1496,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NewNetappAccountActiveDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappAccountActiveDirectoryOutputReference
 ```
@@ -1409,7 +1541,15 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetAesEncryptionEnabled">ResetAesEncryptionEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetKerberosAdName">ResetKerberosAdName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetKerberosKdcIp">ResetKerberosKdcIp</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetLdapOverTlsEnabled">ResetLdapOverTlsEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetLdapSigningEnabled">ResetLdapSigningEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetLocalNfsUsersWithLdapAllowed">ResetLocalNfsUsersWithLdapAllowed</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetOrganizationalUnit">ResetOrganizationalUnit</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetServerRootCaCertificate">ResetServerRootCaCertificate</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetSiteName">ResetSiteName</a></code> | *No description.* |
 
 ---
 
@@ -1563,10 +1703,58 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `ResetAesEncryptionEnabled` <a name="ResetAesEncryptionEnabled" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetAesEncryptionEnabled"></a>
+
+```go
+func ResetAesEncryptionEnabled()
+```
+
+##### `ResetKerberosAdName` <a name="ResetKerberosAdName" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetKerberosAdName"></a>
+
+```go
+func ResetKerberosAdName()
+```
+
+##### `ResetKerberosKdcIp` <a name="ResetKerberosKdcIp" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetKerberosKdcIp"></a>
+
+```go
+func ResetKerberosKdcIp()
+```
+
+##### `ResetLdapOverTlsEnabled` <a name="ResetLdapOverTlsEnabled" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetLdapOverTlsEnabled"></a>
+
+```go
+func ResetLdapOverTlsEnabled()
+```
+
+##### `ResetLdapSigningEnabled` <a name="ResetLdapSigningEnabled" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetLdapSigningEnabled"></a>
+
+```go
+func ResetLdapSigningEnabled()
+```
+
+##### `ResetLocalNfsUsersWithLdapAllowed` <a name="ResetLocalNfsUsersWithLdapAllowed" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetLocalNfsUsersWithLdapAllowed"></a>
+
+```go
+func ResetLocalNfsUsersWithLdapAllowed()
+```
+
 ##### `ResetOrganizationalUnit` <a name="ResetOrganizationalUnit" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetOrganizationalUnit"></a>
 
 ```go
 func ResetOrganizationalUnit()
+```
+
+##### `ResetServerRootCaCertificate` <a name="ResetServerRootCaCertificate" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetServerRootCaCertificate"></a>
+
+```go
+func ResetServerRootCaCertificate()
+```
+
+##### `ResetSiteName` <a name="ResetSiteName" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.resetSiteName"></a>
+
+```go
+func ResetSiteName()
 ```
 
 
@@ -1576,16 +1764,32 @@ func ResetOrganizationalUnit()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.aesEncryptionEnabledInput">AesEncryptionEnabledInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.dnsServersInput">DnsServersInput</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.domainInput">DomainInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.kerberosAdNameInput">KerberosAdNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.kerberosKdcIpInput">KerberosKdcIpInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.ldapOverTlsEnabledInput">LdapOverTlsEnabledInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.ldapSigningEnabledInput">LdapSigningEnabledInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.localNfsUsersWithLdapAllowedInput">LocalNfsUsersWithLdapAllowedInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.organizationalUnitInput">OrganizationalUnitInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.passwordInput">PasswordInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.serverRootCaCertificateInput">ServerRootCaCertificateInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.siteNameInput">SiteNameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.smbServerNameInput">SmbServerNameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.usernameInput">UsernameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.aesEncryptionEnabled">AesEncryptionEnabled</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.dnsServers">DnsServers</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.domain">Domain</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.kerberosAdName">KerberosAdName</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.kerberosKdcIp">KerberosKdcIp</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.ldapOverTlsEnabled">LdapOverTlsEnabled</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.ldapSigningEnabled">LdapSigningEnabled</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.localNfsUsersWithLdapAllowed">LocalNfsUsersWithLdapAllowed</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.organizationalUnit">OrganizationalUnit</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.password">Password</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.serverRootCaCertificate">ServerRootCaCertificate</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.siteName">SiteName</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.smbServerName">SmbServerName</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.username">Username</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory">NetappAccountActiveDirectory</a></code> | *No description.* |
@@ -1616,6 +1820,16 @@ func Fqn() *string
 
 ---
 
+##### `AesEncryptionEnabledInput`<sup>Optional</sup> <a name="AesEncryptionEnabledInput" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.aesEncryptionEnabledInput"></a>
+
+```go
+func AesEncryptionEnabledInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
 ##### `DnsServersInput`<sup>Optional</sup> <a name="DnsServersInput" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.dnsServersInput"></a>
 
 ```go
@@ -1636,6 +1850,56 @@ func DomainInput() *string
 
 ---
 
+##### `KerberosAdNameInput`<sup>Optional</sup> <a name="KerberosAdNameInput" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.kerberosAdNameInput"></a>
+
+```go
+func KerberosAdNameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `KerberosKdcIpInput`<sup>Optional</sup> <a name="KerberosKdcIpInput" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.kerberosKdcIpInput"></a>
+
+```go
+func KerberosKdcIpInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LdapOverTlsEnabledInput`<sup>Optional</sup> <a name="LdapOverTlsEnabledInput" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.ldapOverTlsEnabledInput"></a>
+
+```go
+func LdapOverTlsEnabledInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `LdapSigningEnabledInput`<sup>Optional</sup> <a name="LdapSigningEnabledInput" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.ldapSigningEnabledInput"></a>
+
+```go
+func LdapSigningEnabledInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `LocalNfsUsersWithLdapAllowedInput`<sup>Optional</sup> <a name="LocalNfsUsersWithLdapAllowedInput" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.localNfsUsersWithLdapAllowedInput"></a>
+
+```go
+func LocalNfsUsersWithLdapAllowedInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
 ##### `OrganizationalUnitInput`<sup>Optional</sup> <a name="OrganizationalUnitInput" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.organizationalUnitInput"></a>
 
 ```go
@@ -1650,6 +1914,26 @@ func OrganizationalUnitInput() *string
 
 ```go
 func PasswordInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ServerRootCaCertificateInput`<sup>Optional</sup> <a name="ServerRootCaCertificateInput" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.serverRootCaCertificateInput"></a>
+
+```go
+func ServerRootCaCertificateInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SiteNameInput`<sup>Optional</sup> <a name="SiteNameInput" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.siteNameInput"></a>
+
+```go
+func SiteNameInput() *string
 ```
 
 - *Type:* *string
@@ -1676,6 +1960,16 @@ func UsernameInput() *string
 
 ---
 
+##### `AesEncryptionEnabled`<sup>Required</sup> <a name="AesEncryptionEnabled" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.aesEncryptionEnabled"></a>
+
+```go
+func AesEncryptionEnabled() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
 ##### `DnsServers`<sup>Required</sup> <a name="DnsServers" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.dnsServers"></a>
 
 ```go
@@ -1696,6 +1990,56 @@ func Domain() *string
 
 ---
 
+##### `KerberosAdName`<sup>Required</sup> <a name="KerberosAdName" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.kerberosAdName"></a>
+
+```go
+func KerberosAdName() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `KerberosKdcIp`<sup>Required</sup> <a name="KerberosKdcIp" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.kerberosKdcIp"></a>
+
+```go
+func KerberosKdcIp() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `LdapOverTlsEnabled`<sup>Required</sup> <a name="LdapOverTlsEnabled" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.ldapOverTlsEnabled"></a>
+
+```go
+func LdapOverTlsEnabled() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `LdapSigningEnabled`<sup>Required</sup> <a name="LdapSigningEnabled" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.ldapSigningEnabled"></a>
+
+```go
+func LdapSigningEnabled() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
+##### `LocalNfsUsersWithLdapAllowed`<sup>Required</sup> <a name="LocalNfsUsersWithLdapAllowed" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.localNfsUsersWithLdapAllowed"></a>
+
+```go
+func LocalNfsUsersWithLdapAllowed() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
 ##### `OrganizationalUnit`<sup>Required</sup> <a name="OrganizationalUnit" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.organizationalUnit"></a>
 
 ```go
@@ -1710,6 +2054,26 @@ func OrganizationalUnit() *string
 
 ```go
 func Password() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ServerRootCaCertificate`<sup>Required</sup> <a name="ServerRootCaCertificate" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.serverRootCaCertificate"></a>
+
+```go
+func ServerRootCaCertificate() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SiteName`<sup>Required</sup> <a name="SiteName" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.property.siteName"></a>
+
+```go
+func SiteName() *string
 ```
 
 - *Type:* *string
@@ -1752,7 +2116,7 @@ func InternalValue() NetappAccountActiveDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappAccount.NetappAccountIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NewNetappAccountIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappAccountIdentityOutputReference
 ```
@@ -2074,7 +2438,7 @@ func InternalValue() NetappAccountIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappAccount.NetappAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NewNetappAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappAccountTimeoutsOutputReference
 ```

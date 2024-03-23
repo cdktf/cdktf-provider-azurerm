@@ -4,12 +4,12 @@
 
 ### RelayNamespaceAuthorizationRule <a name="RelayNamespaceAuthorizationRule" id="@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule azurerm_relay_namespace_authorization_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule azurerm_relay_namespace_authorization_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/relaynamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relaynamespaceauthorizationrule"
 
 relaynamespaceauthorizationrule.NewRelayNamespaceAuthorizationRule(scope Construct, id *string, config RelayNamespaceAuthorizationRuleConfig) RelayNamespaceAuthorizationRule
 ```
@@ -426,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/relaynamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relaynamespaceauthorizationrule"
 
 relaynamespaceauthorizationrule.RelayNamespaceAuthorizationRule_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/relaynamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relaynamespaceauthorizationrule"
 
 relaynamespaceauthorizationrule.RelayNamespaceAuthorizationRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ relaynamespaceauthorizationrule.RelayNamespaceAuthorizationRule_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/relaynamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relaynamespaceauthorizationrule"
 
 relaynamespaceauthorizationrule.RelayNamespaceAuthorizationRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ relaynamespaceauthorizationrule.RelayNamespaceAuthorizationRule_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/relaynamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relaynamespaceauthorizationrule"
 
 relaynamespaceauthorizationrule.RelayNamespaceAuthorizationRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -515,7 +515,7 @@ The construct id used in the generated config for the RelayNamespaceAuthorizatio
 
 The id of the existing RelayNamespaceAuthorizationRule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -935,7 +935,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/relaynamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relaynamespaceauthorizationrule"
 
 &relaynamespaceauthorizationrule.RelayNamespaceAuthorizationRuleConfig {
 	Connection: interface{},
@@ -952,7 +952,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/relaynamespaceaut
 	Listen: interface{},
 	Manage: interface{},
 	Send: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleTimeouts,
 }
 ```
 
@@ -967,13 +967,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/relaynamespaceaut
 | <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#name RelayNamespaceAuthorizationRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.namespaceName">NamespaceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#namespace_name RelayNamespaceAuthorizationRule#namespace_name}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#resource_group_name RelayNamespaceAuthorizationRule#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#id RelayNamespaceAuthorizationRule#id}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.listen">Listen</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#listen RelayNamespaceAuthorizationRule#listen}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.manage">Manage</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#manage RelayNamespaceAuthorizationRule#manage}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.send">Send</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#send RelayNamespaceAuthorizationRule#send}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#name RelayNamespaceAuthorizationRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.namespaceName">NamespaceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#namespace_name RelayNamespaceAuthorizationRule#namespace_name}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#resource_group_name RelayNamespaceAuthorizationRule#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#id RelayNamespaceAuthorizationRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.listen">Listen</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#listen RelayNamespaceAuthorizationRule#listen}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.manage">Manage</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#manage RelayNamespaceAuthorizationRule#manage}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.send">Send</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#send RelayNamespaceAuthorizationRule#send}. |
 | <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleTimeouts">RelayNamespaceAuthorizationRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1056,7 +1056,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#name RelayNamespaceAuthorizationRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#name RelayNamespaceAuthorizationRule#name}.
 
 ---
 
@@ -1068,7 +1068,7 @@ NamespaceName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#namespace_name RelayNamespaceAuthorizationRule#namespace_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#namespace_name RelayNamespaceAuthorizationRule#namespace_name}.
 
 ---
 
@@ -1080,7 +1080,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#resource_group_name RelayNamespaceAuthorizationRule#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#resource_group_name RelayNamespaceAuthorizationRule#resource_group_name}.
 
 ---
 
@@ -1092,7 +1092,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#id RelayNamespaceAuthorizationRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#id RelayNamespaceAuthorizationRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1107,7 +1107,7 @@ Listen interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#listen RelayNamespaceAuthorizationRule#listen}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#listen RelayNamespaceAuthorizationRule#listen}.
 
 ---
 
@@ -1119,7 +1119,7 @@ Manage interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#manage RelayNamespaceAuthorizationRule#manage}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#manage RelayNamespaceAuthorizationRule#manage}.
 
 ---
 
@@ -1131,7 +1131,7 @@ Send interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#send RelayNamespaceAuthorizationRule#send}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#send RelayNamespaceAuthorizationRule#send}.
 
 ---
 
@@ -1145,7 +1145,7 @@ Timeouts RelayNamespaceAuthorizationRuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#timeouts RelayNamespaceAuthorizationRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#timeouts RelayNamespaceAuthorizationRule#timeouts}
 
 ---
 
@@ -1154,7 +1154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/relaynamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relaynamespaceauthorizationrule"
 
 &relaynamespaceauthorizationrule.RelayNamespaceAuthorizationRuleTimeouts {
 	Create: *string,
@@ -1168,10 +1168,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/relaynamespaceaut
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#create RelayNamespaceAuthorizationRule#create}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#delete RelayNamespaceAuthorizationRule#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#read RelayNamespaceAuthorizationRule#read}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#update RelayNamespaceAuthorizationRule#update}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#create RelayNamespaceAuthorizationRule#create}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#delete RelayNamespaceAuthorizationRule#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#read RelayNamespaceAuthorizationRule#read}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#update RelayNamespaceAuthorizationRule#update}. |
 
 ---
 
@@ -1183,7 +1183,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#create RelayNamespaceAuthorizationRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#create RelayNamespaceAuthorizationRule#create}.
 
 ---
 
@@ -1195,7 +1195,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#delete RelayNamespaceAuthorizationRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#delete RelayNamespaceAuthorizationRule#delete}.
 
 ---
 
@@ -1207,7 +1207,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#read RelayNamespaceAuthorizationRule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#read RelayNamespaceAuthorizationRule#read}.
 
 ---
 
@@ -1219,7 +1219,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/relay_namespace_authorization_rule#update RelayNamespaceAuthorizationRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/relay_namespace_authorization_rule#update RelayNamespaceAuthorizationRule#update}.
 
 ---
 
@@ -1230,7 +1230,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.relayNamespaceAuthorizationRule.RelayNamespaceAuthorizationRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/relaynamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/relaynamespaceauthorizationrule"
 
 relaynamespaceauthorizationrule.NewRelayNamespaceAuthorizationRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RelayNamespaceAuthorizationRuleTimeoutsOutputReference
 ```

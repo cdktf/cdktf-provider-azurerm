@@ -694,6 +694,7 @@ The following submodules are available:
 - [dnsZone](./dnsZone.csharp.md)
 - [elasticCloudElasticsearch](./elasticCloudElasticsearch.csharp.md)
 - [elasticSan](./elasticSan.csharp.md)
+- [elasticSanVolume](./elasticSanVolume.csharp.md)
 - [elasticSanVolumeGroup](./elasticSanVolumeGroup.csharp.md)
 - [emailCommunicationService](./emailCommunicationService.csharp.md)
 - [eventgridDomain](./eventgridDomain.csharp.md)

@@ -4,7 +4,7 @@
 
 ### HealthcareService <a name="HealthcareService" id="@cdktf/provider-azurerm.healthcareService.HealthcareService"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service azurerm_healthcare_service}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service azurerm_healthcare_service}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer"></a>
 
@@ -28,10 +28,12 @@ HealthcareService.Builder.create(Construct scope, java.lang.String id)
     .resourceGroupName(java.lang.String)
 //  .accessPolicyObjectIds(java.util.List<java.lang.String>)
 //  .authenticationConfiguration(HealthcareServiceAuthenticationConfiguration)
+//  .configurationExportStorageAccountName(java.lang.String)
 //  .corsConfiguration(HealthcareServiceCorsConfiguration)
 //  .cosmosdbKeyVaultKeyVersionlessId(java.lang.String)
 //  .cosmosdbThroughput(java.lang.Number)
 //  .id(java.lang.String)
+//  .identity(HealthcareServiceIdentity)
 //  .kind(java.lang.String)
 //  .publicNetworkAccessEnabled(java.lang.Boolean)
 //  .publicNetworkAccessEnabled(IResolvable)
@@ -51,18 +53,20 @@ HealthcareService.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#location HealthcareService#location}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#name HealthcareService#name}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#resource_group_name HealthcareService#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.accessPolicyObjectIds">accessPolicyObjectIds</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#access_policy_object_ids HealthcareService#access_policy_object_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#location HealthcareService#location}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#name HealthcareService#name}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#resource_group_name HealthcareService#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.accessPolicyObjectIds">accessPolicyObjectIds</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#access_policy_object_ids HealthcareService#access_policy_object_ids}. |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.authenticationConfiguration">authenticationConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceAuthenticationConfiguration">HealthcareServiceAuthenticationConfiguration</a></code> | authentication_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.configurationExportStorageAccountName">configurationExportStorageAccountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#configuration_export_storage_account_name HealthcareService#configuration_export_storage_account_name}. |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.corsConfiguration">corsConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration">HealthcareServiceCorsConfiguration</a></code> | cors_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.cosmosdbKeyVaultKeyVersionlessId">cosmosdbKeyVaultKeyVersionlessId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#cosmosdb_key_vault_key_versionless_id HealthcareService#cosmosdb_key_vault_key_versionless_id}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.cosmosdbThroughput">cosmosdbThroughput</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#cosmosdb_throughput HealthcareService#cosmosdb_throughput}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#id HealthcareService#id}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.kind">kind</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#kind HealthcareService#kind}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#public_network_access_enabled HealthcareService#public_network_access_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#tags HealthcareService#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.cosmosdbKeyVaultKeyVersionlessId">cosmosdbKeyVaultKeyVersionlessId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#cosmosdb_key_vault_key_versionless_id HealthcareService#cosmosdb_key_vault_key_versionless_id}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.cosmosdbThroughput">cosmosdbThroughput</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#cosmosdb_throughput HealthcareService#cosmosdb_throughput}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#id HealthcareService#id}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity">HealthcareServiceIdentity</a></code> | identity block. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.kind">kind</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#kind HealthcareService#kind}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#public_network_access_enabled HealthcareService#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#tags HealthcareService#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeouts">HealthcareServiceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -131,7 +135,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#location HealthcareService#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#location HealthcareService#location}.
 
 ---
 
@@ -139,7 +143,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#name HealthcareService#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#name HealthcareService#name}.
 
 ---
 
@@ -147,7 +151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#resource_group_name HealthcareService#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#resource_group_name HealthcareService#resource_group_name}.
 
 ---
 
@@ -155,7 +159,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#access_policy_object_ids HealthcareService#access_policy_object_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#access_policy_object_ids HealthcareService#access_policy_object_ids}.
 
 ---
 
@@ -165,7 +169,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 authentication_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#authentication_configuration HealthcareService#authentication_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#authentication_configuration HealthcareService#authentication_configuration}
+
+---
+
+##### `configurationExportStorageAccountName`<sup>Optional</sup> <a name="configurationExportStorageAccountName" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.configurationExportStorageAccountName"></a>
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#configuration_export_storage_account_name HealthcareService#configuration_export_storage_account_name}.
 
 ---
 
@@ -175,7 +187,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 cors_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#cors_configuration HealthcareService#cors_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#cors_configuration HealthcareService#cors_configuration}
 
 ---
 
@@ -183,7 +195,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#cosmosdb_key_vault_key_versionless_id HealthcareService#cosmosdb_key_vault_key_versionless_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#cosmosdb_key_vault_key_versionless_id HealthcareService#cosmosdb_key_vault_key_versionless_id}.
 
 ---
 
@@ -191,7 +203,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#cosmosdb_throughput HealthcareService#cosmosdb_throughput}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#cosmosdb_throughput HealthcareService#cosmosdb_throughput}.
 
 ---
 
@@ -199,10 +211,20 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#id HealthcareService#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#id HealthcareService#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `identity`<sup>Optional</sup> <a name="identity" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer.parameter.identity"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity">HealthcareServiceIdentity</a>
+
+identity block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#identity HealthcareService#identity}
 
 ---
 
@@ -210,7 +232,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#kind HealthcareService#kind}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#kind HealthcareService#kind}.
 
 ---
 
@@ -218,7 +240,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#public_network_access_enabled HealthcareService#public_network_access_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#public_network_access_enabled HealthcareService#public_network_access_enabled}.
 
 ---
 
@@ -226,7 +248,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#tags HealthcareService#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#tags HealthcareService#tags}.
 
 ---
 
@@ -236,7 +258,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#timeouts HealthcareService#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#timeouts HealthcareService#timeouts}
 
 ---
 
@@ -269,13 +291,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.putAuthenticationConfiguration">putAuthenticationConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.putCorsConfiguration">putCorsConfiguration</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.putIdentity">putIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.putTimeouts">putTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.resetAccessPolicyObjectIds">resetAccessPolicyObjectIds</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.resetAuthenticationConfiguration">resetAuthenticationConfiguration</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.resetConfigurationExportStorageAccountName">resetConfigurationExportStorageAccountName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.resetCorsConfiguration">resetCorsConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.resetCosmosdbKeyVaultKeyVersionlessId">resetCosmosdbKeyVaultKeyVersionlessId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.resetCosmosdbThroughput">resetCosmosdbThroughput</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.resetId">resetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.resetIdentity">resetIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.resetKind">resetKind</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.resetPublicNetworkAccessEnabled">resetPublicNetworkAccessEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.resetTags">resetTags</a></code> | *No description.* |
@@ -597,6 +622,18 @@ public void putCorsConfiguration(HealthcareServiceCorsConfiguration value)
 
 ---
 
+##### `putIdentity` <a name="putIdentity" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.putIdentity"></a>
+
+```java
+public void putIdentity(HealthcareServiceIdentity value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.putIdentity.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity">HealthcareServiceIdentity</a>
+
+---
+
 ##### `putTimeouts` <a name="putTimeouts" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.putTimeouts"></a>
 
 ```java
@@ -621,6 +658,12 @@ public void resetAccessPolicyObjectIds()
 public void resetAuthenticationConfiguration()
 ```
 
+##### `resetConfigurationExportStorageAccountName` <a name="resetConfigurationExportStorageAccountName" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.resetConfigurationExportStorageAccountName"></a>
+
+```java
+public void resetConfigurationExportStorageAccountName()
+```
+
 ##### `resetCorsConfiguration` <a name="resetCorsConfiguration" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.resetCorsConfiguration"></a>
 
 ```java
@@ -643,6 +686,12 @@ public void resetCosmosdbThroughput()
 
 ```java
 public void resetId()
+```
+
+##### `resetIdentity` <a name="resetIdentity" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.resetIdentity"></a>
+
+```java
+public void resetIdentity()
 ```
 
 ##### `resetKind` <a name="resetKind" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.resetKind"></a>
@@ -772,7 +821,7 @@ The construct id used in the generated config for the HealthcareService to impor
 
 The id of the existing HealthcareService that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -804,12 +853,15 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.authenticationConfiguration">authenticationConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceAuthenticationConfigurationOutputReference">HealthcareServiceAuthenticationConfigurationOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.corsConfiguration">corsConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfigurationOutputReference">HealthcareServiceCorsConfigurationOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference">HealthcareServiceIdentityOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeoutsOutputReference">HealthcareServiceTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.accessPolicyObjectIdsInput">accessPolicyObjectIdsInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.authenticationConfigurationInput">authenticationConfigurationInput</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceAuthenticationConfiguration">HealthcareServiceAuthenticationConfiguration</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.configurationExportStorageAccountNameInput">configurationExportStorageAccountNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.corsConfigurationInput">corsConfigurationInput</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration">HealthcareServiceCorsConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.cosmosdbKeyVaultKeyVersionlessIdInput">cosmosdbKeyVaultKeyVersionlessIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.cosmosdbThroughputInput">cosmosdbThroughputInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.identityInput">identityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity">HealthcareServiceIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.kindInput">kindInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.locationInput">locationInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -819,6 +871,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.tagsInput">tagsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeouts">HealthcareServiceTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.accessPolicyObjectIds">accessPolicyObjectIds</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.configurationExportStorageAccountName">configurationExportStorageAccountName</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.cosmosdbKeyVaultKeyVersionlessId">cosmosdbKeyVaultKeyVersionlessId</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.cosmosdbThroughput">cosmosdbThroughput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareService.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -993,6 +1046,16 @@ public HealthcareServiceCorsConfigurationOutputReference getCorsConfiguration();
 
 ---
 
+##### `identity`<sup>Required</sup> <a name="identity" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.property.identity"></a>
+
+```java
+public HealthcareServiceIdentityOutputReference getIdentity();
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference">HealthcareServiceIdentityOutputReference</a>
+
+---
+
 ##### `timeouts`<sup>Required</sup> <a name="timeouts" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.property.timeouts"></a>
 
 ```java
@@ -1023,6 +1086,16 @@ public HealthcareServiceAuthenticationConfiguration getAuthenticationConfigurati
 
 ---
 
+##### `configurationExportStorageAccountNameInput`<sup>Optional</sup> <a name="configurationExportStorageAccountNameInput" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.property.configurationExportStorageAccountNameInput"></a>
+
+```java
+public java.lang.String getConfigurationExportStorageAccountNameInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `corsConfigurationInput`<sup>Optional</sup> <a name="corsConfigurationInput" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.property.corsConfigurationInput"></a>
 
 ```java
@@ -1050,6 +1123,16 @@ public java.lang.Number getCosmosdbThroughputInput();
 ```
 
 - *Type:* java.lang.Number
+
+---
+
+##### `identityInput`<sup>Optional</sup> <a name="identityInput" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.property.identityInput"></a>
+
+```java
+public HealthcareServiceIdentity getIdentityInput();
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity">HealthcareServiceIdentity</a>
 
 ---
 
@@ -1140,6 +1223,16 @@ public java.util.List<java.lang.String> getAccessPolicyObjectIds();
 ```
 
 - *Type:* java.util.List<java.lang.String>
+
+---
+
+##### `configurationExportStorageAccountName`<sup>Required</sup> <a name="configurationExportStorageAccountName" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.property.configurationExportStorageAccountName"></a>
+
+```java
+public java.lang.String getConfigurationExportStorageAccountName();
+```
+
+- *Type:* java.lang.String
 
 ---
 
@@ -1272,9 +1365,9 @@ HealthcareServiceAuthenticationConfiguration.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceAuthenticationConfiguration.property.audience">audience</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#audience HealthcareService#audience}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceAuthenticationConfiguration.property.authority">authority</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#authority HealthcareService#authority}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceAuthenticationConfiguration.property.smartProxyEnabled">smartProxyEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#smart_proxy_enabled HealthcareService#smart_proxy_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceAuthenticationConfiguration.property.audience">audience</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#audience HealthcareService#audience}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceAuthenticationConfiguration.property.authority">authority</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#authority HealthcareService#authority}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceAuthenticationConfiguration.property.smartProxyEnabled">smartProxyEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#smart_proxy_enabled HealthcareService#smart_proxy_enabled}. |
 
 ---
 
@@ -1286,7 +1379,7 @@ public java.lang.String getAudience();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#audience HealthcareService#audience}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#audience HealthcareService#audience}.
 
 ---
 
@@ -1298,7 +1391,7 @@ public java.lang.String getAuthority();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#authority HealthcareService#authority}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#authority HealthcareService#authority}.
 
 ---
 
@@ -1310,7 +1403,7 @@ public java.lang.Object getSmartProxyEnabled();
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#smart_proxy_enabled HealthcareService#smart_proxy_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#smart_proxy_enabled HealthcareService#smart_proxy_enabled}.
 
 ---
 
@@ -1338,10 +1431,12 @@ HealthcareServiceConfig.builder()
     .resourceGroupName(java.lang.String)
 //  .accessPolicyObjectIds(java.util.List<java.lang.String>)
 //  .authenticationConfiguration(HealthcareServiceAuthenticationConfiguration)
+//  .configurationExportStorageAccountName(java.lang.String)
 //  .corsConfiguration(HealthcareServiceCorsConfiguration)
 //  .cosmosdbKeyVaultKeyVersionlessId(java.lang.String)
 //  .cosmosdbThroughput(java.lang.Number)
 //  .id(java.lang.String)
+//  .identity(HealthcareServiceIdentity)
 //  .kind(java.lang.String)
 //  .publicNetworkAccessEnabled(java.lang.Boolean)
 //  .publicNetworkAccessEnabled(IResolvable)
@@ -1361,18 +1456,20 @@ HealthcareServiceConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#location HealthcareService#location}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#name HealthcareService#name}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#resource_group_name HealthcareService#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.accessPolicyObjectIds">accessPolicyObjectIds</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#access_policy_object_ids HealthcareService#access_policy_object_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#location HealthcareService#location}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#name HealthcareService#name}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#resource_group_name HealthcareService#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.accessPolicyObjectIds">accessPolicyObjectIds</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#access_policy_object_ids HealthcareService#access_policy_object_ids}. |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.authenticationConfiguration">authenticationConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceAuthenticationConfiguration">HealthcareServiceAuthenticationConfiguration</a></code> | authentication_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.configurationExportStorageAccountName">configurationExportStorageAccountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#configuration_export_storage_account_name HealthcareService#configuration_export_storage_account_name}. |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.corsConfiguration">corsConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration">HealthcareServiceCorsConfiguration</a></code> | cors_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.cosmosdbKeyVaultKeyVersionlessId">cosmosdbKeyVaultKeyVersionlessId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#cosmosdb_key_vault_key_versionless_id HealthcareService#cosmosdb_key_vault_key_versionless_id}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.cosmosdbThroughput">cosmosdbThroughput</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#cosmosdb_throughput HealthcareService#cosmosdb_throughput}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#id HealthcareService#id}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.kind">kind</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#kind HealthcareService#kind}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#public_network_access_enabled HealthcareService#public_network_access_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#tags HealthcareService#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.cosmosdbKeyVaultKeyVersionlessId">cosmosdbKeyVaultKeyVersionlessId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#cosmosdb_key_vault_key_versionless_id HealthcareService#cosmosdb_key_vault_key_versionless_id}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.cosmosdbThroughput">cosmosdbThroughput</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#cosmosdb_throughput HealthcareService#cosmosdb_throughput}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#id HealthcareService#id}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity">HealthcareServiceIdentity</a></code> | identity block. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.kind">kind</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#kind HealthcareService#kind}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#public_network_access_enabled HealthcareService#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#tags HealthcareService#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeouts">HealthcareServiceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1455,7 +1552,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#location HealthcareService#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#location HealthcareService#location}.
 
 ---
 
@@ -1467,7 +1564,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#name HealthcareService#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#name HealthcareService#name}.
 
 ---
 
@@ -1479,7 +1576,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#resource_group_name HealthcareService#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#resource_group_name HealthcareService#resource_group_name}.
 
 ---
 
@@ -1491,7 +1588,7 @@ public java.util.List<java.lang.String> getAccessPolicyObjectIds();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#access_policy_object_ids HealthcareService#access_policy_object_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#access_policy_object_ids HealthcareService#access_policy_object_ids}.
 
 ---
 
@@ -1505,7 +1602,19 @@ public HealthcareServiceAuthenticationConfiguration getAuthenticationConfigurati
 
 authentication_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#authentication_configuration HealthcareService#authentication_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#authentication_configuration HealthcareService#authentication_configuration}
+
+---
+
+##### `configurationExportStorageAccountName`<sup>Optional</sup> <a name="configurationExportStorageAccountName" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.configurationExportStorageAccountName"></a>
+
+```java
+public java.lang.String getConfigurationExportStorageAccountName();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#configuration_export_storage_account_name HealthcareService#configuration_export_storage_account_name}.
 
 ---
 
@@ -1519,7 +1628,7 @@ public HealthcareServiceCorsConfiguration getCorsConfiguration();
 
 cors_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#cors_configuration HealthcareService#cors_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#cors_configuration HealthcareService#cors_configuration}
 
 ---
 
@@ -1531,7 +1640,7 @@ public java.lang.String getCosmosdbKeyVaultKeyVersionlessId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#cosmosdb_key_vault_key_versionless_id HealthcareService#cosmosdb_key_vault_key_versionless_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#cosmosdb_key_vault_key_versionless_id HealthcareService#cosmosdb_key_vault_key_versionless_id}.
 
 ---
 
@@ -1543,7 +1652,7 @@ public java.lang.Number getCosmosdbThroughput();
 
 - *Type:* java.lang.Number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#cosmosdb_throughput HealthcareService#cosmosdb_throughput}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#cosmosdb_throughput HealthcareService#cosmosdb_throughput}.
 
 ---
 
@@ -1555,10 +1664,24 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#id HealthcareService#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#id HealthcareService#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `identity`<sup>Optional</sup> <a name="identity" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.property.identity"></a>
+
+```java
+public HealthcareServiceIdentity getIdentity();
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity">HealthcareServiceIdentity</a>
+
+identity block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#identity HealthcareService#identity}
 
 ---
 
@@ -1570,7 +1693,7 @@ public java.lang.String getKind();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#kind HealthcareService#kind}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#kind HealthcareService#kind}.
 
 ---
 
@@ -1582,7 +1705,7 @@ public java.lang.Object getPublicNetworkAccessEnabled();
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#public_network_access_enabled HealthcareService#public_network_access_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#public_network_access_enabled HealthcareService#public_network_access_enabled}.
 
 ---
 
@@ -1594,7 +1717,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTags();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#tags HealthcareService#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#tags HealthcareService#tags}.
 
 ---
 
@@ -1608,7 +1731,7 @@ public HealthcareServiceTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#timeouts HealthcareService#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#timeouts HealthcareService#timeouts}
 
 ---
 
@@ -1633,11 +1756,11 @@ HealthcareServiceCorsConfiguration.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration.property.allowCredentials">allowCredentials</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#allow_credentials HealthcareService#allow_credentials}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration.property.allowedHeaders">allowedHeaders</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#allowed_headers HealthcareService#allowed_headers}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration.property.allowedMethods">allowedMethods</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#allowed_methods HealthcareService#allowed_methods}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration.property.allowedOrigins">allowedOrigins</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#allowed_origins HealthcareService#allowed_origins}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration.property.maxAgeInSeconds">maxAgeInSeconds</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#max_age_in_seconds HealthcareService#max_age_in_seconds}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration.property.allowCredentials">allowCredentials</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#allow_credentials HealthcareService#allow_credentials}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration.property.allowedHeaders">allowedHeaders</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#allowed_headers HealthcareService#allowed_headers}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration.property.allowedMethods">allowedMethods</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#allowed_methods HealthcareService#allowed_methods}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration.property.allowedOrigins">allowedOrigins</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#allowed_origins HealthcareService#allowed_origins}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration.property.maxAgeInSeconds">maxAgeInSeconds</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#max_age_in_seconds HealthcareService#max_age_in_seconds}. |
 
 ---
 
@@ -1649,7 +1772,7 @@ public java.lang.Object getAllowCredentials();
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#allow_credentials HealthcareService#allow_credentials}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#allow_credentials HealthcareService#allow_credentials}.
 
 ---
 
@@ -1661,7 +1784,7 @@ public java.util.List<java.lang.String> getAllowedHeaders();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#allowed_headers HealthcareService#allowed_headers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#allowed_headers HealthcareService#allowed_headers}.
 
 ---
 
@@ -1673,7 +1796,7 @@ public java.util.List<java.lang.String> getAllowedMethods();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#allowed_methods HealthcareService#allowed_methods}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#allowed_methods HealthcareService#allowed_methods}.
 
 ---
 
@@ -1685,7 +1808,7 @@ public java.util.List<java.lang.String> getAllowedOrigins();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#allowed_origins HealthcareService#allowed_origins}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#allowed_origins HealthcareService#allowed_origins}.
 
 ---
 
@@ -1697,7 +1820,39 @@ public java.lang.Number getMaxAgeInSeconds();
 
 - *Type:* java.lang.Number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#max_age_in_seconds HealthcareService#max_age_in_seconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#max_age_in_seconds HealthcareService#max_age_in_seconds}.
+
+---
+
+### HealthcareServiceIdentity <a name="HealthcareServiceIdentity" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.azurerm.healthcare_service.HealthcareServiceIdentity;
+
+HealthcareServiceIdentity.builder()
+    .type(java.lang.String)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#type HealthcareService#type}. |
+
+---
+
+##### `type`<sup>Required</sup> <a name="type" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity.property.type"></a>
+
+```java
+public java.lang.String getType();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#type HealthcareService#type}.
 
 ---
 
@@ -1720,10 +1875,10 @@ HealthcareServiceTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#create HealthcareService#create}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#delete HealthcareService#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#read HealthcareService#read}. |
-| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#update HealthcareService#update}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#create HealthcareService#create}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#delete HealthcareService#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#read HealthcareService#read}. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#update HealthcareService#update}. |
 
 ---
 
@@ -1735,7 +1890,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#create HealthcareService#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#create HealthcareService#create}.
 
 ---
 
@@ -1747,7 +1902,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#delete HealthcareService#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#delete HealthcareService#delete}.
 
 ---
 
@@ -1759,7 +1914,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#read HealthcareService#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#read HealthcareService#read}.
 
 ---
 
@@ -1771,7 +1926,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/healthcare_service#update HealthcareService#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/healthcare_service#update HealthcareService#update}.
 
 ---
 
@@ -2503,6 +2658,299 @@ public HealthcareServiceCorsConfiguration getInternalValue();
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration">HealthcareServiceCorsConfiguration</a>
+
+---
+
+
+### HealthcareServiceIdentityOutputReference <a name="HealthcareServiceIdentityOutputReference" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.azurerm.healthcare_service.HealthcareServiceIdentityOutputReference;
+
+new HealthcareServiceIdentityOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.principalId">principalId</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.tenantId">tenantId</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.typeInput">typeInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.type">type</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity">HealthcareServiceIdentity</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `principalId`<sup>Required</sup> <a name="principalId" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.principalId"></a>
+
+```java
+public java.lang.String getPrincipalId();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `tenantId`<sup>Required</sup> <a name="tenantId" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.tenantId"></a>
+
+```java
+public java.lang.String getTenantId();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `typeInput`<sup>Optional</sup> <a name="typeInput" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.typeInput"></a>
+
+```java
+public java.lang.String getTypeInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `type`<sup>Required</sup> <a name="type" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.type"></a>
+
+```java
+public java.lang.String getType();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.property.internalValue"></a>
+
+```java
+public HealthcareServiceIdentity getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity">HealthcareServiceIdentity</a>
 
 ---
 

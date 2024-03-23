@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,62 +8,62 @@ import * as cdktf from 'cdktf';
 
 export interface MediaJobConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#description MediaJob#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#description MediaJob#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#id MediaJob#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#id MediaJob#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#media_services_account_name MediaJob#media_services_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#media_services_account_name MediaJob#media_services_account_name}
   */
   readonly mediaServicesAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#name MediaJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#name MediaJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#priority MediaJob#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#priority MediaJob#priority}
   */
   readonly priority?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#resource_group_name MediaJob#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#resource_group_name MediaJob#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#transform_name MediaJob#transform_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#transform_name MediaJob#transform_name}
   */
   readonly transformName: string;
   /**
   * input_asset block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#input_asset MediaJob#input_asset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#input_asset MediaJob#input_asset}
   */
   readonly inputAsset: MediaJobInputAsset;
   /**
   * output_asset block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#output_asset MediaJob#output_asset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#output_asset MediaJob#output_asset}
   */
   readonly outputAsset: MediaJobOutputAsset[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#timeouts MediaJob#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#timeouts MediaJob#timeouts}
   */
   readonly timeouts?: MediaJobTimeouts;
 }
 export interface MediaJobInputAsset {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#label MediaJob#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#label MediaJob#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#name MediaJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#name MediaJob#name}
   */
   readonly name: string;
 }
@@ -178,11 +173,11 @@ export class MediaJobInputAssetOutputReference extends cdktf.ComplexObject {
 }
 export interface MediaJobOutputAsset {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#label MediaJob#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#label MediaJob#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#name MediaJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#name MediaJob#name}
   */
   readonly name: string;
 }
@@ -324,19 +319,19 @@ export class MediaJobOutputAssetList extends cdktf.ComplexList {
 }
 export interface MediaJobTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#create MediaJob#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#create MediaJob#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#delete MediaJob#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#delete MediaJob#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#read MediaJob#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#read MediaJob#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#update MediaJob#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#update MediaJob#update}
   */
   readonly update?: string;
 }
@@ -517,7 +512,7 @@ export class MediaJobTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job azurerm_media_job}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job azurerm_media_job}
 */
 export class MediaJob extends cdktf.TerraformResource {
 
@@ -533,7 +528,7 @@ export class MediaJob extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MediaJob resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MediaJob to import
-  * @param importFromId The id of the existing MediaJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MediaJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MediaJob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -545,7 +540,7 @@ export class MediaJob extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/media_job azurerm_media_job} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/media_job azurerm_media_job} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -556,7 +551,7 @@ export class MediaJob extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_job',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.96.0',
+        providerVersion: '3.97.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -4,7 +4,7 @@
 
 ### SpringCloudApiPortalCustomDomain <a name="SpringCloudApiPortalCustomDomain" id="@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomain"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain azurerm_spring_cloud_api_portal_custom_domain}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain azurerm_spring_cloud_api_portal_custom_domain}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomain.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the SpringCloudApiPortalCustom
 
 The id of the existing SpringCloudApiPortalCustomDomain that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -827,10 +827,10 @@ const springCloudApiPortalCustomDomainConfig: springCloudApiPortalCustomDomain.S
 | <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#name SpringCloudApiPortalCustomDomain#name}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainConfig.property.springCloudApiPortalId">springCloudApiPortalId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#spring_cloud_api_portal_id SpringCloudApiPortalCustomDomain#spring_cloud_api_portal_id}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#id SpringCloudApiPortalCustomDomain#id}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainConfig.property.thumbprint">thumbprint</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#thumbprint SpringCloudApiPortalCustomDomain#thumbprint}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#name SpringCloudApiPortalCustomDomain#name}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainConfig.property.springCloudApiPortalId">springCloudApiPortalId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#spring_cloud_api_portal_id SpringCloudApiPortalCustomDomain#spring_cloud_api_portal_id}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#id SpringCloudApiPortalCustomDomain#id}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainConfig.property.thumbprint">thumbprint</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#thumbprint SpringCloudApiPortalCustomDomain#thumbprint}. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainTimeouts">SpringCloudApiPortalCustomDomainTimeouts</a></code> | timeouts block. |
 
 ---
@@ -913,7 +913,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#name SpringCloudApiPortalCustomDomain#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#name SpringCloudApiPortalCustomDomain#name}.
 
 ---
 
@@ -925,7 +925,7 @@ public readonly springCloudApiPortalId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#spring_cloud_api_portal_id SpringCloudApiPortalCustomDomain#spring_cloud_api_portal_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#spring_cloud_api_portal_id SpringCloudApiPortalCustomDomain#spring_cloud_api_portal_id}.
 
 ---
 
@@ -937,7 +937,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#id SpringCloudApiPortalCustomDomain#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#id SpringCloudApiPortalCustomDomain#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -952,7 +952,7 @@ public readonly thumbprint: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#thumbprint SpringCloudApiPortalCustomDomain#thumbprint}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#thumbprint SpringCloudApiPortalCustomDomain#thumbprint}.
 
 ---
 
@@ -966,7 +966,7 @@ public readonly timeouts: SpringCloudApiPortalCustomDomainTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#timeouts SpringCloudApiPortalCustomDomain#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#timeouts SpringCloudApiPortalCustomDomain#timeouts}
 
 ---
 
@@ -984,10 +984,10 @@ const springCloudApiPortalCustomDomainTimeouts: springCloudApiPortalCustomDomain
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#create SpringCloudApiPortalCustomDomain#create}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#delete SpringCloudApiPortalCustomDomain#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#read SpringCloudApiPortalCustomDomain#read}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#update SpringCloudApiPortalCustomDomain#update}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#create SpringCloudApiPortalCustomDomain#create}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#delete SpringCloudApiPortalCustomDomain#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#read SpringCloudApiPortalCustomDomain#read}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#update SpringCloudApiPortalCustomDomain#update}. |
 
 ---
 
@@ -999,7 +999,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#create SpringCloudApiPortalCustomDomain#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#create SpringCloudApiPortalCustomDomain#create}.
 
 ---
 
@@ -1011,7 +1011,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#delete SpringCloudApiPortalCustomDomain#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#delete SpringCloudApiPortalCustomDomain#delete}.
 
 ---
 
@@ -1023,7 +1023,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#read SpringCloudApiPortalCustomDomain#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#read SpringCloudApiPortalCustomDomain#read}.
 
 ---
 
@@ -1035,7 +1035,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/spring_cloud_api_portal_custom_domain#update SpringCloudApiPortalCustomDomain#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/spring_cloud_api_portal_custom_domain#update SpringCloudApiPortalCustomDomain#update}.
 
 ---
 

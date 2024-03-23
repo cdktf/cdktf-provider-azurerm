@@ -4,7 +4,7 @@
 
 ### ApiManagementApiRelease <a name="ApiManagementApiRelease" id="@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiRelease"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release azurerm_api_management_api_release}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release azurerm_api_management_api_release}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiRelease.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the ApiManagementApiRelease to
 
 The id of the existing ApiManagementApiRelease that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -840,10 +840,10 @@ new ApiManagementApiReleaseConfig {
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseConfig.property.apiId">ApiId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#api_id ApiManagementApiRelease#api_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#name ApiManagementApiRelease#name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#id ApiManagementApiRelease#id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseConfig.property.notes">Notes</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#notes ApiManagementApiRelease#notes}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseConfig.property.apiId">ApiId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#api_id ApiManagementApiRelease#api_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#name ApiManagementApiRelease#name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#id ApiManagementApiRelease#id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseConfig.property.notes">Notes</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#notes ApiManagementApiRelease#notes}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseTimeouts">ApiManagementApiReleaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -926,7 +926,7 @@ public string ApiId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#api_id ApiManagementApiRelease#api_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#api_id ApiManagementApiRelease#api_id}.
 
 ---
 
@@ -938,7 +938,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#name ApiManagementApiRelease#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#name ApiManagementApiRelease#name}.
 
 ---
 
@@ -950,7 +950,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#id ApiManagementApiRelease#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#id ApiManagementApiRelease#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -965,7 +965,7 @@ public string Notes { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#notes ApiManagementApiRelease#notes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#notes ApiManagementApiRelease#notes}.
 
 ---
 
@@ -979,7 +979,7 @@ public ApiManagementApiReleaseTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#timeouts ApiManagementApiRelease#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#timeouts ApiManagementApiRelease#timeouts}
 
 ---
 
@@ -1002,10 +1002,10 @@ new ApiManagementApiReleaseTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#create ApiManagementApiRelease#create}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#delete ApiManagementApiRelease#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#read ApiManagementApiRelease#read}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#update ApiManagementApiRelease#update}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#create ApiManagementApiRelease#create}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#delete ApiManagementApiRelease#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#read ApiManagementApiRelease#read}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApiRelease.ApiManagementApiReleaseTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#update ApiManagementApiRelease#update}. |
 
 ---
 
@@ -1017,7 +1017,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#create ApiManagementApiRelease#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#create ApiManagementApiRelease#create}.
 
 ---
 
@@ -1029,7 +1029,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#delete ApiManagementApiRelease#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#delete ApiManagementApiRelease#delete}.
 
 ---
 
@@ -1041,7 +1041,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#read ApiManagementApiRelease#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#read ApiManagementApiRelease#read}.
 
 ---
 
@@ -1053,7 +1053,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/api_management_api_release#update ApiManagementApiRelease#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/api_management_api_release#update ApiManagementApiRelease#update}.
 
 ---
 

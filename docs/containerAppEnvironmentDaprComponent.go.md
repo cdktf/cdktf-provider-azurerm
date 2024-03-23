@@ -4,12 +4,12 @@
 
 ### ContainerAppEnvironmentDaprComponent <a name="ContainerAppEnvironmentDaprComponent" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponent"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component azurerm_container_app_environment_dapr_component}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component azurerm_container_app_environment_dapr_component}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponent.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 containerappenvironmentdaprcomponent.NewContainerAppEnvironmentDaprComponent(scope Construct, id *string, config ContainerAppEnvironmentDaprComponentConfig) ContainerAppEnvironmentDaprComponent
 ```
@@ -466,7 +466,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponent.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 containerappenvironmentdaprcomponent.ContainerAppEnvironmentDaprComponent_IsConstruct(x interface{}) *bool
 ```
@@ -498,7 +498,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponent.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 containerappenvironmentdaprcomponent.ContainerAppEnvironmentDaprComponent_IsTerraformElement(x interface{}) *bool
 ```
@@ -512,7 +512,7 @@ containerappenvironmentdaprcomponent.ContainerAppEnvironmentDaprComponent_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponent.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 containerappenvironmentdaprcomponent.ContainerAppEnvironmentDaprComponent_IsTerraformResource(x interface{}) *bool
 ```
@@ -526,7 +526,7 @@ containerappenvironmentdaprcomponent.ContainerAppEnvironmentDaprComponent_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponent.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 containerappenvironmentdaprcomponent.ContainerAppEnvironmentDaprComponent_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -555,7 +555,7 @@ The construct id used in the generated config for the ContainerAppEnvironmentDap
 
 The id of the existing ContainerAppEnvironmentDaprComponent that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -997,7 +997,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 &containerappenvironmentdaprcomponent.ContainerAppEnvironmentDaprComponentConfig {
 	Connection: interface{},
@@ -1017,7 +1017,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvir
 	Metadata: interface{},
 	Scopes: *[]*string,
 	Secret: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentTimeouts,
 }
 ```
 
@@ -1036,7 +1036,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvir
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentConfig.property.containerAppEnvironmentId">ContainerAppEnvironmentId</a></code> | <code>*string</code> | The Container App Managed Environment ID to configure this Dapr component on. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentConfig.property.name">Name</a></code> | <code>*string</code> | The name for this Dapr Component. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentConfig.property.version">Version</a></code> | <code>*string</code> | The version of the component. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#id ContainerAppEnvironmentDaprComponent#id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#id ContainerAppEnvironmentDaprComponent#id}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentConfig.property.ignoreErrors">IgnoreErrors</a></code> | <code>interface{}</code> | Should the Dapr sidecar to continue initialisation if the component fails to load. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentConfig.property.initTimeout">InitTimeout</a></code> | <code>*string</code> | The component initialisation timeout in ISO8601 format. e.g. `5s`, `2h`, `1m`. Defaults to `5s`. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentConfig.property.metadata">Metadata</a></code> | <code>interface{}</code> | metadata block. |
@@ -1126,7 +1126,7 @@ ComponentType *string
 
 The Dapr Component Type. For example `state.azure.blobstorage`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#component_type ContainerAppEnvironmentDaprComponent#component_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#component_type ContainerAppEnvironmentDaprComponent#component_type}
 
 ---
 
@@ -1140,7 +1140,7 @@ ContainerAppEnvironmentId *string
 
 The Container App Managed Environment ID to configure this Dapr component on.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#container_app_environment_id ContainerAppEnvironmentDaprComponent#container_app_environment_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#container_app_environment_id ContainerAppEnvironmentDaprComponent#container_app_environment_id}
 
 ---
 
@@ -1154,7 +1154,7 @@ Name *string
 
 The name for this Dapr Component.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#name ContainerAppEnvironmentDaprComponent#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#name ContainerAppEnvironmentDaprComponent#name}
 
 ---
 
@@ -1168,7 +1168,7 @@ Version *string
 
 The version of the component.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#version ContainerAppEnvironmentDaprComponent#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#version ContainerAppEnvironmentDaprComponent#version}
 
 ---
 
@@ -1180,7 +1180,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#id ContainerAppEnvironmentDaprComponent#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#id ContainerAppEnvironmentDaprComponent#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1197,7 +1197,7 @@ IgnoreErrors interface{}
 
 Should the Dapr sidecar to continue initialisation if the component fails to load. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#ignore_errors ContainerAppEnvironmentDaprComponent#ignore_errors}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#ignore_errors ContainerAppEnvironmentDaprComponent#ignore_errors}
 
 ---
 
@@ -1211,7 +1211,7 @@ InitTimeout *string
 
 The component initialisation timeout in ISO8601 format. e.g. `5s`, `2h`, `1m`. Defaults to `5s`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#init_timeout ContainerAppEnvironmentDaprComponent#init_timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#init_timeout ContainerAppEnvironmentDaprComponent#init_timeout}
 
 ---
 
@@ -1225,7 +1225,7 @@ Metadata interface{}
 
 metadata block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#metadata ContainerAppEnvironmentDaprComponent#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#metadata ContainerAppEnvironmentDaprComponent#metadata}
 
 ---
 
@@ -1239,7 +1239,7 @@ Scopes *[]*string
 
 A list of scopes to which this component applies. e.g. a Container App's `dapr.app_id` value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#scopes ContainerAppEnvironmentDaprComponent#scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#scopes ContainerAppEnvironmentDaprComponent#scopes}
 
 ---
 
@@ -1253,7 +1253,7 @@ Secret interface{}
 
 secret block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#secret ContainerAppEnvironmentDaprComponent#secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#secret ContainerAppEnvironmentDaprComponent#secret}
 
 ---
 
@@ -1267,7 +1267,7 @@ Timeouts ContainerAppEnvironmentDaprComponentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#timeouts ContainerAppEnvironmentDaprComponent#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#timeouts ContainerAppEnvironmentDaprComponent#timeouts}
 
 ---
 
@@ -1276,7 +1276,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentMetadata.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 &containerappenvironmentdaprcomponent.ContainerAppEnvironmentDaprComponentMetadata {
 	Name: *string,
@@ -1305,7 +1305,7 @@ Name *string
 
 The name of the Metadata configuration item.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#name ContainerAppEnvironmentDaprComponent#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#name ContainerAppEnvironmentDaprComponent#name}
 
 ---
 
@@ -1319,7 +1319,7 @@ SecretName *string
 
 The name of a secret specified in the `secrets` block that contains the value for this metadata configuration item.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#secret_name ContainerAppEnvironmentDaprComponent#secret_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#secret_name ContainerAppEnvironmentDaprComponent#secret_name}
 
 ---
 
@@ -1333,7 +1333,7 @@ Value *string
 
 The value for this metadata configuration item.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#value ContainerAppEnvironmentDaprComponent#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#value ContainerAppEnvironmentDaprComponent#value}
 
 ---
 
@@ -1342,7 +1342,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 &containerappenvironmentdaprcomponent.ContainerAppEnvironmentDaprComponentSecret {
 	Name: *string,
@@ -1369,7 +1369,7 @@ Name *string
 
 The Secret name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#name ContainerAppEnvironmentDaprComponent#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#name ContainerAppEnvironmentDaprComponent#name}
 
 ---
 
@@ -1383,7 +1383,7 @@ Value *string
 
 The value for this secret.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#value ContainerAppEnvironmentDaprComponent#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#value ContainerAppEnvironmentDaprComponent#value}
 
 ---
 
@@ -1392,7 +1392,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 &containerappenvironmentdaprcomponent.ContainerAppEnvironmentDaprComponentTimeouts {
 	Create: *string,
@@ -1406,10 +1406,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvir
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#create ContainerAppEnvironmentDaprComponent#create}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#delete ContainerAppEnvironmentDaprComponent#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#read ContainerAppEnvironmentDaprComponent#read}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#update ContainerAppEnvironmentDaprComponent#update}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#create ContainerAppEnvironmentDaprComponent#create}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#delete ContainerAppEnvironmentDaprComponent#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#read ContainerAppEnvironmentDaprComponent#read}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#update ContainerAppEnvironmentDaprComponent#update}. |
 
 ---
 
@@ -1421,7 +1421,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#create ContainerAppEnvironmentDaprComponent#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#create ContainerAppEnvironmentDaprComponent#create}.
 
 ---
 
@@ -1433,7 +1433,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#delete ContainerAppEnvironmentDaprComponent#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#delete ContainerAppEnvironmentDaprComponent#delete}.
 
 ---
 
@@ -1445,7 +1445,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#read ContainerAppEnvironmentDaprComponent#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#read ContainerAppEnvironmentDaprComponent#read}.
 
 ---
 
@@ -1457,7 +1457,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/container_app_environment_dapr_component#update ContainerAppEnvironmentDaprComponent#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#update ContainerAppEnvironmentDaprComponent#update}.
 
 ---
 
@@ -1468,7 +1468,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentMetadataList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 containerappenvironmentdaprcomponent.NewContainerAppEnvironmentDaprComponentMetadataList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppEnvironmentDaprComponentMetadataList
 ```
@@ -1628,7 +1628,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentMetadataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 containerappenvironmentdaprcomponent.NewContainerAppEnvironmentDaprComponentMetadataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppEnvironmentDaprComponentMetadataOutputReference
 ```
@@ -1975,7 +1975,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentSecretList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 containerappenvironmentdaprcomponent.NewContainerAppEnvironmentDaprComponentSecretList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppEnvironmentDaprComponentSecretList
 ```
@@ -2135,7 +2135,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 containerappenvironmentdaprcomponent.NewContainerAppEnvironmentDaprComponentSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppEnvironmentDaprComponentSecretOutputReference
 ```
@@ -2446,7 +2446,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironmentDaprComponent.ContainerAppEnvironmentDaprComponentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappenvironmentdaprcomponent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironmentdaprcomponent"
 
 containerappenvironmentdaprcomponent.NewContainerAppEnvironmentDaprComponentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppEnvironmentDaprComponentTimeoutsOutputReference
 ```

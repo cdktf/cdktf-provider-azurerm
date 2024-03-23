@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,100 +8,755 @@ import * as cdktf from 'cdktf';
 
 export interface NginxDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#automatic_upgrade_channel NginxDeployment#automatic_upgrade_channel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#automatic_upgrade_channel NginxDeployment#automatic_upgrade_channel}
   */
   readonly automaticUpgradeChannel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#capacity NginxDeployment#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#capacity NginxDeployment#capacity}
   */
   readonly capacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#diagnose_support_enabled NginxDeployment#diagnose_support_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#diagnose_support_enabled NginxDeployment#diagnose_support_enabled}
   */
   readonly diagnoseSupportEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#email NginxDeployment#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#email NginxDeployment#email}
   */
   readonly email?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#id NginxDeployment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#id NginxDeployment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#location NginxDeployment#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#location NginxDeployment#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#managed_resource_group NginxDeployment#managed_resource_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#managed_resource_group NginxDeployment#managed_resource_group}
   */
   readonly managedResourceGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#name NginxDeployment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#name NginxDeployment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#resource_group_name NginxDeployment#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#resource_group_name NginxDeployment#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#sku NginxDeployment#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#sku NginxDeployment#sku}
   */
   readonly sku: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#tags NginxDeployment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#tags NginxDeployment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
+  * auto_scale_profile block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#auto_scale_profile NginxDeployment#auto_scale_profile}
+  */
+  readonly autoScaleProfile?: NginxDeploymentAutoScaleProfile[] | cdktf.IResolvable;
+  /**
+  * configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#configuration NginxDeployment#configuration}
+  */
+  readonly configuration?: NginxDeploymentConfiguration;
+  /**
   * frontend_private block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#frontend_private NginxDeployment#frontend_private}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#frontend_private NginxDeployment#frontend_private}
   */
   readonly frontendPrivate?: NginxDeploymentFrontendPrivate[] | cdktf.IResolvable;
   /**
   * frontend_public block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#frontend_public NginxDeployment#frontend_public}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#frontend_public NginxDeployment#frontend_public}
   */
   readonly frontendPublic?: NginxDeploymentFrontendPublic;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#identity NginxDeployment#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#identity NginxDeployment#identity}
   */
   readonly identity?: NginxDeploymentIdentity;
   /**
   * logging_storage_account block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#logging_storage_account NginxDeployment#logging_storage_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#logging_storage_account NginxDeployment#logging_storage_account}
   */
   readonly loggingStorageAccount?: NginxDeploymentLoggingStorageAccount[] | cdktf.IResolvable;
   /**
   * network_interface block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#network_interface NginxDeployment#network_interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#network_interface NginxDeployment#network_interface}
   */
   readonly networkInterface?: NginxDeploymentNetworkInterface[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#timeouts NginxDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#timeouts NginxDeployment#timeouts}
   */
   readonly timeouts?: NginxDeploymentTimeouts;
 }
+export interface NginxDeploymentAutoScaleProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#max_capacity NginxDeployment#max_capacity}
+  */
+  readonly maxCapacity: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#min_capacity NginxDeployment#min_capacity}
+  */
+  readonly minCapacity: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#name NginxDeployment#name}
+  */
+  readonly name: string;
+}
+
+export function nginxDeploymentAutoScaleProfileToTerraform(struct?: NginxDeploymentAutoScaleProfile | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    max_capacity: cdktf.numberToTerraform(struct!.maxCapacity),
+    min_capacity: cdktf.numberToTerraform(struct!.minCapacity),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+
+export function nginxDeploymentAutoScaleProfileToHclTerraform(struct?: NginxDeploymentAutoScaleProfile | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max_capacity: {
+      value: cdktf.numberToHclTerraform(struct!.maxCapacity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    min_capacity: {
+      value: cdktf.numberToHclTerraform(struct!.minCapacity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class NginxDeploymentAutoScaleProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NginxDeploymentAutoScaleProfile | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxCapacity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxCapacity = this._maxCapacity;
+    }
+    if (this._minCapacity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minCapacity = this._minCapacity;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NginxDeploymentAutoScaleProfile | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._maxCapacity = undefined;
+      this._minCapacity = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._maxCapacity = value.maxCapacity;
+      this._minCapacity = value.minCapacity;
+      this._name = value.name;
+    }
+  }
+
+  // max_capacity - computed: false, optional: false, required: true
+  private _maxCapacity?: number; 
+  public get maxCapacity() {
+    return this.getNumberAttribute('max_capacity');
+  }
+  public set maxCapacity(value: number) {
+    this._maxCapacity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxCapacityInput() {
+    return this._maxCapacity;
+  }
+
+  // min_capacity - computed: false, optional: false, required: true
+  private _minCapacity?: number; 
+  public get minCapacity() {
+    return this.getNumberAttribute('min_capacity');
+  }
+  public set minCapacity(value: number) {
+    this._minCapacity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minCapacityInput() {
+    return this._minCapacity;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class NginxDeploymentAutoScaleProfileList extends cdktf.ComplexList {
+  public internalValue? : NginxDeploymentAutoScaleProfile[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NginxDeploymentAutoScaleProfileOutputReference {
+    return new NginxDeploymentAutoScaleProfileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface NginxDeploymentConfigurationConfigFile {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#content NginxDeployment#content}
+  */
+  readonly content: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#virtual_path NginxDeployment#virtual_path}
+  */
+  readonly virtualPath: string;
+}
+
+export function nginxDeploymentConfigurationConfigFileToTerraform(struct?: NginxDeploymentConfigurationConfigFile | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    content: cdktf.stringToTerraform(struct!.content),
+    virtual_path: cdktf.stringToTerraform(struct!.virtualPath),
+  }
+}
+
+
+export function nginxDeploymentConfigurationConfigFileToHclTerraform(struct?: NginxDeploymentConfigurationConfigFile | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content: {
+      value: cdktf.stringToHclTerraform(struct!.content),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_path: {
+      value: cdktf.stringToHclTerraform(struct!.virtualPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class NginxDeploymentConfigurationConfigFileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NginxDeploymentConfigurationConfigFile | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._content !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.content = this._content;
+    }
+    if (this._virtualPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualPath = this._virtualPath;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NginxDeploymentConfigurationConfigFile | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._content = undefined;
+      this._virtualPath = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._content = value.content;
+      this._virtualPath = value.virtualPath;
+    }
+  }
+
+  // content - computed: false, optional: false, required: true
+  private _content?: string; 
+  public get content() {
+    return this.getStringAttribute('content');
+  }
+  public set content(value: string) {
+    this._content = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentInput() {
+    return this._content;
+  }
+
+  // virtual_path - computed: false, optional: false, required: true
+  private _virtualPath?: string; 
+  public get virtualPath() {
+    return this.getStringAttribute('virtual_path');
+  }
+  public set virtualPath(value: string) {
+    this._virtualPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualPathInput() {
+    return this._virtualPath;
+  }
+}
+
+export class NginxDeploymentConfigurationConfigFileList extends cdktf.ComplexList {
+  public internalValue? : NginxDeploymentConfigurationConfigFile[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NginxDeploymentConfigurationConfigFileOutputReference {
+    return new NginxDeploymentConfigurationConfigFileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface NginxDeploymentConfigurationProtectedFile {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#content NginxDeployment#content}
+  */
+  readonly content: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#virtual_path NginxDeployment#virtual_path}
+  */
+  readonly virtualPath: string;
+}
+
+export function nginxDeploymentConfigurationProtectedFileToTerraform(struct?: NginxDeploymentConfigurationProtectedFile | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    content: cdktf.stringToTerraform(struct!.content),
+    virtual_path: cdktf.stringToTerraform(struct!.virtualPath),
+  }
+}
+
+
+export function nginxDeploymentConfigurationProtectedFileToHclTerraform(struct?: NginxDeploymentConfigurationProtectedFile | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content: {
+      value: cdktf.stringToHclTerraform(struct!.content),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_path: {
+      value: cdktf.stringToHclTerraform(struct!.virtualPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class NginxDeploymentConfigurationProtectedFileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NginxDeploymentConfigurationProtectedFile | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._content !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.content = this._content;
+    }
+    if (this._virtualPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualPath = this._virtualPath;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NginxDeploymentConfigurationProtectedFile | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._content = undefined;
+      this._virtualPath = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._content = value.content;
+      this._virtualPath = value.virtualPath;
+    }
+  }
+
+  // content - computed: false, optional: false, required: true
+  private _content?: string; 
+  public get content() {
+    return this.getStringAttribute('content');
+  }
+  public set content(value: string) {
+    this._content = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentInput() {
+    return this._content;
+  }
+
+  // virtual_path - computed: false, optional: false, required: true
+  private _virtualPath?: string; 
+  public get virtualPath() {
+    return this.getStringAttribute('virtual_path');
+  }
+  public set virtualPath(value: string) {
+    this._virtualPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualPathInput() {
+    return this._virtualPath;
+  }
+}
+
+export class NginxDeploymentConfigurationProtectedFileList extends cdktf.ComplexList {
+  public internalValue? : NginxDeploymentConfigurationProtectedFile[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NginxDeploymentConfigurationProtectedFileOutputReference {
+    return new NginxDeploymentConfigurationProtectedFileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface NginxDeploymentConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#package_data NginxDeployment#package_data}
+  */
+  readonly packageData?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#root_file NginxDeployment#root_file}
+  */
+  readonly rootFile: string;
+  /**
+  * config_file block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#config_file NginxDeployment#config_file}
+  */
+  readonly configFile?: NginxDeploymentConfigurationConfigFile[] | cdktf.IResolvable;
+  /**
+  * protected_file block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#protected_file NginxDeployment#protected_file}
+  */
+  readonly protectedFile?: NginxDeploymentConfigurationProtectedFile[] | cdktf.IResolvable;
+}
+
+export function nginxDeploymentConfigurationToTerraform(struct?: NginxDeploymentConfigurationOutputReference | NginxDeploymentConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    package_data: cdktf.stringToTerraform(struct!.packageData),
+    root_file: cdktf.stringToTerraform(struct!.rootFile),
+    config_file: cdktf.listMapper(nginxDeploymentConfigurationConfigFileToTerraform, true)(struct!.configFile),
+    protected_file: cdktf.listMapper(nginxDeploymentConfigurationProtectedFileToTerraform, true)(struct!.protectedFile),
+  }
+}
+
+
+export function nginxDeploymentConfigurationToHclTerraform(struct?: NginxDeploymentConfigurationOutputReference | NginxDeploymentConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    package_data: {
+      value: cdktf.stringToHclTerraform(struct!.packageData),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    root_file: {
+      value: cdktf.stringToHclTerraform(struct!.rootFile),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    config_file: {
+      value: cdktf.listMapperHcl(nginxDeploymentConfigurationConfigFileToHclTerraform, true)(struct!.configFile),
+      isBlock: true,
+      type: "set",
+      storageClassType: "NginxDeploymentConfigurationConfigFileList",
+    },
+    protected_file: {
+      value: cdktf.listMapperHcl(nginxDeploymentConfigurationProtectedFileToHclTerraform, true)(struct!.protectedFile),
+      isBlock: true,
+      type: "set",
+      storageClassType: "NginxDeploymentConfigurationProtectedFileList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class NginxDeploymentConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NginxDeploymentConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._packageData !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.packageData = this._packageData;
+    }
+    if (this._rootFile !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rootFile = this._rootFile;
+    }
+    if (this._configFile?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.configFile = this._configFile?.internalValue;
+    }
+    if (this._protectedFile?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protectedFile = this._protectedFile?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NginxDeploymentConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._packageData = undefined;
+      this._rootFile = undefined;
+      this._configFile.internalValue = undefined;
+      this._protectedFile.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._packageData = value.packageData;
+      this._rootFile = value.rootFile;
+      this._configFile.internalValue = value.configFile;
+      this._protectedFile.internalValue = value.protectedFile;
+    }
+  }
+
+  // package_data - computed: false, optional: true, required: false
+  private _packageData?: string; 
+  public get packageData() {
+    return this.getStringAttribute('package_data');
+  }
+  public set packageData(value: string) {
+    this._packageData = value;
+  }
+  public resetPackageData() {
+    this._packageData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get packageDataInput() {
+    return this._packageData;
+  }
+
+  // root_file - computed: false, optional: false, required: true
+  private _rootFile?: string; 
+  public get rootFile() {
+    return this.getStringAttribute('root_file');
+  }
+  public set rootFile(value: string) {
+    this._rootFile = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rootFileInput() {
+    return this._rootFile;
+  }
+
+  // config_file - computed: false, optional: true, required: false
+  private _configFile = new NginxDeploymentConfigurationConfigFileList(this, "config_file", true);
+  public get configFile() {
+    return this._configFile;
+  }
+  public putConfigFile(value: NginxDeploymentConfigurationConfigFile[] | cdktf.IResolvable) {
+    this._configFile.internalValue = value;
+  }
+  public resetConfigFile() {
+    this._configFile.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configFileInput() {
+    return this._configFile.internalValue;
+  }
+
+  // protected_file - computed: false, optional: true, required: false
+  private _protectedFile = new NginxDeploymentConfigurationProtectedFileList(this, "protected_file", true);
+  public get protectedFile() {
+    return this._protectedFile;
+  }
+  public putProtectedFile(value: NginxDeploymentConfigurationProtectedFile[] | cdktf.IResolvable) {
+    this._protectedFile.internalValue = value;
+  }
+  public resetProtectedFile() {
+    this._protectedFile.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protectedFileInput() {
+    return this._protectedFile.internalValue;
+  }
+}
 export interface NginxDeploymentFrontendPrivate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#allocation_method NginxDeployment#allocation_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#allocation_method NginxDeployment#allocation_method}
   */
   readonly allocationMethod: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#ip_address NginxDeployment#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#ip_address NginxDeployment#ip_address}
   */
   readonly ipAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#subnet_id NginxDeployment#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#subnet_id NginxDeployment#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -271,7 +921,7 @@ export class NginxDeploymentFrontendPrivateList extends cdktf.ComplexList {
 }
 export interface NginxDeploymentFrontendPublic {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#ip_address NginxDeployment#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#ip_address NginxDeployment#ip_address}
   */
   readonly ipAddress?: string[];
 }
@@ -355,11 +1005,11 @@ export class NginxDeploymentFrontendPublicOutputReference extends cdktf.ComplexO
 }
 export interface NginxDeploymentIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#identity_ids NginxDeployment#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#identity_ids NginxDeployment#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#type NginxDeployment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#type NginxDeployment#type}
   */
   readonly type: string;
 }
@@ -479,11 +1129,11 @@ export class NginxDeploymentIdentityOutputReference extends cdktf.ComplexObject 
 }
 export interface NginxDeploymentLoggingStorageAccount {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#container_name NginxDeployment#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#container_name NginxDeployment#container_name}
   */
   readonly containerName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#name NginxDeployment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#name NginxDeployment#name}
   */
   readonly name?: string;
 }
@@ -628,7 +1278,7 @@ export class NginxDeploymentLoggingStorageAccountList extends cdktf.ComplexList 
 }
 export interface NginxDeploymentNetworkInterface {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#subnet_id NginxDeployment#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#subnet_id NginxDeployment#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -741,19 +1391,19 @@ export class NginxDeploymentNetworkInterfaceList extends cdktf.ComplexList {
 }
 export interface NginxDeploymentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#create NginxDeployment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#create NginxDeployment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#delete NginxDeployment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#delete NginxDeployment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#read NginxDeployment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#read NginxDeployment#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#update NginxDeployment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#update NginxDeployment#update}
   */
   readonly update?: string;
 }
@@ -934,7 +1584,7 @@ export class NginxDeploymentTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment azurerm_nginx_deployment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment azurerm_nginx_deployment}
 */
 export class NginxDeployment extends cdktf.TerraformResource {
 
@@ -950,7 +1600,7 @@ export class NginxDeployment extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NginxDeployment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NginxDeployment to import
-  * @param importFromId The id of the existing NginxDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NginxDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NginxDeployment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -962,7 +1612,7 @@ export class NginxDeployment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.96.0/docs/resources/nginx_deployment azurerm_nginx_deployment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/nginx_deployment azurerm_nginx_deployment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -973,7 +1623,7 @@ export class NginxDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_nginx_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.96.0',
+        providerVersion: '3.97.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -995,6 +1645,8 @@ export class NginxDeployment extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
+    this._autoScaleProfile.internalValue = config.autoScaleProfile;
+    this._configuration.internalValue = config.configuration;
     this._frontendPrivate.internalValue = config.frontendPrivate;
     this._frontendPublic.internalValue = config.frontendPublic;
     this._identity.internalValue = config.identity;
@@ -1181,6 +1833,38 @@ export class NginxDeployment extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // auto_scale_profile - computed: false, optional: true, required: false
+  private _autoScaleProfile = new NginxDeploymentAutoScaleProfileList(this, "auto_scale_profile", false);
+  public get autoScaleProfile() {
+    return this._autoScaleProfile;
+  }
+  public putAutoScaleProfile(value: NginxDeploymentAutoScaleProfile[] | cdktf.IResolvable) {
+    this._autoScaleProfile.internalValue = value;
+  }
+  public resetAutoScaleProfile() {
+    this._autoScaleProfile.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoScaleProfileInput() {
+    return this._autoScaleProfile.internalValue;
+  }
+
+  // configuration - computed: false, optional: true, required: false
+  private _configuration = new NginxDeploymentConfigurationOutputReference(this, "configuration");
+  public get configuration() {
+    return this._configuration;
+  }
+  public putConfiguration(value: NginxDeploymentConfiguration) {
+    this._configuration.internalValue = value;
+  }
+  public resetConfiguration() {
+    this._configuration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configurationInput() {
+    return this._configuration.internalValue;
+  }
+
   // frontend_private - computed: false, optional: true, required: false
   private _frontendPrivate = new NginxDeploymentFrontendPrivateList(this, "frontend_private", false);
   public get frontendPrivate() {
@@ -1294,6 +1978,8 @@ export class NginxDeployment extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      auto_scale_profile: cdktf.listMapper(nginxDeploymentAutoScaleProfileToTerraform, true)(this._autoScaleProfile.internalValue),
+      configuration: nginxDeploymentConfigurationToTerraform(this._configuration.internalValue),
       frontend_private: cdktf.listMapper(nginxDeploymentFrontendPrivateToTerraform, true)(this._frontendPrivate.internalValue),
       frontend_public: nginxDeploymentFrontendPublicToTerraform(this._frontendPublic.internalValue),
       identity: nginxDeploymentIdentityToTerraform(this._identity.internalValue),
@@ -1370,6 +2056,18 @@ export class NginxDeployment extends cdktf.TerraformResource {
         isBlock: false,
         type: "map",
         storageClassType: "stringMap",
+      },
+      auto_scale_profile: {
+        value: cdktf.listMapperHcl(nginxDeploymentAutoScaleProfileToHclTerraform, true)(this._autoScaleProfile.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NginxDeploymentAutoScaleProfileList",
+      },
+      configuration: {
+        value: nginxDeploymentConfigurationToHclTerraform(this._configuration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NginxDeploymentConfigurationList",
       },
       frontend_private: {
         value: cdktf.listMapperHcl(nginxDeploymentFrontendPrivateToHclTerraform, true)(this._frontendPrivate.internalValue),
