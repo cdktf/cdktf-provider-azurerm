@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.elasticSanVolume.ElasticSanVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsanvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsanvolume"
 
 elasticsanvolume.NewElasticSanVolume(scope Construct, id *string, config ElasticSanVolumeConfig) ElasticSanVolume
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.elasticSanVolume.ElasticSanVolume.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsanvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsanvolume"
 
 elasticsanvolume.ElasticSanVolume_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.elasticSanVolume.ElasticSanVolume.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsanvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsanvolume"
 
 elasticsanvolume.ElasticSanVolume_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ elasticsanvolume.ElasticSanVolume_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.elasticSanVolume.ElasticSanVolume.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsanvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsanvolume"
 
 elasticsanvolume.ElasticSanVolume_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ elasticsanvolume.ElasticSanVolume_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.elasticSanVolume.ElasticSanVolume.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsanvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsanvolume"
 
 elasticsanvolume.ElasticSanVolume_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -890,7 +890,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.elasticSanVolume.ElasticSanVolumeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsanvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsanvolume"
 
 &elasticsanvolume.ElasticSanVolumeConfig {
 	Connection: interface{},
@@ -903,9 +903,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsanvolume"
 	Name: *string,
 	SizeInGib: *f64,
 	VolumeGroupId: *string,
-	CreateSource: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.elasticSanVolume.ElasticSanVolumeCreateSource,
+	CreateSource: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.elasticSanVolume.ElasticSanVolumeCreateSource,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.elasticSanVolume.ElasticSanVolumeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.elasticSanVolume.ElasticSanVolumeTimeouts,
 }
 ```
 
@@ -1083,7 +1083,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.elasticSanVolume.ElasticSanVolumeCreateSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsanvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsanvolume"
 
 &elasticsanvolume.ElasticSanVolumeCreateSource {
 	SourceId: *string,
@@ -1129,7 +1129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.elasticSanVolume.ElasticSanVolumeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsanvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsanvolume"
 
 &elasticsanvolume.ElasticSanVolumeTimeouts {
 	Create: *string,
@@ -1205,7 +1205,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.elasticSanVolume.ElasticSanVolumeCreateSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsanvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsanvolume"
 
 elasticsanvolume.NewElasticSanVolumeCreateSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ElasticSanVolumeCreateSourceOutputReference
 ```
@@ -1498,7 +1498,7 @@ func InternalValue() ElasticSanVolumeCreateSource
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.elasticSanVolume.ElasticSanVolumeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/elasticsanvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/elasticsanvolume"
 
 elasticsanvolume.NewElasticSanVolumeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ElasticSanVolumeTimeoutsOutputReference
 ```
