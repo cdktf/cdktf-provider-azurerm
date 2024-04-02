@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspace.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermvirtualdesktopworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualdesktopworkspace"
 
 dataazurermvirtualdesktopworkspace.NewDataAzurermVirtualDesktopWorkspace(scope Construct, id *string, config DataAzurermVirtualDesktopWorkspaceConfig) DataAzurermVirtualDesktopWorkspace
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspace.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermvirtualdesktopworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualdesktopworkspace"
 
 dataazurermvirtualdesktopworkspace.DataAzurermVirtualDesktopWorkspace_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspace.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermvirtualdesktopworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualdesktopworkspace"
 
 dataazurermvirtualdesktopworkspace.DataAzurermVirtualDesktopWorkspace_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermvirtualdesktopworkspace.DataAzurermVirtualDesktopWorkspace_IsTerrafor
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspace.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermvirtualdesktopworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualdesktopworkspace"
 
 dataazurermvirtualdesktopworkspace.DataAzurermVirtualDesktopWorkspace_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermvirtualdesktopworkspace.DataAzurermVirtualDesktopWorkspace_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspace.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermvirtualdesktopworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualdesktopworkspace"
 
 dataazurermvirtualdesktopworkspace.DataAzurermVirtualDesktopWorkspace_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -713,7 +713,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermvirtualdesktopworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualdesktopworkspace"
 
 &dataazurermvirtualdesktopworkspace.DataAzurermVirtualDesktopWorkspaceConfig {
 	Connection: interface{},
@@ -726,7 +726,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermvirtua
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceTimeouts,
 }
 ```
 
@@ -876,7 +876,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermvirtualdesktopworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualdesktopworkspace"
 
 &dataazurermvirtualdesktopworkspace.DataAzurermVirtualDesktopWorkspaceTimeouts {
 	Read: *string,
@@ -910,7 +910,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermvirtualdesktopworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualdesktopworkspace"
 
 dataazurermvirtualdesktopworkspace.NewDataAzurermVirtualDesktopWorkspaceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermVirtualDesktopWorkspaceTimeoutsOutputReference
 ```
