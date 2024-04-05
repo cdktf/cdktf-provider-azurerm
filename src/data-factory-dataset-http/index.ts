@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,80 +8,80 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryDatasetHttpConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#additional_properties DataFactoryDatasetHttp#additional_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#additional_properties DataFactoryDatasetHttp#additional_properties}
   */
   readonly additionalProperties?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#annotations DataFactoryDatasetHttp#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#annotations DataFactoryDatasetHttp#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#data_factory_id DataFactoryDatasetHttp#data_factory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#data_factory_id DataFactoryDatasetHttp#data_factory_id}
   */
   readonly dataFactoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#description DataFactoryDatasetHttp#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#description DataFactoryDatasetHttp#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#folder DataFactoryDatasetHttp#folder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#folder DataFactoryDatasetHttp#folder}
   */
   readonly folder?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#id DataFactoryDatasetHttp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#id DataFactoryDatasetHttp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#linked_service_name DataFactoryDatasetHttp#linked_service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#linked_service_name DataFactoryDatasetHttp#linked_service_name}
   */
   readonly linkedServiceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#name DataFactoryDatasetHttp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#name DataFactoryDatasetHttp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#parameters DataFactoryDatasetHttp#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#parameters DataFactoryDatasetHttp#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#relative_url DataFactoryDatasetHttp#relative_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#relative_url DataFactoryDatasetHttp#relative_url}
   */
   readonly relativeUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#request_body DataFactoryDatasetHttp#request_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#request_body DataFactoryDatasetHttp#request_body}
   */
   readonly requestBody?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#request_method DataFactoryDatasetHttp#request_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#request_method DataFactoryDatasetHttp#request_method}
   */
   readonly requestMethod?: string;
   /**
   * schema_column block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#schema_column DataFactoryDatasetHttp#schema_column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#schema_column DataFactoryDatasetHttp#schema_column}
   */
   readonly schemaColumn?: DataFactoryDatasetHttpSchemaColumn[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#timeouts DataFactoryDatasetHttp#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#timeouts DataFactoryDatasetHttp#timeouts}
   */
   readonly timeouts?: DataFactoryDatasetHttpTimeouts;
 }
 export interface DataFactoryDatasetHttpSchemaColumn {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#description DataFactoryDatasetHttp#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#description DataFactoryDatasetHttp#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#name DataFactoryDatasetHttp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#name DataFactoryDatasetHttp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#type DataFactoryDatasetHttp#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#type DataFactoryDatasetHttp#type}
   */
   readonly type?: string;
 }
@@ -257,19 +252,19 @@ export class DataFactoryDatasetHttpSchemaColumnList extends cdktf.ComplexList {
 }
 export interface DataFactoryDatasetHttpTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#create DataFactoryDatasetHttp#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#create DataFactoryDatasetHttp#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#delete DataFactoryDatasetHttp#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#delete DataFactoryDatasetHttp#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#read DataFactoryDatasetHttp#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#read DataFactoryDatasetHttp#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#update DataFactoryDatasetHttp#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#update DataFactoryDatasetHttp#update}
   */
   readonly update?: string;
 }
@@ -450,7 +445,7 @@ export class DataFactoryDatasetHttpTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http azurerm_data_factory_dataset_http}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http azurerm_data_factory_dataset_http}
 */
 export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
 
@@ -466,7 +461,7 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataFactoryDatasetHttp resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataFactoryDatasetHttp to import
-  * @param importFromId The id of the existing DataFactoryDatasetHttp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataFactoryDatasetHttp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataFactoryDatasetHttp to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -478,7 +473,7 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/data_factory_dataset_http azurerm_data_factory_dataset_http} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/data_factory_dataset_http azurerm_data_factory_dataset_http} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -489,7 +484,7 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_dataset_http',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.97.1',
+        providerVersion: '3.98.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

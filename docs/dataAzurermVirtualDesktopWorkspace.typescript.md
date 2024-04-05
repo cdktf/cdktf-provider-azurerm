@@ -4,7 +4,7 @@
 
 ### DataAzurermVirtualDesktopWorkspace <a name="DataAzurermVirtualDesktopWorkspace" id="@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspace"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/virtual_desktop_workspace azurerm_virtual_desktop_workspace}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/virtual_desktop_workspace azurerm_virtual_desktop_workspace}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspace.Initializer"></a>
 
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermVirtualDesktopW
 
 The id of the existing DataAzurermVirtualDesktopWorkspace that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/virtual_desktop_workspace#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/virtual_desktop_workspace#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -729,9 +729,9 @@ const dataAzurermVirtualDesktopWorkspaceConfig: dataAzurermVirtualDesktopWorkspa
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/virtual_desktop_workspace#name DataAzurermVirtualDesktopWorkspace#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/virtual_desktop_workspace#resource_group_name DataAzurermVirtualDesktopWorkspace#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/virtual_desktop_workspace#id DataAzurermVirtualDesktopWorkspace#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/virtual_desktop_workspace#name DataAzurermVirtualDesktopWorkspace#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/virtual_desktop_workspace#resource_group_name DataAzurermVirtualDesktopWorkspace#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/virtual_desktop_workspace#id DataAzurermVirtualDesktopWorkspace#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceTimeouts">DataAzurermVirtualDesktopWorkspaceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -814,7 +814,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/virtual_desktop_workspace#name DataAzurermVirtualDesktopWorkspace#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/virtual_desktop_workspace#name DataAzurermVirtualDesktopWorkspace#name}.
 
 ---
 
@@ -826,7 +826,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/virtual_desktop_workspace#resource_group_name DataAzurermVirtualDesktopWorkspace#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/virtual_desktop_workspace#resource_group_name DataAzurermVirtualDesktopWorkspace#resource_group_name}.
 
 ---
 
@@ -838,7 +838,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/virtual_desktop_workspace#id DataAzurermVirtualDesktopWorkspace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/virtual_desktop_workspace#id DataAzurermVirtualDesktopWorkspace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -855,7 +855,7 @@ public readonly timeouts: DataAzurermVirtualDesktopWorkspaceTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/virtual_desktop_workspace#timeouts DataAzurermVirtualDesktopWorkspace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/virtual_desktop_workspace#timeouts DataAzurermVirtualDesktopWorkspace#timeouts}
 
 ---
 
@@ -873,7 +873,7 @@ const dataAzurermVirtualDesktopWorkspaceTimeouts: dataAzurermVirtualDesktopWorks
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/virtual_desktop_workspace#read DataAzurermVirtualDesktopWorkspace#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualDesktopWorkspace.DataAzurermVirtualDesktopWorkspaceTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/virtual_desktop_workspace#read DataAzurermVirtualDesktopWorkspace#read}. |
 
 ---
 
@@ -885,7 +885,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/data-sources/virtual_desktop_workspace#read DataAzurermVirtualDesktopWorkspace#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/virtual_desktop_workspace#read DataAzurermVirtualDesktopWorkspace#read}.
 
 ---
 

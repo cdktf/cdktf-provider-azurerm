@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,140 +8,156 @@ import * as cdktf from 'cdktf';
 
 export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#account_name NetappVolume#account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#account_name NetappVolume#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#azure_vmware_data_store_enabled NetappVolume#azure_vmware_data_store_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#azure_vmware_data_store_enabled NetappVolume#azure_vmware_data_store_enabled}
   */
   readonly azureVmwareDataStoreEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#create_from_snapshot_resource_id NetappVolume#create_from_snapshot_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#create_from_snapshot_resource_id NetappVolume#create_from_snapshot_resource_id}
   */
   readonly createFromSnapshotResourceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#encryption_key_source NetappVolume#encryption_key_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#encryption_key_source NetappVolume#encryption_key_source}
   */
   readonly encryptionKeySource?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#id NetappVolume#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#id NetappVolume#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#key_vault_private_endpoint_id NetappVolume#key_vault_private_endpoint_id}
+  * Enable to allow Kerberos secured volumes. Requires appropriate export rules as well as the parent `azurerm_netapp_account` having a defined AD connection.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#kerberos_enabled NetappVolume#kerberos_enabled}
+  */
+  readonly kerberosEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#key_vault_private_endpoint_id NetappVolume#key_vault_private_endpoint_id}
   */
   readonly keyVaultPrivateEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#location NetappVolume#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#location NetappVolume#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#name NetappVolume#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#name NetappVolume#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#network_features NetappVolume#network_features}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#network_features NetappVolume#network_features}
   */
   readonly networkFeatures?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#pool_name NetappVolume#pool_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#pool_name NetappVolume#pool_name}
   */
   readonly poolName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#protocols NetappVolume#protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#protocols NetappVolume#protocols}
   */
   readonly protocols?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#resource_group_name NetappVolume#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#resource_group_name NetappVolume#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#security_style NetappVolume#security_style}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#security_style NetappVolume#security_style}
   */
   readonly securityStyle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#service_level NetappVolume#service_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#service_level NetappVolume#service_level}
   */
   readonly serviceLevel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#smb_access_based_enumeration_enabled NetappVolume#smb_access_based_enumeration_enabled}
+  * Enable access based enumeration setting for SMB/Dual Protocol volume. When enabled, users who do not have permission to access a shared folder or file underneath it, do not see that shared resource displayed in their environment.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#smb_access_based_enumeration_enabled NetappVolume#smb_access_based_enumeration_enabled}
   */
   readonly smbAccessBasedEnumerationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#smb_non_browsable_enabled NetappVolume#smb_non_browsable_enabled}
+  * Continuous availability option should be used only for SQL and FSLogix workloads. Using it for any other SMB workloads is not supported.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#smb_continuous_availability_enabled NetappVolume#smb_continuous_availability_enabled}
+  */
+  readonly smbContinuousAvailabilityEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Enable non browsable share setting for SMB/Dual Protocol volume. When enabled, it restricts windows clients to browse the share
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#smb_non_browsable_enabled NetappVolume#smb_non_browsable_enabled}
   */
   readonly smbNonBrowsableEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#snapshot_directory_visible NetappVolume#snapshot_directory_visible}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#snapshot_directory_visible NetappVolume#snapshot_directory_visible}
   */
   readonly snapshotDirectoryVisible?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#storage_quota_in_gb NetappVolume#storage_quota_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#storage_quota_in_gb NetappVolume#storage_quota_in_gb}
   */
   readonly storageQuotaInGb: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#subnet_id NetappVolume#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#subnet_id NetappVolume#subnet_id}
   */
   readonly subnetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#tags NetappVolume#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#tags NetappVolume#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#throughput_in_mibps NetappVolume#throughput_in_mibps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#throughput_in_mibps NetappVolume#throughput_in_mibps}
   */
   readonly throughputInMibps?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#volume_path NetappVolume#volume_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#volume_path NetappVolume#volume_path}
   */
   readonly volumePath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#zone NetappVolume#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#zone NetappVolume#zone}
   */
   readonly zone?: string;
   /**
   * data_protection_replication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#data_protection_replication NetappVolume#data_protection_replication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#data_protection_replication NetappVolume#data_protection_replication}
   */
   readonly dataProtectionReplication?: NetappVolumeDataProtectionReplication;
   /**
   * data_protection_snapshot_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#data_protection_snapshot_policy NetappVolume#data_protection_snapshot_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#data_protection_snapshot_policy NetappVolume#data_protection_snapshot_policy}
   */
   readonly dataProtectionSnapshotPolicy?: NetappVolumeDataProtectionSnapshotPolicy;
   /**
   * export_policy_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#export_policy_rule NetappVolume#export_policy_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#export_policy_rule NetappVolume#export_policy_rule}
   */
   readonly exportPolicyRule?: NetappVolumeExportPolicyRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#timeouts NetappVolume#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#timeouts NetappVolume#timeouts}
   */
   readonly timeouts?: NetappVolumeTimeouts;
 }
 export interface NetappVolumeDataProtectionReplication {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#endpoint_type NetappVolume#endpoint_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#endpoint_type NetappVolume#endpoint_type}
   */
   readonly endpointType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#remote_volume_location NetappVolume#remote_volume_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#remote_volume_location NetappVolume#remote_volume_location}
   */
   readonly remoteVolumeLocation: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#remote_volume_resource_id NetappVolume#remote_volume_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#remote_volume_resource_id NetappVolume#remote_volume_resource_id}
   */
   readonly remoteVolumeResourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#replication_frequency NetappVolume#replication_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#replication_frequency NetappVolume#replication_frequency}
   */
   readonly replicationFrequency: string;
 }
@@ -308,7 +319,7 @@ export class NetappVolumeDataProtectionReplicationOutputReference extends cdktf.
 }
 export interface NetappVolumeDataProtectionSnapshotPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#snapshot_policy_id NetappVolume#snapshot_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#snapshot_policy_id NetappVolume#snapshot_policy_id}
   */
   readonly snapshotPolicyId: string;
 }
@@ -389,27 +400,51 @@ export class NetappVolumeDataProtectionSnapshotPolicyOutputReference extends cdk
 }
 export interface NetappVolumeExportPolicyRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#allowed_clients NetappVolume#allowed_clients}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#allowed_clients NetappVolume#allowed_clients}
   */
   readonly allowedClients: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#protocols_enabled NetappVolume#protocols_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#kerberos_5_read_only_enabled NetappVolume#kerberos_5_read_only_enabled}
+  */
+  readonly kerberos5ReadOnlyEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#kerberos_5_read_write_enabled NetappVolume#kerberos_5_read_write_enabled}
+  */
+  readonly kerberos5ReadWriteEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#kerberos_5i_read_only_enabled NetappVolume#kerberos_5i_read_only_enabled}
+  */
+  readonly kerberos5IReadOnlyEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#kerberos_5i_read_write_enabled NetappVolume#kerberos_5i_read_write_enabled}
+  */
+  readonly kerberos5IReadWriteEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#kerberos_5p_read_only_enabled NetappVolume#kerberos_5p_read_only_enabled}
+  */
+  readonly kerberos5PReadOnlyEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#kerberos_5p_read_write_enabled NetappVolume#kerberos_5p_read_write_enabled}
+  */
+  readonly kerberos5PReadWriteEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#protocols_enabled NetappVolume#protocols_enabled}
   */
   readonly protocolsEnabled?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#root_access_enabled NetappVolume#root_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#root_access_enabled NetappVolume#root_access_enabled}
   */
   readonly rootAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#rule_index NetappVolume#rule_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#rule_index NetappVolume#rule_index}
   */
   readonly ruleIndex: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#unix_read_only NetappVolume#unix_read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#unix_read_only NetappVolume#unix_read_only}
   */
   readonly unixReadOnly?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#unix_read_write NetappVolume#unix_read_write}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#unix_read_write NetappVolume#unix_read_write}
   */
   readonly unixReadWrite?: boolean | cdktf.IResolvable;
 }
@@ -421,6 +456,12 @@ export function netappVolumeExportPolicyRuleToTerraform(struct?: NetappVolumeExp
   }
   return {
     allowed_clients: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedClients),
+    kerberos_5_read_only_enabled: cdktf.booleanToTerraform(struct!.kerberos5ReadOnlyEnabled),
+    kerberos_5_read_write_enabled: cdktf.booleanToTerraform(struct!.kerberos5ReadWriteEnabled),
+    kerberos_5i_read_only_enabled: cdktf.booleanToTerraform(struct!.kerberos5IReadOnlyEnabled),
+    kerberos_5i_read_write_enabled: cdktf.booleanToTerraform(struct!.kerberos5IReadWriteEnabled),
+    kerberos_5p_read_only_enabled: cdktf.booleanToTerraform(struct!.kerberos5PReadOnlyEnabled),
+    kerberos_5p_read_write_enabled: cdktf.booleanToTerraform(struct!.kerberos5PReadWriteEnabled),
     protocols_enabled: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.protocolsEnabled),
     root_access_enabled: cdktf.booleanToTerraform(struct!.rootAccessEnabled),
     rule_index: cdktf.numberToTerraform(struct!.ruleIndex),
@@ -441,6 +482,42 @@ export function netappVolumeExportPolicyRuleToHclTerraform(struct?: NetappVolume
       isBlock: false,
       type: "set",
       storageClassType: "stringList",
+    },
+    kerberos_5_read_only_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.kerberos5ReadOnlyEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    kerberos_5_read_write_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.kerberos5ReadWriteEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    kerberos_5i_read_only_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.kerberos5IReadOnlyEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    kerberos_5i_read_write_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.kerberos5IReadWriteEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    kerberos_5p_read_only_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.kerberos5PReadOnlyEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    kerberos_5p_read_write_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.kerberos5PReadWriteEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
     },
     protocols_enabled: {
       value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.protocolsEnabled),
@@ -502,6 +579,30 @@ export class NetappVolumeExportPolicyRuleOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.allowedClients = this._allowedClients;
     }
+    if (this._kerberos5ReadOnlyEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kerberos5ReadOnlyEnabled = this._kerberos5ReadOnlyEnabled;
+    }
+    if (this._kerberos5ReadWriteEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kerberos5ReadWriteEnabled = this._kerberos5ReadWriteEnabled;
+    }
+    if (this._kerberos5IReadOnlyEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kerberos5IReadOnlyEnabled = this._kerberos5IReadOnlyEnabled;
+    }
+    if (this._kerberos5IReadWriteEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kerberos5IReadWriteEnabled = this._kerberos5IReadWriteEnabled;
+    }
+    if (this._kerberos5PReadOnlyEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kerberos5PReadOnlyEnabled = this._kerberos5PReadOnlyEnabled;
+    }
+    if (this._kerberos5PReadWriteEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kerberos5PReadWriteEnabled = this._kerberos5PReadWriteEnabled;
+    }
     if (this._protocolsEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.protocolsEnabled = this._protocolsEnabled;
@@ -530,6 +631,12 @@ export class NetappVolumeExportPolicyRuleOutputReference extends cdktf.ComplexOb
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._allowedClients = undefined;
+      this._kerberos5ReadOnlyEnabled = undefined;
+      this._kerberos5ReadWriteEnabled = undefined;
+      this._kerberos5IReadOnlyEnabled = undefined;
+      this._kerberos5IReadWriteEnabled = undefined;
+      this._kerberos5PReadOnlyEnabled = undefined;
+      this._kerberos5PReadWriteEnabled = undefined;
       this._protocolsEnabled = undefined;
       this._rootAccessEnabled = undefined;
       this._ruleIndex = undefined;
@@ -544,6 +651,12 @@ export class NetappVolumeExportPolicyRuleOutputReference extends cdktf.ComplexOb
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._allowedClients = value.allowedClients;
+      this._kerberos5ReadOnlyEnabled = value.kerberos5ReadOnlyEnabled;
+      this._kerberos5ReadWriteEnabled = value.kerberos5ReadWriteEnabled;
+      this._kerberos5IReadOnlyEnabled = value.kerberos5IReadOnlyEnabled;
+      this._kerberos5IReadWriteEnabled = value.kerberos5IReadWriteEnabled;
+      this._kerberos5PReadOnlyEnabled = value.kerberos5PReadOnlyEnabled;
+      this._kerberos5PReadWriteEnabled = value.kerberos5PReadWriteEnabled;
       this._protocolsEnabled = value.protocolsEnabled;
       this._rootAccessEnabled = value.rootAccessEnabled;
       this._ruleIndex = value.ruleIndex;
@@ -563,6 +676,102 @@ export class NetappVolumeExportPolicyRuleOutputReference extends cdktf.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get allowedClientsInput() {
     return this._allowedClients;
+  }
+
+  // kerberos_5_read_only_enabled - computed: false, optional: true, required: false
+  private _kerberos5ReadOnlyEnabled?: boolean | cdktf.IResolvable; 
+  public get kerberos5ReadOnlyEnabled() {
+    return this.getBooleanAttribute('kerberos_5_read_only_enabled');
+  }
+  public set kerberos5ReadOnlyEnabled(value: boolean | cdktf.IResolvable) {
+    this._kerberos5ReadOnlyEnabled = value;
+  }
+  public resetKerberos5ReadOnlyEnabled() {
+    this._kerberos5ReadOnlyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kerberos5ReadOnlyEnabledInput() {
+    return this._kerberos5ReadOnlyEnabled;
+  }
+
+  // kerberos_5_read_write_enabled - computed: false, optional: true, required: false
+  private _kerberos5ReadWriteEnabled?: boolean | cdktf.IResolvable; 
+  public get kerberos5ReadWriteEnabled() {
+    return this.getBooleanAttribute('kerberos_5_read_write_enabled');
+  }
+  public set kerberos5ReadWriteEnabled(value: boolean | cdktf.IResolvable) {
+    this._kerberos5ReadWriteEnabled = value;
+  }
+  public resetKerberos5ReadWriteEnabled() {
+    this._kerberos5ReadWriteEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kerberos5ReadWriteEnabledInput() {
+    return this._kerberos5ReadWriteEnabled;
+  }
+
+  // kerberos_5i_read_only_enabled - computed: false, optional: true, required: false
+  private _kerberos5IReadOnlyEnabled?: boolean | cdktf.IResolvable; 
+  public get kerberos5IReadOnlyEnabled() {
+    return this.getBooleanAttribute('kerberos_5i_read_only_enabled');
+  }
+  public set kerberos5IReadOnlyEnabled(value: boolean | cdktf.IResolvable) {
+    this._kerberos5IReadOnlyEnabled = value;
+  }
+  public resetKerberos5IReadOnlyEnabled() {
+    this._kerberos5IReadOnlyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kerberos5IReadOnlyEnabledInput() {
+    return this._kerberos5IReadOnlyEnabled;
+  }
+
+  // kerberos_5i_read_write_enabled - computed: false, optional: true, required: false
+  private _kerberos5IReadWriteEnabled?: boolean | cdktf.IResolvable; 
+  public get kerberos5IReadWriteEnabled() {
+    return this.getBooleanAttribute('kerberos_5i_read_write_enabled');
+  }
+  public set kerberos5IReadWriteEnabled(value: boolean | cdktf.IResolvable) {
+    this._kerberos5IReadWriteEnabled = value;
+  }
+  public resetKerberos5IReadWriteEnabled() {
+    this._kerberos5IReadWriteEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kerberos5IReadWriteEnabledInput() {
+    return this._kerberos5IReadWriteEnabled;
+  }
+
+  // kerberos_5p_read_only_enabled - computed: false, optional: true, required: false
+  private _kerberos5PReadOnlyEnabled?: boolean | cdktf.IResolvable; 
+  public get kerberos5PReadOnlyEnabled() {
+    return this.getBooleanAttribute('kerberos_5p_read_only_enabled');
+  }
+  public set kerberos5PReadOnlyEnabled(value: boolean | cdktf.IResolvable) {
+    this._kerberos5PReadOnlyEnabled = value;
+  }
+  public resetKerberos5PReadOnlyEnabled() {
+    this._kerberos5PReadOnlyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kerberos5PReadOnlyEnabledInput() {
+    return this._kerberos5PReadOnlyEnabled;
+  }
+
+  // kerberos_5p_read_write_enabled - computed: false, optional: true, required: false
+  private _kerberos5PReadWriteEnabled?: boolean | cdktf.IResolvable; 
+  public get kerberos5PReadWriteEnabled() {
+    return this.getBooleanAttribute('kerberos_5p_read_write_enabled');
+  }
+  public set kerberos5PReadWriteEnabled(value: boolean | cdktf.IResolvable) {
+    this._kerberos5PReadWriteEnabled = value;
+  }
+  public resetKerberos5PReadWriteEnabled() {
+    this._kerberos5PReadWriteEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kerberos5PReadWriteEnabledInput() {
+    return this._kerberos5PReadWriteEnabled;
   }
 
   // protocols_enabled - computed: true, optional: true, required: false
@@ -664,19 +873,19 @@ export class NetappVolumeExportPolicyRuleList extends cdktf.ComplexList {
 }
 export interface NetappVolumeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#create NetappVolume#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#create NetappVolume#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#delete NetappVolume#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#delete NetappVolume#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#read NetappVolume#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#read NetappVolume#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#update NetappVolume#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#update NetappVolume#update}
   */
   readonly update?: string;
 }
@@ -857,7 +1066,7 @@ export class NetappVolumeTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume azurerm_netapp_volume}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume azurerm_netapp_volume}
 */
 export class NetappVolume extends cdktf.TerraformResource {
 
@@ -873,7 +1082,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetappVolume resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetappVolume to import
-  * @param importFromId The id of the existing NetappVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetappVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetappVolume to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -885,7 +1094,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/netapp_volume azurerm_netapp_volume} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/netapp_volume azurerm_netapp_volume} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -896,7 +1105,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_netapp_volume',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.97.1',
+        providerVersion: '3.98.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -912,6 +1121,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     this._createFromSnapshotResourceId = config.createFromSnapshotResourceId;
     this._encryptionKeySource = config.encryptionKeySource;
     this._id = config.id;
+    this._kerberosEnabled = config.kerberosEnabled;
     this._keyVaultPrivateEndpointId = config.keyVaultPrivateEndpointId;
     this._location = config.location;
     this._name = config.name;
@@ -922,6 +1132,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     this._securityStyle = config.securityStyle;
     this._serviceLevel = config.serviceLevel;
     this._smbAccessBasedEnumerationEnabled = config.smbAccessBasedEnumerationEnabled;
+    this._smbContinuousAvailabilityEnabled = config.smbContinuousAvailabilityEnabled;
     this._smbNonBrowsableEnabled = config.smbNonBrowsableEnabled;
     this._snapshotDirectoryVisible = config.snapshotDirectoryVisible;
     this._storageQuotaInGb = config.storageQuotaInGb;
@@ -1015,6 +1226,22 @@ export class NetappVolume extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // kerberos_enabled - computed: false, optional: true, required: false
+  private _kerberosEnabled?: boolean | cdktf.IResolvable; 
+  public get kerberosEnabled() {
+    return this.getBooleanAttribute('kerberos_enabled');
+  }
+  public set kerberosEnabled(value: boolean | cdktf.IResolvable) {
+    this._kerberosEnabled = value;
+  }
+  public resetKerberosEnabled() {
+    this._kerberosEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kerberosEnabledInput() {
+    return this._kerberosEnabled;
   }
 
   // key_vault_private_endpoint_id - computed: true, optional: true, required: false
@@ -1165,6 +1392,22 @@ export class NetappVolume extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get smbAccessBasedEnumerationEnabledInput() {
     return this._smbAccessBasedEnumerationEnabled;
+  }
+
+  // smb_continuous_availability_enabled - computed: false, optional: true, required: false
+  private _smbContinuousAvailabilityEnabled?: boolean | cdktf.IResolvable; 
+  public get smbContinuousAvailabilityEnabled() {
+    return this.getBooleanAttribute('smb_continuous_availability_enabled');
+  }
+  public set smbContinuousAvailabilityEnabled(value: boolean | cdktf.IResolvable) {
+    this._smbContinuousAvailabilityEnabled = value;
+  }
+  public resetSmbContinuousAvailabilityEnabled() {
+    this._smbContinuousAvailabilityEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get smbContinuousAvailabilityEnabledInput() {
+    return this._smbContinuousAvailabilityEnabled;
   }
 
   // smb_non_browsable_enabled - computed: false, optional: true, required: false
@@ -1361,6 +1604,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       create_from_snapshot_resource_id: cdktf.stringToTerraform(this._createFromSnapshotResourceId),
       encryption_key_source: cdktf.stringToTerraform(this._encryptionKeySource),
       id: cdktf.stringToTerraform(this._id),
+      kerberos_enabled: cdktf.booleanToTerraform(this._kerberosEnabled),
       key_vault_private_endpoint_id: cdktf.stringToTerraform(this._keyVaultPrivateEndpointId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
@@ -1371,6 +1615,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       security_style: cdktf.stringToTerraform(this._securityStyle),
       service_level: cdktf.stringToTerraform(this._serviceLevel),
       smb_access_based_enumeration_enabled: cdktf.booleanToTerraform(this._smbAccessBasedEnumerationEnabled),
+      smb_continuous_availability_enabled: cdktf.booleanToTerraform(this._smbContinuousAvailabilityEnabled),
       smb_non_browsable_enabled: cdktf.booleanToTerraform(this._smbNonBrowsableEnabled),
       snapshot_directory_visible: cdktf.booleanToTerraform(this._snapshotDirectoryVisible),
       storage_quota_in_gb: cdktf.numberToTerraform(this._storageQuotaInGb),
@@ -1417,6 +1662,12 @@ export class NetappVolume extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      kerberos_enabled: {
+        value: cdktf.booleanToHclTerraform(this._kerberosEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       key_vault_private_endpoint_id: {
         value: cdktf.stringToHclTerraform(this._keyVaultPrivateEndpointId),
@@ -1474,6 +1725,12 @@ export class NetappVolume extends cdktf.TerraformResource {
       },
       smb_access_based_enumeration_enabled: {
         value: cdktf.booleanToHclTerraform(this._smbAccessBasedEnumerationEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      smb_continuous_availability_enabled: {
+        value: cdktf.booleanToHclTerraform(this._smbContinuousAvailabilityEnabled),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",

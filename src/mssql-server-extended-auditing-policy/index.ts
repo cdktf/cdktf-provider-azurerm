@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,66 +8,74 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlServerExtendedAuditingPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#enabled MssqlServerExtendedAuditingPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#audit_actions_and_groups MssqlServerExtendedAuditingPolicy#audit_actions_and_groups}
+  */
+  readonly auditActionsAndGroups?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#enabled MssqlServerExtendedAuditingPolicy#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#id MssqlServerExtendedAuditingPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#id MssqlServerExtendedAuditingPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#log_monitoring_enabled MssqlServerExtendedAuditingPolicy#log_monitoring_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#log_monitoring_enabled MssqlServerExtendedAuditingPolicy#log_monitoring_enabled}
   */
   readonly logMonitoringEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#retention_in_days MssqlServerExtendedAuditingPolicy#retention_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#predicate_expression MssqlServerExtendedAuditingPolicy#predicate_expression}
+  */
+  readonly predicateExpression?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#retention_in_days MssqlServerExtendedAuditingPolicy#retention_in_days}
   */
   readonly retentionInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#server_id MssqlServerExtendedAuditingPolicy#server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#server_id MssqlServerExtendedAuditingPolicy#server_id}
   */
   readonly serverId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#storage_account_access_key MssqlServerExtendedAuditingPolicy#storage_account_access_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#storage_account_access_key MssqlServerExtendedAuditingPolicy#storage_account_access_key}
   */
   readonly storageAccountAccessKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#storage_account_access_key_is_secondary MssqlServerExtendedAuditingPolicy#storage_account_access_key_is_secondary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#storage_account_access_key_is_secondary MssqlServerExtendedAuditingPolicy#storage_account_access_key_is_secondary}
   */
   readonly storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#storage_account_subscription_id MssqlServerExtendedAuditingPolicy#storage_account_subscription_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#storage_account_subscription_id MssqlServerExtendedAuditingPolicy#storage_account_subscription_id}
   */
   readonly storageAccountSubscriptionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#storage_endpoint MssqlServerExtendedAuditingPolicy#storage_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#storage_endpoint MssqlServerExtendedAuditingPolicy#storage_endpoint}
   */
   readonly storageEndpoint?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#timeouts MssqlServerExtendedAuditingPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#timeouts MssqlServerExtendedAuditingPolicy#timeouts}
   */
   readonly timeouts?: MssqlServerExtendedAuditingPolicyTimeouts;
 }
 export interface MssqlServerExtendedAuditingPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#create MssqlServerExtendedAuditingPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#create MssqlServerExtendedAuditingPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#delete MssqlServerExtendedAuditingPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#delete MssqlServerExtendedAuditingPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#read MssqlServerExtendedAuditingPolicy#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#read MssqlServerExtendedAuditingPolicy#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#update MssqlServerExtendedAuditingPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#update MssqlServerExtendedAuditingPolicy#update}
   */
   readonly update?: string;
 }
@@ -253,7 +256,7 @@ export class MssqlServerExtendedAuditingPolicyTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy azurerm_mssql_server_extended_auditing_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy azurerm_mssql_server_extended_auditing_policy}
 */
 export class MssqlServerExtendedAuditingPolicy extends cdktf.TerraformResource {
 
@@ -269,7 +272,7 @@ export class MssqlServerExtendedAuditingPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MssqlServerExtendedAuditingPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MssqlServerExtendedAuditingPolicy to import
-  * @param importFromId The id of the existing MssqlServerExtendedAuditingPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MssqlServerExtendedAuditingPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MssqlServerExtendedAuditingPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -281,7 +284,7 @@ export class MssqlServerExtendedAuditingPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/mssql_server_extended_auditing_policy azurerm_mssql_server_extended_auditing_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/mssql_server_extended_auditing_policy azurerm_mssql_server_extended_auditing_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -292,7 +295,7 @@ export class MssqlServerExtendedAuditingPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_server_extended_auditing_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.97.1',
+        providerVersion: '3.98.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -303,9 +306,11 @@ export class MssqlServerExtendedAuditingPolicy extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._auditActionsAndGroups = config.auditActionsAndGroups;
     this._enabled = config.enabled;
     this._id = config.id;
     this._logMonitoringEnabled = config.logMonitoringEnabled;
+    this._predicateExpression = config.predicateExpression;
     this._retentionInDays = config.retentionInDays;
     this._serverId = config.serverId;
     this._storageAccountAccessKey = config.storageAccountAccessKey;
@@ -318,6 +323,22 @@ export class MssqlServerExtendedAuditingPolicy extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // audit_actions_and_groups - computed: true, optional: true, required: false
+  private _auditActionsAndGroups?: string[]; 
+  public get auditActionsAndGroups() {
+    return this.getListAttribute('audit_actions_and_groups');
+  }
+  public set auditActionsAndGroups(value: string[]) {
+    this._auditActionsAndGroups = value;
+  }
+  public resetAuditActionsAndGroups() {
+    this._auditActionsAndGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get auditActionsAndGroupsInput() {
+    return this._auditActionsAndGroups;
+  }
 
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
@@ -365,6 +386,22 @@ export class MssqlServerExtendedAuditingPolicy extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get logMonitoringEnabledInput() {
     return this._logMonitoringEnabled;
+  }
+
+  // predicate_expression - computed: false, optional: true, required: false
+  private _predicateExpression?: string; 
+  public get predicateExpression() {
+    return this.getStringAttribute('predicate_expression');
+  }
+  public set predicateExpression(value: string) {
+    this._predicateExpression = value;
+  }
+  public resetPredicateExpression() {
+    this._predicateExpression = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get predicateExpressionInput() {
+    return this._predicateExpression;
   }
 
   // retention_in_days - computed: false, optional: true, required: false
@@ -482,9 +519,11 @@ export class MssqlServerExtendedAuditingPolicy extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      audit_actions_and_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(this._auditActionsAndGroups),
       enabled: cdktf.booleanToTerraform(this._enabled),
       id: cdktf.stringToTerraform(this._id),
       log_monitoring_enabled: cdktf.booleanToTerraform(this._logMonitoringEnabled),
+      predicate_expression: cdktf.stringToTerraform(this._predicateExpression),
       retention_in_days: cdktf.numberToTerraform(this._retentionInDays),
       server_id: cdktf.stringToTerraform(this._serverId),
       storage_account_access_key: cdktf.stringToTerraform(this._storageAccountAccessKey),
@@ -497,6 +536,12 @@ export class MssqlServerExtendedAuditingPolicy extends cdktf.TerraformResource {
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
+      audit_actions_and_groups: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._auditActionsAndGroups),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
       enabled: {
         value: cdktf.booleanToHclTerraform(this._enabled),
         isBlock: false,
@@ -514,6 +559,12 @@ export class MssqlServerExtendedAuditingPolicy extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
+      },
+      predicate_expression: {
+        value: cdktf.stringToHclTerraform(this._predicateExpression),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
       },
       retention_in_days: {
         value: cdktf.numberToHclTerraform(this._retentionInDays),

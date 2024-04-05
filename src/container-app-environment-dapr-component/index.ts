@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +10,17 @@ export interface ContainerAppEnvironmentDaprComponentConfig extends cdktf.Terraf
   /**
   * The Dapr Component Type. For example `state.azure.blobstorage`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#component_type ContainerAppEnvironmentDaprComponent#component_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#component_type ContainerAppEnvironmentDaprComponent#component_type}
   */
   readonly componentType: string;
   /**
   * The Container App Managed Environment ID to configure this Dapr component on.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#container_app_environment_id ContainerAppEnvironmentDaprComponent#container_app_environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#container_app_environment_id ContainerAppEnvironmentDaprComponent#container_app_environment_id}
   */
   readonly containerAppEnvironmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#id ContainerAppEnvironmentDaprComponent#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#id ContainerAppEnvironmentDaprComponent#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,49 +29,49 @@ export interface ContainerAppEnvironmentDaprComponentConfig extends cdktf.Terraf
   /**
   * Should the Dapr sidecar to continue initialisation if the component fails to load. Defaults to `false`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#ignore_errors ContainerAppEnvironmentDaprComponent#ignore_errors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#ignore_errors ContainerAppEnvironmentDaprComponent#ignore_errors}
   */
   readonly ignoreErrors?: boolean | cdktf.IResolvable;
   /**
   * The component initialisation timeout in ISO8601 format. e.g. `5s`, `2h`, `1m`. Defaults to `5s`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#init_timeout ContainerAppEnvironmentDaprComponent#init_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#init_timeout ContainerAppEnvironmentDaprComponent#init_timeout}
   */
   readonly initTimeout?: string;
   /**
   * The name for this Dapr Component.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#name ContainerAppEnvironmentDaprComponent#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#name ContainerAppEnvironmentDaprComponent#name}
   */
   readonly name: string;
   /**
   * A list of scopes to which this component applies. e.g. a Container App's `dapr.app_id` value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#scopes ContainerAppEnvironmentDaprComponent#scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#scopes ContainerAppEnvironmentDaprComponent#scopes}
   */
   readonly scopes?: string[];
   /**
   * The version of the component.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#version ContainerAppEnvironmentDaprComponent#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#version ContainerAppEnvironmentDaprComponent#version}
   */
   readonly version: string;
   /**
   * metadata block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#metadata ContainerAppEnvironmentDaprComponent#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#metadata ContainerAppEnvironmentDaprComponent#metadata}
   */
   readonly metadata?: ContainerAppEnvironmentDaprComponentMetadata[] | cdktf.IResolvable;
   /**
   * secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#secret ContainerAppEnvironmentDaprComponent#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#secret ContainerAppEnvironmentDaprComponent#secret}
   */
   readonly secret?: ContainerAppEnvironmentDaprComponentSecret[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#timeouts ContainerAppEnvironmentDaprComponent#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#timeouts ContainerAppEnvironmentDaprComponent#timeouts}
   */
   readonly timeouts?: ContainerAppEnvironmentDaprComponentTimeouts;
 }
@@ -84,19 +79,19 @@ export interface ContainerAppEnvironmentDaprComponentMetadata {
   /**
   * The name of the Metadata configuration item.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#name ContainerAppEnvironmentDaprComponent#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#name ContainerAppEnvironmentDaprComponent#name}
   */
   readonly name: string;
   /**
   * The name of a secret specified in the `secrets` block that contains the value for this metadata configuration item.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#secret_name ContainerAppEnvironmentDaprComponent#secret_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#secret_name ContainerAppEnvironmentDaprComponent#secret_name}
   */
   readonly secretName?: string;
   /**
   * The value for this metadata configuration item.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#value ContainerAppEnvironmentDaprComponent#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#value ContainerAppEnvironmentDaprComponent#value}
   */
   readonly value?: string;
 }
@@ -267,17 +262,29 @@ export class ContainerAppEnvironmentDaprComponentMetadataList extends cdktf.Comp
 }
 export interface ContainerAppEnvironmentDaprComponentSecret {
   /**
-  * The Secret name.
+  * The identity to use for accessing key vault reference.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#name ContainerAppEnvironmentDaprComponent#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#identity ContainerAppEnvironmentDaprComponent#identity}
+  */
+  readonly identity?: string;
+  /**
+  * The Key Vault Secret ID. Could be either one of `id` or `versionless_id`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#key_vault_secret_id ContainerAppEnvironmentDaprComponent#key_vault_secret_id}
+  */
+  readonly keyVaultSecretId?: string;
+  /**
+  * The secret name.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#name ContainerAppEnvironmentDaprComponent#name}
   */
   readonly name: string;
   /**
   * The value for this secret.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#value ContainerAppEnvironmentDaprComponent#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#value ContainerAppEnvironmentDaprComponent#value}
   */
-  readonly value: string;
+  readonly value?: string;
 }
 
 export function containerAppEnvironmentDaprComponentSecretToTerraform(struct?: ContainerAppEnvironmentDaprComponentSecret | cdktf.IResolvable): any {
@@ -286,6 +293,8 @@ export function containerAppEnvironmentDaprComponentSecretToTerraform(struct?: C
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    identity: cdktf.stringToTerraform(struct!.identity),
+    key_vault_secret_id: cdktf.stringToTerraform(struct!.keyVaultSecretId),
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
   }
@@ -298,6 +307,18 @@ export function containerAppEnvironmentDaprComponentSecretToHclTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
+    identity: {
+      value: cdktf.stringToHclTerraform(struct!.identity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_secret_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultSecretId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
     name: {
       value: cdktf.stringToHclTerraform(struct!.name),
       isBlock: false,
@@ -336,6 +357,14 @@ export class ContainerAppEnvironmentDaprComponentSecretOutputReference extends c
     }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._identity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identity = this._identity;
+    }
+    if (this._keyVaultSecretId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultSecretId = this._keyVaultSecretId;
+    }
     if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
@@ -351,6 +380,8 @@ export class ContainerAppEnvironmentDaprComponentSecretOutputReference extends c
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
+      this._identity = undefined;
+      this._keyVaultSecretId = undefined;
       this._name = undefined;
       this._value = undefined;
     }
@@ -361,9 +392,43 @@ export class ContainerAppEnvironmentDaprComponentSecretOutputReference extends c
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
+      this._identity = value.identity;
+      this._keyVaultSecretId = value.keyVaultSecretId;
       this._name = value.name;
       this._value = value.value;
     }
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity?: string; 
+  public get identity() {
+    return this.getStringAttribute('identity');
+  }
+  public set identity(value: string) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity;
+  }
+
+  // key_vault_secret_id - computed: false, optional: true, required: false
+  private _keyVaultSecretId?: string; 
+  public get keyVaultSecretId() {
+    return this.getStringAttribute('key_vault_secret_id');
+  }
+  public set keyVaultSecretId(value: string) {
+    this._keyVaultSecretId = value;
+  }
+  public resetKeyVaultSecretId() {
+    this._keyVaultSecretId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultSecretIdInput() {
+    return this._keyVaultSecretId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -379,13 +444,16 @@ export class ContainerAppEnvironmentDaprComponentSecretOutputReference extends c
     return this._name;
   }
 
-  // value - computed: false, optional: false, required: true
+  // value - computed: false, optional: true, required: false
   private _value?: string; 
   public get value() {
     return this.getStringAttribute('value');
   }
   public set value(value: string) {
     this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get valueInput() {
@@ -414,19 +482,19 @@ export class ContainerAppEnvironmentDaprComponentSecretList extends cdktf.Comple
 }
 export interface ContainerAppEnvironmentDaprComponentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#create ContainerAppEnvironmentDaprComponent#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#create ContainerAppEnvironmentDaprComponent#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#delete ContainerAppEnvironmentDaprComponent#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#delete ContainerAppEnvironmentDaprComponent#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#read ContainerAppEnvironmentDaprComponent#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#read ContainerAppEnvironmentDaprComponent#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#update ContainerAppEnvironmentDaprComponent#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#update ContainerAppEnvironmentDaprComponent#update}
   */
   readonly update?: string;
 }
@@ -607,7 +675,7 @@ export class ContainerAppEnvironmentDaprComponentTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component azurerm_container_app_environment_dapr_component}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component azurerm_container_app_environment_dapr_component}
 */
 export class ContainerAppEnvironmentDaprComponent extends cdktf.TerraformResource {
 
@@ -623,7 +691,7 @@ export class ContainerAppEnvironmentDaprComponent extends cdktf.TerraformResourc
   * Generates CDKTF code for importing a ContainerAppEnvironmentDaprComponent resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerAppEnvironmentDaprComponent to import
-  * @param importFromId The id of the existing ContainerAppEnvironmentDaprComponent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerAppEnvironmentDaprComponent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerAppEnvironmentDaprComponent to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -635,7 +703,7 @@ export class ContainerAppEnvironmentDaprComponent extends cdktf.TerraformResourc
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/container_app_environment_dapr_component azurerm_container_app_environment_dapr_component} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/container_app_environment_dapr_component azurerm_container_app_environment_dapr_component} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -646,7 +714,7 @@ export class ContainerAppEnvironmentDaprComponent extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_container_app_environment_dapr_component',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.97.1',
+        providerVersion: '3.98.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

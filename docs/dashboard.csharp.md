@@ -4,7 +4,7 @@
 
 ### Dashboard <a name="Dashboard" id="@cdktf/provider-azurerm.dashboard.Dashboard"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard azurerm_dashboard}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard azurerm_dashboard}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dashboard.Dashboard.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the Dashboard to import.
 
 The id of the existing Dashboard that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -893,12 +893,12 @@ new DashboardConfig {
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#location Dashboard#location}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#name Dashboard#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#resource_group_name Dashboard#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.dashboardProperties">DashboardProperties</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#dashboard_properties Dashboard#dashboard_properties}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#id Dashboard#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#tags Dashboard#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#location Dashboard#location}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#name Dashboard#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#resource_group_name Dashboard#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.dashboardProperties">DashboardProperties</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#dashboard_properties Dashboard#dashboard_properties}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#id Dashboard#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#tags Dashboard#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts">DashboardTimeouts</a></code> | timeouts block. |
 
 ---
@@ -981,7 +981,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#location Dashboard#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#location Dashboard#location}.
 
 ---
 
@@ -993,7 +993,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#name Dashboard#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#name Dashboard#name}.
 
 ---
 
@@ -1005,7 +1005,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#resource_group_name Dashboard#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#resource_group_name Dashboard#resource_group_name}.
 
 ---
 
@@ -1017,7 +1017,7 @@ public string DashboardProperties { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#dashboard_properties Dashboard#dashboard_properties}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#dashboard_properties Dashboard#dashboard_properties}.
 
 ---
 
@@ -1029,7 +1029,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#id Dashboard#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#id Dashboard#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1044,7 +1044,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#tags Dashboard#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#tags Dashboard#tags}.
 
 ---
 
@@ -1058,7 +1058,7 @@ public DashboardTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#timeouts Dashboard#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#timeouts Dashboard#timeouts}
 
 ---
 
@@ -1081,10 +1081,10 @@ new DashboardTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#create Dashboard#create}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#delete Dashboard#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#read Dashboard#read}. |
-| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#update Dashboard#update}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#create Dashboard#create}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#delete Dashboard#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#read Dashboard#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dashboard.DashboardTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#update Dashboard#update}. |
 
 ---
 
@@ -1096,7 +1096,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#create Dashboard#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#create Dashboard#create}.
 
 ---
 
@@ -1108,7 +1108,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#delete Dashboard#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#delete Dashboard#delete}.
 
 ---
 
@@ -1120,7 +1120,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#read Dashboard#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#read Dashboard#read}.
 
 ---
 
@@ -1132,7 +1132,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.97.1/docs/resources/dashboard#update Dashboard#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/dashboard#update Dashboard#update}.
 
 ---
 
