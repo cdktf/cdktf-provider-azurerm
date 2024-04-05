@@ -761,6 +761,8 @@ Object.defineProperty(exports, 'recoveryServicesVault', { get: function () { ret
 Object.defineProperty(exports, 'recoveryServicesVaultResourceGuardAssociation', { get: function () { return require('./recovery-services-vault-resource-guard-association'); } });
 Object.defineProperty(exports, 'redhatOpenshiftCluster', { get: function () { return require('./redhat-openshift-cluster'); } });
 Object.defineProperty(exports, 'redisCache', { get: function () { return require('./redis-cache'); } });
+Object.defineProperty(exports, 'redisCacheAccessPolicy', { get: function () { return require('./redis-cache-access-policy'); } });
+Object.defineProperty(exports, 'redisCacheAccessPolicyAssignment', { get: function () { return require('./redis-cache-access-policy-assignment'); } });
 Object.defineProperty(exports, 'redisEnterpriseCluster', { get: function () { return require('./redis-enterprise-cluster'); } });
 Object.defineProperty(exports, 'redisEnterpriseDatabase', { get: function () { return require('./redis-enterprise-database'); } });
 Object.defineProperty(exports, 'redisFirewallRule', { get: function () { return require('./redis-firewall-rule'); } });
@@ -923,6 +925,7 @@ Object.defineProperty(exports, 'staticSite', { get: function () { return require
 Object.defineProperty(exports, 'staticSiteCustomDomain', { get: function () { return require('./static-site-custom-domain'); } });
 Object.defineProperty(exports, 'staticWebApp', { get: function () { return require('./static-web-app'); } });
 Object.defineProperty(exports, 'staticWebAppCustomDomain', { get: function () { return require('./static-web-app-custom-domain'); } });
+Object.defineProperty(exports, 'staticWebAppFunctionAppRegistration', { get: function () { return require('./static-web-app-function-app-registration'); } });
 Object.defineProperty(exports, 'storageAccount', { get: function () { return require('./storage-account'); } });
 Object.defineProperty(exports, 'storageAccountCustomerManagedKey', { get: function () { return require('./storage-account-customer-managed-key'); } });
 Object.defineProperty(exports, 'storageAccountLocalUser', { get: function () { return require('./storage-account-local-user'); } });
@@ -1074,6 +1077,7 @@ Object.defineProperty(exports, 'windowsVirtualMachine', { get: function () { ret
 Object.defineProperty(exports, 'windowsVirtualMachineScaleSet', { get: function () { return require('./windows-virtual-machine-scale-set'); } });
 Object.defineProperty(exports, 'windowsWebApp', { get: function () { return require('./windows-web-app'); } });
 Object.defineProperty(exports, 'windowsWebAppSlot', { get: function () { return require('./windows-web-app-slot'); } });
+Object.defineProperty(exports, 'workloadsSapDiscoveryVirtualInstance', { get: function () { return require('./workloads-sap-discovery-virtual-instance'); } });
 Object.defineProperty(exports, 'workloadsSapSingleNodeVirtualInstance', { get: function () { return require('./workloads-sap-single-node-virtual-instance'); } });
 Object.defineProperty(exports, 'workloadsSapThreeTierVirtualInstance', { get: function () { return require('./workloads-sap-three-tier-virtual-instance'); } });
 Object.defineProperty(exports, 'dataAzurermAadb2CDirectory', { get: function () { return require('./data-azurerm-aadb2c-directory'); } });
@@ -1398,6 +1402,7 @@ Object.defineProperty(exports, 'dataAzurermSubscription', { get: function () { r
 Object.defineProperty(exports, 'dataAzurermSubscriptionTemplateDeployment', { get: function () { return require('./data-azurerm-subscription-template-deployment'); } });
 Object.defineProperty(exports, 'dataAzurermSubscriptions', { get: function () { return require('./data-azurerm-subscriptions'); } });
 Object.defineProperty(exports, 'dataAzurermSynapseWorkspace', { get: function () { return require('./data-azurerm-synapse-workspace'); } });
+Object.defineProperty(exports, 'dataAzurermSystemCenterVirtualMachineManagerInventoryItems', { get: function () { return require('./data-azurerm-system-center-virtual-machine-manager-inventory-items'); } });
 Object.defineProperty(exports, 'dataAzurermTemplateSpecVersion', { get: function () { return require('./data-azurerm-template-spec-version'); } });
 Object.defineProperty(exports, 'dataAzurermTenantTemplateDeployment', { get: function () { return require('./data-azurerm-tenant-template-deployment'); } });
 Object.defineProperty(exports, 'dataAzurermTrafficManagerGeographicalLocation', { get: function () { return require('./data-azurerm-traffic-manager-geographical-location'); } });
