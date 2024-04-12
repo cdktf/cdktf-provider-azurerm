@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlManagedInstance.SqlManagedInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanagedinstance"
 
 sqlmanagedinstance.NewSqlManagedInstance(scope Construct, id *string, config SqlManagedInstanceConfig) SqlManagedInstance
 ```
@@ -481,7 +481,7 @@ func ResetTimezoneId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sqlManagedInstance.SqlManagedInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanagedinstance"
 
 sqlmanagedinstance.SqlManagedInstance_IsConstruct(x interface{}) *bool
 ```
@@ -513,7 +513,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sqlManagedInstance.SqlManagedInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanagedinstance"
 
 sqlmanagedinstance.SqlManagedInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -527,7 +527,7 @@ sqlmanagedinstance.SqlManagedInstance_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sqlManagedInstance.SqlManagedInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanagedinstance"
 
 sqlmanagedinstance.SqlManagedInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -541,7 +541,7 @@ sqlmanagedinstance.SqlManagedInstance_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.sqlManagedInstance.SqlManagedInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanagedinstance"
 
 sqlmanagedinstance.SqlManagedInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1243,7 +1243,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlManagedInstance.SqlManagedInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanagedinstance"
 
 &sqlmanagedinstance.SqlManagedInstanceConfig {
 	Connection: interface{},
@@ -1266,13 +1266,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstance"
 	Collation: *string,
 	DnsZonePartnerId: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlManagedInstance.SqlManagedInstanceIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.sqlManagedInstance.SqlManagedInstanceIdentity,
 	MinimumTlsVersion: *string,
 	ProxyOverride: *string,
 	PublicDataEndpointEnabled: interface{},
 	StorageAccountType: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlManagedInstance.SqlManagedInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.sqlManagedInstance.SqlManagedInstanceTimeouts,
 	TimezoneId: *string,
 }
 ```
@@ -1646,7 +1646,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlManagedInstance.SqlManagedInstanceIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanagedinstance"
 
 &sqlmanagedinstance.SqlManagedInstanceIdentity {
 	Type: *string,
@@ -1678,7 +1678,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlManagedInstance.SqlManagedInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanagedinstance"
 
 &sqlmanagedinstance.SqlManagedInstanceTimeouts {
 	Create: *string,
@@ -1754,7 +1754,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlManagedInstance.SqlManagedInstanceIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanagedinstance"
 
 sqlmanagedinstance.NewSqlManagedInstanceIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlManagedInstanceIdentityOutputReference
 ```
@@ -2047,7 +2047,7 @@ func InternalValue() SqlManagedInstanceIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlManagedInstance.SqlManagedInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sqlmanagedinstance"
 
 sqlmanagedinstance.NewSqlManagedInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlManagedInstanceTimeoutsOutputReference
 ```
