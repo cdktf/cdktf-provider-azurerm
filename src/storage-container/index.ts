@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +8,58 @@ import * as cdktf from 'cdktf';
 
 export interface StorageContainerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#container_access_type StorageContainer#container_access_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#container_access_type StorageContainer#container_access_type}
   */
   readonly containerAccessType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#id StorageContainer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#default_encryption_scope StorageContainer#default_encryption_scope}
+  */
+  readonly defaultEncryptionScope?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#encryption_scope_override_enabled StorageContainer#encryption_scope_override_enabled}
+  */
+  readonly encryptionScopeOverrideEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#id StorageContainer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#metadata StorageContainer#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#metadata StorageContainer#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#name StorageContainer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#name StorageContainer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#storage_account_name StorageContainer#storage_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#storage_account_name StorageContainer#storage_account_name}
   */
   readonly storageAccountName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#timeouts StorageContainer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#timeouts StorageContainer#timeouts}
   */
   readonly timeouts?: StorageContainerTimeouts;
 }
 export interface StorageContainerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#create StorageContainer#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#create StorageContainer#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#delete StorageContainer#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#delete StorageContainer#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#read StorageContainer#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#read StorageContainer#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#update StorageContainer#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#update StorageContainer#update}
   */
   readonly update?: string;
 }
@@ -237,7 +240,7 @@ export class StorageContainerTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container azurerm_storage_container}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container azurerm_storage_container}
 */
 export class StorageContainer extends cdktf.TerraformResource {
 
@@ -253,7 +256,7 @@ export class StorageContainer extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a StorageContainer resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the StorageContainer to import
-  * @param importFromId The id of the existing StorageContainer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing StorageContainer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the StorageContainer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -265,7 +268,7 @@ export class StorageContainer extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container azurerm_storage_container} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container azurerm_storage_container} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -276,7 +279,7 @@ export class StorageContainer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_container',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.98.0',
+        providerVersion: '3.99.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -288,6 +291,8 @@ export class StorageContainer extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._containerAccessType = config.containerAccessType;
+    this._defaultEncryptionScope = config.defaultEncryptionScope;
+    this._encryptionScopeOverrideEnabled = config.encryptionScopeOverrideEnabled;
     this._id = config.id;
     this._metadata = config.metadata;
     this._name = config.name;
@@ -313,6 +318,38 @@ export class StorageContainer extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get containerAccessTypeInput() {
     return this._containerAccessType;
+  }
+
+  // default_encryption_scope - computed: true, optional: true, required: false
+  private _defaultEncryptionScope?: string; 
+  public get defaultEncryptionScope() {
+    return this.getStringAttribute('default_encryption_scope');
+  }
+  public set defaultEncryptionScope(value: string) {
+    this._defaultEncryptionScope = value;
+  }
+  public resetDefaultEncryptionScope() {
+    this._defaultEncryptionScope = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultEncryptionScopeInput() {
+    return this._defaultEncryptionScope;
+  }
+
+  // encryption_scope_override_enabled - computed: false, optional: true, required: false
+  private _encryptionScopeOverrideEnabled?: boolean | cdktf.IResolvable; 
+  public get encryptionScopeOverrideEnabled() {
+    return this.getBooleanAttribute('encryption_scope_override_enabled');
+  }
+  public set encryptionScopeOverrideEnabled(value: boolean | cdktf.IResolvable) {
+    this._encryptionScopeOverrideEnabled = value;
+  }
+  public resetEncryptionScopeOverrideEnabled() {
+    this._encryptionScopeOverrideEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionScopeOverrideEnabledInput() {
+    return this._encryptionScopeOverrideEnabled;
   }
 
   // has_immutability_policy - computed: true, optional: false, required: false
@@ -411,6 +448,8 @@ export class StorageContainer extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       container_access_type: cdktf.stringToTerraform(this._containerAccessType),
+      default_encryption_scope: cdktf.stringToTerraform(this._defaultEncryptionScope),
+      encryption_scope_override_enabled: cdktf.booleanToTerraform(this._encryptionScopeOverrideEnabled),
       id: cdktf.stringToTerraform(this._id),
       metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
@@ -426,6 +465,18 @@ export class StorageContainer extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      default_encryption_scope: {
+        value: cdktf.stringToHclTerraform(this._defaultEncryptionScope),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      encryption_scope_override_enabled: {
+        value: cdktf.booleanToHclTerraform(this._encryptionScopeOverrideEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       id: {
         value: cdktf.stringToHclTerraform(this._id),

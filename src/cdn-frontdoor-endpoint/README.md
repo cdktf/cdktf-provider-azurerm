@@ -1,3 +1,3 @@
 # `azurerm_cdn_frontdoor_endpoint`
 
-Refer to the Terraform Registry for docs: [`azurerm_cdn_frontdoor_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/cdn_frontdoor_endpoint).
+Refer to the Terraform Registry for docs: [`azurerm_cdn_frontdoor_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_frontdoor_endpoint).

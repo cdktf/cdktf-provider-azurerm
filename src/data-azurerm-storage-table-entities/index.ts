@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/storage_table_entities
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/storage_table_entities
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,32 +8,32 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermStorageTableEntitiesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/storage_table_entities#filter DataAzurermStorageTableEntities#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/storage_table_entities#filter DataAzurermStorageTableEntities#filter}
   */
   readonly filter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/storage_table_entities#id DataAzurermStorageTableEntities#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/storage_table_entities#id DataAzurermStorageTableEntities#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/storage_table_entities#select DataAzurermStorageTableEntities#select}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/storage_table_entities#select DataAzurermStorageTableEntities#select}
   */
   readonly select?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/storage_table_entities#storage_account_name DataAzurermStorageTableEntities#storage_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/storage_table_entities#storage_account_name DataAzurermStorageTableEntities#storage_account_name}
   */
   readonly storageAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/storage_table_entities#table_name DataAzurermStorageTableEntities#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/storage_table_entities#table_name DataAzurermStorageTableEntities#table_name}
   */
   readonly tableName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/storage_table_entities#timeouts DataAzurermStorageTableEntities#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/storage_table_entities#timeouts DataAzurermStorageTableEntities#timeouts}
   */
   readonly timeouts?: DataAzurermStorageTableEntitiesTimeouts;
 }
@@ -130,7 +125,7 @@ export class DataAzurermStorageTableEntitiesItemsList extends cdktf.ComplexList 
 }
 export interface DataAzurermStorageTableEntitiesTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/storage_table_entities#read DataAzurermStorageTableEntities#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/storage_table_entities#read DataAzurermStorageTableEntities#read}
   */
   readonly read?: string;
 }
@@ -224,7 +219,7 @@ export class DataAzurermStorageTableEntitiesTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/storage_table_entities azurerm_storage_table_entities}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/storage_table_entities azurerm_storage_table_entities}
 */
 export class DataAzurermStorageTableEntities extends cdktf.TerraformDataSource {
 
@@ -240,7 +235,7 @@ export class DataAzurermStorageTableEntities extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermStorageTableEntities resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermStorageTableEntities to import
-  * @param importFromId The id of the existing DataAzurermStorageTableEntities that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/storage_table_entities#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermStorageTableEntities that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/storage_table_entities#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermStorageTableEntities to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -252,7 +247,7 @@ export class DataAzurermStorageTableEntities extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/data-sources/storage_table_entities azurerm_storage_table_entities} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/storage_table_entities azurerm_storage_table_entities} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -263,7 +258,7 @@ export class DataAzurermStorageTableEntities extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_storage_table_entities',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.98.0',
+        providerVersion: '3.99.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

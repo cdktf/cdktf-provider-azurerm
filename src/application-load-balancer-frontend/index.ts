@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/application_load_balancer_frontend
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/application_load_balancer_frontend
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface ApplicationLoadBalancerFrontendConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/application_load_balancer_frontend#application_load_balancer_id ApplicationLoadBalancerFrontend#application_load_balancer_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/application_load_balancer_frontend#application_load_balancer_id ApplicationLoadBalancerFrontend#application_load_balancer_id}
   */
   readonly applicationLoadBalancerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/application_load_balancer_frontend#id ApplicationLoadBalancerFrontend#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/application_load_balancer_frontend#id ApplicationLoadBalancerFrontend#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/application_load_balancer_frontend#name ApplicationLoadBalancerFrontend#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/application_load_balancer_frontend#name ApplicationLoadBalancerFrontend#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/application_load_balancer_frontend#tags ApplicationLoadBalancerFrontend#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/application_load_balancer_frontend#tags ApplicationLoadBalancerFrontend#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/application_load_balancer_frontend#timeouts ApplicationLoadBalancerFrontend#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/application_load_balancer_frontend#timeouts ApplicationLoadBalancerFrontend#timeouts}
   */
   readonly timeouts?: ApplicationLoadBalancerFrontendTimeouts;
 }
 export interface ApplicationLoadBalancerFrontendTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/application_load_balancer_frontend#create ApplicationLoadBalancerFrontend#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/application_load_balancer_frontend#create ApplicationLoadBalancerFrontend#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/application_load_balancer_frontend#delete ApplicationLoadBalancerFrontend#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/application_load_balancer_frontend#delete ApplicationLoadBalancerFrontend#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/application_load_balancer_frontend#read ApplicationLoadBalancerFrontend#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/application_load_balancer_frontend#read ApplicationLoadBalancerFrontend#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/application_load_balancer_frontend#update ApplicationLoadBalancerFrontend#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/application_load_balancer_frontend#update ApplicationLoadBalancerFrontend#update}
   */
   readonly update?: string;
 }
@@ -233,7 +228,7 @@ export class ApplicationLoadBalancerFrontendTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/application_load_balancer_frontend azurerm_application_load_balancer_frontend}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/application_load_balancer_frontend azurerm_application_load_balancer_frontend}
 */
 export class ApplicationLoadBalancerFrontend extends cdktf.TerraformResource {
 
@@ -249,7 +244,7 @@ export class ApplicationLoadBalancerFrontend extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApplicationLoadBalancerFrontend resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApplicationLoadBalancerFrontend to import
-  * @param importFromId The id of the existing ApplicationLoadBalancerFrontend that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/application_load_balancer_frontend#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApplicationLoadBalancerFrontend that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/application_load_balancer_frontend#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApplicationLoadBalancerFrontend to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -261,7 +256,7 @@ export class ApplicationLoadBalancerFrontend extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/application_load_balancer_frontend azurerm_application_load_balancer_frontend} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/application_load_balancer_frontend azurerm_application_load_balancer_frontend} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -272,7 +267,7 @@ export class ApplicationLoadBalancerFrontend extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_application_load_balancer_frontend',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.98.0',
+        providerVersion: '3.99.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
