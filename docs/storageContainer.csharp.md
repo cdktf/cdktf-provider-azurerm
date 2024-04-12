@@ -4,7 +4,7 @@
 
 ### StorageContainer <a name="StorageContainer" id="@cdktf/provider-azurerm.storageContainer.StorageContainer"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container azurerm_storage_container}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container azurerm_storage_container}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageContainer.StorageContainer.Initializer"></a>
 
@@ -75,6 +75,8 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.resetContainerAccessType">ResetContainerAccessType</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.resetDefaultEncryptionScope">ResetDefaultEncryptionScope</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.resetEncryptionScopeOverrideEnabled">ResetEncryptionScopeOverrideEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.resetMetadata">ResetMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
@@ -387,6 +389,18 @@ private void PutTimeouts(StorageContainerTimeouts Value)
 private void ResetContainerAccessType()
 ```
 
+##### `ResetDefaultEncryptionScope` <a name="ResetDefaultEncryptionScope" id="@cdktf/provider-azurerm.storageContainer.StorageContainer.resetDefaultEncryptionScope"></a>
+
+```csharp
+private void ResetDefaultEncryptionScope()
+```
+
+##### `ResetEncryptionScopeOverrideEnabled` <a name="ResetEncryptionScopeOverrideEnabled" id="@cdktf/provider-azurerm.storageContainer.StorageContainer.resetEncryptionScopeOverrideEnabled"></a>
+
+```csharp
+private void ResetEncryptionScopeOverrideEnabled()
+```
+
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-azurerm.storageContainer.StorageContainer.resetId"></a>
 
 ```csharp
@@ -508,7 +522,7 @@ The construct id used in the generated config for the StorageContainer to import
 
 The id of the existing StorageContainer that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -543,12 +557,16 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.resourceManagerId">ResourceManagerId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerTimeoutsOutputReference">StorageContainerTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.containerAccessTypeInput">ContainerAccessTypeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.defaultEncryptionScopeInput">DefaultEncryptionScopeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.encryptionScopeOverrideEnabledInput">EncryptionScopeOverrideEnabledInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.metadataInput">MetadataInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.storageAccountNameInput">StorageAccountNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.containerAccessType">ContainerAccessType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.defaultEncryptionScope">DefaultEncryptionScope</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.encryptionScopeOverrideEnabled">EncryptionScopeOverrideEnabled</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.metadata">Metadata</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainer.property.name">Name</a></code> | <code>string</code> | *No description.* |
@@ -748,6 +766,26 @@ public string ContainerAccessTypeInput { get; }
 
 ---
 
+##### `DefaultEncryptionScopeInput`<sup>Optional</sup> <a name="DefaultEncryptionScopeInput" id="@cdktf/provider-azurerm.storageContainer.StorageContainer.property.defaultEncryptionScopeInput"></a>
+
+```csharp
+public string DefaultEncryptionScopeInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `EncryptionScopeOverrideEnabledInput`<sup>Optional</sup> <a name="EncryptionScopeOverrideEnabledInput" id="@cdktf/provider-azurerm.storageContainer.StorageContainer.property.encryptionScopeOverrideEnabledInput"></a>
+
+```csharp
+public object EncryptionScopeOverrideEnabledInput { get; }
+```
+
+- *Type:* object
+
+---
+
 ##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktf/provider-azurerm.storageContainer.StorageContainer.property.idInput"></a>
 
 ```csharp
@@ -805,6 +843,26 @@ public string ContainerAccessType { get; }
 ```
 
 - *Type:* string
+
+---
+
+##### `DefaultEncryptionScope`<sup>Required</sup> <a name="DefaultEncryptionScope" id="@cdktf/provider-azurerm.storageContainer.StorageContainer.property.defaultEncryptionScope"></a>
+
+```csharp
+public string DefaultEncryptionScope { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `EncryptionScopeOverrideEnabled`<sup>Required</sup> <a name="EncryptionScopeOverrideEnabled" id="@cdktf/provider-azurerm.storageContainer.StorageContainer.property.encryptionScopeOverrideEnabled"></a>
+
+```csharp
+public object EncryptionScopeOverrideEnabled { get; }
+```
+
+- *Type:* object
 
 ---
 
@@ -886,6 +944,8 @@ new StorageContainerConfig {
     string Name,
     string StorageAccountName,
     string ContainerAccessType = null,
+    string DefaultEncryptionScope = null,
+    object EncryptionScopeOverrideEnabled = null,
     string Id = null,
     System.Collections.Generic.IDictionary<string, string> Metadata = null,
     StorageContainerTimeouts Timeouts = null
@@ -903,11 +963,13 @@ new StorageContainerConfig {
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#name StorageContainer#name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.storageAccountName">StorageAccountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#storage_account_name StorageContainer#storage_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.containerAccessType">ContainerAccessType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#container_access_type StorageContainer#container_access_type}. |
-| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#id StorageContainer#id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.metadata">Metadata</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#metadata StorageContainer#metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#name StorageContainer#name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.storageAccountName">StorageAccountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#storage_account_name StorageContainer#storage_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.containerAccessType">ContainerAccessType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#container_access_type StorageContainer#container_access_type}. |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.defaultEncryptionScope">DefaultEncryptionScope</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#default_encryption_scope StorageContainer#default_encryption_scope}. |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.encryptionScopeOverrideEnabled">EncryptionScopeOverrideEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#encryption_scope_override_enabled StorageContainer#encryption_scope_override_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#id StorageContainer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.metadata">Metadata</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#metadata StorageContainer#metadata}. |
 | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerTimeouts">StorageContainerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -990,7 +1052,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#name StorageContainer#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#name StorageContainer#name}.
 
 ---
 
@@ -1002,7 +1064,7 @@ public string StorageAccountName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#storage_account_name StorageContainer#storage_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#storage_account_name StorageContainer#storage_account_name}.
 
 ---
 
@@ -1014,7 +1076,31 @@ public string ContainerAccessType { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#container_access_type StorageContainer#container_access_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#container_access_type StorageContainer#container_access_type}.
+
+---
+
+##### `DefaultEncryptionScope`<sup>Optional</sup> <a name="DefaultEncryptionScope" id="@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.defaultEncryptionScope"></a>
+
+```csharp
+public string DefaultEncryptionScope { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#default_encryption_scope StorageContainer#default_encryption_scope}.
+
+---
+
+##### `EncryptionScopeOverrideEnabled`<sup>Optional</sup> <a name="EncryptionScopeOverrideEnabled" id="@cdktf/provider-azurerm.storageContainer.StorageContainerConfig.property.encryptionScopeOverrideEnabled"></a>
+
+```csharp
+public object EncryptionScopeOverrideEnabled { get; set; }
+```
+
+- *Type:* object
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#encryption_scope_override_enabled StorageContainer#encryption_scope_override_enabled}.
 
 ---
 
@@ -1026,7 +1112,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#id StorageContainer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#id StorageContainer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1041,7 +1127,7 @@ public System.Collections.Generic.IDictionary<string, string> Metadata { get; se
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#metadata StorageContainer#metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#metadata StorageContainer#metadata}.
 
 ---
 
@@ -1055,7 +1141,7 @@ public StorageContainerTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#timeouts StorageContainer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#timeouts StorageContainer#timeouts}
 
 ---
 
@@ -1078,10 +1164,10 @@ new StorageContainerTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#create StorageContainer#create}. |
-| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#delete StorageContainer#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#read StorageContainer#read}. |
-| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#update StorageContainer#update}. |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#create StorageContainer#create}. |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#delete StorageContainer#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#read StorageContainer#read}. |
+| <code><a href="#@cdktf/provider-azurerm.storageContainer.StorageContainerTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#update StorageContainer#update}. |
 
 ---
 
@@ -1093,7 +1179,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#create StorageContainer#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#create StorageContainer#create}.
 
 ---
 
@@ -1105,7 +1191,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#delete StorageContainer#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#delete StorageContainer#delete}.
 
 ---
 
@@ -1117,7 +1203,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#read StorageContainer#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#read StorageContainer#read}.
 
 ---
 
@@ -1129,7 +1215,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_container#update StorageContainer#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_container#update StorageContainer#update}.
 
 ---
 

@@ -4,7 +4,7 @@
 
 ### StorageBlob <a name="StorageBlob" id="@cdktf/provider-azurerm.storageBlob.StorageBlob"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob azurerm_storage_blob}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob azurerm_storage_blob}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer"></a>
 
@@ -31,6 +31,7 @@ StorageBlob.Builder.create(Construct scope, java.lang.String id)
 //  .cacheControl(java.lang.String)
 //  .contentMd5(java.lang.String)
 //  .contentType(java.lang.String)
+//  .encryptionScope(java.lang.String)
 //  .id(java.lang.String)
 //  .metadata(java.util.Map<java.lang.String, java.lang.String>)
 //  .parallelism(java.lang.Number)
@@ -53,21 +54,22 @@ StorageBlob.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#name StorageBlob#name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.storageAccountName">storageAccountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#storage_account_name StorageBlob#storage_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.storageContainerName">storageContainerName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#storage_container_name StorageBlob#storage_container_name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#type StorageBlob#type}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.accessTier">accessTier</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#access_tier StorageBlob#access_tier}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.cacheControl">cacheControl</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#cache_control StorageBlob#cache_control}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.contentMd5">contentMd5</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#content_md5 StorageBlob#content_md5}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.contentType">contentType</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#content_type StorageBlob#content_type}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#id StorageBlob#id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.metadata">metadata</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#metadata StorageBlob#metadata}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.parallelism">parallelism</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#parallelism StorageBlob#parallelism}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.size">size</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#size StorageBlob#size}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.source">source</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#source StorageBlob#source}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.sourceContent">sourceContent</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#source_content StorageBlob#source_content}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.sourceUri">sourceUri</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#source_uri StorageBlob#source_uri}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#name StorageBlob#name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.storageAccountName">storageAccountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#storage_account_name StorageBlob#storage_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.storageContainerName">storageContainerName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#storage_container_name StorageBlob#storage_container_name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#type StorageBlob#type}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.accessTier">accessTier</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#access_tier StorageBlob#access_tier}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.cacheControl">cacheControl</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#cache_control StorageBlob#cache_control}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.contentMd5">contentMd5</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#content_md5 StorageBlob#content_md5}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.contentType">contentType</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#content_type StorageBlob#content_type}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.encryptionScope">encryptionScope</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#encryption_scope StorageBlob#encryption_scope}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#id StorageBlob#id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.metadata">metadata</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#metadata StorageBlob#metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.parallelism">parallelism</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#parallelism StorageBlob#parallelism}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.size">size</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#size StorageBlob#size}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.source">source</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#source StorageBlob#source}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.sourceContent">sourceContent</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#source_content StorageBlob#source_content}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.sourceUri">sourceUri</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#source_uri StorageBlob#source_uri}. |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobTimeouts">StorageBlobTimeouts</a></code> | timeouts block. |
 
 ---
@@ -136,7 +138,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#name StorageBlob#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#name StorageBlob#name}.
 
 ---
 
@@ -144,7 +146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#storage_account_name StorageBlob#storage_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#storage_account_name StorageBlob#storage_account_name}.
 
 ---
 
@@ -152,7 +154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#storage_container_name StorageBlob#storage_container_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#storage_container_name StorageBlob#storage_container_name}.
 
 ---
 
@@ -160,7 +162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#type StorageBlob#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#type StorageBlob#type}.
 
 ---
 
@@ -168,7 +170,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#access_tier StorageBlob#access_tier}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#access_tier StorageBlob#access_tier}.
 
 ---
 
@@ -176,7 +178,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#cache_control StorageBlob#cache_control}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#cache_control StorageBlob#cache_control}.
 
 ---
 
@@ -184,7 +186,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#content_md5 StorageBlob#content_md5}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#content_md5 StorageBlob#content_md5}.
 
 ---
 
@@ -192,7 +194,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#content_type StorageBlob#content_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#content_type StorageBlob#content_type}.
+
+---
+
+##### `encryptionScope`<sup>Optional</sup> <a name="encryptionScope" id="@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer.parameter.encryptionScope"></a>
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#encryption_scope StorageBlob#encryption_scope}.
 
 ---
 
@@ -200,7 +210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#id StorageBlob#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#id StorageBlob#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -211,7 +221,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#metadata StorageBlob#metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#metadata StorageBlob#metadata}.
 
 ---
 
@@ -219,7 +229,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#parallelism StorageBlob#parallelism}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#parallelism StorageBlob#parallelism}.
 
 ---
 
@@ -227,7 +237,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#size StorageBlob#size}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#size StorageBlob#size}.
 
 ---
 
@@ -235,7 +245,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#source StorageBlob#source}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#source StorageBlob#source}.
 
 ---
 
@@ -243,7 +253,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#source_content StorageBlob#source_content}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#source_content StorageBlob#source_content}.
 
 ---
 
@@ -251,7 +261,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#source_uri StorageBlob#source_uri}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#source_uri StorageBlob#source_uri}.
 
 ---
 
@@ -261,7 +271,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#timeouts StorageBlob#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#timeouts StorageBlob#timeouts}
 
 ---
 
@@ -297,6 +307,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.resetCacheControl">resetCacheControl</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.resetContentMd5">resetContentMd5</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.resetContentType">resetContentType</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.resetEncryptionScope">resetEncryptionScope</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.resetMetadata">resetMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.resetParallelism">resetParallelism</a></code> | *No description.* |
@@ -634,6 +645,12 @@ public void resetContentMd5()
 public void resetContentType()
 ```
 
+##### `resetEncryptionScope` <a name="resetEncryptionScope" id="@cdktf/provider-azurerm.storageBlob.StorageBlob.resetEncryptionScope"></a>
+
+```java
+public void resetEncryptionScope()
+```
+
 ##### `resetId` <a name="resetId" id="@cdktf/provider-azurerm.storageBlob.StorageBlob.resetId"></a>
 
 ```java
@@ -785,7 +802,7 @@ The construct id used in the generated config for the StorageBlob to import.
 
 The id of the existing StorageBlob that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -821,6 +838,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.cacheControlInput">cacheControlInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.contentMd5Input">contentMd5Input</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.contentTypeInput">contentTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.encryptionScopeInput">encryptionScopeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.metadataInput">metadataInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -837,6 +855,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.cacheControl">cacheControl</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.contentMd5">contentMd5</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.contentType">contentType</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.encryptionScope">encryptionScope</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.metadata">metadata</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlob.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -1053,6 +1072,16 @@ public java.lang.String getContentTypeInput();
 
 ---
 
+##### `encryptionScopeInput`<sup>Optional</sup> <a name="encryptionScopeInput" id="@cdktf/provider-azurerm.storageBlob.StorageBlob.property.encryptionScopeInput"></a>
+
+```java
+public java.lang.String getEncryptionScopeInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `idInput`<sup>Optional</sup> <a name="idInput" id="@cdktf/provider-azurerm.storageBlob.StorageBlob.property.idInput"></a>
 
 ```java
@@ -1207,6 +1236,16 @@ public java.lang.String getContentMd5();
 
 ```java
 public java.lang.String getContentType();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `encryptionScope`<sup>Required</sup> <a name="encryptionScope" id="@cdktf/provider-azurerm.storageBlob.StorageBlob.property.encryptionScope"></a>
+
+```java
+public java.lang.String getEncryptionScope();
 ```
 
 - *Type:* java.lang.String
@@ -1370,6 +1409,7 @@ StorageBlobConfig.builder()
 //  .cacheControl(java.lang.String)
 //  .contentMd5(java.lang.String)
 //  .contentType(java.lang.String)
+//  .encryptionScope(java.lang.String)
 //  .id(java.lang.String)
 //  .metadata(java.util.Map<java.lang.String, java.lang.String>)
 //  .parallelism(java.lang.Number)
@@ -1392,21 +1432,22 @@ StorageBlobConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#name StorageBlob#name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.storageAccountName">storageAccountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#storage_account_name StorageBlob#storage_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.storageContainerName">storageContainerName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#storage_container_name StorageBlob#storage_container_name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#type StorageBlob#type}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.accessTier">accessTier</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#access_tier StorageBlob#access_tier}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.cacheControl">cacheControl</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#cache_control StorageBlob#cache_control}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.contentMd5">contentMd5</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#content_md5 StorageBlob#content_md5}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.contentType">contentType</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#content_type StorageBlob#content_type}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#id StorageBlob#id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.metadata">metadata</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#metadata StorageBlob#metadata}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.parallelism">parallelism</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#parallelism StorageBlob#parallelism}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.size">size</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#size StorageBlob#size}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.source">source</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#source StorageBlob#source}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.sourceContent">sourceContent</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#source_content StorageBlob#source_content}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.sourceUri">sourceUri</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#source_uri StorageBlob#source_uri}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#name StorageBlob#name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.storageAccountName">storageAccountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#storage_account_name StorageBlob#storage_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.storageContainerName">storageContainerName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#storage_container_name StorageBlob#storage_container_name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#type StorageBlob#type}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.accessTier">accessTier</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#access_tier StorageBlob#access_tier}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.cacheControl">cacheControl</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#cache_control StorageBlob#cache_control}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.contentMd5">contentMd5</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#content_md5 StorageBlob#content_md5}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.contentType">contentType</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#content_type StorageBlob#content_type}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.encryptionScope">encryptionScope</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#encryption_scope StorageBlob#encryption_scope}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#id StorageBlob#id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.metadata">metadata</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#metadata StorageBlob#metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.parallelism">parallelism</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#parallelism StorageBlob#parallelism}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.size">size</a></code> | <code>java.lang.Number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#size StorageBlob#size}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.source">source</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#source StorageBlob#source}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.sourceContent">sourceContent</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#source_content StorageBlob#source_content}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.sourceUri">sourceUri</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#source_uri StorageBlob#source_uri}. |
 | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobTimeouts">StorageBlobTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1489,7 +1530,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#name StorageBlob#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#name StorageBlob#name}.
 
 ---
 
@@ -1501,7 +1542,7 @@ public java.lang.String getStorageAccountName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#storage_account_name StorageBlob#storage_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#storage_account_name StorageBlob#storage_account_name}.
 
 ---
 
@@ -1513,7 +1554,7 @@ public java.lang.String getStorageContainerName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#storage_container_name StorageBlob#storage_container_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#storage_container_name StorageBlob#storage_container_name}.
 
 ---
 
@@ -1525,7 +1566,7 @@ public java.lang.String getType();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#type StorageBlob#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#type StorageBlob#type}.
 
 ---
 
@@ -1537,7 +1578,7 @@ public java.lang.String getAccessTier();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#access_tier StorageBlob#access_tier}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#access_tier StorageBlob#access_tier}.
 
 ---
 
@@ -1549,7 +1590,7 @@ public java.lang.String getCacheControl();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#cache_control StorageBlob#cache_control}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#cache_control StorageBlob#cache_control}.
 
 ---
 
@@ -1561,7 +1602,7 @@ public java.lang.String getContentMd5();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#content_md5 StorageBlob#content_md5}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#content_md5 StorageBlob#content_md5}.
 
 ---
 
@@ -1573,7 +1614,19 @@ public java.lang.String getContentType();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#content_type StorageBlob#content_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#content_type StorageBlob#content_type}.
+
+---
+
+##### `encryptionScope`<sup>Optional</sup> <a name="encryptionScope" id="@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.property.encryptionScope"></a>
+
+```java
+public java.lang.String getEncryptionScope();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#encryption_scope StorageBlob#encryption_scope}.
 
 ---
 
@@ -1585,7 +1638,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#id StorageBlob#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#id StorageBlob#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1600,7 +1653,7 @@ public java.util.Map<java.lang.String, java.lang.String> getMetadata();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#metadata StorageBlob#metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#metadata StorageBlob#metadata}.
 
 ---
 
@@ -1612,7 +1665,7 @@ public java.lang.Number getParallelism();
 
 - *Type:* java.lang.Number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#parallelism StorageBlob#parallelism}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#parallelism StorageBlob#parallelism}.
 
 ---
 
@@ -1624,7 +1677,7 @@ public java.lang.Number getSize();
 
 - *Type:* java.lang.Number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#size StorageBlob#size}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#size StorageBlob#size}.
 
 ---
 
@@ -1636,7 +1689,7 @@ public java.lang.String getSource();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#source StorageBlob#source}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#source StorageBlob#source}.
 
 ---
 
@@ -1648,7 +1701,7 @@ public java.lang.String getSourceContent();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#source_content StorageBlob#source_content}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#source_content StorageBlob#source_content}.
 
 ---
 
@@ -1660,7 +1713,7 @@ public java.lang.String getSourceUri();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#source_uri StorageBlob#source_uri}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#source_uri StorageBlob#source_uri}.
 
 ---
 
@@ -1674,7 +1727,7 @@ public StorageBlobTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#timeouts StorageBlob#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#timeouts StorageBlob#timeouts}
 
 ---
 
@@ -1697,10 +1750,10 @@ StorageBlobTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#create StorageBlob#create}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#delete StorageBlob#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#read StorageBlob#read}. |
-| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#update StorageBlob#update}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#create StorageBlob#create}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#delete StorageBlob#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#read StorageBlob#read}. |
+| <code><a href="#@cdktf/provider-azurerm.storageBlob.StorageBlobTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#update StorageBlob#update}. |
 
 ---
 
@@ -1712,7 +1765,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#create StorageBlob#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#create StorageBlob#create}.
 
 ---
 
@@ -1724,7 +1777,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#delete StorageBlob#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#delete StorageBlob#delete}.
 
 ---
 
@@ -1736,7 +1789,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#read StorageBlob#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#read StorageBlob#read}.
 
 ---
 
@@ -1748,7 +1801,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/storage_blob#update StorageBlob#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/storage_blob#update StorageBlob#update}.
 
 ---
 

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,72 +13,80 @@ import * as cdktf from 'cdktf';
 
 export interface SnapshotConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#create_option Snapshot#create_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#create_option Snapshot#create_option}
   */
   readonly createOption: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#disk_size_gb Snapshot#disk_size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#disk_size_gb Snapshot#disk_size_gb}
   */
   readonly diskSizeGb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#id Snapshot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#id Snapshot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#incremental_enabled Snapshot#incremental_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#incremental_enabled Snapshot#incremental_enabled}
   */
   readonly incrementalEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#location Snapshot#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#location Snapshot#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#name Snapshot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#name Snapshot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#resource_group_name Snapshot#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#network_access_policy Snapshot#network_access_policy}
+  */
+  readonly networkAccessPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#public_network_access_enabled Snapshot#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#resource_group_name Snapshot#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#source_resource_id Snapshot#source_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#source_resource_id Snapshot#source_resource_id}
   */
   readonly sourceResourceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#source_uri Snapshot#source_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#source_uri Snapshot#source_uri}
   */
   readonly sourceUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#storage_account_id Snapshot#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#storage_account_id Snapshot#storage_account_id}
   */
   readonly storageAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#tags Snapshot#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#tags Snapshot#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * encryption_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#encryption_settings Snapshot#encryption_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#encryption_settings Snapshot#encryption_settings}
   */
   readonly encryptionSettings?: SnapshotEncryptionSettings;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#timeouts Snapshot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#timeouts Snapshot#timeouts}
   */
   readonly timeouts?: SnapshotTimeouts;
 }
 export interface SnapshotEncryptionSettingsDiskEncryptionKey {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#secret_url Snapshot#secret_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#secret_url Snapshot#secret_url}
   */
   readonly secretUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#source_vault_id Snapshot#source_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#source_vault_id Snapshot#source_vault_id}
   */
   readonly sourceVaultId: string;
 }
@@ -185,11 +193,11 @@ export class SnapshotEncryptionSettingsDiskEncryptionKeyOutputReference extends 
 }
 export interface SnapshotEncryptionSettingsKeyEncryptionKey {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#key_url Snapshot#key_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#key_url Snapshot#key_url}
   */
   readonly keyUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#source_vault_id Snapshot#source_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#source_vault_id Snapshot#source_vault_id}
   */
   readonly sourceVaultId: string;
 }
@@ -296,19 +304,19 @@ export class SnapshotEncryptionSettingsKeyEncryptionKeyOutputReference extends c
 }
 export interface SnapshotEncryptionSettings {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#enabled Snapshot#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#enabled Snapshot#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * disk_encryption_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#disk_encryption_key Snapshot#disk_encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#disk_encryption_key Snapshot#disk_encryption_key}
   */
   readonly diskEncryptionKey?: SnapshotEncryptionSettingsDiskEncryptionKey;
   /**
   * key_encryption_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#key_encryption_key Snapshot#key_encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#key_encryption_key Snapshot#key_encryption_key}
   */
   readonly keyEncryptionKey?: SnapshotEncryptionSettingsKeyEncryptionKey;
 }
@@ -450,19 +458,19 @@ export class SnapshotEncryptionSettingsOutputReference extends cdktf.ComplexObje
 }
 export interface SnapshotTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#create Snapshot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#create Snapshot#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#delete Snapshot#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#delete Snapshot#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#read Snapshot#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#read Snapshot#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#update Snapshot#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#update Snapshot#update}
   */
   readonly update?: string;
 }
@@ -643,7 +651,7 @@ export class SnapshotTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot azurerm_snapshot}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot azurerm_snapshot}
 */
 export class Snapshot extends cdktf.TerraformResource {
 
@@ -659,7 +667,7 @@ export class Snapshot extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a Snapshot resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Snapshot to import
-  * @param importFromId The id of the existing Snapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Snapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Snapshot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -671,7 +679,7 @@ export class Snapshot extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/snapshot azurerm_snapshot} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/snapshot azurerm_snapshot} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -682,7 +690,7 @@ export class Snapshot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_snapshot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.98.0',
+        providerVersion: '3.99.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -699,6 +707,8 @@ export class Snapshot extends cdktf.TerraformResource {
     this._incrementalEnabled = config.incrementalEnabled;
     this._location = config.location;
     this._name = config.name;
+    this._networkAccessPolicy = config.networkAccessPolicy;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._sourceResourceId = config.sourceResourceId;
     this._sourceUri = config.sourceUri;
@@ -797,6 +807,38 @@ export class Snapshot extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // network_access_policy - computed: false, optional: true, required: false
+  private _networkAccessPolicy?: string; 
+  public get networkAccessPolicy() {
+    return this.getStringAttribute('network_access_policy');
+  }
+  public set networkAccessPolicy(value: string) {
+    this._networkAccessPolicy = value;
+  }
+  public resetNetworkAccessPolicy() {
+    this._networkAccessPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkAccessPolicyInput() {
+    return this._networkAccessPolicy;
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -925,6 +967,8 @@ export class Snapshot extends cdktf.TerraformResource {
       incremental_enabled: cdktf.booleanToTerraform(this._incrementalEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      network_access_policy: cdktf.stringToTerraform(this._networkAccessPolicy),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       source_resource_id: cdktf.stringToTerraform(this._sourceResourceId),
       source_uri: cdktf.stringToTerraform(this._sourceUri),
@@ -972,6 +1016,18 @@ export class Snapshot extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      network_access_policy: {
+        value: cdktf.stringToHclTerraform(this._networkAccessPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       resource_group_name: {
         value: cdktf.stringToHclTerraform(this._resourceGroupName),

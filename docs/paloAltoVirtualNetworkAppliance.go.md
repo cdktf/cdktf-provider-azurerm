@@ -4,7 +4,7 @@
 
 ### PaloAltoVirtualNetworkAppliance <a name="PaloAltoVirtualNetworkAppliance" id="@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkAppliance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance azurerm_palo_alto_virtual_network_appliance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance azurerm_palo_alto_virtual_network_appliance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkAppliance.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the PaloAltoVirtualNetworkAppl
 
 The id of the existing PaloAltoVirtualNetworkAppliance that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -810,9 +810,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/paloaltovirtualne
 | <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#name PaloAltoVirtualNetworkAppliance#name}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceConfig.property.virtualHubId">VirtualHubId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#virtual_hub_id PaloAltoVirtualNetworkAppliance#virtual_hub_id}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#id PaloAltoVirtualNetworkAppliance#id}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#name PaloAltoVirtualNetworkAppliance#name}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceConfig.property.virtualHubId">VirtualHubId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#virtual_hub_id PaloAltoVirtualNetworkAppliance#virtual_hub_id}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#id PaloAltoVirtualNetworkAppliance#id}. |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceTimeouts">PaloAltoVirtualNetworkApplianceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -895,7 +895,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#name PaloAltoVirtualNetworkAppliance#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#name PaloAltoVirtualNetworkAppliance#name}.
 
 ---
 
@@ -907,7 +907,7 @@ VirtualHubId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#virtual_hub_id PaloAltoVirtualNetworkAppliance#virtual_hub_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#virtual_hub_id PaloAltoVirtualNetworkAppliance#virtual_hub_id}.
 
 ---
 
@@ -919,7 +919,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#id PaloAltoVirtualNetworkAppliance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#id PaloAltoVirtualNetworkAppliance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -936,7 +936,7 @@ Timeouts PaloAltoVirtualNetworkApplianceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#timeouts PaloAltoVirtualNetworkAppliance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#timeouts PaloAltoVirtualNetworkAppliance#timeouts}
 
 ---
 
@@ -958,9 +958,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/paloaltovirtualne
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#create PaloAltoVirtualNetworkAppliance#create}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#delete PaloAltoVirtualNetworkAppliance#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#read PaloAltoVirtualNetworkAppliance#read}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#create PaloAltoVirtualNetworkAppliance#create}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#delete PaloAltoVirtualNetworkAppliance#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoVirtualNetworkAppliance.PaloAltoVirtualNetworkApplianceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#read PaloAltoVirtualNetworkAppliance#read}. |
 
 ---
 
@@ -972,7 +972,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#create PaloAltoVirtualNetworkAppliance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#create PaloAltoVirtualNetworkAppliance#create}.
 
 ---
 
@@ -984,7 +984,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#delete PaloAltoVirtualNetworkAppliance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#delete PaloAltoVirtualNetworkAppliance#delete}.
 
 ---
 
@@ -996,7 +996,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.98.0/docs/resources/palo_alto_virtual_network_appliance#read PaloAltoVirtualNetworkAppliance#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/palo_alto_virtual_network_appliance#read PaloAltoVirtualNetworkAppliance#read}.
 
 ---
 
