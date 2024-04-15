@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
 
 appservicesourcecontroltoken.NewAppServiceSourceControlToken(scope Construct, id *string, config AppServiceSourceControlTokenConfig) AppServiceSourceControlToken
 ```
@@ -412,7 +412,7 @@ func ResetTokenSecret()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
 
 appservicesourcecontroltoken.AppServiceSourceControlToken_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
 
 appservicesourcecontroltoken.AppServiceSourceControlToken_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ appservicesourcecontroltoken.AppServiceSourceControlToken_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
 
 appservicesourcecontroltoken.AppServiceSourceControlToken_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ appservicesourcecontroltoken.AppServiceSourceControlToken_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlToken.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
 
 appservicesourcecontroltoken.AppServiceSourceControlToken_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -811,7 +811,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
 
 &appservicesourcecontroltoken.AppServiceSourceControlTokenConfig {
 	Connection: interface{},
@@ -824,7 +824,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicesourcec
 	Token: *string,
 	Type: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts,
 	TokenSecret: *string,
 }
 ```
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
 
 &appservicesourcecontroltoken.AppServiceSourceControlTokenTimeouts {
 	Create: *string,
@@ -1064,7 +1064,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceSourceControlToken.AppServiceSourceControlTokenTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicesourcecontroltoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicesourcecontroltoken"
 
 appservicesourcecontroltoken.NewAppServiceSourceControlTokenTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceSourceControlTokenTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPublicIps.DataAzurermPublicIps.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermpublicips"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicips"
 
 dataazurermpublicips.NewDataAzurermPublicIps(scope Construct, id *string, config DataAzurermPublicIpsConfig) DataAzurermPublicIps
 ```
@@ -324,7 +324,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermPublicIps.DataAzurermPublicIps.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermpublicips"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicips"
 
 dataazurermpublicips.DataAzurermPublicIps_IsConstruct(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermPublicIps.DataAzurermPublicIps.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermpublicips"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicips"
 
 dataazurermpublicips.DataAzurermPublicIps_IsTerraformElement(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ dataazurermpublicips.DataAzurermPublicIps_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermPublicIps.DataAzurermPublicIps.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermpublicips"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicips"
 
 dataazurermpublicips.DataAzurermPublicIps_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ dataazurermpublicips.DataAzurermPublicIps_IsTerraformDataSource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermPublicIps.DataAzurermPublicIps.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermpublicips"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicips"
 
 dataazurermpublicips.DataAzurermPublicIps_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -734,7 +734,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPublicIps.DataAzurermPublicIpsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermpublicips"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicips"
 
 &dataazurermpublicips.DataAzurermPublicIpsConfig {
 	Connection: interface{},
@@ -749,7 +749,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermpublic
 	AttachmentStatus: *string,
 	Id: *string,
 	NamePrefix: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermPublicIps.DataAzurermPublicIpsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermPublicIps.DataAzurermPublicIpsTimeouts,
 }
 ```
 
@@ -925,7 +925,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPublicIps.DataAzurermPublicIpsPublicIps.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermpublicips"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicips"
 
 &dataazurermpublicips.DataAzurermPublicIpsPublicIps {
 
@@ -938,7 +938,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermpublic
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPublicIps.DataAzurermPublicIpsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermpublicips"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicips"
 
 &dataazurermpublicips.DataAzurermPublicIpsTimeouts {
 	Read: *string,
@@ -972,7 +972,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPublicIps.DataAzurermPublicIpsPublicIpsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermpublicips"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicips"
 
 dataazurermpublicips.NewDataAzurermPublicIpsPublicIpsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermPublicIpsPublicIpsList
 ```
@@ -1121,7 +1121,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPublicIps.DataAzurermPublicIpsPublicIpsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermpublicips"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicips"
 
 dataazurermpublicips.NewDataAzurermPublicIpsPublicIpsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermPublicIpsPublicIpsOutputReference
 ```
@@ -1443,7 +1443,7 @@ func InternalValue() DataAzurermPublicIpsPublicIps
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPublicIps.DataAzurermPublicIpsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermpublicips"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicips"
 
 dataazurermpublicips.NewDataAzurermPublicIpsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermPublicIpsTimeoutsOutputReference
 ```
