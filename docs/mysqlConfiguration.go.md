@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mysqlconfiguration"
 
 mysqlconfiguration.NewMysqlConfiguration(scope Construct, id *string, config MysqlConfigurationConfig) MysqlConfiguration
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mysqlconfiguration"
 
 mysqlconfiguration.MysqlConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mysqlconfiguration"
 
 mysqlconfiguration.MysqlConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ mysqlconfiguration.MysqlConfiguration_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mysqlconfiguration"
 
 mysqlconfiguration.MysqlConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ mysqlconfiguration.MysqlConfiguration_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfiguration.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mysqlconfiguration"
 
 mysqlconfiguration.MysqlConfiguration_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -826,7 +826,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mysqlconfiguration"
 
 &mysqlconfiguration.MysqlConfigurationConfig {
 	Connection: interface{},
@@ -841,7 +841,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
 	ServerName: *string,
 	Value: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlConfiguration.MysqlConfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mysqlConfiguration.MysqlConfigurationTimeouts,
 }
 ```
 
@@ -1017,7 +1017,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mysqlconfiguration"
 
 &mysqlconfiguration.MysqlConfigurationTimeouts {
 	Create: *string,
@@ -1079,7 +1079,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlConfiguration.MysqlConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mysqlconfiguration"
 
 mysqlconfiguration.NewMysqlConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlConfigurationTimeoutsOutputReference
 ```
