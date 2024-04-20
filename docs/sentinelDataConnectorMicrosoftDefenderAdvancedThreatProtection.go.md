@@ -4,12 +4,12 @@
 
 ### SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection <a name="SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
 
 sentineldataconnectormicrosoftdefenderadvancedthreatprotection.NewSentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection(scope Construct, id *string, config SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig) SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
 
 sentineldataconnectormicrosoftdefenderadvancedthreatprotection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
 
 sentineldataconnectormicrosoftdefenderadvancedthreatprotection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ sentineldataconnectormicrosoftdefenderadvancedthreatprotection.SentinelDataConne
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
 
 sentineldataconnectormicrosoftdefenderadvancedthreatprotection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ sentineldataconnectormicrosoftdefenderadvancedthreatprotection.SentinelDataConne
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
 
 sentineldataconnectormicrosoftdefenderadvancedthreatprotection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the SentinelDataConnectorMicro
 
 The id of the existing SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -811,7 +811,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
 
 &sentineldataconnectormicrosoftdefenderadvancedthreatprotection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig {
 	Connection: interface{},
@@ -825,7 +825,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconne
 	Name: *string,
 	Id: *string,
 	TenantId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts,
 }
 ```
 
@@ -840,10 +840,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconne
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#log_analytics_workspace_id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#log_analytics_workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#name SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#name}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig.property.tenantId">TenantId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#tenant_id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#tenant_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#log_analytics_workspace_id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#log_analytics_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#name SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#name}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig.property.tenantId">TenantId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#tenant_id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#tenant_id}. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts">SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -926,7 +926,7 @@ LogAnalyticsWorkspaceId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#log_analytics_workspace_id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#log_analytics_workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#log_analytics_workspace_id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#log_analytics_workspace_id}.
 
 ---
 
@@ -938,7 +938,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#name SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#name SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#name}.
 
 ---
 
@@ -950,7 +950,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -965,7 +965,7 @@ TenantId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#tenant_id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#tenant_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#tenant_id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#tenant_id}.
 
 ---
 
@@ -979,7 +979,7 @@ Timeouts SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#timeouts SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#timeouts SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#timeouts}
 
 ---
 
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
 
 &sentineldataconnectormicrosoftdefenderadvancedthreatprotection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts {
 	Create: *string,
@@ -1001,9 +1001,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconne
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#create SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#create}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#delete SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#read SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#read}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#create SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#create}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#delete SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#read SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#read}. |
 
 ---
 
@@ -1015,7 +1015,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#create SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#create SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#create}.
 
 ---
 
@@ -1027,7 +1027,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#delete SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#delete SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#delete}.
 
 ---
 
@@ -1039,7 +1039,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#read SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/sentinel_data_connector_microsoft_defender_advanced_threat_protection#read SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#read}.
 
 ---
 
@@ -1050,7 +1050,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection.SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectormicrosoftdefenderadvancedthreatprotection"
 
 sentineldataconnectormicrosoftdefenderadvancedthreatprotection.NewSentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeoutsOutputReference
 ```

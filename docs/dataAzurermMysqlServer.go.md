@@ -4,12 +4,12 @@
 
 ### DataAzurermMysqlServer <a name="DataAzurermMysqlServer" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServer"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/mysql_server azurerm_mysql_server}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/mysql_server azurerm_mysql_server}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 dataazurermmysqlserver.NewDataAzurermMysqlServer(scope Construct, id *string, config DataAzurermMysqlServerConfig) DataAzurermMysqlServer
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 dataazurermmysqlserver.DataAzurermMysqlServer_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 dataazurermmysqlserver.DataAzurermMysqlServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermmysqlserver.DataAzurermMysqlServer_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServer.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 dataazurermmysqlserver.DataAzurermMysqlServer_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermmysqlserver.DataAzurermMysqlServer_IsTerraformDataSource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServer.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 dataazurermmysqlserver.DataAzurermMysqlServer_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermMysqlServer to 
 
 The id of the existing DataAzurermMysqlServer that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/mysql_server#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/mysql_server#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -845,7 +845,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 &dataazurermmysqlserver.DataAzurermMysqlServerConfig {
 	Connection: interface{},
@@ -858,7 +858,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqls
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermMysqlServer.DataAzurermMysqlServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerTimeouts,
 }
 ```
 
@@ -873,9 +873,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqls
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/mysql_server#name DataAzurermMysqlServer#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/mysql_server#resource_group_name DataAzurermMysqlServer#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/mysql_server#id DataAzurermMysqlServer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/mysql_server#name DataAzurermMysqlServer#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/mysql_server#resource_group_name DataAzurermMysqlServer#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/mysql_server#id DataAzurermMysqlServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerTimeouts">DataAzurermMysqlServerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -958,7 +958,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/mysql_server#name DataAzurermMysqlServer#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/mysql_server#name DataAzurermMysqlServer#name}.
 
 ---
 
@@ -970,7 +970,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/mysql_server#resource_group_name DataAzurermMysqlServer#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/mysql_server#resource_group_name DataAzurermMysqlServer#resource_group_name}.
 
 ---
 
@@ -982,7 +982,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/mysql_server#id DataAzurermMysqlServer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/mysql_server#id DataAzurermMysqlServer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -999,7 +999,7 @@ Timeouts DataAzurermMysqlServerTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/mysql_server#timeouts DataAzurermMysqlServer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/mysql_server#timeouts DataAzurermMysqlServer#timeouts}
 
 ---
 
@@ -1008,7 +1008,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 &dataazurermmysqlserver.DataAzurermMysqlServerIdentity {
 
@@ -1021,7 +1021,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqls
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerThreatDetectionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 &dataazurermmysqlserver.DataAzurermMysqlServerThreatDetectionPolicy {
 
@@ -1034,7 +1034,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqls
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 &dataazurermmysqlserver.DataAzurermMysqlServerTimeouts {
 	Read: *string,
@@ -1045,7 +1045,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqls
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/mysql_server#read DataAzurermMysqlServer#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/mysql_server#read DataAzurermMysqlServer#read}. |
 
 ---
 
@@ -1057,7 +1057,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/mysql_server#read DataAzurermMysqlServer#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/mysql_server#read DataAzurermMysqlServer#read}.
 
 ---
 
@@ -1068,7 +1068,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 dataazurermmysqlserver.NewDataAzurermMysqlServerIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMysqlServerIdentityList
 ```
@@ -1217,7 +1217,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 dataazurermmysqlserver.NewDataAzurermMysqlServerIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMysqlServerIdentityOutputReference
 ```
@@ -1517,7 +1517,7 @@ func InternalValue() DataAzurermMysqlServerIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerThreatDetectionPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 dataazurermmysqlserver.NewDataAzurermMysqlServerThreatDetectionPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMysqlServerThreatDetectionPolicyList
 ```
@@ -1666,7 +1666,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerThreatDetectionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 dataazurermmysqlserver.NewDataAzurermMysqlServerThreatDetectionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMysqlServerThreatDetectionPolicyOutputReference
 ```
@@ -2010,7 +2010,7 @@ func InternalValue() DataAzurermMysqlServerThreatDetectionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlServer.DataAzurermMysqlServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermmysqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlserver"
 
 dataazurermmysqlserver.NewDataAzurermMysqlServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMysqlServerTimeoutsOutputReference
 ```

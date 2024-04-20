@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,126 +8,132 @@ import * as cdktf from 'cdktf';
 
 export interface HdinsightSparkClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#cluster_version HdinsightSparkCluster#cluster_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#cluster_version HdinsightSparkCluster#cluster_version}
   */
   readonly clusterVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#encryption_in_transit_enabled HdinsightSparkCluster#encryption_in_transit_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#encryption_in_transit_enabled HdinsightSparkCluster#encryption_in_transit_enabled}
   */
   readonly encryptionInTransitEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#id HdinsightSparkCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#id HdinsightSparkCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#location HdinsightSparkCluster#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#location HdinsightSparkCluster#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#name HdinsightSparkCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#name HdinsightSparkCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#resource_group_name HdinsightSparkCluster#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#resource_group_name HdinsightSparkCluster#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#tags HdinsightSparkCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#tags HdinsightSparkCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#tier HdinsightSparkCluster#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#tier HdinsightSparkCluster#tier}
   */
   readonly tier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#tls_min_version HdinsightSparkCluster#tls_min_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#tls_min_version HdinsightSparkCluster#tls_min_version}
   */
   readonly tlsMinVersion?: string;
   /**
   * component_version block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#component_version HdinsightSparkCluster#component_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#component_version HdinsightSparkCluster#component_version}
   */
   readonly componentVersion: HdinsightSparkClusterComponentVersion;
   /**
   * compute_isolation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#compute_isolation HdinsightSparkCluster#compute_isolation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#compute_isolation HdinsightSparkCluster#compute_isolation}
   */
   readonly computeIsolation?: HdinsightSparkClusterComputeIsolation;
   /**
   * disk_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#disk_encryption HdinsightSparkCluster#disk_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#disk_encryption HdinsightSparkCluster#disk_encryption}
   */
   readonly diskEncryption?: HdinsightSparkClusterDiskEncryption[] | cdktf.IResolvable;
   /**
   * extension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#extension HdinsightSparkCluster#extension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#extension HdinsightSparkCluster#extension}
   */
   readonly extension?: HdinsightSparkClusterExtension;
   /**
   * gateway block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#gateway HdinsightSparkCluster#gateway}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#gateway HdinsightSparkCluster#gateway}
   */
   readonly gateway: HdinsightSparkClusterGateway;
   /**
   * metastores block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#metastores HdinsightSparkCluster#metastores}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#metastores HdinsightSparkCluster#metastores}
   */
   readonly metastores?: HdinsightSparkClusterMetastores;
   /**
   * monitor block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#monitor HdinsightSparkCluster#monitor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#monitor HdinsightSparkCluster#monitor}
   */
   readonly monitor?: HdinsightSparkClusterMonitor;
   /**
   * network block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#network HdinsightSparkCluster#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#network HdinsightSparkCluster#network}
   */
   readonly network?: HdinsightSparkClusterNetwork;
   /**
+  * private_link_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#private_link_configuration HdinsightSparkCluster#private_link_configuration}
+  */
+  readonly privateLinkConfiguration?: HdinsightSparkClusterPrivateLinkConfiguration;
+  /**
   * roles block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#roles HdinsightSparkCluster#roles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#roles HdinsightSparkCluster#roles}
   */
   readonly roles: HdinsightSparkClusterRoles;
   /**
   * security_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#security_profile HdinsightSparkCluster#security_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#security_profile HdinsightSparkCluster#security_profile}
   */
   readonly securityProfile?: HdinsightSparkClusterSecurityProfile;
   /**
   * storage_account block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#storage_account HdinsightSparkCluster#storage_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#storage_account HdinsightSparkCluster#storage_account}
   */
   readonly storageAccount?: HdinsightSparkClusterStorageAccount[] | cdktf.IResolvable;
   /**
   * storage_account_gen2 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#storage_account_gen2 HdinsightSparkCluster#storage_account_gen2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#storage_account_gen2 HdinsightSparkCluster#storage_account_gen2}
   */
   readonly storageAccountGen2?: HdinsightSparkClusterStorageAccountGen2;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#timeouts HdinsightSparkCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#timeouts HdinsightSparkCluster#timeouts}
   */
   readonly timeouts?: HdinsightSparkClusterTimeouts;
 }
 export interface HdinsightSparkClusterComponentVersion {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#spark HdinsightSparkCluster#spark}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#spark HdinsightSparkCluster#spark}
   */
   readonly spark: string;
 }
@@ -213,11 +214,11 @@ export class HdinsightSparkClusterComponentVersionOutputReference extends cdktf.
 }
 export interface HdinsightSparkClusterComputeIsolation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#compute_isolation_enabled HdinsightSparkCluster#compute_isolation_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#compute_isolation_enabled HdinsightSparkCluster#compute_isolation_enabled}
   */
   readonly computeIsolationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#host_sku HdinsightSparkCluster#host_sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#host_sku HdinsightSparkCluster#host_sku}
   */
   readonly hostSku?: string;
 }
@@ -330,19 +331,19 @@ export class HdinsightSparkClusterComputeIsolationOutputReference extends cdktf.
 }
 export interface HdinsightSparkClusterDiskEncryption {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#encryption_algorithm HdinsightSparkCluster#encryption_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#encryption_algorithm HdinsightSparkCluster#encryption_algorithm}
   */
   readonly encryptionAlgorithm?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#encryption_at_host_enabled HdinsightSparkCluster#encryption_at_host_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#encryption_at_host_enabled HdinsightSparkCluster#encryption_at_host_enabled}
   */
   readonly encryptionAtHostEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#key_vault_key_id HdinsightSparkCluster#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#key_vault_key_id HdinsightSparkCluster#key_vault_key_id}
   */
   readonly keyVaultKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#key_vault_managed_identity_id HdinsightSparkCluster#key_vault_managed_identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#key_vault_managed_identity_id HdinsightSparkCluster#key_vault_managed_identity_id}
   */
   readonly keyVaultManagedIdentityId?: string;
 }
@@ -545,11 +546,11 @@ export class HdinsightSparkClusterDiskEncryptionList extends cdktf.ComplexList {
 }
 export interface HdinsightSparkClusterExtension {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#log_analytics_workspace_id HdinsightSparkCluster#log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#log_analytics_workspace_id HdinsightSparkCluster#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#primary_key HdinsightSparkCluster#primary_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#primary_key HdinsightSparkCluster#primary_key}
   */
   readonly primaryKey: string;
 }
@@ -656,11 +657,11 @@ export class HdinsightSparkClusterExtensionOutputReference extends cdktf.Complex
 }
 export interface HdinsightSparkClusterGateway {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
   */
   readonly username: string;
 }
@@ -767,19 +768,19 @@ export class HdinsightSparkClusterGatewayOutputReference extends cdktf.ComplexOb
 }
 export interface HdinsightSparkClusterMetastoresAmbari {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#database_name HdinsightSparkCluster#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#database_name HdinsightSparkCluster#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#server HdinsightSparkCluster#server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#server HdinsightSparkCluster#server}
   */
   readonly server: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
   */
   readonly username: string;
 }
@@ -938,19 +939,19 @@ export class HdinsightSparkClusterMetastoresAmbariOutputReference extends cdktf.
 }
 export interface HdinsightSparkClusterMetastoresHive {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#database_name HdinsightSparkCluster#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#database_name HdinsightSparkCluster#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#server HdinsightSparkCluster#server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#server HdinsightSparkCluster#server}
   */
   readonly server: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
   */
   readonly username: string;
 }
@@ -1109,19 +1110,19 @@ export class HdinsightSparkClusterMetastoresHiveOutputReference extends cdktf.Co
 }
 export interface HdinsightSparkClusterMetastoresOozie {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#database_name HdinsightSparkCluster#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#database_name HdinsightSparkCluster#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#server HdinsightSparkCluster#server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#server HdinsightSparkCluster#server}
   */
   readonly server: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
   */
   readonly username: string;
 }
@@ -1282,19 +1283,19 @@ export interface HdinsightSparkClusterMetastores {
   /**
   * ambari block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#ambari HdinsightSparkCluster#ambari}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#ambari HdinsightSparkCluster#ambari}
   */
   readonly ambari?: HdinsightSparkClusterMetastoresAmbari;
   /**
   * hive block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#hive HdinsightSparkCluster#hive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#hive HdinsightSparkCluster#hive}
   */
   readonly hive?: HdinsightSparkClusterMetastoresHive;
   /**
   * oozie block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#oozie HdinsightSparkCluster#oozie}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#oozie HdinsightSparkCluster#oozie}
   */
   readonly oozie?: HdinsightSparkClusterMetastoresOozie;
 }
@@ -1436,11 +1437,11 @@ export class HdinsightSparkClusterMetastoresOutputReference extends cdktf.Comple
 }
 export interface HdinsightSparkClusterMonitor {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#log_analytics_workspace_id HdinsightSparkCluster#log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#log_analytics_workspace_id HdinsightSparkCluster#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#primary_key HdinsightSparkCluster#primary_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#primary_key HdinsightSparkCluster#primary_key}
   */
   readonly primaryKey: string;
 }
@@ -1547,11 +1548,11 @@ export class HdinsightSparkClusterMonitorOutputReference extends cdktf.ComplexOb
 }
 export interface HdinsightSparkClusterNetwork {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#connection_direction HdinsightSparkCluster#connection_direction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#connection_direction HdinsightSparkCluster#connection_direction}
   */
   readonly connectionDirection?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#private_link_enabled HdinsightSparkCluster#private_link_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#private_link_enabled HdinsightSparkCluster#private_link_enabled}
   */
   readonly privateLinkEnabled?: boolean | cdktf.IResolvable;
 }
@@ -1662,17 +1663,373 @@ export class HdinsightSparkClusterNetworkOutputReference extends cdktf.ComplexOb
     return this._privateLinkEnabled;
   }
 }
-export interface HdinsightSparkClusterRolesHeadNodeScriptActions {
+export interface HdinsightSparkClusterPrivateLinkConfigurationIpConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#name HdinsightSparkCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#name HdinsightSparkCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#parameters HdinsightSparkCluster#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#primary HdinsightSparkCluster#primary}
+  */
+  readonly primary?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#private_ip_address HdinsightSparkCluster#private_ip_address}
+  */
+  readonly privateIpAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#private_ip_allocation_method HdinsightSparkCluster#private_ip_allocation_method}
+  */
+  readonly privateIpAllocationMethod?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#subnet_id HdinsightSparkCluster#subnet_id}
+  */
+  readonly subnetId?: string;
+}
+
+export function hdinsightSparkClusterPrivateLinkConfigurationIpConfigurationToTerraform(struct?: HdinsightSparkClusterPrivateLinkConfigurationIpConfigurationOutputReference | HdinsightSparkClusterPrivateLinkConfigurationIpConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    primary: cdktf.booleanToTerraform(struct!.primary),
+    private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
+    private_ip_allocation_method: cdktf.stringToTerraform(struct!.privateIpAllocationMethod),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
+
+export function hdinsightSparkClusterPrivateLinkConfigurationIpConfigurationToHclTerraform(struct?: HdinsightSparkClusterPrivateLinkConfigurationIpConfigurationOutputReference | HdinsightSparkClusterPrivateLinkConfigurationIpConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    primary: {
+      value: cdktf.booleanToHclTerraform(struct!.primary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    private_ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.privateIpAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_ip_allocation_method: {
+      value: cdktf.stringToHclTerraform(struct!.privateIpAllocationMethod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class HdinsightSparkClusterPrivateLinkConfigurationIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): HdinsightSparkClusterPrivateLinkConfigurationIpConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._primary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primary = this._primary;
+    }
+    if (this._privateIpAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateIpAddress = this._privateIpAddress;
+    }
+    if (this._privateIpAllocationMethod !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateIpAllocationMethod = this._privateIpAllocationMethod;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightSparkClusterPrivateLinkConfigurationIpConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+      this._primary = undefined;
+      this._privateIpAddress = undefined;
+      this._privateIpAllocationMethod = undefined;
+      this._subnetId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+      this._primary = value.primary;
+      this._privateIpAddress = value.privateIpAddress;
+      this._privateIpAllocationMethod = value.privateIpAllocationMethod;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // primary - computed: false, optional: true, required: false
+  private _primary?: boolean | cdktf.IResolvable; 
+  public get primary() {
+    return this.getBooleanAttribute('primary');
+  }
+  public set primary(value: boolean | cdktf.IResolvable) {
+    this._primary = value;
+  }
+  public resetPrimary() {
+    this._primary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryInput() {
+    return this._primary;
+  }
+
+  // private_ip_address - computed: false, optional: true, required: false
+  private _privateIpAddress?: string; 
+  public get privateIpAddress() {
+    return this.getStringAttribute('private_ip_address');
+  }
+  public set privateIpAddress(value: string) {
+    this._privateIpAddress = value;
+  }
+  public resetPrivateIpAddress() {
+    this._privateIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressInput() {
+    return this._privateIpAddress;
+  }
+
+  // private_ip_allocation_method - computed: false, optional: true, required: false
+  private _privateIpAllocationMethod?: string; 
+  public get privateIpAllocationMethod() {
+    return this.getStringAttribute('private_ip_allocation_method');
+  }
+  public set privateIpAllocationMethod(value: string) {
+    this._privateIpAllocationMethod = value;
+  }
+  public resetPrivateIpAllocationMethod() {
+    this._privateIpAllocationMethod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAllocationMethodInput() {
+    return this._privateIpAllocationMethod;
+  }
+
+  // subnet_id - computed: false, optional: true, required: false
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+export interface HdinsightSparkClusterPrivateLinkConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#group_id HdinsightSparkCluster#group_id}
+  */
+  readonly groupId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#name HdinsightSparkCluster#name}
+  */
+  readonly name: string;
+  /**
+  * ip_configuration block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#ip_configuration HdinsightSparkCluster#ip_configuration}
+  */
+  readonly ipConfiguration: HdinsightSparkClusterPrivateLinkConfigurationIpConfiguration;
+}
+
+export function hdinsightSparkClusterPrivateLinkConfigurationToTerraform(struct?: HdinsightSparkClusterPrivateLinkConfigurationOutputReference | HdinsightSparkClusterPrivateLinkConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    group_id: cdktf.stringToTerraform(struct!.groupId),
+    name: cdktf.stringToTerraform(struct!.name),
+    ip_configuration: hdinsightSparkClusterPrivateLinkConfigurationIpConfigurationToTerraform(struct!.ipConfiguration),
+  }
+}
+
+
+export function hdinsightSparkClusterPrivateLinkConfigurationToHclTerraform(struct?: HdinsightSparkClusterPrivateLinkConfigurationOutputReference | HdinsightSparkClusterPrivateLinkConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    group_id: {
+      value: cdktf.stringToHclTerraform(struct!.groupId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ip_configuration: {
+      value: hdinsightSparkClusterPrivateLinkConfigurationIpConfigurationToHclTerraform(struct!.ipConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HdinsightSparkClusterPrivateLinkConfigurationIpConfigurationList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class HdinsightSparkClusterPrivateLinkConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): HdinsightSparkClusterPrivateLinkConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._groupId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.groupId = this._groupId;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._ipConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipConfiguration = this._ipConfiguration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightSparkClusterPrivateLinkConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._groupId = undefined;
+      this._name = undefined;
+      this._ipConfiguration.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._groupId = value.groupId;
+      this._name = value.name;
+      this._ipConfiguration.internalValue = value.ipConfiguration;
+    }
+  }
+
+  // group_id - computed: false, optional: false, required: true
+  private _groupId?: string; 
+  public get groupId() {
+    return this.getStringAttribute('group_id');
+  }
+  public set groupId(value: string) {
+    this._groupId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupIdInput() {
+    return this._groupId;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // ip_configuration - computed: false, optional: false, required: true
+  private _ipConfiguration = new HdinsightSparkClusterPrivateLinkConfigurationIpConfigurationOutputReference(this, "ip_configuration");
+  public get ipConfiguration() {
+    return this._ipConfiguration;
+  }
+  public putIpConfiguration(value: HdinsightSparkClusterPrivateLinkConfigurationIpConfiguration) {
+    this._ipConfiguration.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipConfigurationInput() {
+    return this._ipConfiguration.internalValue;
+  }
+}
+export interface HdinsightSparkClusterRolesHeadNodeScriptActions {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#name HdinsightSparkCluster#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#parameters HdinsightSparkCluster#parameters}
   */
   readonly parameters?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#uri HdinsightSparkCluster#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#uri HdinsightSparkCluster#uri}
   */
   readonly uri: string;
 }
@@ -1840,33 +2197,33 @@ export class HdinsightSparkClusterRolesHeadNodeScriptActionsList extends cdktf.C
 }
 export interface HdinsightSparkClusterRolesHeadNode {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
   */
   readonly password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#ssh_keys HdinsightSparkCluster#ssh_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#ssh_keys HdinsightSparkCluster#ssh_keys}
   */
   readonly sshKeys?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#subnet_id HdinsightSparkCluster#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#subnet_id HdinsightSparkCluster#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
   */
   readonly username: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#virtual_network_id HdinsightSparkCluster#virtual_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#virtual_network_id HdinsightSparkCluster#virtual_network_id}
   */
   readonly virtualNetworkId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#vm_size HdinsightSparkCluster#vm_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#vm_size HdinsightSparkCluster#vm_size}
   */
   readonly vmSize: string;
   /**
   * script_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#script_actions HdinsightSparkCluster#script_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#script_actions HdinsightSparkCluster#script_actions}
   */
   readonly scriptActions?: HdinsightSparkClusterRolesHeadNodeScriptActions[] | cdktf.IResolvable;
 }
@@ -2118,11 +2475,11 @@ export class HdinsightSparkClusterRolesHeadNodeOutputReference extends cdktf.Com
 }
 export interface HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#max_instance_count HdinsightSparkCluster#max_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#max_instance_count HdinsightSparkCluster#max_instance_count}
   */
   readonly maxInstanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#min_instance_count HdinsightSparkCluster#min_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#min_instance_count HdinsightSparkCluster#min_instance_count}
   */
   readonly minInstanceCount: number;
 }
@@ -2229,15 +2586,15 @@ export class HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacityOutputReferenc
 }
 export interface HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#days HdinsightSparkCluster#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#days HdinsightSparkCluster#days}
   */
   readonly days: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#target_instance_count HdinsightSparkCluster#target_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#target_instance_count HdinsightSparkCluster#target_instance_count}
   */
   readonly targetInstanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#time HdinsightSparkCluster#time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#time HdinsightSparkCluster#time}
   */
   readonly time: string;
 }
@@ -2402,13 +2759,13 @@ export class HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceScheduleList
 }
 export interface HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrence {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#timezone HdinsightSparkCluster#timezone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#timezone HdinsightSparkCluster#timezone}
   */
   readonly timezone: string;
   /**
   * schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#schedule HdinsightSparkCluster#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#schedule HdinsightSparkCluster#schedule}
   */
   readonly schedule: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[] | cdktf.IResolvable;
 }
@@ -2517,13 +2874,13 @@ export interface HdinsightSparkClusterRolesWorkerNodeAutoscale {
   /**
   * capacity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#capacity HdinsightSparkCluster#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#capacity HdinsightSparkCluster#capacity}
   */
   readonly capacity?: HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacity;
   /**
   * recurrence block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#recurrence HdinsightSparkCluster#recurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#recurrence HdinsightSparkCluster#recurrence}
   */
   readonly recurrence?: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrence;
 }
@@ -2636,15 +2993,15 @@ export class HdinsightSparkClusterRolesWorkerNodeAutoscaleOutputReference extend
 }
 export interface HdinsightSparkClusterRolesWorkerNodeScriptActions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#name HdinsightSparkCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#name HdinsightSparkCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#parameters HdinsightSparkCluster#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#parameters HdinsightSparkCluster#parameters}
   */
   readonly parameters?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#uri HdinsightSparkCluster#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#uri HdinsightSparkCluster#uri}
   */
   readonly uri: string;
 }
@@ -2812,43 +3169,43 @@ export class HdinsightSparkClusterRolesWorkerNodeScriptActionsList extends cdktf
 }
 export interface HdinsightSparkClusterRolesWorkerNode {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
   */
   readonly password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#ssh_keys HdinsightSparkCluster#ssh_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#ssh_keys HdinsightSparkCluster#ssh_keys}
   */
   readonly sshKeys?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#subnet_id HdinsightSparkCluster#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#subnet_id HdinsightSparkCluster#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#target_instance_count HdinsightSparkCluster#target_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#target_instance_count HdinsightSparkCluster#target_instance_count}
   */
   readonly targetInstanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
   */
   readonly username: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#virtual_network_id HdinsightSparkCluster#virtual_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#virtual_network_id HdinsightSparkCluster#virtual_network_id}
   */
   readonly virtualNetworkId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#vm_size HdinsightSparkCluster#vm_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#vm_size HdinsightSparkCluster#vm_size}
   */
   readonly vmSize: string;
   /**
   * autoscale block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#autoscale HdinsightSparkCluster#autoscale}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#autoscale HdinsightSparkCluster#autoscale}
   */
   readonly autoscale?: HdinsightSparkClusterRolesWorkerNodeAutoscale;
   /**
   * script_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#script_actions HdinsightSparkCluster#script_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#script_actions HdinsightSparkCluster#script_actions}
   */
   readonly scriptActions?: HdinsightSparkClusterRolesWorkerNodeScriptActions[] | cdktf.IResolvable;
 }
@@ -3155,15 +3512,15 @@ export class HdinsightSparkClusterRolesWorkerNodeOutputReference extends cdktf.C
 }
 export interface HdinsightSparkClusterRolesZookeeperNodeScriptActions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#name HdinsightSparkCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#name HdinsightSparkCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#parameters HdinsightSparkCluster#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#parameters HdinsightSparkCluster#parameters}
   */
   readonly parameters?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#uri HdinsightSparkCluster#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#uri HdinsightSparkCluster#uri}
   */
   readonly uri: string;
 }
@@ -3331,33 +3688,33 @@ export class HdinsightSparkClusterRolesZookeeperNodeScriptActionsList extends cd
 }
 export interface HdinsightSparkClusterRolesZookeeperNode {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#password HdinsightSparkCluster#password}
   */
   readonly password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#ssh_keys HdinsightSparkCluster#ssh_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#ssh_keys HdinsightSparkCluster#ssh_keys}
   */
   readonly sshKeys?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#subnet_id HdinsightSparkCluster#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#subnet_id HdinsightSparkCluster#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#username HdinsightSparkCluster#username}
   */
   readonly username: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#virtual_network_id HdinsightSparkCluster#virtual_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#virtual_network_id HdinsightSparkCluster#virtual_network_id}
   */
   readonly virtualNetworkId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#vm_size HdinsightSparkCluster#vm_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#vm_size HdinsightSparkCluster#vm_size}
   */
   readonly vmSize: string;
   /**
   * script_actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#script_actions HdinsightSparkCluster#script_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#script_actions HdinsightSparkCluster#script_actions}
   */
   readonly scriptActions?: HdinsightSparkClusterRolesZookeeperNodeScriptActions[] | cdktf.IResolvable;
 }
@@ -3611,19 +3968,19 @@ export interface HdinsightSparkClusterRoles {
   /**
   * head_node block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#head_node HdinsightSparkCluster#head_node}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#head_node HdinsightSparkCluster#head_node}
   */
   readonly headNode: HdinsightSparkClusterRolesHeadNode;
   /**
   * worker_node block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#worker_node HdinsightSparkCluster#worker_node}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#worker_node HdinsightSparkCluster#worker_node}
   */
   readonly workerNode: HdinsightSparkClusterRolesWorkerNode;
   /**
   * zookeeper_node block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#zookeeper_node HdinsightSparkCluster#zookeeper_node}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#zookeeper_node HdinsightSparkCluster#zookeeper_node}
   */
   readonly zookeeperNode: HdinsightSparkClusterRolesZookeeperNode;
 }
@@ -3756,31 +4113,31 @@ export class HdinsightSparkClusterRolesOutputReference extends cdktf.ComplexObje
 }
 export interface HdinsightSparkClusterSecurityProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#aadds_resource_id HdinsightSparkCluster#aadds_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#aadds_resource_id HdinsightSparkCluster#aadds_resource_id}
   */
   readonly aaddsResourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#cluster_users_group_dns HdinsightSparkCluster#cluster_users_group_dns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#cluster_users_group_dns HdinsightSparkCluster#cluster_users_group_dns}
   */
   readonly clusterUsersGroupDns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#domain_name HdinsightSparkCluster#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#domain_name HdinsightSparkCluster#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#domain_user_password HdinsightSparkCluster#domain_user_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#domain_user_password HdinsightSparkCluster#domain_user_password}
   */
   readonly domainUserPassword: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#domain_username HdinsightSparkCluster#domain_username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#domain_username HdinsightSparkCluster#domain_username}
   */
   readonly domainUsername: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#ldaps_urls HdinsightSparkCluster#ldaps_urls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#ldaps_urls HdinsightSparkCluster#ldaps_urls}
   */
   readonly ldapsUrls: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#msi_resource_id HdinsightSparkCluster#msi_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#msi_resource_id HdinsightSparkCluster#msi_resource_id}
   */
   readonly msiResourceId: string;
 }
@@ -4020,19 +4377,19 @@ export class HdinsightSparkClusterSecurityProfileOutputReference extends cdktf.C
 }
 export interface HdinsightSparkClusterStorageAccount {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#is_default HdinsightSparkCluster#is_default}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#is_default HdinsightSparkCluster#is_default}
   */
   readonly isDefault: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#storage_account_key HdinsightSparkCluster#storage_account_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#storage_account_key HdinsightSparkCluster#storage_account_key}
   */
   readonly storageAccountKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#storage_container_id HdinsightSparkCluster#storage_container_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#storage_container_id HdinsightSparkCluster#storage_container_id}
   */
   readonly storageContainerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#storage_resource_id HdinsightSparkCluster#storage_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#storage_resource_id HdinsightSparkCluster#storage_resource_id}
   */
   readonly storageResourceId?: string;
 }
@@ -4226,19 +4583,19 @@ export class HdinsightSparkClusterStorageAccountList extends cdktf.ComplexList {
 }
 export interface HdinsightSparkClusterStorageAccountGen2 {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#filesystem_id HdinsightSparkCluster#filesystem_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#filesystem_id HdinsightSparkCluster#filesystem_id}
   */
   readonly filesystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#is_default HdinsightSparkCluster#is_default}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#is_default HdinsightSparkCluster#is_default}
   */
   readonly isDefault: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#managed_identity_resource_id HdinsightSparkCluster#managed_identity_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#managed_identity_resource_id HdinsightSparkCluster#managed_identity_resource_id}
   */
   readonly managedIdentityResourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#storage_resource_id HdinsightSparkCluster#storage_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#storage_resource_id HdinsightSparkCluster#storage_resource_id}
   */
   readonly storageResourceId: string;
 }
@@ -4397,19 +4754,19 @@ export class HdinsightSparkClusterStorageAccountGen2OutputReference extends cdkt
 }
 export interface HdinsightSparkClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#create HdinsightSparkCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#create HdinsightSparkCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#delete HdinsightSparkCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#delete HdinsightSparkCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#read HdinsightSparkCluster#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#read HdinsightSparkCluster#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#update HdinsightSparkCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#update HdinsightSparkCluster#update}
   */
   readonly update?: string;
 }
@@ -4590,7 +4947,7 @@ export class HdinsightSparkClusterTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster azurerm_hdinsight_spark_cluster}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster azurerm_hdinsight_spark_cluster}
 */
 export class HdinsightSparkCluster extends cdktf.TerraformResource {
 
@@ -4606,7 +4963,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a HdinsightSparkCluster resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the HdinsightSparkCluster to import
-  * @param importFromId The id of the existing HdinsightSparkCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing HdinsightSparkCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the HdinsightSparkCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -4618,7 +4975,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/hdinsight_spark_cluster azurerm_hdinsight_spark_cluster} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/hdinsight_spark_cluster azurerm_hdinsight_spark_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -4629,7 +4986,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_spark_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.99.0',
+        providerVersion: '3.100.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -4657,6 +5014,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
     this._metastores.internalValue = config.metastores;
     this._monitor.internalValue = config.monitor;
     this._network.internalValue = config.network;
+    this._privateLinkConfiguration.internalValue = config.privateLinkConfiguration;
     this._roles.internalValue = config.roles;
     this._securityProfile.internalValue = config.securityProfile;
     this._storageAccount.internalValue = config.storageAccount;
@@ -4929,6 +5287,22 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
     return this._network.internalValue;
   }
 
+  // private_link_configuration - computed: false, optional: true, required: false
+  private _privateLinkConfiguration = new HdinsightSparkClusterPrivateLinkConfigurationOutputReference(this, "private_link_configuration");
+  public get privateLinkConfiguration() {
+    return this._privateLinkConfiguration;
+  }
+  public putPrivateLinkConfiguration(value: HdinsightSparkClusterPrivateLinkConfiguration) {
+    this._privateLinkConfiguration.internalValue = value;
+  }
+  public resetPrivateLinkConfiguration() {
+    this._privateLinkConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateLinkConfigurationInput() {
+    return this._privateLinkConfiguration.internalValue;
+  }
+
   // roles - computed: false, optional: false, required: true
   private _roles = new HdinsightSparkClusterRolesOutputReference(this, "roles");
   public get roles() {
@@ -5029,6 +5403,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
       metastores: hdinsightSparkClusterMetastoresToTerraform(this._metastores.internalValue),
       monitor: hdinsightSparkClusterMonitorToTerraform(this._monitor.internalValue),
       network: hdinsightSparkClusterNetworkToTerraform(this._network.internalValue),
+      private_link_configuration: hdinsightSparkClusterPrivateLinkConfigurationToTerraform(this._privateLinkConfiguration.internalValue),
       roles: hdinsightSparkClusterRolesToTerraform(this._roles.internalValue),
       security_profile: hdinsightSparkClusterSecurityProfileToTerraform(this._securityProfile.internalValue),
       storage_account: cdktf.listMapper(hdinsightSparkClusterStorageAccountToTerraform, true)(this._storageAccount.internalValue),
@@ -5140,6 +5515,12 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "HdinsightSparkClusterNetworkList",
+      },
+      private_link_configuration: {
+        value: hdinsightSparkClusterPrivateLinkConfigurationToHclTerraform(this._privateLinkConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HdinsightSparkClusterPrivateLinkConfigurationList",
       },
       roles: {
         value: hdinsightSparkClusterRolesToHclTerraform(this._roles.internalValue),
