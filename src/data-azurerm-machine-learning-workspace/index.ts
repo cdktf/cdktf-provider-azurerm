@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/machine_learning_workspace
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/machine_learning_workspace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMachineLearningWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/machine_learning_workspace#id DataAzurermMachineLearningWorkspace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/machine_learning_workspace#id DataAzurermMachineLearningWorkspace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/machine_learning_workspace#name DataAzurermMachineLearningWorkspace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/machine_learning_workspace#name DataAzurermMachineLearningWorkspace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/machine_learning_workspace#resource_group_name DataAzurermMachineLearningWorkspace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/machine_learning_workspace#resource_group_name DataAzurermMachineLearningWorkspace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/machine_learning_workspace#timeouts DataAzurermMachineLearningWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/machine_learning_workspace#timeouts DataAzurermMachineLearningWorkspace#timeouts}
   */
   readonly timeouts?: DataAzurermMachineLearningWorkspaceTimeouts;
 }
@@ -126,7 +126,7 @@ export class DataAzurermMachineLearningWorkspaceIdentityList extends cdktf.Compl
 }
 export interface DataAzurermMachineLearningWorkspaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/machine_learning_workspace#read DataAzurermMachineLearningWorkspace#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/machine_learning_workspace#read DataAzurermMachineLearningWorkspace#read}
   */
   readonly read?: string;
 }
@@ -220,7 +220,7 @@ export class DataAzurermMachineLearningWorkspaceTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/machine_learning_workspace azurerm_machine_learning_workspace}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/machine_learning_workspace azurerm_machine_learning_workspace}
 */
 export class DataAzurermMachineLearningWorkspace extends cdktf.TerraformDataSource {
 
@@ -236,7 +236,7 @@ export class DataAzurermMachineLearningWorkspace extends cdktf.TerraformDataSour
   * Generates CDKTF code for importing a DataAzurermMachineLearningWorkspace resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermMachineLearningWorkspace to import
-  * @param importFromId The id of the existing DataAzurermMachineLearningWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/machine_learning_workspace#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermMachineLearningWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/machine_learning_workspace#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermMachineLearningWorkspace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -248,7 +248,7 @@ export class DataAzurermMachineLearningWorkspace extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/machine_learning_workspace azurerm_machine_learning_workspace} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/machine_learning_workspace azurerm_machine_learning_workspace} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -259,7 +259,7 @@ export class DataAzurermMachineLearningWorkspace extends cdktf.TerraformDataSour
       terraformResourceType: 'azurerm_machine_learning_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.99.0',
+        providerVersion: '3.100.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

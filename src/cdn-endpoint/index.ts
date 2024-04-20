@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,106 +13,106 @@ import * as cdktf from 'cdktf';
 
 export interface CdnEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#content_types_to_compress CdnEndpoint#content_types_to_compress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#content_types_to_compress CdnEndpoint#content_types_to_compress}
   */
   readonly contentTypesToCompress?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#id CdnEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#id CdnEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#is_compression_enabled CdnEndpoint#is_compression_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#is_compression_enabled CdnEndpoint#is_compression_enabled}
   */
   readonly isCompressionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#is_http_allowed CdnEndpoint#is_http_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#is_http_allowed CdnEndpoint#is_http_allowed}
   */
   readonly isHttpAllowed?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#is_https_allowed CdnEndpoint#is_https_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#is_https_allowed CdnEndpoint#is_https_allowed}
   */
   readonly isHttpsAllowed?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#location CdnEndpoint#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#location CdnEndpoint#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#optimization_type CdnEndpoint#optimization_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#optimization_type CdnEndpoint#optimization_type}
   */
   readonly optimizationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#origin_host_header CdnEndpoint#origin_host_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#origin_host_header CdnEndpoint#origin_host_header}
   */
   readonly originHostHeader?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#origin_path CdnEndpoint#origin_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#origin_path CdnEndpoint#origin_path}
   */
   readonly originPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#probe_path CdnEndpoint#probe_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#probe_path CdnEndpoint#probe_path}
   */
   readonly probePath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#profile_name CdnEndpoint#profile_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#profile_name CdnEndpoint#profile_name}
   */
   readonly profileName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#querystring_caching_behaviour CdnEndpoint#querystring_caching_behaviour}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#querystring_caching_behaviour CdnEndpoint#querystring_caching_behaviour}
   */
   readonly querystringCachingBehaviour?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#resource_group_name CdnEndpoint#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#resource_group_name CdnEndpoint#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#tags CdnEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#tags CdnEndpoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * delivery_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#delivery_rule CdnEndpoint#delivery_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#delivery_rule CdnEndpoint#delivery_rule}
   */
   readonly deliveryRule?: CdnEndpointDeliveryRule[] | cdktf.IResolvable;
   /**
   * geo_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#geo_filter CdnEndpoint#geo_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#geo_filter CdnEndpoint#geo_filter}
   */
   readonly geoFilter?: CdnEndpointGeoFilter[] | cdktf.IResolvable;
   /**
   * global_delivery_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#global_delivery_rule CdnEndpoint#global_delivery_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#global_delivery_rule CdnEndpoint#global_delivery_rule}
   */
   readonly globalDeliveryRule?: CdnEndpointGlobalDeliveryRule;
   /**
   * origin block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#origin CdnEndpoint#origin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#origin CdnEndpoint#origin}
   */
   readonly origin: CdnEndpointOrigin[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#timeouts CdnEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#timeouts CdnEndpoint#timeouts}
   */
   readonly timeouts?: CdnEndpointTimeouts;
 }
 export interface CdnEndpointDeliveryRuleCacheExpirationAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}
   */
   readonly behavior: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#duration CdnEndpoint#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#duration CdnEndpoint#duration}
   */
   readonly duration?: string;
 }
@@ -222,11 +222,11 @@ export class CdnEndpointDeliveryRuleCacheExpirationActionOutputReference extends
 }
 export interface CdnEndpointDeliveryRuleCacheKeyQueryStringAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}
   */
   readonly behavior: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#parameters CdnEndpoint#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#parameters CdnEndpoint#parameters}
   */
   readonly parameters?: string;
 }
@@ -336,23 +336,23 @@ export class CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference ext
 }
 export interface CdnEndpointDeliveryRuleCookiesCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}
   */
   readonly selector: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
   */
   readonly transforms?: string[];
 }
@@ -578,15 +578,15 @@ export class CdnEndpointDeliveryRuleCookiesConditionList extends cdktf.ComplexLi
 }
 export interface CdnEndpointDeliveryRuleDeviceCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator?: string;
 }
@@ -725,15 +725,15 @@ export class CdnEndpointDeliveryRuleDeviceConditionOutputReference extends cdktf
 }
 export interface CdnEndpointDeliveryRuleHttpVersionCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator?: string;
 }
@@ -904,15 +904,15 @@ export class CdnEndpointDeliveryRuleHttpVersionConditionList extends cdktf.Compl
 }
 export interface CdnEndpointDeliveryRuleModifyRequestHeaderAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}
   */
   readonly value?: string;
 }
@@ -1080,15 +1080,15 @@ export class CdnEndpointDeliveryRuleModifyRequestHeaderActionList extends cdktf.
 }
 export interface CdnEndpointDeliveryRuleModifyResponseHeaderAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}
   */
   readonly value?: string;
 }
@@ -1256,23 +1256,23 @@ export class CdnEndpointDeliveryRuleModifyResponseHeaderActionList extends cdktf
 }
 export interface CdnEndpointDeliveryRulePostArgCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}
   */
   readonly selector: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
   */
   readonly transforms?: string[];
 }
@@ -1498,19 +1498,19 @@ export class CdnEndpointDeliveryRulePostArgConditionList extends cdktf.ComplexLi
 }
 export interface CdnEndpointDeliveryRuleQueryStringCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
   */
   readonly transforms?: string[];
 }
@@ -1710,15 +1710,15 @@ export class CdnEndpointDeliveryRuleQueryStringConditionList extends cdktf.Compl
 }
 export interface CdnEndpointDeliveryRuleRemoteAddressCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator: string;
 }
@@ -1889,19 +1889,19 @@ export class CdnEndpointDeliveryRuleRemoteAddressConditionList extends cdktf.Com
 }
 export interface CdnEndpointDeliveryRuleRequestBodyCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
   */
   readonly transforms?: string[];
 }
@@ -2101,23 +2101,23 @@ export class CdnEndpointDeliveryRuleRequestBodyConditionList extends cdktf.Compl
 }
 export interface CdnEndpointDeliveryRuleRequestHeaderCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}
   */
   readonly selector: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
   */
   readonly transforms?: string[];
 }
@@ -2343,15 +2343,15 @@ export class CdnEndpointDeliveryRuleRequestHeaderConditionList extends cdktf.Com
 }
 export interface CdnEndpointDeliveryRuleRequestMethodCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator?: string;
 }
@@ -2490,15 +2490,15 @@ export class CdnEndpointDeliveryRuleRequestMethodConditionOutputReference extend
 }
 export interface CdnEndpointDeliveryRuleRequestSchemeCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator?: string;
 }
@@ -2637,19 +2637,19 @@ export class CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference extend
 }
 export interface CdnEndpointDeliveryRuleRequestUriCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
   */
   readonly transforms?: string[];
 }
@@ -2849,19 +2849,19 @@ export class CdnEndpointDeliveryRuleRequestUriConditionList extends cdktf.Comple
 }
 export interface CdnEndpointDeliveryRuleUrlFileExtensionCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
   */
   readonly transforms?: string[];
 }
@@ -3061,19 +3061,19 @@ export class CdnEndpointDeliveryRuleUrlFileExtensionConditionList extends cdktf.
 }
 export interface CdnEndpointDeliveryRuleUrlFileNameCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
   */
   readonly transforms?: string[];
 }
@@ -3273,19 +3273,19 @@ export class CdnEndpointDeliveryRuleUrlFileNameConditionList extends cdktf.Compl
 }
 export interface CdnEndpointDeliveryRuleUrlPathCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}
   */
   readonly matchValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}
   */
   readonly transforms?: string[];
 }
@@ -3485,27 +3485,27 @@ export class CdnEndpointDeliveryRuleUrlPathConditionList extends cdktf.ComplexLi
 }
 export interface CdnEndpointDeliveryRuleUrlRedirectAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#fragment CdnEndpoint#fragment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#fragment CdnEndpoint#fragment}
   */
   readonly fragment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#hostname CdnEndpoint#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#hostname CdnEndpoint#hostname}
   */
   readonly hostname?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#path CdnEndpoint#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#path CdnEndpoint#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#protocol CdnEndpoint#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#protocol CdnEndpoint#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#query_string CdnEndpoint#query_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#query_string CdnEndpoint#query_string}
   */
   readonly queryString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#redirect_type CdnEndpoint#redirect_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#redirect_type CdnEndpoint#redirect_type}
   */
   readonly redirectType: string;
 }
@@ -3731,15 +3731,15 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
 }
 export interface CdnEndpointDeliveryRuleUrlRewriteAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#destination CdnEndpoint#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#destination CdnEndpoint#destination}
   */
   readonly destination: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}
   */
   readonly preserveUnmatchedPath?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#source_pattern CdnEndpoint#source_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#source_pattern CdnEndpoint#source_pattern}
   */
   readonly sourcePattern: string;
 }
@@ -3875,131 +3875,131 @@ export class CdnEndpointDeliveryRuleUrlRewriteActionOutputReference extends cdkt
 }
 export interface CdnEndpointDeliveryRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#order CdnEndpoint#order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#order CdnEndpoint#order}
   */
   readonly order: number;
   /**
   * cache_expiration_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#cache_expiration_action CdnEndpoint#cache_expiration_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#cache_expiration_action CdnEndpoint#cache_expiration_action}
   */
   readonly cacheExpirationAction?: CdnEndpointDeliveryRuleCacheExpirationAction;
   /**
   * cache_key_query_string_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#cache_key_query_string_action CdnEndpoint#cache_key_query_string_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#cache_key_query_string_action CdnEndpoint#cache_key_query_string_action}
   */
   readonly cacheKeyQueryStringAction?: CdnEndpointDeliveryRuleCacheKeyQueryStringAction;
   /**
   * cookies_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#cookies_condition CdnEndpoint#cookies_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#cookies_condition CdnEndpoint#cookies_condition}
   */
   readonly cookiesCondition?: CdnEndpointDeliveryRuleCookiesCondition[] | cdktf.IResolvable;
   /**
   * device_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#device_condition CdnEndpoint#device_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#device_condition CdnEndpoint#device_condition}
   */
   readonly deviceCondition?: CdnEndpointDeliveryRuleDeviceCondition;
   /**
   * http_version_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#http_version_condition CdnEndpoint#http_version_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#http_version_condition CdnEndpoint#http_version_condition}
   */
   readonly httpVersionCondition?: CdnEndpointDeliveryRuleHttpVersionCondition[] | cdktf.IResolvable;
   /**
   * modify_request_header_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#modify_request_header_action CdnEndpoint#modify_request_header_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#modify_request_header_action CdnEndpoint#modify_request_header_action}
   */
   readonly modifyRequestHeaderAction?: CdnEndpointDeliveryRuleModifyRequestHeaderAction[] | cdktf.IResolvable;
   /**
   * modify_response_header_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#modify_response_header_action CdnEndpoint#modify_response_header_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#modify_response_header_action CdnEndpoint#modify_response_header_action}
   */
   readonly modifyResponseHeaderAction?: CdnEndpointDeliveryRuleModifyResponseHeaderAction[] | cdktf.IResolvable;
   /**
   * post_arg_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#post_arg_condition CdnEndpoint#post_arg_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#post_arg_condition CdnEndpoint#post_arg_condition}
   */
   readonly postArgCondition?: CdnEndpointDeliveryRulePostArgCondition[] | cdktf.IResolvable;
   /**
   * query_string_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#query_string_condition CdnEndpoint#query_string_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#query_string_condition CdnEndpoint#query_string_condition}
   */
   readonly queryStringCondition?: CdnEndpointDeliveryRuleQueryStringCondition[] | cdktf.IResolvable;
   /**
   * remote_address_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#remote_address_condition CdnEndpoint#remote_address_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#remote_address_condition CdnEndpoint#remote_address_condition}
   */
   readonly remoteAddressCondition?: CdnEndpointDeliveryRuleRemoteAddressCondition[] | cdktf.IResolvable;
   /**
   * request_body_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#request_body_condition CdnEndpoint#request_body_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#request_body_condition CdnEndpoint#request_body_condition}
   */
   readonly requestBodyCondition?: CdnEndpointDeliveryRuleRequestBodyCondition[] | cdktf.IResolvable;
   /**
   * request_header_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#request_header_condition CdnEndpoint#request_header_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#request_header_condition CdnEndpoint#request_header_condition}
   */
   readonly requestHeaderCondition?: CdnEndpointDeliveryRuleRequestHeaderCondition[] | cdktf.IResolvable;
   /**
   * request_method_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#request_method_condition CdnEndpoint#request_method_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#request_method_condition CdnEndpoint#request_method_condition}
   */
   readonly requestMethodCondition?: CdnEndpointDeliveryRuleRequestMethodCondition;
   /**
   * request_scheme_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#request_scheme_condition CdnEndpoint#request_scheme_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#request_scheme_condition CdnEndpoint#request_scheme_condition}
   */
   readonly requestSchemeCondition?: CdnEndpointDeliveryRuleRequestSchemeCondition;
   /**
   * request_uri_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#request_uri_condition CdnEndpoint#request_uri_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#request_uri_condition CdnEndpoint#request_uri_condition}
   */
   readonly requestUriCondition?: CdnEndpointDeliveryRuleRequestUriCondition[] | cdktf.IResolvable;
   /**
   * url_file_extension_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#url_file_extension_condition CdnEndpoint#url_file_extension_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#url_file_extension_condition CdnEndpoint#url_file_extension_condition}
   */
   readonly urlFileExtensionCondition?: CdnEndpointDeliveryRuleUrlFileExtensionCondition[] | cdktf.IResolvable;
   /**
   * url_file_name_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#url_file_name_condition CdnEndpoint#url_file_name_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#url_file_name_condition CdnEndpoint#url_file_name_condition}
   */
   readonly urlFileNameCondition?: CdnEndpointDeliveryRuleUrlFileNameCondition[] | cdktf.IResolvable;
   /**
   * url_path_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#url_path_condition CdnEndpoint#url_path_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#url_path_condition CdnEndpoint#url_path_condition}
   */
   readonly urlPathCondition?: CdnEndpointDeliveryRuleUrlPathCondition[] | cdktf.IResolvable;
   /**
   * url_redirect_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#url_redirect_action CdnEndpoint#url_redirect_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#url_redirect_action CdnEndpoint#url_redirect_action}
   */
   readonly urlRedirectAction?: CdnEndpointDeliveryRuleUrlRedirectAction;
   /**
   * url_rewrite_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#url_rewrite_action CdnEndpoint#url_rewrite_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#url_rewrite_action CdnEndpoint#url_rewrite_action}
   */
   readonly urlRewriteAction?: CdnEndpointDeliveryRuleUrlRewriteAction;
 }
@@ -4718,15 +4718,15 @@ export class CdnEndpointDeliveryRuleList extends cdktf.ComplexList {
 }
 export interface CdnEndpointGeoFilter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#country_codes CdnEndpoint#country_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#country_codes CdnEndpoint#country_codes}
   */
   readonly countryCodes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#relative_path CdnEndpoint#relative_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#relative_path CdnEndpoint#relative_path}
   */
   readonly relativePath: string;
 }
@@ -4891,11 +4891,11 @@ export class CdnEndpointGeoFilterList extends cdktf.ComplexList {
 }
 export interface CdnEndpointGlobalDeliveryRuleCacheExpirationAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}
   */
   readonly behavior: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#duration CdnEndpoint#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#duration CdnEndpoint#duration}
   */
   readonly duration?: string;
 }
@@ -5005,11 +5005,11 @@ export class CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference e
 }
 export interface CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}
   */
   readonly behavior: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#parameters CdnEndpoint#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#parameters CdnEndpoint#parameters}
   */
   readonly parameters?: string;
 }
@@ -5119,15 +5119,15 @@ export class CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReferen
 }
 export interface CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}
   */
   readonly value?: string;
 }
@@ -5295,15 +5295,15 @@ export class CdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionList extends 
 }
 export interface CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}
   */
   readonly value?: string;
 }
@@ -5471,27 +5471,27 @@ export class CdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionList extends
 }
 export interface CdnEndpointGlobalDeliveryRuleUrlRedirectAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#fragment CdnEndpoint#fragment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#fragment CdnEndpoint#fragment}
   */
   readonly fragment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#hostname CdnEndpoint#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#hostname CdnEndpoint#hostname}
   */
   readonly hostname?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#path CdnEndpoint#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#path CdnEndpoint#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#protocol CdnEndpoint#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#protocol CdnEndpoint#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#query_string CdnEndpoint#query_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#query_string CdnEndpoint#query_string}
   */
   readonly queryString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#redirect_type CdnEndpoint#redirect_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#redirect_type CdnEndpoint#redirect_type}
   */
   readonly redirectType: string;
 }
@@ -5717,15 +5717,15 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
 }
 export interface CdnEndpointGlobalDeliveryRuleUrlRewriteAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#destination CdnEndpoint#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#destination CdnEndpoint#destination}
   */
   readonly destination: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}
   */
   readonly preserveUnmatchedPath?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#source_pattern CdnEndpoint#source_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#source_pattern CdnEndpoint#source_pattern}
   */
   readonly sourcePattern: string;
 }
@@ -5863,37 +5863,37 @@ export interface CdnEndpointGlobalDeliveryRule {
   /**
   * cache_expiration_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#cache_expiration_action CdnEndpoint#cache_expiration_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#cache_expiration_action CdnEndpoint#cache_expiration_action}
   */
   readonly cacheExpirationAction?: CdnEndpointGlobalDeliveryRuleCacheExpirationAction;
   /**
   * cache_key_query_string_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#cache_key_query_string_action CdnEndpoint#cache_key_query_string_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#cache_key_query_string_action CdnEndpoint#cache_key_query_string_action}
   */
   readonly cacheKeyQueryStringAction?: CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction;
   /**
   * modify_request_header_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#modify_request_header_action CdnEndpoint#modify_request_header_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#modify_request_header_action CdnEndpoint#modify_request_header_action}
   */
   readonly modifyRequestHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[] | cdktf.IResolvable;
   /**
   * modify_response_header_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#modify_response_header_action CdnEndpoint#modify_response_header_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#modify_response_header_action CdnEndpoint#modify_response_header_action}
   */
   readonly modifyResponseHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[] | cdktf.IResolvable;
   /**
   * url_redirect_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#url_redirect_action CdnEndpoint#url_redirect_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#url_redirect_action CdnEndpoint#url_redirect_action}
   */
   readonly urlRedirectAction?: CdnEndpointGlobalDeliveryRuleUrlRedirectAction;
   /**
   * url_rewrite_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#url_rewrite_action CdnEndpoint#url_rewrite_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#url_rewrite_action CdnEndpoint#url_rewrite_action}
   */
   readonly urlRewriteAction?: CdnEndpointGlobalDeliveryRuleUrlRewriteAction;
 }
@@ -6122,19 +6122,19 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
 }
 export interface CdnEndpointOrigin {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#host_name CdnEndpoint#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#host_name CdnEndpoint#host_name}
   */
   readonly hostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#http_port CdnEndpoint#http_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#http_port CdnEndpoint#http_port}
   */
   readonly httpPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#https_port CdnEndpoint#https_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#https_port CdnEndpoint#https_port}
   */
   readonly httpsPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}
   */
   readonly name: string;
 }
@@ -6331,19 +6331,19 @@ export class CdnEndpointOriginList extends cdktf.ComplexList {
 }
 export interface CdnEndpointTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#create CdnEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#create CdnEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#delete CdnEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#delete CdnEndpoint#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#read CdnEndpoint#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#read CdnEndpoint#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#update CdnEndpoint#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#update CdnEndpoint#update}
   */
   readonly update?: string;
 }
@@ -6524,7 +6524,7 @@ export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint azurerm_cdn_endpoint}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint azurerm_cdn_endpoint}
 */
 export class CdnEndpoint extends cdktf.TerraformResource {
 
@@ -6540,7 +6540,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CdnEndpoint resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CdnEndpoint to import
-  * @param importFromId The id of the existing CdnEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CdnEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CdnEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -6552,7 +6552,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/resources/cdn_endpoint azurerm_cdn_endpoint} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/cdn_endpoint azurerm_cdn_endpoint} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -6563,7 +6563,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cdn_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.99.0',
+        providerVersion: '3.100.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

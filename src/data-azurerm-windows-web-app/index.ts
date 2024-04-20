@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/windows_web_app
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/windows_web_app
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermWindowsWebAppConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/windows_web_app#id DataAzurermWindowsWebApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/windows_web_app#id DataAzurermWindowsWebApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/windows_web_app#name DataAzurermWindowsWebApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/windows_web_app#name DataAzurermWindowsWebApp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/windows_web_app#resource_group_name DataAzurermWindowsWebApp#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/windows_web_app#resource_group_name DataAzurermWindowsWebApp#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/windows_web_app#timeouts DataAzurermWindowsWebApp#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/windows_web_app#timeouts DataAzurermWindowsWebApp#timeouts}
   */
   readonly timeouts?: DataAzurermWindowsWebAppTimeouts;
 }
@@ -3609,6 +3609,91 @@ export class DataAzurermWindowsWebAppSiteConfigCorsList extends cdktf.ComplexLis
     return new DataAzurermWindowsWebAppSiteConfigCorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataAzurermWindowsWebAppSiteConfigHandlerMapping {
+}
+
+export function dataAzurermWindowsWebAppSiteConfigHandlerMappingToTerraform(struct?: DataAzurermWindowsWebAppSiteConfigHandlerMapping): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataAzurermWindowsWebAppSiteConfigHandlerMappingToHclTerraform(struct?: DataAzurermWindowsWebAppSiteConfigHandlerMapping): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataAzurermWindowsWebAppSiteConfigHandlerMappingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermWindowsWebAppSiteConfigHandlerMapping | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermWindowsWebAppSiteConfigHandlerMapping | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // arguments - computed: true, optional: false, required: false
+  public get arguments() {
+    return this.getStringAttribute('arguments');
+  }
+
+  // extension - computed: true, optional: false, required: false
+  public get extension() {
+    return this.getStringAttribute('extension');
+  }
+
+  // script_processor_path - computed: true, optional: false, required: false
+  public get scriptProcessorPath() {
+    return this.getStringAttribute('script_processor_path');
+  }
+}
+
+export class DataAzurermWindowsWebAppSiteConfigHandlerMappingList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermWindowsWebAppSiteConfigHandlerMappingOutputReference {
+    return new DataAzurermWindowsWebAppSiteConfigHandlerMappingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermWindowsWebAppSiteConfigIpRestrictionHeaders {
 }
 
@@ -4301,6 +4386,12 @@ export class DataAzurermWindowsWebAppSiteConfigOutputReference extends cdktf.Com
     return this.getStringAttribute('ftps_state');
   }
 
+  // handler_mapping - computed: true, optional: false, required: false
+  private _handlerMapping = new DataAzurermWindowsWebAppSiteConfigHandlerMappingList(this, "handler_mapping", true);
+  public get handlerMapping() {
+    return this._handlerMapping;
+  }
+
   // health_check_eviction_time_in_min - computed: true, optional: false, required: false
   public get healthCheckEvictionTimeInMin() {
     return this.getNumberAttribute('health_check_eviction_time_in_min');
@@ -4695,7 +4786,7 @@ export class DataAzurermWindowsWebAppStorageAccountList extends cdktf.ComplexLis
 }
 export interface DataAzurermWindowsWebAppTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/windows_web_app#read DataAzurermWindowsWebApp#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/windows_web_app#read DataAzurermWindowsWebApp#read}
   */
   readonly read?: string;
 }
@@ -4789,7 +4880,7 @@ export class DataAzurermWindowsWebAppTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/windows_web_app azurerm_windows_web_app}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/windows_web_app azurerm_windows_web_app}
 */
 export class DataAzurermWindowsWebApp extends cdktf.TerraformDataSource {
 
@@ -4805,7 +4896,7 @@ export class DataAzurermWindowsWebApp extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermWindowsWebApp resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermWindowsWebApp to import
-  * @param importFromId The id of the existing DataAzurermWindowsWebApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/windows_web_app#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermWindowsWebApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/windows_web_app#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermWindowsWebApp to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -4817,7 +4908,7 @@ export class DataAzurermWindowsWebApp extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.99.0/docs/data-sources/windows_web_app azurerm_windows_web_app} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/windows_web_app azurerm_windows_web_app} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -4828,7 +4919,7 @@ export class DataAzurermWindowsWebApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_windows_web_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.99.0',
+        providerVersion: '3.100.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
