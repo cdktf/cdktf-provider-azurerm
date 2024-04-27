@@ -4,7 +4,7 @@
 
 ### DataAzurermIpGroups <a name="DataAzurermIpGroups" id="@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroups"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups azurerm_ip_groups}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups azurerm_ip_groups}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroups.Initializer"></a>
 
@@ -41,9 +41,9 @@ DataAzurermIpGroups.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroups.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroups.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroups.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroups.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#name DataAzurermIpGroups#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroups.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#resource_group_name DataAzurermIpGroups#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroups.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#id DataAzurermIpGroups#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroups.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#name DataAzurermIpGroups#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroups.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#resource_group_name DataAzurermIpGroups#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroups.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#id DataAzurermIpGroups#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroups.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsTimeouts">DataAzurermIpGroupsTimeouts</a></code> | timeouts block. |
 
 ---
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#name DataAzurermIpGroups#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#name DataAzurermIpGroups#name}.
 
 ---
 
@@ -120,7 +120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#resource_group_name DataAzurermIpGroups#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#resource_group_name DataAzurermIpGroups#resource_group_name}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#id DataAzurermIpGroups#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#id DataAzurermIpGroups#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -141,7 +141,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#timeouts DataAzurermIpGroups#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#timeouts DataAzurermIpGroups#timeouts}
 
 ---
 
@@ -491,7 +491,7 @@ The construct id used in the generated config for the DataAzurermIpGroups to imp
 
 The id of the existing DataAzurermIpGroups that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -833,9 +833,9 @@ DataAzurermIpGroupsConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#name DataAzurermIpGroups#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#resource_group_name DataAzurermIpGroups#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#id DataAzurermIpGroups#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#name DataAzurermIpGroups#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#resource_group_name DataAzurermIpGroups#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#id DataAzurermIpGroups#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsTimeouts">DataAzurermIpGroupsTimeouts</a></code> | timeouts block. |
 
 ---
@@ -918,7 +918,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#name DataAzurermIpGroups#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#name DataAzurermIpGroups#name}.
 
 ---
 
@@ -930,7 +930,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#resource_group_name DataAzurermIpGroups#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#resource_group_name DataAzurermIpGroups#resource_group_name}.
 
 ---
 
@@ -942,7 +942,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#id DataAzurermIpGroups#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#id DataAzurermIpGroups#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -959,7 +959,7 @@ public DataAzurermIpGroupsTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#timeouts DataAzurermIpGroups#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#timeouts DataAzurermIpGroups#timeouts}
 
 ---
 
@@ -979,7 +979,7 @@ DataAzurermIpGroupsTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#read DataAzurermIpGroups#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroups.DataAzurermIpGroupsTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#read DataAzurermIpGroups#read}. |
 
 ---
 
@@ -991,7 +991,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/ip_groups#read DataAzurermIpGroups#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/ip_groups#read DataAzurermIpGroups#read}.
 
 ---
 

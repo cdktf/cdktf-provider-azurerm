@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,88 +13,88 @@ import * as cdktf from 'cdktf';
 
 export interface MediaStreamingLocatorConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#alternative_media_id MediaStreamingLocator#alternative_media_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#alternative_media_id MediaStreamingLocator#alternative_media_id}
   */
   readonly alternativeMediaId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#asset_name MediaStreamingLocator#asset_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#asset_name MediaStreamingLocator#asset_name}
   */
   readonly assetName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#default_content_key_policy_name MediaStreamingLocator#default_content_key_policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#default_content_key_policy_name MediaStreamingLocator#default_content_key_policy_name}
   */
   readonly defaultContentKeyPolicyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#end_time MediaStreamingLocator#end_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#end_time MediaStreamingLocator#end_time}
   */
   readonly endTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#filter_names MediaStreamingLocator#filter_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#filter_names MediaStreamingLocator#filter_names}
   */
   readonly filterNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#id MediaStreamingLocator#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#id MediaStreamingLocator#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#media_services_account_name MediaStreamingLocator#media_services_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#media_services_account_name MediaStreamingLocator#media_services_account_name}
   */
   readonly mediaServicesAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#name MediaStreamingLocator#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#name MediaStreamingLocator#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#resource_group_name MediaStreamingLocator#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#resource_group_name MediaStreamingLocator#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#start_time MediaStreamingLocator#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#start_time MediaStreamingLocator#start_time}
   */
   readonly startTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#streaming_locator_id MediaStreamingLocator#streaming_locator_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#streaming_locator_id MediaStreamingLocator#streaming_locator_id}
   */
   readonly streamingLocatorId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#streaming_policy_name MediaStreamingLocator#streaming_policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#streaming_policy_name MediaStreamingLocator#streaming_policy_name}
   */
   readonly streamingPolicyName: string;
   /**
   * content_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#content_key MediaStreamingLocator#content_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#content_key MediaStreamingLocator#content_key}
   */
   readonly contentKey?: MediaStreamingLocatorContentKey[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#timeouts MediaStreamingLocator#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#timeouts MediaStreamingLocator#timeouts}
   */
   readonly timeouts?: MediaStreamingLocatorTimeouts;
 }
 export interface MediaStreamingLocatorContentKey {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#content_key_id MediaStreamingLocator#content_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#content_key_id MediaStreamingLocator#content_key_id}
   */
   readonly contentKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#label_reference_in_streaming_policy MediaStreamingLocator#label_reference_in_streaming_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#label_reference_in_streaming_policy MediaStreamingLocator#label_reference_in_streaming_policy}
   */
   readonly labelReferenceInStreamingPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#policy_name MediaStreamingLocator#policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#policy_name MediaStreamingLocator#policy_name}
   */
   readonly policyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#type MediaStreamingLocator#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#type MediaStreamingLocator#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#value MediaStreamingLocator#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#value MediaStreamingLocator#value}
   */
   readonly value?: string;
 }
@@ -326,15 +326,15 @@ export class MediaStreamingLocatorContentKeyList extends cdktf.ComplexList {
 }
 export interface MediaStreamingLocatorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#create MediaStreamingLocator#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#create MediaStreamingLocator#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#delete MediaStreamingLocator#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#delete MediaStreamingLocator#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#read MediaStreamingLocator#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#read MediaStreamingLocator#read}
   */
   readonly read?: string;
 }
@@ -486,7 +486,7 @@ export class MediaStreamingLocatorTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator azurerm_media_streaming_locator}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator azurerm_media_streaming_locator}
 */
 export class MediaStreamingLocator extends cdktf.TerraformResource {
 
@@ -502,7 +502,7 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MediaStreamingLocator resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MediaStreamingLocator to import
-  * @param importFromId The id of the existing MediaStreamingLocator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MediaStreamingLocator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MediaStreamingLocator to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -514,7 +514,7 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/media_streaming_locator azurerm_media_streaming_locator} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/media_streaming_locator azurerm_media_streaming_locator} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -525,7 +525,7 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_streaming_locator',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.100.0',
+        providerVersion: '3.101.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

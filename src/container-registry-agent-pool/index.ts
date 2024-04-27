@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,66 +13,66 @@ import * as cdktf from 'cdktf';
 
 export interface ContainerRegistryAgentPoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#container_registry_name ContainerRegistryAgentPool#container_registry_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#container_registry_name ContainerRegistryAgentPool#container_registry_name}
   */
   readonly containerRegistryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#id ContainerRegistryAgentPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#id ContainerRegistryAgentPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#instance_count ContainerRegistryAgentPool#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#instance_count ContainerRegistryAgentPool#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#location ContainerRegistryAgentPool#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#location ContainerRegistryAgentPool#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#name ContainerRegistryAgentPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#name ContainerRegistryAgentPool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#resource_group_name ContainerRegistryAgentPool#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#resource_group_name ContainerRegistryAgentPool#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#tags ContainerRegistryAgentPool#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#tags ContainerRegistryAgentPool#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#tier ContainerRegistryAgentPool#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#tier ContainerRegistryAgentPool#tier}
   */
   readonly tier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#virtual_network_subnet_id ContainerRegistryAgentPool#virtual_network_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#virtual_network_subnet_id ContainerRegistryAgentPool#virtual_network_subnet_id}
   */
   readonly virtualNetworkSubnetId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#timeouts ContainerRegistryAgentPool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#timeouts ContainerRegistryAgentPool#timeouts}
   */
   readonly timeouts?: ContainerRegistryAgentPoolTimeouts;
 }
 export interface ContainerRegistryAgentPoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#create ContainerRegistryAgentPool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#create ContainerRegistryAgentPool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#delete ContainerRegistryAgentPool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#delete ContainerRegistryAgentPool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#read ContainerRegistryAgentPool#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#read ContainerRegistryAgentPool#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#update ContainerRegistryAgentPool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#update ContainerRegistryAgentPool#update}
   */
   readonly update?: string;
 }
@@ -253,7 +253,7 @@ export class ContainerRegistryAgentPoolTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool azurerm_container_registry_agent_pool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool azurerm_container_registry_agent_pool}
 */
 export class ContainerRegistryAgentPool extends cdktf.TerraformResource {
 
@@ -269,7 +269,7 @@ export class ContainerRegistryAgentPool extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ContainerRegistryAgentPool resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerRegistryAgentPool to import
-  * @param importFromId The id of the existing ContainerRegistryAgentPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerRegistryAgentPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerRegistryAgentPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -281,7 +281,7 @@ export class ContainerRegistryAgentPool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_registry_agent_pool azurerm_container_registry_agent_pool} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_registry_agent_pool azurerm_container_registry_agent_pool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -292,7 +292,7 @@ export class ContainerRegistryAgentPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_registry_agent_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.100.0',
+        providerVersion: '3.101.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

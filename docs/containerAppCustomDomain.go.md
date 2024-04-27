@@ -4,7 +4,7 @@
 
 ### ContainerAppCustomDomain <a name="ContainerAppCustomDomain" id="@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomain"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain azurerm_container_app_custom_domain}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain azurerm_container_app_custom_domain}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomain.Initializer"></a>
 
@@ -74,6 +74,8 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomain.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomain.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomain.putTimeouts">PutTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomain.resetCertificateBindingType">ResetCertificateBindingType</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomain.resetContainerAppEnvironmentCertificateId">ResetContainerAppEnvironmentCertificateId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomain.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomain.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
 
@@ -379,6 +381,18 @@ func PutTimeouts(value ContainerAppCustomDomainTimeouts)
 
 ---
 
+##### `ResetCertificateBindingType` <a name="ResetCertificateBindingType" id="@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomain.resetCertificateBindingType"></a>
+
+```go
+func ResetCertificateBindingType()
+```
+
+##### `ResetContainerAppEnvironmentCertificateId` <a name="ResetContainerAppEnvironmentCertificateId" id="@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomain.resetContainerAppEnvironmentCertificateId"></a>
+
+```go
+func ResetContainerAppEnvironmentCertificateId()
+```
+
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomain.resetId"></a>
 
 ```go
@@ -494,7 +508,7 @@ The construct id used in the generated config for the ContainerAppCustomDomain t
 
 The id of the existing ContainerAppCustomDomain that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -836,10 +850,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappcusto
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	CertificateBindingType: *string,
-	ContainerAppEnvironmentCertificateId: *string,
 	ContainerAppId: *string,
 	Name: *string,
+	CertificateBindingType: *string,
+	ContainerAppEnvironmentCertificateId: *string,
 	Id: *string,
 	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.containerAppCustomDomain.ContainerAppCustomDomainTimeouts,
 }
@@ -856,11 +870,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappcusto
 | <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.certificateBindingType">CertificateBindingType</a></code> | <code>*string</code> | The Binding type. Possible values include `Disabled` and `SniEnabled`. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.containerAppEnvironmentCertificateId">ContainerAppEnvironmentCertificateId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#container_app_environment_certificate_id ContainerAppCustomDomain#container_app_environment_certificate_id}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.containerAppId">ContainerAppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#container_app_id ContainerAppCustomDomain#container_app_id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.containerAppId">ContainerAppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#container_app_id ContainerAppCustomDomain#container_app_id}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.name">Name</a></code> | <code>*string</code> | The hostname of the Certificate. Must be the CN or a named SAN in the certificate. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#id ContainerAppCustomDomain#id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.certificateBindingType">CertificateBindingType</a></code> | <code>*string</code> | The Binding type. Possible values include `Disabled` and `SniEnabled`. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.containerAppEnvironmentCertificateId">ContainerAppEnvironmentCertificateId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#container_app_environment_certificate_id ContainerAppCustomDomain#container_app_environment_certificate_id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#id ContainerAppCustomDomain#id}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainTimeouts">ContainerAppCustomDomainTimeouts</a></code> | timeouts block. |
 
 ---
@@ -935,32 +949,6 @@ Provisioners *[]interface{}
 
 ---
 
-##### `CertificateBindingType`<sup>Required</sup> <a name="CertificateBindingType" id="@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.certificateBindingType"></a>
-
-```go
-CertificateBindingType *string
-```
-
-- *Type:* *string
-
-The Binding type. Possible values include `Disabled` and `SniEnabled`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#certificate_binding_type ContainerAppCustomDomain#certificate_binding_type}
-
----
-
-##### `ContainerAppEnvironmentCertificateId`<sup>Required</sup> <a name="ContainerAppEnvironmentCertificateId" id="@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.containerAppEnvironmentCertificateId"></a>
-
-```go
-ContainerAppEnvironmentCertificateId *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#container_app_environment_certificate_id ContainerAppCustomDomain#container_app_environment_certificate_id}.
-
----
-
 ##### `ContainerAppId`<sup>Required</sup> <a name="ContainerAppId" id="@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.containerAppId"></a>
 
 ```go
@@ -969,7 +957,7 @@ ContainerAppId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#container_app_id ContainerAppCustomDomain#container_app_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#container_app_id ContainerAppCustomDomain#container_app_id}.
 
 ---
 
@@ -983,7 +971,33 @@ Name *string
 
 The hostname of the Certificate. Must be the CN or a named SAN in the certificate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#name ContainerAppCustomDomain#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#name ContainerAppCustomDomain#name}
+
+---
+
+##### `CertificateBindingType`<sup>Optional</sup> <a name="CertificateBindingType" id="@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.certificateBindingType"></a>
+
+```go
+CertificateBindingType *string
+```
+
+- *Type:* *string
+
+The Binding type. Possible values include `Disabled` and `SniEnabled`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#certificate_binding_type ContainerAppCustomDomain#certificate_binding_type}
+
+---
+
+##### `ContainerAppEnvironmentCertificateId`<sup>Optional</sup> <a name="ContainerAppEnvironmentCertificateId" id="@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainConfig.property.containerAppEnvironmentCertificateId"></a>
+
+```go
+ContainerAppEnvironmentCertificateId *string
+```
+
+- *Type:* *string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#container_app_environment_certificate_id ContainerAppCustomDomain#container_app_environment_certificate_id}.
 
 ---
 
@@ -995,7 +1009,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#id ContainerAppCustomDomain#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#id ContainerAppCustomDomain#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1012,7 +1026,7 @@ Timeouts ContainerAppCustomDomainTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#timeouts ContainerAppCustomDomain#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#timeouts ContainerAppCustomDomain#timeouts}
 
 ---
 
@@ -1034,9 +1048,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/containerappcusto
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#create ContainerAppCustomDomain#create}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#delete ContainerAppCustomDomain#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#read ContainerAppCustomDomain#read}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#create ContainerAppCustomDomain#create}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#delete ContainerAppCustomDomain#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppCustomDomain.ContainerAppCustomDomainTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#read ContainerAppCustomDomain#read}. |
 
 ---
 
@@ -1048,7 +1062,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#create ContainerAppCustomDomain#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#create ContainerAppCustomDomain#create}.
 
 ---
 
@@ -1060,7 +1074,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#delete ContainerAppCustomDomain#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#delete ContainerAppCustomDomain#delete}.
 
 ---
 
@@ -1072,7 +1086,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/container_app_custom_domain#read ContainerAppCustomDomain#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/container_app_custom_domain#read ContainerAppCustomDomain#read}.
 
 ---
 

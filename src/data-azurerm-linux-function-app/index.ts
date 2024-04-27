@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/linux_function_app
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/linux_function_app
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermLinuxFunctionAppConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/linux_function_app#id DataAzurermLinuxFunctionApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/linux_function_app#id DataAzurermLinuxFunctionApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/linux_function_app#name DataAzurermLinuxFunctionApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/linux_function_app#name DataAzurermLinuxFunctionApp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/linux_function_app#resource_group_name DataAzurermLinuxFunctionApp#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/linux_function_app#resource_group_name DataAzurermLinuxFunctionApp#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/linux_function_app#timeouts DataAzurermLinuxFunctionApp#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/linux_function_app#timeouts DataAzurermLinuxFunctionApp#timeouts}
   */
   readonly timeouts?: DataAzurermLinuxFunctionAppTimeouts;
 }
@@ -3448,7 +3448,7 @@ export class DataAzurermLinuxFunctionAppStickySettingsList extends cdktf.Complex
 }
 export interface DataAzurermLinuxFunctionAppTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/linux_function_app#read DataAzurermLinuxFunctionApp#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/linux_function_app#read DataAzurermLinuxFunctionApp#read}
   */
   readonly read?: string;
 }
@@ -3542,7 +3542,7 @@ export class DataAzurermLinuxFunctionAppTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/linux_function_app azurerm_linux_function_app}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/linux_function_app azurerm_linux_function_app}
 */
 export class DataAzurermLinuxFunctionApp extends cdktf.TerraformDataSource {
 
@@ -3558,7 +3558,7 @@ export class DataAzurermLinuxFunctionApp extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermLinuxFunctionApp resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermLinuxFunctionApp to import
-  * @param importFromId The id of the existing DataAzurermLinuxFunctionApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/linux_function_app#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermLinuxFunctionApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/linux_function_app#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermLinuxFunctionApp to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -3570,7 +3570,7 @@ export class DataAzurermLinuxFunctionApp extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/linux_function_app azurerm_linux_function_app} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/linux_function_app azurerm_linux_function_app} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3581,7 +3581,7 @@ export class DataAzurermLinuxFunctionApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_linux_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.100.0',
+        providerVersion: '3.101.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
