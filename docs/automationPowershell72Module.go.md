@@ -4,12 +4,12 @@
 
 ### AutomationPowershell72Module <a name="AutomationPowershell72Module" id="@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72Module"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module azurerm_automation_powershell72_module}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module azurerm_automation_powershell72_module}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72Module.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowershell72module"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpowershell72module"
 
 automationpowershell72module.NewAutomationPowershell72Module(scope Construct, id *string, config AutomationPowershell72ModuleConfig) AutomationPowershell72Module
 ```
@@ -418,7 +418,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72Module.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowershell72module"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpowershell72module"
 
 automationpowershell72module.AutomationPowershell72Module_IsConstruct(x interface{}) *bool
 ```
@@ -450,7 +450,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72Module.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowershell72module"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpowershell72module"
 
 automationpowershell72module.AutomationPowershell72Module_IsTerraformElement(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ automationpowershell72module.AutomationPowershell72Module_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72Module.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowershell72module"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpowershell72module"
 
 automationpowershell72module.AutomationPowershell72Module_IsTerraformResource(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ automationpowershell72module.AutomationPowershell72Module_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72Module.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowershell72module"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpowershell72module"
 
 automationpowershell72module.AutomationPowershell72Module_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -507,7 +507,7 @@ The construct id used in the generated config for the AutomationPowershell72Modu
 
 The id of the existing AutomationPowershell72Module that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -817,7 +817,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowershell72module"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpowershell72module"
 
 &automationpowershell72module.AutomationPowershell72ModuleConfig {
 	Connection: interface{},
@@ -828,10 +828,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowersh
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	AutomationAccountId: *string,
-	ModuleLink: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.automationPowershell72Module.AutomationPowershell72ModuleModuleLink,
+	ModuleLink: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLink,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.automationPowershell72Module.AutomationPowershell72ModuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationPowershell72Module.AutomationPowershell72ModuleTimeouts,
 }
 ```
 
@@ -846,10 +846,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowersh
 | <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleConfig.property.automationAccountId">AutomationAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#automation_account_id AutomationPowershell72Module#automation_account_id}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleConfig.property.automationAccountId">AutomationAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#automation_account_id AutomationPowershell72Module#automation_account_id}. |
 | <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleConfig.property.moduleLink">ModuleLink</a></code> | <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLink">AutomationPowershell72ModuleModuleLink</a></code> | module_link block. |
-| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#name AutomationPowershell72Module#name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#id AutomationPowershell72Module#id}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#name AutomationPowershell72Module#name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#id AutomationPowershell72Module#id}. |
 | <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleTimeouts">AutomationPowershell72ModuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -932,7 +932,7 @@ AutomationAccountId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#automation_account_id AutomationPowershell72Module#automation_account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#automation_account_id AutomationPowershell72Module#automation_account_id}.
 
 ---
 
@@ -946,7 +946,7 @@ ModuleLink AutomationPowershell72ModuleModuleLink
 
 module_link block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#module_link AutomationPowershell72Module#module_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#module_link AutomationPowershell72Module#module_link}
 
 ---
 
@@ -958,7 +958,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#name AutomationPowershell72Module#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#name AutomationPowershell72Module#name}.
 
 ---
 
@@ -970,7 +970,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#id AutomationPowershell72Module#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#id AutomationPowershell72Module#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -987,7 +987,7 @@ Timeouts AutomationPowershell72ModuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#timeouts AutomationPowershell72Module#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#timeouts AutomationPowershell72Module#timeouts}
 
 ---
 
@@ -996,11 +996,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLink.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowershell72module"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpowershell72module"
 
 &automationpowershell72module.AutomationPowershell72ModuleModuleLink {
 	Uri: *string,
-	Hash: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.automationPowershell72Module.AutomationPowershell72ModuleModuleLinkHash,
+	Hash: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLinkHash,
 }
 ```
 
@@ -1008,7 +1008,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowersh
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLink.property.uri">Uri</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#uri AutomationPowershell72Module#uri}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLink.property.uri">Uri</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#uri AutomationPowershell72Module#uri}. |
 | <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLink.property.hash">Hash</a></code> | <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLinkHash">AutomationPowershell72ModuleModuleLinkHash</a></code> | hash block. |
 
 ---
@@ -1021,7 +1021,7 @@ Uri *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#uri AutomationPowershell72Module#uri}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#uri AutomationPowershell72Module#uri}.
 
 ---
 
@@ -1035,7 +1035,7 @@ Hash AutomationPowershell72ModuleModuleLinkHash
 
 hash block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#hash AutomationPowershell72Module#hash}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#hash AutomationPowershell72Module#hash}
 
 ---
 
@@ -1044,7 +1044,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLinkHash.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowershell72module"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpowershell72module"
 
 &automationpowershell72module.AutomationPowershell72ModuleModuleLinkHash {
 	Algorithm: *string,
@@ -1056,8 +1056,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowersh
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLinkHash.property.algorithm">Algorithm</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#algorithm AutomationPowershell72Module#algorithm}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLinkHash.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#value AutomationPowershell72Module#value}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLinkHash.property.algorithm">Algorithm</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#algorithm AutomationPowershell72Module#algorithm}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLinkHash.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#value AutomationPowershell72Module#value}. |
 
 ---
 
@@ -1069,7 +1069,7 @@ Algorithm *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#algorithm AutomationPowershell72Module#algorithm}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#algorithm AutomationPowershell72Module#algorithm}.
 
 ---
 
@@ -1081,7 +1081,7 @@ Value *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#value AutomationPowershell72Module#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#value AutomationPowershell72Module#value}.
 
 ---
 
@@ -1090,7 +1090,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowershell72module"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpowershell72module"
 
 &automationpowershell72module.AutomationPowershell72ModuleTimeouts {
 	Create: *string,
@@ -1104,10 +1104,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowersh
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#create AutomationPowershell72Module#create}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#delete AutomationPowershell72Module#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#read AutomationPowershell72Module#read}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#update AutomationPowershell72Module#update}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#create AutomationPowershell72Module#create}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#delete AutomationPowershell72Module#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#read AutomationPowershell72Module#read}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#update AutomationPowershell72Module#update}. |
 
 ---
 
@@ -1119,7 +1119,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#create AutomationPowershell72Module#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#create AutomationPowershell72Module#create}.
 
 ---
 
@@ -1131,7 +1131,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#delete AutomationPowershell72Module#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#delete AutomationPowershell72Module#delete}.
 
 ---
 
@@ -1143,7 +1143,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#read AutomationPowershell72Module#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#read AutomationPowershell72Module#read}.
 
 ---
 
@@ -1155,7 +1155,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/automation_powershell72_module#update AutomationPowershell72Module#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/automation_powershell72_module#update AutomationPowershell72Module#update}.
 
 ---
 
@@ -1166,7 +1166,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLinkHashOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowershell72module"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpowershell72module"
 
 automationpowershell72module.NewAutomationPowershell72ModuleModuleLinkHashOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationPowershell72ModuleModuleLinkHashOutputReference
 ```
@@ -1459,7 +1459,7 @@ func InternalValue() AutomationPowershell72ModuleModuleLinkHash
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleModuleLinkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowershell72module"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpowershell72module"
 
 automationpowershell72module.NewAutomationPowershell72ModuleModuleLinkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationPowershell72ModuleModuleLinkOutputReference
 ```
@@ -1772,7 +1772,7 @@ func InternalValue() AutomationPowershell72ModuleModuleLink
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationPowershell72Module.AutomationPowershell72ModuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpowershell72module"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpowershell72module"
 
 automationpowershell72module.NewAutomationPowershell72ModuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationPowershell72ModuleTimeoutsOutputReference
 ```
