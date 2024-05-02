@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkWatcherFlowLog.NetworkWatcherFlowLog.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcherflowlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcherflowlog"
 
 networkwatcherflowlog.NewNetworkWatcherFlowLog(scope Construct, id *string, config NetworkWatcherFlowLogConfig) NetworkWatcherFlowLog
 ```
@@ -459,7 +459,7 @@ func ResetVersion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.networkWatcherFlowLog.NetworkWatcherFlowLog.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcherflowlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcherflowlog"
 
 networkwatcherflowlog.NetworkWatcherFlowLog_IsConstruct(x interface{}) *bool
 ```
@@ -491,7 +491,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.networkWatcherFlowLog.NetworkWatcherFlowLog.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcherflowlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcherflowlog"
 
 networkwatcherflowlog.NetworkWatcherFlowLog_IsTerraformElement(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ networkwatcherflowlog.NetworkWatcherFlowLog_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.networkWatcherFlowLog.NetworkWatcherFlowLog.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcherflowlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcherflowlog"
 
 networkwatcherflowlog.NetworkWatcherFlowLog_IsTerraformResource(x interface{}) *bool
 ```
@@ -519,7 +519,7 @@ networkwatcherflowlog.NetworkWatcherFlowLog_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.networkWatcherFlowLog.NetworkWatcherFlowLog.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcherflowlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcherflowlog"
 
 networkwatcherflowlog.NetworkWatcherFlowLog_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1034,7 +1034,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkWatcherFlowLog.NetworkWatcherFlowLogConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcherflowlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcherflowlog"
 
 &networkwatcherflowlog.NetworkWatcherFlowLogConfig {
 	Connection: interface{},
@@ -1049,13 +1049,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcherflo
 	NetworkSecurityGroupId: *string,
 	NetworkWatcherName: *string,
 	ResourceGroupName: *string,
-	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.networkWatcherFlowLog.NetworkWatcherFlowLogRetentionPolicy,
+	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkWatcherFlowLog.NetworkWatcherFlowLogRetentionPolicy,
 	StorageAccountId: *string,
 	Id: *string,
 	Location: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.networkWatcherFlowLog.NetworkWatcherFlowLogTimeouts,
-	TrafficAnalytics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.networkWatcherFlowLog.NetworkWatcherFlowLogTrafficAnalytics,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkWatcherFlowLog.NetworkWatcherFlowLogTimeouts,
+	TrafficAnalytics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkWatcherFlowLog.NetworkWatcherFlowLogTrafficAnalytics,
 	Version: *f64,
 }
 ```
@@ -1327,7 +1327,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkWatcherFlowLog.NetworkWatcherFlowLogRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcherflowlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcherflowlog"
 
 &networkwatcherflowlog.NetworkWatcherFlowLogRetentionPolicy {
 	Days: *f64,
@@ -1373,7 +1373,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkWatcherFlowLog.NetworkWatcherFlowLogTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcherflowlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcherflowlog"
 
 &networkwatcherflowlog.NetworkWatcherFlowLogTimeouts {
 	Create: *string,
@@ -1447,7 +1447,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkWatcherFlowLog.NetworkWatcherFlowLogTrafficAnalytics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcherflowlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcherflowlog"
 
 &networkwatcherflowlog.NetworkWatcherFlowLogTrafficAnalytics {
 	Enabled: interface{},
@@ -1537,7 +1537,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkWatcherFlowLog.NetworkWatcherFlowLogRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcherflowlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcherflowlog"
 
 networkwatcherflowlog.NewNetworkWatcherFlowLogRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkWatcherFlowLogRetentionPolicyOutputReference
 ```
@@ -1830,7 +1830,7 @@ func InternalValue() NetworkWatcherFlowLogRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkWatcherFlowLog.NetworkWatcherFlowLogTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcherflowlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcherflowlog"
 
 networkwatcherflowlog.NewNetworkWatcherFlowLogTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkWatcherFlowLogTimeoutsOutputReference
 ```
@@ -2195,7 +2195,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkWatcherFlowLog.NetworkWatcherFlowLogTrafficAnalyticsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcherflowlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcherflowlog"
 
 networkwatcherflowlog.NewNetworkWatcherFlowLogTrafficAnalyticsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkWatcherFlowLogTrafficAnalyticsOutputReference
 ```
