@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,52 +13,282 @@ import * as cdktf from 'cdktf';
 
 export interface LoadTestConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#description LoadTest#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#description LoadTest#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#id LoadTest#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#id LoadTest#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#location LoadTest#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#location LoadTest#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#name LoadTest#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#name LoadTest#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#resource_group_name LoadTest#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#resource_group_name LoadTest#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#tags LoadTest#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#tags LoadTest#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
+  * encryption block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#encryption LoadTest#encryption}
+  */
+  readonly encryption?: LoadTestEncryption;
+  /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#identity LoadTest#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#identity LoadTest#identity}
   */
   readonly identity?: LoadTestIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#timeouts LoadTest#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#timeouts LoadTest#timeouts}
   */
   readonly timeouts?: LoadTestTimeouts;
 }
+export interface LoadTestEncryptionIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#identity_id LoadTest#identity_id}
+  */
+  readonly identityId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#type LoadTest#type}
+  */
+  readonly type: string;
+}
+
+export function loadTestEncryptionIdentityToTerraform(struct?: LoadTestEncryptionIdentityOutputReference | LoadTestEncryptionIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_id: cdktf.stringToTerraform(struct!.identityId),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function loadTestEncryptionIdentityToHclTerraform(struct?: LoadTestEncryptionIdentityOutputReference | LoadTestEncryptionIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_id: {
+      value: cdktf.stringToHclTerraform(struct!.identityId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class LoadTestEncryptionIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): LoadTestEncryptionIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityId = this._identityId;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoadTestEncryptionIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityId = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityId = value.identityId;
+      this._type = value.type;
+    }
+  }
+
+  // identity_id - computed: false, optional: false, required: true
+  private _identityId?: string; 
+  public get identityId() {
+    return this.getStringAttribute('identity_id');
+  }
+  public set identityId(value: string) {
+    this._identityId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdInput() {
+    return this._identityId;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+export interface LoadTestEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#key_url LoadTest#key_url}
+  */
+  readonly keyUrl: string;
+  /**
+  * identity block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#identity LoadTest#identity}
+  */
+  readonly identity: LoadTestEncryptionIdentity;
+}
+
+export function loadTestEncryptionToTerraform(struct?: LoadTestEncryptionOutputReference | LoadTestEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_url: cdktf.stringToTerraform(struct!.keyUrl),
+    identity: loadTestEncryptionIdentityToTerraform(struct!.identity),
+  }
+}
+
+
+export function loadTestEncryptionToHclTerraform(struct?: LoadTestEncryptionOutputReference | LoadTestEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_url: {
+      value: cdktf.stringToHclTerraform(struct!.keyUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    identity: {
+      value: loadTestEncryptionIdentityToHclTerraform(struct!.identity),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LoadTestEncryptionIdentityList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class LoadTestEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): LoadTestEncryption | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyUrl = this._keyUrl;
+    }
+    if (this._identity?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identity = this._identity?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoadTestEncryption | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._keyUrl = undefined;
+      this._identity.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._keyUrl = value.keyUrl;
+      this._identity.internalValue = value.identity;
+    }
+  }
+
+  // key_url - computed: false, optional: false, required: true
+  private _keyUrl?: string; 
+  public get keyUrl() {
+    return this.getStringAttribute('key_url');
+  }
+  public set keyUrl(value: string) {
+    this._keyUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyUrlInput() {
+    return this._keyUrl;
+  }
+
+  // identity - computed: false, optional: false, required: true
+  private _identity = new LoadTestEncryptionIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: LoadTestEncryptionIdentity) {
+    this._identity.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
+  }
+}
 export interface LoadTestIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#identity_ids LoadTest#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#identity_ids LoadTest#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#type LoadTest#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#type LoadTest#type}
   */
   readonly type: string;
 }
@@ -178,19 +408,19 @@ export class LoadTestIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface LoadTestTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#create LoadTest#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#create LoadTest#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#delete LoadTest#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#delete LoadTest#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#read LoadTest#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#read LoadTest#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#update LoadTest#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#update LoadTest#update}
   */
   readonly update?: string;
 }
@@ -371,7 +601,7 @@ export class LoadTestTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test azurerm_load_test}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test azurerm_load_test}
 */
 export class LoadTest extends cdktf.TerraformResource {
 
@@ -387,7 +617,7 @@ export class LoadTest extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a LoadTest resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the LoadTest to import
-  * @param importFromId The id of the existing LoadTest that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing LoadTest that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the LoadTest to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -399,7 +629,7 @@ export class LoadTest extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test azurerm_load_test} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test azurerm_load_test} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -410,7 +640,7 @@ export class LoadTest extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_load_test',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.101.0',
+        providerVersion: '3.102.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -427,6 +657,7 @@ export class LoadTest extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._encryption.internalValue = config.encryption;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -527,6 +758,22 @@ export class LoadTest extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // encryption - computed: false, optional: true, required: false
+  private _encryption = new LoadTestEncryptionOutputReference(this, "encryption");
+  public get encryption() {
+    return this._encryption;
+  }
+  public putEncryption(value: LoadTestEncryption) {
+    this._encryption.internalValue = value;
+  }
+  public resetEncryption() {
+    this._encryption.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionInput() {
+    return this._encryption.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new LoadTestIdentityOutputReference(this, "identity");
   public get identity() {
@@ -571,6 +818,7 @@ export class LoadTest extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      encryption: loadTestEncryptionToTerraform(this._encryption.internalValue),
       identity: loadTestIdentityToTerraform(this._identity.internalValue),
       timeouts: loadTestTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -613,6 +861,12 @@ export class LoadTest extends cdktf.TerraformResource {
         isBlock: false,
         type: "map",
         storageClassType: "stringMap",
+      },
+      encryption: {
+        value: loadTestEncryptionToHclTerraform(this._encryption.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LoadTestEncryptionList",
       },
       identity: {
         value: loadTestIdentityToHclTerraform(this._identity.internalValue),

@@ -1,3 +1,3 @@
 # `azurerm_chaos_studio_target`
 
-Refer to the Terraform Registry for docs: [`azurerm_chaos_studio_target`](https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/chaos_studio_target).
+Refer to the Terraform Registry for docs: [`azurerm_chaos_studio_target`](https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/chaos_studio_target).

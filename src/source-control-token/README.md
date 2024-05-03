@@ -1,3 +1,3 @@
 # `azurerm_source_control_token`
 
-Refer to the Terraform Registry for docs: [`azurerm_source_control_token`](https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/source_control_token).
+Refer to the Terraform Registry for docs: [`azurerm_source_control_token`](https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/source_control_token).

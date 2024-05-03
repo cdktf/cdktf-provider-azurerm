@@ -933,6 +933,7 @@ Object.defineProperty(exports, 'storageAccountNetworkRules', { get: function () 
 Object.defineProperty(exports, 'storageBlob', { get: function () { return require('./storage-blob'); } });
 Object.defineProperty(exports, 'storageBlobInventoryPolicy', { get: function () { return require('./storage-blob-inventory-policy'); } });
 Object.defineProperty(exports, 'storageContainer', { get: function () { return require('./storage-container'); } });
+Object.defineProperty(exports, 'storageContainerImmutabilityPolicy', { get: function () { return require('./storage-container-immutability-policy'); } });
 Object.defineProperty(exports, 'storageDataLakeGen2Filesystem', { get: function () { return require('./storage-data-lake-gen2-filesystem'); } });
 Object.defineProperty(exports, 'storageDataLakeGen2Path', { get: function () { return require('./storage-data-lake-gen2-path'); } });
 Object.defineProperty(exports, 'storageEncryptionScope', { get: function () { return require('./storage-encryption-scope'); } });
@@ -951,6 +952,7 @@ Object.defineProperty(exports, 'storageShareFile', { get: function () { return r
 Object.defineProperty(exports, 'storageSync', { get: function () { return require('./storage-sync'); } });
 Object.defineProperty(exports, 'storageSyncCloudEndpoint', { get: function () { return require('./storage-sync-cloud-endpoint'); } });
 Object.defineProperty(exports, 'storageSyncGroup', { get: function () { return require('./storage-sync-group'); } });
+Object.defineProperty(exports, 'storageSyncServerEndpoint', { get: function () { return require('./storage-sync-server-endpoint'); } });
 Object.defineProperty(exports, 'storageTable', { get: function () { return require('./storage-table'); } });
 Object.defineProperty(exports, 'storageTableEntity', { get: function () { return require('./storage-table-entity'); } });
 Object.defineProperty(exports, 'streamAnalyticsCluster', { get: function () { return require('./stream-analytics-cluster'); } });

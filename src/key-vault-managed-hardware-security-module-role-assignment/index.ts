@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,54 @@ import * as cdktf from 'cdktf';
 
 export interface KeyVaultManagedHardwareSecurityModuleRoleAssignmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#id KeyVaultManagedHardwareSecurityModuleRoleAssignment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#id KeyVaultManagedHardwareSecurityModuleRoleAssignment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#name KeyVaultManagedHardwareSecurityModuleRoleAssignment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#managed_hsm_id KeyVaultManagedHardwareSecurityModuleRoleAssignment#managed_hsm_id}
+  */
+  readonly managedHsmId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#name KeyVaultManagedHardwareSecurityModuleRoleAssignment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#principal_id KeyVaultManagedHardwareSecurityModuleRoleAssignment#principal_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#principal_id KeyVaultManagedHardwareSecurityModuleRoleAssignment#principal_id}
   */
   readonly principalId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#role_definition_id KeyVaultManagedHardwareSecurityModuleRoleAssignment#role_definition_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#role_definition_id KeyVaultManagedHardwareSecurityModuleRoleAssignment#role_definition_id}
   */
   readonly roleDefinitionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#scope KeyVaultManagedHardwareSecurityModuleRoleAssignment#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#scope KeyVaultManagedHardwareSecurityModuleRoleAssignment#scope}
   */
   readonly scope: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#vault_base_url KeyVaultManagedHardwareSecurityModuleRoleAssignment#vault_base_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#vault_base_url KeyVaultManagedHardwareSecurityModuleRoleAssignment#vault_base_url}
   */
-  readonly vaultBaseUrl: string;
+  readonly vaultBaseUrl?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#timeouts KeyVaultManagedHardwareSecurityModuleRoleAssignment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#timeouts KeyVaultManagedHardwareSecurityModuleRoleAssignment#timeouts}
   */
   readonly timeouts?: KeyVaultManagedHardwareSecurityModuleRoleAssignmentTimeouts;
 }
 export interface KeyVaultManagedHardwareSecurityModuleRoleAssignmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#create KeyVaultManagedHardwareSecurityModuleRoleAssignment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#create KeyVaultManagedHardwareSecurityModuleRoleAssignment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#delete KeyVaultManagedHardwareSecurityModuleRoleAssignment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#delete KeyVaultManagedHardwareSecurityModuleRoleAssignment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#read KeyVaultManagedHardwareSecurityModuleRoleAssignment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#read KeyVaultManagedHardwareSecurityModuleRoleAssignment#read}
   */
   readonly read?: string;
 }
@@ -208,7 +212,7 @@ export class KeyVaultManagedHardwareSecurityModuleRoleAssignmentTimeoutsOutputRe
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment azurerm_key_vault_managed_hardware_security_module_role_assignment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment azurerm_key_vault_managed_hardware_security_module_role_assignment}
 */
 export class KeyVaultManagedHardwareSecurityModuleRoleAssignment extends cdktf.TerraformResource {
 
@@ -224,7 +228,7 @@ export class KeyVaultManagedHardwareSecurityModuleRoleAssignment extends cdktf.T
   * Generates CDKTF code for importing a KeyVaultManagedHardwareSecurityModuleRoleAssignment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the KeyVaultManagedHardwareSecurityModuleRoleAssignment to import
-  * @param importFromId The id of the existing KeyVaultManagedHardwareSecurityModuleRoleAssignment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing KeyVaultManagedHardwareSecurityModuleRoleAssignment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the KeyVaultManagedHardwareSecurityModuleRoleAssignment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -236,7 +240,7 @@ export class KeyVaultManagedHardwareSecurityModuleRoleAssignment extends cdktf.T
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment azurerm_key_vault_managed_hardware_security_module_role_assignment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/key_vault_managed_hardware_security_module_role_assignment azurerm_key_vault_managed_hardware_security_module_role_assignment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -247,7 +251,7 @@ export class KeyVaultManagedHardwareSecurityModuleRoleAssignment extends cdktf.T
       terraformResourceType: 'azurerm_key_vault_managed_hardware_security_module_role_assignment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.101.0',
+        providerVersion: '3.102.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -259,6 +263,7 @@ export class KeyVaultManagedHardwareSecurityModuleRoleAssignment extends cdktf.T
       forEach: config.forEach
     });
     this._id = config.id;
+    this._managedHsmId = config.managedHsmId;
     this._name = config.name;
     this._principalId = config.principalId;
     this._roleDefinitionId = config.roleDefinitionId;
@@ -285,6 +290,22 @@ export class KeyVaultManagedHardwareSecurityModuleRoleAssignment extends cdktf.T
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // managed_hsm_id - computed: true, optional: true, required: false
+  private _managedHsmId?: string; 
+  public get managedHsmId() {
+    return this.getStringAttribute('managed_hsm_id');
+  }
+  public set managedHsmId(value: string) {
+    this._managedHsmId = value;
+  }
+  public resetManagedHsmId() {
+    this._managedHsmId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedHsmIdInput() {
+    return this._managedHsmId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -344,13 +365,16 @@ export class KeyVaultManagedHardwareSecurityModuleRoleAssignment extends cdktf.T
     return this._scope;
   }
 
-  // vault_base_url - computed: false, optional: false, required: true
+  // vault_base_url - computed: true, optional: true, required: false
   private _vaultBaseUrl?: string; 
   public get vaultBaseUrl() {
     return this.getStringAttribute('vault_base_url');
   }
   public set vaultBaseUrl(value: string) {
     this._vaultBaseUrl = value;
+  }
+  public resetVaultBaseUrl() {
+    this._vaultBaseUrl = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get vaultBaseUrlInput() {
@@ -380,6 +404,7 @@ export class KeyVaultManagedHardwareSecurityModuleRoleAssignment extends cdktf.T
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
+      managed_hsm_id: cdktf.stringToTerraform(this._managedHsmId),
       name: cdktf.stringToTerraform(this._name),
       principal_id: cdktf.stringToTerraform(this._principalId),
       role_definition_id: cdktf.stringToTerraform(this._roleDefinitionId),
@@ -393,6 +418,12 @@ export class KeyVaultManagedHardwareSecurityModuleRoleAssignment extends cdktf.T
     const attrs = {
       id: {
         value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      managed_hsm_id: {
+        value: cdktf.stringToHclTerraform(this._managedHsmId),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
