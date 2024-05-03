@@ -4,7 +4,7 @@
 
 ### LoadTest <a name="LoadTest" id="@cdktf/provider-azurerm.loadTest.LoadTest"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test azurerm_load_test}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test azurerm_load_test}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.loadTest.LoadTest.Initializer"></a>
 
@@ -27,6 +27,7 @@ LoadTest.Builder.create(Construct scope, java.lang.String id)
     .name(java.lang.String)
     .resourceGroupName(java.lang.String)
 //  .description(java.lang.String)
+//  .encryption(LoadTestEncryption)
 //  .id(java.lang.String)
 //  .identity(LoadTestIdentity)
 //  .tags(java.util.Map<java.lang.String, java.lang.String>)
@@ -45,13 +46,14 @@ LoadTest.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#location LoadTest#location}. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#name LoadTest#name}. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#resource_group_name LoadTest#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#description LoadTest#description}. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#id LoadTest#id}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#location LoadTest#location}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#name LoadTest#name}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#resource_group_name LoadTest#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#description LoadTest#description}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.encryption">encryption</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryption">LoadTestEncryption</a></code> | encryption block. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#id LoadTest#id}. |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestIdentity">LoadTestIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#tags LoadTest#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#tags LoadTest#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestTimeouts">LoadTestTimeouts</a></code> | timeouts block. |
 
 ---
@@ -120,7 +122,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#location LoadTest#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#location LoadTest#location}.
 
 ---
 
@@ -128,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#name LoadTest#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#name LoadTest#name}.
 
 ---
 
@@ -136,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#resource_group_name LoadTest#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#resource_group_name LoadTest#resource_group_name}.
 
 ---
 
@@ -144,7 +146,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#description LoadTest#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#description LoadTest#description}.
+
+---
+
+##### `encryption`<sup>Optional</sup> <a name="encryption" id="@cdktf/provider-azurerm.loadTest.LoadTest.Initializer.parameter.encryption"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryption">LoadTestEncryption</a>
+
+encryption block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#encryption LoadTest#encryption}
 
 ---
 
@@ -152,7 +164,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#id LoadTest#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#id LoadTest#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -165,7 +177,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#identity LoadTest#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#identity LoadTest#identity}
 
 ---
 
@@ -173,7 +185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#tags LoadTest#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#tags LoadTest#tags}.
 
 ---
 
@@ -183,7 +195,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#timeouts LoadTest#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#timeouts LoadTest#timeouts}
 
 ---
 
@@ -214,9 +226,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.moveFromId">moveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.moveTo">moveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.putEncryption">putEncryption</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.putIdentity">putIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.putTimeouts">putTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.resetDescription">resetDescription</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.resetEncryption">resetEncryption</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.resetIdentity">resetIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.resetTags">resetTags</a></code> | *No description.* |
@@ -514,6 +528,18 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
+##### `putEncryption` <a name="putEncryption" id="@cdktf/provider-azurerm.loadTest.LoadTest.putEncryption"></a>
+
+```java
+public void putEncryption(LoadTestEncryption value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.loadTest.LoadTest.putEncryption.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryption">LoadTestEncryption</a>
+
+---
+
 ##### `putIdentity` <a name="putIdentity" id="@cdktf/provider-azurerm.loadTest.LoadTest.putIdentity"></a>
 
 ```java
@@ -542,6 +568,12 @@ public void putTimeouts(LoadTestTimeouts value)
 
 ```java
 public void resetDescription()
+```
+
+##### `resetEncryption` <a name="resetEncryption" id="@cdktf/provider-azurerm.loadTest.LoadTest.resetEncryption"></a>
+
+```java
+public void resetEncryption()
 ```
 
 ##### `resetId` <a name="resetId" id="@cdktf/provider-azurerm.loadTest.LoadTest.resetId"></a>
@@ -671,7 +703,7 @@ The construct id used in the generated config for the LoadTest to import.
 
 The id of the existing LoadTest that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -702,9 +734,11 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.property.dataPlaneUri">dataPlaneUri</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.property.encryption">encryption</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference">LoadTestEncryptionOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestIdentityOutputReference">LoadTestIdentityOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestTimeoutsOutputReference">LoadTestTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.property.descriptionInput">descriptionInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.property.encryptionInput">encryptionInput</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryption">LoadTestEncryption</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.property.identityInput">identityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestIdentity">LoadTestIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTest.property.locationInput">locationInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -873,6 +907,16 @@ public java.lang.String getDataPlaneUri();
 
 ---
 
+##### `encryption`<sup>Required</sup> <a name="encryption" id="@cdktf/provider-azurerm.loadTest.LoadTest.property.encryption"></a>
+
+```java
+public LoadTestEncryptionOutputReference getEncryption();
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference">LoadTestEncryptionOutputReference</a>
+
+---
+
 ##### `identity`<sup>Required</sup> <a name="identity" id="@cdktf/provider-azurerm.loadTest.LoadTest.property.identity"></a>
 
 ```java
@@ -900,6 +944,16 @@ public java.lang.String getDescriptionInput();
 ```
 
 - *Type:* java.lang.String
+
+---
+
+##### `encryptionInput`<sup>Optional</sup> <a name="encryptionInput" id="@cdktf/provider-azurerm.loadTest.LoadTest.property.encryptionInput"></a>
+
+```java
+public LoadTestEncryption getEncryptionInput();
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryption">LoadTestEncryption</a>
 
 ---
 
@@ -1076,6 +1130,7 @@ LoadTestConfig.builder()
     .name(java.lang.String)
     .resourceGroupName(java.lang.String)
 //  .description(java.lang.String)
+//  .encryption(LoadTestEncryption)
 //  .id(java.lang.String)
 //  .identity(LoadTestIdentity)
 //  .tags(java.util.Map<java.lang.String, java.lang.String>)
@@ -1094,13 +1149,14 @@ LoadTestConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#location LoadTest#location}. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#name LoadTest#name}. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#resource_group_name LoadTest#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#description LoadTest#description}. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#id LoadTest#id}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#location LoadTest#location}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#name LoadTest#name}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#resource_group_name LoadTest#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#description LoadTest#description}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.encryption">encryption</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryption">LoadTestEncryption</a></code> | encryption block. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#id LoadTest#id}. |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestIdentity">LoadTestIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#tags LoadTest#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#tags LoadTest#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestTimeouts">LoadTestTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1183,7 +1239,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#location LoadTest#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#location LoadTest#location}.
 
 ---
 
@@ -1195,7 +1251,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#name LoadTest#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#name LoadTest#name}.
 
 ---
 
@@ -1207,7 +1263,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#resource_group_name LoadTest#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#resource_group_name LoadTest#resource_group_name}.
 
 ---
 
@@ -1219,7 +1275,21 @@ public java.lang.String getDescription();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#description LoadTest#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#description LoadTest#description}.
+
+---
+
+##### `encryption`<sup>Optional</sup> <a name="encryption" id="@cdktf/provider-azurerm.loadTest.LoadTestConfig.property.encryption"></a>
+
+```java
+public LoadTestEncryption getEncryption();
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryption">LoadTestEncryption</a>
+
+encryption block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#encryption LoadTest#encryption}
 
 ---
 
@@ -1231,7 +1301,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#id LoadTest#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#id LoadTest#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1248,7 +1318,7 @@ public LoadTestIdentity getIdentity();
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#identity LoadTest#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#identity LoadTest#identity}
 
 ---
 
@@ -1260,7 +1330,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTags();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#tags LoadTest#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#tags LoadTest#tags}.
 
 ---
 
@@ -1274,7 +1344,101 @@ public LoadTestTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#timeouts LoadTest#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#timeouts LoadTest#timeouts}
+
+---
+
+### LoadTestEncryption <a name="LoadTestEncryption" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryption"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryption.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.azurerm.load_test.LoadTestEncryption;
+
+LoadTestEncryption.builder()
+    .identity(LoadTestEncryptionIdentity)
+    .keyUrl(java.lang.String)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryption.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentity">LoadTestEncryptionIdentity</a></code> | identity block. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryption.property.keyUrl">keyUrl</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#key_url LoadTest#key_url}. |
+
+---
+
+##### `identity`<sup>Required</sup> <a name="identity" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryption.property.identity"></a>
+
+```java
+public LoadTestEncryptionIdentity getIdentity();
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentity">LoadTestEncryptionIdentity</a>
+
+identity block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#identity LoadTest#identity}
+
+---
+
+##### `keyUrl`<sup>Required</sup> <a name="keyUrl" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryption.property.keyUrl"></a>
+
+```java
+public java.lang.String getKeyUrl();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#key_url LoadTest#key_url}.
+
+---
+
+### LoadTestEncryptionIdentity <a name="LoadTestEncryptionIdentity" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentity"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentity.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.azurerm.load_test.LoadTestEncryptionIdentity;
+
+LoadTestEncryptionIdentity.builder()
+    .identityId(java.lang.String)
+    .type(java.lang.String)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentity.property.identityId">identityId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#identity_id LoadTest#identity_id}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentity.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#type LoadTest#type}. |
+
+---
+
+##### `identityId`<sup>Required</sup> <a name="identityId" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentity.property.identityId"></a>
+
+```java
+public java.lang.String getIdentityId();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#identity_id LoadTest#identity_id}.
+
+---
+
+##### `type`<sup>Required</sup> <a name="type" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentity.property.type"></a>
+
+```java
+public java.lang.String getType();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#type LoadTest#type}.
 
 ---
 
@@ -1295,8 +1459,8 @@ LoadTestIdentity.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestIdentity.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#type LoadTest#type}. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestIdentity.property.identityIds">identityIds</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#identity_ids LoadTest#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestIdentity.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#type LoadTest#type}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestIdentity.property.identityIds">identityIds</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#identity_ids LoadTest#identity_ids}. |
 
 ---
 
@@ -1308,7 +1472,7 @@ public java.lang.String getType();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#type LoadTest#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#type LoadTest#type}.
 
 ---
 
@@ -1320,7 +1484,7 @@ public java.util.List<java.lang.String> getIdentityIds();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#identity_ids LoadTest#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#identity_ids LoadTest#identity_ids}.
 
 ---
 
@@ -1343,10 +1507,10 @@ LoadTestTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#create LoadTest#create}. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#delete LoadTest#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#read LoadTest#read}. |
-| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#update LoadTest#update}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#create LoadTest#create}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#delete LoadTest#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#read LoadTest#read}. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#update LoadTest#update}. |
 
 ---
 
@@ -1358,7 +1522,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#create LoadTest#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#create LoadTest#create}.
 
 ---
 
@@ -1370,7 +1534,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#delete LoadTest#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#delete LoadTest#delete}.
 
 ---
 
@@ -1382,7 +1546,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#read LoadTest#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#read LoadTest#read}.
 
 ---
 
@@ -1394,11 +1558,610 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/load_test#update LoadTest#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/load_test#update LoadTest#update}.
 
 ---
 
 ## Classes <a name="Classes" id="Classes"></a>
+
+### LoadTestEncryptionIdentityOutputReference <a name="LoadTestEncryptionIdentityOutputReference" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.azurerm.load_test.LoadTestEncryptionIdentityOutputReference;
+
+new LoadTestEncryptionIdentityOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.identityIdInput">identityIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.typeInput">typeInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.identityId">identityId</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.type">type</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentity">LoadTestEncryptionIdentity</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `identityIdInput`<sup>Optional</sup> <a name="identityIdInput" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.identityIdInput"></a>
+
+```java
+public java.lang.String getIdentityIdInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `typeInput`<sup>Optional</sup> <a name="typeInput" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.typeInput"></a>
+
+```java
+public java.lang.String getTypeInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `identityId`<sup>Required</sup> <a name="identityId" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.identityId"></a>
+
+```java
+public java.lang.String getIdentityId();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `type`<sup>Required</sup> <a name="type" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.type"></a>
+
+```java
+public java.lang.String getType();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference.property.internalValue"></a>
+
+```java
+public LoadTestEncryptionIdentity getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentity">LoadTestEncryptionIdentity</a>
+
+---
+
+
+### LoadTestEncryptionOutputReference <a name="LoadTestEncryptionOutputReference" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.azurerm.load_test.LoadTestEncryptionOutputReference;
+
+new LoadTestEncryptionOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.putIdentity">putIdentity</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `putIdentity` <a name="putIdentity" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.putIdentity"></a>
+
+```java
+public void putIdentity(LoadTestEncryptionIdentity value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.putIdentity.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentity">LoadTestEncryptionIdentity</a>
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference">LoadTestEncryptionIdentityOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.identityInput">identityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentity">LoadTestEncryptionIdentity</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.keyUrlInput">keyUrlInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.keyUrl">keyUrl</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryption">LoadTestEncryption</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `identity`<sup>Required</sup> <a name="identity" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.identity"></a>
+
+```java
+public LoadTestEncryptionIdentityOutputReference getIdentity();
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentityOutputReference">LoadTestEncryptionIdentityOutputReference</a>
+
+---
+
+##### `identityInput`<sup>Optional</sup> <a name="identityInput" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.identityInput"></a>
+
+```java
+public LoadTestEncryptionIdentity getIdentityInput();
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryptionIdentity">LoadTestEncryptionIdentity</a>
+
+---
+
+##### `keyUrlInput`<sup>Optional</sup> <a name="keyUrlInput" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.keyUrlInput"></a>
+
+```java
+public java.lang.String getKeyUrlInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `keyUrl`<sup>Required</sup> <a name="keyUrl" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.keyUrl"></a>
+
+```java
+public java.lang.String getKeyUrl();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.loadTest.LoadTestEncryptionOutputReference.property.internalValue"></a>
+
+```java
+public LoadTestEncryption getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.loadTest.LoadTestEncryption">LoadTestEncryption</a>
+
+---
+
 
 ### LoadTestIdentityOutputReference <a name="LoadTestIdentityOutputReference" id="@cdktf/provider-azurerm.loadTest.LoadTestIdentityOutputReference"></a>
 

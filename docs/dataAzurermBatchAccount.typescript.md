@@ -4,7 +4,7 @@
 
 ### DataAzurermBatchAccount <a name="DataAzurermBatchAccount" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account azurerm_batch_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/batch_account azurerm_batch_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.Initializer"></a>
 
@@ -67,9 +67,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.getStringAttribute">getStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.putEncryption">putEncryption</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.putTimeouts">putTimeouts</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.resetEncryption">resetEncryption</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.resetTimeouts">resetTimeouts</a></code> | *No description.* |
 
@@ -267,18 +265,6 @@ public interpolationForAttribute(terraformAttribute: string): IResolvable
 
 ---
 
-##### `putEncryption` <a name="putEncryption" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.putEncryption"></a>
-
-```typescript
-public putEncryption(value: IResolvable | DataAzurermBatchAccountEncryption[]): void
-```
-
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.putEncryption.parameter.value"></a>
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption">DataAzurermBatchAccountEncryption</a>[]
-
----
-
 ##### `putTimeouts` <a name="putTimeouts" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.putTimeouts"></a>
 
 ```typescript
@@ -290,12 +276,6 @@ public putTimeouts(value: DataAzurermBatchAccountTimeouts): void
 - *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountTimeouts">DataAzurermBatchAccountTimeouts</a>
 
 ---
-
-##### `resetEncryption` <a name="resetEncryption" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.resetEncryption"></a>
-
-```typescript
-public resetEncryption(): void
-```
 
 ##### `resetId` <a name="resetId" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.resetId"></a>
 
@@ -412,7 +392,7 @@ The construct id used in the generated config for the DataAzurermBatchAccount to
 
 The id of the existing DataAzurermBatchAccount that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/batch_account#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -450,7 +430,6 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.property.storageAccountId">storageAccountId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.property.tags">tags</a></code> | <code>cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountTimeoutsOutputReference">DataAzurermBatchAccountTimeoutsOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.property.encryptionInput">encryptionInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption">DataAzurermBatchAccountEncryption</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
@@ -683,16 +662,6 @@ public readonly timeouts: DataAzurermBatchAccountTimeoutsOutputReference;
 
 ---
 
-##### `encryptionInput`<sup>Optional</sup> <a name="encryptionInput" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.property.encryptionInput"></a>
-
-```typescript
-public readonly encryptionInput: IResolvable | DataAzurermBatchAccountEncryption[];
-```
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption">DataAzurermBatchAccountEncryption</a>[]
-
----
-
 ##### `idInput`<sup>Optional</sup> <a name="idInput" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.property.idInput"></a>
 
 ```typescript
@@ -804,10 +773,9 @@ const dataAzurermBatchAccountConfig: dataAzurermBatchAccount.DataAzurermBatchAcc
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#name DataAzurermBatchAccount#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#resource_group_name DataAzurermBatchAccount#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountConfig.property.encryption">encryption</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption">DataAzurermBatchAccountEncryption</a>[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#encryption DataAzurermBatchAccount#encryption}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#id DataAzurermBatchAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/batch_account#name DataAzurermBatchAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/batch_account#resource_group_name DataAzurermBatchAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/batch_account#id DataAzurermBatchAccount#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountTimeouts">DataAzurermBatchAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -890,7 +858,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#name DataAzurermBatchAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/batch_account#name DataAzurermBatchAccount#name}.
 
 ---
 
@@ -902,19 +870,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#resource_group_name DataAzurermBatchAccount#resource_group_name}.
-
----
-
-##### `encryption`<sup>Optional</sup> <a name="encryption" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountConfig.property.encryption"></a>
-
-```typescript
-public readonly encryption: IResolvable | DataAzurermBatchAccountEncryption[];
-```
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption">DataAzurermBatchAccountEncryption</a>[]
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#encryption DataAzurermBatchAccount#encryption}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/batch_account#resource_group_name DataAzurermBatchAccount#resource_group_name}.
 
 ---
 
@@ -926,7 +882,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#id DataAzurermBatchAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/batch_account#id DataAzurermBatchAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -943,7 +899,7 @@ public readonly timeouts: DataAzurermBatchAccountTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#timeouts DataAzurermBatchAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/batch_account#timeouts DataAzurermBatchAccount#timeouts}
 
 ---
 
@@ -957,25 +913,6 @@ import { dataAzurermBatchAccount } from '@cdktf/provider-azurerm'
 const dataAzurermBatchAccountEncryption: dataAzurermBatchAccount.DataAzurermBatchAccountEncryption = { ... }
 ```
 
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption.property.keyVaultKeyId">keyVaultKeyId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#key_vault_key_id DataAzurermBatchAccount#key_vault_key_id}. |
-
----
-
-##### `keyVaultKeyId`<sup>Optional</sup> <a name="keyVaultKeyId" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption.property.keyVaultKeyId"></a>
-
-```typescript
-public readonly keyVaultKeyId: string;
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#key_vault_key_id DataAzurermBatchAccount#key_vault_key_id}.
-
----
 
 ### DataAzurermBatchAccountKeyVaultReference <a name="DataAzurermBatchAccountKeyVaultReference" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountKeyVaultReference"></a>
 
@@ -1002,7 +939,7 @@ const dataAzurermBatchAccountTimeouts: dataAzurermBatchAccount.DataAzurermBatchA
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#read DataAzurermBatchAccount#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/batch_account#read DataAzurermBatchAccount#read}. |
 
 ---
 
@@ -1014,7 +951,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/batch_account#read DataAzurermBatchAccount#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/batch_account#read DataAzurermBatchAccount#read}.
 
 ---
 
@@ -1141,7 +1078,6 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionList.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionList.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionList.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption">DataAzurermBatchAccountEncryption</a>[]</code> | *No description.* |
 
 ---
 
@@ -1166,16 +1102,6 @@ public readonly fqn: string;
 ```
 
 - *Type:* string
-
----
-
-##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionList.property.internalValue"></a>
-
-```typescript
-public readonly internalValue: IResolvable | DataAzurermBatchAccountEncryption[];
-```
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption">DataAzurermBatchAccountEncryption</a>[]
 
 ---
 
@@ -1248,7 +1174,6 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.resetKeyVaultKeyId">resetKeyVaultKeyId</a></code> | *No description.* |
 
 ---
 
@@ -1402,12 +1327,6 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `resetKeyVaultKeyId` <a name="resetKeyVaultKeyId" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.resetKeyVaultKeyId"></a>
-
-```typescript
-public resetKeyVaultKeyId(): void
-```
-
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -1415,9 +1334,8 @@ public resetKeyVaultKeyId(): void
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.property.keyVaultKeyIdInput">keyVaultKeyIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.property.keyVaultKeyId">keyVaultKeyId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption">DataAzurermBatchAccountEncryption</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption">DataAzurermBatchAccountEncryption</a></code> | *No description.* |
 
 ---
 
@@ -1445,16 +1363,6 @@ public readonly fqn: string;
 
 ---
 
-##### `keyVaultKeyIdInput`<sup>Optional</sup> <a name="keyVaultKeyIdInput" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.property.keyVaultKeyIdInput"></a>
-
-```typescript
-public readonly keyVaultKeyIdInput: string;
-```
-
-- *Type:* string
-
----
-
 ##### `keyVaultKeyId`<sup>Required</sup> <a name="keyVaultKeyId" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.property.keyVaultKeyId"></a>
 
 ```typescript
@@ -1468,10 +1376,10 @@ public readonly keyVaultKeyId: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: IResolvable | DataAzurermBatchAccountEncryption;
+public readonly internalValue: DataAzurermBatchAccountEncryption;
 ```
 
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption">DataAzurermBatchAccountEncryption</a>
+- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption">DataAzurermBatchAccountEncryption</a>
 
 ---
 

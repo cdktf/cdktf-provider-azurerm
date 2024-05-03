@@ -1,3 +1,3 @@
 # `data_azurerm_client_config`
 
-Refer to the Terraform Registry for docs: [`data_azurerm_client_config`](https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/client_config).
+Refer to the Terraform Registry for docs: [`data_azurerm_client_config`](https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/client_config).

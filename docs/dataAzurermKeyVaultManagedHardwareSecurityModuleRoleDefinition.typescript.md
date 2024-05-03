@@ -4,7 +4,7 @@
 
 ### DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition <a name="DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition azurerm_key_vault_managed_hardware_security_module_role_definition}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition azurerm_key_vault_managed_hardware_security_module_role_definition}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.Initializer"></a>
 
@@ -69,7 +69,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.putTimeouts">putTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.resetId">resetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.resetManagedHsmId">resetManagedHsmId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.resetTimeouts">resetTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.resetVaultBaseUrl">resetVaultBaseUrl</a></code> | *No description.* |
 
 ---
 
@@ -283,10 +285,22 @@ public putTimeouts(value: DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDe
 public resetId(): void
 ```
 
+##### `resetManagedHsmId` <a name="resetManagedHsmId" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.resetManagedHsmId"></a>
+
+```typescript
+public resetManagedHsmId(): void
+```
+
 ##### `resetTimeouts` <a name="resetTimeouts" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.resetTimeouts"></a>
 
 ```typescript
 public resetTimeouts(): void
+```
+
+##### `resetVaultBaseUrl` <a name="resetVaultBaseUrl" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.resetVaultBaseUrl"></a>
+
+```typescript
+public resetVaultBaseUrl(): void
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
@@ -392,7 +406,7 @@ The construct id used in the generated config for the DataAzurermKeyVaultManaged
 
 The id of the existing DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -428,10 +442,12 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.roleType">roleType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeoutsOutputReference">DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.managedHsmIdInput">managedHsmIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeouts">DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.vaultBaseUrlInput">vaultBaseUrlInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.managedHsmId">managedHsmId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.vaultBaseUrl">vaultBaseUrl</a></code> | <code>string</code> | *No description.* |
 
@@ -639,6 +655,16 @@ public readonly idInput: string;
 
 ---
 
+##### `managedHsmIdInput`<sup>Optional</sup> <a name="managedHsmIdInput" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.managedHsmIdInput"></a>
+
+```typescript
+public readonly managedHsmIdInput: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `nameInput`<sup>Optional</sup> <a name="nameInput" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.nameInput"></a>
 
 ```typescript
@@ -673,6 +699,16 @@ public readonly vaultBaseUrlInput: string;
 
 ```typescript
 public readonly id: string;
+```
+
+- *Type:* string
+
+---
+
+##### `managedHsmId`<sup>Required</sup> <a name="managedHsmId" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.property.managedHsmId"></a>
+
+```typescript
+public readonly managedHsmId: string;
 ```
 
 - *Type:* string
@@ -740,10 +776,11 @@ const dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig: data
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#name DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.vaultBaseUrl">vaultBaseUrl</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#vault_base_url DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#vault_base_url}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#id DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#name DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#id DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.managedHsmId">managedHsmId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#managed_hsm_id DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#managed_hsm_id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeouts">DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeouts</a></code> | timeouts block. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.vaultBaseUrl">vaultBaseUrl</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#vault_base_url DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#vault_base_url}. |
 
 ---
 
@@ -825,19 +862,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#name DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#name}.
-
----
-
-##### `vaultBaseUrl`<sup>Required</sup> <a name="vaultBaseUrl" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.vaultBaseUrl"></a>
-
-```typescript
-public readonly vaultBaseUrl: string;
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#vault_base_url DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#vault_base_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#name DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#name}.
 
 ---
 
@@ -849,10 +874,22 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#id DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#id DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `managedHsmId`<sup>Optional</sup> <a name="managedHsmId" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.managedHsmId"></a>
+
+```typescript
+public readonly managedHsmId: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#managed_hsm_id DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#managed_hsm_id}.
 
 ---
 
@@ -866,7 +903,19 @@ public readonly timeouts: DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDe
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#timeouts DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#timeouts DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#timeouts}
+
+---
+
+##### `vaultBaseUrl`<sup>Optional</sup> <a name="vaultBaseUrl" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig.property.vaultBaseUrl"></a>
+
+```typescript
+public readonly vaultBaseUrl: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#vault_base_url DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#vault_base_url}.
 
 ---
 
@@ -895,7 +944,7 @@ const dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeouts: da
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#read DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition.DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#read DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#read}. |
 
 ---
 
@@ -907,7 +956,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#read DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#read DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#read}.
 
 ---
 

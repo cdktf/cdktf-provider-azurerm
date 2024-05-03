@@ -4,7 +4,7 @@
 
 ### DataAzurermProximityPlacementGroup <a name="DataAzurermProximityPlacementGroup" id="@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/proximity_placement_group azurerm_proximity_placement_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/proximity_placement_group azurerm_proximity_placement_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroup.Initializer"></a>
 
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermProximityPlacem
 
 The id of the existing DataAzurermProximityPlacementGroup that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/proximity_placement_group#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/proximity_placement_group#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -708,9 +708,9 @@ new DataAzurermProximityPlacementGroupConfig {
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/proximity_placement_group#name DataAzurermProximityPlacementGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/proximity_placement_group#resource_group_name DataAzurermProximityPlacementGroup#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/proximity_placement_group#id DataAzurermProximityPlacementGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/proximity_placement_group#name DataAzurermProximityPlacementGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/proximity_placement_group#resource_group_name DataAzurermProximityPlacementGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/proximity_placement_group#id DataAzurermProximityPlacementGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupTimeouts">DataAzurermProximityPlacementGroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -793,7 +793,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/proximity_placement_group#name DataAzurermProximityPlacementGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/proximity_placement_group#name DataAzurermProximityPlacementGroup#name}.
 
 ---
 
@@ -805,7 +805,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/proximity_placement_group#resource_group_name DataAzurermProximityPlacementGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/proximity_placement_group#resource_group_name DataAzurermProximityPlacementGroup#resource_group_name}.
 
 ---
 
@@ -817,7 +817,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/proximity_placement_group#id DataAzurermProximityPlacementGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/proximity_placement_group#id DataAzurermProximityPlacementGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -834,7 +834,7 @@ public DataAzurermProximityPlacementGroupTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/proximity_placement_group#timeouts DataAzurermProximityPlacementGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/proximity_placement_group#timeouts DataAzurermProximityPlacementGroup#timeouts}
 
 ---
 
@@ -854,7 +854,7 @@ new DataAzurermProximityPlacementGroupTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/proximity_placement_group#read DataAzurermProximityPlacementGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/proximity_placement_group#read DataAzurermProximityPlacementGroup#read}. |
 
 ---
 
@@ -866,7 +866,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/proximity_placement_group#read DataAzurermProximityPlacementGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/proximity_placement_group#read DataAzurermProximityPlacementGroup#read}.
 
 ---
 

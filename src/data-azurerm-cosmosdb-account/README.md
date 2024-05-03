@@ -1,3 +1,3 @@
 # `data_azurerm_cosmosdb_account`
 
-Refer to the Terraform Registry for docs: [`data_azurerm_cosmosdb_account`](https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/data-sources/cosmosdb_account).
+Refer to the Terraform Registry for docs: [`data_azurerm_cosmosdb_account`](https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/cosmosdb_account).

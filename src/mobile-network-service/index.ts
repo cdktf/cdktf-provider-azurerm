@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,58 +8,58 @@ import * as cdktf from 'cdktf';
 
 export interface MobileNetworkServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#id MobileNetworkService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#id MobileNetworkService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#location MobileNetworkService#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#location MobileNetworkService#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#mobile_network_id MobileNetworkService#mobile_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#mobile_network_id MobileNetworkService#mobile_network_id}
   */
   readonly mobileNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#name MobileNetworkService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#name MobileNetworkService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#service_precedence MobileNetworkService#service_precedence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#service_precedence MobileNetworkService#service_precedence}
   */
   readonly servicePrecedence: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#tags MobileNetworkService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#tags MobileNetworkService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * pcc_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#pcc_rule MobileNetworkService#pcc_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#pcc_rule MobileNetworkService#pcc_rule}
   */
   readonly pccRule: MobileNetworkServicePccRule[] | cdktf.IResolvable;
   /**
   * service_qos_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#service_qos_policy MobileNetworkService#service_qos_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#service_qos_policy MobileNetworkService#service_qos_policy}
   */
   readonly serviceQosPolicy?: MobileNetworkServiceServiceQosPolicy;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#timeouts MobileNetworkService#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#timeouts MobileNetworkService#timeouts}
   */
   readonly timeouts?: MobileNetworkServiceTimeouts;
 }
 export interface MobileNetworkServicePccRuleQosPolicyGuaranteedBitRate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#downlink MobileNetworkService#downlink}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#downlink MobileNetworkService#downlink}
   */
   readonly downlink: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#uplink MobileNetworkService#uplink}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#uplink MobileNetworkService#uplink}
   */
   readonly uplink: string;
 }
@@ -171,11 +166,11 @@ export class MobileNetworkServicePccRuleQosPolicyGuaranteedBitRateOutputReferenc
 }
 export interface MobileNetworkServicePccRuleQosPolicyMaximumBitRate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#downlink MobileNetworkService#downlink}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#downlink MobileNetworkService#downlink}
   */
   readonly downlink: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#uplink MobileNetworkService#uplink}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#uplink MobileNetworkService#uplink}
   */
   readonly uplink: string;
 }
@@ -282,31 +277,31 @@ export class MobileNetworkServicePccRuleQosPolicyMaximumBitRateOutputReference e
 }
 export interface MobileNetworkServicePccRuleQosPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#allocation_and_retention_priority_level MobileNetworkService#allocation_and_retention_priority_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#allocation_and_retention_priority_level MobileNetworkService#allocation_and_retention_priority_level}
   */
   readonly allocationAndRetentionPriorityLevel?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#preemption_capability MobileNetworkService#preemption_capability}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#preemption_capability MobileNetworkService#preemption_capability}
   */
   readonly preemptionCapability?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#preemption_vulnerability MobileNetworkService#preemption_vulnerability}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#preemption_vulnerability MobileNetworkService#preemption_vulnerability}
   */
   readonly preemptionVulnerability?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#qos_indicator MobileNetworkService#qos_indicator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#qos_indicator MobileNetworkService#qos_indicator}
   */
   readonly qosIndicator: number;
   /**
   * guaranteed_bit_rate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#guaranteed_bit_rate MobileNetworkService#guaranteed_bit_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#guaranteed_bit_rate MobileNetworkService#guaranteed_bit_rate}
   */
   readonly guaranteedBitRate?: MobileNetworkServicePccRuleQosPolicyGuaranteedBitRate;
   /**
   * maximum_bit_rate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#maximum_bit_rate MobileNetworkService#maximum_bit_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#maximum_bit_rate MobileNetworkService#maximum_bit_rate}
   */
   readonly maximumBitRate: MobileNetworkServicePccRuleQosPolicyMaximumBitRate;
 }
@@ -529,23 +524,23 @@ export class MobileNetworkServicePccRuleQosPolicyOutputReference extends cdktf.C
 }
 export interface MobileNetworkServicePccRuleServiceDataFlowTemplate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#direction MobileNetworkService#direction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#direction MobileNetworkService#direction}
   */
   readonly direction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#name MobileNetworkService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#name MobileNetworkService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#ports MobileNetworkService#ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#ports MobileNetworkService#ports}
   */
   readonly ports?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#protocol MobileNetworkService#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#protocol MobileNetworkService#protocol}
   */
   readonly protocol: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#remote_ip_list MobileNetworkService#remote_ip_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#remote_ip_list MobileNetworkService#remote_ip_list}
   */
   readonly remoteIpList: string[];
 }
@@ -765,27 +760,27 @@ export class MobileNetworkServicePccRuleServiceDataFlowTemplateList extends cdkt
 }
 export interface MobileNetworkServicePccRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#name MobileNetworkService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#name MobileNetworkService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#precedence MobileNetworkService#precedence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#precedence MobileNetworkService#precedence}
   */
   readonly precedence: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#traffic_control_enabled MobileNetworkService#traffic_control_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#traffic_control_enabled MobileNetworkService#traffic_control_enabled}
   */
   readonly trafficControlEnabled?: boolean | cdktf.IResolvable;
   /**
   * qos_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#qos_policy MobileNetworkService#qos_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#qos_policy MobileNetworkService#qos_policy}
   */
   readonly qosPolicy?: MobileNetworkServicePccRuleQosPolicy;
   /**
   * service_data_flow_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#service_data_flow_template MobileNetworkService#service_data_flow_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#service_data_flow_template MobileNetworkService#service_data_flow_template}
   */
   readonly serviceDataFlowTemplate: MobileNetworkServicePccRuleServiceDataFlowTemplate[] | cdktf.IResolvable;
 }
@@ -1008,11 +1003,11 @@ export class MobileNetworkServicePccRuleList extends cdktf.ComplexList {
 }
 export interface MobileNetworkServiceServiceQosPolicyMaximumBitRate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#downlink MobileNetworkService#downlink}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#downlink MobileNetworkService#downlink}
   */
   readonly downlink: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#uplink MobileNetworkService#uplink}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#uplink MobileNetworkService#uplink}
   */
   readonly uplink: string;
 }
@@ -1119,25 +1114,25 @@ export class MobileNetworkServiceServiceQosPolicyMaximumBitRateOutputReference e
 }
 export interface MobileNetworkServiceServiceQosPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#allocation_and_retention_priority_level MobileNetworkService#allocation_and_retention_priority_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#allocation_and_retention_priority_level MobileNetworkService#allocation_and_retention_priority_level}
   */
   readonly allocationAndRetentionPriorityLevel?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#preemption_capability MobileNetworkService#preemption_capability}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#preemption_capability MobileNetworkService#preemption_capability}
   */
   readonly preemptionCapability?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#preemption_vulnerability MobileNetworkService#preemption_vulnerability}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#preemption_vulnerability MobileNetworkService#preemption_vulnerability}
   */
   readonly preemptionVulnerability?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#qos_indicator MobileNetworkService#qos_indicator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#qos_indicator MobileNetworkService#qos_indicator}
   */
   readonly qosIndicator?: number;
   /**
   * maximum_bit_rate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#maximum_bit_rate MobileNetworkService#maximum_bit_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#maximum_bit_rate MobileNetworkService#maximum_bit_rate}
   */
   readonly maximumBitRate: MobileNetworkServiceServiceQosPolicyMaximumBitRate;
 }
@@ -1334,19 +1329,19 @@ export class MobileNetworkServiceServiceQosPolicyOutputReference extends cdktf.C
 }
 export interface MobileNetworkServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#create MobileNetworkService#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#create MobileNetworkService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#delete MobileNetworkService#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#delete MobileNetworkService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#read MobileNetworkService#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#read MobileNetworkService#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#update MobileNetworkService#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#update MobileNetworkService#update}
   */
   readonly update?: string;
 }
@@ -1527,7 +1522,7 @@ export class MobileNetworkServiceTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service azurerm_mobile_network_service}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service azurerm_mobile_network_service}
 */
 export class MobileNetworkService extends cdktf.TerraformResource {
 
@@ -1543,7 +1538,7 @@ export class MobileNetworkService extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MobileNetworkService resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MobileNetworkService to import
-  * @param importFromId The id of the existing MobileNetworkService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MobileNetworkService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MobileNetworkService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1555,7 +1550,7 @@ export class MobileNetworkService extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.101.0/docs/resources/mobile_network_service azurerm_mobile_network_service} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/mobile_network_service azurerm_mobile_network_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1566,7 +1561,7 @@ export class MobileNetworkService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mobile_network_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.101.0',
+        providerVersion: '3.102.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
