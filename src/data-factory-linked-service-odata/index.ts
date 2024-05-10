@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,64 +8,64 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryLinkedServiceOdataConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#additional_properties DataFactoryLinkedServiceOdata#additional_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#additional_properties DataFactoryLinkedServiceOdata#additional_properties}
   */
   readonly additionalProperties?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#annotations DataFactoryLinkedServiceOdata#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#annotations DataFactoryLinkedServiceOdata#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#data_factory_id DataFactoryLinkedServiceOdata#data_factory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#data_factory_id DataFactoryLinkedServiceOdata#data_factory_id}
   */
   readonly dataFactoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#description DataFactoryLinkedServiceOdata#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#description DataFactoryLinkedServiceOdata#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#id DataFactoryLinkedServiceOdata#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#id DataFactoryLinkedServiceOdata#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#integration_runtime_name DataFactoryLinkedServiceOdata#integration_runtime_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#integration_runtime_name DataFactoryLinkedServiceOdata#integration_runtime_name}
   */
   readonly integrationRuntimeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#name DataFactoryLinkedServiceOdata#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#name DataFactoryLinkedServiceOdata#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#parameters DataFactoryLinkedServiceOdata#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#parameters DataFactoryLinkedServiceOdata#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#url DataFactoryLinkedServiceOdata#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#url DataFactoryLinkedServiceOdata#url}
   */
   readonly url: string;
   /**
   * basic_authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#basic_authentication DataFactoryLinkedServiceOdata#basic_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#basic_authentication DataFactoryLinkedServiceOdata#basic_authentication}
   */
   readonly basicAuthentication?: DataFactoryLinkedServiceOdataBasicAuthentication;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#timeouts DataFactoryLinkedServiceOdata#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#timeouts DataFactoryLinkedServiceOdata#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceOdataTimeouts;
 }
 export interface DataFactoryLinkedServiceOdataBasicAuthentication {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#password DataFactoryLinkedServiceOdata#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#password DataFactoryLinkedServiceOdata#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#username DataFactoryLinkedServiceOdata#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#username DataFactoryLinkedServiceOdata#username}
   */
   readonly username: string;
 }
@@ -177,19 +172,19 @@ export class DataFactoryLinkedServiceOdataBasicAuthenticationOutputReference ext
 }
 export interface DataFactoryLinkedServiceOdataTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#create DataFactoryLinkedServiceOdata#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#create DataFactoryLinkedServiceOdata#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#delete DataFactoryLinkedServiceOdata#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#delete DataFactoryLinkedServiceOdata#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#read DataFactoryLinkedServiceOdata#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#read DataFactoryLinkedServiceOdata#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#update DataFactoryLinkedServiceOdata#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#update DataFactoryLinkedServiceOdata#update}
   */
   readonly update?: string;
 }
@@ -370,7 +365,7 @@ export class DataFactoryLinkedServiceOdataTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata azurerm_data_factory_linked_service_odata}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata azurerm_data_factory_linked_service_odata}
 */
 export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
 
@@ -386,7 +381,7 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataFactoryLinkedServiceOdata resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataFactoryLinkedServiceOdata to import
-  * @param importFromId The id of the existing DataFactoryLinkedServiceOdata that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataFactoryLinkedServiceOdata that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataFactoryLinkedServiceOdata to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -398,7 +393,7 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/data_factory_linked_service_odata azurerm_data_factory_linked_service_odata} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/data_factory_linked_service_odata azurerm_data_factory_linked_service_odata} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -409,7 +404,7 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_linked_service_odata',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.102.0',
+        providerVersion: '3.103.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

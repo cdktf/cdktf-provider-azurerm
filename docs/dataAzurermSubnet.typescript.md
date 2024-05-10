@@ -4,7 +4,7 @@
 
 ### DataAzurermSubnet <a name="DataAzurermSubnet" id="@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnet"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/subnet azurerm_subnet}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/subnet azurerm_subnet}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnet.Initializer"></a>
 
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermSubnet to impor
 
 The id of the existing DataAzurermSubnet that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/subnet#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/subnet#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -425,6 +425,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnet.property.enforcePrivateLinkEndpointNetworkPolicies">enforcePrivateLinkEndpointNetworkPolicies</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnet.property.enforcePrivateLinkServiceNetworkPolicies">enforcePrivateLinkServiceNetworkPolicies</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnet.property.networkSecurityGroupId">networkSecurityGroupId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnet.property.privateEndpointNetworkPolicies">privateEndpointNetworkPolicies</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnet.property.privateEndpointNetworkPoliciesEnabled">privateEndpointNetworkPoliciesEnabled</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnet.property.privateLinkServiceNetworkPoliciesEnabled">privateLinkServiceNetworkPoliciesEnabled</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnet.property.routeTableId">routeTableId</a></code> | <code>string</code> | *No description.* |
@@ -614,6 +615,16 @@ public readonly networkSecurityGroupId: string;
 
 ---
 
+##### `privateEndpointNetworkPolicies`<sup>Required</sup> <a name="privateEndpointNetworkPolicies" id="@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnet.property.privateEndpointNetworkPolicies"></a>
+
+```typescript
+public readonly privateEndpointNetworkPolicies: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `privateEndpointNetworkPoliciesEnabled`<sup>Required</sup> <a name="privateEndpointNetworkPoliciesEnabled" id="@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnet.property.privateEndpointNetworkPoliciesEnabled"></a>
 
 ```typescript
@@ -795,10 +806,10 @@ const dataAzurermSubnetConfig: dataAzurermSubnet.DataAzurermSubnetConfig = { ...
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/subnet#name DataAzurermSubnet#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/subnet#resource_group_name DataAzurermSubnet#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetConfig.property.virtualNetworkName">virtualNetworkName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/subnet#virtual_network_name DataAzurermSubnet#virtual_network_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/subnet#id DataAzurermSubnet#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/subnet#name DataAzurermSubnet#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/subnet#resource_group_name DataAzurermSubnet#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetConfig.property.virtualNetworkName">virtualNetworkName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/subnet#virtual_network_name DataAzurermSubnet#virtual_network_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/subnet#id DataAzurermSubnet#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetTimeouts">DataAzurermSubnetTimeouts</a></code> | timeouts block. |
 
 ---
@@ -881,7 +892,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/subnet#name DataAzurermSubnet#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/subnet#name DataAzurermSubnet#name}.
 
 ---
 
@@ -893,7 +904,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/subnet#resource_group_name DataAzurermSubnet#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/subnet#resource_group_name DataAzurermSubnet#resource_group_name}.
 
 ---
 
@@ -905,7 +916,7 @@ public readonly virtualNetworkName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/subnet#virtual_network_name DataAzurermSubnet#virtual_network_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/subnet#virtual_network_name DataAzurermSubnet#virtual_network_name}.
 
 ---
 
@@ -917,7 +928,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/subnet#id DataAzurermSubnet#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/subnet#id DataAzurermSubnet#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -934,7 +945,7 @@ public readonly timeouts: DataAzurermSubnetTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/subnet#timeouts DataAzurermSubnet#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/subnet#timeouts DataAzurermSubnet#timeouts}
 
 ---
 
@@ -952,7 +963,7 @@ const dataAzurermSubnetTimeouts: dataAzurermSubnet.DataAzurermSubnetTimeouts = {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/subnet#read DataAzurermSubnet#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSubnet.DataAzurermSubnetTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/subnet#read DataAzurermSubnet#read}. |
 
 ---
 
@@ -964,7 +975,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/subnet#read DataAzurermSubnet#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/subnet#read DataAzurermSubnet#read}.
 
 ---
 

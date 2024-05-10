@@ -4,7 +4,7 @@
 
 ### DataAzurermLinuxWebApp <a name="DataAzurermLinuxWebApp" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebApp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app azurerm_linux_web_app}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app azurerm_linux_web_app}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebApp.Initializer"></a>
 
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermLinuxWebApp to 
 
 The id of the existing DataAzurermLinuxWebApp that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1342,9 +1342,9 @@ new DataAzurermLinuxWebAppConfig {
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#name DataAzurermLinuxWebApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#resource_group_name DataAzurermLinuxWebApp#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#id DataAzurermLinuxWebApp#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#name DataAzurermLinuxWebApp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#resource_group_name DataAzurermLinuxWebApp#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#id DataAzurermLinuxWebApp#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppTimeouts">DataAzurermLinuxWebAppTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1427,7 +1427,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#name DataAzurermLinuxWebApp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#name DataAzurermLinuxWebApp#name}.
 
 ---
 
@@ -1439,7 +1439,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#resource_group_name DataAzurermLinuxWebApp#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#resource_group_name DataAzurermLinuxWebApp#resource_group_name}.
 
 ---
 
@@ -1451,7 +1451,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#id DataAzurermLinuxWebApp#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#id DataAzurermLinuxWebApp#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1468,7 +1468,7 @@ public DataAzurermLinuxWebAppTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#timeouts DataAzurermLinuxWebApp#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#timeouts DataAzurermLinuxWebApp#timeouts}
 
 ---
 
@@ -1667,6 +1667,19 @@ new DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequest {
 ```
 
 
+### DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath <a name="DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath {
+
+};
+```
+
+
 ### DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode <a name="DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode"></a>
 
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode.Initializer"></a>
@@ -1800,7 +1813,7 @@ new DataAzurermLinuxWebAppTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#read DataAzurermLinuxWebApp#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#read DataAzurermLinuxWebApp#read}. |
 
 ---
 
@@ -1812,7 +1825,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#read DataAzurermLinuxWebApp#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#read DataAzurermLinuxWebApp#read}.
 
 ---
 
@@ -16919,6 +16932,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.requests">Requests</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsList">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.slowRequest">SlowRequest</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestList">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.slowRequestWithPath">SlowRequestWithPath</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.statusCode">StatusCode</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeList">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTrigger">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTrigger</a></code> | *No description.* |
 
@@ -16965,6 +16979,16 @@ public DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestList Slo
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestList">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestList</a>
+
+---
+
+##### `SlowRequestWithPath`<sup>Required</sup> <a name="SlowRequestWithPath" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.slowRequestWithPath"></a>
+
+```csharp
+public DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList SlowRequestWithPath { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList</a>
 
 ---
 
@@ -17883,6 +17907,466 @@ public DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequest Interna
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequest">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequest</a>
+
+---
+
+
+### DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList <a name="DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList(IInterpolatingParent TerraformResource, string TerraformAttribute, bool WrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer.parameter.wrapsSet">WrapsSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `WrapsSet`<sup>Required</sup> <a name="WrapsSet" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.allWithMapKey"></a>
+
+```csharp
+private DynamicListTerraformIterator AllWithMapKey(string MapKeyAttributeName)
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `MapKeyAttributeName`<sup>Required</sup> <a name="MapKeyAttributeName" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* string
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.get"></a>
+
+```csharp
+private DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference Get(double Index)
+```
+
+###### `Index`<sup>Required</sup> <a name="Index" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.get.parameter.index"></a>
+
+- *Type:* double
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+
+### DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference <a name="DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute, double ComplexObjectIndex, bool ComplexObjectIsFromSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.complexObjectIndex">ComplexObjectIndex</a></code> | <code>double</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.complexObjectIsFromSet">ComplexObjectIsFromSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `ComplexObjectIndex`<sup>Required</sup> <a name="ComplexObjectIndex" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* double
+
+the index of this item in the list.
+
+---
+
+##### `ComplexObjectIsFromSet`<sup>Required</sup> <a name="ComplexObjectIsFromSet" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.interval">Interval</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.path">Path</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.timeTaken">TimeTaken</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Count`<sup>Required</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.count"></a>
+
+```csharp
+public double Count { get; }
+```
+
+- *Type:* double
+
+---
+
+##### `Interval`<sup>Required</sup> <a name="Interval" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.interval"></a>
+
+```csharp
+public string Interval { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Path`<sup>Required</sup> <a name="Path" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.path"></a>
+
+```csharp
+public string Path { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `TimeTaken`<sup>Required</sup> <a name="TimeTaken" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.timeTaken"></a>
+
+```csharp
+public string TimeTaken { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.internalValue"></a>
+
+```csharp
+public DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath</a>
 
 ---
 

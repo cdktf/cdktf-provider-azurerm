@@ -4,12 +4,12 @@
 
 ### FunctionAppHybridConnection <a name="FunctionAppHybridConnection" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnection"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection azurerm_function_app_hybrid_connection}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection azurerm_function_app_hybrid_connection}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
 
 functionapphybridconnection.NewFunctionAppHybridConnection(scope Construct, id *string, config FunctionAppHybridConnectionConfig) FunctionAppHybridConnection
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
 
 functionapphybridconnection.FunctionAppHybridConnection_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
 
 functionapphybridconnection.FunctionAppHybridConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ functionapphybridconnection.FunctionAppHybridConnection_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
 
 functionapphybridconnection.FunctionAppHybridConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ functionapphybridconnection.FunctionAppHybridConnection_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
 
 functionapphybridconnection.FunctionAppHybridConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the FunctionAppHybridConnectio
 
 The id of the existing FunctionAppHybridConnection that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -910,7 +910,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
 
 &functionapphybridconnection.FunctionAppHybridConnectionConfig {
 	Connection: interface{},
@@ -926,7 +926,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionapphybrid
 	RelayId: *string,
 	Id: *string,
 	SendKeyName: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts,
 }
 ```
 
@@ -945,7 +945,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionapphybrid
 | <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionConfig.property.hostname">Hostname</a></code> | <code>*string</code> | The hostname of the endpoint. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionConfig.property.port">Port</a></code> | <code>*f64</code> | The port to use for the endpoint. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionConfig.property.relayId">RelayId</a></code> | <code>*string</code> | The ID of the Relay Hybrid Connection to use. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#id FunctionAppHybridConnection#id}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#id FunctionAppHybridConnection#id}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionConfig.property.sendKeyName">SendKeyName</a></code> | <code>*string</code> | The name of the Relay key with `Send` permission to use. Defaults to `RootManageSharedAccessKey`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts">FunctionAppHybridConnectionTimeouts</a></code> | timeouts block. |
 
@@ -1031,7 +1031,7 @@ FunctionAppId *string
 
 The ID of the Function App for this Hybrid Connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#function_app_id FunctionAppHybridConnection#function_app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#function_app_id FunctionAppHybridConnection#function_app_id}
 
 ---
 
@@ -1045,7 +1045,7 @@ Hostname *string
 
 The hostname of the endpoint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#hostname FunctionAppHybridConnection#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#hostname FunctionAppHybridConnection#hostname}
 
 ---
 
@@ -1059,7 +1059,7 @@ Port *f64
 
 The port to use for the endpoint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#port FunctionAppHybridConnection#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#port FunctionAppHybridConnection#port}
 
 ---
 
@@ -1073,7 +1073,7 @@ RelayId *string
 
 The ID of the Relay Hybrid Connection to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#relay_id FunctionAppHybridConnection#relay_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#relay_id FunctionAppHybridConnection#relay_id}
 
 ---
 
@@ -1085,7 +1085,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#id FunctionAppHybridConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#id FunctionAppHybridConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1102,7 +1102,7 @@ SendKeyName *string
 
 The name of the Relay key with `Send` permission to use. Defaults to `RootManageSharedAccessKey`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#send_key_name FunctionAppHybridConnection#send_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#send_key_name FunctionAppHybridConnection#send_key_name}
 
 ---
 
@@ -1116,7 +1116,7 @@ Timeouts FunctionAppHybridConnectionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#timeouts FunctionAppHybridConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#timeouts FunctionAppHybridConnection#timeouts}
 
 ---
 
@@ -1125,7 +1125,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
 
 &functionapphybridconnection.FunctionAppHybridConnectionTimeouts {
 	Create: *string,
@@ -1139,10 +1139,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionapphybrid
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#create FunctionAppHybridConnection#create}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#delete FunctionAppHybridConnection#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#read FunctionAppHybridConnection#read}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#update FunctionAppHybridConnection#update}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#create FunctionAppHybridConnection#create}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#delete FunctionAppHybridConnection#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#read FunctionAppHybridConnection#read}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#update FunctionAppHybridConnection#update}. |
 
 ---
 
@@ -1154,7 +1154,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#create FunctionAppHybridConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#create FunctionAppHybridConnection#create}.
 
 ---
 
@@ -1166,7 +1166,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#delete FunctionAppHybridConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#delete FunctionAppHybridConnection#delete}.
 
 ---
 
@@ -1178,7 +1178,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#read FunctionAppHybridConnection#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#read FunctionAppHybridConnection#read}.
 
 ---
 
@@ -1190,7 +1190,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/function_app_hybrid_connection#update FunctionAppHybridConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/function_app_hybrid_connection#update FunctionAppHybridConnection#update}.
 
 ---
 
@@ -1201,7 +1201,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppHybridConnection.FunctionAppHybridConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapphybridconnection"
 
 functionapphybridconnection.NewFunctionAppHybridConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppHybridConnectionTimeoutsOutputReference
 ```

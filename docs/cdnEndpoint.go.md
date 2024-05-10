@@ -4,12 +4,12 @@
 
 ### CdnEndpoint <a name="CdnEndpoint" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpoint"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint azurerm_cdn_endpoint}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint azurerm_cdn_endpoint}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpoint(scope Construct, id *string, config CdnEndpointConfig) CdnEndpoint
 ```
@@ -548,7 +548,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpoint.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.CdnEndpoint_IsConstruct(x interface{}) *bool
 ```
@@ -580,7 +580,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpoint.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.CdnEndpoint_IsTerraformElement(x interface{}) *bool
 ```
@@ -594,7 +594,7 @@ cdnendpoint.CdnEndpoint_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpoint.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.CdnEndpoint_IsTerraformResource(x interface{}) *bool
 ```
@@ -608,7 +608,7 @@ cdnendpoint.CdnEndpoint_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpoint.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.CdnEndpoint_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -637,7 +637,7 @@ The construct id used in the generated config for the CdnEndpoint to import.
 
 The id of the existing CdnEndpoint that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1288,7 +1288,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointConfig {
 	Connection: interface{},
@@ -1306,7 +1306,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 	ContentTypesToCompress: *[]*string,
 	DeliveryRule: interface{},
 	GeoFilter: interface{},
-	GlobalDeliveryRule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cdnEndpoint.CdnEndpointGlobalDeliveryRule,
+	GlobalDeliveryRule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRule,
 	Id: *string,
 	IsCompressionEnabled: interface{},
 	IsHttpAllowed: interface{},
@@ -1317,7 +1317,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 	ProbePath: *string,
 	QuerystringCachingBehaviour: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cdnEndpoint.CdnEndpointTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnEndpoint.CdnEndpointTimeouts,
 }
 ```
 
@@ -1332,25 +1332,25 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#location CdnEndpoint#location}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#location CdnEndpoint#location}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.origin">Origin</a></code> | <code>interface{}</code> | origin block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.profileName">ProfileName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#profile_name CdnEndpoint#profile_name}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#resource_group_name CdnEndpoint#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.contentTypesToCompress">ContentTypesToCompress</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#content_types_to_compress CdnEndpoint#content_types_to_compress}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.profileName">ProfileName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#profile_name CdnEndpoint#profile_name}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#resource_group_name CdnEndpoint#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.contentTypesToCompress">ContentTypesToCompress</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#content_types_to_compress CdnEndpoint#content_types_to_compress}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.deliveryRule">DeliveryRule</a></code> | <code>interface{}</code> | delivery_rule block. |
 | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.geoFilter">GeoFilter</a></code> | <code>interface{}</code> | geo_filter block. |
 | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.globalDeliveryRule">GlobalDeliveryRule</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRule">CdnEndpointGlobalDeliveryRule</a></code> | global_delivery_rule block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#id CdnEndpoint#id}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.isCompressionEnabled">IsCompressionEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#is_compression_enabled CdnEndpoint#is_compression_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.isHttpAllowed">IsHttpAllowed</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#is_http_allowed CdnEndpoint#is_http_allowed}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.isHttpsAllowed">IsHttpsAllowed</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#is_https_allowed CdnEndpoint#is_https_allowed}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.optimizationType">OptimizationType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#optimization_type CdnEndpoint#optimization_type}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.originHostHeader">OriginHostHeader</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#origin_host_header CdnEndpoint#origin_host_header}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.originPath">OriginPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#origin_path CdnEndpoint#origin_path}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.probePath">ProbePath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#probe_path CdnEndpoint#probe_path}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.querystringCachingBehaviour">QuerystringCachingBehaviour</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#querystring_caching_behaviour CdnEndpoint#querystring_caching_behaviour}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#tags CdnEndpoint#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#id CdnEndpoint#id}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.isCompressionEnabled">IsCompressionEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#is_compression_enabled CdnEndpoint#is_compression_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.isHttpAllowed">IsHttpAllowed</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#is_http_allowed CdnEndpoint#is_http_allowed}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.isHttpsAllowed">IsHttpsAllowed</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#is_https_allowed CdnEndpoint#is_https_allowed}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.optimizationType">OptimizationType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#optimization_type CdnEndpoint#optimization_type}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.originHostHeader">OriginHostHeader</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#origin_host_header CdnEndpoint#origin_host_header}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.originPath">OriginPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#origin_path CdnEndpoint#origin_path}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.probePath">ProbePath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#probe_path CdnEndpoint#probe_path}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.querystringCachingBehaviour">QuerystringCachingBehaviour</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#querystring_caching_behaviour CdnEndpoint#querystring_caching_behaviour}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#tags CdnEndpoint#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointTimeouts">CdnEndpointTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1433,7 +1433,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#location CdnEndpoint#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#location CdnEndpoint#location}.
 
 ---
 
@@ -1445,7 +1445,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
 
 ---
 
@@ -1459,7 +1459,7 @@ Origin interface{}
 
 origin block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#origin CdnEndpoint#origin}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#origin CdnEndpoint#origin}
 
 ---
 
@@ -1471,7 +1471,7 @@ ProfileName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#profile_name CdnEndpoint#profile_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#profile_name CdnEndpoint#profile_name}.
 
 ---
 
@@ -1483,7 +1483,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#resource_group_name CdnEndpoint#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#resource_group_name CdnEndpoint#resource_group_name}.
 
 ---
 
@@ -1495,7 +1495,7 @@ ContentTypesToCompress *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#content_types_to_compress CdnEndpoint#content_types_to_compress}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#content_types_to_compress CdnEndpoint#content_types_to_compress}.
 
 ---
 
@@ -1509,7 +1509,7 @@ DeliveryRule interface{}
 
 delivery_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#delivery_rule CdnEndpoint#delivery_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#delivery_rule CdnEndpoint#delivery_rule}
 
 ---
 
@@ -1523,7 +1523,7 @@ GeoFilter interface{}
 
 geo_filter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#geo_filter CdnEndpoint#geo_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#geo_filter CdnEndpoint#geo_filter}
 
 ---
 
@@ -1537,7 +1537,7 @@ GlobalDeliveryRule CdnEndpointGlobalDeliveryRule
 
 global_delivery_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#global_delivery_rule CdnEndpoint#global_delivery_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#global_delivery_rule CdnEndpoint#global_delivery_rule}
 
 ---
 
@@ -1549,7 +1549,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#id CdnEndpoint#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#id CdnEndpoint#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1564,7 +1564,7 @@ IsCompressionEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#is_compression_enabled CdnEndpoint#is_compression_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#is_compression_enabled CdnEndpoint#is_compression_enabled}.
 
 ---
 
@@ -1576,7 +1576,7 @@ IsHttpAllowed interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#is_http_allowed CdnEndpoint#is_http_allowed}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#is_http_allowed CdnEndpoint#is_http_allowed}.
 
 ---
 
@@ -1588,7 +1588,7 @@ IsHttpsAllowed interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#is_https_allowed CdnEndpoint#is_https_allowed}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#is_https_allowed CdnEndpoint#is_https_allowed}.
 
 ---
 
@@ -1600,7 +1600,7 @@ OptimizationType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#optimization_type CdnEndpoint#optimization_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#optimization_type CdnEndpoint#optimization_type}.
 
 ---
 
@@ -1612,7 +1612,7 @@ OriginHostHeader *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#origin_host_header CdnEndpoint#origin_host_header}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#origin_host_header CdnEndpoint#origin_host_header}.
 
 ---
 
@@ -1624,7 +1624,7 @@ OriginPath *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#origin_path CdnEndpoint#origin_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#origin_path CdnEndpoint#origin_path}.
 
 ---
 
@@ -1636,7 +1636,7 @@ ProbePath *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#probe_path CdnEndpoint#probe_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#probe_path CdnEndpoint#probe_path}.
 
 ---
 
@@ -1648,7 +1648,7 @@ QuerystringCachingBehaviour *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#querystring_caching_behaviour CdnEndpoint#querystring_caching_behaviour}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#querystring_caching_behaviour CdnEndpoint#querystring_caching_behaviour}.
 
 ---
 
@@ -1660,7 +1660,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#tags CdnEndpoint#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#tags CdnEndpoint#tags}.
 
 ---
 
@@ -1674,7 +1674,7 @@ Timeouts CdnEndpointTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#timeouts CdnEndpoint#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#timeouts CdnEndpoint#timeouts}
 
 ---
 
@@ -1683,15 +1683,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRule {
 	Name: *string,
 	Order: *f64,
-	CacheExpirationAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cdnEndpoint.CdnEndpointDeliveryRuleCacheExpirationAction,
-	CacheKeyQueryStringAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cdnEndpoint.CdnEndpointDeliveryRuleCacheKeyQueryStringAction,
+	CacheExpirationAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheExpirationAction,
+	CacheKeyQueryStringAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheKeyQueryStringAction,
 	CookiesCondition: interface{},
-	DeviceCondition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cdnEndpoint.CdnEndpointDeliveryRuleDeviceCondition,
+	DeviceCondition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnEndpoint.CdnEndpointDeliveryRuleDeviceCondition,
 	HttpVersionCondition: interface{},
 	ModifyRequestHeaderAction: interface{},
 	ModifyResponseHeaderAction: interface{},
@@ -1700,14 +1700,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 	RemoteAddressCondition: interface{},
 	RequestBodyCondition: interface{},
 	RequestHeaderCondition: interface{},
-	RequestMethodCondition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cdnEndpoint.CdnEndpointDeliveryRuleRequestMethodCondition,
-	RequestSchemeCondition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cdnEndpoint.CdnEndpointDeliveryRuleRequestSchemeCondition,
+	RequestMethodCondition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestMethodCondition,
+	RequestSchemeCondition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestSchemeCondition,
 	RequestUriCondition: interface{},
 	UrlFileExtensionCondition: interface{},
 	UrlFileNameCondition: interface{},
 	UrlPathCondition: interface{},
-	UrlRedirectAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction,
-	UrlRewriteAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cdnEndpoint.CdnEndpointDeliveryRuleUrlRewriteAction,
+	UrlRedirectAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction,
+	UrlRewriteAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRewriteAction,
 }
 ```
 
@@ -1715,8 +1715,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRule.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRule.property.order">Order</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#order CdnEndpoint#order}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRule.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRule.property.order">Order</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#order CdnEndpoint#order}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRule.property.cacheExpirationAction">CacheExpirationAction</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheExpirationAction">CdnEndpointDeliveryRuleCacheExpirationAction</a></code> | cache_expiration_action block. |
 | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRule.property.cacheKeyQueryStringAction">CacheKeyQueryStringAction</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheKeyQueryStringAction">CdnEndpointDeliveryRuleCacheKeyQueryStringAction</a></code> | cache_key_query_string_action block. |
 | <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRule.property.cookiesCondition">CookiesCondition</a></code> | <code>interface{}</code> | cookies_condition block. |
@@ -1748,7 +1748,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
 
 ---
 
@@ -1760,7 +1760,7 @@ Order *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#order CdnEndpoint#order}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#order CdnEndpoint#order}.
 
 ---
 
@@ -1774,7 +1774,7 @@ CacheExpirationAction CdnEndpointDeliveryRuleCacheExpirationAction
 
 cache_expiration_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#cache_expiration_action CdnEndpoint#cache_expiration_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#cache_expiration_action CdnEndpoint#cache_expiration_action}
 
 ---
 
@@ -1788,7 +1788,7 @@ CacheKeyQueryStringAction CdnEndpointDeliveryRuleCacheKeyQueryStringAction
 
 cache_key_query_string_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#cache_key_query_string_action CdnEndpoint#cache_key_query_string_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#cache_key_query_string_action CdnEndpoint#cache_key_query_string_action}
 
 ---
 
@@ -1802,7 +1802,7 @@ CookiesCondition interface{}
 
 cookies_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#cookies_condition CdnEndpoint#cookies_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#cookies_condition CdnEndpoint#cookies_condition}
 
 ---
 
@@ -1816,7 +1816,7 @@ DeviceCondition CdnEndpointDeliveryRuleDeviceCondition
 
 device_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#device_condition CdnEndpoint#device_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#device_condition CdnEndpoint#device_condition}
 
 ---
 
@@ -1830,7 +1830,7 @@ HttpVersionCondition interface{}
 
 http_version_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#http_version_condition CdnEndpoint#http_version_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#http_version_condition CdnEndpoint#http_version_condition}
 
 ---
 
@@ -1844,7 +1844,7 @@ ModifyRequestHeaderAction interface{}
 
 modify_request_header_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#modify_request_header_action CdnEndpoint#modify_request_header_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#modify_request_header_action CdnEndpoint#modify_request_header_action}
 
 ---
 
@@ -1858,7 +1858,7 @@ ModifyResponseHeaderAction interface{}
 
 modify_response_header_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#modify_response_header_action CdnEndpoint#modify_response_header_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#modify_response_header_action CdnEndpoint#modify_response_header_action}
 
 ---
 
@@ -1872,7 +1872,7 @@ PostArgCondition interface{}
 
 post_arg_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#post_arg_condition CdnEndpoint#post_arg_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#post_arg_condition CdnEndpoint#post_arg_condition}
 
 ---
 
@@ -1886,7 +1886,7 @@ QueryStringCondition interface{}
 
 query_string_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#query_string_condition CdnEndpoint#query_string_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#query_string_condition CdnEndpoint#query_string_condition}
 
 ---
 
@@ -1900,7 +1900,7 @@ RemoteAddressCondition interface{}
 
 remote_address_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#remote_address_condition CdnEndpoint#remote_address_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#remote_address_condition CdnEndpoint#remote_address_condition}
 
 ---
 
@@ -1914,7 +1914,7 @@ RequestBodyCondition interface{}
 
 request_body_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#request_body_condition CdnEndpoint#request_body_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#request_body_condition CdnEndpoint#request_body_condition}
 
 ---
 
@@ -1928,7 +1928,7 @@ RequestHeaderCondition interface{}
 
 request_header_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#request_header_condition CdnEndpoint#request_header_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#request_header_condition CdnEndpoint#request_header_condition}
 
 ---
 
@@ -1942,7 +1942,7 @@ RequestMethodCondition CdnEndpointDeliveryRuleRequestMethodCondition
 
 request_method_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#request_method_condition CdnEndpoint#request_method_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#request_method_condition CdnEndpoint#request_method_condition}
 
 ---
 
@@ -1956,7 +1956,7 @@ RequestSchemeCondition CdnEndpointDeliveryRuleRequestSchemeCondition
 
 request_scheme_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#request_scheme_condition CdnEndpoint#request_scheme_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#request_scheme_condition CdnEndpoint#request_scheme_condition}
 
 ---
 
@@ -1970,7 +1970,7 @@ RequestUriCondition interface{}
 
 request_uri_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#request_uri_condition CdnEndpoint#request_uri_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#request_uri_condition CdnEndpoint#request_uri_condition}
 
 ---
 
@@ -1984,7 +1984,7 @@ UrlFileExtensionCondition interface{}
 
 url_file_extension_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#url_file_extension_condition CdnEndpoint#url_file_extension_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#url_file_extension_condition CdnEndpoint#url_file_extension_condition}
 
 ---
 
@@ -1998,7 +1998,7 @@ UrlFileNameCondition interface{}
 
 url_file_name_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#url_file_name_condition CdnEndpoint#url_file_name_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#url_file_name_condition CdnEndpoint#url_file_name_condition}
 
 ---
 
@@ -2012,7 +2012,7 @@ UrlPathCondition interface{}
 
 url_path_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#url_path_condition CdnEndpoint#url_path_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#url_path_condition CdnEndpoint#url_path_condition}
 
 ---
 
@@ -2026,7 +2026,7 @@ UrlRedirectAction CdnEndpointDeliveryRuleUrlRedirectAction
 
 url_redirect_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#url_redirect_action CdnEndpoint#url_redirect_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#url_redirect_action CdnEndpoint#url_redirect_action}
 
 ---
 
@@ -2040,7 +2040,7 @@ UrlRewriteAction CdnEndpointDeliveryRuleUrlRewriteAction
 
 url_rewrite_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#url_rewrite_action CdnEndpoint#url_rewrite_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#url_rewrite_action CdnEndpoint#url_rewrite_action}
 
 ---
 
@@ -2049,7 +2049,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheExpirationAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleCacheExpirationAction {
 	Behavior: *string,
@@ -2061,8 +2061,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheExpirationAction.property.behavior">Behavior</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheExpirationAction.property.duration">Duration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#duration CdnEndpoint#duration}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheExpirationAction.property.behavior">Behavior</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheExpirationAction.property.duration">Duration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#duration CdnEndpoint#duration}. |
 
 ---
 
@@ -2074,7 +2074,7 @@ Behavior *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}.
 
 ---
 
@@ -2086,7 +2086,7 @@ Duration *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#duration CdnEndpoint#duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#duration CdnEndpoint#duration}.
 
 ---
 
@@ -2095,7 +2095,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheKeyQueryStringAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleCacheKeyQueryStringAction {
 	Behavior: *string,
@@ -2107,8 +2107,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheKeyQueryStringAction.property.behavior">Behavior</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheKeyQueryStringAction.property.parameters">Parameters</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#parameters CdnEndpoint#parameters}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheKeyQueryStringAction.property.behavior">Behavior</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheKeyQueryStringAction.property.parameters">Parameters</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#parameters CdnEndpoint#parameters}. |
 
 ---
 
@@ -2120,7 +2120,7 @@ Behavior *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}.
 
 ---
 
@@ -2132,7 +2132,7 @@ Parameters *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#parameters CdnEndpoint#parameters}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#parameters CdnEndpoint#parameters}.
 
 ---
 
@@ -2141,7 +2141,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCookiesCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleCookiesCondition {
 	Operator: *string,
@@ -2156,11 +2156,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCookiesCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCookiesCondition.property.selector">Selector</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCookiesCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCookiesCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCookiesCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCookiesCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCookiesCondition.property.selector">Selector</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCookiesCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCookiesCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCookiesCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
 
 ---
 
@@ -2172,7 +2172,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -2184,7 +2184,7 @@ Selector *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}.
 
 ---
 
@@ -2196,7 +2196,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -2208,7 +2208,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -2220,7 +2220,7 @@ Transforms *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
 
 ---
 
@@ -2229,7 +2229,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleDeviceCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleDeviceCondition {
 	MatchValues: *[]*string,
@@ -2242,9 +2242,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleDeviceCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleDeviceCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleDeviceCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleDeviceCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleDeviceCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleDeviceCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
 
 ---
 
@@ -2256,7 +2256,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -2268,7 +2268,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -2280,7 +2280,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -2289,7 +2289,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleHttpVersionCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleHttpVersionCondition {
 	MatchValues: *[]*string,
@@ -2302,9 +2302,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleHttpVersionCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleHttpVersionCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleHttpVersionCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleHttpVersionCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleHttpVersionCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleHttpVersionCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
 
 ---
 
@@ -2316,7 +2316,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -2328,7 +2328,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -2340,7 +2340,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -2349,7 +2349,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyRequestHeaderAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleModifyRequestHeaderAction {
 	Action: *string,
@@ -2362,9 +2362,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyRequestHeaderAction.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyRequestHeaderAction.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyRequestHeaderAction.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyRequestHeaderAction.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyRequestHeaderAction.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyRequestHeaderAction.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}. |
 
 ---
 
@@ -2376,7 +2376,7 @@ Action *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}.
 
 ---
 
@@ -2388,7 +2388,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
 
 ---
 
@@ -2400,7 +2400,7 @@ Value *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}.
 
 ---
 
@@ -2409,7 +2409,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyResponseHeaderAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleModifyResponseHeaderAction {
 	Action: *string,
@@ -2422,9 +2422,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyResponseHeaderAction.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyResponseHeaderAction.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyResponseHeaderAction.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyResponseHeaderAction.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyResponseHeaderAction.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyResponseHeaderAction.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}. |
 
 ---
 
@@ -2436,7 +2436,7 @@ Action *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}.
 
 ---
 
@@ -2448,7 +2448,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
 
 ---
 
@@ -2460,7 +2460,7 @@ Value *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}.
 
 ---
 
@@ -2469,7 +2469,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRulePostArgCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRulePostArgCondition {
 	Operator: *string,
@@ -2484,11 +2484,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRulePostArgCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRulePostArgCondition.property.selector">Selector</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRulePostArgCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRulePostArgCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRulePostArgCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRulePostArgCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRulePostArgCondition.property.selector">Selector</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRulePostArgCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRulePostArgCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRulePostArgCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
 
 ---
 
@@ -2500,7 +2500,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -2512,7 +2512,7 @@ Selector *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}.
 
 ---
 
@@ -2524,7 +2524,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -2536,7 +2536,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -2548,7 +2548,7 @@ Transforms *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
 
 ---
 
@@ -2557,7 +2557,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleQueryStringCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleQueryStringCondition {
 	Operator: *string,
@@ -2571,10 +2571,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleQueryStringCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleQueryStringCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleQueryStringCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleQueryStringCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleQueryStringCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleQueryStringCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleQueryStringCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleQueryStringCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
 
 ---
 
@@ -2586,7 +2586,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -2598,7 +2598,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -2610,7 +2610,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -2622,7 +2622,7 @@ Transforms *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
 
 ---
 
@@ -2631,7 +2631,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRemoteAddressCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleRemoteAddressCondition {
 	Operator: *string,
@@ -2644,9 +2644,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRemoteAddressCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRemoteAddressCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRemoteAddressCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRemoteAddressCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRemoteAddressCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRemoteAddressCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
 
 ---
 
@@ -2658,7 +2658,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -2670,7 +2670,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -2682,7 +2682,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -2691,7 +2691,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestBodyCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleRequestBodyCondition {
 	Operator: *string,
@@ -2705,10 +2705,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestBodyCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestBodyCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestBodyCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestBodyCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestBodyCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestBodyCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestBodyCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestBodyCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
 
 ---
 
@@ -2720,7 +2720,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -2732,7 +2732,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -2744,7 +2744,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -2756,7 +2756,7 @@ Transforms *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
 
 ---
 
@@ -2765,7 +2765,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestHeaderCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleRequestHeaderCondition {
 	Operator: *string,
@@ -2780,11 +2780,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestHeaderCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestHeaderCondition.property.selector">Selector</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestHeaderCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestHeaderCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestHeaderCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestHeaderCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestHeaderCondition.property.selector">Selector</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestHeaderCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestHeaderCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestHeaderCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
 
 ---
 
@@ -2796,7 +2796,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -2808,7 +2808,7 @@ Selector *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#selector CdnEndpoint#selector}.
 
 ---
 
@@ -2820,7 +2820,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -2832,7 +2832,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -2844,7 +2844,7 @@ Transforms *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
 
 ---
 
@@ -2853,7 +2853,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestMethodCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleRequestMethodCondition {
 	MatchValues: *[]*string,
@@ -2866,9 +2866,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestMethodCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestMethodCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestMethodCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestMethodCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestMethodCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestMethodCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
 
 ---
 
@@ -2880,7 +2880,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -2892,7 +2892,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -2904,7 +2904,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -2913,7 +2913,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestSchemeCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleRequestSchemeCondition {
 	MatchValues: *[]*string,
@@ -2926,9 +2926,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestSchemeCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestSchemeCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestSchemeCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestSchemeCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestSchemeCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestSchemeCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
 
 ---
 
@@ -2940,7 +2940,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -2952,7 +2952,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -2964,7 +2964,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -2973,7 +2973,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestUriCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleRequestUriCondition {
 	Operator: *string,
@@ -2987,10 +2987,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestUriCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestUriCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestUriCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestUriCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestUriCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestUriCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestUriCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestUriCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
 
 ---
 
@@ -3002,7 +3002,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -3014,7 +3014,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -3026,7 +3026,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -3038,7 +3038,7 @@ Transforms *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
 
 ---
 
@@ -3047,7 +3047,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileExtensionCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleUrlFileExtensionCondition {
 	Operator: *string,
@@ -3061,10 +3061,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileExtensionCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileExtensionCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileExtensionCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileExtensionCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileExtensionCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileExtensionCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileExtensionCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileExtensionCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
 
 ---
 
@@ -3076,7 +3076,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -3088,7 +3088,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -3100,7 +3100,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -3112,7 +3112,7 @@ Transforms *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
 
 ---
 
@@ -3121,7 +3121,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileNameCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleUrlFileNameCondition {
 	Operator: *string,
@@ -3135,10 +3135,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileNameCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileNameCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileNameCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileNameCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileNameCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileNameCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileNameCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileNameCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
 
 ---
 
@@ -3150,7 +3150,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -3162,7 +3162,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -3174,7 +3174,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -3186,7 +3186,7 @@ Transforms *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
 
 ---
 
@@ -3195,7 +3195,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlPathCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleUrlPathCondition {
 	Operator: *string,
@@ -3209,10 +3209,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlPathCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlPathCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlPathCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlPathCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlPathCondition.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlPathCondition.property.matchValues">MatchValues</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlPathCondition.property.negateCondition">NegateCondition</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlPathCondition.property.transforms">Transforms</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}. |
 
 ---
 
@@ -3224,7 +3224,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#operator CdnEndpoint#operator}.
 
 ---
 
@@ -3236,7 +3236,7 @@ MatchValues *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#match_values CdnEndpoint#match_values}.
 
 ---
 
@@ -3248,7 +3248,7 @@ NegateCondition interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#negate_condition CdnEndpoint#negate_condition}.
 
 ---
 
@@ -3260,7 +3260,7 @@ Transforms *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#transforms CdnEndpoint#transforms}.
 
 ---
 
@@ -3269,7 +3269,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleUrlRedirectAction {
 	RedirectType: *string,
@@ -3285,12 +3285,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction.property.redirectType">RedirectType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#redirect_type CdnEndpoint#redirect_type}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction.property.fragment">Fragment</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#fragment CdnEndpoint#fragment}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction.property.hostname">Hostname</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#hostname CdnEndpoint#hostname}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#path CdnEndpoint#path}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction.property.protocol">Protocol</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#protocol CdnEndpoint#protocol}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction.property.queryString">QueryString</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#query_string CdnEndpoint#query_string}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction.property.redirectType">RedirectType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#redirect_type CdnEndpoint#redirect_type}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction.property.fragment">Fragment</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#fragment CdnEndpoint#fragment}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction.property.hostname">Hostname</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#hostname CdnEndpoint#hostname}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#path CdnEndpoint#path}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction.property.protocol">Protocol</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#protocol CdnEndpoint#protocol}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectAction.property.queryString">QueryString</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#query_string CdnEndpoint#query_string}. |
 
 ---
 
@@ -3302,7 +3302,7 @@ RedirectType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#redirect_type CdnEndpoint#redirect_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#redirect_type CdnEndpoint#redirect_type}.
 
 ---
 
@@ -3314,7 +3314,7 @@ Fragment *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#fragment CdnEndpoint#fragment}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#fragment CdnEndpoint#fragment}.
 
 ---
 
@@ -3326,7 +3326,7 @@ Hostname *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#hostname CdnEndpoint#hostname}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#hostname CdnEndpoint#hostname}.
 
 ---
 
@@ -3338,7 +3338,7 @@ Path *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#path CdnEndpoint#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#path CdnEndpoint#path}.
 
 ---
 
@@ -3350,7 +3350,7 @@ Protocol *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#protocol CdnEndpoint#protocol}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#protocol CdnEndpoint#protocol}.
 
 ---
 
@@ -3362,7 +3362,7 @@ QueryString *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#query_string CdnEndpoint#query_string}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#query_string CdnEndpoint#query_string}.
 
 ---
 
@@ -3371,7 +3371,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRewriteAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointDeliveryRuleUrlRewriteAction {
 	Destination: *string,
@@ -3384,9 +3384,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRewriteAction.property.destination">Destination</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#destination CdnEndpoint#destination}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRewriteAction.property.sourcePattern">SourcePattern</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#source_pattern CdnEndpoint#source_pattern}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRewriteAction.property.preserveUnmatchedPath">PreserveUnmatchedPath</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRewriteAction.property.destination">Destination</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#destination CdnEndpoint#destination}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRewriteAction.property.sourcePattern">SourcePattern</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#source_pattern CdnEndpoint#source_pattern}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRewriteAction.property.preserveUnmatchedPath">PreserveUnmatchedPath</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}. |
 
 ---
 
@@ -3398,7 +3398,7 @@ Destination *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#destination CdnEndpoint#destination}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#destination CdnEndpoint#destination}.
 
 ---
 
@@ -3410,7 +3410,7 @@ SourcePattern *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#source_pattern CdnEndpoint#source_pattern}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#source_pattern CdnEndpoint#source_pattern}.
 
 ---
 
@@ -3422,7 +3422,7 @@ PreserveUnmatchedPath interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}.
 
 ---
 
@@ -3431,7 +3431,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGeoFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointGeoFilter {
 	Action: *string,
@@ -3444,9 +3444,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGeoFilter.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGeoFilter.property.countryCodes">CountryCodes</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#country_codes CdnEndpoint#country_codes}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGeoFilter.property.relativePath">RelativePath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#relative_path CdnEndpoint#relative_path}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGeoFilter.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGeoFilter.property.countryCodes">CountryCodes</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#country_codes CdnEndpoint#country_codes}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGeoFilter.property.relativePath">RelativePath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#relative_path CdnEndpoint#relative_path}. |
 
 ---
 
@@ -3458,7 +3458,7 @@ Action *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}.
 
 ---
 
@@ -3470,7 +3470,7 @@ CountryCodes *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#country_codes CdnEndpoint#country_codes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#country_codes CdnEndpoint#country_codes}.
 
 ---
 
@@ -3482,7 +3482,7 @@ RelativePath *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#relative_path CdnEndpoint#relative_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#relative_path CdnEndpoint#relative_path}.
 
 ---
 
@@ -3491,15 +3491,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointGlobalDeliveryRule {
-	CacheExpirationAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheExpirationAction,
-	CacheKeyQueryStringAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction,
+	CacheExpirationAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheExpirationAction,
+	CacheKeyQueryStringAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction,
 	ModifyRequestHeaderAction: interface{},
 	ModifyResponseHeaderAction: interface{},
-	UrlRedirectAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction,
-	UrlRewriteAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRewriteAction,
+	UrlRedirectAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction,
+	UrlRewriteAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRewriteAction,
 }
 ```
 
@@ -3526,7 +3526,7 @@ CacheExpirationAction CdnEndpointGlobalDeliveryRuleCacheExpirationAction
 
 cache_expiration_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#cache_expiration_action CdnEndpoint#cache_expiration_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#cache_expiration_action CdnEndpoint#cache_expiration_action}
 
 ---
 
@@ -3540,7 +3540,7 @@ CacheKeyQueryStringAction CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction
 
 cache_key_query_string_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#cache_key_query_string_action CdnEndpoint#cache_key_query_string_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#cache_key_query_string_action CdnEndpoint#cache_key_query_string_action}
 
 ---
 
@@ -3554,7 +3554,7 @@ ModifyRequestHeaderAction interface{}
 
 modify_request_header_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#modify_request_header_action CdnEndpoint#modify_request_header_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#modify_request_header_action CdnEndpoint#modify_request_header_action}
 
 ---
 
@@ -3568,7 +3568,7 @@ ModifyResponseHeaderAction interface{}
 
 modify_response_header_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#modify_response_header_action CdnEndpoint#modify_response_header_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#modify_response_header_action CdnEndpoint#modify_response_header_action}
 
 ---
 
@@ -3582,7 +3582,7 @@ UrlRedirectAction CdnEndpointGlobalDeliveryRuleUrlRedirectAction
 
 url_redirect_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#url_redirect_action CdnEndpoint#url_redirect_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#url_redirect_action CdnEndpoint#url_redirect_action}
 
 ---
 
@@ -3596,7 +3596,7 @@ UrlRewriteAction CdnEndpointGlobalDeliveryRuleUrlRewriteAction
 
 url_rewrite_action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#url_rewrite_action CdnEndpoint#url_rewrite_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#url_rewrite_action CdnEndpoint#url_rewrite_action}
 
 ---
 
@@ -3605,7 +3605,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheExpirationAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointGlobalDeliveryRuleCacheExpirationAction {
 	Behavior: *string,
@@ -3617,8 +3617,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheExpirationAction.property.behavior">Behavior</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheExpirationAction.property.duration">Duration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#duration CdnEndpoint#duration}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheExpirationAction.property.behavior">Behavior</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheExpirationAction.property.duration">Duration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#duration CdnEndpoint#duration}. |
 
 ---
 
@@ -3630,7 +3630,7 @@ Behavior *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}.
 
 ---
 
@@ -3642,7 +3642,7 @@ Duration *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#duration CdnEndpoint#duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#duration CdnEndpoint#duration}.
 
 ---
 
@@ -3651,7 +3651,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction {
 	Behavior: *string,
@@ -3663,8 +3663,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction.property.behavior">Behavior</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction.property.parameters">Parameters</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#parameters CdnEndpoint#parameters}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction.property.behavior">Behavior</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction.property.parameters">Parameters</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#parameters CdnEndpoint#parameters}. |
 
 ---
 
@@ -3676,7 +3676,7 @@ Behavior *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#behavior CdnEndpoint#behavior}.
 
 ---
 
@@ -3688,7 +3688,7 @@ Parameters *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#parameters CdnEndpoint#parameters}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#parameters CdnEndpoint#parameters}.
 
 ---
 
@@ -3697,7 +3697,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction {
 	Action: *string,
@@ -3710,9 +3710,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}. |
 
 ---
 
@@ -3724,7 +3724,7 @@ Action *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}.
 
 ---
 
@@ -3736,7 +3736,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
 
 ---
 
@@ -3748,7 +3748,7 @@ Value *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}.
 
 ---
 
@@ -3757,7 +3757,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction {
 	Action: *string,
@@ -3770,9 +3770,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}. |
 
 ---
 
@@ -3784,7 +3784,7 @@ Action *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#action CdnEndpoint#action}.
 
 ---
 
@@ -3796,7 +3796,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
 
 ---
 
@@ -3808,7 +3808,7 @@ Value *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#value CdnEndpoint#value}.
 
 ---
 
@@ -3817,7 +3817,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction {
 	RedirectType: *string,
@@ -3833,12 +3833,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction.property.redirectType">RedirectType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#redirect_type CdnEndpoint#redirect_type}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction.property.fragment">Fragment</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#fragment CdnEndpoint#fragment}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction.property.hostname">Hostname</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#hostname CdnEndpoint#hostname}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#path CdnEndpoint#path}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction.property.protocol">Protocol</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#protocol CdnEndpoint#protocol}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction.property.queryString">QueryString</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#query_string CdnEndpoint#query_string}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction.property.redirectType">RedirectType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#redirect_type CdnEndpoint#redirect_type}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction.property.fragment">Fragment</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#fragment CdnEndpoint#fragment}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction.property.hostname">Hostname</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#hostname CdnEndpoint#hostname}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#path CdnEndpoint#path}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction.property.protocol">Protocol</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#protocol CdnEndpoint#protocol}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectAction.property.queryString">QueryString</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#query_string CdnEndpoint#query_string}. |
 
 ---
 
@@ -3850,7 +3850,7 @@ RedirectType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#redirect_type CdnEndpoint#redirect_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#redirect_type CdnEndpoint#redirect_type}.
 
 ---
 
@@ -3862,7 +3862,7 @@ Fragment *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#fragment CdnEndpoint#fragment}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#fragment CdnEndpoint#fragment}.
 
 ---
 
@@ -3874,7 +3874,7 @@ Hostname *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#hostname CdnEndpoint#hostname}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#hostname CdnEndpoint#hostname}.
 
 ---
 
@@ -3886,7 +3886,7 @@ Path *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#path CdnEndpoint#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#path CdnEndpoint#path}.
 
 ---
 
@@ -3898,7 +3898,7 @@ Protocol *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#protocol CdnEndpoint#protocol}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#protocol CdnEndpoint#protocol}.
 
 ---
 
@@ -3910,7 +3910,7 @@ QueryString *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#query_string CdnEndpoint#query_string}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#query_string CdnEndpoint#query_string}.
 
 ---
 
@@ -3919,7 +3919,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRewriteAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointGlobalDeliveryRuleUrlRewriteAction {
 	Destination: *string,
@@ -3932,9 +3932,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRewriteAction.property.destination">Destination</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#destination CdnEndpoint#destination}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRewriteAction.property.sourcePattern">SourcePattern</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#source_pattern CdnEndpoint#source_pattern}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRewriteAction.property.preserveUnmatchedPath">PreserveUnmatchedPath</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRewriteAction.property.destination">Destination</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#destination CdnEndpoint#destination}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRewriteAction.property.sourcePattern">SourcePattern</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#source_pattern CdnEndpoint#source_pattern}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRewriteAction.property.preserveUnmatchedPath">PreserveUnmatchedPath</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}. |
 
 ---
 
@@ -3946,7 +3946,7 @@ Destination *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#destination CdnEndpoint#destination}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#destination CdnEndpoint#destination}.
 
 ---
 
@@ -3958,7 +3958,7 @@ SourcePattern *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#source_pattern CdnEndpoint#source_pattern}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#source_pattern CdnEndpoint#source_pattern}.
 
 ---
 
@@ -3970,7 +3970,7 @@ PreserveUnmatchedPath interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}.
 
 ---
 
@@ -3979,7 +3979,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointOrigin.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointOrigin {
 	HostName: *string,
@@ -3993,10 +3993,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointOrigin.property.hostName">HostName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#host_name CdnEndpoint#host_name}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointOrigin.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointOrigin.property.httpPort">HttpPort</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#http_port CdnEndpoint#http_port}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointOrigin.property.httpsPort">HttpsPort</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#https_port CdnEndpoint#https_port}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointOrigin.property.hostName">HostName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#host_name CdnEndpoint#host_name}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointOrigin.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointOrigin.property.httpPort">HttpPort</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#http_port CdnEndpoint#http_port}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointOrigin.property.httpsPort">HttpsPort</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#https_port CdnEndpoint#https_port}. |
 
 ---
 
@@ -4008,7 +4008,7 @@ HostName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#host_name CdnEndpoint#host_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#host_name CdnEndpoint#host_name}.
 
 ---
 
@@ -4020,7 +4020,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#name CdnEndpoint#name}.
 
 ---
 
@@ -4032,7 +4032,7 @@ HttpPort *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#http_port CdnEndpoint#http_port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#http_port CdnEndpoint#http_port}.
 
 ---
 
@@ -4044,7 +4044,7 @@ HttpsPort *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#https_port CdnEndpoint#https_port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#https_port CdnEndpoint#https_port}.
 
 ---
 
@@ -4053,7 +4053,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 &cdnendpoint.CdnEndpointTimeouts {
 	Create: *string,
@@ -4067,10 +4067,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#create CdnEndpoint#create}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#delete CdnEndpoint#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#read CdnEndpoint#read}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#update CdnEndpoint#update}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#create CdnEndpoint#create}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#delete CdnEndpoint#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#read CdnEndpoint#read}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#update CdnEndpoint#update}. |
 
 ---
 
@@ -4082,7 +4082,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#create CdnEndpoint#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#create CdnEndpoint#create}.
 
 ---
 
@@ -4094,7 +4094,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#delete CdnEndpoint#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#delete CdnEndpoint#delete}.
 
 ---
 
@@ -4106,7 +4106,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#read CdnEndpoint#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#read CdnEndpoint#read}.
 
 ---
 
@@ -4118,7 +4118,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/cdn_endpoint#update CdnEndpoint#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/cdn_endpoint#update CdnEndpoint#update}.
 
 ---
 
@@ -4129,7 +4129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheExpirationActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleCacheExpirationActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnEndpointDeliveryRuleCacheExpirationActionOutputReference
 ```
@@ -4429,7 +4429,7 @@ func InternalValue() CdnEndpointDeliveryRuleCacheExpirationAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference
 ```
@@ -4729,7 +4729,7 @@ func InternalValue() CdnEndpointDeliveryRuleCacheKeyQueryStringAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCookiesConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleCookiesConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRuleCookiesConditionList
 ```
@@ -4889,7 +4889,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleCookiesConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleCookiesConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRuleCookiesConditionOutputReference
 ```
@@ -5287,7 +5287,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleDeviceConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleDeviceConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnEndpointDeliveryRuleDeviceConditionOutputReference
 ```
@@ -5616,7 +5616,7 @@ func InternalValue() CdnEndpointDeliveryRuleDeviceCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleHttpVersionConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleHttpVersionConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRuleHttpVersionConditionList
 ```
@@ -5776,7 +5776,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleHttpVersionConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleHttpVersionConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRuleHttpVersionConditionOutputReference
 ```
@@ -6123,7 +6123,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRuleList
 ```
@@ -6283,7 +6283,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyRequestHeaderActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleModifyRequestHeaderActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRuleModifyRequestHeaderActionList
 ```
@@ -6443,7 +6443,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyRequestHeaderActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleModifyRequestHeaderActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRuleModifyRequestHeaderActionOutputReference
 ```
@@ -6783,7 +6783,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyResponseHeaderActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleModifyResponseHeaderActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRuleModifyResponseHeaderActionList
 ```
@@ -6943,7 +6943,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleModifyResponseHeaderActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleModifyResponseHeaderActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRuleModifyResponseHeaderActionOutputReference
 ```
@@ -7283,7 +7283,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRuleOutputReference
 ```
@@ -8434,7 +8434,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRulePostArgConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRulePostArgConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRulePostArgConditionList
 ```
@@ -8594,7 +8594,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRulePostArgConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRulePostArgConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRulePostArgConditionOutputReference
 ```
@@ -8992,7 +8992,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleQueryStringConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleQueryStringConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRuleQueryStringConditionList
 ```
@@ -9152,7 +9152,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleQueryStringConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleQueryStringConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRuleQueryStringConditionOutputReference
 ```
@@ -9528,7 +9528,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRemoteAddressConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleRemoteAddressConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRuleRemoteAddressConditionList
 ```
@@ -9688,7 +9688,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRemoteAddressConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleRemoteAddressConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRuleRemoteAddressConditionOutputReference
 ```
@@ -10035,7 +10035,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestBodyConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleRequestBodyConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRuleRequestBodyConditionList
 ```
@@ -10195,7 +10195,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestBodyConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleRequestBodyConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRuleRequestBodyConditionOutputReference
 ```
@@ -10571,7 +10571,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestHeaderConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleRequestHeaderConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRuleRequestHeaderConditionList
 ```
@@ -10731,7 +10731,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestHeaderConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleRequestHeaderConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRuleRequestHeaderConditionOutputReference
 ```
@@ -11129,7 +11129,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestMethodConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleRequestMethodConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnEndpointDeliveryRuleRequestMethodConditionOutputReference
 ```
@@ -11458,7 +11458,7 @@ func InternalValue() CdnEndpointDeliveryRuleRequestMethodCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleRequestSchemeConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference
 ```
@@ -11787,7 +11787,7 @@ func InternalValue() CdnEndpointDeliveryRuleRequestSchemeCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestUriConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleRequestUriConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRuleRequestUriConditionList
 ```
@@ -11947,7 +11947,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleRequestUriConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleRequestUriConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRuleRequestUriConditionOutputReference
 ```
@@ -12323,7 +12323,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileExtensionConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleUrlFileExtensionConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRuleUrlFileExtensionConditionList
 ```
@@ -12483,7 +12483,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileExtensionConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleUrlFileExtensionConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRuleUrlFileExtensionConditionOutputReference
 ```
@@ -12859,7 +12859,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileNameConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleUrlFileNameConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRuleUrlFileNameConditionList
 ```
@@ -13019,7 +13019,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlFileNameConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleUrlFileNameConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRuleUrlFileNameConditionOutputReference
 ```
@@ -13395,7 +13395,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlPathConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleUrlPathConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointDeliveryRuleUrlPathConditionList
 ```
@@ -13555,7 +13555,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlPathConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleUrlPathConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointDeliveryRuleUrlPathConditionOutputReference
 ```
@@ -13931,7 +13931,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRedirectActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleUrlRedirectActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnEndpointDeliveryRuleUrlRedirectActionOutputReference
 ```
@@ -14347,7 +14347,7 @@ func InternalValue() CdnEndpointDeliveryRuleUrlRedirectAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointDeliveryRuleUrlRewriteActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointDeliveryRuleUrlRewriteActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnEndpointDeliveryRuleUrlRewriteActionOutputReference
 ```
@@ -14669,7 +14669,7 @@ func InternalValue() CdnEndpointDeliveryRuleUrlRewriteAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGeoFilterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointGeoFilterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointGeoFilterList
 ```
@@ -14829,7 +14829,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGeoFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointGeoFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointGeoFilterOutputReference
 ```
@@ -15162,7 +15162,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference
 ```
@@ -15462,7 +15462,7 @@ func InternalValue() CdnEndpointGlobalDeliveryRuleCacheExpirationAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReference
 ```
@@ -15762,7 +15762,7 @@ func InternalValue() CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionList
 ```
@@ -15922,7 +15922,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionOutputReference
 ```
@@ -16262,7 +16262,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionList
 ```
@@ -16422,7 +16422,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionOutputReference
 ```
@@ -16762,7 +16762,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointGlobalDeliveryRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnEndpointGlobalDeliveryRuleOutputReference
 ```
@@ -17263,7 +17263,7 @@ func InternalValue() CdnEndpointGlobalDeliveryRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference
 ```
@@ -17679,7 +17679,7 @@ func InternalValue() CdnEndpointGlobalDeliveryRuleUrlRedirectAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference
 ```
@@ -18001,7 +18001,7 @@ func InternalValue() CdnEndpointGlobalDeliveryRuleUrlRewriteAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointOriginList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointOriginList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnEndpointOriginList
 ```
@@ -18161,7 +18161,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointOriginOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointOriginOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnEndpointOriginOutputReference
 ```
@@ -18530,7 +18530,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnEndpoint.CdnEndpointTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cdnendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnendpoint"
 
 cdnendpoint.NewCdnEndpointTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnEndpointTimeoutsOutputReference
 ```

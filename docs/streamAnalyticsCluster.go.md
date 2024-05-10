@@ -4,12 +4,12 @@
 
 ### StreamAnalyticsCluster <a name="StreamAnalyticsCluster" id="@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster azurerm_stream_analytics_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster azurerm_stream_analytics_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticscluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticscluster"
 
 streamanalyticscluster.NewStreamAnalyticsCluster(scope Construct, id *string, config StreamAnalyticsClusterConfig) StreamAnalyticsCluster
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticscluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticscluster"
 
 streamanalyticscluster.StreamAnalyticsCluster_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticscluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticscluster"
 
 streamanalyticscluster.StreamAnalyticsCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ streamanalyticscluster.StreamAnalyticsCluster_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticscluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticscluster"
 
 streamanalyticscluster.StreamAnalyticsCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ streamanalyticscluster.StreamAnalyticsCluster_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticscluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticscluster"
 
 streamanalyticscluster.StreamAnalyticsCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the StreamAnalyticsCluster to 
 
 The id of the existing StreamAnalyticsCluster that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -855,7 +855,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticscluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticscluster"
 
 &streamanalyticscluster.StreamAnalyticsClusterConfig {
 	Connection: interface{},
@@ -871,7 +871,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticscl
 	StreamingCapacity: *f64,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.streamAnalyticsCluster.StreamAnalyticsClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsCluster.StreamAnalyticsClusterTimeouts,
 }
 ```
 
@@ -886,12 +886,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticscl
 | <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#location StreamAnalyticsCluster#location}. |
-| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#name StreamAnalyticsCluster#name}. |
-| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#resource_group_name StreamAnalyticsCluster#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.streamingCapacity">StreamingCapacity</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#streaming_capacity StreamAnalyticsCluster#streaming_capacity}. |
-| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#id StreamAnalyticsCluster#id}. |
-| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#tags StreamAnalyticsCluster#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#location StreamAnalyticsCluster#location}. |
+| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#name StreamAnalyticsCluster#name}. |
+| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#resource_group_name StreamAnalyticsCluster#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.streamingCapacity">StreamingCapacity</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#streaming_capacity StreamAnalyticsCluster#streaming_capacity}. |
+| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#id StreamAnalyticsCluster#id}. |
+| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#tags StreamAnalyticsCluster#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterTimeouts">StreamAnalyticsClusterTimeouts</a></code> | timeouts block. |
 
 ---
@@ -974,7 +974,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#location StreamAnalyticsCluster#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#location StreamAnalyticsCluster#location}.
 
 ---
 
@@ -986,7 +986,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#name StreamAnalyticsCluster#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#name StreamAnalyticsCluster#name}.
 
 ---
 
@@ -998,7 +998,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#resource_group_name StreamAnalyticsCluster#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#resource_group_name StreamAnalyticsCluster#resource_group_name}.
 
 ---
 
@@ -1010,7 +1010,7 @@ StreamingCapacity *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#streaming_capacity StreamAnalyticsCluster#streaming_capacity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#streaming_capacity StreamAnalyticsCluster#streaming_capacity}.
 
 ---
 
@@ -1022,7 +1022,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#id StreamAnalyticsCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#id StreamAnalyticsCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1037,7 +1037,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#tags StreamAnalyticsCluster#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#tags StreamAnalyticsCluster#tags}.
 
 ---
 
@@ -1051,7 +1051,7 @@ Timeouts StreamAnalyticsClusterTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#timeouts StreamAnalyticsCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#timeouts StreamAnalyticsCluster#timeouts}
 
 ---
 
@@ -1060,7 +1060,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticscluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticscluster"
 
 &streamanalyticscluster.StreamAnalyticsClusterTimeouts {
 	Create: *string,
@@ -1074,10 +1074,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticscl
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#create StreamAnalyticsCluster#create}. |
-| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#delete StreamAnalyticsCluster#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#read StreamAnalyticsCluster#read}. |
-| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#update StreamAnalyticsCluster#update}. |
+| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#create StreamAnalyticsCluster#create}. |
+| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#delete StreamAnalyticsCluster#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#read StreamAnalyticsCluster#read}. |
+| <code><a href="#@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#update StreamAnalyticsCluster#update}. |
 
 ---
 
@@ -1089,7 +1089,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#create StreamAnalyticsCluster#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#create StreamAnalyticsCluster#create}.
 
 ---
 
@@ -1101,7 +1101,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#delete StreamAnalyticsCluster#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#delete StreamAnalyticsCluster#delete}.
 
 ---
 
@@ -1113,7 +1113,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#read StreamAnalyticsCluster#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#read StreamAnalyticsCluster#read}.
 
 ---
 
@@ -1125,7 +1125,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/stream_analytics_cluster#update StreamAnalyticsCluster#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/stream_analytics_cluster#update StreamAnalyticsCluster#update}.
 
 ---
 
@@ -1136,7 +1136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsCluster.StreamAnalyticsClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/streamanalyticscluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticscluster"
 
 streamanalyticscluster.NewStreamAnalyticsClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsClusterTimeoutsOutputReference
 ```

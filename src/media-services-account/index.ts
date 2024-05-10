@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,74 +8,74 @@ import * as cdktf from 'cdktf';
 
 export interface MediaServicesAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#id MediaServicesAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#id MediaServicesAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#location MediaServicesAccount#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#location MediaServicesAccount#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#name MediaServicesAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#name MediaServicesAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#public_network_access_enabled MediaServicesAccount#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#public_network_access_enabled MediaServicesAccount#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#resource_group_name MediaServicesAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#resource_group_name MediaServicesAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#storage_authentication_type MediaServicesAccount#storage_authentication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#storage_authentication_type MediaServicesAccount#storage_authentication_type}
   */
   readonly storageAuthenticationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#tags MediaServicesAccount#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#tags MediaServicesAccount#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#encryption MediaServicesAccount#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#encryption MediaServicesAccount#encryption}
   */
   readonly encryption?: MediaServicesAccountEncryption;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#identity MediaServicesAccount#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#identity MediaServicesAccount#identity}
   */
   readonly identity?: MediaServicesAccountIdentity;
   /**
   * key_delivery_access_control block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#key_delivery_access_control MediaServicesAccount#key_delivery_access_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#key_delivery_access_control MediaServicesAccount#key_delivery_access_control}
   */
   readonly keyDeliveryAccessControl?: MediaServicesAccountKeyDeliveryAccessControl;
   /**
   * storage_account block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#storage_account MediaServicesAccount#storage_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#storage_account MediaServicesAccount#storage_account}
   */
   readonly storageAccount: MediaServicesAccountStorageAccount[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#timeouts MediaServicesAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#timeouts MediaServicesAccount#timeouts}
   */
   readonly timeouts?: MediaServicesAccountTimeouts;
 }
 export interface MediaServicesAccountEncryptionManagedIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#use_system_assigned_identity MediaServicesAccount#use_system_assigned_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#use_system_assigned_identity MediaServicesAccount#use_system_assigned_identity}
   */
   readonly useSystemAssignedIdentity?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#user_assigned_identity_id MediaServicesAccount#user_assigned_identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#user_assigned_identity_id MediaServicesAccount#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId?: string;
 }
@@ -193,17 +188,17 @@ export class MediaServicesAccountEncryptionManagedIdentityOutputReference extend
 }
 export interface MediaServicesAccountEncryption {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#key_vault_key_identifier MediaServicesAccount#key_vault_key_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#key_vault_key_identifier MediaServicesAccount#key_vault_key_identifier}
   */
   readonly keyVaultKeyIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#type MediaServicesAccount#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#type MediaServicesAccount#type}
   */
   readonly type?: string;
   /**
   * managed_identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#managed_identity MediaServicesAccount#managed_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#managed_identity MediaServicesAccount#managed_identity}
   */
   readonly managedIdentity?: MediaServicesAccountEncryptionManagedIdentity;
 }
@@ -350,11 +345,11 @@ export class MediaServicesAccountEncryptionOutputReference extends cdktf.Complex
 }
 export interface MediaServicesAccountIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#identity_ids MediaServicesAccount#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#identity_ids MediaServicesAccount#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#type MediaServicesAccount#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#type MediaServicesAccount#type}
   */
   readonly type: string;
 }
@@ -474,11 +469,11 @@ export class MediaServicesAccountIdentityOutputReference extends cdktf.ComplexOb
 }
 export interface MediaServicesAccountKeyDeliveryAccessControl {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#default_action MediaServicesAccount#default_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#default_action MediaServicesAccount#default_action}
   */
   readonly defaultAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#ip_allow_list MediaServicesAccount#ip_allow_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#ip_allow_list MediaServicesAccount#ip_allow_list}
   */
   readonly ipAllowList?: string[];
 }
@@ -591,11 +586,11 @@ export class MediaServicesAccountKeyDeliveryAccessControlOutputReference extends
 }
 export interface MediaServicesAccountStorageAccountManagedIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#use_system_assigned_identity MediaServicesAccount#use_system_assigned_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#use_system_assigned_identity MediaServicesAccount#use_system_assigned_identity}
   */
   readonly useSystemAssignedIdentity?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#user_assigned_identity_id MediaServicesAccount#user_assigned_identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#user_assigned_identity_id MediaServicesAccount#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId?: string;
 }
@@ -708,20 +703,20 @@ export class MediaServicesAccountStorageAccountManagedIdentityOutputReference ex
 }
 export interface MediaServicesAccountStorageAccount {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#id MediaServicesAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#id MediaServicesAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#is_primary MediaServicesAccount#is_primary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#is_primary MediaServicesAccount#is_primary}
   */
   readonly isPrimary?: boolean | cdktf.IResolvable;
   /**
   * managed_identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#managed_identity MediaServicesAccount#managed_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#managed_identity MediaServicesAccount#managed_identity}
   */
   readonly managedIdentity?: MediaServicesAccountStorageAccountManagedIdentity;
 }
@@ -892,19 +887,19 @@ export class MediaServicesAccountStorageAccountList extends cdktf.ComplexList {
 }
 export interface MediaServicesAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#create MediaServicesAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#create MediaServicesAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#delete MediaServicesAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#delete MediaServicesAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#read MediaServicesAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#read MediaServicesAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#update MediaServicesAccount#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#update MediaServicesAccount#update}
   */
   readonly update?: string;
 }
@@ -1085,7 +1080,7 @@ export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account azurerm_media_services_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account azurerm_media_services_account}
 */
 export class MediaServicesAccount extends cdktf.TerraformResource {
 
@@ -1101,7 +1096,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MediaServicesAccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MediaServicesAccount to import
-  * @param importFromId The id of the existing MediaServicesAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MediaServicesAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MediaServicesAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1113,7 +1108,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/media_services_account azurerm_media_services_account} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/media_services_account azurerm_media_services_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1124,7 +1119,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_services_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.102.0',
+        providerVersion: '3.103.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

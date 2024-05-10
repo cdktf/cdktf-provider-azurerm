@@ -4,12 +4,12 @@
 
 ### DataAzurermLinuxWebApp <a name="DataAzurermLinuxWebApp" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebApp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app azurerm_linux_web_app}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app azurerm_linux_web_app}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebApp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebApp(scope Construct, id *string, config DataAzurermLinuxWebAppConfig) DataAzurermLinuxWebApp
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebApp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.DataAzurermLinuxWebApp_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebApp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.DataAzurermLinuxWebApp_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermlinuxwebapp.DataAzurermLinuxWebApp_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebApp.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.DataAzurermLinuxWebApp_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermlinuxwebapp.DataAzurermLinuxWebApp_IsTerraformDataSource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebApp.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.DataAzurermLinuxWebApp_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermLinuxWebApp to 
 
 The id of the existing DataAzurermLinuxWebApp that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1054,7 +1054,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettings {
 
@@ -1067,7 +1067,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsActiveDirectory {
 
@@ -1080,7 +1080,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsFacebook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsFacebook {
 
@@ -1093,7 +1093,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsGithub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsGithub {
 
@@ -1106,7 +1106,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsGoogle.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsGoogle {
 
@@ -1119,7 +1119,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsMicrosoft.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsMicrosoft {
 
@@ -1132,7 +1132,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsTwitter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsTwitter {
 
@@ -1145,7 +1145,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsV2 {
 
@@ -1158,7 +1158,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2ActiveDirectoryV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsV2ActiveDirectoryV2 {
 
@@ -1171,7 +1171,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2AppleV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsV2AppleV2 {
 
@@ -1184,7 +1184,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2AzureStaticWebAppV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsV2AzureStaticWebAppV2 {
 
@@ -1197,7 +1197,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2CustomOidcV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsV2CustomOidcV2 {
 
@@ -1210,7 +1210,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2FacebookV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsV2FacebookV2 {
 
@@ -1223,7 +1223,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2GithubV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsV2GithubV2 {
 
@@ -1236,7 +1236,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2GoogleV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsV2GoogleV2 {
 
@@ -1249,7 +1249,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2Login.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsV2Login {
 
@@ -1262,7 +1262,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2MicrosoftV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsV2MicrosoftV2 {
 
@@ -1275,7 +1275,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2TwitterV2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppAuthSettingsV2TwitterV2 {
 
@@ -1288,7 +1288,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppBackup {
 
@@ -1301,7 +1301,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppBackupSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppBackupSchedule {
 
@@ -1314,7 +1314,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppConfig {
 	Connection: interface{},
@@ -1327,7 +1327,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppTimeouts,
 }
 ```
 
@@ -1342,9 +1342,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#name DataAzurermLinuxWebApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#resource_group_name DataAzurermLinuxWebApp#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#id DataAzurermLinuxWebApp#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#name DataAzurermLinuxWebApp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#resource_group_name DataAzurermLinuxWebApp#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#id DataAzurermLinuxWebApp#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppTimeouts">DataAzurermLinuxWebAppTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1427,7 +1427,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#name DataAzurermLinuxWebApp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#name DataAzurermLinuxWebApp#name}.
 
 ---
 
@@ -1439,7 +1439,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#resource_group_name DataAzurermLinuxWebApp#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#resource_group_name DataAzurermLinuxWebApp#resource_group_name}.
 
 ---
 
@@ -1451,7 +1451,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#id DataAzurermLinuxWebApp#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#id DataAzurermLinuxWebApp#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1468,7 +1468,7 @@ Timeouts DataAzurermLinuxWebAppTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#timeouts DataAzurermLinuxWebApp#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#timeouts DataAzurermLinuxWebApp#timeouts}
 
 ---
 
@@ -1477,7 +1477,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConnectionString.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppConnectionString {
 
@@ -1490,7 +1490,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppIdentity {
 
@@ -1503,7 +1503,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppLogs {
 
@@ -1516,7 +1516,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsApplicationLogs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppLogsApplicationLogs {
 
@@ -1529,7 +1529,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorage {
 
@@ -1542,7 +1542,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsHttpLogs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppLogsHttpLogs {
 
@@ -1555,7 +1555,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorage {
 
@@ -1568,7 +1568,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsHttpLogsFileSystem.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppLogsHttpLogsFileSystem {
 
@@ -1581,7 +1581,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfig {
 
@@ -1594,7 +1594,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigApplicationStack.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfigApplicationStack {
 
@@ -1607,7 +1607,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSetting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfigAutoHealSetting {
 
@@ -1620,7 +1620,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingAction {
 
@@ -1633,7 +1633,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTrigger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTrigger {
 
@@ -1646,7 +1646,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequests.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequests {
 
@@ -1659,9 +1659,22 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequest {
+
+}
+```
+
+
+### DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath <a name="DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
+
+&dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath {
 
 }
 ```
@@ -1672,7 +1685,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode {
 
@@ -1685,7 +1698,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigCors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfigCors {
 
@@ -1698,7 +1711,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfigIpRestriction {
 
@@ -1711,7 +1724,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfigIpRestrictionHeaders {
 
@@ -1724,7 +1737,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigScmIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfigScmIpRestriction {
 
@@ -1737,7 +1750,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeaders {
 
@@ -1750,7 +1763,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppSiteCredential {
 
@@ -1763,7 +1776,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppStickySettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppStickySettings {
 
@@ -1776,7 +1789,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppStorageAccount {
 
@@ -1789,7 +1802,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 &dataazurermlinuxwebapp.DataAzurermLinuxWebAppTimeouts {
 	Read: *string,
@@ -1800,7 +1813,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxw
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#read DataAzurermLinuxWebApp#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#read DataAzurermLinuxWebApp#read}. |
 
 ---
 
@@ -1812,7 +1825,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/linux_web_app#read DataAzurermLinuxWebApp#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/linux_web_app#read DataAzurermLinuxWebApp#read}.
 
 ---
 
@@ -1823,7 +1836,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsActiveDirectoryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsActiveDirectoryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsActiveDirectoryList
 ```
@@ -1972,7 +1985,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsActiveDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsActiveDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsActiveDirectoryOutputReference
 ```
@@ -2283,7 +2296,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsActiveDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsFacebookList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsFacebookList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsFacebookList
 ```
@@ -2432,7 +2445,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsFacebookOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsFacebookOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsFacebookOutputReference
 ```
@@ -2743,7 +2756,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsFacebook
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsGithubList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsGithubList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsGithubList
 ```
@@ -2892,7 +2905,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsGithubOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsGithubOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsGithubOutputReference
 ```
@@ -3203,7 +3216,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsGithub
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsGoogleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsGoogleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsGoogleList
 ```
@@ -3352,7 +3365,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsGoogleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsGoogleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsGoogleOutputReference
 ```
@@ -3663,7 +3676,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsGoogle
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsList
 ```
@@ -3812,7 +3825,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsMicrosoftList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsMicrosoftList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsMicrosoftList
 ```
@@ -3961,7 +3974,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsMicrosoftOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsMicrosoftOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsMicrosoftOutputReference
 ```
@@ -4272,7 +4285,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsMicrosoft
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsOutputReference
 ```
@@ -4704,7 +4717,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsTwitterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsTwitterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsTwitterList
 ```
@@ -4853,7 +4866,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsTwitterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsTwitterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsTwitterOutputReference
 ```
@@ -5153,7 +5166,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsTwitter
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2ActiveDirectoryV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2ActiveDirectoryV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsV2ActiveDirectoryV2List
 ```
@@ -5302,7 +5315,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsV2ActiveDirectoryV2OutputReference
 ```
@@ -5701,7 +5714,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsV2ActiveDirectoryV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2AppleV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2AppleV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsV2AppleV2List
 ```
@@ -5850,7 +5863,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2AppleV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2AppleV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsV2AppleV2OutputReference
 ```
@@ -6150,7 +6163,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsV2AppleV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2AzureStaticWebAppV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2AzureStaticWebAppV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsV2AzureStaticWebAppV2List
 ```
@@ -6299,7 +6312,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsV2AzureStaticWebAppV2OutputReference
 ```
@@ -6577,7 +6590,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsV2AzureStaticWebAppV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2CustomOidcV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2CustomOidcV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsV2CustomOidcV2List
 ```
@@ -6726,7 +6739,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2CustomOidcV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2CustomOidcV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsV2CustomOidcV2OutputReference
 ```
@@ -7114,7 +7127,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsV2CustomOidcV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2FacebookV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2FacebookV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsV2FacebookV2List
 ```
@@ -7263,7 +7276,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2FacebookV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2FacebookV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsV2FacebookV2OutputReference
 ```
@@ -7574,7 +7587,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsV2FacebookV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2GithubV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2GithubV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsV2GithubV2List
 ```
@@ -7723,7 +7736,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2GithubV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2GithubV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsV2GithubV2OutputReference
 ```
@@ -8023,7 +8036,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsV2GithubV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2GoogleV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2GoogleV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsV2GoogleV2List
 ```
@@ -8172,7 +8185,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2GoogleV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2GoogleV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsV2GoogleV2OutputReference
 ```
@@ -8483,7 +8496,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsV2GoogleV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsV2List
 ```
@@ -8632,7 +8645,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2LoginList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2LoginList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsV2LoginList
 ```
@@ -8781,7 +8794,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2LoginOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2LoginOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsV2LoginOutputReference
 ```
@@ -9169,7 +9182,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsV2Login
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2MicrosoftV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2MicrosoftV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsV2MicrosoftV2List
 ```
@@ -9318,7 +9331,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2MicrosoftV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2MicrosoftV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsV2MicrosoftV2OutputReference
 ```
@@ -9629,7 +9642,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsV2MicrosoftV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsV2OutputReference
 ```
@@ -10138,7 +10151,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2TwitterV2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2TwitterV2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppAuthSettingsV2TwitterV2List
 ```
@@ -10287,7 +10300,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppAuthSettingsV2TwitterV2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppAuthSettingsV2TwitterV2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppAuthSettingsV2TwitterV2OutputReference
 ```
@@ -10576,7 +10589,7 @@ func InternalValue() DataAzurermLinuxWebAppAuthSettingsV2TwitterV2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppBackupList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppBackupList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppBackupList
 ```
@@ -10725,7 +10738,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppBackupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppBackupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppBackupOutputReference
 ```
@@ -11036,7 +11049,7 @@ func InternalValue() DataAzurermLinuxWebAppBackup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppBackupScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppBackupScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppBackupScheduleList
 ```
@@ -11185,7 +11198,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppBackupScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppBackupScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppBackupScheduleOutputReference
 ```
@@ -11518,7 +11531,7 @@ func InternalValue() DataAzurermLinuxWebAppBackupSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConnectionStringList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppConnectionStringList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppConnectionStringList
 ```
@@ -11667,7 +11680,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppConnectionStringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppConnectionStringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppConnectionStringOutputReference
 ```
@@ -11967,7 +11980,7 @@ func InternalValue() DataAzurermLinuxWebAppConnectionString
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppIdentityList
 ```
@@ -12116,7 +12129,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppIdentityOutputReference
 ```
@@ -12427,7 +12440,7 @@ func InternalValue() DataAzurermLinuxWebAppIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorageList
 ```
@@ -12576,7 +12589,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorageOutputReference
 ```
@@ -12876,7 +12889,7 @@ func InternalValue() DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsApplicationLogsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppLogsApplicationLogsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppLogsApplicationLogsList
 ```
@@ -13025,7 +13038,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsApplicationLogsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppLogsApplicationLogsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppLogsApplicationLogsOutputReference
 ```
@@ -13314,7 +13327,7 @@ func InternalValue() DataAzurermLinuxWebAppLogsApplicationLogs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorageList
 ```
@@ -13463,7 +13476,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorageOutputReference
 ```
@@ -13752,7 +13765,7 @@ func InternalValue() DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsHttpLogsFileSystemList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppLogsHttpLogsFileSystemList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppLogsHttpLogsFileSystemList
 ```
@@ -13901,7 +13914,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsHttpLogsFileSystemOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppLogsHttpLogsFileSystemOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppLogsHttpLogsFileSystemOutputReference
 ```
@@ -14190,7 +14203,7 @@ func InternalValue() DataAzurermLinuxWebAppLogsHttpLogsFileSystem
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsHttpLogsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppLogsHttpLogsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppLogsHttpLogsList
 ```
@@ -14339,7 +14352,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsHttpLogsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppLogsHttpLogsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppLogsHttpLogsOutputReference
 ```
@@ -14628,7 +14641,7 @@ func InternalValue() DataAzurermLinuxWebAppLogsHttpLogs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppLogsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppLogsList
 ```
@@ -14777,7 +14790,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppLogsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppLogsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppLogsOutputReference
 ```
@@ -15088,7 +15101,7 @@ func InternalValue() DataAzurermLinuxWebAppLogs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigApplicationStackList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigApplicationStackList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigApplicationStackList
 ```
@@ -15237,7 +15250,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigApplicationStackOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigApplicationStackOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigApplicationStackOutputReference
 ```
@@ -15669,7 +15682,7 @@ func InternalValue() DataAzurermLinuxWebAppSiteConfigApplicationStack
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingActionList
 ```
@@ -15818,7 +15831,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingActionOutputReference
 ```
@@ -16107,7 +16120,7 @@ func InternalValue() DataAzurermLinuxWebAppSiteConfigAutoHealSettingAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingList
 ```
@@ -16256,7 +16269,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingOutputReference
 ```
@@ -16545,7 +16558,7 @@ func InternalValue() DataAzurermLinuxWebAppSiteConfigAutoHealSetting
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerList
 ```
@@ -16694,7 +16707,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference
 ```
@@ -16919,6 +16932,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.requests">Requests</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsList">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.slowRequest">SlowRequest</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestList">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.slowRequestWithPath">SlowRequestWithPath</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.statusCode">StatusCode</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeList">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTrigger">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTrigger</a></code> | *No description.* |
 
@@ -16968,6 +16982,16 @@ func SlowRequest() DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowReq
 
 ---
 
+##### `SlowRequestWithPath`<sup>Required</sup> <a name="SlowRequestWithPath" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.slowRequestWithPath"></a>
+
+```go
+func SlowRequestWithPath() DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList</a>
+
+---
+
 ##### `StatusCode`<sup>Required</sup> <a name="StatusCode" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference.property.statusCode"></a>
 
 ```go
@@ -16994,7 +17018,7 @@ func InternalValue() DataAzurermLinuxWebAppSiteConfigAutoHealSettingTrigger
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsList
 ```
@@ -17143,7 +17167,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsOutputReference
 ```
@@ -17432,7 +17456,7 @@ func InternalValue() DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerReque
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestList
 ```
@@ -17581,7 +17605,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestOutputReference
 ```
@@ -17887,12 +17911,472 @@ func InternalValue() DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowR
 ---
 
 
+### DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList <a name="DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
+
+dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.get"></a>
+
+```go
+func Get(index *f64) DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.get.parameter.index"></a>
+
+- *Type:* *f64
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathList.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+
+### DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference <a name="DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
+
+dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>*f64</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>*bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* *f64
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* *bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.interval">Interval</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.path">Path</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.timeTaken">TimeTaken</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Count`<sup>Required</sup> <a name="Count" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.count"></a>
+
+```go
+func Count() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `Interval`<sup>Required</sup> <a name="Interval" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.interval"></a>
+
+```go
+func Interval() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Path`<sup>Required</sup> <a name="Path" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.path"></a>
+
+```go
+func Path() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `TimeTaken`<sup>Required</sup> <a name="TimeTaken" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.timeTaken"></a>
+
+```go
+func TimeTaken() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPathOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath">DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestWithPath</a>
+
+---
+
+
 ### DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeList <a name="DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeList" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeList"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeList
 ```
@@ -18041,7 +18525,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference
 ```
@@ -18374,7 +18858,7 @@ func InternalValue() DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatu
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigCorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigCorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigCorsList
 ```
@@ -18523,7 +19007,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigCorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigCorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigCorsOutputReference
 ```
@@ -18812,7 +19296,7 @@ func InternalValue() DataAzurermLinuxWebAppSiteConfigCors
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigIpRestrictionHeadersList
 ```
@@ -18961,7 +19445,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigIpRestrictionHeadersOutputReference
 ```
@@ -19272,7 +19756,7 @@ func InternalValue() DataAzurermLinuxWebAppSiteConfigIpRestrictionHeaders
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigIpRestrictionList
 ```
@@ -19421,7 +19905,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigIpRestrictionOutputReference
 ```
@@ -19776,7 +20260,7 @@ func InternalValue() DataAzurermLinuxWebAppSiteConfigIpRestriction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigList
 ```
@@ -19925,7 +20409,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigOutputReference
 ```
@@ -20566,7 +21050,7 @@ func InternalValue() DataAzurermLinuxWebAppSiteConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeadersList
 ```
@@ -20715,7 +21199,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeadersOutputReference
 ```
@@ -21026,7 +21510,7 @@ func InternalValue() DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeaders
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigScmIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigScmIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteConfigScmIpRestrictionList
 ```
@@ -21175,7 +21659,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteConfigScmIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteConfigScmIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteConfigScmIpRestrictionOutputReference
 ```
@@ -21530,7 +22014,7 @@ func InternalValue() DataAzurermLinuxWebAppSiteConfigScmIpRestriction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteCredentialList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteCredentialList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppSiteCredentialList
 ```
@@ -21679,7 +22163,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppSiteCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppSiteCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppSiteCredentialOutputReference
 ```
@@ -21968,7 +22452,7 @@ func InternalValue() DataAzurermLinuxWebAppSiteCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppStickySettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppStickySettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppStickySettingsList
 ```
@@ -22117,7 +22601,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppStickySettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppStickySettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppStickySettingsOutputReference
 ```
@@ -22406,7 +22890,7 @@ func InternalValue() DataAzurermLinuxWebAppStickySettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppStorageAccountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppStorageAccountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLinuxWebAppStorageAccountList
 ```
@@ -22555,7 +23039,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppStorageAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppStorageAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLinuxWebAppStorageAccountOutputReference
 ```
@@ -22888,7 +23372,7 @@ func InternalValue() DataAzurermLinuxWebAppStorageAccount
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLinuxWebApp.DataAzurermLinuxWebAppTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlinuxwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlinuxwebapp"
 
 dataazurermlinuxwebapp.NewDataAzurermLinuxWebAppTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermLinuxWebAppTimeoutsOutputReference
 ```
