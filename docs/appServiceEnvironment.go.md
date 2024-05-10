@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceEnvironment.AppServiceEnvironment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appserviceenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceenvironment"
 
 appserviceenvironment.NewAppServiceEnvironment(scope Construct, id *string, config AppServiceEnvironmentConfig) AppServiceEnvironment
 ```
@@ -460,7 +460,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.appServiceEnvironment.AppServiceEnvironment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appserviceenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceenvironment"
 
 appserviceenvironment.AppServiceEnvironment_IsConstruct(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.appServiceEnvironment.AppServiceEnvironment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appserviceenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceenvironment"
 
 appserviceenvironment.AppServiceEnvironment_IsTerraformElement(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ appserviceenvironment.AppServiceEnvironment_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.appServiceEnvironment.AppServiceEnvironment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appserviceenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceenvironment"
 
 appserviceenvironment.AppServiceEnvironment_IsTerraformResource(x interface{}) *bool
 ```
@@ -520,7 +520,7 @@ appserviceenvironment.AppServiceEnvironment_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.appServiceEnvironment.AppServiceEnvironment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appserviceenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceenvironment"
 
 appserviceenvironment.AppServiceEnvironment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1035,7 +1035,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceEnvironment.AppServiceEnvironmentClusterSetting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appserviceenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceenvironment"
 
 &appserviceenvironment.AppServiceEnvironmentClusterSetting {
 	Name: *string,
@@ -1081,7 +1081,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceEnvironment.AppServiceEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appserviceenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceenvironment"
 
 &appserviceenvironment.AppServiceEnvironmentConfig {
 	Connection: interface{},
@@ -1101,7 +1101,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appserviceenvironment
 	InternalLoadBalancingMode: *string,
 	PricingTier: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appServiceEnvironment.AppServiceEnvironmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.appServiceEnvironment.AppServiceEnvironmentTimeouts,
 }
 ```
 
@@ -1344,7 +1344,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceEnvironment.AppServiceEnvironmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appserviceenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceenvironment"
 
 &appserviceenvironment.AppServiceEnvironmentTimeouts {
 	Create: *string,
@@ -1420,7 +1420,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceEnvironment.AppServiceEnvironmentClusterSettingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appserviceenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceenvironment"
 
 appserviceenvironment.NewAppServiceEnvironmentClusterSettingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppServiceEnvironmentClusterSettingList
 ```
@@ -1580,7 +1580,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceEnvironment.AppServiceEnvironmentClusterSettingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appserviceenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceenvironment"
 
 appserviceenvironment.NewAppServiceEnvironmentClusterSettingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppServiceEnvironmentClusterSettingOutputReference
 ```
@@ -1891,7 +1891,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceEnvironment.AppServiceEnvironmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appserviceenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceenvironment"
 
 appserviceenvironment.NewAppServiceEnvironmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceEnvironmentTimeoutsOutputReference
 ```
