@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/monitor_data_collection_endpoint
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/monitor_data_collection_endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,30 +13,30 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMonitorDataCollectionEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/monitor_data_collection_endpoint#id DataAzurermMonitorDataCollectionEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/monitor_data_collection_endpoint#id DataAzurermMonitorDataCollectionEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/monitor_data_collection_endpoint#name DataAzurermMonitorDataCollectionEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/monitor_data_collection_endpoint#name DataAzurermMonitorDataCollectionEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/monitor_data_collection_endpoint#resource_group_name DataAzurermMonitorDataCollectionEndpoint#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/monitor_data_collection_endpoint#resource_group_name DataAzurermMonitorDataCollectionEndpoint#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/monitor_data_collection_endpoint#timeouts DataAzurermMonitorDataCollectionEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/monitor_data_collection_endpoint#timeouts DataAzurermMonitorDataCollectionEndpoint#timeouts}
   */
   readonly timeouts?: DataAzurermMonitorDataCollectionEndpointTimeouts;
 }
 export interface DataAzurermMonitorDataCollectionEndpointTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/monitor_data_collection_endpoint#read DataAzurermMonitorDataCollectionEndpoint#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/monitor_data_collection_endpoint#read DataAzurermMonitorDataCollectionEndpoint#read}
   */
   readonly read?: string;
 }
@@ -130,7 +130,7 @@ export class DataAzurermMonitorDataCollectionEndpointTimeoutsOutputReference ext
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/monitor_data_collection_endpoint azurerm_monitor_data_collection_endpoint}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/monitor_data_collection_endpoint azurerm_monitor_data_collection_endpoint}
 */
 export class DataAzurermMonitorDataCollectionEndpoint extends cdktf.TerraformDataSource {
 
@@ -146,7 +146,7 @@ export class DataAzurermMonitorDataCollectionEndpoint extends cdktf.TerraformDat
   * Generates CDKTF code for importing a DataAzurermMonitorDataCollectionEndpoint resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermMonitorDataCollectionEndpoint to import
-  * @param importFromId The id of the existing DataAzurermMonitorDataCollectionEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/monitor_data_collection_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermMonitorDataCollectionEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/monitor_data_collection_endpoint#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermMonitorDataCollectionEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -158,7 +158,7 @@ export class DataAzurermMonitorDataCollectionEndpoint extends cdktf.TerraformDat
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/data-sources/monitor_data_collection_endpoint azurerm_monitor_data_collection_endpoint} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/data-sources/monitor_data_collection_endpoint azurerm_monitor_data_collection_endpoint} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -169,7 +169,7 @@ export class DataAzurermMonitorDataCollectionEndpoint extends cdktf.TerraformDat
       terraformResourceType: 'azurerm_monitor_data_collection_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.102.0',
+        providerVersion: '3.103.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

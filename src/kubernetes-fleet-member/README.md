@@ -1,3 +1,3 @@
 # `azurerm_kubernetes_fleet_member`
 
-Refer to the Terraform Registry for docs: [`azurerm_kubernetes_fleet_member`](https://registry.terraform.io/providers/hashicorp/azurerm/3.102.0/docs/resources/kubernetes_fleet_member).
+Refer to the Terraform Registry for docs: [`azurerm_kubernetes_fleet_member`](https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/kubernetes_fleet_member).
