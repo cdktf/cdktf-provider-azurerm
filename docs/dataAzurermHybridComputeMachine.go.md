@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachine.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachine(scope Construct, id *string, config DataAzurermHybridComputeMachineConfig) DataAzurermHybridComputeMachine
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachine.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.DataAzurermHybridComputeMachine_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachine.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.DataAzurermHybridComputeMachine_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermhybridcomputemachine.DataAzurermHybridComputeMachine_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachine.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.DataAzurermHybridComputeMachine_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermhybridcomputemachine.DataAzurermHybridComputeMachine_IsTerraformDataS
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachine.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.DataAzurermHybridComputeMachine_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -966,7 +966,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineAgentConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineAgentConfiguration {
 
@@ -979,7 +979,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStruct.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStruct {
 
@@ -992,7 +992,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStruct.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStruct {
 
@@ -1005,7 +1005,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineCloudMetadata.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineCloudMetadata {
 
@@ -1018,7 +1018,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineConfig {
 	Connection: interface{},
@@ -1031,7 +1031,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineTimeouts,
 }
 ```
 
@@ -1181,7 +1181,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineErrorDetails.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineErrorDetails {
 
@@ -1194,7 +1194,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineErrorDetailsAdditionalInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineErrorDetailsAdditionalInfo {
 
@@ -1207,7 +1207,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineIdentity {
 
@@ -1220,7 +1220,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineLocationData.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineLocationData {
 
@@ -1233,7 +1233,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineOsProfile {
 
@@ -1246,7 +1246,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileLinuxConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineOsProfileLinuxConfiguration {
 
@@ -1259,7 +1259,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileLinuxConfigurationPatchSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineOsProfileLinuxConfigurationPatchSettings {
 
@@ -1272,7 +1272,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileWindowsConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineOsProfileWindowsConfiguration {
 
@@ -1285,7 +1285,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileWindowsConfigurationPatchSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineOsProfileWindowsConfigurationPatchSettings {
 
@@ -1298,7 +1298,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineServiceStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineServiceStatus {
 
@@ -1311,7 +1311,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineServiceStatusExtensionService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineServiceStatusExtensionService {
 
@@ -1324,7 +1324,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineServiceStatusGuestConfigurationService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineServiceStatusGuestConfigurationService {
 
@@ -1337,7 +1337,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 &dataazurermhybridcomputemachine.DataAzurermHybridComputeMachineTimeouts {
 	Read: *string,
@@ -1371,7 +1371,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStructList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStructList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStructList
 ```
@@ -1520,7 +1520,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStructOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStructOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineAgentConfigurationExtensionsAllowListStructOutputReference
 ```
@@ -1809,7 +1809,7 @@ func InternalValue() DataAzurermHybridComputeMachineAgentConfigurationExtensions
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStructList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStructList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStructList
 ```
@@ -1958,7 +1958,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStructOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStructOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineAgentConfigurationExtensionsBlockListStructOutputReference
 ```
@@ -2247,7 +2247,7 @@ func InternalValue() DataAzurermHybridComputeMachineAgentConfigurationExtensions
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineAgentConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineAgentConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineAgentConfigurationList
 ```
@@ -2396,7 +2396,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineAgentConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineAgentConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineAgentConfigurationOutputReference
 ```
@@ -2740,7 +2740,7 @@ func InternalValue() DataAzurermHybridComputeMachineAgentConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineCloudMetadataList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineCloudMetadataList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineCloudMetadataList
 ```
@@ -2889,7 +2889,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineCloudMetadataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineCloudMetadataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineCloudMetadataOutputReference
 ```
@@ -3167,7 +3167,7 @@ func InternalValue() DataAzurermHybridComputeMachineCloudMetadata
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineErrorDetailsAdditionalInfoList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineErrorDetailsAdditionalInfoList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineErrorDetailsAdditionalInfoList
 ```
@@ -3316,7 +3316,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineErrorDetailsAdditionalInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineErrorDetailsAdditionalInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineErrorDetailsAdditionalInfoOutputReference
 ```
@@ -3605,7 +3605,7 @@ func InternalValue() DataAzurermHybridComputeMachineErrorDetailsAdditionalInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineErrorDetailsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineErrorDetailsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineErrorDetailsList
 ```
@@ -3754,7 +3754,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineErrorDetailsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineErrorDetailsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineErrorDetailsOutputReference
 ```
@@ -4065,7 +4065,7 @@ func InternalValue() DataAzurermHybridComputeMachineErrorDetails
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineIdentityList
 ```
@@ -4214,7 +4214,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineIdentityOutputReference
 ```
@@ -4514,7 +4514,7 @@ func InternalValue() DataAzurermHybridComputeMachineIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineLocationDataList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineLocationDataList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineLocationDataList
 ```
@@ -4663,7 +4663,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineLocationDataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineLocationDataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineLocationDataOutputReference
 ```
@@ -4974,7 +4974,7 @@ func InternalValue() DataAzurermHybridComputeMachineLocationData
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileLinuxConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineOsProfileLinuxConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineOsProfileLinuxConfigurationList
 ```
@@ -5123,7 +5123,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileLinuxConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineOsProfileLinuxConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineOsProfileLinuxConfigurationOutputReference
 ```
@@ -5401,7 +5401,7 @@ func InternalValue() DataAzurermHybridComputeMachineOsProfileLinuxConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileLinuxConfigurationPatchSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineOsProfileLinuxConfigurationPatchSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineOsProfileLinuxConfigurationPatchSettingsList
 ```
@@ -5550,7 +5550,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileLinuxConfigurationPatchSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineOsProfileLinuxConfigurationPatchSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineOsProfileLinuxConfigurationPatchSettingsOutputReference
 ```
@@ -5839,7 +5839,7 @@ func InternalValue() DataAzurermHybridComputeMachineOsProfileLinuxConfigurationP
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineOsProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineOsProfileList
 ```
@@ -5988,7 +5988,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineOsProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineOsProfileOutputReference
 ```
@@ -6288,7 +6288,7 @@ func InternalValue() DataAzurermHybridComputeMachineOsProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileWindowsConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineOsProfileWindowsConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineOsProfileWindowsConfigurationList
 ```
@@ -6437,7 +6437,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileWindowsConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineOsProfileWindowsConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineOsProfileWindowsConfigurationOutputReference
 ```
@@ -6715,7 +6715,7 @@ func InternalValue() DataAzurermHybridComputeMachineOsProfileWindowsConfiguratio
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileWindowsConfigurationPatchSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineOsProfileWindowsConfigurationPatchSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineOsProfileWindowsConfigurationPatchSettingsList
 ```
@@ -6864,7 +6864,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineOsProfileWindowsConfigurationPatchSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineOsProfileWindowsConfigurationPatchSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineOsProfileWindowsConfigurationPatchSettingsOutputReference
 ```
@@ -7153,7 +7153,7 @@ func InternalValue() DataAzurermHybridComputeMachineOsProfileWindowsConfiguratio
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineServiceStatusExtensionServiceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineServiceStatusExtensionServiceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineServiceStatusExtensionServiceList
 ```
@@ -7302,7 +7302,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineServiceStatusExtensionServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineServiceStatusExtensionServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineServiceStatusExtensionServiceOutputReference
 ```
@@ -7591,7 +7591,7 @@ func InternalValue() DataAzurermHybridComputeMachineServiceStatusExtensionServic
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineServiceStatusGuestConfigurationServiceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineServiceStatusGuestConfigurationServiceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineServiceStatusGuestConfigurationServiceList
 ```
@@ -7740,7 +7740,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineServiceStatusGuestConfigurationServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineServiceStatusGuestConfigurationServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineServiceStatusGuestConfigurationServiceOutputReference
 ```
@@ -8029,7 +8029,7 @@ func InternalValue() DataAzurermHybridComputeMachineServiceStatusGuestConfigurat
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineServiceStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineServiceStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHybridComputeMachineServiceStatusList
 ```
@@ -8178,7 +8178,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineServiceStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineServiceStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHybridComputeMachineServiceStatusOutputReference
 ```
@@ -8467,7 +8467,7 @@ func InternalValue() DataAzurermHybridComputeMachineServiceStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHybridComputeMachine.DataAzurermHybridComputeMachineTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhybridcomputemachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermhybridcomputemachine"
 
 dataazurermhybridcomputemachine.NewDataAzurermHybridComputeMachineTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermHybridComputeMachineTimeoutsOutputReference
 ```

@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/private_dns_resolver_outbound_endpoint
 // generated from terraform resource schema
 
