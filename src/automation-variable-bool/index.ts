@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,58 +13,58 @@ import * as cdktf from 'cdktf';
 
 export interface AutomationVariableBoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool#automation_account_name AutomationVariableBool#automation_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool#automation_account_name AutomationVariableBool#automation_account_name}
   */
   readonly automationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool#description AutomationVariableBool#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool#description AutomationVariableBool#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool#encrypted AutomationVariableBool#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool#encrypted AutomationVariableBool#encrypted}
   */
   readonly encrypted?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool#id AutomationVariableBool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool#id AutomationVariableBool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool#name AutomationVariableBool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool#name AutomationVariableBool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool#resource_group_name AutomationVariableBool#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool#resource_group_name AutomationVariableBool#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool#value AutomationVariableBool#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool#value AutomationVariableBool#value}
   */
   readonly value?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool#timeouts AutomationVariableBool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool#timeouts AutomationVariableBool#timeouts}
   */
   readonly timeouts?: AutomationVariableBoolTimeouts;
 }
 export interface AutomationVariableBoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool#create AutomationVariableBool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool#create AutomationVariableBool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool#delete AutomationVariableBool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool#delete AutomationVariableBool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool#read AutomationVariableBool#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool#read AutomationVariableBool#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool#update AutomationVariableBool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool#update AutomationVariableBool#update}
   */
   readonly update?: string;
 }
@@ -245,7 +245,7 @@ export class AutomationVariableBoolTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool azurerm_automation_variable_bool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool azurerm_automation_variable_bool}
 */
 export class AutomationVariableBool extends cdktf.TerraformResource {
 
@@ -261,7 +261,7 @@ export class AutomationVariableBool extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AutomationVariableBool resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AutomationVariableBool to import
-  * @param importFromId The id of the existing AutomationVariableBool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AutomationVariableBool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AutomationVariableBool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -273,7 +273,7 @@ export class AutomationVariableBool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.0/docs/resources/automation_variable_bool azurerm_automation_variable_bool} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/automation_variable_bool azurerm_automation_variable_bool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -284,7 +284,7 @@ export class AutomationVariableBool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automation_variable_bool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.103.0',
+        providerVersion: '3.103.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
