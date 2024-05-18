@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/private_dns_resolver_forwarding_rule
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/private_dns_resolver_forwarding_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermPrivateDnsResolverForwardingRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/private_dns_resolver_forwarding_rule#dns_forwarding_ruleset_id DataAzurermPrivateDnsResolverForwardingRule#dns_forwarding_ruleset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/private_dns_resolver_forwarding_rule#dns_forwarding_ruleset_id DataAzurermPrivateDnsResolverForwardingRule#dns_forwarding_ruleset_id}
   */
   readonly dnsForwardingRulesetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/private_dns_resolver_forwarding_rule#id DataAzurermPrivateDnsResolverForwardingRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/private_dns_resolver_forwarding_rule#id DataAzurermPrivateDnsResolverForwardingRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/private_dns_resolver_forwarding_rule#name DataAzurermPrivateDnsResolverForwardingRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/private_dns_resolver_forwarding_rule#name DataAzurermPrivateDnsResolverForwardingRule#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/private_dns_resolver_forwarding_rule#timeouts DataAzurermPrivateDnsResolverForwardingRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/private_dns_resolver_forwarding_rule#timeouts DataAzurermPrivateDnsResolverForwardingRule#timeouts}
   */
   readonly timeouts?: DataAzurermPrivateDnsResolverForwardingRuleTimeouts;
 }
@@ -116,7 +111,7 @@ export class DataAzurermPrivateDnsResolverForwardingRuleTargetDnsServersList ext
 }
 export interface DataAzurermPrivateDnsResolverForwardingRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/private_dns_resolver_forwarding_rule#read DataAzurermPrivateDnsResolverForwardingRule#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/private_dns_resolver_forwarding_rule#read DataAzurermPrivateDnsResolverForwardingRule#read}
   */
   readonly read?: string;
 }
@@ -210,7 +205,7 @@ export class DataAzurermPrivateDnsResolverForwardingRuleTimeoutsOutputReference 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/private_dns_resolver_forwarding_rule azurerm_private_dns_resolver_forwarding_rule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/private_dns_resolver_forwarding_rule azurerm_private_dns_resolver_forwarding_rule}
 */
 export class DataAzurermPrivateDnsResolverForwardingRule extends cdktf.TerraformDataSource {
 
@@ -226,7 +221,7 @@ export class DataAzurermPrivateDnsResolverForwardingRule extends cdktf.Terraform
   * Generates CDKTF code for importing a DataAzurermPrivateDnsResolverForwardingRule resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermPrivateDnsResolverForwardingRule to import
-  * @param importFromId The id of the existing DataAzurermPrivateDnsResolverForwardingRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/private_dns_resolver_forwarding_rule#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermPrivateDnsResolverForwardingRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/private_dns_resolver_forwarding_rule#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermPrivateDnsResolverForwardingRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -238,7 +233,7 @@ export class DataAzurermPrivateDnsResolverForwardingRule extends cdktf.Terraform
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/private_dns_resolver_forwarding_rule azurerm_private_dns_resolver_forwarding_rule} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/private_dns_resolver_forwarding_rule azurerm_private_dns_resolver_forwarding_rule} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -249,7 +244,7 @@ export class DataAzurermPrivateDnsResolverForwardingRule extends cdktf.Terraform
       terraformResourceType: 'azurerm_private_dns_resolver_forwarding_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.103.1',
+        providerVersion: '3.104.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -4,7 +4,7 @@
 
 ### OrbitalContact <a name="OrbitalContact" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact azurerm_orbital_contact}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact azurerm_orbital_contact}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer"></a>
 
@@ -43,13 +43,13 @@ orbitalContact.OrbitalContact(
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.contactProfileId">contact_profile_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#contact_profile_id OrbitalContact#contact_profile_id}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.groundStationName">ground_station_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#ground_station_name OrbitalContact#ground_station_name}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#name OrbitalContact#name}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.reservationEndTime">reservation_end_time</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#reservation_end_time OrbitalContact#reservation_end_time}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.reservationStartTime">reservation_start_time</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#reservation_start_time OrbitalContact#reservation_start_time}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.spacecraftId">spacecraft_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#spacecraft_id OrbitalContact#spacecraft_id}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#id OrbitalContact#id}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.contactProfileId">contact_profile_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#contact_profile_id OrbitalContact#contact_profile_id}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.groundStationName">ground_station_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#ground_station_name OrbitalContact#ground_station_name}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#name OrbitalContact#name}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.reservationEndTime">reservation_end_time</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#reservation_end_time OrbitalContact#reservation_end_time}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.reservationStartTime">reservation_start_time</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#reservation_start_time OrbitalContact#reservation_start_time}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.spacecraftId">spacecraft_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#spacecraft_id OrbitalContact#spacecraft_id}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#id OrbitalContact#id}. |
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactTimeouts">OrbitalContactTimeouts</a></code> | timeouts block. |
 
 ---
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#contact_profile_id OrbitalContact#contact_profile_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#contact_profile_id OrbitalContact#contact_profile_id}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#ground_station_name OrbitalContact#ground_station_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#ground_station_name OrbitalContact#ground_station_name}.
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#name OrbitalContact#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#name OrbitalContact#name}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#reservation_end_time OrbitalContact#reservation_end_time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#reservation_end_time OrbitalContact#reservation_end_time}.
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#reservation_start_time OrbitalContact#reservation_start_time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#reservation_start_time OrbitalContact#reservation_start_time}.
 
 ---
 
@@ -158,7 +158,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#spacecraft_id OrbitalContact#spacecraft_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#spacecraft_id OrbitalContact#spacecraft_id}.
 
 ---
 
@@ -166,7 +166,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#id OrbitalContact#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#id OrbitalContact#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -179,7 +179,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#timeouts OrbitalContact#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#timeouts OrbitalContact#timeouts}
 
 ---
 
@@ -555,7 +555,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#create OrbitalContact#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#create OrbitalContact#create}.
 
 ---
 
@@ -563,7 +563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#delete OrbitalContact#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#delete OrbitalContact#delete}.
 
 ---
 
@@ -571,7 +571,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#read OrbitalContact#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#read OrbitalContact#read}.
 
 ---
 
@@ -701,7 +701,7 @@ The construct id used in the generated config for the OrbitalContact to import.
 
 The id of the existing OrbitalContact that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1109,13 +1109,13 @@ orbitalContact.OrbitalContactConfig(
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.contactProfileId">contact_profile_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#contact_profile_id OrbitalContact#contact_profile_id}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.groundStationName">ground_station_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#ground_station_name OrbitalContact#ground_station_name}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#name OrbitalContact#name}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.reservationEndTime">reservation_end_time</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#reservation_end_time OrbitalContact#reservation_end_time}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.reservationStartTime">reservation_start_time</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#reservation_start_time OrbitalContact#reservation_start_time}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.spacecraftId">spacecraft_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#spacecraft_id OrbitalContact#spacecraft_id}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#id OrbitalContact#id}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.contactProfileId">contact_profile_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#contact_profile_id OrbitalContact#contact_profile_id}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.groundStationName">ground_station_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#ground_station_name OrbitalContact#ground_station_name}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#name OrbitalContact#name}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.reservationEndTime">reservation_end_time</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#reservation_end_time OrbitalContact#reservation_end_time}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.reservationStartTime">reservation_start_time</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#reservation_start_time OrbitalContact#reservation_start_time}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.spacecraftId">spacecraft_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#spacecraft_id OrbitalContact#spacecraft_id}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#id OrbitalContact#id}. |
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactTimeouts">OrbitalContactTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1198,7 +1198,7 @@ contact_profile_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#contact_profile_id OrbitalContact#contact_profile_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#contact_profile_id OrbitalContact#contact_profile_id}.
 
 ---
 
@@ -1210,7 +1210,7 @@ ground_station_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#ground_station_name OrbitalContact#ground_station_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#ground_station_name OrbitalContact#ground_station_name}.
 
 ---
 
@@ -1222,7 +1222,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#name OrbitalContact#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#name OrbitalContact#name}.
 
 ---
 
@@ -1234,7 +1234,7 @@ reservation_end_time: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#reservation_end_time OrbitalContact#reservation_end_time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#reservation_end_time OrbitalContact#reservation_end_time}.
 
 ---
 
@@ -1246,7 +1246,7 @@ reservation_start_time: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#reservation_start_time OrbitalContact#reservation_start_time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#reservation_start_time OrbitalContact#reservation_start_time}.
 
 ---
 
@@ -1258,7 +1258,7 @@ spacecraft_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#spacecraft_id OrbitalContact#spacecraft_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#spacecraft_id OrbitalContact#spacecraft_id}.
 
 ---
 
@@ -1270,7 +1270,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#id OrbitalContact#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#id OrbitalContact#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1287,7 +1287,7 @@ timeouts: OrbitalContactTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#timeouts OrbitalContact#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#timeouts OrbitalContact#timeouts}
 
 ---
 
@@ -1309,9 +1309,9 @@ orbitalContact.OrbitalContactTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#create OrbitalContact#create}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#delete OrbitalContact#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#read OrbitalContact#read}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#create OrbitalContact#create}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#delete OrbitalContact#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContactTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#read OrbitalContact#read}. |
 
 ---
 
@@ -1323,7 +1323,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#create OrbitalContact#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#create OrbitalContact#create}.
 
 ---
 
@@ -1335,7 +1335,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#delete OrbitalContact#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#delete OrbitalContact#delete}.
 
 ---
 
@@ -1347,7 +1347,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/orbital_contact#read OrbitalContact#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/orbital_contact#read OrbitalContact#read}.
 
 ---
 

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,78 +8,78 @@ import * as cdktf from 'cdktf';
 
 export interface AppServiceConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#app_service_id AppServiceConnection#app_service_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#app_service_id AppServiceConnection#app_service_id}
   */
   readonly appServiceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#client_type AppServiceConnection#client_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#client_type AppServiceConnection#client_type}
   */
   readonly clientType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#id AppServiceConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#id AppServiceConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#name AppServiceConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#name AppServiceConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#target_resource_id AppServiceConnection#target_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#target_resource_id AppServiceConnection#target_resource_id}
   */
   readonly targetResourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#vnet_solution AppServiceConnection#vnet_solution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#vnet_solution AppServiceConnection#vnet_solution}
   */
   readonly vnetSolution?: string;
   /**
   * authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#authentication AppServiceConnection#authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#authentication AppServiceConnection#authentication}
   */
   readonly authentication: AppServiceConnectionAuthentication;
   /**
   * secret_store block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#secret_store AppServiceConnection#secret_store}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#secret_store AppServiceConnection#secret_store}
   */
   readonly secretStore?: AppServiceConnectionSecretStore;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#timeouts AppServiceConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#timeouts AppServiceConnection#timeouts}
   */
   readonly timeouts?: AppServiceConnectionTimeouts;
 }
 export interface AppServiceConnectionAuthentication {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#certificate AppServiceConnection#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#certificate AppServiceConnection#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#client_id AppServiceConnection#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#client_id AppServiceConnection#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#name AppServiceConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#name AppServiceConnection#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#principal_id AppServiceConnection#principal_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#principal_id AppServiceConnection#principal_id}
   */
   readonly principalId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#secret AppServiceConnection#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#secret AppServiceConnection#secret}
   */
   readonly secret?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#subscription_id AppServiceConnection#subscription_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#subscription_id AppServiceConnection#subscription_id}
   */
   readonly subscriptionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#type AppServiceConnection#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#type AppServiceConnection#type}
   */
   readonly type: string;
 }
@@ -339,7 +334,7 @@ export class AppServiceConnectionAuthenticationOutputReference extends cdktf.Com
 }
 export interface AppServiceConnectionSecretStore {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#key_vault_id AppServiceConnection#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#key_vault_id AppServiceConnection#key_vault_id}
   */
   readonly keyVaultId: string;
 }
@@ -420,19 +415,19 @@ export class AppServiceConnectionSecretStoreOutputReference extends cdktf.Comple
 }
 export interface AppServiceConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#create AppServiceConnection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#create AppServiceConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#delete AppServiceConnection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#delete AppServiceConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#read AppServiceConnection#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#read AppServiceConnection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#update AppServiceConnection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#update AppServiceConnection#update}
   */
   readonly update?: string;
 }
@@ -613,7 +608,7 @@ export class AppServiceConnectionTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection azurerm_app_service_connection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection azurerm_app_service_connection}
 */
 export class AppServiceConnection extends cdktf.TerraformResource {
 
@@ -629,7 +624,7 @@ export class AppServiceConnection extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AppServiceConnection resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AppServiceConnection to import
-  * @param importFromId The id of the existing AppServiceConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AppServiceConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AppServiceConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -641,7 +636,7 @@ export class AppServiceConnection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/app_service_connection azurerm_app_service_connection} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/app_service_connection azurerm_app_service_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -652,7 +647,7 @@ export class AppServiceConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_service_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.103.1',
+        providerVersion: '3.104.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -1,3 +1,3 @@
 # `azurerm_sql_elasticpool`
 
-Refer to the Terraform Registry for docs: [`azurerm_sql_elasticpool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/sql_elasticpool).
+Refer to the Terraform Registry for docs: [`azurerm_sql_elasticpool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/sql_elasticpool).

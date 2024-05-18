@@ -4,12 +4,12 @@
 
 ### DataAzurermDataShare <a name="DataAzurermDataShare" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/data_share azurerm_data_share}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/data_share azurerm_data_share}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatashare"
 
 dataazurermdatashare.NewDataAzurermDataShare(scope Construct, id *string, config DataAzurermDataShareConfig) DataAzurermDataShare
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatashare"
 
 dataazurermdatashare.DataAzurermDataShare_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatashare"
 
 dataazurermdatashare.DataAzurermDataShare_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermdatashare.DataAzurermDataShare_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatashare"
 
 dataazurermdatashare.DataAzurermDataShare_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermdatashare.DataAzurermDataShare_IsTerraformDataSource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShare.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatashare"
 
 dataazurermdatashare.DataAzurermDataShare_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermDataShare to im
 
 The id of the existing DataAzurermDataShare that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/data_share#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/data_share#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -702,7 +702,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatashare"
 
 &dataazurermdatashare.DataAzurermDataShareConfig {
 	Connection: interface{},
@@ -715,7 +715,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatash
 	AccountId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermDataShare.DataAzurermDataShareTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDataShare.DataAzurermDataShareTimeouts,
 }
 ```
 
@@ -730,9 +730,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatash
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareConfig.property.accountId">AccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/data_share#account_id DataAzurermDataShare#account_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/data_share#name DataAzurermDataShare#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/data_share#id DataAzurermDataShare#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareConfig.property.accountId">AccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/data_share#account_id DataAzurermDataShare#account_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/data_share#name DataAzurermDataShare#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/data_share#id DataAzurermDataShare#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeouts">DataAzurermDataShareTimeouts</a></code> | timeouts block. |
 
 ---
@@ -815,7 +815,7 @@ AccountId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/data_share#account_id DataAzurermDataShare#account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/data_share#account_id DataAzurermDataShare#account_id}.
 
 ---
 
@@ -827,7 +827,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/data_share#name DataAzurermDataShare#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/data_share#name DataAzurermDataShare#name}.
 
 ---
 
@@ -839,7 +839,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/data_share#id DataAzurermDataShare#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/data_share#id DataAzurermDataShare#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -856,7 +856,7 @@ Timeouts DataAzurermDataShareTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/data_share#timeouts DataAzurermDataShare#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/data_share#timeouts DataAzurermDataShare#timeouts}
 
 ---
 
@@ -865,7 +865,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareSnapshotSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatashare"
 
 &dataazurermdatashare.DataAzurermDataShareSnapshotSchedule {
 
@@ -878,7 +878,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatash
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatashare"
 
 &dataazurermdatashare.DataAzurermDataShareTimeouts {
 	Read: *string,
@@ -889,7 +889,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatash
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/data_share#read DataAzurermDataShare#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/data_share#read DataAzurermDataShare#read}. |
 
 ---
 
@@ -901,7 +901,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/data_share#read DataAzurermDataShare#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/data_share#read DataAzurermDataShare#read}.
 
 ---
 
@@ -912,7 +912,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareSnapshotScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatashare"
 
 dataazurermdatashare.NewDataAzurermDataShareSnapshotScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermDataShareSnapshotScheduleList
 ```
@@ -1061,7 +1061,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareSnapshotScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatashare"
 
 dataazurermdatashare.NewDataAzurermDataShareSnapshotScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermDataShareSnapshotScheduleOutputReference
 ```
@@ -1361,7 +1361,7 @@ func InternalValue() DataAzurermDataShareSnapshotSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDataShare.DataAzurermDataShareTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdatashare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdatashare"
 
 dataazurermdatashare.NewDataAzurermDataShareTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDataShareTimeoutsOutputReference
 ```

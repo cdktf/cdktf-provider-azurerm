@@ -1,3 +1,3 @@
 # `azurerm_frontdoor_firewall_policy`
 
-Refer to the Terraform Registry for docs: [`azurerm_frontdoor_firewall_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/frontdoor_firewall_policy).
+Refer to the Terraform Registry for docs: [`azurerm_frontdoor_firewall_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/frontdoor_firewall_policy).
