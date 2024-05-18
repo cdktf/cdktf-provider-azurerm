@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/virtual_desktop_host_pool
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/virtual_desktop_host_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermVirtualDesktopHostPoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/virtual_desktop_host_pool#id DataAzurermVirtualDesktopHostPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/virtual_desktop_host_pool#id DataAzurermVirtualDesktopHostPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/virtual_desktop_host_pool#name DataAzurermVirtualDesktopHostPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/virtual_desktop_host_pool#name DataAzurermVirtualDesktopHostPool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/virtual_desktop_host_pool#resource_group_name DataAzurermVirtualDesktopHostPool#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/virtual_desktop_host_pool#resource_group_name DataAzurermVirtualDesktopHostPool#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/virtual_desktop_host_pool#timeouts DataAzurermVirtualDesktopHostPool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/virtual_desktop_host_pool#timeouts DataAzurermVirtualDesktopHostPool#timeouts}
   */
   readonly timeouts?: DataAzurermVirtualDesktopHostPoolTimeouts;
 }
@@ -207,7 +207,7 @@ export class DataAzurermVirtualDesktopHostPoolScheduledAgentUpdatesList extends 
 }
 export interface DataAzurermVirtualDesktopHostPoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/virtual_desktop_host_pool#read DataAzurermVirtualDesktopHostPool#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/virtual_desktop_host_pool#read DataAzurermVirtualDesktopHostPool#read}
   */
   readonly read?: string;
 }
@@ -301,7 +301,7 @@ export class DataAzurermVirtualDesktopHostPoolTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/virtual_desktop_host_pool azurerm_virtual_desktop_host_pool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/virtual_desktop_host_pool azurerm_virtual_desktop_host_pool}
 */
 export class DataAzurermVirtualDesktopHostPool extends cdktf.TerraformDataSource {
 
@@ -317,7 +317,7 @@ export class DataAzurermVirtualDesktopHostPool extends cdktf.TerraformDataSource
   * Generates CDKTF code for importing a DataAzurermVirtualDesktopHostPool resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermVirtualDesktopHostPool to import
-  * @param importFromId The id of the existing DataAzurermVirtualDesktopHostPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/virtual_desktop_host_pool#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermVirtualDesktopHostPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/virtual_desktop_host_pool#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermVirtualDesktopHostPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -329,7 +329,7 @@ export class DataAzurermVirtualDesktopHostPool extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/virtual_desktop_host_pool azurerm_virtual_desktop_host_pool} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/virtual_desktop_host_pool azurerm_virtual_desktop_host_pool} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -340,7 +340,7 @@ export class DataAzurermVirtualDesktopHostPool extends cdktf.TerraformDataSource
       terraformResourceType: 'azurerm_virtual_desktop_host_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.103.1',
+        providerVersion: '3.104.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

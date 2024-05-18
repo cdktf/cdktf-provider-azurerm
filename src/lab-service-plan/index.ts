@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,80 +13,80 @@ import * as cdktf from 'cdktf';
 
 export interface LabServicePlanConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#allowed_regions LabServicePlan#allowed_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#allowed_regions LabServicePlan#allowed_regions}
   */
   readonly allowedRegions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#default_network_subnet_id LabServicePlan#default_network_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#default_network_subnet_id LabServicePlan#default_network_subnet_id}
   */
   readonly defaultNetworkSubnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#id LabServicePlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#id LabServicePlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#location LabServicePlan#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#location LabServicePlan#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#name LabServicePlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#name LabServicePlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#resource_group_name LabServicePlan#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#resource_group_name LabServicePlan#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#shared_gallery_id LabServicePlan#shared_gallery_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#shared_gallery_id LabServicePlan#shared_gallery_id}
   */
   readonly sharedGalleryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#tags LabServicePlan#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#tags LabServicePlan#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * default_auto_shutdown block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#default_auto_shutdown LabServicePlan#default_auto_shutdown}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#default_auto_shutdown LabServicePlan#default_auto_shutdown}
   */
   readonly defaultAutoShutdown?: LabServicePlanDefaultAutoShutdown;
   /**
   * default_connection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#default_connection LabServicePlan#default_connection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#default_connection LabServicePlan#default_connection}
   */
   readonly defaultConnection?: LabServicePlanDefaultConnection;
   /**
   * support block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#support LabServicePlan#support}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#support LabServicePlan#support}
   */
   readonly support?: LabServicePlanSupport;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#timeouts LabServicePlan#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#timeouts LabServicePlan#timeouts}
   */
   readonly timeouts?: LabServicePlanTimeouts;
 }
 export interface LabServicePlanDefaultAutoShutdown {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#disconnect_delay LabServicePlan#disconnect_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#disconnect_delay LabServicePlan#disconnect_delay}
   */
   readonly disconnectDelay?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#idle_delay LabServicePlan#idle_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#idle_delay LabServicePlan#idle_delay}
   */
   readonly idleDelay?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#no_connect_delay LabServicePlan#no_connect_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#no_connect_delay LabServicePlan#no_connect_delay}
   */
   readonly noConnectDelay?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#shutdown_on_idle LabServicePlan#shutdown_on_idle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#shutdown_on_idle LabServicePlan#shutdown_on_idle}
   */
   readonly shutdownOnIdle?: string;
 }
@@ -257,19 +257,19 @@ export class LabServicePlanDefaultAutoShutdownOutputReference extends cdktf.Comp
 }
 export interface LabServicePlanDefaultConnection {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#client_rdp_access LabServicePlan#client_rdp_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#client_rdp_access LabServicePlan#client_rdp_access}
   */
   readonly clientRdpAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#client_ssh_access LabServicePlan#client_ssh_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#client_ssh_access LabServicePlan#client_ssh_access}
   */
   readonly clientSshAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#web_rdp_access LabServicePlan#web_rdp_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#web_rdp_access LabServicePlan#web_rdp_access}
   */
   readonly webRdpAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#web_ssh_access LabServicePlan#web_ssh_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#web_ssh_access LabServicePlan#web_ssh_access}
   */
   readonly webSshAccess?: string;
 }
@@ -440,19 +440,19 @@ export class LabServicePlanDefaultConnectionOutputReference extends cdktf.Comple
 }
 export interface LabServicePlanSupport {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#email LabServicePlan#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#email LabServicePlan#email}
   */
   readonly email?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#instructions LabServicePlan#instructions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#instructions LabServicePlan#instructions}
   */
   readonly instructions?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#phone LabServicePlan#phone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#phone LabServicePlan#phone}
   */
   readonly phone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#url LabServicePlan#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#url LabServicePlan#url}
   */
   readonly url?: string;
 }
@@ -623,19 +623,19 @@ export class LabServicePlanSupportOutputReference extends cdktf.ComplexObject {
 }
 export interface LabServicePlanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#create LabServicePlan#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#create LabServicePlan#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#delete LabServicePlan#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#delete LabServicePlan#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#read LabServicePlan#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#read LabServicePlan#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#update LabServicePlan#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#update LabServicePlan#update}
   */
   readonly update?: string;
 }
@@ -816,7 +816,7 @@ export class LabServicePlanTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan azurerm_lab_service_plan}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan azurerm_lab_service_plan}
 */
 export class LabServicePlan extends cdktf.TerraformResource {
 
@@ -832,7 +832,7 @@ export class LabServicePlan extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a LabServicePlan resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the LabServicePlan to import
-  * @param importFromId The id of the existing LabServicePlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing LabServicePlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the LabServicePlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -844,7 +844,7 @@ export class LabServicePlan extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/lab_service_plan azurerm_lab_service_plan} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/lab_service_plan azurerm_lab_service_plan} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -855,7 +855,7 @@ export class LabServicePlan extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lab_service_plan',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.103.1',
+        providerVersion: '3.104.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
