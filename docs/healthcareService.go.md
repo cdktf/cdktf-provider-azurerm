@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 healthcareservice.NewHealthcareService(scope Construct, id *string, config HealthcareServiceConfig) HealthcareService
 ```
@@ -514,7 +514,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 healthcareservice.HealthcareService_IsConstruct(x interface{}) *bool
 ```
@@ -546,7 +546,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 healthcareservice.HealthcareService_IsTerraformElement(x interface{}) *bool
 ```
@@ -560,7 +560,7 @@ healthcareservice.HealthcareService_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 healthcareservice.HealthcareService_IsTerraformResource(x interface{}) *bool
 ```
@@ -574,7 +574,7 @@ healthcareservice.HealthcareService_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.healthcareService.HealthcareService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 healthcareservice.HealthcareService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1133,7 +1133,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceAuthenticationConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 &healthcareservice.HealthcareServiceAuthenticationConfiguration {
 	Audience: *string,
@@ -1193,7 +1193,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 &healthcareservice.HealthcareServiceConfig {
 	Connection: interface{},
@@ -1207,17 +1207,17 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
 	Name: *string,
 	ResourceGroupName: *string,
 	AccessPolicyObjectIds: *[]*string,
-	AuthenticationConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.healthcareService.HealthcareServiceAuthenticationConfiguration,
+	AuthenticationConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.healthcareService.HealthcareServiceAuthenticationConfiguration,
 	ConfigurationExportStorageAccountName: *string,
-	CorsConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.healthcareService.HealthcareServiceCorsConfiguration,
+	CorsConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.healthcareService.HealthcareServiceCorsConfiguration,
 	CosmosdbKeyVaultKeyVersionlessId: *string,
 	CosmosdbThroughput: *f64,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.healthcareService.HealthcareServiceIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.healthcareService.HealthcareServiceIdentity,
 	Kind: *string,
 	PublicNetworkAccessEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.healthcareService.HealthcareServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.healthcareService.HealthcareServiceTimeouts,
 }
 ```
 
@@ -1516,7 +1516,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 &healthcareservice.HealthcareServiceCorsConfiguration {
 	AllowCredentials: interface{},
@@ -1604,7 +1604,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 &healthcareservice.HealthcareServiceIdentity {
 	Type: *string,
@@ -1636,7 +1636,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 &healthcareservice.HealthcareServiceTimeouts {
 	Create: *string,
@@ -1712,7 +1712,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceAuthenticationConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 healthcareservice.NewHealthcareServiceAuthenticationConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareServiceAuthenticationConfigurationOutputReference
 ```
@@ -2048,7 +2048,7 @@ func InternalValue() HealthcareServiceAuthenticationConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceCorsConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 healthcareservice.NewHealthcareServiceCorsConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareServiceCorsConfigurationOutputReference
 ```
@@ -2442,7 +2442,7 @@ func InternalValue() HealthcareServiceCorsConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 healthcareservice.NewHealthcareServiceIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareServiceIdentityOutputReference
 ```
@@ -2735,7 +2735,7 @@ func InternalValue() HealthcareServiceIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.healthcareService.HealthcareServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/healthcareservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/healthcareservice"
 
 healthcareservice.NewHealthcareServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareServiceTimeoutsOutputReference
 ```

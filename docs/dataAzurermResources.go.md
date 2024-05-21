@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermResources.DataAzurermResources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresources"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermresources"
 
 dataazurermresources.NewDataAzurermResources(scope Construct, id *string, config DataAzurermResourcesConfig) DataAzurermResources
 ```
@@ -331,7 +331,7 @@ func ResetType()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermResources.DataAzurermResources.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresources"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermresources"
 
 dataazurermresources.DataAzurermResources_IsConstruct(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermResources.DataAzurermResources.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresources"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermresources"
 
 dataazurermresources.DataAzurermResources_IsTerraformElement(x interface{}) *bool
 ```
@@ -377,7 +377,7 @@ dataazurermresources.DataAzurermResources_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermResources.DataAzurermResources.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresources"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermresources"
 
 dataazurermresources.DataAzurermResources_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ dataazurermresources.DataAzurermResources_IsTerraformDataSource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermResources.DataAzurermResources.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresources"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermresources"
 
 dataazurermresources.DataAzurermResources_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -741,7 +741,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermResources.DataAzurermResourcesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresources"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermresources"
 
 &dataazurermresources.DataAzurermResourcesConfig {
 	Connection: interface{},
@@ -755,7 +755,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresources"
 	Name: *string,
 	RequiredTags: *map[string]*string,
 	ResourceGroupName: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermResources.DataAzurermResourcesTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermResources.DataAzurermResourcesTimeouts,
 	Type: *string,
 }
 ```
@@ -932,7 +932,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermResources.DataAzurermResourcesResources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresources"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermresources"
 
 &dataazurermresources.DataAzurermResourcesResources {
 
@@ -945,7 +945,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresources"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermResources.DataAzurermResourcesTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresources"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermresources"
 
 &dataazurermresources.DataAzurermResourcesTimeouts {
 	Read: *string,
@@ -979,7 +979,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermResources.DataAzurermResourcesResourcesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresources"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermresources"
 
 dataazurermresources.NewDataAzurermResourcesResourcesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermResourcesResourcesList
 ```
@@ -1128,7 +1128,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermResources.DataAzurermResourcesResourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresources"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermresources"
 
 dataazurermresources.NewDataAzurermResourcesResourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermResourcesResourcesOutputReference
 ```
@@ -1461,7 +1461,7 @@ func InternalValue() DataAzurermResourcesResources
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermResources.DataAzurermResourcesTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresources"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermresources"
 
 dataazurermresources.NewDataAzurermResourcesTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermResourcesTimeoutsOutputReference
 ```
