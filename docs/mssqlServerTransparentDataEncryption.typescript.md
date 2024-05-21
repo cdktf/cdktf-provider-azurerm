@@ -4,7 +4,7 @@
 
 ### MssqlServerTransparentDataEncryption <a name="MssqlServerTransparentDataEncryption" id="@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryption"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption azurerm_mssql_server_transparent_data_encryption}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption azurerm_mssql_server_transparent_data_encryption}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryption.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the MssqlServerTransparentData
 
 The id of the existing MssqlServerTransparentDataEncryption that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -834,10 +834,10 @@ const mssqlServerTransparentDataEncryptionConfig: mssqlServerTransparentDataEncr
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionConfig.property.serverId">serverId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#server_id MssqlServerTransparentDataEncryption#server_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionConfig.property.autoRotationEnabled">autoRotationEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#auto_rotation_enabled MssqlServerTransparentDataEncryption#auto_rotation_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#id MssqlServerTransparentDataEncryption#id}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionConfig.property.keyVaultKeyId">keyVaultKeyId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#key_vault_key_id MssqlServerTransparentDataEncryption#key_vault_key_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionConfig.property.serverId">serverId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#server_id MssqlServerTransparentDataEncryption#server_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionConfig.property.autoRotationEnabled">autoRotationEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#auto_rotation_enabled MssqlServerTransparentDataEncryption#auto_rotation_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#id MssqlServerTransparentDataEncryption#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionConfig.property.keyVaultKeyId">keyVaultKeyId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#key_vault_key_id MssqlServerTransparentDataEncryption#key_vault_key_id}. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionTimeouts">MssqlServerTransparentDataEncryptionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -920,7 +920,7 @@ public readonly serverId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#server_id MssqlServerTransparentDataEncryption#server_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#server_id MssqlServerTransparentDataEncryption#server_id}.
 
 ---
 
@@ -932,7 +932,7 @@ public readonly autoRotationEnabled: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#auto_rotation_enabled MssqlServerTransparentDataEncryption#auto_rotation_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#auto_rotation_enabled MssqlServerTransparentDataEncryption#auto_rotation_enabled}.
 
 ---
 
@@ -944,7 +944,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#id MssqlServerTransparentDataEncryption#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#id MssqlServerTransparentDataEncryption#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -959,7 +959,7 @@ public readonly keyVaultKeyId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#key_vault_key_id MssqlServerTransparentDataEncryption#key_vault_key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#key_vault_key_id MssqlServerTransparentDataEncryption#key_vault_key_id}.
 
 ---
 
@@ -973,7 +973,7 @@ public readonly timeouts: MssqlServerTransparentDataEncryptionTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#timeouts MssqlServerTransparentDataEncryption#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#timeouts MssqlServerTransparentDataEncryption#timeouts}
 
 ---
 
@@ -991,10 +991,10 @@ const mssqlServerTransparentDataEncryptionTimeouts: mssqlServerTransparentDataEn
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#create MssqlServerTransparentDataEncryption#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#delete MssqlServerTransparentDataEncryption#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#read MssqlServerTransparentDataEncryption#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#update MssqlServerTransparentDataEncryption#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#create MssqlServerTransparentDataEncryption#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#delete MssqlServerTransparentDataEncryption#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#read MssqlServerTransparentDataEncryption#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerTransparentDataEncryption.MssqlServerTransparentDataEncryptionTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#update MssqlServerTransparentDataEncryption#update}. |
 
 ---
 
@@ -1006,7 +1006,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#create MssqlServerTransparentDataEncryption#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#create MssqlServerTransparentDataEncryption#create}.
 
 ---
 
@@ -1018,7 +1018,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#delete MssqlServerTransparentDataEncryption#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#delete MssqlServerTransparentDataEncryption#delete}.
 
 ---
 
@@ -1030,7 +1030,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#read MssqlServerTransparentDataEncryption#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#read MssqlServerTransparentDataEncryption#read}.
 
 ---
 
@@ -1042,7 +1042,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/resources/mssql_server_transparent_data_encryption#update MssqlServerTransparentDataEncryption#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/mssql_server_transparent_data_encryption#update MssqlServerTransparentDataEncryption#update}.
 
 ---
 
