@@ -4,7 +4,7 @@
 
 ### DataAzurermLocation <a name="DataAzurermLocation" id="@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location azurerm_location}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location azurerm_location}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.Initializer"></a>
 
@@ -38,8 +38,8 @@ dataAzurermLocation.DataAzurermLocation(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#location DataAzurermLocation#location}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#id DataAzurermLocation#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#location DataAzurermLocation#location}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#id DataAzurermLocation#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationTimeouts">DataAzurermLocationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -108,7 +108,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#location DataAzurermLocation#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#location DataAzurermLocation#location}.
 
 ---
 
@@ -116,7 +116,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#id DataAzurermLocation#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#id DataAzurermLocation#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -129,7 +129,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#timeouts DataAzurermLocation#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#timeouts DataAzurermLocation#timeouts}
 
 ---
 
@@ -389,7 +389,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#read DataAzurermLocation#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#read DataAzurermLocation#read}.
 
 ---
 
@@ -519,7 +519,7 @@ The construct id used in the generated config for the DataAzurermLocation to imp
 
 The id of the existing DataAzurermLocation that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -812,8 +812,8 @@ dataAzurermLocation.DataAzurermLocationConfig(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#location DataAzurermLocation#location}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#id DataAzurermLocation#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#location DataAzurermLocation#location}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#id DataAzurermLocation#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationTimeouts">DataAzurermLocationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -896,7 +896,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#location DataAzurermLocation#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#location DataAzurermLocation#location}.
 
 ---
 
@@ -908,7 +908,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#id DataAzurermLocation#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#id DataAzurermLocation#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -925,7 +925,7 @@ timeouts: DataAzurermLocationTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#timeouts DataAzurermLocation#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#timeouts DataAzurermLocation#timeouts}
 
 ---
 
@@ -945,7 +945,7 @@ dataAzurermLocation.DataAzurermLocationTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#read DataAzurermLocation#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#read DataAzurermLocation#read}. |
 
 ---
 
@@ -957,7 +957,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.0/docs/data-sources/location#read DataAzurermLocation#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/location#read DataAzurermLocation#read}.
 
 ---
 
