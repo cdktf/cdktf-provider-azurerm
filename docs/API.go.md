@@ -48,6 +48,7 @@ The following submodules are available:
 - [apiManagementNotificationRecipientUser](./apiManagementNotificationRecipientUser.go.md)
 - [apiManagementOpenidConnectProvider](./apiManagementOpenidConnectProvider.go.md)
 - [apiManagementPolicy](./apiManagementPolicy.go.md)
+- [apiManagementPolicyFragment](./apiManagementPolicyFragment.go.md)
 - [apiManagementProduct](./apiManagementProduct.go.md)
 - [apiManagementProductApi](./apiManagementProductApi.go.md)
 - [apiManagementProductGroup](./apiManagementProductGroup.go.md)

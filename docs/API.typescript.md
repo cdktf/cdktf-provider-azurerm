@@ -48,6 +48,7 @@ The following submodules are available:
 - [apiManagementNotificationRecipientUser](./apiManagementNotificationRecipientUser.typescript.md)
 - [apiManagementOpenidConnectProvider](./apiManagementOpenidConnectProvider.typescript.md)
 - [apiManagementPolicy](./apiManagementPolicy.typescript.md)
+- [apiManagementPolicyFragment](./apiManagementPolicyFragment.typescript.md)
 - [apiManagementProduct](./apiManagementProduct.typescript.md)
 - [apiManagementProductApi](./apiManagementProductApi.typescript.md)
 - [apiManagementProductGroup](./apiManagementProductGroup.typescript.md)

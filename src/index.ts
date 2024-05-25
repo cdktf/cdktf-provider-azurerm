@@ -48,6 +48,7 @@ export * as apiManagementNotificationRecipientEmail from './api-management-notif
 export * as apiManagementNotificationRecipientUser from './api-management-notification-recipient-user';
 export * as apiManagementOpenidConnectProvider from './api-management-openid-connect-provider';
 export * as apiManagementPolicy from './api-management-policy';
+export * as apiManagementPolicyFragment from './api-management-policy-fragment';
 export * as apiManagementProduct from './api-management-product';
 export * as apiManagementProductApi from './api-management-product-api';
 export * as apiManagementProductGroup from './api-management-product-group';

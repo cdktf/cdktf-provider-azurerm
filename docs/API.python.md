@@ -48,6 +48,7 @@ The following submodules are available:
 - [apiManagementNotificationRecipientUser](./apiManagementNotificationRecipientUser.python.md)
 - [apiManagementOpenidConnectProvider](./apiManagementOpenidConnectProvider.python.md)
 - [apiManagementPolicy](./apiManagementPolicy.python.md)
+- [apiManagementPolicyFragment](./apiManagementPolicyFragment.python.md)
 - [apiManagementProduct](./apiManagementProduct.python.md)
 - [apiManagementProductApi](./apiManagementProductApi.python.md)
 - [apiManagementProductGroup](./apiManagementProductGroup.python.md)

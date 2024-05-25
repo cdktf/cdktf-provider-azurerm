@@ -48,6 +48,7 @@ Object.defineProperty(exports, 'apiManagementNotificationRecipientEmail', { get:
 Object.defineProperty(exports, 'apiManagementNotificationRecipientUser', { get: function () { return require('./api-management-notification-recipient-user'); } });
 Object.defineProperty(exports, 'apiManagementOpenidConnectProvider', { get: function () { return require('./api-management-openid-connect-provider'); } });
 Object.defineProperty(exports, 'apiManagementPolicy', { get: function () { return require('./api-management-policy'); } });
+Object.defineProperty(exports, 'apiManagementPolicyFragment', { get: function () { return require('./api-management-policy-fragment'); } });
 Object.defineProperty(exports, 'apiManagementProduct', { get: function () { return require('./api-management-product'); } });
 Object.defineProperty(exports, 'apiManagementProductApi', { get: function () { return require('./api-management-product-api'); } });
 Object.defineProperty(exports, 'apiManagementProductGroup', { get: function () { return require('./api-management-product-group'); } });

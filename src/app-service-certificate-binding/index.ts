@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/app_service_certificate_binding
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/app_service_certificate_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +13,42 @@ import * as cdktf from 'cdktf';
 
 export interface AppServiceCertificateBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/app_service_certificate_binding#certificate_id AppServiceCertificateBinding#certificate_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/app_service_certificate_binding#certificate_id AppServiceCertificateBinding#certificate_id}
   */
   readonly certificateId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/app_service_certificate_binding#hostname_binding_id AppServiceCertificateBinding#hostname_binding_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/app_service_certificate_binding#hostname_binding_id AppServiceCertificateBinding#hostname_binding_id}
   */
   readonly hostnameBindingId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/app_service_certificate_binding#id AppServiceCertificateBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/app_service_certificate_binding#id AppServiceCertificateBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/app_service_certificate_binding#ssl_state AppServiceCertificateBinding#ssl_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/app_service_certificate_binding#ssl_state AppServiceCertificateBinding#ssl_state}
   */
   readonly sslState: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/app_service_certificate_binding#timeouts AppServiceCertificateBinding#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/app_service_certificate_binding#timeouts AppServiceCertificateBinding#timeouts}
   */
   readonly timeouts?: AppServiceCertificateBindingTimeouts;
 }
 export interface AppServiceCertificateBindingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/app_service_certificate_binding#create AppServiceCertificateBinding#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/app_service_certificate_binding#create AppServiceCertificateBinding#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/app_service_certificate_binding#delete AppServiceCertificateBinding#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/app_service_certificate_binding#delete AppServiceCertificateBinding#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/app_service_certificate_binding#read AppServiceCertificateBinding#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/app_service_certificate_binding#read AppServiceCertificateBinding#read}
   */
   readonly read?: string;
 }
@@ -200,7 +200,7 @@ export class AppServiceCertificateBindingTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/app_service_certificate_binding azurerm_app_service_certificate_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/app_service_certificate_binding azurerm_app_service_certificate_binding}
 */
 export class AppServiceCertificateBinding extends cdktf.TerraformResource {
 
@@ -216,7 +216,7 @@ export class AppServiceCertificateBinding extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AppServiceCertificateBinding resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AppServiceCertificateBinding to import
-  * @param importFromId The id of the existing AppServiceCertificateBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/app_service_certificate_binding#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AppServiceCertificateBinding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/app_service_certificate_binding#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AppServiceCertificateBinding to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -228,7 +228,7 @@ export class AppServiceCertificateBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/app_service_certificate_binding azurerm_app_service_certificate_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/app_service_certificate_binding azurerm_app_service_certificate_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -239,7 +239,7 @@ export class AppServiceCertificateBinding extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_service_certificate_binding',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.104.2',
+        providerVersion: '3.105.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
