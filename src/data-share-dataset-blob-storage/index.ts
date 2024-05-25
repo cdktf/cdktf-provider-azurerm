@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,56 +8,56 @@ import * as cdktf from 'cdktf';
 
 export interface DataShareDatasetBlobStorageConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#container_name DataShareDatasetBlobStorage#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#container_name DataShareDatasetBlobStorage#container_name}
   */
   readonly containerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#data_share_id DataShareDatasetBlobStorage#data_share_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#data_share_id DataShareDatasetBlobStorage#data_share_id}
   */
   readonly dataShareId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#file_path DataShareDatasetBlobStorage#file_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#file_path DataShareDatasetBlobStorage#file_path}
   */
   readonly filePath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#folder_path DataShareDatasetBlobStorage#folder_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#folder_path DataShareDatasetBlobStorage#folder_path}
   */
   readonly folderPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#id DataShareDatasetBlobStorage#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#id DataShareDatasetBlobStorage#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#name DataShareDatasetBlobStorage#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#name DataShareDatasetBlobStorage#name}
   */
   readonly name: string;
   /**
   * storage_account block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#storage_account DataShareDatasetBlobStorage#storage_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#storage_account DataShareDatasetBlobStorage#storage_account}
   */
   readonly storageAccount: DataShareDatasetBlobStorageStorageAccount;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#timeouts DataShareDatasetBlobStorage#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#timeouts DataShareDatasetBlobStorage#timeouts}
   */
   readonly timeouts?: DataShareDatasetBlobStorageTimeouts;
 }
 export interface DataShareDatasetBlobStorageStorageAccount {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#name DataShareDatasetBlobStorage#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#name DataShareDatasetBlobStorage#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#resource_group_name DataShareDatasetBlobStorage#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#resource_group_name DataShareDatasetBlobStorage#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#subscription_id DataShareDatasetBlobStorage#subscription_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#subscription_id DataShareDatasetBlobStorage#subscription_id}
   */
   readonly subscriptionId: string;
 }
@@ -195,15 +190,15 @@ export class DataShareDatasetBlobStorageStorageAccountOutputReference extends cd
 }
 export interface DataShareDatasetBlobStorageTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#create DataShareDatasetBlobStorage#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#create DataShareDatasetBlobStorage#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#delete DataShareDatasetBlobStorage#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#delete DataShareDatasetBlobStorage#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#read DataShareDatasetBlobStorage#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#read DataShareDatasetBlobStorage#read}
   */
   readonly read?: string;
 }
@@ -355,7 +350,7 @@ export class DataShareDatasetBlobStorageTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage azurerm_data_share_dataset_blob_storage}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage azurerm_data_share_dataset_blob_storage}
 */
 export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
 
@@ -371,7 +366,7 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataShareDatasetBlobStorage resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataShareDatasetBlobStorage to import
-  * @param importFromId The id of the existing DataShareDatasetBlobStorage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataShareDatasetBlobStorage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataShareDatasetBlobStorage to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -383,7 +378,7 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/data_share_dataset_blob_storage azurerm_data_share_dataset_blob_storage} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/data_share_dataset_blob_storage azurerm_data_share_dataset_blob_storage} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -394,7 +389,7 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_share_dataset_blob_storage',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.104.2',
+        providerVersion: '3.105.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

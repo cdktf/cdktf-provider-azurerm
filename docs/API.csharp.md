@@ -48,6 +48,7 @@ The following submodules are available:
 - [apiManagementNotificationRecipientUser](./apiManagementNotificationRecipientUser.csharp.md)
 - [apiManagementOpenidConnectProvider](./apiManagementOpenidConnectProvider.csharp.md)
 - [apiManagementPolicy](./apiManagementPolicy.csharp.md)
+- [apiManagementPolicyFragment](./apiManagementPolicyFragment.csharp.md)
 - [apiManagementProduct](./apiManagementProduct.csharp.md)
 - [apiManagementProductApi](./apiManagementProductApi.csharp.md)
 - [apiManagementProductGroup](./apiManagementProductGroup.csharp.md)

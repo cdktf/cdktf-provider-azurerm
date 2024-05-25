@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/mobile_network_slice
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/mobile_network_slice
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMobileNetworkSliceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/mobile_network_slice#id DataAzurermMobileNetworkSlice#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/mobile_network_slice#id DataAzurermMobileNetworkSlice#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/mobile_network_slice#mobile_network_id DataAzurermMobileNetworkSlice#mobile_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/mobile_network_slice#mobile_network_id DataAzurermMobileNetworkSlice#mobile_network_id}
   */
   readonly mobileNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/mobile_network_slice#name DataAzurermMobileNetworkSlice#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/mobile_network_slice#name DataAzurermMobileNetworkSlice#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/mobile_network_slice#timeouts DataAzurermMobileNetworkSlice#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/mobile_network_slice#timeouts DataAzurermMobileNetworkSlice#timeouts}
   */
   readonly timeouts?: DataAzurermMobileNetworkSliceTimeouts;
 }
@@ -116,7 +111,7 @@ export class DataAzurermMobileNetworkSliceSingleNetworkSliceSelectionAssistanceI
 }
 export interface DataAzurermMobileNetworkSliceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/mobile_network_slice#read DataAzurermMobileNetworkSlice#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/mobile_network_slice#read DataAzurermMobileNetworkSlice#read}
   */
   readonly read?: string;
 }
@@ -210,7 +205,7 @@ export class DataAzurermMobileNetworkSliceTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/mobile_network_slice azurerm_mobile_network_slice}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/mobile_network_slice azurerm_mobile_network_slice}
 */
 export class DataAzurermMobileNetworkSlice extends cdktf.TerraformDataSource {
 
@@ -226,7 +221,7 @@ export class DataAzurermMobileNetworkSlice extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermMobileNetworkSlice resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermMobileNetworkSlice to import
-  * @param importFromId The id of the existing DataAzurermMobileNetworkSlice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/mobile_network_slice#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermMobileNetworkSlice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/mobile_network_slice#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermMobileNetworkSlice to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -238,7 +233,7 @@ export class DataAzurermMobileNetworkSlice extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/mobile_network_slice azurerm_mobile_network_slice} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/mobile_network_slice azurerm_mobile_network_slice} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -249,7 +244,7 @@ export class DataAzurermMobileNetworkSlice extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_mobile_network_slice',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.104.2',
+        providerVersion: '3.105.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/template_spec_version
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/template_spec_version
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,34 +8,34 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermTemplateSpecVersionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/template_spec_version#id DataAzurermTemplateSpecVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/template_spec_version#id DataAzurermTemplateSpecVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/template_spec_version#name DataAzurermTemplateSpecVersion#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/template_spec_version#name DataAzurermTemplateSpecVersion#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/template_spec_version#resource_group_name DataAzurermTemplateSpecVersion#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/template_spec_version#resource_group_name DataAzurermTemplateSpecVersion#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/template_spec_version#version DataAzurermTemplateSpecVersion#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/template_spec_version#version DataAzurermTemplateSpecVersion#version}
   */
   readonly version: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/template_spec_version#timeouts DataAzurermTemplateSpecVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/template_spec_version#timeouts DataAzurermTemplateSpecVersion#timeouts}
   */
   readonly timeouts?: DataAzurermTemplateSpecVersionTimeouts;
 }
 export interface DataAzurermTemplateSpecVersionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/template_spec_version#read DataAzurermTemplateSpecVersion#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/template_spec_version#read DataAzurermTemplateSpecVersion#read}
   */
   readonly read?: string;
 }
@@ -134,7 +129,7 @@ export class DataAzurermTemplateSpecVersionTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/template_spec_version azurerm_template_spec_version}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/template_spec_version azurerm_template_spec_version}
 */
 export class DataAzurermTemplateSpecVersion extends cdktf.TerraformDataSource {
 
@@ -150,7 +145,7 @@ export class DataAzurermTemplateSpecVersion extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermTemplateSpecVersion resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermTemplateSpecVersion to import
-  * @param importFromId The id of the existing DataAzurermTemplateSpecVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/template_spec_version#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermTemplateSpecVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/template_spec_version#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermTemplateSpecVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -162,7 +157,7 @@ export class DataAzurermTemplateSpecVersion extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/data-sources/template_spec_version azurerm_template_spec_version} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/data-sources/template_spec_version azurerm_template_spec_version} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -173,7 +168,7 @@ export class DataAzurermTemplateSpecVersion extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_template_spec_version',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.104.2',
+        providerVersion: '3.105.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

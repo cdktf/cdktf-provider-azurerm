@@ -1,3 +1,3 @@
 # `azurerm_elastic_san`
 
-Refer to the Terraform Registry for docs: [`azurerm_elastic_san`](https://registry.terraform.io/providers/hashicorp/azurerm/3.104.2/docs/resources/elastic_san).
+Refer to the Terraform Registry for docs: [`azurerm_elastic_san`](https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/elastic_san).
