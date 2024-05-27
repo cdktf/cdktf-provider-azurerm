@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcentergallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcentergallery"
 
 devcentergallery.NewDevCenterGallery(scope Construct, id *string, config DevCenterGalleryConfig) DevCenterGallery
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcentergallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcentergallery"
 
 devcentergallery.DevCenterGallery_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcentergallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcentergallery"
 
 devcentergallery.DevCenterGallery_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ devcentergallery.DevCenterGallery_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcentergallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcentergallery"
 
 devcentergallery.DevCenterGallery_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ devcentergallery.DevCenterGallery_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcentergallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcentergallery"
 
 devcentergallery.DevCenterGallery_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -804,7 +804,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcentergallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcentergallery"
 
 &devcentergallery.DevCenterGalleryConfig {
 	Connection: interface{},
@@ -818,7 +818,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcentergallery"
 	Name: *string,
 	SharedGalleryId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.devCenterGallery.DevCenterGalleryTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.devCenterGallery.DevCenterGalleryTimeouts,
 }
 ```
 
@@ -981,7 +981,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcentergallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcentergallery"
 
 &devcentergallery.DevCenterGalleryTimeouts {
 	Create: *string,
@@ -1043,7 +1043,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcentergallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcentergallery"
 
 devcentergallery.NewDevCenterGalleryTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevCenterGalleryTimeoutsOutputReference
 ```
