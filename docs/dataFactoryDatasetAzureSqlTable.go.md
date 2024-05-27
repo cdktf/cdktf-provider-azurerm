@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureSqlTable.DataFactoryDatasetAzureSqlTable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazuresqltable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetazuresqltable"
 
 datafactorydatasetazuresqltable.NewDataFactoryDatasetAzureSqlTable(scope Construct, id *string, config DataFactoryDatasetAzureSqlTableConfig) DataFactoryDatasetAzureSqlTable
 ```
@@ -474,7 +474,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureSqlTable.DataFactoryDatasetAzureSqlTable.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazuresqltable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetazuresqltable"
 
 datafactorydatasetazuresqltable.DataFactoryDatasetAzureSqlTable_IsConstruct(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureSqlTable.DataFactoryDatasetAzureSqlTable.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazuresqltable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetazuresqltable"
 
 datafactorydatasetazuresqltable.DataFactoryDatasetAzureSqlTable_IsTerraformElement(x interface{}) *bool
 ```
@@ -520,7 +520,7 @@ datafactorydatasetazuresqltable.DataFactoryDatasetAzureSqlTable_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureSqlTable.DataFactoryDatasetAzureSqlTable.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazuresqltable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetazuresqltable"
 
 datafactorydatasetazuresqltable.DataFactoryDatasetAzureSqlTable_IsTerraformResource(x interface{}) *bool
 ```
@@ -534,7 +534,7 @@ datafactorydatasetazuresqltable.DataFactoryDatasetAzureSqlTable_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureSqlTable.DataFactoryDatasetAzureSqlTable.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazuresqltable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetazuresqltable"
 
 datafactorydatasetazuresqltable.DataFactoryDatasetAzureSqlTable_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1049,7 +1049,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureSqlTable.DataFactoryDatasetAzureSqlTableConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazuresqltable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetazuresqltable"
 
 &datafactorydatasetazuresqltable.DataFactoryDatasetAzureSqlTableConfig {
 	Connection: interface{},
@@ -1071,7 +1071,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazu
 	Schema: *string,
 	SchemaColumn: interface{},
 	Table: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryDatasetAzureSqlTable.DataFactoryDatasetAzureSqlTableTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryDatasetAzureSqlTable.DataFactoryDatasetAzureSqlTableTimeouts,
 }
 ```
 
@@ -1340,7 +1340,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureSqlTable.DataFactoryDatasetAzureSqlTableSchemaColumn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazuresqltable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetazuresqltable"
 
 &datafactorydatasetazuresqltable.DataFactoryDatasetAzureSqlTableSchemaColumn {
 	Name: *string,
@@ -1400,7 +1400,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureSqlTable.DataFactoryDatasetAzureSqlTableTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazuresqltable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetazuresqltable"
 
 &datafactorydatasetazuresqltable.DataFactoryDatasetAzureSqlTableTimeouts {
 	Create: *string,
@@ -1476,7 +1476,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureSqlTable.DataFactoryDatasetAzureSqlTableSchemaColumnList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazuresqltable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetazuresqltable"
 
 datafactorydatasetazuresqltable.NewDataFactoryDatasetAzureSqlTableSchemaColumnList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataFactoryDatasetAzureSqlTableSchemaColumnList
 ```
@@ -1636,7 +1636,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureSqlTable.DataFactoryDatasetAzureSqlTableSchemaColumnOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazuresqltable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetazuresqltable"
 
 datafactorydatasetazuresqltable.NewDataFactoryDatasetAzureSqlTableSchemaColumnOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataFactoryDatasetAzureSqlTableSchemaColumnOutputReference
 ```
@@ -1983,7 +1983,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureSqlTable.DataFactoryDatasetAzureSqlTableTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazuresqltable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetazuresqltable"
 
 datafactorydatasetazuresqltable.NewDataFactoryDatasetAzureSqlTableTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryDatasetAzureSqlTableTimeoutsOutputReference
 ```
