@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/monitor_scheduled_query_rules_alert_v2
 // generated from terraform resource schema
 
