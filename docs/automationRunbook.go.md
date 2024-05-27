@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.NewAutomationRunbook(scope Construct, id *string, config AutomationRunbookConfig) AutomationRunbook
 ```
@@ -493,7 +493,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbook.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.AutomationRunbook_IsConstruct(x interface{}) *bool
 ```
@@ -525,7 +525,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbook.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.AutomationRunbook_IsTerraformElement(x interface{}) *bool
 ```
@@ -539,7 +539,7 @@ automationrunbook.AutomationRunbook_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbook.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.AutomationRunbook_IsTerraformResource(x interface{}) *bool
 ```
@@ -553,7 +553,7 @@ automationrunbook.AutomationRunbook_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbook.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.AutomationRunbook_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1134,7 +1134,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 &automationrunbook.AutomationRunbookConfig {
 	Connection: interface{},
@@ -1153,13 +1153,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook
 	RunbookType: *string,
 	Content: *string,
 	Description: *string,
-	Draft: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.automationRunbook.AutomationRunbookDraft,
+	Draft: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationRunbook.AutomationRunbookDraft,
 	Id: *string,
 	JobSchedule: interface{},
 	LogActivityTraceLevel: *f64,
-	PublishContentLink: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.automationRunbook.AutomationRunbookPublishContentLink,
+	PublishContentLink: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationRunbook.AutomationRunbookPublishContentLink,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.automationRunbook.AutomationRunbookTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationRunbook.AutomationRunbookTimeouts,
 }
 ```
 
@@ -1469,10 +1469,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookDraft.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 &automationrunbook.AutomationRunbookDraft {
-	ContentLink: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.automationRunbook.AutomationRunbookDraftContentLink,
+	ContentLink: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationRunbook.AutomationRunbookDraftContentLink,
 	EditModeEnabled: interface{},
 	OutputTypes: *[]*string,
 	Parameters: interface{},
@@ -1547,11 +1547,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookDraftContentLink.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 &automationrunbook.AutomationRunbookDraftContentLink {
 	Uri: *string,
-	Hash: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.automationRunbook.AutomationRunbookDraftContentLinkHash,
+	Hash: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationRunbook.AutomationRunbookDraftContentLinkHash,
 	Version: *string,
 }
 ```
@@ -1609,7 +1609,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookDraftContentLinkHash.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 &automationrunbook.AutomationRunbookDraftContentLinkHash {
 	Algorithm: *string,
@@ -1655,7 +1655,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookDraftParameters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 &automationrunbook.AutomationRunbookDraftParameters {
 	Key: *string,
@@ -1743,7 +1743,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookJobSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 &automationrunbook.AutomationRunbookJobSchedule {
 	JobScheduleId: *string,
@@ -1817,11 +1817,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookPublishContentLink.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 &automationrunbook.AutomationRunbookPublishContentLink {
 	Uri: *string,
-	Hash: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.automationRunbook.AutomationRunbookPublishContentLinkHash,
+	Hash: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationRunbook.AutomationRunbookPublishContentLinkHash,
 	Version: *string,
 }
 ```
@@ -1879,7 +1879,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookPublishContentLinkHash.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 &automationrunbook.AutomationRunbookPublishContentLinkHash {
 	Algorithm: *string,
@@ -1925,7 +1925,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 &automationrunbook.AutomationRunbookTimeouts {
 	Create: *string,
@@ -2001,7 +2001,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookDraftContentLinkHashOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.NewAutomationRunbookDraftContentLinkHashOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationRunbookDraftContentLinkHashOutputReference
 ```
@@ -2294,7 +2294,7 @@ func InternalValue() AutomationRunbookDraftContentLinkHash
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookDraftContentLinkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.NewAutomationRunbookDraftContentLinkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationRunbookDraftContentLinkOutputReference
 ```
@@ -2636,7 +2636,7 @@ func InternalValue() AutomationRunbookDraftContentLink
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookDraftOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.NewAutomationRunbookDraftOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationRunbookDraftOutputReference
 ```
@@ -3049,7 +3049,7 @@ func InternalValue() AutomationRunbookDraft
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookDraftParametersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.NewAutomationRunbookDraftParametersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AutomationRunbookDraftParametersList
 ```
@@ -3209,7 +3209,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookDraftParametersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.NewAutomationRunbookDraftParametersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AutomationRunbookDraftParametersOutputReference
 ```
@@ -3607,7 +3607,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookJobScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.NewAutomationRunbookJobScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AutomationRunbookJobScheduleList
 ```
@@ -3767,7 +3767,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookJobScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.NewAutomationRunbookJobScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AutomationRunbookJobScheduleOutputReference
 ```
@@ -4150,7 +4150,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookPublishContentLinkHashOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.NewAutomationRunbookPublishContentLinkHashOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationRunbookPublishContentLinkHashOutputReference
 ```
@@ -4443,7 +4443,7 @@ func InternalValue() AutomationRunbookPublishContentLinkHash
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookPublishContentLinkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.NewAutomationRunbookPublishContentLinkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationRunbookPublishContentLinkOutputReference
 ```
@@ -4785,7 +4785,7 @@ func InternalValue() AutomationRunbookPublishContentLink
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationRunbook.AutomationRunbookTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationrunbook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationrunbook"
 
 automationrunbook.NewAutomationRunbookTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationRunbookTimeoutsOutputReference
 ```

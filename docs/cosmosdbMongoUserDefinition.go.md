@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbMongoUserDefinition.CosmosdbMongoUserDefinition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cosmosdbmongouserdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongouserdefinition"
 
 cosmosdbmongouserdefinition.NewCosmosdbMongoUserDefinition(scope Construct, id *string, config CosmosdbMongoUserDefinitionConfig) CosmosdbMongoUserDefinition
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbMongoUserDefinition.CosmosdbMongoUserDefinition.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cosmosdbmongouserdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongouserdefinition"
 
 cosmosdbmongouserdefinition.CosmosdbMongoUserDefinition_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbMongoUserDefinition.CosmosdbMongoUserDefinition.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cosmosdbmongouserdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongouserdefinition"
 
 cosmosdbmongouserdefinition.CosmosdbMongoUserDefinition_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ cosmosdbmongouserdefinition.CosmosdbMongoUserDefinition_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbMongoUserDefinition.CosmosdbMongoUserDefinition.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cosmosdbmongouserdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongouserdefinition"
 
 cosmosdbmongouserdefinition.CosmosdbMongoUserDefinition_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ cosmosdbmongouserdefinition.CosmosdbMongoUserDefinition_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cosmosdbMongoUserDefinition.CosmosdbMongoUserDefinition.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cosmosdbmongouserdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongouserdefinition"
 
 cosmosdbmongouserdefinition.CosmosdbMongoUserDefinition_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -833,7 +833,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbMongoUserDefinition.CosmosdbMongoUserDefinitionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cosmosdbmongouserdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongouserdefinition"
 
 &cosmosdbmongouserdefinition.CosmosdbMongoUserDefinitionConfig {
 	Connection: interface{},
@@ -848,7 +848,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cosmosdbmongouser
 	Username: *string,
 	Id: *string,
 	InheritedRoleNames: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cosmosdbMongoUserDefinition.CosmosdbMongoUserDefinitionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbMongoUserDefinition.CosmosdbMongoUserDefinitionTimeouts,
 }
 ```
 
@@ -1024,7 +1024,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbMongoUserDefinition.CosmosdbMongoUserDefinitionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cosmosdbmongouserdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongouserdefinition"
 
 &cosmosdbmongouserdefinition.CosmosdbMongoUserDefinitionTimeouts {
 	Create: *string,
@@ -1100,7 +1100,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbMongoUserDefinition.CosmosdbMongoUserDefinitionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cosmosdbmongouserdefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongouserdefinition"
 
 cosmosdbmongouserdefinition.NewCosmosdbMongoUserDefinitionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbMongoUserDefinitionTimeoutsOutputReference
 ```
