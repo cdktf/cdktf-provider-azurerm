@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/redis_cache_access_policy
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/redis_cache_access_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +8,42 @@ import * as cdktf from 'cdktf';
 
 export interface RedisCacheAccessPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/redis_cache_access_policy#id RedisCacheAccessPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/redis_cache_access_policy#id RedisCacheAccessPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/redis_cache_access_policy#name RedisCacheAccessPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/redis_cache_access_policy#name RedisCacheAccessPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/redis_cache_access_policy#permissions RedisCacheAccessPolicy#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/redis_cache_access_policy#permissions RedisCacheAccessPolicy#permissions}
   */
   readonly permissions: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/redis_cache_access_policy#redis_cache_id RedisCacheAccessPolicy#redis_cache_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/redis_cache_access_policy#redis_cache_id RedisCacheAccessPolicy#redis_cache_id}
   */
   readonly redisCacheId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/redis_cache_access_policy#timeouts RedisCacheAccessPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/redis_cache_access_policy#timeouts RedisCacheAccessPolicy#timeouts}
   */
   readonly timeouts?: RedisCacheAccessPolicyTimeouts;
 }
 export interface RedisCacheAccessPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/redis_cache_access_policy#create RedisCacheAccessPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/redis_cache_access_policy#create RedisCacheAccessPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/redis_cache_access_policy#delete RedisCacheAccessPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/redis_cache_access_policy#delete RedisCacheAccessPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/redis_cache_access_policy#read RedisCacheAccessPolicy#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/redis_cache_access_policy#read RedisCacheAccessPolicy#read}
   */
   readonly read?: string;
 }
@@ -200,7 +195,7 @@ export class RedisCacheAccessPolicyTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/redis_cache_access_policy azurerm_redis_cache_access_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/redis_cache_access_policy azurerm_redis_cache_access_policy}
 */
 export class RedisCacheAccessPolicy extends cdktf.TerraformResource {
 
@@ -216,7 +211,7 @@ export class RedisCacheAccessPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a RedisCacheAccessPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the RedisCacheAccessPolicy to import
-  * @param importFromId The id of the existing RedisCacheAccessPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/redis_cache_access_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing RedisCacheAccessPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/redis_cache_access_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the RedisCacheAccessPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -228,7 +223,7 @@ export class RedisCacheAccessPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/redis_cache_access_policy azurerm_redis_cache_access_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/redis_cache_access_policy azurerm_redis_cache_access_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -239,7 +234,7 @@ export class RedisCacheAccessPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_redis_cache_access_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.105.0',
+        providerVersion: '3.106.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,84 +8,88 @@ import * as cdktf from 'cdktf';
 
 export interface BastionHostConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#copy_paste_enabled BastionHost#copy_paste_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#copy_paste_enabled BastionHost#copy_paste_enabled}
   */
   readonly copyPasteEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#file_copy_enabled BastionHost#file_copy_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#file_copy_enabled BastionHost#file_copy_enabled}
   */
   readonly fileCopyEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#id BastionHost#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#id BastionHost#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#ip_connect_enabled BastionHost#ip_connect_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#ip_connect_enabled BastionHost#ip_connect_enabled}
   */
   readonly ipConnectEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#kerberos_enabled BastionHost#kerberos_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#kerberos_enabled BastionHost#kerberos_enabled}
   */
   readonly kerberosEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#location BastionHost#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#location BastionHost#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#name BastionHost#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#name BastionHost#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#resource_group_name BastionHost#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#resource_group_name BastionHost#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#scale_units BastionHost#scale_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#scale_units BastionHost#scale_units}
   */
   readonly scaleUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#shareable_link_enabled BastionHost#shareable_link_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#shareable_link_enabled BastionHost#shareable_link_enabled}
   */
   readonly shareableLinkEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#sku BastionHost#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#sku BastionHost#sku}
   */
   readonly sku?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#tags BastionHost#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#tags BastionHost#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#tunneling_enabled BastionHost#tunneling_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#tunneling_enabled BastionHost#tunneling_enabled}
   */
   readonly tunnelingEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#virtual_network_id BastionHost#virtual_network_id}
+  */
+  readonly virtualNetworkId?: string;
+  /**
   * ip_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#ip_configuration BastionHost#ip_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#ip_configuration BastionHost#ip_configuration}
   */
-  readonly ipConfiguration: BastionHostIpConfiguration;
+  readonly ipConfiguration?: BastionHostIpConfiguration;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#timeouts BastionHost#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#timeouts BastionHost#timeouts}
   */
   readonly timeouts?: BastionHostTimeouts;
 }
 export interface BastionHostIpConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#name BastionHost#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#name BastionHost#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#public_ip_address_id BastionHost#public_ip_address_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#public_ip_address_id BastionHost#public_ip_address_id}
   */
   readonly publicIpAddressId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#subnet_id BastionHost#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#subnet_id BastionHost#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -223,19 +222,19 @@ export class BastionHostIpConfigurationOutputReference extends cdktf.ComplexObje
 }
 export interface BastionHostTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#create BastionHost#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#create BastionHost#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#delete BastionHost#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#delete BastionHost#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#read BastionHost#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#read BastionHost#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#update BastionHost#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#update BastionHost#update}
   */
   readonly update?: string;
 }
@@ -416,7 +415,7 @@ export class BastionHostTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host azurerm_bastion_host}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host azurerm_bastion_host}
 */
 export class BastionHost extends cdktf.TerraformResource {
 
@@ -432,7 +431,7 @@ export class BastionHost extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BastionHost resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BastionHost to import
-  * @param importFromId The id of the existing BastionHost that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BastionHost that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BastionHost to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -444,7 +443,7 @@ export class BastionHost extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/bastion_host azurerm_bastion_host} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/bastion_host azurerm_bastion_host} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -455,7 +454,7 @@ export class BastionHost extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_bastion_host',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.105.0',
+        providerVersion: '3.106.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -479,6 +478,7 @@ export class BastionHost extends cdktf.TerraformResource {
     this._sku = config.sku;
     this._tags = config.tags;
     this._tunnelingEnabled = config.tunnelingEnabled;
+    this._virtualNetworkId = config.virtualNetworkId;
     this._ipConfiguration.internalValue = config.ipConfiguration;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -691,13 +691,32 @@ export class BastionHost extends cdktf.TerraformResource {
     return this._tunnelingEnabled;
   }
 
-  // ip_configuration - computed: false, optional: false, required: true
+  // virtual_network_id - computed: false, optional: true, required: false
+  private _virtualNetworkId?: string; 
+  public get virtualNetworkId() {
+    return this.getStringAttribute('virtual_network_id');
+  }
+  public set virtualNetworkId(value: string) {
+    this._virtualNetworkId = value;
+  }
+  public resetVirtualNetworkId() {
+    this._virtualNetworkId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkIdInput() {
+    return this._virtualNetworkId;
+  }
+
+  // ip_configuration - computed: false, optional: true, required: false
   private _ipConfiguration = new BastionHostIpConfigurationOutputReference(this, "ip_configuration");
   public get ipConfiguration() {
     return this._ipConfiguration;
   }
   public putIpConfiguration(value: BastionHostIpConfiguration) {
     this._ipConfiguration.internalValue = value;
+  }
+  public resetIpConfiguration() {
+    this._ipConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ipConfigurationInput() {
@@ -739,6 +758,7 @@ export class BastionHost extends cdktf.TerraformResource {
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tunneling_enabled: cdktf.booleanToTerraform(this._tunnelingEnabled),
+      virtual_network_id: cdktf.stringToTerraform(this._virtualNetworkId),
       ip_configuration: bastionHostIpConfigurationToTerraform(this._ipConfiguration.internalValue),
       timeouts: bastionHostTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -823,6 +843,12 @@ export class BastionHost extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
+      },
+      virtual_network_id: {
+        value: cdktf.stringToHclTerraform(this._virtualNetworkId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
       },
       ip_configuration: {
         value: bastionHostIpConfigurationToHclTerraform(this._ipConfiguration.internalValue),
