@@ -1,3 +1,3 @@
 # `azurerm_automation_dsc_nodeconfiguration`
 
-Refer to the Terraform Registry for docs: [`azurerm_automation_dsc_nodeconfiguration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/automation_dsc_nodeconfiguration).
+Refer to the Terraform Registry for docs: [`azurerm_automation_dsc_nodeconfiguration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/automation_dsc_nodeconfiguration).

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,52 +13,52 @@ import * as cdktf from 'cdktf';
 
 export interface MobileNetworkSimGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#encryption_key_url MobileNetworkSimGroup#encryption_key_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#encryption_key_url MobileNetworkSimGroup#encryption_key_url}
   */
   readonly encryptionKeyUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#id MobileNetworkSimGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#id MobileNetworkSimGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#location MobileNetworkSimGroup#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#location MobileNetworkSimGroup#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#mobile_network_id MobileNetworkSimGroup#mobile_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#mobile_network_id MobileNetworkSimGroup#mobile_network_id}
   */
   readonly mobileNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#name MobileNetworkSimGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#name MobileNetworkSimGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#tags MobileNetworkSimGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#tags MobileNetworkSimGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#identity MobileNetworkSimGroup#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#identity MobileNetworkSimGroup#identity}
   */
   readonly identity?: MobileNetworkSimGroupIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#timeouts MobileNetworkSimGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#timeouts MobileNetworkSimGroup#timeouts}
   */
   readonly timeouts?: MobileNetworkSimGroupTimeouts;
 }
 export interface MobileNetworkSimGroupIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#identity_ids MobileNetworkSimGroup#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#identity_ids MobileNetworkSimGroup#identity_ids}
   */
   readonly identityIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#type MobileNetworkSimGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#type MobileNetworkSimGroup#type}
   */
   readonly type: string;
 }
@@ -165,19 +165,19 @@ export class MobileNetworkSimGroupIdentityOutputReference extends cdktf.ComplexO
 }
 export interface MobileNetworkSimGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#create MobileNetworkSimGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#create MobileNetworkSimGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#delete MobileNetworkSimGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#delete MobileNetworkSimGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#read MobileNetworkSimGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#read MobileNetworkSimGroup#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#update MobileNetworkSimGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#update MobileNetworkSimGroup#update}
   */
   readonly update?: string;
 }
@@ -358,7 +358,7 @@ export class MobileNetworkSimGroupTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group azurerm_mobile_network_sim_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group azurerm_mobile_network_sim_group}
 */
 export class MobileNetworkSimGroup extends cdktf.TerraformResource {
 
@@ -374,7 +374,7 @@ export class MobileNetworkSimGroup extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MobileNetworkSimGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MobileNetworkSimGroup to import
-  * @param importFromId The id of the existing MobileNetworkSimGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MobileNetworkSimGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MobileNetworkSimGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -386,7 +386,7 @@ export class MobileNetworkSimGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/mobile_network_sim_group azurerm_mobile_network_sim_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/mobile_network_sim_group azurerm_mobile_network_sim_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -397,7 +397,7 @@ export class MobileNetworkSimGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mobile_network_sim_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.105.0',
+        providerVersion: '3.106.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

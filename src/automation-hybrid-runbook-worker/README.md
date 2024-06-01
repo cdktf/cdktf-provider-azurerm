@@ -1,3 +1,3 @@
 # `azurerm_automation_hybrid_runbook_worker`
 
-Refer to the Terraform Registry for docs: [`azurerm_automation_hybrid_runbook_worker`](https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/automation_hybrid_runbook_worker).
+Refer to the Terraform Registry for docs: [`azurerm_automation_hybrid_runbook_worker`](https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/automation_hybrid_runbook_worker).

@@ -4,7 +4,7 @@
 
 ### LogzSubAccount <a name="LogzSubAccount" id="@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account azurerm_logz_sub_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account azurerm_logz_sub_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer"></a>
 
@@ -45,12 +45,12 @@ LogzSubAccount.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.logzMonitorId">logzMonitorId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#logz_monitor_id LogzSubAccount#logz_monitor_id}. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#name LogzSubAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.logzMonitorId">logzMonitorId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#logz_monitor_id LogzSubAccount#logz_monitor_id}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#name LogzSubAccount#name}. |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.user">user</a></code> | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountUser">LogzSubAccountUser</a></code> | user block. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#enabled LogzSubAccount#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#id LogzSubAccount#id}. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#tags LogzSubAccount#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#enabled LogzSubAccount#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#id LogzSubAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#tags LogzSubAccount#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccount.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts">LogzSubAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -119,7 +119,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#logz_monitor_id LogzSubAccount#logz_monitor_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#logz_monitor_id LogzSubAccount#logz_monitor_id}.
 
 ---
 
@@ -127,7 +127,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#name LogzSubAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#name LogzSubAccount#name}.
 
 ---
 
@@ -137,7 +137,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 user block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#user LogzSubAccount#user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#user LogzSubAccount#user}
 
 ---
 
@@ -145,7 +145,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#enabled LogzSubAccount#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#enabled LogzSubAccount#enabled}.
 
 ---
 
@@ -153,7 +153,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#id LogzSubAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#id LogzSubAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -164,7 +164,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#tags LogzSubAccount#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#tags LogzSubAccount#tags}.
 
 ---
 
@@ -174,7 +174,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#timeouts LogzSubAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#timeouts LogzSubAccount#timeouts}
 
 ---
 
@@ -655,7 +655,7 @@ The construct id used in the generated config for the LogzSubAccount to import.
 
 The id of the existing LogzSubAccount that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1045,12 +1045,12 @@ LogzSubAccountConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.logzMonitorId">logzMonitorId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#logz_monitor_id LogzSubAccount#logz_monitor_id}. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#name LogzSubAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.logzMonitorId">logzMonitorId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#logz_monitor_id LogzSubAccount#logz_monitor_id}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#name LogzSubAccount#name}. |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.user">user</a></code> | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountUser">LogzSubAccountUser</a></code> | user block. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#enabled LogzSubAccount#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#id LogzSubAccount#id}. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#tags LogzSubAccount#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#enabled LogzSubAccount#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#id LogzSubAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#tags LogzSubAccount#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts">LogzSubAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1133,7 +1133,7 @@ public java.lang.String getLogzMonitorId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#logz_monitor_id LogzSubAccount#logz_monitor_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#logz_monitor_id LogzSubAccount#logz_monitor_id}.
 
 ---
 
@@ -1145,7 +1145,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#name LogzSubAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#name LogzSubAccount#name}.
 
 ---
 
@@ -1159,7 +1159,7 @@ public LogzSubAccountUser getUser();
 
 user block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#user LogzSubAccount#user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#user LogzSubAccount#user}
 
 ---
 
@@ -1171,7 +1171,7 @@ public java.lang.Object getEnabled();
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#enabled LogzSubAccount#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#enabled LogzSubAccount#enabled}.
 
 ---
 
@@ -1183,7 +1183,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#id LogzSubAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#id LogzSubAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1198,7 +1198,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTags();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#tags LogzSubAccount#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#tags LogzSubAccount#tags}.
 
 ---
 
@@ -1212,7 +1212,7 @@ public LogzSubAccountTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#timeouts LogzSubAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#timeouts LogzSubAccount#timeouts}
 
 ---
 
@@ -1235,10 +1235,10 @@ LogzSubAccountTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#create LogzSubAccount#create}. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#delete LogzSubAccount#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#read LogzSubAccount#read}. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#update LogzSubAccount#update}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#create LogzSubAccount#create}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#delete LogzSubAccount#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#read LogzSubAccount#read}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#update LogzSubAccount#update}. |
 
 ---
 
@@ -1250,7 +1250,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#create LogzSubAccount#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#create LogzSubAccount#create}.
 
 ---
 
@@ -1262,7 +1262,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#delete LogzSubAccount#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#delete LogzSubAccount#delete}.
 
 ---
 
@@ -1274,7 +1274,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#read LogzSubAccount#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#read LogzSubAccount#read}.
 
 ---
 
@@ -1286,7 +1286,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#update LogzSubAccount#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#update LogzSubAccount#update}.
 
 ---
 
@@ -1309,10 +1309,10 @@ LogzSubAccountUser.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountUser.property.email">email</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#email LogzSubAccount#email}. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountUser.property.firstName">firstName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#first_name LogzSubAccount#first_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountUser.property.lastName">lastName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#last_name LogzSubAccount#last_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountUser.property.phoneNumber">phoneNumber</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#phone_number LogzSubAccount#phone_number}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountUser.property.email">email</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#email LogzSubAccount#email}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountUser.property.firstName">firstName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#first_name LogzSubAccount#first_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountUser.property.lastName">lastName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#last_name LogzSubAccount#last_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logzSubAccount.LogzSubAccountUser.property.phoneNumber">phoneNumber</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#phone_number LogzSubAccount#phone_number}. |
 
 ---
 
@@ -1324,7 +1324,7 @@ public java.lang.String getEmail();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#email LogzSubAccount#email}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#email LogzSubAccount#email}.
 
 ---
 
@@ -1336,7 +1336,7 @@ public java.lang.String getFirstName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#first_name LogzSubAccount#first_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#first_name LogzSubAccount#first_name}.
 
 ---
 
@@ -1348,7 +1348,7 @@ public java.lang.String getLastName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#last_name LogzSubAccount#last_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#last_name LogzSubAccount#last_name}.
 
 ---
 
@@ -1360,7 +1360,7 @@ public java.lang.String getPhoneNumber();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.105.0/docs/resources/logz_sub_account#phone_number LogzSubAccount#phone_number}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/logz_sub_account#phone_number LogzSubAccount#phone_number}.
 
 ---
 
