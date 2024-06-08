@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/subnet_nat_gateway_association
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/subnet_nat_gateway_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,38 +8,38 @@ import * as cdktf from 'cdktf';
 
 export interface SubnetNatGatewayAssociationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/subnet_nat_gateway_association#id SubnetNatGatewayAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/subnet_nat_gateway_association#id SubnetNatGatewayAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/subnet_nat_gateway_association#nat_gateway_id SubnetNatGatewayAssociation#nat_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/subnet_nat_gateway_association#nat_gateway_id SubnetNatGatewayAssociation#nat_gateway_id}
   */
   readonly natGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/subnet_nat_gateway_association#subnet_id SubnetNatGatewayAssociation#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/subnet_nat_gateway_association#subnet_id SubnetNatGatewayAssociation#subnet_id}
   */
   readonly subnetId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/subnet_nat_gateway_association#timeouts SubnetNatGatewayAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/subnet_nat_gateway_association#timeouts SubnetNatGatewayAssociation#timeouts}
   */
   readonly timeouts?: SubnetNatGatewayAssociationTimeouts;
 }
 export interface SubnetNatGatewayAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/subnet_nat_gateway_association#create SubnetNatGatewayAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/subnet_nat_gateway_association#create SubnetNatGatewayAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/subnet_nat_gateway_association#delete SubnetNatGatewayAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/subnet_nat_gateway_association#delete SubnetNatGatewayAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/subnet_nat_gateway_association#read SubnetNatGatewayAssociation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/subnet_nat_gateway_association#read SubnetNatGatewayAssociation#read}
   */
   readonly read?: string;
 }
@@ -196,7 +191,7 @@ export class SubnetNatGatewayAssociationTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/subnet_nat_gateway_association azurerm_subnet_nat_gateway_association}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/subnet_nat_gateway_association azurerm_subnet_nat_gateway_association}
 */
 export class SubnetNatGatewayAssociation extends cdktf.TerraformResource {
 
@@ -212,7 +207,7 @@ export class SubnetNatGatewayAssociation extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SubnetNatGatewayAssociation resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SubnetNatGatewayAssociation to import
-  * @param importFromId The id of the existing SubnetNatGatewayAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/subnet_nat_gateway_association#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SubnetNatGatewayAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/subnet_nat_gateway_association#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SubnetNatGatewayAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -224,7 +219,7 @@ export class SubnetNatGatewayAssociation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/subnet_nat_gateway_association azurerm_subnet_nat_gateway_association} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/subnet_nat_gateway_association azurerm_subnet_nat_gateway_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -235,7 +230,7 @@ export class SubnetNatGatewayAssociation extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_subnet_nat_gateway_association',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.106.1',
+        providerVersion: '3.107.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -650,6 +650,7 @@ The following submodules are available:
 - [dataProtectionBackupPolicyDisk](./dataProtectionBackupPolicyDisk.typescript.md)
 - [dataProtectionBackupPolicyKubernetesCluster](./dataProtectionBackupPolicyKubernetesCluster.typescript.md)
 - [dataProtectionBackupPolicyPostgresql](./dataProtectionBackupPolicyPostgresql.typescript.md)
+- [dataProtectionBackupPolicyPostgresqlFlexibleServer](./dataProtectionBackupPolicyPostgresqlFlexibleServer.typescript.md)
 - [dataProtectionBackupVault](./dataProtectionBackupVault.typescript.md)
 - [dataProtectionResourceGuard](./dataProtectionResourceGuard.typescript.md)
 - [dataShare](./dataShare.typescript.md)

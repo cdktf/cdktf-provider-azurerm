@@ -650,6 +650,7 @@ The following submodules are available:
 - [dataProtectionBackupPolicyDisk](./dataProtectionBackupPolicyDisk.go.md)
 - [dataProtectionBackupPolicyKubernetesCluster](./dataProtectionBackupPolicyKubernetesCluster.go.md)
 - [dataProtectionBackupPolicyPostgresql](./dataProtectionBackupPolicyPostgresql.go.md)
+- [dataProtectionBackupPolicyPostgresqlFlexibleServer](./dataProtectionBackupPolicyPostgresqlFlexibleServer.go.md)
 - [dataProtectionBackupVault](./dataProtectionBackupVault.go.md)
 - [dataProtectionResourceGuard](./dataProtectionResourceGuard.go.md)
 - [dataShare](./dataShare.go.md)

@@ -650,6 +650,7 @@ The following submodules are available:
 - [dataProtectionBackupPolicyDisk](./dataProtectionBackupPolicyDisk.java.md)
 - [dataProtectionBackupPolicyKubernetesCluster](./dataProtectionBackupPolicyKubernetesCluster.java.md)
 - [dataProtectionBackupPolicyPostgresql](./dataProtectionBackupPolicyPostgresql.java.md)
+- [dataProtectionBackupPolicyPostgresqlFlexibleServer](./dataProtectionBackupPolicyPostgresqlFlexibleServer.java.md)
 - [dataProtectionBackupVault](./dataProtectionBackupVault.java.md)
 - [dataProtectionResourceGuard](./dataProtectionResourceGuard.java.md)
 - [dataShare](./dataShare.java.md)

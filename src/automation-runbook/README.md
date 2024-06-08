@@ -1,3 +1,3 @@
 # `azurerm_automation_runbook`
 
-Refer to the Terraform Registry for docs: [`azurerm_automation_runbook`](https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/automation_runbook).
+Refer to the Terraform Registry for docs: [`azurerm_automation_runbook`](https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/automation_runbook).

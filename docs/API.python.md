@@ -650,6 +650,7 @@ The following submodules are available:
 - [dataProtectionBackupPolicyDisk](./dataProtectionBackupPolicyDisk.python.md)
 - [dataProtectionBackupPolicyKubernetesCluster](./dataProtectionBackupPolicyKubernetesCluster.python.md)
 - [dataProtectionBackupPolicyPostgresql](./dataProtectionBackupPolicyPostgresql.python.md)
+- [dataProtectionBackupPolicyPostgresqlFlexibleServer](./dataProtectionBackupPolicyPostgresqlFlexibleServer.python.md)
 - [dataProtectionBackupVault](./dataProtectionBackupVault.python.md)
 - [dataProtectionResourceGuard](./dataProtectionResourceGuard.python.md)
 - [dataShare](./dataShare.python.md)
