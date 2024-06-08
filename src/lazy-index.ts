@@ -296,6 +296,7 @@ Object.defineProperty(exports, 'dataProtectionBackupPolicyBlobStorage', { get: f
 Object.defineProperty(exports, 'dataProtectionBackupPolicyDisk', { get: function () { return require('./data-protection-backup-policy-disk'); } });
 Object.defineProperty(exports, 'dataProtectionBackupPolicyKubernetesCluster', { get: function () { return require('./data-protection-backup-policy-kubernetes-cluster'); } });
 Object.defineProperty(exports, 'dataProtectionBackupPolicyPostgresql', { get: function () { return require('./data-protection-backup-policy-postgresql'); } });
+Object.defineProperty(exports, 'dataProtectionBackupPolicyPostgresqlFlexibleServer', { get: function () { return require('./data-protection-backup-policy-postgresql-flexible-server'); } });
 Object.defineProperty(exports, 'dataProtectionBackupVault', { get: function () { return require('./data-protection-backup-vault'); } });
 Object.defineProperty(exports, 'dataProtectionResourceGuard', { get: function () { return require('./data-protection-resource-guard'); } });
 Object.defineProperty(exports, 'dataShare', { get: function () { return require('./data-share'); } });

@@ -296,6 +296,7 @@ export * as dataProtectionBackupPolicyBlobStorage from './data-protection-backup
 export * as dataProtectionBackupPolicyDisk from './data-protection-backup-policy-disk';
 export * as dataProtectionBackupPolicyKubernetesCluster from './data-protection-backup-policy-kubernetes-cluster';
 export * as dataProtectionBackupPolicyPostgresql from './data-protection-backup-policy-postgresql';
+export * as dataProtectionBackupPolicyPostgresqlFlexibleServer from './data-protection-backup-policy-postgresql-flexible-server';
 export * as dataProtectionBackupVault from './data-protection-backup-vault';
 export * as dataProtectionResourceGuard from './data-protection-resource-guard';
 export * as dataShare from './data-share';

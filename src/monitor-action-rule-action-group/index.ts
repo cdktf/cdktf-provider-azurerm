@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,62 +13,62 @@ import * as cdktf from 'cdktf';
 
 export interface MonitorActionRuleActionGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#action_group_id MonitorActionRuleActionGroup#action_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#action_group_id MonitorActionRuleActionGroup#action_group_id}
   */
   readonly actionGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#description MonitorActionRuleActionGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#description MonitorActionRuleActionGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#enabled MonitorActionRuleActionGroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#enabled MonitorActionRuleActionGroup#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#id MonitorActionRuleActionGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#id MonitorActionRuleActionGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#name MonitorActionRuleActionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#name MonitorActionRuleActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#resource_group_name MonitorActionRuleActionGroup#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#resource_group_name MonitorActionRuleActionGroup#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#tags MonitorActionRuleActionGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#tags MonitorActionRuleActionGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#condition MonitorActionRuleActionGroup#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#condition MonitorActionRuleActionGroup#condition}
   */
   readonly condition?: MonitorActionRuleActionGroupCondition;
   /**
   * scope block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#scope MonitorActionRuleActionGroup#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#scope MonitorActionRuleActionGroup#scope}
   */
   readonly scope?: MonitorActionRuleActionGroupScope;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#timeouts MonitorActionRuleActionGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#timeouts MonitorActionRuleActionGroup#timeouts}
   */
   readonly timeouts?: MonitorActionRuleActionGroupTimeouts;
 }
 export interface MonitorActionRuleActionGroupConditionAlertContext {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
   */
   readonly values: string[];
 }
@@ -175,11 +175,11 @@ export class MonitorActionRuleActionGroupConditionAlertContextOutputReference ex
 }
 export interface MonitorActionRuleActionGroupConditionAlertRuleId {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
   */
   readonly values: string[];
 }
@@ -286,11 +286,11 @@ export class MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference ext
 }
 export interface MonitorActionRuleActionGroupConditionDescription {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
   */
   readonly values: string[];
 }
@@ -397,11 +397,11 @@ export class MonitorActionRuleActionGroupConditionDescriptionOutputReference ext
 }
 export interface MonitorActionRuleActionGroupConditionMonitor {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
   */
   readonly values: string[];
 }
@@ -508,11 +508,11 @@ export class MonitorActionRuleActionGroupConditionMonitorOutputReference extends
 }
 export interface MonitorActionRuleActionGroupConditionMonitorService {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
   */
   readonly values: string[];
 }
@@ -619,11 +619,11 @@ export class MonitorActionRuleActionGroupConditionMonitorServiceOutputReference 
 }
 export interface MonitorActionRuleActionGroupConditionSeverity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
   */
   readonly values: string[];
 }
@@ -730,11 +730,11 @@ export class MonitorActionRuleActionGroupConditionSeverityOutputReference extend
 }
 export interface MonitorActionRuleActionGroupConditionTargetResourceType {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}
   */
   readonly values: string[];
 }
@@ -843,43 +843,43 @@ export interface MonitorActionRuleActionGroupCondition {
   /**
   * alert_context block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#alert_context MonitorActionRuleActionGroup#alert_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#alert_context MonitorActionRuleActionGroup#alert_context}
   */
   readonly alertContext?: MonitorActionRuleActionGroupConditionAlertContext;
   /**
   * alert_rule_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#alert_rule_id MonitorActionRuleActionGroup#alert_rule_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#alert_rule_id MonitorActionRuleActionGroup#alert_rule_id}
   */
   readonly alertRuleId?: MonitorActionRuleActionGroupConditionAlertRuleId;
   /**
   * description block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#description MonitorActionRuleActionGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#description MonitorActionRuleActionGroup#description}
   */
   readonly description?: MonitorActionRuleActionGroupConditionDescription;
   /**
   * monitor block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#monitor MonitorActionRuleActionGroup#monitor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#monitor MonitorActionRuleActionGroup#monitor}
   */
   readonly monitor?: MonitorActionRuleActionGroupConditionMonitor;
   /**
   * monitor_service block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#monitor_service MonitorActionRuleActionGroup#monitor_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#monitor_service MonitorActionRuleActionGroup#monitor_service}
   */
   readonly monitorService?: MonitorActionRuleActionGroupConditionMonitorService;
   /**
   * severity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#severity MonitorActionRuleActionGroup#severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#severity MonitorActionRuleActionGroup#severity}
   */
   readonly severity?: MonitorActionRuleActionGroupConditionSeverity;
   /**
   * target_resource_type block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#target_resource_type MonitorActionRuleActionGroup#target_resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#target_resource_type MonitorActionRuleActionGroup#target_resource_type}
   */
   readonly targetResourceType?: MonitorActionRuleActionGroupConditionTargetResourceType;
 }
@@ -1137,11 +1137,11 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
 }
 export interface MonitorActionRuleActionGroupScope {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#resource_ids MonitorActionRuleActionGroup#resource_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#resource_ids MonitorActionRuleActionGroup#resource_ids}
   */
   readonly resourceIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#type MonitorActionRuleActionGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#type MonitorActionRuleActionGroup#type}
   */
   readonly type: string;
 }
@@ -1248,19 +1248,19 @@ export class MonitorActionRuleActionGroupScopeOutputReference extends cdktf.Comp
 }
 export interface MonitorActionRuleActionGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#create MonitorActionRuleActionGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#create MonitorActionRuleActionGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#delete MonitorActionRuleActionGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#delete MonitorActionRuleActionGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#read MonitorActionRuleActionGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#read MonitorActionRuleActionGroup#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#update MonitorActionRuleActionGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#update MonitorActionRuleActionGroup#update}
   */
   readonly update?: string;
 }
@@ -1441,7 +1441,7 @@ export class MonitorActionRuleActionGroupTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group azurerm_monitor_action_rule_action_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group azurerm_monitor_action_rule_action_group}
 */
 export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
 
@@ -1457,7 +1457,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MonitorActionRuleActionGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MonitorActionRuleActionGroup to import
-  * @param importFromId The id of the existing MonitorActionRuleActionGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MonitorActionRuleActionGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MonitorActionRuleActionGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1469,7 +1469,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.106.1/docs/resources/monitor_action_rule_action_group azurerm_monitor_action_rule_action_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/monitor_action_rule_action_group azurerm_monitor_action_rule_action_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1480,7 +1480,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_action_rule_action_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.106.1',
+        providerVersion: '3.107.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

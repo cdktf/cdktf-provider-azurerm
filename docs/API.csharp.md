@@ -650,6 +650,7 @@ The following submodules are available:
 - [dataProtectionBackupPolicyDisk](./dataProtectionBackupPolicyDisk.csharp.md)
 - [dataProtectionBackupPolicyKubernetesCluster](./dataProtectionBackupPolicyKubernetesCluster.csharp.md)
 - [dataProtectionBackupPolicyPostgresql](./dataProtectionBackupPolicyPostgresql.csharp.md)
+- [dataProtectionBackupPolicyPostgresqlFlexibleServer](./dataProtectionBackupPolicyPostgresqlFlexibleServer.csharp.md)
 - [dataProtectionBackupVault](./dataProtectionBackupVault.csharp.md)
 - [dataProtectionResourceGuard](./dataProtectionResourceGuard.csharp.md)
 - [dataShare](./dataShare.csharp.md)
