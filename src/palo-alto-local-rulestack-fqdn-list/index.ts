@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/palo_alto_local_rulestack_fqdn_list
 // generated from terraform resource schema
 
