@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/api_management_group_user
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management_group_user
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +13,46 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementGroupUserConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/api_management_group_user#api_management_name ApiManagementGroupUser#api_management_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management_group_user#api_management_name ApiManagementGroupUser#api_management_name}
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/api_management_group_user#group_name ApiManagementGroupUser#group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management_group_user#group_name ApiManagementGroupUser#group_name}
   */
   readonly groupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/api_management_group_user#id ApiManagementGroupUser#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management_group_user#id ApiManagementGroupUser#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/api_management_group_user#resource_group_name ApiManagementGroupUser#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management_group_user#resource_group_name ApiManagementGroupUser#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/api_management_group_user#user_id ApiManagementGroupUser#user_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management_group_user#user_id ApiManagementGroupUser#user_id}
   */
   readonly userId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/api_management_group_user#timeouts ApiManagementGroupUser#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management_group_user#timeouts ApiManagementGroupUser#timeouts}
   */
   readonly timeouts?: ApiManagementGroupUserTimeouts;
 }
 export interface ApiManagementGroupUserTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/api_management_group_user#create ApiManagementGroupUser#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management_group_user#create ApiManagementGroupUser#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/api_management_group_user#delete ApiManagementGroupUser#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management_group_user#delete ApiManagementGroupUser#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/api_management_group_user#read ApiManagementGroupUser#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management_group_user#read ApiManagementGroupUser#read}
   */
   readonly read?: string;
 }
@@ -204,7 +204,7 @@ export class ApiManagementGroupUserTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/api_management_group_user azurerm_api_management_group_user}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management_group_user azurerm_api_management_group_user}
 */
 export class ApiManagementGroupUser extends cdktf.TerraformResource {
 
@@ -220,7 +220,7 @@ export class ApiManagementGroupUser extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApiManagementGroupUser resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApiManagementGroupUser to import
-  * @param importFromId The id of the existing ApiManagementGroupUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/api_management_group_user#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApiManagementGroupUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management_group_user#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApiManagementGroupUser to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -232,7 +232,7 @@ export class ApiManagementGroupUser extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/api_management_group_user azurerm_api_management_group_user} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management_group_user azurerm_api_management_group_user} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -243,7 +243,7 @@ export class ApiManagementGroupUser extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_group_user',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.107.0',
+        providerVersion: '3.108.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

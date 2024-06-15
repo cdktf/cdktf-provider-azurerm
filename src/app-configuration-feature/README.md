@@ -1,3 +1,3 @@
 # `azurerm_app_configuration_feature`
 
-Refer to the Terraform Registry for docs: [`azurerm_app_configuration_feature`](https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/app_configuration_feature).
+Refer to the Terraform Registry for docs: [`azurerm_app_configuration_feature`](https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/app_configuration_feature).
