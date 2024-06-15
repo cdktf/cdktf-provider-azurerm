@@ -1,3 +1,3 @@
 # `azurerm_virtual_network`
 
-Refer to the Terraform Registry for docs: [`azurerm_virtual_network`](https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/virtual_network).
+Refer to the Terraform Registry for docs: [`azurerm_virtual_network`](https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network).

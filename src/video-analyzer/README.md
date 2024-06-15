@@ -1,3 +1,3 @@
 # `azurerm_video_analyzer`
 
-Refer to the Terraform Registry for docs: [`azurerm_video_analyzer`](https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/video_analyzer).
+Refer to the Terraform Registry for docs: [`azurerm_video_analyzer`](https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/video_analyzer).

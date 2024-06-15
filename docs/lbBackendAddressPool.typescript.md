@@ -4,7 +4,7 @@
 
 ### LbBackendAddressPool <a name="LbBackendAddressPool" id="@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool azurerm_lb_backend_address_pool}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool azurerm_lb_backend_address_pool}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.Initializer"></a>
 
@@ -76,6 +76,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.putTimeouts">putTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.putTunnelInterface">putTunnelInterface</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.resetId">resetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.resetSynchronousMode">resetSynchronousMode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.resetTimeouts">resetTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.resetTunnelInterface">resetTunnelInterface</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.resetVirtualNetworkId">resetVirtualNetworkId</a></code> | *No description.* |
@@ -400,6 +401,12 @@ public putTunnelInterface(value: IResolvable | LbBackendAddressPoolTunnelInterfa
 public resetId(): void
 ```
 
+##### `resetSynchronousMode` <a name="resetSynchronousMode" id="@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.resetSynchronousMode"></a>
+
+```typescript
+public resetSynchronousMode(): void
+```
+
 ##### `resetTimeouts` <a name="resetTimeouts" id="@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.resetTimeouts"></a>
 
 ```typescript
@@ -521,7 +528,7 @@ The construct id used in the generated config for the LbBackendAddressPool to im
 
 The id of the existing LbBackendAddressPool that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -560,12 +567,14 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.loadbalancerIdInput">loadbalancerIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.synchronousModeInput">synchronousModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTimeouts">LbBackendAddressPoolTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.tunnelInterfaceInput">tunnelInterfaceInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTunnelInterface">LbBackendAddressPoolTunnelInterface</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.virtualNetworkIdInput">virtualNetworkIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.loadbalancerId">loadbalancerId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.synchronousMode">synchronousMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.virtualNetworkId">virtualNetworkId</a></code> | <code>string</code> | *No description.* |
 
 ---
@@ -802,6 +811,16 @@ public readonly nameInput: string;
 
 ---
 
+##### `synchronousModeInput`<sup>Optional</sup> <a name="synchronousModeInput" id="@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.synchronousModeInput"></a>
+
+```typescript
+public readonly synchronousModeInput: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.timeoutsInput"></a>
 
 ```typescript
@@ -862,6 +881,16 @@ public readonly name: string;
 
 ---
 
+##### `synchronousMode`<sup>Required</sup> <a name="synchronousMode" id="@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.synchronousMode"></a>
+
+```typescript
+public readonly synchronousMode: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `virtualNetworkId`<sup>Required</sup> <a name="virtualNetworkId" id="@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPool.property.virtualNetworkId"></a>
 
 ```typescript
@@ -913,12 +942,13 @@ const lbBackendAddressPoolConfig: lbBackendAddressPool.LbBackendAddressPoolConfi
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.loadbalancerId">loadbalancerId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#loadbalancer_id LbBackendAddressPool#loadbalancer_id}. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#name LbBackendAddressPool#name}. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#id LbBackendAddressPool#id}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.loadbalancerId">loadbalancerId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#loadbalancer_id LbBackendAddressPool#loadbalancer_id}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#name LbBackendAddressPool#name}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#id LbBackendAddressPool#id}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.synchronousMode">synchronousMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#synchronous_mode LbBackendAddressPool#synchronous_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTimeouts">LbBackendAddressPoolTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.tunnelInterface">tunnelInterface</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTunnelInterface">LbBackendAddressPoolTunnelInterface</a>[]</code> | tunnel_interface block. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.virtualNetworkId">virtualNetworkId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#virtual_network_id LbBackendAddressPool#virtual_network_id}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.virtualNetworkId">virtualNetworkId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#virtual_network_id LbBackendAddressPool#virtual_network_id}. |
 
 ---
 
@@ -1000,7 +1030,7 @@ public readonly loadbalancerId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#loadbalancer_id LbBackendAddressPool#loadbalancer_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#loadbalancer_id LbBackendAddressPool#loadbalancer_id}.
 
 ---
 
@@ -1012,7 +1042,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#name LbBackendAddressPool#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#name LbBackendAddressPool#name}.
 
 ---
 
@@ -1024,10 +1054,22 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#id LbBackendAddressPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#id LbBackendAddressPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `synchronousMode`<sup>Optional</sup> <a name="synchronousMode" id="@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolConfig.property.synchronousMode"></a>
+
+```typescript
+public readonly synchronousMode: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#synchronous_mode LbBackendAddressPool#synchronous_mode}.
 
 ---
 
@@ -1041,7 +1083,7 @@ public readonly timeouts: LbBackendAddressPoolTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#timeouts LbBackendAddressPool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#timeouts LbBackendAddressPool#timeouts}
 
 ---
 
@@ -1055,7 +1097,7 @@ public readonly tunnelInterface: IResolvable | LbBackendAddressPoolTunnelInterfa
 
 tunnel_interface block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#tunnel_interface LbBackendAddressPool#tunnel_interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#tunnel_interface LbBackendAddressPool#tunnel_interface}
 
 ---
 
@@ -1067,7 +1109,7 @@ public readonly virtualNetworkId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#virtual_network_id LbBackendAddressPool#virtual_network_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#virtual_network_id LbBackendAddressPool#virtual_network_id}.
 
 ---
 
@@ -1085,10 +1127,10 @@ const lbBackendAddressPoolTimeouts: lbBackendAddressPool.LbBackendAddressPoolTim
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#create LbBackendAddressPool#create}. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#delete LbBackendAddressPool#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#read LbBackendAddressPool#read}. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#update LbBackendAddressPool#update}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#create LbBackendAddressPool#create}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#delete LbBackendAddressPool#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#read LbBackendAddressPool#read}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#update LbBackendAddressPool#update}. |
 
 ---
 
@@ -1100,7 +1142,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#create LbBackendAddressPool#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#create LbBackendAddressPool#create}.
 
 ---
 
@@ -1112,7 +1154,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#delete LbBackendAddressPool#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#delete LbBackendAddressPool#delete}.
 
 ---
 
@@ -1124,7 +1166,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#read LbBackendAddressPool#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#read LbBackendAddressPool#read}.
 
 ---
 
@@ -1136,7 +1178,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#update LbBackendAddressPool#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#update LbBackendAddressPool#update}.
 
 ---
 
@@ -1154,10 +1196,10 @@ const lbBackendAddressPoolTunnelInterface: lbBackendAddressPool.LbBackendAddress
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTunnelInterface.property.identifier">identifier</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#identifier LbBackendAddressPool#identifier}. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTunnelInterface.property.port">port</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#port LbBackendAddressPool#port}. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTunnelInterface.property.protocol">protocol</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#protocol LbBackendAddressPool#protocol}. |
-| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTunnelInterface.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#type LbBackendAddressPool#type}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTunnelInterface.property.identifier">identifier</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#identifier LbBackendAddressPool#identifier}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTunnelInterface.property.port">port</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#port LbBackendAddressPool#port}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTunnelInterface.property.protocol">protocol</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#protocol LbBackendAddressPool#protocol}. |
+| <code><a href="#@cdktf/provider-azurerm.lbBackendAddressPool.LbBackendAddressPoolTunnelInterface.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#type LbBackendAddressPool#type}. |
 
 ---
 
@@ -1169,7 +1211,7 @@ public readonly identifier: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#identifier LbBackendAddressPool#identifier}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#identifier LbBackendAddressPool#identifier}.
 
 ---
 
@@ -1181,7 +1223,7 @@ public readonly port: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#port LbBackendAddressPool#port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#port LbBackendAddressPool#port}.
 
 ---
 
@@ -1193,7 +1235,7 @@ public readonly protocol: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#protocol LbBackendAddressPool#protocol}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#protocol LbBackendAddressPool#protocol}.
 
 ---
 
@@ -1205,7 +1247,7 @@ public readonly type: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/lb_backend_address_pool#type LbBackendAddressPool#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/lb_backend_address_pool#type LbBackendAddressPool#type}.
 
 ---
 

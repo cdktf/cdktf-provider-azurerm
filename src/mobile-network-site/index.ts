@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +8,50 @@ import * as cdktf from 'cdktf';
 
 export interface MobileNetworkSiteConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site#id MobileNetworkSite#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site#id MobileNetworkSite#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site#location MobileNetworkSite#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site#location MobileNetworkSite#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site#mobile_network_id MobileNetworkSite#mobile_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site#mobile_network_id MobileNetworkSite#mobile_network_id}
   */
   readonly mobileNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site#name MobileNetworkSite#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site#name MobileNetworkSite#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site#tags MobileNetworkSite#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site#tags MobileNetworkSite#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site#timeouts MobileNetworkSite#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site#timeouts MobileNetworkSite#timeouts}
   */
   readonly timeouts?: MobileNetworkSiteTimeouts;
 }
 export interface MobileNetworkSiteTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site#create MobileNetworkSite#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site#create MobileNetworkSite#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site#delete MobileNetworkSite#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site#delete MobileNetworkSite#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site#read MobileNetworkSite#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site#read MobileNetworkSite#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site#update MobileNetworkSite#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site#update MobileNetworkSite#update}
   */
   readonly update?: string;
 }
@@ -237,7 +232,7 @@ export class MobileNetworkSiteTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site azurerm_mobile_network_site}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site azurerm_mobile_network_site}
 */
 export class MobileNetworkSite extends cdktf.TerraformResource {
 
@@ -253,7 +248,7 @@ export class MobileNetworkSite extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MobileNetworkSite resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MobileNetworkSite to import
-  * @param importFromId The id of the existing MobileNetworkSite that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MobileNetworkSite that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MobileNetworkSite to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -265,7 +260,7 @@ export class MobileNetworkSite extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/mobile_network_site azurerm_mobile_network_site} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/mobile_network_site azurerm_mobile_network_site} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -276,7 +271,7 @@ export class MobileNetworkSite extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mobile_network_site',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.107.0',
+        providerVersion: '3.108.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

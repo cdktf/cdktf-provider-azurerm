@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/sql_managed_database
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/sql_managed_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +8,42 @@ import * as cdktf from 'cdktf';
 
 export interface SqlManagedDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/sql_managed_database#id SqlManagedDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/sql_managed_database#id SqlManagedDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/sql_managed_database#location SqlManagedDatabase#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/sql_managed_database#location SqlManagedDatabase#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/sql_managed_database#name SqlManagedDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/sql_managed_database#name SqlManagedDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/sql_managed_database#sql_managed_instance_id SqlManagedDatabase#sql_managed_instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/sql_managed_database#sql_managed_instance_id SqlManagedDatabase#sql_managed_instance_id}
   */
   readonly sqlManagedInstanceId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/sql_managed_database#timeouts SqlManagedDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/sql_managed_database#timeouts SqlManagedDatabase#timeouts}
   */
   readonly timeouts?: SqlManagedDatabaseTimeouts;
 }
 export interface SqlManagedDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/sql_managed_database#create SqlManagedDatabase#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/sql_managed_database#create SqlManagedDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/sql_managed_database#delete SqlManagedDatabase#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/sql_managed_database#delete SqlManagedDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/sql_managed_database#read SqlManagedDatabase#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/sql_managed_database#read SqlManagedDatabase#read}
   */
   readonly read?: string;
 }
@@ -200,7 +195,7 @@ export class SqlManagedDatabaseTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/sql_managed_database azurerm_sql_managed_database}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/sql_managed_database azurerm_sql_managed_database}
 */
 export class SqlManagedDatabase extends cdktf.TerraformResource {
 
@@ -216,7 +211,7 @@ export class SqlManagedDatabase extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SqlManagedDatabase resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SqlManagedDatabase to import
-  * @param importFromId The id of the existing SqlManagedDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/sql_managed_database#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SqlManagedDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/sql_managed_database#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SqlManagedDatabase to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -228,7 +223,7 @@ export class SqlManagedDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.107.0/docs/resources/sql_managed_database azurerm_sql_managed_database} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/sql_managed_database azurerm_sql_managed_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -239,7 +234,7 @@ export class SqlManagedDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sql_managed_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.107.0',
+        providerVersion: '3.108.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
