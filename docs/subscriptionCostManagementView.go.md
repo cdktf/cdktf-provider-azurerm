@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementView.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.NewSubscriptionCostManagementView(scope Construct, id *string, config SubscriptionCostManagementViewConfig) SubscriptionCostManagementView
 ```
@@ -458,7 +458,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementView.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.SubscriptionCostManagementView_IsConstruct(x interface{}) *bool
 ```
@@ -490,7 +490,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementView.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.SubscriptionCostManagementView_IsTerraformElement(x interface{}) *bool
 ```
@@ -504,7 +504,7 @@ subscriptioncostmanagementview.SubscriptionCostManagementView_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementView.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.SubscriptionCostManagementView_IsTerraformResource(x interface{}) *bool
 ```
@@ -518,7 +518,7 @@ subscriptioncostmanagementview.SubscriptionCostManagementView_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementView.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.SubscriptionCostManagementView_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1011,7 +1011,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 &subscriptioncostmanagementview.SubscriptionCostManagementViewConfig {
 	Connection: interface{},
@@ -1023,7 +1023,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostm
 	Provisioners: *[]interface{},
 	Accumulated: interface{},
 	ChartType: *string,
-	Dataset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.subscriptionCostManagementView.SubscriptionCostManagementViewDataset,
+	Dataset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewDataset,
 	DisplayName: *string,
 	Name: *string,
 	ReportType: *string,
@@ -1032,7 +1032,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostm
 	Id: *string,
 	Kpi: interface{},
 	Pivot: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.subscriptionCostManagementView.SubscriptionCostManagementViewTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewTimeouts,
 }
 ```
 
@@ -1292,7 +1292,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewDataset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 &subscriptioncostmanagementview.SubscriptionCostManagementViewDataset {
 	Aggregation: interface{},
@@ -1372,7 +1372,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewDatasetAggregation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 &subscriptioncostmanagementview.SubscriptionCostManagementViewDatasetAggregation {
 	ColumnName: *string,
@@ -1418,7 +1418,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewDatasetGrouping.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 &subscriptioncostmanagementview.SubscriptionCostManagementViewDatasetGrouping {
 	Name: *string,
@@ -1464,7 +1464,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewDatasetSorting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 &subscriptioncostmanagementview.SubscriptionCostManagementViewDatasetSorting {
 	Direction: *string,
@@ -1510,7 +1510,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewKpi.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 &subscriptioncostmanagementview.SubscriptionCostManagementViewKpi {
 	Type: *string,
@@ -1542,7 +1542,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewPivot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 &subscriptioncostmanagementview.SubscriptionCostManagementViewPivot {
 	Name: *string,
@@ -1588,7 +1588,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 &subscriptioncostmanagementview.SubscriptionCostManagementViewTimeouts {
 	Create: *string,
@@ -1664,7 +1664,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewDatasetAggregationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.NewSubscriptionCostManagementViewDatasetAggregationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SubscriptionCostManagementViewDatasetAggregationList
 ```
@@ -1824,7 +1824,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewDatasetAggregationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.NewSubscriptionCostManagementViewDatasetAggregationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SubscriptionCostManagementViewDatasetAggregationOutputReference
 ```
@@ -2135,7 +2135,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewDatasetGroupingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.NewSubscriptionCostManagementViewDatasetGroupingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SubscriptionCostManagementViewDatasetGroupingList
 ```
@@ -2295,7 +2295,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewDatasetGroupingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.NewSubscriptionCostManagementViewDatasetGroupingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SubscriptionCostManagementViewDatasetGroupingOutputReference
 ```
@@ -2606,7 +2606,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewDatasetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.NewSubscriptionCostManagementViewDatasetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SubscriptionCostManagementViewDatasetOutputReference
 ```
@@ -2996,7 +2996,7 @@ func InternalValue() SubscriptionCostManagementViewDataset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewDatasetSortingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.NewSubscriptionCostManagementViewDatasetSortingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SubscriptionCostManagementViewDatasetSortingList
 ```
@@ -3156,7 +3156,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewDatasetSortingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.NewSubscriptionCostManagementViewDatasetSortingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SubscriptionCostManagementViewDatasetSortingOutputReference
 ```
@@ -3467,7 +3467,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewKpiList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.NewSubscriptionCostManagementViewKpiList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SubscriptionCostManagementViewKpiList
 ```
@@ -3627,7 +3627,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewKpiOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.NewSubscriptionCostManagementViewKpiOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SubscriptionCostManagementViewKpiOutputReference
 ```
@@ -3916,7 +3916,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewPivotList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.NewSubscriptionCostManagementViewPivotList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SubscriptionCostManagementViewPivotList
 ```
@@ -4076,7 +4076,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewPivotOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.NewSubscriptionCostManagementViewPivotOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SubscriptionCostManagementViewPivotOutputReference
 ```
@@ -4387,7 +4387,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementView.SubscriptionCostManagementViewTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/subscriptioncostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementview"
 
 subscriptioncostmanagementview.NewSubscriptionCostManagementViewTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SubscriptionCostManagementViewTimeoutsOutputReference
 ```
