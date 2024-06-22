@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,156 +8,156 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#client_certificate_enabled ApiManagement#client_certificate_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#client_certificate_enabled ApiManagement#client_certificate_enabled}
   */
   readonly clientCertificateEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#gateway_disabled ApiManagement#gateway_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#gateway_disabled ApiManagement#gateway_disabled}
   */
   readonly gatewayDisabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#id ApiManagement#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#id ApiManagement#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#location ApiManagement#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#location ApiManagement#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#min_api_version ApiManagement#min_api_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#min_api_version ApiManagement#min_api_version}
   */
   readonly minApiVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#name ApiManagement#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#name ApiManagement#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#notification_sender_email ApiManagement#notification_sender_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#notification_sender_email ApiManagement#notification_sender_email}
   */
   readonly notificationSenderEmail?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#policy ApiManagement#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#policy ApiManagement#policy}
   */
   readonly policy?: ApiManagementPolicy[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#public_ip_address_id ApiManagement#public_ip_address_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#public_ip_address_id ApiManagement#public_ip_address_id}
   */
   readonly publicIpAddressId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#public_network_access_enabled ApiManagement#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#public_network_access_enabled ApiManagement#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#publisher_email ApiManagement#publisher_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#publisher_email ApiManagement#publisher_email}
   */
   readonly publisherEmail: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#publisher_name ApiManagement#publisher_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#publisher_name ApiManagement#publisher_name}
   */
   readonly publisherName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#resource_group_name ApiManagement#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#resource_group_name ApiManagement#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#sku_name ApiManagement#sku_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#sku_name ApiManagement#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#tags ApiManagement#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#tags ApiManagement#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#virtual_network_type ApiManagement#virtual_network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#virtual_network_type ApiManagement#virtual_network_type}
   */
   readonly virtualNetworkType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#zones ApiManagement#zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#zones ApiManagement#zones}
   */
   readonly zones?: string[];
   /**
   * additional_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#additional_location ApiManagement#additional_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#additional_location ApiManagement#additional_location}
   */
   readonly additionalLocation?: ApiManagementAdditionalLocation[] | cdktf.IResolvable;
   /**
   * certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#certificate ApiManagement#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#certificate ApiManagement#certificate}
   */
   readonly certificate?: ApiManagementCertificate[] | cdktf.IResolvable;
   /**
   * delegation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#delegation ApiManagement#delegation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#delegation ApiManagement#delegation}
   */
   readonly delegation?: ApiManagementDelegation;
   /**
   * hostname_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#hostname_configuration ApiManagement#hostname_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#hostname_configuration ApiManagement#hostname_configuration}
   */
   readonly hostnameConfiguration?: ApiManagementHostnameConfiguration;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#identity ApiManagement#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#identity ApiManagement#identity}
   */
   readonly identity?: ApiManagementIdentity;
   /**
   * protocols block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#protocols ApiManagement#protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#protocols ApiManagement#protocols}
   */
   readonly protocols?: ApiManagementProtocols;
   /**
   * security block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#security ApiManagement#security}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#security ApiManagement#security}
   */
   readonly security?: ApiManagementSecurity;
   /**
   * sign_in block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#sign_in ApiManagement#sign_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#sign_in ApiManagement#sign_in}
   */
   readonly signIn?: ApiManagementSignIn;
   /**
   * sign_up block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#sign_up ApiManagement#sign_up}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#sign_up ApiManagement#sign_up}
   */
   readonly signUp?: ApiManagementSignUp;
   /**
   * tenant_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#tenant_access ApiManagement#tenant_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#tenant_access ApiManagement#tenant_access}
   */
   readonly tenantAccess?: ApiManagementTenantAccess;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#timeouts ApiManagement#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#timeouts ApiManagement#timeouts}
   */
   readonly timeouts?: ApiManagementTimeouts;
   /**
   * virtual_network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#virtual_network_configuration ApiManagement#virtual_network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#virtual_network_configuration ApiManagement#virtual_network_configuration}
   */
   readonly virtualNetworkConfiguration?: ApiManagementVirtualNetworkConfiguration;
 }
 export interface ApiManagementPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#xml_content ApiManagement#xml_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#xml_content ApiManagement#xml_content}
   */
   readonly xmlContent?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#xml_link ApiManagement#xml_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#xml_link ApiManagement#xml_link}
   */
   readonly xmlLink?: string;
 }
@@ -307,7 +302,7 @@ export class ApiManagementPolicyList extends cdktf.ComplexList {
 }
 export interface ApiManagementAdditionalLocationVirtualNetworkConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#subnet_id ApiManagement#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#subnet_id ApiManagement#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -388,29 +383,29 @@ export class ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputRef
 }
 export interface ApiManagementAdditionalLocation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#capacity ApiManagement#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#capacity ApiManagement#capacity}
   */
   readonly capacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#gateway_disabled ApiManagement#gateway_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#gateway_disabled ApiManagement#gateway_disabled}
   */
   readonly gatewayDisabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#location ApiManagement#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#location ApiManagement#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#public_ip_address_id ApiManagement#public_ip_address_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#public_ip_address_id ApiManagement#public_ip_address_id}
   */
   readonly publicIpAddressId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#zones ApiManagement#zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#zones ApiManagement#zones}
   */
   readonly zones?: string[];
   /**
   * virtual_network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#virtual_network_configuration ApiManagement#virtual_network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#virtual_network_configuration ApiManagement#virtual_network_configuration}
   */
   readonly virtualNetworkConfiguration?: ApiManagementAdditionalLocationVirtualNetworkConfiguration;
 }
@@ -683,15 +678,15 @@ export class ApiManagementAdditionalLocationList extends cdktf.ComplexList {
 }
 export interface ApiManagementCertificate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}
   */
   readonly certificatePassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#encoded_certificate ApiManagement#encoded_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#encoded_certificate ApiManagement#encoded_certificate}
   */
   readonly encodedCertificate: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#store_name ApiManagement#store_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#store_name ApiManagement#store_name}
   */
   readonly storeName: string;
 }
@@ -874,19 +869,19 @@ export class ApiManagementCertificateList extends cdktf.ComplexList {
 }
 export interface ApiManagementDelegation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#subscriptions_enabled ApiManagement#subscriptions_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#subscriptions_enabled ApiManagement#subscriptions_enabled}
   */
   readonly subscriptionsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#url ApiManagement#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#url ApiManagement#url}
   */
   readonly url?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#user_registration_enabled ApiManagement#user_registration_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#user_registration_enabled ApiManagement#user_registration_enabled}
   */
   readonly userRegistrationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#validation_key ApiManagement#validation_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#validation_key ApiManagement#validation_key}
   */
   readonly validationKey?: string;
 }
@@ -1057,27 +1052,27 @@ export class ApiManagementDelegationOutputReference extends cdktf.ComplexObject 
 }
 export interface ApiManagementHostnameConfigurationDeveloperPortal {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#certificate ApiManagement#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#certificate ApiManagement#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}
   */
   readonly certificatePassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#host_name ApiManagement#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#host_name ApiManagement#host_name}
   */
   readonly hostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}
   */
   readonly keyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
   */
   readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
   */
   readonly sslKeyvaultIdentityClientId?: string;
 }
@@ -1360,27 +1355,27 @@ export class ApiManagementHostnameConfigurationDeveloperPortalList extends cdktf
 }
 export interface ApiManagementHostnameConfigurationManagement {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#certificate ApiManagement#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#certificate ApiManagement#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}
   */
   readonly certificatePassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#host_name ApiManagement#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#host_name ApiManagement#host_name}
   */
   readonly hostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}
   */
   readonly keyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
   */
   readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
   */
   readonly sslKeyvaultIdentityClientId?: string;
 }
@@ -1663,27 +1658,27 @@ export class ApiManagementHostnameConfigurationManagementList extends cdktf.Comp
 }
 export interface ApiManagementHostnameConfigurationPortal {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#certificate ApiManagement#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#certificate ApiManagement#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}
   */
   readonly certificatePassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#host_name ApiManagement#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#host_name ApiManagement#host_name}
   */
   readonly hostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}
   */
   readonly keyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
   */
   readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
   */
   readonly sslKeyvaultIdentityClientId?: string;
 }
@@ -1966,31 +1961,31 @@ export class ApiManagementHostnameConfigurationPortalList extends cdktf.ComplexL
 }
 export interface ApiManagementHostnameConfigurationProxy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#certificate ApiManagement#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#certificate ApiManagement#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}
   */
   readonly certificatePassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#default_ssl_binding ApiManagement#default_ssl_binding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#default_ssl_binding ApiManagement#default_ssl_binding}
   */
   readonly defaultSslBinding?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#host_name ApiManagement#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#host_name ApiManagement#host_name}
   */
   readonly hostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}
   */
   readonly keyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
   */
   readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
   */
   readonly sslKeyvaultIdentityClientId?: string;
 }
@@ -2302,27 +2297,27 @@ export class ApiManagementHostnameConfigurationProxyList extends cdktf.ComplexLi
 }
 export interface ApiManagementHostnameConfigurationScm {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#certificate ApiManagement#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#certificate ApiManagement#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}
   */
   readonly certificatePassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#host_name ApiManagement#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#host_name ApiManagement#host_name}
   */
   readonly hostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}
   */
   readonly keyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
   */
   readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
   */
   readonly sslKeyvaultIdentityClientId?: string;
 }
@@ -2607,31 +2602,31 @@ export interface ApiManagementHostnameConfiguration {
   /**
   * developer_portal block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#developer_portal ApiManagement#developer_portal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#developer_portal ApiManagement#developer_portal}
   */
   readonly developerPortal?: ApiManagementHostnameConfigurationDeveloperPortal[] | cdktf.IResolvable;
   /**
   * management block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#management ApiManagement#management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#management ApiManagement#management}
   */
   readonly management?: ApiManagementHostnameConfigurationManagement[] | cdktf.IResolvable;
   /**
   * portal block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#portal ApiManagement#portal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#portal ApiManagement#portal}
   */
   readonly portal?: ApiManagementHostnameConfigurationPortal[] | cdktf.IResolvable;
   /**
   * proxy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#proxy ApiManagement#proxy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#proxy ApiManagement#proxy}
   */
   readonly proxy?: ApiManagementHostnameConfigurationProxy[] | cdktf.IResolvable;
   /**
   * scm block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#scm ApiManagement#scm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#scm ApiManagement#scm}
   */
   readonly scm?: ApiManagementHostnameConfigurationScm[] | cdktf.IResolvable;
 }
@@ -2831,11 +2826,11 @@ export class ApiManagementHostnameConfigurationOutputReference extends cdktf.Com
 }
 export interface ApiManagementIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#identity_ids ApiManagement#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#identity_ids ApiManagement#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#type ApiManagement#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#type ApiManagement#type}
   */
   readonly type: string;
 }
@@ -2955,7 +2950,7 @@ export class ApiManagementIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface ApiManagementProtocols {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#enable_http2 ApiManagement#enable_http2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#enable_http2 ApiManagement#enable_http2}
   */
   readonly enableHttp2?: boolean | cdktf.IResolvable;
 }
@@ -3039,71 +3034,71 @@ export class ApiManagementProtocolsOutputReference extends cdktf.ComplexObject {
 }
 export interface ApiManagementSecurity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#enable_backend_ssl30 ApiManagement#enable_backend_ssl30}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#enable_backend_ssl30 ApiManagement#enable_backend_ssl30}
   */
   readonly enableBackendSsl30?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#enable_backend_tls10 ApiManagement#enable_backend_tls10}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#enable_backend_tls10 ApiManagement#enable_backend_tls10}
   */
   readonly enableBackendTls10?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#enable_backend_tls11 ApiManagement#enable_backend_tls11}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#enable_backend_tls11 ApiManagement#enable_backend_tls11}
   */
   readonly enableBackendTls11?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#enable_frontend_ssl30 ApiManagement#enable_frontend_ssl30}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#enable_frontend_ssl30 ApiManagement#enable_frontend_ssl30}
   */
   readonly enableFrontendSsl30?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#enable_frontend_tls10 ApiManagement#enable_frontend_tls10}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#enable_frontend_tls10 ApiManagement#enable_frontend_tls10}
   */
   readonly enableFrontendTls10?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#enable_frontend_tls11 ApiManagement#enable_frontend_tls11}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#enable_frontend_tls11 ApiManagement#enable_frontend_tls11}
   */
   readonly enableFrontendTls11?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled}
   */
   readonly tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled}
   */
   readonly tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled}
   */
   readonly tlsEcdheRsaWithAes128CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled}
   */
   readonly tlsEcdheRsaWithAes256CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled}
   */
   readonly tlsRsaWithAes128CbcSha256CiphersEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#tls_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha_ciphers_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#tls_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha_ciphers_enabled}
   */
   readonly tlsRsaWithAes128CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled}
   */
   readonly tlsRsaWithAes128GcmSha256CiphersEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled}
   */
   readonly tlsRsaWithAes256CbcSha256CiphersEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#tls_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha_ciphers_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#tls_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha_ciphers_enabled}
   */
   readonly tlsRsaWithAes256CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled ApiManagement#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled ApiManagement#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled}
   */
   readonly tlsRsaWithAes256GcmSha384CiphersEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#triple_des_ciphers_enabled ApiManagement#triple_des_ciphers_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#triple_des_ciphers_enabled ApiManagement#triple_des_ciphers_enabled}
   */
   readonly tripleDesCiphersEnabled?: boolean | cdktf.IResolvable;
 }
@@ -3651,7 +3646,7 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
 }
 export interface ApiManagementSignIn {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#enabled ApiManagement#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#enabled ApiManagement#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -3732,15 +3727,15 @@ export class ApiManagementSignInOutputReference extends cdktf.ComplexObject {
 }
 export interface ApiManagementSignUpTermsOfService {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#consent_required ApiManagement#consent_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#consent_required ApiManagement#consent_required}
   */
   readonly consentRequired: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#enabled ApiManagement#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#enabled ApiManagement#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#text ApiManagement#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#text ApiManagement#text}
   */
   readonly text?: string;
 }
@@ -3876,13 +3871,13 @@ export class ApiManagementSignUpTermsOfServiceOutputReference extends cdktf.Comp
 }
 export interface ApiManagementSignUp {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#enabled ApiManagement#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#enabled ApiManagement#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
   * terms_of_service block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#terms_of_service ApiManagement#terms_of_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#terms_of_service ApiManagement#terms_of_service}
   */
   readonly termsOfService: ApiManagementSignUpTermsOfService;
 }
@@ -3989,7 +3984,7 @@ export class ApiManagementSignUpOutputReference extends cdktf.ComplexObject {
 }
 export interface ApiManagementTenantAccess {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#enabled ApiManagement#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#enabled ApiManagement#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -4085,19 +4080,19 @@ export class ApiManagementTenantAccessOutputReference extends cdktf.ComplexObjec
 }
 export interface ApiManagementTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#create ApiManagement#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#create ApiManagement#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#delete ApiManagement#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#delete ApiManagement#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#read ApiManagement#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#read ApiManagement#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#update ApiManagement#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#update ApiManagement#update}
   */
   readonly update?: string;
 }
@@ -4278,7 +4273,7 @@ export class ApiManagementTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 export interface ApiManagementVirtualNetworkConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#subnet_id ApiManagement#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#subnet_id ApiManagement#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -4359,7 +4354,7 @@ export class ApiManagementVirtualNetworkConfigurationOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management azurerm_api_management}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management azurerm_api_management}
 */
 export class ApiManagement extends cdktf.TerraformResource {
 
@@ -4375,7 +4370,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApiManagement resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApiManagement to import
-  * @param importFromId The id of the existing ApiManagement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApiManagement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApiManagement to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -4387,7 +4382,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/api_management azurerm_api_management} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/api_management azurerm_api_management} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -4398,7 +4393,7 @@ export class ApiManagement extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.108.0',
+        providerVersion: '3.109.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

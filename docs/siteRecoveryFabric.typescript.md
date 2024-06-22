@@ -4,7 +4,7 @@
 
 ### SiteRecoveryFabric <a name="SiteRecoveryFabric" id="@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabric"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric azurerm_site_recovery_fabric}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric azurerm_site_recovery_fabric}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabric.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the SiteRecoveryFabric to impo
 
 The id of the existing SiteRecoveryFabric that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -842,11 +842,11 @@ const siteRecoveryFabricConfig: siteRecoveryFabric.SiteRecoveryFabricConfig = { 
 | <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#location SiteRecoveryFabric#location}. |
-| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#name SiteRecoveryFabric#name}. |
-| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.recoveryVaultName">recoveryVaultName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#recovery_vault_name SiteRecoveryFabric#recovery_vault_name}. |
-| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#resource_group_name SiteRecoveryFabric#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#id SiteRecoveryFabric#id}. |
+| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#location SiteRecoveryFabric#location}. |
+| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#name SiteRecoveryFabric#name}. |
+| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.recoveryVaultName">recoveryVaultName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#recovery_vault_name SiteRecoveryFabric#recovery_vault_name}. |
+| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#resource_group_name SiteRecoveryFabric#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#id SiteRecoveryFabric#id}. |
 | <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricTimeouts">SiteRecoveryFabricTimeouts</a></code> | timeouts block. |
 
 ---
@@ -929,7 +929,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#location SiteRecoveryFabric#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#location SiteRecoveryFabric#location}.
 
 ---
 
@@ -941,7 +941,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#name SiteRecoveryFabric#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#name SiteRecoveryFabric#name}.
 
 ---
 
@@ -953,7 +953,7 @@ public readonly recoveryVaultName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#recovery_vault_name SiteRecoveryFabric#recovery_vault_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#recovery_vault_name SiteRecoveryFabric#recovery_vault_name}.
 
 ---
 
@@ -965,7 +965,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#resource_group_name SiteRecoveryFabric#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#resource_group_name SiteRecoveryFabric#resource_group_name}.
 
 ---
 
@@ -977,7 +977,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#id SiteRecoveryFabric#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#id SiteRecoveryFabric#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -994,7 +994,7 @@ public readonly timeouts: SiteRecoveryFabricTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#timeouts SiteRecoveryFabric#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#timeouts SiteRecoveryFabric#timeouts}
 
 ---
 
@@ -1012,9 +1012,9 @@ const siteRecoveryFabricTimeouts: siteRecoveryFabric.SiteRecoveryFabricTimeouts 
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#create SiteRecoveryFabric#create}. |
-| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#delete SiteRecoveryFabric#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#read SiteRecoveryFabric#read}. |
+| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#create SiteRecoveryFabric#create}. |
+| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#delete SiteRecoveryFabric#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.siteRecoveryFabric.SiteRecoveryFabricTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#read SiteRecoveryFabric#read}. |
 
 ---
 
@@ -1026,7 +1026,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#create SiteRecoveryFabric#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#create SiteRecoveryFabric#create}.
 
 ---
 
@@ -1038,7 +1038,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#delete SiteRecoveryFabric#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#delete SiteRecoveryFabric#delete}.
 
 ---
 
@@ -1050,7 +1050,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/site_recovery_fabric#read SiteRecoveryFabric#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/site_recovery_fabric#read SiteRecoveryFabric#read}.
 
 ---
 

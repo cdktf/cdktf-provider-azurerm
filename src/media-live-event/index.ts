@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,94 +8,94 @@ import * as cdktf from 'cdktf';
 
 export interface MediaLiveEventConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#auto_start_enabled MediaLiveEvent#auto_start_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#auto_start_enabled MediaLiveEvent#auto_start_enabled}
   */
   readonly autoStartEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#description MediaLiveEvent#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#description MediaLiveEvent#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#hostname_prefix MediaLiveEvent#hostname_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#hostname_prefix MediaLiveEvent#hostname_prefix}
   */
   readonly hostnamePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#id MediaLiveEvent#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#id MediaLiveEvent#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#location MediaLiveEvent#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#location MediaLiveEvent#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#media_services_account_name MediaLiveEvent#media_services_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#media_services_account_name MediaLiveEvent#media_services_account_name}
   */
   readonly mediaServicesAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#name MediaLiveEvent#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#name MediaLiveEvent#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#resource_group_name MediaLiveEvent#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#resource_group_name MediaLiveEvent#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#stream_options MediaLiveEvent#stream_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#stream_options MediaLiveEvent#stream_options}
   */
   readonly streamOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#tags MediaLiveEvent#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#tags MediaLiveEvent#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#transcription_languages MediaLiveEvent#transcription_languages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#transcription_languages MediaLiveEvent#transcription_languages}
   */
   readonly transcriptionLanguages?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#use_static_hostname MediaLiveEvent#use_static_hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#use_static_hostname MediaLiveEvent#use_static_hostname}
   */
   readonly useStaticHostname?: boolean | cdktf.IResolvable;
   /**
   * cross_site_access_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#cross_site_access_policy MediaLiveEvent#cross_site_access_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#cross_site_access_policy MediaLiveEvent#cross_site_access_policy}
   */
   readonly crossSiteAccessPolicy?: MediaLiveEventCrossSiteAccessPolicy;
   /**
   * encoding block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#encoding MediaLiveEvent#encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#encoding MediaLiveEvent#encoding}
   */
   readonly encoding?: MediaLiveEventEncoding;
   /**
   * input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#input MediaLiveEvent#input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#input MediaLiveEvent#input}
   */
   readonly input: MediaLiveEventInput;
   /**
   * preview block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#preview MediaLiveEvent#preview}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#preview MediaLiveEvent#preview}
   */
   readonly preview?: MediaLiveEventPreview;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#timeouts MediaLiveEvent#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#timeouts MediaLiveEvent#timeouts}
   */
   readonly timeouts?: MediaLiveEventTimeouts;
 }
 export interface MediaLiveEventCrossSiteAccessPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#client_access_policy MediaLiveEvent#client_access_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#client_access_policy MediaLiveEvent#client_access_policy}
   */
   readonly clientAccessPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#cross_domain_policy MediaLiveEvent#cross_domain_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#cross_domain_policy MediaLiveEvent#cross_domain_policy}
   */
   readonly crossDomainPolicy?: string;
 }
@@ -213,19 +208,19 @@ export class MediaLiveEventCrossSiteAccessPolicyOutputReference extends cdktf.Co
 }
 export interface MediaLiveEventEncoding {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#key_frame_interval MediaLiveEvent#key_frame_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#key_frame_interval MediaLiveEvent#key_frame_interval}
   */
   readonly keyFrameInterval?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#preset_name MediaLiveEvent#preset_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#preset_name MediaLiveEvent#preset_name}
   */
   readonly presetName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#stretch_mode MediaLiveEvent#stretch_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#stretch_mode MediaLiveEvent#stretch_mode}
   */
   readonly stretchMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#type MediaLiveEvent#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#type MediaLiveEvent#type}
   */
   readonly type?: string;
 }
@@ -476,15 +471,15 @@ export class MediaLiveEventInputEndpointList extends cdktf.ComplexList {
 }
 export interface MediaLiveEventInputIpAccessControlAllow {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#address MediaLiveEvent#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#address MediaLiveEvent#address}
   */
   readonly address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#name MediaLiveEvent#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#name MediaLiveEvent#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#subnet_prefix_length MediaLiveEvent#subnet_prefix_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#subnet_prefix_length MediaLiveEvent#subnet_prefix_length}
   */
   readonly subnetPrefixLength?: number;
 }
@@ -658,21 +653,21 @@ export class MediaLiveEventInputIpAccessControlAllowList extends cdktf.ComplexLi
 }
 export interface MediaLiveEventInput {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#access_token MediaLiveEvent#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#access_token MediaLiveEvent#access_token}
   */
   readonly accessToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#key_frame_interval_duration MediaLiveEvent#key_frame_interval_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#key_frame_interval_duration MediaLiveEvent#key_frame_interval_duration}
   */
   readonly keyFrameIntervalDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#streaming_protocol MediaLiveEvent#streaming_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#streaming_protocol MediaLiveEvent#streaming_protocol}
   */
   readonly streamingProtocol?: string;
   /**
   * ip_access_control_allow block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#ip_access_control_allow MediaLiveEvent#ip_access_control_allow}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#ip_access_control_allow MediaLiveEvent#ip_access_control_allow}
   */
   readonly ipAccessControlAllow?: MediaLiveEventInputIpAccessControlAllow[] | cdktf.IResolvable;
 }
@@ -929,15 +924,15 @@ export class MediaLiveEventPreviewEndpointList extends cdktf.ComplexList {
 }
 export interface MediaLiveEventPreviewIpAccessControlAllow {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#address MediaLiveEvent#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#address MediaLiveEvent#address}
   */
   readonly address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#name MediaLiveEvent#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#name MediaLiveEvent#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#subnet_prefix_length MediaLiveEvent#subnet_prefix_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#subnet_prefix_length MediaLiveEvent#subnet_prefix_length}
   */
   readonly subnetPrefixLength?: number;
 }
@@ -1111,21 +1106,21 @@ export class MediaLiveEventPreviewIpAccessControlAllowList extends cdktf.Complex
 }
 export interface MediaLiveEventPreview {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#alternative_media_id MediaLiveEvent#alternative_media_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#alternative_media_id MediaLiveEvent#alternative_media_id}
   */
   readonly alternativeMediaId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#preview_locator MediaLiveEvent#preview_locator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#preview_locator MediaLiveEvent#preview_locator}
   */
   readonly previewLocator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#streaming_policy_name MediaLiveEvent#streaming_policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#streaming_policy_name MediaLiveEvent#streaming_policy_name}
   */
   readonly streamingPolicyName?: string;
   /**
   * ip_access_control_allow block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#ip_access_control_allow MediaLiveEvent#ip_access_control_allow}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#ip_access_control_allow MediaLiveEvent#ip_access_control_allow}
   */
   readonly ipAccessControlAllow?: MediaLiveEventPreviewIpAccessControlAllow[] | cdktf.IResolvable;
 }
@@ -1302,19 +1297,19 @@ export class MediaLiveEventPreviewOutputReference extends cdktf.ComplexObject {
 }
 export interface MediaLiveEventTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#create MediaLiveEvent#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#create MediaLiveEvent#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#delete MediaLiveEvent#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#delete MediaLiveEvent#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#read MediaLiveEvent#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#read MediaLiveEvent#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#update MediaLiveEvent#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#update MediaLiveEvent#update}
   */
   readonly update?: string;
 }
@@ -1495,7 +1490,7 @@ export class MediaLiveEventTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event azurerm_media_live_event}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event azurerm_media_live_event}
 */
 export class MediaLiveEvent extends cdktf.TerraformResource {
 
@@ -1511,7 +1506,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MediaLiveEvent resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MediaLiveEvent to import
-  * @param importFromId The id of the existing MediaLiveEvent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MediaLiveEvent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MediaLiveEvent to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1523,7 +1518,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/media_live_event azurerm_media_live_event} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/media_live_event azurerm_media_live_event} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1534,7 +1529,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_live_event',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.108.0',
+        providerVersion: '3.109.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

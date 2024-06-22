@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/data-sources/subscription_template_deployment
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/data-sources/subscription_template_deployment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,26 +8,26 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSubscriptionTemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/data-sources/subscription_template_deployment#id DataAzurermSubscriptionTemplateDeployment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/data-sources/subscription_template_deployment#id DataAzurermSubscriptionTemplateDeployment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/data-sources/subscription_template_deployment#name DataAzurermSubscriptionTemplateDeployment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/data-sources/subscription_template_deployment#name DataAzurermSubscriptionTemplateDeployment#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/data-sources/subscription_template_deployment#timeouts DataAzurermSubscriptionTemplateDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/data-sources/subscription_template_deployment#timeouts DataAzurermSubscriptionTemplateDeployment#timeouts}
   */
   readonly timeouts?: DataAzurermSubscriptionTemplateDeploymentTimeouts;
 }
 export interface DataAzurermSubscriptionTemplateDeploymentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/data-sources/subscription_template_deployment#read DataAzurermSubscriptionTemplateDeployment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/data-sources/subscription_template_deployment#read DataAzurermSubscriptionTemplateDeployment#read}
   */
   readonly read?: string;
 }
@@ -126,7 +121,7 @@ export class DataAzurermSubscriptionTemplateDeploymentTimeoutsOutputReference ex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/data-sources/subscription_template_deployment azurerm_subscription_template_deployment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/data-sources/subscription_template_deployment azurerm_subscription_template_deployment}
 */
 export class DataAzurermSubscriptionTemplateDeployment extends cdktf.TerraformDataSource {
 
@@ -142,7 +137,7 @@ export class DataAzurermSubscriptionTemplateDeployment extends cdktf.TerraformDa
   * Generates CDKTF code for importing a DataAzurermSubscriptionTemplateDeployment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermSubscriptionTemplateDeployment to import
-  * @param importFromId The id of the existing DataAzurermSubscriptionTemplateDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/data-sources/subscription_template_deployment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermSubscriptionTemplateDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/data-sources/subscription_template_deployment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermSubscriptionTemplateDeployment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -154,7 +149,7 @@ export class DataAzurermSubscriptionTemplateDeployment extends cdktf.TerraformDa
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/data-sources/subscription_template_deployment azurerm_subscription_template_deployment} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/data-sources/subscription_template_deployment azurerm_subscription_template_deployment} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -165,7 +160,7 @@ export class DataAzurermSubscriptionTemplateDeployment extends cdktf.TerraformDa
       terraformResourceType: 'azurerm_subscription_template_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.108.0',
+        providerVersion: '3.109.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
