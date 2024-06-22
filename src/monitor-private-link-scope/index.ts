@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/monitor_private_link_scope
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +13,54 @@ import * as cdktf from 'cdktf';
 
 export interface MonitorPrivateLinkScopeConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/monitor_private_link_scope#id MonitorPrivateLinkScope#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope#id MonitorPrivateLinkScope#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/monitor_private_link_scope#name MonitorPrivateLinkScope#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope#ingestion_access_mode MonitorPrivateLinkScope#ingestion_access_mode}
+  */
+  readonly ingestionAccessMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope#name MonitorPrivateLinkScope#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/monitor_private_link_scope#resource_group_name MonitorPrivateLinkScope#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope#query_access_mode MonitorPrivateLinkScope#query_access_mode}
+  */
+  readonly queryAccessMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope#resource_group_name MonitorPrivateLinkScope#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/monitor_private_link_scope#tags MonitorPrivateLinkScope#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope#tags MonitorPrivateLinkScope#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/monitor_private_link_scope#timeouts MonitorPrivateLinkScope#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope#timeouts MonitorPrivateLinkScope#timeouts}
   */
   readonly timeouts?: MonitorPrivateLinkScopeTimeouts;
 }
 export interface MonitorPrivateLinkScopeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/monitor_private_link_scope#create MonitorPrivateLinkScope#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope#create MonitorPrivateLinkScope#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/monitor_private_link_scope#delete MonitorPrivateLinkScope#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope#delete MonitorPrivateLinkScope#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/monitor_private_link_scope#read MonitorPrivateLinkScope#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope#read MonitorPrivateLinkScope#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/monitor_private_link_scope#update MonitorPrivateLinkScope#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope#update MonitorPrivateLinkScope#update}
   */
   readonly update?: string;
 }
@@ -233,7 +241,7 @@ export class MonitorPrivateLinkScopeTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/monitor_private_link_scope azurerm_monitor_private_link_scope}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope azurerm_monitor_private_link_scope}
 */
 export class MonitorPrivateLinkScope extends cdktf.TerraformResource {
 
@@ -249,7 +257,7 @@ export class MonitorPrivateLinkScope extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MonitorPrivateLinkScope resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MonitorPrivateLinkScope to import
-  * @param importFromId The id of the existing MonitorPrivateLinkScope that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/monitor_private_link_scope#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MonitorPrivateLinkScope that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MonitorPrivateLinkScope to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -261,7 +269,7 @@ export class MonitorPrivateLinkScope extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/monitor_private_link_scope azurerm_monitor_private_link_scope} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/monitor_private_link_scope azurerm_monitor_private_link_scope} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -272,7 +280,7 @@ export class MonitorPrivateLinkScope extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_private_link_scope',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.108.0',
+        providerVersion: '3.109.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -284,7 +292,9 @@ export class MonitorPrivateLinkScope extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._id = config.id;
+    this._ingestionAccessMode = config.ingestionAccessMode;
     this._name = config.name;
+    this._queryAccessMode = config.queryAccessMode;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
@@ -310,6 +320,22 @@ export class MonitorPrivateLinkScope extends cdktf.TerraformResource {
     return this._id;
   }
 
+  // ingestion_access_mode - computed: false, optional: true, required: false
+  private _ingestionAccessMode?: string; 
+  public get ingestionAccessMode() {
+    return this.getStringAttribute('ingestion_access_mode');
+  }
+  public set ingestionAccessMode(value: string) {
+    this._ingestionAccessMode = value;
+  }
+  public resetIngestionAccessMode() {
+    this._ingestionAccessMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ingestionAccessModeInput() {
+    return this._ingestionAccessMode;
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -321,6 +347,22 @@ export class MonitorPrivateLinkScope extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // query_access_mode - computed: false, optional: true, required: false
+  private _queryAccessMode?: string; 
+  public get queryAccessMode() {
+    return this.getStringAttribute('query_access_mode');
+  }
+  public set queryAccessMode(value: string) {
+    this._queryAccessMode = value;
+  }
+  public resetQueryAccessMode() {
+    this._queryAccessMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryAccessModeInput() {
+    return this._queryAccessMode;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -375,7 +417,9 @@ export class MonitorPrivateLinkScope extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
+      ingestion_access_mode: cdktf.stringToTerraform(this._ingestionAccessMode),
       name: cdktf.stringToTerraform(this._name),
+      query_access_mode: cdktf.stringToTerraform(this._queryAccessMode),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: monitorPrivateLinkScopeTimeoutsToTerraform(this._timeouts.internalValue),
@@ -390,8 +434,20 @@ export class MonitorPrivateLinkScope extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
+      ingestion_access_mode: {
+        value: cdktf.stringToHclTerraform(this._ingestionAccessMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       name: {
         value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      query_access_mode: {
+        value: cdktf.stringToHclTerraform(this._queryAccessMode),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

@@ -292,6 +292,7 @@ Object.defineProperty(exports, 'dataProtectionBackupInstanceBlobStorage', { get:
 Object.defineProperty(exports, 'dataProtectionBackupInstanceDisk', { get: function () { return require('./data-protection-backup-instance-disk'); } });
 Object.defineProperty(exports, 'dataProtectionBackupInstanceKubernetesCluster', { get: function () { return require('./data-protection-backup-instance-kubernetes-cluster'); } });
 Object.defineProperty(exports, 'dataProtectionBackupInstancePostgresql', { get: function () { return require('./data-protection-backup-instance-postgresql'); } });
+Object.defineProperty(exports, 'dataProtectionBackupInstancePostgresqlFlexibleServer', { get: function () { return require('./data-protection-backup-instance-postgresql-flexible-server'); } });
 Object.defineProperty(exports, 'dataProtectionBackupPolicyBlobStorage', { get: function () { return require('./data-protection-backup-policy-blob-storage'); } });
 Object.defineProperty(exports, 'dataProtectionBackupPolicyDisk', { get: function () { return require('./data-protection-backup-policy-disk'); } });
 Object.defineProperty(exports, 'dataProtectionBackupPolicyKubernetesCluster', { get: function () { return require('./data-protection-backup-policy-kubernetes-cluster'); } });
@@ -357,6 +358,7 @@ Object.defineProperty(exports, 'elasticSan', { get: function () { return require
 Object.defineProperty(exports, 'elasticSanVolume', { get: function () { return require('./elastic-san-volume'); } });
 Object.defineProperty(exports, 'elasticSanVolumeGroup', { get: function () { return require('./elastic-san-volume-group'); } });
 Object.defineProperty(exports, 'emailCommunicationService', { get: function () { return require('./email-communication-service'); } });
+Object.defineProperty(exports, 'emailCommunicationServiceDomain', { get: function () { return require('./email-communication-service-domain'); } });
 Object.defineProperty(exports, 'eventgridDomain', { get: function () { return require('./eventgrid-domain'); } });
 Object.defineProperty(exports, 'eventgridDomainTopic', { get: function () { return require('./eventgrid-domain-topic'); } });
 Object.defineProperty(exports, 'eventgridEventSubscription', { get: function () { return require('./eventgrid-event-subscription'); } });
@@ -1021,7 +1023,10 @@ Object.defineProperty(exports, 'synapseWorkspaceSecurityAlertPolicy', { get: fun
 Object.defineProperty(exports, 'synapseWorkspaceSqlAadAdmin', { get: function () { return require('./synapse-workspace-sql-aad-admin'); } });
 Object.defineProperty(exports, 'synapseWorkspaceVulnerabilityAssessment', { get: function () { return require('./synapse-workspace-vulnerability-assessment'); } });
 Object.defineProperty(exports, 'systemCenterVirtualMachineManagerAvailabilitySet', { get: function () { return require('./system-center-virtual-machine-manager-availability-set'); } });
+Object.defineProperty(exports, 'systemCenterVirtualMachineManagerCloud', { get: function () { return require('./system-center-virtual-machine-manager-cloud'); } });
 Object.defineProperty(exports, 'systemCenterVirtualMachineManagerServer', { get: function () { return require('./system-center-virtual-machine-manager-server'); } });
+Object.defineProperty(exports, 'systemCenterVirtualMachineManagerVirtualMachineTemplate', { get: function () { return require('./system-center-virtual-machine-manager-virtual-machine-template'); } });
+Object.defineProperty(exports, 'systemCenterVirtualMachineManagerVirtualNetwork', { get: function () { return require('./system-center-virtual-machine-manager-virtual-network'); } });
 Object.defineProperty(exports, 'templateDeployment', { get: function () { return require('./template-deployment'); } });
 Object.defineProperty(exports, 'tenantTemplateDeployment', { get: function () { return require('./tenant-template-deployment'); } });
 Object.defineProperty(exports, 'trafficManagerAzureEndpoint', { get: function () { return require('./traffic-manager-azure-endpoint'); } });
@@ -1121,6 +1126,7 @@ Object.defineProperty(exports, 'dataAzurermArcMachine', { get: function () { ret
 Object.defineProperty(exports, 'dataAzurermArcResourceBridgeAppliance', { get: function () { return require('./data-azurerm-arc-resource-bridge-appliance'); } });
 Object.defineProperty(exports, 'dataAzurermAttestationProvider', { get: function () { return require('./data-azurerm-attestation-provider'); } });
 Object.defineProperty(exports, 'dataAzurermAutomationAccount', { get: function () { return require('./data-azurerm-automation-account'); } });
+Object.defineProperty(exports, 'dataAzurermAutomationRunbook', { get: function () { return require('./data-azurerm-automation-runbook'); } });
 Object.defineProperty(exports, 'dataAzurermAutomationVariableBool', { get: function () { return require('./data-azurerm-automation-variable-bool'); } });
 Object.defineProperty(exports, 'dataAzurermAutomationVariableDatetime', { get: function () { return require('./data-azurerm-automation-variable-datetime'); } });
 Object.defineProperty(exports, 'dataAzurermAutomationVariableInt', { get: function () { return require('./data-azurerm-automation-variable-int'); } });

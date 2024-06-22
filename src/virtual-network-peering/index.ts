@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,70 +13,86 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualNetworkPeeringConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#allow_forwarded_traffic VirtualNetworkPeering#allow_forwarded_traffic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#allow_forwarded_traffic VirtualNetworkPeering#allow_forwarded_traffic}
   */
   readonly allowForwardedTraffic?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#allow_gateway_transit VirtualNetworkPeering#allow_gateway_transit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#allow_gateway_transit VirtualNetworkPeering#allow_gateway_transit}
   */
   readonly allowGatewayTransit?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#allow_virtual_network_access VirtualNetworkPeering#allow_virtual_network_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#allow_virtual_network_access VirtualNetworkPeering#allow_virtual_network_access}
   */
   readonly allowVirtualNetworkAccess?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#id VirtualNetworkPeering#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#id VirtualNetworkPeering#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#name VirtualNetworkPeering#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#local_subnet_names VirtualNetworkPeering#local_subnet_names}
+  */
+  readonly localSubnetNames?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#name VirtualNetworkPeering#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#remote_virtual_network_id VirtualNetworkPeering#remote_virtual_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#only_ipv6_peering_enabled VirtualNetworkPeering#only_ipv6_peering_enabled}
+  */
+  readonly onlyIpv6PeeringEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#peer_complete_virtual_networks_enabled VirtualNetworkPeering#peer_complete_virtual_networks_enabled}
+  */
+  readonly peerCompleteVirtualNetworksEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#remote_subnet_names VirtualNetworkPeering#remote_subnet_names}
+  */
+  readonly remoteSubnetNames?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#remote_virtual_network_id VirtualNetworkPeering#remote_virtual_network_id}
   */
   readonly remoteVirtualNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#resource_group_name VirtualNetworkPeering#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#resource_group_name VirtualNetworkPeering#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#triggers VirtualNetworkPeering#triggers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#triggers VirtualNetworkPeering#triggers}
   */
   readonly triggers?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#use_remote_gateways VirtualNetworkPeering#use_remote_gateways}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#use_remote_gateways VirtualNetworkPeering#use_remote_gateways}
   */
   readonly useRemoteGateways?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#virtual_network_name VirtualNetworkPeering#virtual_network_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#virtual_network_name VirtualNetworkPeering#virtual_network_name}
   */
   readonly virtualNetworkName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#timeouts VirtualNetworkPeering#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#timeouts VirtualNetworkPeering#timeouts}
   */
   readonly timeouts?: VirtualNetworkPeeringTimeouts;
 }
 export interface VirtualNetworkPeeringTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#create VirtualNetworkPeering#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#create VirtualNetworkPeering#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#delete VirtualNetworkPeering#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#delete VirtualNetworkPeering#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#read VirtualNetworkPeering#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#read VirtualNetworkPeering#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#update VirtualNetworkPeering#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#update VirtualNetworkPeering#update}
   */
   readonly update?: string;
 }
@@ -257,7 +273,7 @@ export class VirtualNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering azurerm_virtual_network_peering}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering azurerm_virtual_network_peering}
 */
 export class VirtualNetworkPeering extends cdktf.TerraformResource {
 
@@ -273,7 +289,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a VirtualNetworkPeering resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the VirtualNetworkPeering to import
-  * @param importFromId The id of the existing VirtualNetworkPeering that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing VirtualNetworkPeering that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the VirtualNetworkPeering to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -285,7 +301,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.108.0/docs/resources/virtual_network_peering azurerm_virtual_network_peering} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/virtual_network_peering azurerm_virtual_network_peering} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -296,7 +312,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_network_peering',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.108.0',
+        providerVersion: '3.109.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -311,7 +327,11 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
     this._allowGatewayTransit = config.allowGatewayTransit;
     this._allowVirtualNetworkAccess = config.allowVirtualNetworkAccess;
     this._id = config.id;
+    this._localSubnetNames = config.localSubnetNames;
     this._name = config.name;
+    this._onlyIpv6PeeringEnabled = config.onlyIpv6PeeringEnabled;
+    this._peerCompleteVirtualNetworksEnabled = config.peerCompleteVirtualNetworksEnabled;
+    this._remoteSubnetNames = config.remoteSubnetNames;
     this._remoteVirtualNetworkId = config.remoteVirtualNetworkId;
     this._resourceGroupName = config.resourceGroupName;
     this._triggers = config.triggers;
@@ -388,6 +408,22 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
     return this._id;
   }
 
+  // local_subnet_names - computed: false, optional: true, required: false
+  private _localSubnetNames?: string[]; 
+  public get localSubnetNames() {
+    return this.getListAttribute('local_subnet_names');
+  }
+  public set localSubnetNames(value: string[]) {
+    this._localSubnetNames = value;
+  }
+  public resetLocalSubnetNames() {
+    this._localSubnetNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localSubnetNamesInput() {
+    return this._localSubnetNames;
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -399,6 +435,54 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // only_ipv6_peering_enabled - computed: false, optional: true, required: false
+  private _onlyIpv6PeeringEnabled?: boolean | cdktf.IResolvable; 
+  public get onlyIpv6PeeringEnabled() {
+    return this.getBooleanAttribute('only_ipv6_peering_enabled');
+  }
+  public set onlyIpv6PeeringEnabled(value: boolean | cdktf.IResolvable) {
+    this._onlyIpv6PeeringEnabled = value;
+  }
+  public resetOnlyIpv6PeeringEnabled() {
+    this._onlyIpv6PeeringEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get onlyIpv6PeeringEnabledInput() {
+    return this._onlyIpv6PeeringEnabled;
+  }
+
+  // peer_complete_virtual_networks_enabled - computed: false, optional: true, required: false
+  private _peerCompleteVirtualNetworksEnabled?: boolean | cdktf.IResolvable; 
+  public get peerCompleteVirtualNetworksEnabled() {
+    return this.getBooleanAttribute('peer_complete_virtual_networks_enabled');
+  }
+  public set peerCompleteVirtualNetworksEnabled(value: boolean | cdktf.IResolvable) {
+    this._peerCompleteVirtualNetworksEnabled = value;
+  }
+  public resetPeerCompleteVirtualNetworksEnabled() {
+    this._peerCompleteVirtualNetworksEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peerCompleteVirtualNetworksEnabledInput() {
+    return this._peerCompleteVirtualNetworksEnabled;
+  }
+
+  // remote_subnet_names - computed: false, optional: true, required: false
+  private _remoteSubnetNames?: string[]; 
+  public get remoteSubnetNames() {
+    return this.getListAttribute('remote_subnet_names');
+  }
+  public set remoteSubnetNames(value: string[]) {
+    this._remoteSubnetNames = value;
+  }
+  public resetRemoteSubnetNames() {
+    this._remoteSubnetNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get remoteSubnetNamesInput() {
+    return this._remoteSubnetNames;
   }
 
   // remote_virtual_network_id - computed: false, optional: false, required: true
@@ -498,7 +582,11 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
       allow_gateway_transit: cdktf.booleanToTerraform(this._allowGatewayTransit),
       allow_virtual_network_access: cdktf.booleanToTerraform(this._allowVirtualNetworkAccess),
       id: cdktf.stringToTerraform(this._id),
+      local_subnet_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._localSubnetNames),
       name: cdktf.stringToTerraform(this._name),
+      only_ipv6_peering_enabled: cdktf.booleanToTerraform(this._onlyIpv6PeeringEnabled),
+      peer_complete_virtual_networks_enabled: cdktf.booleanToTerraform(this._peerCompleteVirtualNetworksEnabled),
+      remote_subnet_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._remoteSubnetNames),
       remote_virtual_network_id: cdktf.stringToTerraform(this._remoteVirtualNetworkId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       triggers: cdktf.hashMapper(cdktf.stringToTerraform)(this._triggers),
@@ -534,11 +622,35 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
+      local_subnet_names: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._localSubnetNames),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
       name: {
         value: cdktf.stringToHclTerraform(this._name),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      only_ipv6_peering_enabled: {
+        value: cdktf.booleanToHclTerraform(this._onlyIpv6PeeringEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      peer_complete_virtual_networks_enabled: {
+        value: cdktf.booleanToHclTerraform(this._peerCompleteVirtualNetworksEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      remote_subnet_names: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._remoteSubnetNames),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
       },
       remote_virtual_network_id: {
         value: cdktf.stringToHclTerraform(this._remoteVirtualNetworkId),
