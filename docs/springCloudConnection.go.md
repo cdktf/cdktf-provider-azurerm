@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudConnection.SpringCloudConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudconnection"
 
 springcloudconnection.NewSpringCloudConnection(scope Construct, id *string, config SpringCloudConnectionConfig) SpringCloudConnection
 ```
@@ -452,7 +452,7 @@ func ResetVnetSolution()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.springCloudConnection.SpringCloudConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudconnection"
 
 springcloudconnection.SpringCloudConnection_IsConstruct(x interface{}) *bool
 ```
@@ -484,7 +484,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.springCloudConnection.SpringCloudConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudconnection"
 
 springcloudconnection.SpringCloudConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -498,7 +498,7 @@ springcloudconnection.SpringCloudConnection_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.springCloudConnection.SpringCloudConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudconnection"
 
 springcloudconnection.SpringCloudConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -512,7 +512,7 @@ springcloudconnection.SpringCloudConnection_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.springCloudConnection.SpringCloudConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudconnection"
 
 springcloudconnection.SpringCloudConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -939,7 +939,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudConnection.SpringCloudConnectionAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudconnection"
 
 &springcloudconnection.SpringCloudConnectionAuthentication {
 	Type: *string,
@@ -1055,7 +1055,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudConnection.SpringCloudConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudconnection"
 
 &springcloudconnection.SpringCloudConnectionConfig {
 	Connection: interface{},
@@ -1065,14 +1065,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudconnec
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Authentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.springCloudConnection.SpringCloudConnectionAuthentication,
+	Authentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudConnection.SpringCloudConnectionAuthentication,
 	Name: *string,
 	SpringCloudId: *string,
 	TargetResourceId: *string,
 	ClientType: *string,
 	Id: *string,
-	SecretStore: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.springCloudConnection.SpringCloudConnectionSecretStore,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.springCloudConnection.SpringCloudConnectionTimeouts,
+	SecretStore: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudConnection.SpringCloudConnectionSecretStore,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudConnection.SpringCloudConnectionTimeouts,
 	VnetSolution: *string,
 }
 ```
@@ -1292,7 +1292,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudConnection.SpringCloudConnectionSecretStore.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudconnection"
 
 &springcloudconnection.SpringCloudConnectionSecretStore {
 	KeyVaultId: *string,
@@ -1324,7 +1324,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudConnection.SpringCloudConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudconnection"
 
 &springcloudconnection.SpringCloudConnectionTimeouts {
 	Create: *string,
@@ -1400,7 +1400,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudConnection.SpringCloudConnectionAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudconnection"
 
 springcloudconnection.NewSpringCloudConnectionAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudConnectionAuthenticationOutputReference
 ```
@@ -1845,7 +1845,7 @@ func InternalValue() SpringCloudConnectionAuthentication
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudConnection.SpringCloudConnectionSecretStoreOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudconnection"
 
 springcloudconnection.NewSpringCloudConnectionSecretStoreOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudConnectionSecretStoreOutputReference
 ```
@@ -2116,7 +2116,7 @@ func InternalValue() SpringCloudConnectionSecretStore
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudConnection.SpringCloudConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudconnection"
 
 springcloudconnection.NewSpringCloudConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudConnectionTimeoutsOutputReference
 ```
