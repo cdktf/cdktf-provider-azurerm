@@ -1041,6 +1041,7 @@ Object.defineProperty(exports, 'virtualDesktopApplicationGroup', { get: function
 Object.defineProperty(exports, 'virtualDesktopHostPool', { get: function () { return require('./virtual-desktop-host-pool'); } });
 Object.defineProperty(exports, 'virtualDesktopHostPoolRegistrationInfo', { get: function () { return require('./virtual-desktop-host-pool-registration-info'); } });
 Object.defineProperty(exports, 'virtualDesktopScalingPlan', { get: function () { return require('./virtual-desktop-scaling-plan'); } });
+Object.defineProperty(exports, 'virtualDesktopScalingPlanHostPoolAssociation', { get: function () { return require('./virtual-desktop-scaling-plan-host-pool-association'); } });
 Object.defineProperty(exports, 'virtualDesktopWorkspace', { get: function () { return require('./virtual-desktop-workspace'); } });
 Object.defineProperty(exports, 'virtualDesktopWorkspaceApplicationGroupAssociation', { get: function () { return require('./virtual-desktop-workspace-application-group-association'); } });
 Object.defineProperty(exports, 'virtualHub', { get: function () { return require('./virtual-hub'); } });
@@ -1268,6 +1269,7 @@ Object.defineProperty(exports, 'dataAzurermLbOutboundRule', { get: function () {
 Object.defineProperty(exports, 'dataAzurermLbRule', { get: function () { return require('./data-azurerm-lb-rule'); } });
 Object.defineProperty(exports, 'dataAzurermLinuxFunctionApp', { get: function () { return require('./data-azurerm-linux-function-app'); } });
 Object.defineProperty(exports, 'dataAzurermLinuxWebApp', { get: function () { return require('./data-azurerm-linux-web-app'); } });
+Object.defineProperty(exports, 'dataAzurermLoadTest', { get: function () { return require('./data-azurerm-load-test'); } });
 Object.defineProperty(exports, 'dataAzurermLocalNetworkGateway', { get: function () { return require('./data-azurerm-local-network-gateway'); } });
 Object.defineProperty(exports, 'dataAzurermLocation', { get: function () { return require('./data-azurerm-location'); } });
 Object.defineProperty(exports, 'dataAzurermLogAnalyticsWorkspace', { get: function () { return require('./data-azurerm-log-analytics-workspace'); } });

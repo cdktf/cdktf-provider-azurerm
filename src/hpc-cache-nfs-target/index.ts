@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,68 +13,68 @@ import * as cdktf from 'cdktf';
 
 export interface HpcCacheNfsTargetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#cache_name HpcCacheNfsTarget#cache_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#cache_name HpcCacheNfsTarget#cache_name}
   */
   readonly cacheName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#id HpcCacheNfsTarget#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#id HpcCacheNfsTarget#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#name HpcCacheNfsTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#name HpcCacheNfsTarget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#resource_group_name HpcCacheNfsTarget#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#resource_group_name HpcCacheNfsTarget#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#target_host_name HpcCacheNfsTarget#target_host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#target_host_name HpcCacheNfsTarget#target_host_name}
   */
   readonly targetHostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#usage_model HpcCacheNfsTarget#usage_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#usage_model HpcCacheNfsTarget#usage_model}
   */
   readonly usageModel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#verification_timer_in_seconds HpcCacheNfsTarget#verification_timer_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#verification_timer_in_seconds HpcCacheNfsTarget#verification_timer_in_seconds}
   */
   readonly verificationTimerInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#write_back_timer_in_seconds HpcCacheNfsTarget#write_back_timer_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#write_back_timer_in_seconds HpcCacheNfsTarget#write_back_timer_in_seconds}
   */
   readonly writeBackTimerInSeconds?: number;
   /**
   * namespace_junction block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#namespace_junction HpcCacheNfsTarget#namespace_junction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#namespace_junction HpcCacheNfsTarget#namespace_junction}
   */
   readonly namespaceJunction: HpcCacheNfsTargetNamespaceJunction[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#timeouts HpcCacheNfsTarget#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#timeouts HpcCacheNfsTarget#timeouts}
   */
   readonly timeouts?: HpcCacheNfsTargetTimeouts;
 }
 export interface HpcCacheNfsTargetNamespaceJunction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#access_policy_name HpcCacheNfsTarget#access_policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#access_policy_name HpcCacheNfsTarget#access_policy_name}
   */
   readonly accessPolicyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#namespace_path HpcCacheNfsTarget#namespace_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#namespace_path HpcCacheNfsTarget#namespace_path}
   */
   readonly namespacePath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#nfs_export HpcCacheNfsTarget#nfs_export}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#nfs_export HpcCacheNfsTarget#nfs_export}
   */
   readonly nfsExport: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#target_path HpcCacheNfsTarget#target_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#target_path HpcCacheNfsTarget#target_path}
   */
   readonly targetPath?: string;
 }
@@ -271,19 +271,19 @@ export class HpcCacheNfsTargetNamespaceJunctionList extends cdktf.ComplexList {
 }
 export interface HpcCacheNfsTargetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#create HpcCacheNfsTarget#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#create HpcCacheNfsTarget#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#delete HpcCacheNfsTarget#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#delete HpcCacheNfsTarget#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#read HpcCacheNfsTarget#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#read HpcCacheNfsTarget#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#update HpcCacheNfsTarget#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#update HpcCacheNfsTarget#update}
   */
   readonly update?: string;
 }
@@ -464,7 +464,7 @@ export class HpcCacheNfsTargetTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target azurerm_hpc_cache_nfs_target}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target azurerm_hpc_cache_nfs_target}
 */
 export class HpcCacheNfsTarget extends cdktf.TerraformResource {
 
@@ -480,7 +480,7 @@ export class HpcCacheNfsTarget extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a HpcCacheNfsTarget resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the HpcCacheNfsTarget to import
-  * @param importFromId The id of the existing HpcCacheNfsTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing HpcCacheNfsTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the HpcCacheNfsTarget to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -492,7 +492,7 @@ export class HpcCacheNfsTarget extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.109.0/docs/resources/hpc_cache_nfs_target azurerm_hpc_cache_nfs_target} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/hpc_cache_nfs_target azurerm_hpc_cache_nfs_target} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -503,7 +503,7 @@ export class HpcCacheNfsTarget extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hpc_cache_nfs_target',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.109.0',
+        providerVersion: '3.110.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

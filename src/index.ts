@@ -1041,6 +1041,7 @@ export * as virtualDesktopApplicationGroup from './virtual-desktop-application-g
 export * as virtualDesktopHostPool from './virtual-desktop-host-pool';
 export * as virtualDesktopHostPoolRegistrationInfo from './virtual-desktop-host-pool-registration-info';
 export * as virtualDesktopScalingPlan from './virtual-desktop-scaling-plan';
+export * as virtualDesktopScalingPlanHostPoolAssociation from './virtual-desktop-scaling-plan-host-pool-association';
 export * as virtualDesktopWorkspace from './virtual-desktop-workspace';
 export * as virtualDesktopWorkspaceApplicationGroupAssociation from './virtual-desktop-workspace-application-group-association';
 export * as virtualHub from './virtual-hub';
@@ -1268,6 +1269,7 @@ export * as dataAzurermLbOutboundRule from './data-azurerm-lb-outbound-rule';
 export * as dataAzurermLbRule from './data-azurerm-lb-rule';
 export * as dataAzurermLinuxFunctionApp from './data-azurerm-linux-function-app';
 export * as dataAzurermLinuxWebApp from './data-azurerm-linux-web-app';
+export * as dataAzurermLoadTest from './data-azurerm-load-test';
 export * as dataAzurermLocalNetworkGateway from './data-azurerm-local-network-gateway';
 export * as dataAzurermLocation from './data-azurerm-location';
 export * as dataAzurermLogAnalyticsWorkspace from './data-azurerm-log-analytics-workspace';
