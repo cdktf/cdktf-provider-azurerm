@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association
 // generated from terraform resource schema
 
