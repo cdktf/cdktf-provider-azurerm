@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachinetemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/systemcentervirtualmachinemanagervirtualmachinetemplate"
 
 systemcentervirtualmachinemanagervirtualmachinetemplate.NewSystemCenterVirtualMachineManagerVirtualMachineTemplate(scope Construct, id *string, config SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig) SystemCenterVirtualMachineManagerVirtualMachineTemplate
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachinetemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/systemcentervirtualmachinemanagervirtualmachinetemplate"
 
 systemcentervirtualmachinemanagervirtualmachinetemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplate_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachinetemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/systemcentervirtualmachinemanagervirtualmachinetemplate"
 
 systemcentervirtualmachinemanagervirtualmachinetemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplate_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ systemcentervirtualmachinemanagervirtualmachinetemplate.SystemCenterVirtualMachi
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachinetemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/systemcentervirtualmachinemanagervirtualmachinetemplate"
 
 systemcentervirtualmachinemanagervirtualmachinetemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplate_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ systemcentervirtualmachinemanagervirtualmachinetemplate.SystemCenterVirtualMachi
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachinetemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/systemcentervirtualmachinemanagervirtualmachinetemplate"
 
 systemcentervirtualmachinemanagervirtualmachinetemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -877,7 +877,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachinetemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/systemcentervirtualmachinemanagervirtualmachinetemplate"
 
 &systemcentervirtualmachinemanagervirtualmachinetemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig {
 	Connection: interface{},
@@ -894,7 +894,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualma
 	SystemCenterVirtualMachineManagerServerInventoryItemId: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts,
 }
 ```
 
@@ -1096,7 +1096,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachinetemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/systemcentervirtualmachinemanagervirtualmachinetemplate"
 
 &systemcentervirtualmachinemanagervirtualmachinetemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts {
 	Create: *string,
@@ -1172,7 +1172,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachinetemplate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/systemcentervirtualmachinemanagervirtualmachinetemplate"
 
 systemcentervirtualmachinemanagervirtualmachinetemplate.NewSystemCenterVirtualMachineManagerVirtualMachineTemplateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeoutsOutputReference
 ```
