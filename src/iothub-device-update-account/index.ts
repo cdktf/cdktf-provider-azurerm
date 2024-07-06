@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,56 +13,56 @@ import * as cdktf from 'cdktf';
 
 export interface IothubDeviceUpdateAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#id IothubDeviceUpdateAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#id IothubDeviceUpdateAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#location IothubDeviceUpdateAccount#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#location IothubDeviceUpdateAccount#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#name IothubDeviceUpdateAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#name IothubDeviceUpdateAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#public_network_access_enabled IothubDeviceUpdateAccount#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#public_network_access_enabled IothubDeviceUpdateAccount#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#resource_group_name IothubDeviceUpdateAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#resource_group_name IothubDeviceUpdateAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#sku IothubDeviceUpdateAccount#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#sku IothubDeviceUpdateAccount#sku}
   */
   readonly sku?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#tags IothubDeviceUpdateAccount#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#tags IothubDeviceUpdateAccount#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#identity IothubDeviceUpdateAccount#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#identity IothubDeviceUpdateAccount#identity}
   */
   readonly identity?: IothubDeviceUpdateAccountIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#timeouts IothubDeviceUpdateAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#timeouts IothubDeviceUpdateAccount#timeouts}
   */
   readonly timeouts?: IothubDeviceUpdateAccountTimeouts;
 }
 export interface IothubDeviceUpdateAccountIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#identity_ids IothubDeviceUpdateAccount#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#identity_ids IothubDeviceUpdateAccount#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#type IothubDeviceUpdateAccount#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#type IothubDeviceUpdateAccount#type}
   */
   readonly type: string;
 }
@@ -182,19 +182,19 @@ export class IothubDeviceUpdateAccountIdentityOutputReference extends cdktf.Comp
 }
 export interface IothubDeviceUpdateAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#create IothubDeviceUpdateAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#create IothubDeviceUpdateAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#delete IothubDeviceUpdateAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#delete IothubDeviceUpdateAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#read IothubDeviceUpdateAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#read IothubDeviceUpdateAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#update IothubDeviceUpdateAccount#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#update IothubDeviceUpdateAccount#update}
   */
   readonly update?: string;
 }
@@ -375,7 +375,7 @@ export class IothubDeviceUpdateAccountTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account azurerm_iothub_device_update_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account azurerm_iothub_device_update_account}
 */
 export class IothubDeviceUpdateAccount extends cdktf.TerraformResource {
 
@@ -391,7 +391,7 @@ export class IothubDeviceUpdateAccount extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IothubDeviceUpdateAccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IothubDeviceUpdateAccount to import
-  * @param importFromId The id of the existing IothubDeviceUpdateAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IothubDeviceUpdateAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IothubDeviceUpdateAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -403,7 +403,7 @@ export class IothubDeviceUpdateAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/iothub_device_update_account azurerm_iothub_device_update_account} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/iothub_device_update_account azurerm_iothub_device_update_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -414,7 +414,7 @@ export class IothubDeviceUpdateAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_iothub_device_update_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.110.0',
+        providerVersion: '3.111.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

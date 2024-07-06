@@ -796,6 +796,7 @@ export * as resourcePolicyAssignment from './resource-policy-assignment';
 export * as resourcePolicyExemption from './resource-policy-exemption';
 export * as resourcePolicyRemediation from './resource-policy-remediation';
 export * as resourceProviderRegistration from './resource-provider-registration';
+export * as restorePointCollection from './restore-point-collection';
 export * as roleAssignment from './role-assignment';
 export * as roleDefinition from './role-definition';
 export * as roleManagementPolicy from './role-management-policy';

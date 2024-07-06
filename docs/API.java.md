@@ -1154,6 +1154,7 @@ The following submodules are available:
 - [resourcePolicyExemption](./resourcePolicyExemption.java.md)
 - [resourcePolicyRemediation](./resourcePolicyRemediation.java.md)
 - [resourceProviderRegistration](./resourceProviderRegistration.java.md)
+- [restorePointCollection](./restorePointCollection.java.md)
 - [roleAssignment](./roleAssignment.java.md)
 - [roleDefinition](./roleDefinition.java.md)
 - [roleManagementPolicy](./roleManagementPolicy.java.md)

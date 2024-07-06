@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/dev_center_gallery
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/dev_center_gallery
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +13,42 @@ import * as cdktf from 'cdktf';
 
 export interface DevCenterGalleryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/dev_center_gallery#dev_center_id DevCenterGallery#dev_center_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/dev_center_gallery#dev_center_id DevCenterGallery#dev_center_id}
   */
   readonly devCenterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/dev_center_gallery#id DevCenterGallery#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/dev_center_gallery#id DevCenterGallery#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/dev_center_gallery#name DevCenterGallery#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/dev_center_gallery#name DevCenterGallery#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/dev_center_gallery#shared_gallery_id DevCenterGallery#shared_gallery_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/dev_center_gallery#shared_gallery_id DevCenterGallery#shared_gallery_id}
   */
   readonly sharedGalleryId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/dev_center_gallery#timeouts DevCenterGallery#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/dev_center_gallery#timeouts DevCenterGallery#timeouts}
   */
   readonly timeouts?: DevCenterGalleryTimeouts;
 }
 export interface DevCenterGalleryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/dev_center_gallery#create DevCenterGallery#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/dev_center_gallery#create DevCenterGallery#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/dev_center_gallery#delete DevCenterGallery#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/dev_center_gallery#delete DevCenterGallery#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/dev_center_gallery#read DevCenterGallery#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/dev_center_gallery#read DevCenterGallery#read}
   */
   readonly read?: string;
 }
@@ -200,7 +200,7 @@ export class DevCenterGalleryTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/dev_center_gallery azurerm_dev_center_gallery}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/dev_center_gallery azurerm_dev_center_gallery}
 */
 export class DevCenterGallery extends cdktf.TerraformResource {
 
@@ -216,7 +216,7 @@ export class DevCenterGallery extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DevCenterGallery resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DevCenterGallery to import
-  * @param importFromId The id of the existing DevCenterGallery that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/dev_center_gallery#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DevCenterGallery that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/dev_center_gallery#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DevCenterGallery to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -228,7 +228,7 @@ export class DevCenterGallery extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/dev_center_gallery azurerm_dev_center_gallery} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/dev_center_gallery azurerm_dev_center_gallery} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -239,7 +239,7 @@ export class DevCenterGallery extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dev_center_gallery',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.110.0',
+        providerVersion: '3.111.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

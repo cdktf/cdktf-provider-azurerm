@@ -1154,6 +1154,7 @@ The following submodules are available:
 - [resourcePolicyExemption](./resourcePolicyExemption.csharp.md)
 - [resourcePolicyRemediation](./resourcePolicyRemediation.csharp.md)
 - [resourceProviderRegistration](./resourceProviderRegistration.csharp.md)
+- [restorePointCollection](./restorePointCollection.csharp.md)
 - [roleAssignment](./roleAssignment.csharp.md)
 - [roleDefinition](./roleDefinition.csharp.md)
 - [roleManagementPolicy](./roleManagementPolicy.csharp.md)

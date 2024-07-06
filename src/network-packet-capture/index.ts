@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,78 +13,78 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkPacketCaptureConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#id NetworkPacketCapture#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#id NetworkPacketCapture#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#maximum_bytes_per_packet NetworkPacketCapture#maximum_bytes_per_packet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#maximum_bytes_per_packet NetworkPacketCapture#maximum_bytes_per_packet}
   */
   readonly maximumBytesPerPacket?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#maximum_bytes_per_session NetworkPacketCapture#maximum_bytes_per_session}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#maximum_bytes_per_session NetworkPacketCapture#maximum_bytes_per_session}
   */
   readonly maximumBytesPerSession?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#maximum_capture_duration NetworkPacketCapture#maximum_capture_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#maximum_capture_duration NetworkPacketCapture#maximum_capture_duration}
   */
   readonly maximumCaptureDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#name NetworkPacketCapture#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#name NetworkPacketCapture#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#network_watcher_name NetworkPacketCapture#network_watcher_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#network_watcher_name NetworkPacketCapture#network_watcher_name}
   */
   readonly networkWatcherName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#resource_group_name NetworkPacketCapture#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#resource_group_name NetworkPacketCapture#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#target_resource_id NetworkPacketCapture#target_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#target_resource_id NetworkPacketCapture#target_resource_id}
   */
   readonly targetResourceId: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#filter NetworkPacketCapture#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#filter NetworkPacketCapture#filter}
   */
   readonly filter?: NetworkPacketCaptureFilter[] | cdktf.IResolvable;
   /**
   * storage_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#storage_location NetworkPacketCapture#storage_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#storage_location NetworkPacketCapture#storage_location}
   */
   readonly storageLocation: NetworkPacketCaptureStorageLocation;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#timeouts NetworkPacketCapture#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#timeouts NetworkPacketCapture#timeouts}
   */
   readonly timeouts?: NetworkPacketCaptureTimeouts;
 }
 export interface NetworkPacketCaptureFilter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#local_ip_address NetworkPacketCapture#local_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#local_ip_address NetworkPacketCapture#local_ip_address}
   */
   readonly localIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#local_port NetworkPacketCapture#local_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#local_port NetworkPacketCapture#local_port}
   */
   readonly localPort?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#protocol NetworkPacketCapture#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#protocol NetworkPacketCapture#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#remote_ip_address NetworkPacketCapture#remote_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#remote_ip_address NetworkPacketCapture#remote_ip_address}
   */
   readonly remoteIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#remote_port NetworkPacketCapture#remote_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#remote_port NetworkPacketCapture#remote_port}
   */
   readonly remotePort?: string;
 }
@@ -313,11 +313,11 @@ export class NetworkPacketCaptureFilterList extends cdktf.ComplexList {
 }
 export interface NetworkPacketCaptureStorageLocation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#file_path NetworkPacketCapture#file_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#file_path NetworkPacketCapture#file_path}
   */
   readonly filePath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#storage_account_id NetworkPacketCapture#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#storage_account_id NetworkPacketCapture#storage_account_id}
   */
   readonly storageAccountId?: string;
 }
@@ -435,15 +435,15 @@ export class NetworkPacketCaptureStorageLocationOutputReference extends cdktf.Co
 }
 export interface NetworkPacketCaptureTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#create NetworkPacketCapture#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#create NetworkPacketCapture#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#delete NetworkPacketCapture#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#delete NetworkPacketCapture#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#read NetworkPacketCapture#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#read NetworkPacketCapture#read}
   */
   readonly read?: string;
 }
@@ -595,7 +595,7 @@ export class NetworkPacketCaptureTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture azurerm_network_packet_capture}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture azurerm_network_packet_capture}
 */
 export class NetworkPacketCapture extends cdktf.TerraformResource {
 
@@ -611,7 +611,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkPacketCapture resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkPacketCapture to import
-  * @param importFromId The id of the existing NetworkPacketCapture that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkPacketCapture that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkPacketCapture to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -623,7 +623,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.110.0/docs/resources/network_packet_capture azurerm_network_packet_capture} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/network_packet_capture azurerm_network_packet_capture} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -634,7 +634,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_packet_capture',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.110.0',
+        providerVersion: '3.111.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -796,6 +796,7 @@ Object.defineProperty(exports, 'resourcePolicyAssignment', { get: function () { 
 Object.defineProperty(exports, 'resourcePolicyExemption', { get: function () { return require('./resource-policy-exemption'); } });
 Object.defineProperty(exports, 'resourcePolicyRemediation', { get: function () { return require('./resource-policy-remediation'); } });
 Object.defineProperty(exports, 'resourceProviderRegistration', { get: function () { return require('./resource-provider-registration'); } });
+Object.defineProperty(exports, 'restorePointCollection', { get: function () { return require('./restore-point-collection'); } });
 Object.defineProperty(exports, 'roleAssignment', { get: function () { return require('./role-assignment'); } });
 Object.defineProperty(exports, 'roleDefinition', { get: function () { return require('./role-definition'); } });
 Object.defineProperty(exports, 'roleManagementPolicy', { get: function () { return require('./role-management-policy'); } });
