@@ -1154,6 +1154,7 @@ The following submodules are available:
 - [resourcePolicyExemption](./resourcePolicyExemption.typescript.md)
 - [resourcePolicyRemediation](./resourcePolicyRemediation.typescript.md)
 - [resourceProviderRegistration](./resourceProviderRegistration.typescript.md)
+- [restorePointCollection](./restorePointCollection.typescript.md)
 - [roleAssignment](./roleAssignment.typescript.md)
 - [roleDefinition](./roleDefinition.typescript.md)
 - [roleManagementPolicy](./roleManagementPolicy.typescript.md)

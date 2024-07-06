@@ -1154,6 +1154,7 @@ The following submodules are available:
 - [resourcePolicyExemption](./resourcePolicyExemption.python.md)
 - [resourcePolicyRemediation](./resourcePolicyRemediation.python.md)
 - [resourceProviderRegistration](./resourceProviderRegistration.python.md)
+- [restorePointCollection](./restorePointCollection.python.md)
 - [roleAssignment](./roleAssignment.python.md)
 - [roleDefinition](./roleDefinition.python.md)
 - [roleManagementPolicy](./roleManagementPolicy.python.md)

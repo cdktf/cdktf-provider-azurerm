@@ -1154,6 +1154,7 @@ The following submodules are available:
 - [resourcePolicyExemption](./resourcePolicyExemption.go.md)
 - [resourcePolicyRemediation](./resourcePolicyRemediation.go.md)
 - [resourceProviderRegistration](./resourceProviderRegistration.go.md)
+- [restorePointCollection](./restorePointCollection.go.md)
 - [roleAssignment](./roleAssignment.go.md)
 - [roleDefinition](./roleDefinition.go.md)
 - [roleManagementPolicy](./roleManagementPolicy.go.md)
