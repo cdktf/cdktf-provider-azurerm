@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.NewDataProtectionBackupPolicyPostgresqlFlexibleServer(scope Construct, id *string, config DataProtectionBackupPolicyPostgresqlFlexibleServerConfig) DataProtectionBackupPolicyPostgresqlFlexibleServer
 ```
@@ -445,7 +445,7 @@ func ResetTimeZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.DataProtectionBackupPolicyPostgresqlFlexibleServer_IsConstruct(x interface{}) *bool
 ```
@@ -477,7 +477,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.DataProtectionBackupPolicyPostgresqlFlexibleServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -491,7 +491,7 @@ dataprotectionbackuppolicypostgresqlflexibleserver.DataProtectionBackupPolicyPos
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.DataProtectionBackupPolicyPostgresqlFlexibleServer_IsTerraformResource(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ dataprotectionbackuppolicypostgresqlflexibleserver.DataProtectionBackupPolicyPos
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServer.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.DataProtectionBackupPolicyPostgresqlFlexibleServer_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -910,7 +910,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 &dataprotectionbackuppolicypostgresqlflexibleserver.DataProtectionBackupPolicyPostgresqlFlexibleServerConfig {
 	Connection: interface{},
@@ -921,12 +921,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbac
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	BackupRepeatingTimeIntervals: *[]*string,
-	DefaultRetentionRule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRule,
+	DefaultRetentionRule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRule,
 	Name: *string,
 	VaultId: *string,
 	Id: *string,
 	RetentionRule: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerTimeouts,
 	TimeZone: *string,
 }
 ```
@@ -1133,7 +1133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 &dataprotectionbackuppolicypostgresqlflexibleserver.DataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRule {
 	LifeCycle: interface{},
@@ -1167,7 +1167,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRuleLifeCycle.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 &dataprotectionbackuppolicypostgresqlflexibleserver.DataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRuleLifeCycle {
 	DataStoreType: *string,
@@ -1213,10 +1213,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 &dataprotectionbackuppolicypostgresqlflexibleserver.DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRule {
-	Criteria: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleCriteria,
+	Criteria: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleCriteria,
 	LifeCycle: interface{},
 	Name: *string,
 	Priority: *f64,
@@ -1291,7 +1291,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleCriteria.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 &dataprotectionbackuppolicypostgresqlflexibleserver.DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleCriteria {
 	AbsoluteCriteria: *string,
@@ -1379,7 +1379,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleLifeCycle.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 &dataprotectionbackuppolicypostgresqlflexibleserver.DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleLifeCycle {
 	DataStoreType: *string,
@@ -1425,7 +1425,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 &dataprotectionbackuppolicypostgresqlflexibleserver.DataProtectionBackupPolicyPostgresqlFlexibleServerTimeouts {
 	Create: *string,
@@ -1487,7 +1487,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRuleLifeCycleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.NewDataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRuleLifeCycleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRuleLifeCycleList
 ```
@@ -1647,7 +1647,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRuleLifeCycleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.NewDataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRuleLifeCycleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRuleLifeCycleOutputReference
 ```
@@ -1958,7 +1958,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.NewDataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRetentionRuleOutputReference
 ```
@@ -2242,7 +2242,7 @@ func InternalValue() DataProtectionBackupPolicyPostgresqlFlexibleServerDefaultRe
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleCriteriaOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.NewDataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleCriteriaOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleCriteriaOutputReference
 ```
@@ -2636,7 +2636,7 @@ func InternalValue() DataProtectionBackupPolicyPostgresqlFlexibleServerRetention
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleLifeCycleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.NewDataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleLifeCycleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleLifeCycleList
 ```
@@ -2796,7 +2796,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleLifeCycleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.NewDataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleLifeCycleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleLifeCycleOutputReference
 ```
@@ -3107,7 +3107,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.NewDataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleList
 ```
@@ -3267,7 +3267,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.NewDataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataProtectionBackupPolicyPostgresqlFlexibleServerRetentionRuleOutputReference
 ```
@@ -3648,7 +3648,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresqlFlexibleServer.DataProtectionBackupPolicyPostgresqlFlexibleServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackuppolicypostgresqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresqlflexibleserver"
 
 dataprotectionbackuppolicypostgresqlflexibleserver.NewDataProtectionBackupPolicyPostgresqlFlexibleServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataProtectionBackupPolicyPostgresqlFlexibleServerTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewNewRelicTagRule(scope Construct, id *string, config NewRelicTagRuleConfig) NewRelicTagRule
 ```
@@ -473,7 +473,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewRelicTagRule_IsConstruct(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewRelicTagRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -519,7 +519,7 @@ newrelictagrule.NewRelicTagRule_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewRelicTagRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -533,7 +533,7 @@ newrelictagrule.NewRelicTagRule_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewRelicTagRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -960,7 +960,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 &newrelictagrule.NewRelicTagRuleConfig {
 	Connection: interface{},
@@ -978,7 +978,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
 	MetricEnabled: interface{},
 	MetricTagFilter: interface{},
 	SubscriptionLogEnabled: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.newRelicTagRule.NewRelicTagRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.newRelicTagRule.NewRelicTagRuleTimeouts,
 }
 ```
 
@@ -1197,7 +1197,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleLogTagFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 &newrelictagrule.NewRelicTagRuleLogTagFilter {
 	Action: *string,
@@ -1257,7 +1257,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleMetricTagFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 &newrelictagrule.NewRelicTagRuleMetricTagFilter {
 	Action: *string,
@@ -1317,7 +1317,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 &newrelictagrule.NewRelicTagRuleTimeouts {
 	Create: *string,
@@ -1393,7 +1393,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleLogTagFilterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewNewRelicTagRuleLogTagFilterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NewRelicTagRuleLogTagFilterList
 ```
@@ -1553,7 +1553,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleLogTagFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewNewRelicTagRuleLogTagFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NewRelicTagRuleLogTagFilterOutputReference
 ```
@@ -1886,7 +1886,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleMetricTagFilterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewNewRelicTagRuleMetricTagFilterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NewRelicTagRuleMetricTagFilterList
 ```
@@ -2046,7 +2046,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleMetricTagFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewNewRelicTagRuleMetricTagFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NewRelicTagRuleMetricTagFilterOutputReference
 ```
@@ -2379,7 +2379,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicTagRule.NewRelicTagRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/newrelictagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelictagrule"
 
 newrelictagrule.NewNewRelicTagRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NewRelicTagRuleTimeoutsOutputReference
 ```
