@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskaccess"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdiskaccess"
 
 dataazurermdiskaccess.NewDataAzurermDiskAccess(scope Construct, id *string, config DataAzurermDiskAccessConfig) DataAzurermDiskAccess
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskaccess"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdiskaccess"
 
 dataazurermdiskaccess.DataAzurermDiskAccess_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskaccess"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdiskaccess"
 
 dataazurermdiskaccess.DataAzurermDiskAccess_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermdiskaccess.DataAzurermDiskAccess_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskaccess"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdiskaccess"
 
 dataazurermdiskaccess.DataAzurermDiskAccess_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermdiskaccess.DataAzurermDiskAccess_IsTerraformDataSource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskaccess"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdiskaccess"
 
 dataazurermdiskaccess.DataAzurermDiskAccess_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -669,7 +669,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskaccess"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdiskaccess"
 
 &dataazurermdiskaccess.DataAzurermDiskAccessConfig {
 	Connection: interface{},
@@ -682,7 +682,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskaccess
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermDiskAccess.DataAzurermDiskAccessTimeouts,
 }
 ```
 
@@ -832,7 +832,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskaccess"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdiskaccess"
 
 &dataazurermdiskaccess.DataAzurermDiskAccessTimeouts {
 	Read: *string,
@@ -866,7 +866,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdiskaccess"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermdiskaccess"
 
 dataazurermdiskaccess.NewDataAzurermDiskAccessTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDiskAccessTimeoutsOutputReference
 ```
