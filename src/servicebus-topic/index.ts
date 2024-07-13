@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,86 +8,98 @@ import * as cdktf from 'cdktf';
 
 export interface ServicebusTopicConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#auto_delete_on_idle ServicebusTopic#auto_delete_on_idle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#auto_delete_on_idle ServicebusTopic#auto_delete_on_idle}
   */
   readonly autoDeleteOnIdle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#default_message_ttl ServicebusTopic#default_message_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#batched_operations_enabled ServicebusTopic#batched_operations_enabled}
+  */
+  readonly batchedOperationsEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#default_message_ttl ServicebusTopic#default_message_ttl}
   */
   readonly defaultMessageTtl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#duplicate_detection_history_time_window ServicebusTopic#duplicate_detection_history_time_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#duplicate_detection_history_time_window ServicebusTopic#duplicate_detection_history_time_window}
   */
   readonly duplicateDetectionHistoryTimeWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#enable_batched_operations ServicebusTopic#enable_batched_operations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#enable_batched_operations ServicebusTopic#enable_batched_operations}
   */
   readonly enableBatchedOperations?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#enable_express ServicebusTopic#enable_express}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#enable_express ServicebusTopic#enable_express}
   */
   readonly enableExpress?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#enable_partitioning ServicebusTopic#enable_partitioning}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#enable_partitioning ServicebusTopic#enable_partitioning}
   */
   readonly enablePartitioning?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#id ServicebusTopic#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#express_enabled ServicebusTopic#express_enabled}
+  */
+  readonly expressEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#id ServicebusTopic#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#max_message_size_in_kilobytes ServicebusTopic#max_message_size_in_kilobytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#max_message_size_in_kilobytes ServicebusTopic#max_message_size_in_kilobytes}
   */
   readonly maxMessageSizeInKilobytes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#max_size_in_megabytes ServicebusTopic#max_size_in_megabytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#max_size_in_megabytes ServicebusTopic#max_size_in_megabytes}
   */
   readonly maxSizeInMegabytes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#name ServicebusTopic#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#name ServicebusTopic#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#namespace_id ServicebusTopic#namespace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#namespace_id ServicebusTopic#namespace_id}
   */
   readonly namespaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#requires_duplicate_detection ServicebusTopic#requires_duplicate_detection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#partitioning_enabled ServicebusTopic#partitioning_enabled}
+  */
+  readonly partitioningEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#requires_duplicate_detection ServicebusTopic#requires_duplicate_detection}
   */
   readonly requiresDuplicateDetection?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#status ServicebusTopic#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#status ServicebusTopic#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#support_ordering ServicebusTopic#support_ordering}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#support_ordering ServicebusTopic#support_ordering}
   */
   readonly supportOrdering?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#timeouts ServicebusTopic#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#timeouts ServicebusTopic#timeouts}
   */
   readonly timeouts?: ServicebusTopicTimeouts;
 }
 export interface ServicebusTopicTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#create ServicebusTopic#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#create ServicebusTopic#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#delete ServicebusTopic#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#delete ServicebusTopic#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#read ServicebusTopic#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#read ServicebusTopic#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#update ServicebusTopic#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#update ServicebusTopic#update}
   */
   readonly update?: string;
 }
@@ -273,7 +280,7 @@ export class ServicebusTopicTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic azurerm_servicebus_topic}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic azurerm_servicebus_topic}
 */
 export class ServicebusTopic extends cdktf.TerraformResource {
 
@@ -289,7 +296,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ServicebusTopic resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ServicebusTopic to import
-  * @param importFromId The id of the existing ServicebusTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ServicebusTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ServicebusTopic to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -301,7 +308,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/servicebus_topic azurerm_servicebus_topic} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/servicebus_topic azurerm_servicebus_topic} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -312,7 +319,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_topic',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.111.0',
+        providerVersion: '3.112.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -324,16 +331,19 @@ export class ServicebusTopic extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._autoDeleteOnIdle = config.autoDeleteOnIdle;
+    this._batchedOperationsEnabled = config.batchedOperationsEnabled;
     this._defaultMessageTtl = config.defaultMessageTtl;
     this._duplicateDetectionHistoryTimeWindow = config.duplicateDetectionHistoryTimeWindow;
     this._enableBatchedOperations = config.enableBatchedOperations;
     this._enableExpress = config.enableExpress;
     this._enablePartitioning = config.enablePartitioning;
+    this._expressEnabled = config.expressEnabled;
     this._id = config.id;
     this._maxMessageSizeInKilobytes = config.maxMessageSizeInKilobytes;
     this._maxSizeInMegabytes = config.maxSizeInMegabytes;
     this._name = config.name;
     this._namespaceId = config.namespaceId;
+    this._partitioningEnabled = config.partitioningEnabled;
     this._requiresDuplicateDetection = config.requiresDuplicateDetection;
     this._status = config.status;
     this._supportOrdering = config.supportOrdering;
@@ -358,6 +368,22 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get autoDeleteOnIdleInput() {
     return this._autoDeleteOnIdle;
+  }
+
+  // batched_operations_enabled - computed: true, optional: true, required: false
+  private _batchedOperationsEnabled?: boolean | cdktf.IResolvable; 
+  public get batchedOperationsEnabled() {
+    return this.getBooleanAttribute('batched_operations_enabled');
+  }
+  public set batchedOperationsEnabled(value: boolean | cdktf.IResolvable) {
+    this._batchedOperationsEnabled = value;
+  }
+  public resetBatchedOperationsEnabled() {
+    this._batchedOperationsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get batchedOperationsEnabledInput() {
+    return this._batchedOperationsEnabled;
   }
 
   // default_message_ttl - computed: true, optional: true, required: false
@@ -440,6 +466,22 @@ export class ServicebusTopic extends cdktf.TerraformResource {
     return this._enablePartitioning;
   }
 
+  // express_enabled - computed: true, optional: true, required: false
+  private _expressEnabled?: boolean | cdktf.IResolvable; 
+  public get expressEnabled() {
+    return this.getBooleanAttribute('express_enabled');
+  }
+  public set expressEnabled(value: boolean | cdktf.IResolvable) {
+    this._expressEnabled = value;
+  }
+  public resetExpressEnabled() {
+    this._expressEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressEnabledInput() {
+    return this._expressEnabled;
+  }
+
   // id - computed: true, optional: true, required: false
   private _id?: string; 
   public get id() {
@@ -514,6 +556,22 @@ export class ServicebusTopic extends cdktf.TerraformResource {
     return this._namespaceId;
   }
 
+  // partitioning_enabled - computed: true, optional: true, required: false
+  private _partitioningEnabled?: boolean | cdktf.IResolvable; 
+  public get partitioningEnabled() {
+    return this.getBooleanAttribute('partitioning_enabled');
+  }
+  public set partitioningEnabled(value: boolean | cdktf.IResolvable) {
+    this._partitioningEnabled = value;
+  }
+  public resetPartitioningEnabled() {
+    this._partitioningEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partitioningEnabledInput() {
+    return this._partitioningEnabled;
+  }
+
   // requires_duplicate_detection - computed: false, optional: true, required: false
   private _requiresDuplicateDetection?: boolean | cdktf.IResolvable; 
   public get requiresDuplicateDetection() {
@@ -585,16 +643,19 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_delete_on_idle: cdktf.stringToTerraform(this._autoDeleteOnIdle),
+      batched_operations_enabled: cdktf.booleanToTerraform(this._batchedOperationsEnabled),
       default_message_ttl: cdktf.stringToTerraform(this._defaultMessageTtl),
       duplicate_detection_history_time_window: cdktf.stringToTerraform(this._duplicateDetectionHistoryTimeWindow),
       enable_batched_operations: cdktf.booleanToTerraform(this._enableBatchedOperations),
       enable_express: cdktf.booleanToTerraform(this._enableExpress),
       enable_partitioning: cdktf.booleanToTerraform(this._enablePartitioning),
+      express_enabled: cdktf.booleanToTerraform(this._expressEnabled),
       id: cdktf.stringToTerraform(this._id),
       max_message_size_in_kilobytes: cdktf.numberToTerraform(this._maxMessageSizeInKilobytes),
       max_size_in_megabytes: cdktf.numberToTerraform(this._maxSizeInMegabytes),
       name: cdktf.stringToTerraform(this._name),
       namespace_id: cdktf.stringToTerraform(this._namespaceId),
+      partitioning_enabled: cdktf.booleanToTerraform(this._partitioningEnabled),
       requires_duplicate_detection: cdktf.booleanToTerraform(this._requiresDuplicateDetection),
       status: cdktf.stringToTerraform(this._status),
       support_ordering: cdktf.booleanToTerraform(this._supportOrdering),
@@ -609,6 +670,12 @@ export class ServicebusTopic extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      batched_operations_enabled: {
+        value: cdktf.booleanToHclTerraform(this._batchedOperationsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       default_message_ttl: {
         value: cdktf.stringToHclTerraform(this._defaultMessageTtl),
@@ -636,6 +703,12 @@ export class ServicebusTopic extends cdktf.TerraformResource {
       },
       enable_partitioning: {
         value: cdktf.booleanToHclTerraform(this._enablePartitioning),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      express_enabled: {
+        value: cdktf.booleanToHclTerraform(this._expressEnabled),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
@@ -669,6 +742,12 @@ export class ServicebusTopic extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      partitioning_enabled: {
+        value: cdktf.booleanToHclTerraform(this._partitioningEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       requires_duplicate_detection: {
         value: cdktf.booleanToHclTerraform(this._requiresDuplicateDetection),

@@ -1,3 +1,3 @@
 # `azurerm_custom_ip_prefix`
 
-Refer to the Terraform Registry for docs: [`azurerm_custom_ip_prefix`](https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/custom_ip_prefix).
+Refer to the Terraform Registry for docs: [`azurerm_custom_ip_prefix`](https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/custom_ip_prefix).
