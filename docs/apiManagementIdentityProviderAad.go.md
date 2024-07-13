@@ -4,7 +4,7 @@
 
 ### ApiManagementIdentityProviderAad <a name="ApiManagementIdentityProviderAad" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad azurerm_api_management_identity_provider_aad}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad azurerm_api_management_identity_provider_aad}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.Initializer"></a>
 
@@ -74,6 +74,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.putTimeouts">PutTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.resetClientLibrary">ResetClientLibrary</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.resetSigninTenant">ResetSigninTenant</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
@@ -380,6 +381,12 @@ func PutTimeouts(value ApiManagementIdentityProviderAadTimeouts)
 
 ---
 
+##### `ResetClientLibrary` <a name="ResetClientLibrary" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.resetClientLibrary"></a>
+
+```go
+func ResetClientLibrary()
+```
+
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.resetId"></a>
 
 ```go
@@ -501,7 +508,7 @@ The construct id used in the generated config for the ApiManagementIdentityProvi
 
 The id of the existing ApiManagementIdentityProviderAad that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -535,6 +542,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.allowedTenantsInput">AllowedTenantsInput</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.apiManagementNameInput">ApiManagementNameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.clientIdInput">ClientIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.clientLibraryInput">ClientLibraryInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.clientSecretInput">ClientSecretInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.resourceGroupNameInput">ResourceGroupNameInput</a></code> | <code>*string</code> | *No description.* |
@@ -543,6 +551,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.allowedTenants">AllowedTenants</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.apiManagementName">ApiManagementName</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.clientId">ClientId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.clientLibrary">ClientLibrary</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.clientSecret">ClientSecret</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | *No description.* |
@@ -732,6 +741,16 @@ func ClientIdInput() *string
 
 ---
 
+##### `ClientLibraryInput`<sup>Optional</sup> <a name="ClientLibraryInput" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.clientLibraryInput"></a>
+
+```go
+func ClientLibraryInput() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `ClientSecretInput`<sup>Optional</sup> <a name="ClientSecretInput" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.clientSecretInput"></a>
 
 ```go
@@ -806,6 +825,16 @@ func ApiManagementName() *string
 
 ```go
 func ClientId() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ClientLibrary`<sup>Required</sup> <a name="ClientLibrary" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAad.property.clientLibrary"></a>
+
+```go
+func ClientLibrary() *string
 ```
 
 - *Type:* *string
@@ -892,6 +921,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementiden
 	ClientId: *string,
 	ClientSecret: *string,
 	ResourceGroupName: *string,
+	ClientLibrary: *string,
 	Id: *string,
 	SigninTenant: *string,
 	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeouts,
@@ -909,13 +939,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementiden
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.allowedTenants">AllowedTenants</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#allowed_tenants ApiManagementIdentityProviderAad#allowed_tenants}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.apiManagementName">ApiManagementName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#api_management_name ApiManagementIdentityProviderAad#api_management_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.clientId">ClientId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#client_id ApiManagementIdentityProviderAad#client_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.clientSecret">ClientSecret</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#client_secret ApiManagementIdentityProviderAad#client_secret}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#resource_group_name ApiManagementIdentityProviderAad#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#id ApiManagementIdentityProviderAad#id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.signinTenant">SigninTenant</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#signin_tenant ApiManagementIdentityProviderAad#signin_tenant}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.allowedTenants">AllowedTenants</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#allowed_tenants ApiManagementIdentityProviderAad#allowed_tenants}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.apiManagementName">ApiManagementName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#api_management_name ApiManagementIdentityProviderAad#api_management_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.clientId">ClientId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#client_id ApiManagementIdentityProviderAad#client_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.clientSecret">ClientSecret</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#client_secret ApiManagementIdentityProviderAad#client_secret}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#resource_group_name ApiManagementIdentityProviderAad#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.clientLibrary">ClientLibrary</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#client_library ApiManagementIdentityProviderAad#client_library}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#id ApiManagementIdentityProviderAad#id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.signinTenant">SigninTenant</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#signin_tenant ApiManagementIdentityProviderAad#signin_tenant}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeouts">ApiManagementIdentityProviderAadTimeouts</a></code> | timeouts block. |
 
 ---
@@ -998,7 +1029,7 @@ AllowedTenants *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#allowed_tenants ApiManagementIdentityProviderAad#allowed_tenants}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#allowed_tenants ApiManagementIdentityProviderAad#allowed_tenants}.
 
 ---
 
@@ -1010,7 +1041,7 @@ ApiManagementName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#api_management_name ApiManagementIdentityProviderAad#api_management_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#api_management_name ApiManagementIdentityProviderAad#api_management_name}.
 
 ---
 
@@ -1022,7 +1053,7 @@ ClientId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#client_id ApiManagementIdentityProviderAad#client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#client_id ApiManagementIdentityProviderAad#client_id}.
 
 ---
 
@@ -1034,7 +1065,7 @@ ClientSecret *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#client_secret ApiManagementIdentityProviderAad#client_secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#client_secret ApiManagementIdentityProviderAad#client_secret}.
 
 ---
 
@@ -1046,7 +1077,19 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#resource_group_name ApiManagementIdentityProviderAad#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#resource_group_name ApiManagementIdentityProviderAad#resource_group_name}.
+
+---
+
+##### `ClientLibrary`<sup>Optional</sup> <a name="ClientLibrary" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadConfig.property.clientLibrary"></a>
+
+```go
+ClientLibrary *string
+```
+
+- *Type:* *string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#client_library ApiManagementIdentityProviderAad#client_library}.
 
 ---
 
@@ -1058,7 +1101,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#id ApiManagementIdentityProviderAad#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#id ApiManagementIdentityProviderAad#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1073,7 +1116,7 @@ SigninTenant *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#signin_tenant ApiManagementIdentityProviderAad#signin_tenant}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#signin_tenant ApiManagementIdentityProviderAad#signin_tenant}.
 
 ---
 
@@ -1087,7 +1130,7 @@ Timeouts ApiManagementIdentityProviderAadTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#timeouts ApiManagementIdentityProviderAad#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#timeouts ApiManagementIdentityProviderAad#timeouts}
 
 ---
 
@@ -1110,10 +1153,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementiden
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#create ApiManagementIdentityProviderAad#create}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#delete ApiManagementIdentityProviderAad#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#read ApiManagementIdentityProviderAad#read}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#update ApiManagementIdentityProviderAad#update}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#create ApiManagementIdentityProviderAad#create}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#delete ApiManagementIdentityProviderAad#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#read ApiManagementIdentityProviderAad#read}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderAad.ApiManagementIdentityProviderAadTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#update ApiManagementIdentityProviderAad#update}. |
 
 ---
 
@@ -1125,7 +1168,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#create ApiManagementIdentityProviderAad#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#create ApiManagementIdentityProviderAad#create}.
 
 ---
 
@@ -1137,7 +1180,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#delete ApiManagementIdentityProviderAad#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#delete ApiManagementIdentityProviderAad#delete}.
 
 ---
 
@@ -1149,7 +1192,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#read ApiManagementIdentityProviderAad#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#read ApiManagementIdentityProviderAad#read}.
 
 ---
 
@@ -1161,7 +1204,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/api_management_identity_provider_aad#update ApiManagementIdentityProviderAad#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/api_management_identity_provider_aad#update ApiManagementIdentityProviderAad#update}.
 
 ---
 

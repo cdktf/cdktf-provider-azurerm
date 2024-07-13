@@ -4,7 +4,7 @@
 
 ### RouteTable <a name="RouteTable" id="@cdktf/provider-azurerm.routeTable.RouteTable"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table azurerm_route_table}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table azurerm_route_table}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.routeTable.RouteTable.Initializer"></a>
 
@@ -24,6 +24,7 @@ routeTable.RouteTable(
   location: str,
   name: str,
   resource_group_name: str,
+  bgp_route_propagation_enabled: typing.Union[bool, IResolvable] = None,
   disable_bgp_route_propagation: typing.Union[bool, IResolvable] = None,
   id: str = None,
   route: typing.Union[IResolvable, typing.List[RouteTableRoute]] = None,
@@ -43,13 +44,14 @@ routeTable.RouteTable(
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#location RouteTable#location}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#name RouteTable#name}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#resource_group_name RouteTable#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.disableBgpRoutePropagation">disable_bgp_route_propagation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#disable_bgp_route_propagation RouteTable#disable_bgp_route_propagation}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#id RouteTable#id}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.route">route</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute">RouteTableRoute</a>]]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#route RouteTable#route}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#tags RouteTable#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#location RouteTable#location}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#name RouteTable#name}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#resource_group_name RouteTable#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.bgpRoutePropagationEnabled">bgp_route_propagation_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#bgp_route_propagation_enabled RouteTable#bgp_route_propagation_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.disableBgpRoutePropagation">disable_bgp_route_propagation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#disable_bgp_route_propagation RouteTable#disable_bgp_route_propagation}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#id RouteTable#id}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.route">route</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute">RouteTableRoute</a>]]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#route RouteTable#route}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#tags RouteTable#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableTimeouts">RouteTableTimeouts</a></code> | timeouts block. |
 
 ---
@@ -118,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#location RouteTable#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#location RouteTable#location}.
 
 ---
 
@@ -126,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#name RouteTable#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#name RouteTable#name}.
 
 ---
 
@@ -134,7 +136,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#resource_group_name RouteTable#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#resource_group_name RouteTable#resource_group_name}.
+
+---
+
+##### `bgp_route_propagation_enabled`<sup>Optional</sup> <a name="bgp_route_propagation_enabled" id="@cdktf/provider-azurerm.routeTable.RouteTable.Initializer.parameter.bgpRoutePropagationEnabled"></a>
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#bgp_route_propagation_enabled RouteTable#bgp_route_propagation_enabled}.
 
 ---
 
@@ -142,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#disable_bgp_route_propagation RouteTable#disable_bgp_route_propagation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#disable_bgp_route_propagation RouteTable#disable_bgp_route_propagation}.
 
 ---
 
@@ -150,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#id RouteTable#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#id RouteTable#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -161,7 +171,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute">RouteTableRoute</a>]]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#route RouteTable#route}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#route RouteTable#route}.
 
 ---
 
@@ -169,7 +179,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#tags RouteTable#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#tags RouteTable#tags}.
 
 ---
 
@@ -179,7 +189,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#timeouts RouteTable#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#timeouts RouteTable#timeouts}
 
 ---
 
@@ -212,6 +222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.putRoute">put_route</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.putTimeouts">put_timeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.resetBgpRoutePropagationEnabled">reset_bgp_route_propagation_enabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.resetDisableBgpRoutePropagation">reset_disable_bgp_route_propagation</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.resetId">reset_id</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.resetRoute">reset_route</a></code> | *No description.* |
@@ -574,7 +585,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#create RouteTable#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#create RouteTable#create}.
 
 ---
 
@@ -582,7 +593,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#delete RouteTable#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#delete RouteTable#delete}.
 
 ---
 
@@ -590,7 +601,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#read RouteTable#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#read RouteTable#read}.
 
 ---
 
@@ -598,9 +609,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#update RouteTable#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#update RouteTable#update}.
 
 ---
+
+##### `reset_bgp_route_propagation_enabled` <a name="reset_bgp_route_propagation_enabled" id="@cdktf/provider-azurerm.routeTable.RouteTable.resetBgpRoutePropagationEnabled"></a>
+
+```python
+def reset_bgp_route_propagation_enabled() -> None
+```
 
 ##### `reset_disable_bgp_route_propagation` <a name="reset_disable_bgp_route_propagation" id="@cdktf/provider-azurerm.routeTable.RouteTable.resetDisableBgpRoutePropagation"></a>
 
@@ -746,7 +763,7 @@ The construct id used in the generated config for the RouteTable to import.
 
 The id of the existing RouteTable that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -779,6 +796,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.route">route</a></code> | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableRouteList">RouteTableRouteList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.subnets">subnets</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableTimeoutsOutputReference">RouteTableTimeoutsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.bgpRoutePropagationEnabledInput">bgp_route_propagation_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.disableBgpRoutePropagationInput">disable_bgp_route_propagation_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
@@ -787,6 +805,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.routeInput">route_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute">RouteTableRoute</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeTable.RouteTableTimeouts">RouteTableTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.bgpRoutePropagationEnabled">bgp_route_propagation_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.disableBgpRoutePropagation">disable_bgp_route_propagation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTable.property.location">location</a></code> | <code>str</code> | *No description.* |
@@ -968,6 +987,16 @@ timeouts: RouteTableTimeoutsOutputReference
 
 ---
 
+##### `bgp_route_propagation_enabled_input`<sup>Optional</sup> <a name="bgp_route_propagation_enabled_input" id="@cdktf/provider-azurerm.routeTable.RouteTable.property.bgpRoutePropagationEnabledInput"></a>
+
+```python
+bgp_route_propagation_enabled_input: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+---
+
 ##### `disable_bgp_route_propagation_input`<sup>Optional</sup> <a name="disable_bgp_route_propagation_input" id="@cdktf/provider-azurerm.routeTable.RouteTable.property.disableBgpRoutePropagationInput"></a>
 
 ```python
@@ -1045,6 +1074,16 @@ timeouts_input: typing.Union[IResolvable, RouteTableTimeouts]
 ```
 
 - *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeTable.RouteTableTimeouts">RouteTableTimeouts</a>]
+
+---
+
+##### `bgp_route_propagation_enabled`<sup>Required</sup> <a name="bgp_route_propagation_enabled" id="@cdktf/provider-azurerm.routeTable.RouteTable.property.bgpRoutePropagationEnabled"></a>
+
+```python
+bgp_route_propagation_enabled: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
 
 ---
 
@@ -1146,6 +1185,7 @@ routeTable.RouteTableConfig(
   location: str,
   name: str,
   resource_group_name: str,
+  bgp_route_propagation_enabled: typing.Union[bool, IResolvable] = None,
   disable_bgp_route_propagation: typing.Union[bool, IResolvable] = None,
   id: str = None,
   route: typing.Union[IResolvable, typing.List[RouteTableRoute]] = None,
@@ -1165,13 +1205,14 @@ routeTable.RouteTableConfig(
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#location RouteTable#location}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#name RouteTable#name}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#resource_group_name RouteTable#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.disableBgpRoutePropagation">disable_bgp_route_propagation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#disable_bgp_route_propagation RouteTable#disable_bgp_route_propagation}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#id RouteTable#id}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.route">route</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute">RouteTableRoute</a>]]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#route RouteTable#route}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#tags RouteTable#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#location RouteTable#location}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#name RouteTable#name}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#resource_group_name RouteTable#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.bgpRoutePropagationEnabled">bgp_route_propagation_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#bgp_route_propagation_enabled RouteTable#bgp_route_propagation_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.disableBgpRoutePropagation">disable_bgp_route_propagation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#disable_bgp_route_propagation RouteTable#disable_bgp_route_propagation}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#id RouteTable#id}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.route">route</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute">RouteTableRoute</a>]]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#route RouteTable#route}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#tags RouteTable#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableTimeouts">RouteTableTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1254,7 +1295,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#location RouteTable#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#location RouteTable#location}.
 
 ---
 
@@ -1266,7 +1307,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#name RouteTable#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#name RouteTable#name}.
 
 ---
 
@@ -1278,7 +1319,19 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#resource_group_name RouteTable#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#resource_group_name RouteTable#resource_group_name}.
+
+---
+
+##### `bgp_route_propagation_enabled`<sup>Optional</sup> <a name="bgp_route_propagation_enabled" id="@cdktf/provider-azurerm.routeTable.RouteTableConfig.property.bgpRoutePropagationEnabled"></a>
+
+```python
+bgp_route_propagation_enabled: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#bgp_route_propagation_enabled RouteTable#bgp_route_propagation_enabled}.
 
 ---
 
@@ -1290,7 +1343,7 @@ disable_bgp_route_propagation: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#disable_bgp_route_propagation RouteTable#disable_bgp_route_propagation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#disable_bgp_route_propagation RouteTable#disable_bgp_route_propagation}.
 
 ---
 
@@ -1302,7 +1355,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#id RouteTable#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#id RouteTable#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1317,7 +1370,7 @@ route: typing.Union[IResolvable, typing.List[RouteTableRoute]]
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute">RouteTableRoute</a>]]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#route RouteTable#route}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#route RouteTable#route}.
 
 ---
 
@@ -1329,7 +1382,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#tags RouteTable#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#tags RouteTable#tags}.
 
 ---
 
@@ -1343,7 +1396,7 @@ timeouts: RouteTableTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#timeouts RouteTable#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#timeouts RouteTable#timeouts}
 
 ---
 
@@ -1366,10 +1419,10 @@ routeTable.RouteTableRoute(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute.property.addressPrefix">address_prefix</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#address_prefix RouteTable#address_prefix}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#name RouteTable#name}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute.property.nextHopInIpAddress">next_hop_in_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#next_hop_in_ip_address RouteTable#next_hop_in_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute.property.nextHopType">next_hop_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#next_hop_type RouteTable#next_hop_type}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute.property.addressPrefix">address_prefix</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#address_prefix RouteTable#address_prefix}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#name RouteTable#name}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute.property.nextHopInIpAddress">next_hop_in_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#next_hop_in_ip_address RouteTable#next_hop_in_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableRoute.property.nextHopType">next_hop_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#next_hop_type RouteTable#next_hop_type}. |
 
 ---
 
@@ -1381,7 +1434,7 @@ address_prefix: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#address_prefix RouteTable#address_prefix}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#address_prefix RouteTable#address_prefix}.
 
 ---
 
@@ -1393,7 +1446,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#name RouteTable#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#name RouteTable#name}.
 
 ---
 
@@ -1405,7 +1458,7 @@ next_hop_in_ip_address: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#next_hop_in_ip_address RouteTable#next_hop_in_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#next_hop_in_ip_address RouteTable#next_hop_in_ip_address}.
 
 ---
 
@@ -1417,7 +1470,7 @@ next_hop_type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#next_hop_type RouteTable#next_hop_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#next_hop_type RouteTable#next_hop_type}.
 
 ---
 
@@ -1440,10 +1493,10 @@ routeTable.RouteTableTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#create RouteTable#create}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#delete RouteTable#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#read RouteTable#read}. |
-| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#update RouteTable#update}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#create RouteTable#create}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#delete RouteTable#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#read RouteTable#read}. |
+| <code><a href="#@cdktf/provider-azurerm.routeTable.RouteTableTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#update RouteTable#update}. |
 
 ---
 
@@ -1455,7 +1508,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#create RouteTable#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#create RouteTable#create}.
 
 ---
 
@@ -1467,7 +1520,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#delete RouteTable#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#delete RouteTable#delete}.
 
 ---
 
@@ -1479,7 +1532,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#read RouteTable#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#read RouteTable#read}.
 
 ---
 
@@ -1491,7 +1544,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/route_table#update RouteTable#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/route_table#update RouteTable#update}.
 
 ---
 

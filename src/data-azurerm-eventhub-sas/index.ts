@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/data-sources/eventhub_sas
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/data-sources/eventhub_sas
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,15 +13,15 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermEventhubSasConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/data-sources/eventhub_sas#connection_string DataAzurermEventhubSas#connection_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/data-sources/eventhub_sas#connection_string DataAzurermEventhubSas#connection_string}
   */
   readonly connectionString: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/data-sources/eventhub_sas#expiry DataAzurermEventhubSas#expiry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/data-sources/eventhub_sas#expiry DataAzurermEventhubSas#expiry}
   */
   readonly expiry: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/data-sources/eventhub_sas#id DataAzurermEventhubSas#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/data-sources/eventhub_sas#id DataAzurermEventhubSas#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -30,13 +30,13 @@ export interface DataAzurermEventhubSasConfig extends cdktf.TerraformMetaArgumen
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/data-sources/eventhub_sas#timeouts DataAzurermEventhubSas#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/data-sources/eventhub_sas#timeouts DataAzurermEventhubSas#timeouts}
   */
   readonly timeouts?: DataAzurermEventhubSasTimeouts;
 }
 export interface DataAzurermEventhubSasTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/data-sources/eventhub_sas#read DataAzurermEventhubSas#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/data-sources/eventhub_sas#read DataAzurermEventhubSas#read}
   */
   readonly read?: string;
 }
@@ -130,7 +130,7 @@ export class DataAzurermEventhubSasTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/data-sources/eventhub_sas azurerm_eventhub_sas}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/data-sources/eventhub_sas azurerm_eventhub_sas}
 */
 export class DataAzurermEventhubSas extends cdktf.TerraformDataSource {
 
@@ -146,7 +146,7 @@ export class DataAzurermEventhubSas extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermEventhubSas resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermEventhubSas to import
-  * @param importFromId The id of the existing DataAzurermEventhubSas that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/data-sources/eventhub_sas#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermEventhubSas that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/data-sources/eventhub_sas#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermEventhubSas to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -158,7 +158,7 @@ export class DataAzurermEventhubSas extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/data-sources/eventhub_sas azurerm_eventhub_sas} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/data-sources/eventhub_sas azurerm_eventhub_sas} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -169,7 +169,7 @@ export class DataAzurermEventhubSas extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_eventhub_sas',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.111.0',
+        providerVersion: '3.112.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface CdnFrontdoorEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint#cdn_frontdoor_profile_id CdnFrontdoorEndpoint#cdn_frontdoor_profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint#cdn_frontdoor_profile_id CdnFrontdoorEndpoint#cdn_frontdoor_profile_id}
   */
   readonly cdnFrontdoorProfileId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint#enabled CdnFrontdoorEndpoint#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint#enabled CdnFrontdoorEndpoint#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint#id CdnFrontdoorEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint#id CdnFrontdoorEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint#name CdnFrontdoorEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint#name CdnFrontdoorEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint#tags CdnFrontdoorEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint#tags CdnFrontdoorEndpoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint#timeouts CdnFrontdoorEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint#timeouts CdnFrontdoorEndpoint#timeouts}
   */
   readonly timeouts?: CdnFrontdoorEndpointTimeouts;
 }
 export interface CdnFrontdoorEndpointTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint#create CdnFrontdoorEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint#create CdnFrontdoorEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint#delete CdnFrontdoorEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint#delete CdnFrontdoorEndpoint#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint#read CdnFrontdoorEndpoint#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint#read CdnFrontdoorEndpoint#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint#update CdnFrontdoorEndpoint#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint#update CdnFrontdoorEndpoint#update}
   */
   readonly update?: string;
 }
@@ -237,7 +237,7 @@ export class CdnFrontdoorEndpointTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint azurerm_cdn_frontdoor_endpoint}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint azurerm_cdn_frontdoor_endpoint}
 */
 export class CdnFrontdoorEndpoint extends cdktf.TerraformResource {
 
@@ -253,7 +253,7 @@ export class CdnFrontdoorEndpoint extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CdnFrontdoorEndpoint resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CdnFrontdoorEndpoint to import
-  * @param importFromId The id of the existing CdnFrontdoorEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CdnFrontdoorEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CdnFrontdoorEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -265,7 +265,7 @@ export class CdnFrontdoorEndpoint extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.111.0/docs/resources/cdn_frontdoor_endpoint azurerm_cdn_frontdoor_endpoint} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/cdn_frontdoor_endpoint azurerm_cdn_frontdoor_endpoint} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -276,7 +276,7 @@ export class CdnFrontdoorEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cdn_frontdoor_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.111.0',
+        providerVersion: '3.112.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

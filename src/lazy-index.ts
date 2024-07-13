@@ -323,6 +323,8 @@ Object.defineProperty(exports, 'dedicatedHost', { get: function () { return requ
 Object.defineProperty(exports, 'dedicatedHostGroup', { get: function () { return require('./dedicated-host-group'); } });
 Object.defineProperty(exports, 'devCenter', { get: function () { return require('./dev-center'); } });
 Object.defineProperty(exports, 'devCenterCatalog', { get: function () { return require('./dev-center-catalog'); } });
+Object.defineProperty(exports, 'devCenterDevBoxDefinition', { get: function () { return require('./dev-center-dev-box-definition'); } });
+Object.defineProperty(exports, 'devCenterEnvironmentType', { get: function () { return require('./dev-center-environment-type'); } });
 Object.defineProperty(exports, 'devCenterGallery', { get: function () { return require('./dev-center-gallery'); } });
 Object.defineProperty(exports, 'devCenterProject', { get: function () { return require('./dev-center-project'); } });
 Object.defineProperty(exports, 'devTestGlobalVmShutdownSchedule', { get: function () { return require('./dev-test-global-vm-shutdown-schedule'); } });
@@ -1060,6 +1062,8 @@ Object.defineProperty(exports, 'virtualMachineExtension', { get: function () { r
 Object.defineProperty(exports, 'virtualMachineGalleryApplicationAssignment', { get: function () { return require('./virtual-machine-gallery-application-assignment'); } });
 Object.defineProperty(exports, 'virtualMachineImplicitDataDiskFromSource', { get: function () { return require('./virtual-machine-implicit-data-disk-from-source'); } });
 Object.defineProperty(exports, 'virtualMachinePacketCapture', { get: function () { return require('./virtual-machine-packet-capture'); } });
+Object.defineProperty(exports, 'virtualMachineRestorePoint', { get: function () { return require('./virtual-machine-restore-point'); } });
+Object.defineProperty(exports, 'virtualMachineRestorePointCollection', { get: function () { return require('./virtual-machine-restore-point-collection'); } });
 Object.defineProperty(exports, 'virtualMachineRunCommand', { get: function () { return require('./virtual-machine-run-command'); } });
 Object.defineProperty(exports, 'virtualMachineScaleSet', { get: function () { return require('./virtual-machine-scale-set'); } });
 Object.defineProperty(exports, 'virtualMachineScaleSetExtension', { get: function () { return require('./virtual-machine-scale-set-extension'); } });
@@ -1213,6 +1217,7 @@ Object.defineProperty(exports, 'dataAzurermDnsZone', { get: function () { return
 Object.defineProperty(exports, 'dataAzurermElasticCloudElasticsearch', { get: function () { return require('./data-azurerm-elastic-cloud-elasticsearch'); } });
 Object.defineProperty(exports, 'dataAzurermElasticSan', { get: function () { return require('./data-azurerm-elastic-san'); } });
 Object.defineProperty(exports, 'dataAzurermElasticSanVolumeGroup', { get: function () { return require('./data-azurerm-elastic-san-volume-group'); } });
+Object.defineProperty(exports, 'dataAzurermElasticSanVolumeSnapshot', { get: function () { return require('./data-azurerm-elastic-san-volume-snapshot'); } });
 Object.defineProperty(exports, 'dataAzurermEventgridDomain', { get: function () { return require('./data-azurerm-eventgrid-domain'); } });
 Object.defineProperty(exports, 'dataAzurermEventgridDomainTopic', { get: function () { return require('./data-azurerm-eventgrid-domain-topic'); } });
 Object.defineProperty(exports, 'dataAzurermEventgridSystemTopic', { get: function () { return require('./data-azurerm-eventgrid-system-topic'); } });
