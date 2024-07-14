@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.112.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server
 // generated from terraform resource schema
 
