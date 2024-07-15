@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.redisCache.RedisCache.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 rediscache.NewRedisCache(scope Construct, id *string, config RedisCacheConfig) RedisCache
 ```
@@ -549,7 +549,7 @@ func ResetZones()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.redisCache.RedisCache.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 rediscache.RedisCache_IsConstruct(x interface{}) *bool
 ```
@@ -581,7 +581,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.redisCache.RedisCache.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 rediscache.RedisCache_IsTerraformElement(x interface{}) *bool
 ```
@@ -595,7 +595,7 @@ rediscache.RedisCache_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.redisCache.RedisCache.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 rediscache.RedisCache_IsTerraformResource(x interface{}) *bool
 ```
@@ -609,7 +609,7 @@ rediscache.RedisCache_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.redisCache.RedisCache.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 rediscache.RedisCache_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1421,7 +1421,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.redisCache.RedisCacheConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 &rediscache.RedisCacheConfig {
 	Connection: interface{},
@@ -1439,12 +1439,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
 	SkuName: *string,
 	EnableNonSslPort: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.redisCache.RedisCacheIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.redisCache.RedisCacheIdentity,
 	MinimumTlsVersion: *string,
 	PatchSchedule: interface{},
 	PrivateStaticIpAddress: *string,
 	PublicNetworkAccessEnabled: interface{},
-	RedisConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.redisCache.RedisCacheRedisConfiguration,
+	RedisConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.redisCache.RedisCacheRedisConfiguration,
 	RedisVersion: *string,
 	ReplicasPerMaster: *f64,
 	ReplicasPerPrimary: *f64,
@@ -1452,7 +1452,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
 	SubnetId: *string,
 	Tags: *map[string]*string,
 	TenantSettings: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.redisCache.RedisCacheTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.redisCache.RedisCacheTimeouts,
 	Zones: *[]*string,
 }
 ```
@@ -1856,7 +1856,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.redisCache.RedisCacheIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 &rediscache.RedisCacheIdentity {
 	Type: *string,
@@ -1902,7 +1902,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.redisCache.RedisCachePatchSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 &rediscache.RedisCachePatchSchedule {
 	DayOfWeek: *string,
@@ -1962,7 +1962,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 &rediscache.RedisCacheRedisConfiguration {
 	ActiveDirectoryAuthenticationEnabled: interface{},
@@ -2204,7 +2204,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.redisCache.RedisCacheTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 &rediscache.RedisCacheTimeouts {
 	Create: *string,
@@ -2280,7 +2280,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.redisCache.RedisCacheIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 rediscache.NewRedisCacheIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RedisCacheIdentityOutputReference
 ```
@@ -2602,7 +2602,7 @@ func InternalValue() RedisCacheIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.redisCache.RedisCachePatchScheduleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 rediscache.NewRedisCachePatchScheduleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RedisCachePatchScheduleList
 ```
@@ -2762,7 +2762,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.redisCache.RedisCachePatchScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 rediscache.NewRedisCachePatchScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) RedisCachePatchScheduleOutputReference
 ```
@@ -3109,7 +3109,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 rediscache.NewRedisCacheRedisConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RedisCacheRedisConfigurationOutputReference
 ```
@@ -3833,7 +3833,7 @@ func InternalValue() RedisCacheRedisConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.redisCache.RedisCacheTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/rediscache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscache"
 
 rediscache.NewRedisCacheTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RedisCacheTimeoutsOutputReference
 ```
