@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/data_factory_linked_service_data_lake_storage_gen2
 // generated from terraform resource schema
 
