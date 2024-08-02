@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/data-sources/role_management_policy
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/data-sources/role_management_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermRoleManagementPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/data-sources/role_management_policy#id DataAzurermRoleManagementPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/data-sources/role_management_policy#id DataAzurermRoleManagementPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,19 +22,19 @@ export interface DataAzurermRoleManagementPolicyConfig extends cdktf.TerraformMe
   /**
   * ID of the Azure Role to which this policy is assigned
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/data-sources/role_management_policy#role_definition_id DataAzurermRoleManagementPolicy#role_definition_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/data-sources/role_management_policy#role_definition_id DataAzurermRoleManagementPolicy#role_definition_id}
   */
   readonly roleDefinitionId: string;
   /**
   * The scope of the role to which this policy will apply
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/data-sources/role_management_policy#scope DataAzurermRoleManagementPolicy#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/data-sources/role_management_policy#scope DataAzurermRoleManagementPolicy#scope}
   */
   readonly scope: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/data-sources/role_management_policy#timeouts DataAzurermRoleManagementPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/data-sources/role_management_policy#timeouts DataAzurermRoleManagementPolicy#timeouts}
   */
   readonly timeouts?: DataAzurermRoleManagementPolicyTimeouts;
 }
@@ -1594,7 +1594,7 @@ export class DataAzurermRoleManagementPolicyNotificationRulesList extends cdktf.
 }
 export interface DataAzurermRoleManagementPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/data-sources/role_management_policy#read DataAzurermRoleManagementPolicy#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/data-sources/role_management_policy#read DataAzurermRoleManagementPolicy#read}
   */
   readonly read?: string;
 }
@@ -1688,7 +1688,7 @@ export class DataAzurermRoleManagementPolicyTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/data-sources/role_management_policy azurerm_role_management_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/data-sources/role_management_policy azurerm_role_management_policy}
 */
 export class DataAzurermRoleManagementPolicy extends cdktf.TerraformDataSource {
 
@@ -1704,7 +1704,7 @@ export class DataAzurermRoleManagementPolicy extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermRoleManagementPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermRoleManagementPolicy to import
-  * @param importFromId The id of the existing DataAzurermRoleManagementPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/data-sources/role_management_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermRoleManagementPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/data-sources/role_management_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermRoleManagementPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1716,7 +1716,7 @@ export class DataAzurermRoleManagementPolicy extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/data-sources/role_management_policy azurerm_role_management_policy} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/data-sources/role_management_policy azurerm_role_management_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1727,7 +1727,7 @@ export class DataAzurermRoleManagementPolicy extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_role_management_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.113.0',
+        providerVersion: '3.114.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -326,6 +326,7 @@ Object.defineProperty(exports, 'devCenterCatalog', { get: function () { return r
 Object.defineProperty(exports, 'devCenterDevBoxDefinition', { get: function () { return require('./dev-center-dev-box-definition'); } });
 Object.defineProperty(exports, 'devCenterEnvironmentType', { get: function () { return require('./dev-center-environment-type'); } });
 Object.defineProperty(exports, 'devCenterGallery', { get: function () { return require('./dev-center-gallery'); } });
+Object.defineProperty(exports, 'devCenterNetworkConnection', { get: function () { return require('./dev-center-network-connection'); } });
 Object.defineProperty(exports, 'devCenterProject', { get: function () { return require('./dev-center-project'); } });
 Object.defineProperty(exports, 'devTestGlobalVmShutdownSchedule', { get: function () { return require('./dev-test-global-vm-shutdown-schedule'); } });
 Object.defineProperty(exports, 'devTestLab', { get: function () { return require('./dev-test-lab'); } });
@@ -935,6 +936,7 @@ Object.defineProperty(exports, 'sqlServer', { get: function () { return require(
 Object.defineProperty(exports, 'sqlVirtualNetworkRule', { get: function () { return require('./sql-virtual-network-rule'); } });
 Object.defineProperty(exports, 'sshPublicKey', { get: function () { return require('./ssh-public-key'); } });
 Object.defineProperty(exports, 'stackHciCluster', { get: function () { return require('./stack-hci-cluster'); } });
+Object.defineProperty(exports, 'stackHciLogicalNetwork', { get: function () { return require('./stack-hci-logical-network'); } });
 Object.defineProperty(exports, 'staticSite', { get: function () { return require('./static-site'); } });
 Object.defineProperty(exports, 'staticSiteCustomDomain', { get: function () { return require('./static-site-custom-domain'); } });
 Object.defineProperty(exports, 'staticWebApp', { get: function () { return require('./static-web-app'); } });
