@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,56 +8,56 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualHubRouteTableConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#id VirtualHubRouteTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#id VirtualHubRouteTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#labels VirtualHubRouteTable#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#labels VirtualHubRouteTable#labels}
   */
   readonly labels?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#name VirtualHubRouteTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#name VirtualHubRouteTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#virtual_hub_id VirtualHubRouteTable#virtual_hub_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#virtual_hub_id VirtualHubRouteTable#virtual_hub_id}
   */
   readonly virtualHubId: string;
   /**
   * route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#route VirtualHubRouteTable#route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#route VirtualHubRouteTable#route}
   */
   readonly route?: VirtualHubRouteTableRoute[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#timeouts VirtualHubRouteTable#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#timeouts VirtualHubRouteTable#timeouts}
   */
   readonly timeouts?: VirtualHubRouteTableTimeouts;
 }
 export interface VirtualHubRouteTableRoute {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#destinations VirtualHubRouteTable#destinations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#destinations VirtualHubRouteTable#destinations}
   */
   readonly destinations: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#destinations_type VirtualHubRouteTable#destinations_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#destinations_type VirtualHubRouteTable#destinations_type}
   */
   readonly destinationsType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#name VirtualHubRouteTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#name VirtualHubRouteTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#next_hop VirtualHubRouteTable#next_hop}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#next_hop VirtualHubRouteTable#next_hop}
   */
   readonly nextHop: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#next_hop_type VirtualHubRouteTable#next_hop_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#next_hop_type VirtualHubRouteTable#next_hop_type}
   */
   readonly nextHopType?: string;
 }
@@ -282,19 +277,19 @@ export class VirtualHubRouteTableRouteList extends cdktf.ComplexList {
 }
 export interface VirtualHubRouteTableTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#create VirtualHubRouteTable#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#create VirtualHubRouteTable#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#delete VirtualHubRouteTable#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#delete VirtualHubRouteTable#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#read VirtualHubRouteTable#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#read VirtualHubRouteTable#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#update VirtualHubRouteTable#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#update VirtualHubRouteTable#update}
   */
   readonly update?: string;
 }
@@ -475,7 +470,7 @@ export class VirtualHubRouteTableTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table azurerm_virtual_hub_route_table}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table azurerm_virtual_hub_route_table}
 */
 export class VirtualHubRouteTable extends cdktf.TerraformResource {
 
@@ -491,7 +486,7 @@ export class VirtualHubRouteTable extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a VirtualHubRouteTable resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the VirtualHubRouteTable to import
-  * @param importFromId The id of the existing VirtualHubRouteTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing VirtualHubRouteTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the VirtualHubRouteTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -503,7 +498,7 @@ export class VirtualHubRouteTable extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.113.0/docs/resources/virtual_hub_route_table azurerm_virtual_hub_route_table} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_hub_route_table azurerm_virtual_hub_route_table} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -514,7 +509,7 @@ export class VirtualHubRouteTable extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_hub_route_table',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.113.0',
+        providerVersion: '3.114.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
