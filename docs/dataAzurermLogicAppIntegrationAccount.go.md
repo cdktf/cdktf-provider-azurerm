@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLogicAppIntegrationAccount.DataAzurermLogicAppIntegrationAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlogicappintegrationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlogicappintegrationaccount"
 
 dataazurermlogicappintegrationaccount.NewDataAzurermLogicAppIntegrationAccount(scope Construct, id *string, config DataAzurermLogicAppIntegrationAccountConfig) DataAzurermLogicAppIntegrationAccount
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermLogicAppIntegrationAccount.DataAzurermLogicAppIntegrationAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlogicappintegrationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlogicappintegrationaccount"
 
 dataazurermlogicappintegrationaccount.DataAzurermLogicAppIntegrationAccount_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermLogicAppIntegrationAccount.DataAzurermLogicAppIntegrationAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlogicappintegrationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlogicappintegrationaccount"
 
 dataazurermlogicappintegrationaccount.DataAzurermLogicAppIntegrationAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermlogicappintegrationaccount.DataAzurermLogicAppIntegrationAccount_IsTe
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermLogicAppIntegrationAccount.DataAzurermLogicAppIntegrationAccount.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlogicappintegrationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlogicappintegrationaccount"
 
 dataazurermlogicappintegrationaccount.DataAzurermLogicAppIntegrationAccount_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermlogicappintegrationaccount.DataAzurermLogicAppIntegrationAccount_IsTe
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermLogicAppIntegrationAccount.DataAzurermLogicAppIntegrationAccount.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlogicappintegrationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlogicappintegrationaccount"
 
 dataazurermlogicappintegrationaccount.DataAzurermLogicAppIntegrationAccount_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -691,7 +691,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLogicAppIntegrationAccount.DataAzurermLogicAppIntegrationAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlogicappintegrationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlogicappintegrationaccount"
 
 &dataazurermlogicappintegrationaccount.DataAzurermLogicAppIntegrationAccountConfig {
 	Connection: interface{},
@@ -704,7 +704,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlogica
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermLogicAppIntegrationAccount.DataAzurermLogicAppIntegrationAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermLogicAppIntegrationAccount.DataAzurermLogicAppIntegrationAccountTimeouts,
 }
 ```
 
@@ -854,7 +854,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLogicAppIntegrationAccount.DataAzurermLogicAppIntegrationAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlogicappintegrationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlogicappintegrationaccount"
 
 &dataazurermlogicappintegrationaccount.DataAzurermLogicAppIntegrationAccountTimeouts {
 	Read: *string,
@@ -888,7 +888,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLogicAppIntegrationAccount.DataAzurermLogicAppIntegrationAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermlogicappintegrationaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlogicappintegrationaccount"
 
 dataazurermlogicappintegrationaccount.NewDataAzurermLogicAppIntegrationAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermLogicAppIntegrationAccountTimeoutsOutputReference
 ```
