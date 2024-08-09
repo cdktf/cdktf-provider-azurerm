@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.analysisServicesServer.AnalysisServicesServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/analysisservicesserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/analysisservicesserver"
 
 analysisservicesserver.NewAnalysisServicesServer(scope Construct, id *string, config AnalysisServicesServerConfig) AnalysisServicesServer
 ```
@@ -467,7 +467,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.analysisServicesServer.AnalysisServicesServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/analysisservicesserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/analysisservicesserver"
 
 analysisservicesserver.AnalysisServicesServer_IsConstruct(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.analysisServicesServer.AnalysisServicesServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/analysisservicesserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/analysisservicesserver"
 
 analysisservicesserver.AnalysisServicesServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -513,7 +513,7 @@ analysisservicesserver.AnalysisServicesServer_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.analysisServicesServer.AnalysisServicesServer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/analysisservicesserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/analysisservicesserver"
 
 analysisservicesserver.AnalysisServicesServer_IsTerraformResource(x interface{}) *bool
 ```
@@ -527,7 +527,7 @@ analysisservicesserver.AnalysisServicesServer_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.analysisServicesServer.AnalysisServicesServer.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/analysisservicesserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/analysisservicesserver"
 
 analysisservicesserver.AnalysisServicesServer_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1053,7 +1053,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.analysisServicesServer.AnalysisServicesServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/analysisservicesserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/analysisservicesserver"
 
 &analysisservicesserver.AnalysisServicesServerConfig {
 	Connection: interface{},
@@ -1075,7 +1075,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/analysisservicesserve
 	PowerBiServiceEnabled: interface{},
 	QuerypoolConnectionMode: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.analysisServicesServer.AnalysisServicesServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.analysisServicesServer.AnalysisServicesServerTimeouts,
 }
 ```
 
@@ -1344,7 +1344,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.analysisServicesServer.AnalysisServicesServerIpv4FirewallRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/analysisservicesserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/analysisservicesserver"
 
 &analysisservicesserver.AnalysisServicesServerIpv4FirewallRule {
 	Name: *string,
@@ -1404,7 +1404,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.analysisServicesServer.AnalysisServicesServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/analysisservicesserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/analysisservicesserver"
 
 &analysisservicesserver.AnalysisServicesServerTimeouts {
 	Create: *string,
@@ -1480,7 +1480,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.analysisServicesServer.AnalysisServicesServerIpv4FirewallRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/analysisservicesserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/analysisservicesserver"
 
 analysisservicesserver.NewAnalysisServicesServerIpv4FirewallRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AnalysisServicesServerIpv4FirewallRuleList
 ```
@@ -1640,7 +1640,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.analysisServicesServer.AnalysisServicesServerIpv4FirewallRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/analysisservicesserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/analysisservicesserver"
 
 analysisservicesserver.NewAnalysisServicesServerIpv4FirewallRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AnalysisServicesServerIpv4FirewallRuleOutputReference
 ```
@@ -1973,7 +1973,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.analysisServicesServer.AnalysisServicesServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/analysisservicesserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/analysisservicesserver"
 
 analysisservicesserver.NewAnalysisServicesServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AnalysisServicesServerTimeoutsOutputReference
 ```
