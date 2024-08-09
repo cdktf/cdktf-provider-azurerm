@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/portal_tenant_configuration
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/portal_tenant_configuration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,38 +13,38 @@ import * as cdktf from 'cdktf';
 
 export interface PortalTenantConfigurationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/portal_tenant_configuration#id PortalTenantConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/portal_tenant_configuration#id PortalTenantConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/portal_tenant_configuration#private_markdown_storage_enforced PortalTenantConfiguration#private_markdown_storage_enforced}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/portal_tenant_configuration#private_markdown_storage_enforced PortalTenantConfiguration#private_markdown_storage_enforced}
   */
   readonly privateMarkdownStorageEnforced: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/portal_tenant_configuration#timeouts PortalTenantConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/portal_tenant_configuration#timeouts PortalTenantConfiguration#timeouts}
   */
   readonly timeouts?: PortalTenantConfigurationTimeouts;
 }
 export interface PortalTenantConfigurationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/portal_tenant_configuration#create PortalTenantConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/portal_tenant_configuration#create PortalTenantConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/portal_tenant_configuration#delete PortalTenantConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/portal_tenant_configuration#delete PortalTenantConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/portal_tenant_configuration#read PortalTenantConfiguration#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/portal_tenant_configuration#read PortalTenantConfiguration#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/portal_tenant_configuration#update PortalTenantConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/portal_tenant_configuration#update PortalTenantConfiguration#update}
   */
   readonly update?: string;
 }
@@ -225,7 +225,7 @@ export class PortalTenantConfigurationTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/portal_tenant_configuration azurerm_portal_tenant_configuration}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/portal_tenant_configuration azurerm_portal_tenant_configuration}
 */
 export class PortalTenantConfiguration extends cdktf.TerraformResource {
 
@@ -241,7 +241,7 @@ export class PortalTenantConfiguration extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a PortalTenantConfiguration resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the PortalTenantConfiguration to import
-  * @param importFromId The id of the existing PortalTenantConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/portal_tenant_configuration#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing PortalTenantConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/portal_tenant_configuration#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the PortalTenantConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -253,7 +253,7 @@ export class PortalTenantConfiguration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/portal_tenant_configuration azurerm_portal_tenant_configuration} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/portal_tenant_configuration azurerm_portal_tenant_configuration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -264,7 +264,7 @@ export class PortalTenantConfiguration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_portal_tenant_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.114.0',
+        providerVersion: '3.115.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

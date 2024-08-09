@@ -1,3 +1,3 @@
 # `azurerm_virtual_machine`
 
-Refer to the Terraform Registry for docs: [`azurerm_virtual_machine`](https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/virtual_machine).
+Refer to the Terraform Registry for docs: [`azurerm_virtual_machine`](https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/virtual_machine).
