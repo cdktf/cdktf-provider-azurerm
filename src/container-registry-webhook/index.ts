@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,74 +8,74 @@ import * as cdktf from 'cdktf';
 
 export interface ContainerRegistryWebhookConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#actions ContainerRegistryWebhook#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#actions ContainerRegistryWebhook#actions}
   */
   readonly actions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#custom_headers ContainerRegistryWebhook#custom_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#custom_headers ContainerRegistryWebhook#custom_headers}
   */
   readonly customHeaders?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#id ContainerRegistryWebhook#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#id ContainerRegistryWebhook#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#location ContainerRegistryWebhook#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#location ContainerRegistryWebhook#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#name ContainerRegistryWebhook#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#name ContainerRegistryWebhook#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#registry_name ContainerRegistryWebhook#registry_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#registry_name ContainerRegistryWebhook#registry_name}
   */
   readonly registryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#resource_group_name ContainerRegistryWebhook#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#resource_group_name ContainerRegistryWebhook#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#scope ContainerRegistryWebhook#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#scope ContainerRegistryWebhook#scope}
   */
   readonly scope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#service_uri ContainerRegistryWebhook#service_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#service_uri ContainerRegistryWebhook#service_uri}
   */
   readonly serviceUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#status ContainerRegistryWebhook#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#status ContainerRegistryWebhook#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#tags ContainerRegistryWebhook#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#tags ContainerRegistryWebhook#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#timeouts ContainerRegistryWebhook#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#timeouts ContainerRegistryWebhook#timeouts}
   */
   readonly timeouts?: ContainerRegistryWebhookTimeouts;
 }
 export interface ContainerRegistryWebhookTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#create ContainerRegistryWebhook#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#create ContainerRegistryWebhook#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#delete ContainerRegistryWebhook#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#delete ContainerRegistryWebhook#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#read ContainerRegistryWebhook#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#read ContainerRegistryWebhook#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#update ContainerRegistryWebhook#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#update ContainerRegistryWebhook#update}
   */
   readonly update?: string;
 }
@@ -261,7 +256,7 @@ export class ContainerRegistryWebhookTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook azurerm_container_registry_webhook}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook azurerm_container_registry_webhook}
 */
 export class ContainerRegistryWebhook extends cdktf.TerraformResource {
 
@@ -277,7 +272,7 @@ export class ContainerRegistryWebhook extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ContainerRegistryWebhook resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerRegistryWebhook to import
-  * @param importFromId The id of the existing ContainerRegistryWebhook that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerRegistryWebhook that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerRegistryWebhook to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -289,7 +284,7 @@ export class ContainerRegistryWebhook extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/container_registry_webhook azurerm_container_registry_webhook} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/container_registry_webhook azurerm_container_registry_webhook} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -300,7 +295,7 @@ export class ContainerRegistryWebhook extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_registry_webhook',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.114.0',
+        providerVersion: '3.115.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

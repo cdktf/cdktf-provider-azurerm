@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +10,17 @@ export interface FunctionAppHybridConnectionConfig extends cdktf.TerraformMetaAr
   /**
   * The ID of the Function App for this Hybrid Connection.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection#function_app_id FunctionAppHybridConnection#function_app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection#function_app_id FunctionAppHybridConnection#function_app_id}
   */
   readonly functionAppId: string;
   /**
   * The hostname of the endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection#hostname FunctionAppHybridConnection#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection#hostname FunctionAppHybridConnection#hostname}
   */
   readonly hostname: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection#id FunctionAppHybridConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection#id FunctionAppHybridConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,43 +29,43 @@ export interface FunctionAppHybridConnectionConfig extends cdktf.TerraformMetaAr
   /**
   * The port to use for the endpoint
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection#port FunctionAppHybridConnection#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection#port FunctionAppHybridConnection#port}
   */
   readonly port: number;
   /**
   * The ID of the Relay Hybrid Connection to use.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection#relay_id FunctionAppHybridConnection#relay_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection#relay_id FunctionAppHybridConnection#relay_id}
   */
   readonly relayId: string;
   /**
   * The name of the Relay key with `Send` permission to use. Defaults to `RootManageSharedAccessKey`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection#send_key_name FunctionAppHybridConnection#send_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection#send_key_name FunctionAppHybridConnection#send_key_name}
   */
   readonly sendKeyName?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection#timeouts FunctionAppHybridConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection#timeouts FunctionAppHybridConnection#timeouts}
   */
   readonly timeouts?: FunctionAppHybridConnectionTimeouts;
 }
 export interface FunctionAppHybridConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection#create FunctionAppHybridConnection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection#create FunctionAppHybridConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection#delete FunctionAppHybridConnection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection#delete FunctionAppHybridConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection#read FunctionAppHybridConnection#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection#read FunctionAppHybridConnection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection#update FunctionAppHybridConnection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection#update FunctionAppHybridConnection#update}
   */
   readonly update?: string;
 }
@@ -251,7 +246,7 @@ export class FunctionAppHybridConnectionTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection azurerm_function_app_hybrid_connection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection azurerm_function_app_hybrid_connection}
 */
 export class FunctionAppHybridConnection extends cdktf.TerraformResource {
 
@@ -267,7 +262,7 @@ export class FunctionAppHybridConnection extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FunctionAppHybridConnection resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FunctionAppHybridConnection to import
-  * @param importFromId The id of the existing FunctionAppHybridConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FunctionAppHybridConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FunctionAppHybridConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -279,7 +274,7 @@ export class FunctionAppHybridConnection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/function_app_hybrid_connection azurerm_function_app_hybrid_connection} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/function_app_hybrid_connection azurerm_function_app_hybrid_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -290,7 +285,7 @@ export class FunctionAppHybridConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_function_app_hybrid_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.114.0',
+        providerVersion: '3.115.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

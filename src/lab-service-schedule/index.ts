@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,64 +8,64 @@ import * as cdktf from 'cdktf';
 
 export interface LabServiceScheduleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#id LabServiceSchedule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#id LabServiceSchedule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#lab_id LabServiceSchedule#lab_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#lab_id LabServiceSchedule#lab_id}
   */
   readonly labId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#name LabServiceSchedule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#name LabServiceSchedule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#notes LabServiceSchedule#notes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#notes LabServiceSchedule#notes}
   */
   readonly notes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#start_time LabServiceSchedule#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#start_time LabServiceSchedule#start_time}
   */
   readonly startTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#stop_time LabServiceSchedule#stop_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#stop_time LabServiceSchedule#stop_time}
   */
   readonly stopTime: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#time_zone LabServiceSchedule#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#time_zone LabServiceSchedule#time_zone}
   */
   readonly timeZone: string;
   /**
   * recurrence block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#recurrence LabServiceSchedule#recurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#recurrence LabServiceSchedule#recurrence}
   */
   readonly recurrence?: LabServiceScheduleRecurrence;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#timeouts LabServiceSchedule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#timeouts LabServiceSchedule#timeouts}
   */
   readonly timeouts?: LabServiceScheduleTimeouts;
 }
 export interface LabServiceScheduleRecurrence {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#expiration_date LabServiceSchedule#expiration_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#expiration_date LabServiceSchedule#expiration_date}
   */
   readonly expirationDate: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#frequency LabServiceSchedule#frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#frequency LabServiceSchedule#frequency}
   */
   readonly frequency: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#interval LabServiceSchedule#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#interval LabServiceSchedule#interval}
   */
   readonly interval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#week_days LabServiceSchedule#week_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#week_days LabServiceSchedule#week_days}
   */
   readonly weekDays?: string[];
 }
@@ -235,19 +230,19 @@ export class LabServiceScheduleRecurrenceOutputReference extends cdktf.ComplexOb
 }
 export interface LabServiceScheduleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#create LabServiceSchedule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#create LabServiceSchedule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#delete LabServiceSchedule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#delete LabServiceSchedule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#read LabServiceSchedule#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#read LabServiceSchedule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#update LabServiceSchedule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#update LabServiceSchedule#update}
   */
   readonly update?: string;
 }
@@ -428,7 +423,7 @@ export class LabServiceScheduleTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule azurerm_lab_service_schedule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule azurerm_lab_service_schedule}
 */
 export class LabServiceSchedule extends cdktf.TerraformResource {
 
@@ -444,7 +439,7 @@ export class LabServiceSchedule extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a LabServiceSchedule resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the LabServiceSchedule to import
-  * @param importFromId The id of the existing LabServiceSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing LabServiceSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the LabServiceSchedule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -456,7 +451,7 @@ export class LabServiceSchedule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.114.0/docs/resources/lab_service_schedule azurerm_lab_service_schedule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/lab_service_schedule azurerm_lab_service_schedule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -467,7 +462,7 @@ export class LabServiceSchedule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lab_service_schedule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.114.0',
+        providerVersion: '3.115.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
