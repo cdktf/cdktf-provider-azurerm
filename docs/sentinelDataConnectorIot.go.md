@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelDataConnectorIot.SentinelDataConnectorIot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectoriot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectoriot"
 
 sentineldataconnectoriot.NewSentinelDataConnectorIot(scope Construct, id *string, config SentinelDataConnectorIotConfig) SentinelDataConnectorIot
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sentinelDataConnectorIot.SentinelDataConnectorIot.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectoriot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectoriot"
 
 sentineldataconnectoriot.SentinelDataConnectorIot_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sentinelDataConnectorIot.SentinelDataConnectorIot.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectoriot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectoriot"
 
 sentineldataconnectoriot.SentinelDataConnectorIot_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ sentineldataconnectoriot.SentinelDataConnectorIot_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sentinelDataConnectorIot.SentinelDataConnectorIot.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectoriot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectoriot"
 
 sentineldataconnectoriot.SentinelDataConnectorIot_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ sentineldataconnectoriot.SentinelDataConnectorIot_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.sentinelDataConnectorIot.SentinelDataConnectorIot.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectoriot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectoriot"
 
 sentineldataconnectoriot.SentinelDataConnectorIot_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -811,7 +811,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelDataConnectorIot.SentinelDataConnectorIotConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectoriot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectoriot"
 
 &sentineldataconnectoriot.SentinelDataConnectorIotConfig {
 	Connection: interface{},
@@ -825,7 +825,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconne
 	Name: *string,
 	Id: *string,
 	SubscriptionId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.sentinelDataConnectorIot.SentinelDataConnectorIotTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelDataConnectorIot.SentinelDataConnectorIotTimeouts,
 }
 ```
 
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelDataConnectorIot.SentinelDataConnectorIotTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectoriot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectoriot"
 
 &sentineldataconnectoriot.SentinelDataConnectorIotTimeouts {
 	Create: *string,
@@ -1050,7 +1050,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelDataConnectorIot.SentinelDataConnectorIotTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/sentineldataconnectoriot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentineldataconnectoriot"
 
 sentineldataconnectoriot.NewSentinelDataConnectorIotTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelDataConnectorIotTimeoutsOutputReference
 ```
