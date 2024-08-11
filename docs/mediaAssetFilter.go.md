@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 mediaassetfilter.NewMediaAssetFilter(scope Construct, id *string, config MediaAssetFilterConfig) MediaAssetFilter
 ```
@@ -452,7 +452,7 @@ func ResetTrackSelection()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilter.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 mediaassetfilter.MediaAssetFilter_IsConstruct(x interface{}) *bool
 ```
@@ -484,7 +484,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilter.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 mediaassetfilter.MediaAssetFilter_IsTerraformElement(x interface{}) *bool
 ```
@@ -498,7 +498,7 @@ mediaassetfilter.MediaAssetFilter_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilter.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 mediaassetfilter.MediaAssetFilter_IsTerraformResource(x interface{}) *bool
 ```
@@ -512,7 +512,7 @@ mediaassetfilter.MediaAssetFilter_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilter.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 mediaassetfilter.MediaAssetFilter_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -895,7 +895,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 &mediaassetfilter.MediaAssetFilterConfig {
 	Connection: interface{},
@@ -909,8 +909,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
 	Name: *string,
 	FirstQualityBitrate: *f64,
 	Id: *string,
-	PresentationTimeRange: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaAssetFilter.MediaAssetFilterPresentationTimeRange,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaAssetFilter.MediaAssetFilterTimeouts,
+	PresentationTimeRange: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaAssetFilter.MediaAssetFilterPresentationTimeRange,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaAssetFilter.MediaAssetFilterTimeouts,
 	TrackSelection: interface{},
 }
 ```
@@ -1104,7 +1104,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilterPresentationTimeRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 &mediaassetfilter.MediaAssetFilterPresentationTimeRange {
 	EndInUnits: *f64,
@@ -1206,7 +1206,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 &mediaassetfilter.MediaAssetFilterTimeouts {
 	Create: *string,
@@ -1280,7 +1280,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilterTrackSelection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 &mediaassetfilter.MediaAssetFilterTrackSelection {
 	Condition: interface{},
@@ -1314,7 +1314,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilterTrackSelectionCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 &mediaassetfilter.MediaAssetFilterTrackSelectionCondition {
 	Operation: *string,
@@ -1376,7 +1376,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilterPresentationTimeRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 mediaassetfilter.NewMediaAssetFilterPresentationTimeRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaAssetFilterPresentationTimeRangeOutputReference
 ```
@@ -1799,7 +1799,7 @@ func InternalValue() MediaAssetFilterPresentationTimeRange
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 mediaassetfilter.NewMediaAssetFilterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaAssetFilterTimeoutsOutputReference
 ```
@@ -2164,7 +2164,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilterTrackSelectionConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 mediaassetfilter.NewMediaAssetFilterTrackSelectionConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaAssetFilterTrackSelectionConditionList
 ```
@@ -2324,7 +2324,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilterTrackSelectionConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 mediaassetfilter.NewMediaAssetFilterTrackSelectionConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaAssetFilterTrackSelectionConditionOutputReference
 ```
@@ -2678,7 +2678,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilterTrackSelectionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 mediaassetfilter.NewMediaAssetFilterTrackSelectionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaAssetFilterTrackSelectionList
 ```
@@ -2838,7 +2838,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaAssetFilter.MediaAssetFilterTrackSelectionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaassetfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediaassetfilter"
 
 mediaassetfilter.NewMediaAssetFilterTrackSelectionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaAssetFilterTrackSelectionOutputReference
 ```
