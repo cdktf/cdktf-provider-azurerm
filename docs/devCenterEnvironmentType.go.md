@@ -4,12 +4,12 @@
 
 ### DevCenterEnvironmentType <a name="DevCenterEnvironmentType" id="@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentType"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type azurerm_dev_center_environment_type}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type azurerm_dev_center_environment_type}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcenterenvironmenttype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenterenvironmenttype"
 
 devcenterenvironmenttype.NewDevCenterEnvironmentType(scope Construct, id *string, config DevCenterEnvironmentTypeConfig) DevCenterEnvironmentType
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentType.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcenterenvironmenttype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenterenvironmenttype"
 
 devcenterenvironmenttype.DevCenterEnvironmentType_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentType.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcenterenvironmenttype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenterenvironmenttype"
 
 devcenterenvironmenttype.DevCenterEnvironmentType_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ devcenterenvironmenttype.DevCenterEnvironmentType_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentType.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcenterenvironmenttype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenterenvironmenttype"
 
 devcenterenvironmenttype.DevCenterEnvironmentType_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ devcenterenvironmenttype.DevCenterEnvironmentType_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentType.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcenterenvironmenttype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenterenvironmenttype"
 
 devcenterenvironmenttype.DevCenterEnvironmentType_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the DevCenterEnvironmentType t
 
 The id of the existing DevCenterEnvironmentType that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -811,7 +811,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcenterenvironmenttype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenterenvironmenttype"
 
 &devcenterenvironmenttype.DevCenterEnvironmentTypeConfig {
 	Connection: interface{},
@@ -825,7 +825,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcenterenvironm
 	Name: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.devCenterEnvironmentType.DevCenterEnvironmentTypeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeTimeouts,
 }
 ```
 
@@ -840,10 +840,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcenterenvironm
 | <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeConfig.property.devCenterId">DevCenterId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#dev_center_id DevCenterEnvironmentType#dev_center_id}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#name DevCenterEnvironmentType#name}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#id DevCenterEnvironmentType#id}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#tags DevCenterEnvironmentType#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeConfig.property.devCenterId">DevCenterId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#dev_center_id DevCenterEnvironmentType#dev_center_id}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#name DevCenterEnvironmentType#name}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#id DevCenterEnvironmentType#id}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#tags DevCenterEnvironmentType#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeTimeouts">DevCenterEnvironmentTypeTimeouts</a></code> | timeouts block. |
 
 ---
@@ -926,7 +926,7 @@ DevCenterId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#dev_center_id DevCenterEnvironmentType#dev_center_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#dev_center_id DevCenterEnvironmentType#dev_center_id}.
 
 ---
 
@@ -938,7 +938,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#name DevCenterEnvironmentType#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#name DevCenterEnvironmentType#name}.
 
 ---
 
@@ -950,7 +950,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#id DevCenterEnvironmentType#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#id DevCenterEnvironmentType#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -965,7 +965,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#tags DevCenterEnvironmentType#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#tags DevCenterEnvironmentType#tags}.
 
 ---
 
@@ -979,7 +979,7 @@ Timeouts DevCenterEnvironmentTypeTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#timeouts DevCenterEnvironmentType#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#timeouts DevCenterEnvironmentType#timeouts}
 
 ---
 
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcenterenvironmenttype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenterenvironmenttype"
 
 &devcenterenvironmenttype.DevCenterEnvironmentTypeTimeouts {
 	Create: *string,
@@ -1002,10 +1002,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcenterenvironm
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#create DevCenterEnvironmentType#create}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#delete DevCenterEnvironmentType#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#read DevCenterEnvironmentType#read}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#update DevCenterEnvironmentType#update}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#create DevCenterEnvironmentType#create}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#delete DevCenterEnvironmentType#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#read DevCenterEnvironmentType#read}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#update DevCenterEnvironmentType#update}. |
 
 ---
 
@@ -1017,7 +1017,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#create DevCenterEnvironmentType#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#create DevCenterEnvironmentType#create}.
 
 ---
 
@@ -1029,7 +1029,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#delete DevCenterEnvironmentType#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#delete DevCenterEnvironmentType#delete}.
 
 ---
 
@@ -1041,7 +1041,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#read DevCenterEnvironmentType#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#read DevCenterEnvironmentType#read}.
 
 ---
 
@@ -1053,7 +1053,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/dev_center_environment_type#update DevCenterEnvironmentType#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_environment_type#update DevCenterEnvironmentType#update}.
 
 ---
 
@@ -1064,7 +1064,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devCenterEnvironmentType.DevCenterEnvironmentTypeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devcenterenvironmenttype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenterenvironmenttype"
 
 devcenterenvironmenttype.NewDevCenterEnvironmentTypeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevCenterEnvironmentTypeTimeoutsOutputReference
 ```

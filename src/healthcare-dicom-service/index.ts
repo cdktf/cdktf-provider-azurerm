@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +8,42 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareDicomServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#id HealthcareDicomService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#id HealthcareDicomService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#location HealthcareDicomService#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#location HealthcareDicomService#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#name HealthcareDicomService#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#name HealthcareDicomService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#public_network_access_enabled HealthcareDicomService#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#public_network_access_enabled HealthcareDicomService#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#tags HealthcareDicomService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#tags HealthcareDicomService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#workspace_id HealthcareDicomService#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#workspace_id HealthcareDicomService#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#identity HealthcareDicomService#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#identity HealthcareDicomService#identity}
   */
   readonly identity?: HealthcareDicomServiceIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#timeouts HealthcareDicomService#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#timeouts HealthcareDicomService#timeouts}
   */
   readonly timeouts?: HealthcareDicomServiceTimeouts;
 }
@@ -214,11 +209,11 @@ export class HealthcareDicomServicePrivateEndpointList extends cdktf.ComplexList
 }
 export interface HealthcareDicomServiceIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#identity_ids HealthcareDicomService#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#identity_ids HealthcareDicomService#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#type HealthcareDicomService#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#type HealthcareDicomService#type}
   */
   readonly type: string;
 }
@@ -338,19 +333,19 @@ export class HealthcareDicomServiceIdentityOutputReference extends cdktf.Complex
 }
 export interface HealthcareDicomServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#create HealthcareDicomService#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#create HealthcareDicomService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#delete HealthcareDicomService#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#delete HealthcareDicomService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#read HealthcareDicomService#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#read HealthcareDicomService#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#update HealthcareDicomService#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#update HealthcareDicomService#update}
   */
   readonly update?: string;
 }
@@ -531,7 +526,7 @@ export class HealthcareDicomServiceTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service azurerm_healthcare_dicom_service}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service azurerm_healthcare_dicom_service}
 */
 export class HealthcareDicomService extends cdktf.TerraformResource {
 
@@ -547,7 +542,7 @@ export class HealthcareDicomService extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a HealthcareDicomService resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the HealthcareDicomService to import
-  * @param importFromId The id of the existing HealthcareDicomService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing HealthcareDicomService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the HealthcareDicomService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -559,7 +554,7 @@ export class HealthcareDicomService extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.115.0/docs/resources/healthcare_dicom_service azurerm_healthcare_dicom_service} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/healthcare_dicom_service azurerm_healthcare_dicom_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -570,7 +565,7 @@ export class HealthcareDicomService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_healthcare_dicom_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.115.0',
+        providerVersion: '3.116.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
