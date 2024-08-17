@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNginxCertificate.DataAzurermNginxCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermnginxcertificate"
 
 dataazurermnginxcertificate.NewDataAzurermNginxCertificate(scope Construct, id *string, config DataAzurermNginxCertificateConfig) DataAzurermNginxCertificate
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermNginxCertificate.DataAzurermNginxCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermnginxcertificate"
 
 dataazurermnginxcertificate.DataAzurermNginxCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermNginxCertificate.DataAzurermNginxCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermnginxcertificate"
 
 dataazurermnginxcertificate.DataAzurermNginxCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermnginxcertificate.DataAzurermNginxCertificate_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermNginxCertificate.DataAzurermNginxCertificate.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermnginxcertificate"
 
 dataazurermnginxcertificate.DataAzurermNginxCertificate_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermnginxcertificate.DataAzurermNginxCertificate_IsTerraformDataSource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermNginxCertificate.DataAzurermNginxCertificate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermnginxcertificate"
 
 dataazurermnginxcertificate.DataAzurermNginxCertificate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -746,7 +746,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNginxCertificate.DataAzurermNginxCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermnginxcertificate"
 
 &dataazurermnginxcertificate.DataAzurermNginxCertificateConfig {
 	Connection: interface{},
@@ -759,7 +759,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnginxcerti
 	Name: *string,
 	NginxDeploymentId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermNginxCertificate.DataAzurermNginxCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermNginxCertificate.DataAzurermNginxCertificateTimeouts,
 }
 ```
 
@@ -909,7 +909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNginxCertificate.DataAzurermNginxCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermnginxcertificate"
 
 &dataazurermnginxcertificate.DataAzurermNginxCertificateTimeouts {
 	Read: *string,
@@ -943,7 +943,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNginxCertificate.DataAzurermNginxCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnginxcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermnginxcertificate"
 
 dataazurermnginxcertificate.NewDataAzurermNginxCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermNginxCertificateTimeoutsOutputReference
 ```

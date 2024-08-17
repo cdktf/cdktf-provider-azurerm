@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinary.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 datafactorydatasetbinary.NewDataFactoryDatasetBinary(scope Construct, id *string, config DataFactoryDatasetBinaryConfig) DataFactoryDatasetBinary
 ```
@@ -520,7 +520,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinary.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 datafactorydatasetbinary.DataFactoryDatasetBinary_IsConstruct(x interface{}) *bool
 ```
@@ -552,7 +552,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinary.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 datafactorydatasetbinary.DataFactoryDatasetBinary_IsTerraformElement(x interface{}) *bool
 ```
@@ -566,7 +566,7 @@ datafactorydatasetbinary.DataFactoryDatasetBinary_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinary.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 datafactorydatasetbinary.DataFactoryDatasetBinary_IsTerraformResource(x interface{}) *bool
 ```
@@ -580,7 +580,7 @@ datafactorydatasetbinary.DataFactoryDatasetBinary_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinary.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 datafactorydatasetbinary.DataFactoryDatasetBinary_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1117,7 +1117,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinaryAzureBlobStorageLocation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 &datafactorydatasetbinary.DataFactoryDatasetBinaryAzureBlobStorageLocation {
 	Container: *string,
@@ -1219,7 +1219,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinaryCompression.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 &datafactorydatasetbinary.DataFactoryDatasetBinaryCompression {
 	Type: *string,
@@ -1265,7 +1265,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinaryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 &datafactorydatasetbinary.DataFactoryDatasetBinaryConfig {
 	Connection: interface{},
@@ -1280,15 +1280,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbin
 	Name: *string,
 	AdditionalProperties: *map[string]*string,
 	Annotations: *[]*string,
-	AzureBlobStorageLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinaryAzureBlobStorageLocation,
-	Compression: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinaryCompression,
+	AzureBlobStorageLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryDatasetBinary.DataFactoryDatasetBinaryAzureBlobStorageLocation,
+	Compression: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryDatasetBinary.DataFactoryDatasetBinaryCompression,
 	Description: *string,
 	Folder: *string,
-	HttpServerLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinaryHttpServerLocation,
+	HttpServerLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryDatasetBinary.DataFactoryDatasetBinaryHttpServerLocation,
 	Id: *string,
 	Parameters: *map[string]*string,
-	SftpServerLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinarySftpServerLocation,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinaryTimeouts,
+	SftpServerLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryDatasetBinary.DataFactoryDatasetBinarySftpServerLocation,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryDatasetBinary.DataFactoryDatasetBinaryTimeouts,
 }
 ```
 
@@ -1576,7 +1576,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinaryHttpServerLocation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 &datafactorydatasetbinary.DataFactoryDatasetBinaryHttpServerLocation {
 	Filename: *string,
@@ -1664,7 +1664,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinarySftpServerLocation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 &datafactorydatasetbinary.DataFactoryDatasetBinarySftpServerLocation {
 	Filename: *string,
@@ -1738,7 +1738,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinaryTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 &datafactorydatasetbinary.DataFactoryDatasetBinaryTimeouts {
 	Create: *string,
@@ -1814,7 +1814,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 datafactorydatasetbinary.NewDataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference
 ```
@@ -2230,7 +2230,7 @@ func InternalValue() DataFactoryDatasetBinaryAzureBlobStorageLocation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinaryCompressionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 datafactorydatasetbinary.NewDataFactoryDatasetBinaryCompressionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryDatasetBinaryCompressionOutputReference
 ```
@@ -2530,7 +2530,7 @@ func InternalValue() DataFactoryDatasetBinaryCompression
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinaryHttpServerLocationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 datafactorydatasetbinary.NewDataFactoryDatasetBinaryHttpServerLocationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryDatasetBinaryHttpServerLocationOutputReference
 ```
@@ -2903,7 +2903,7 @@ func InternalValue() DataFactoryDatasetBinaryHttpServerLocation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinarySftpServerLocationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 datafactorydatasetbinary.NewDataFactoryDatasetBinarySftpServerLocationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryDatasetBinarySftpServerLocationOutputReference
 ```
@@ -3254,7 +3254,7 @@ func InternalValue() DataFactoryDatasetBinarySftpServerLocation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetBinary.DataFactoryDatasetBinaryTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetbinary"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorydatasetbinary"
 
 datafactorydatasetbinary.NewDataFactoryDatasetBinaryTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryDatasetBinaryTimeoutsOutputReference
 ```
