@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultManagedHardwareSecurityModuleRoleAssignment.KeyVaultManagedHardwareSecurityModuleRoleAssignment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/keyvaultmanagedhardwaresecuritymoduleroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedhardwaresecuritymoduleroleassignment"
 
 keyvaultmanagedhardwaresecuritymoduleroleassignment.NewKeyVaultManagedHardwareSecurityModuleRoleAssignment(scope Construct, id *string, config KeyVaultManagedHardwareSecurityModuleRoleAssignmentConfig) KeyVaultManagedHardwareSecurityModuleRoleAssignment
 ```
@@ -419,7 +419,7 @@ func ResetVaultBaseUrl()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.keyVaultManagedHardwareSecurityModuleRoleAssignment.KeyVaultManagedHardwareSecurityModuleRoleAssignment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/keyvaultmanagedhardwaresecuritymoduleroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedhardwaresecuritymoduleroleassignment"
 
 keyvaultmanagedhardwaresecuritymoduleroleassignment.KeyVaultManagedHardwareSecurityModuleRoleAssignment_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.keyVaultManagedHardwareSecurityModuleRoleAssignment.KeyVaultManagedHardwareSecurityModuleRoleAssignment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/keyvaultmanagedhardwaresecuritymoduleroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedhardwaresecuritymoduleroleassignment"
 
 keyvaultmanagedhardwaresecuritymoduleroleassignment.KeyVaultManagedHardwareSecurityModuleRoleAssignment_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ keyvaultmanagedhardwaresecuritymoduleroleassignment.KeyVaultManagedHardwareSecur
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.keyVaultManagedHardwareSecurityModuleRoleAssignment.KeyVaultManagedHardwareSecurityModuleRoleAssignment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/keyvaultmanagedhardwaresecuritymoduleroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedhardwaresecuritymoduleroleassignment"
 
 keyvaultmanagedhardwaresecuritymoduleroleassignment.KeyVaultManagedHardwareSecurityModuleRoleAssignment_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ keyvaultmanagedhardwaresecuritymoduleroleassignment.KeyVaultManagedHardwareSecur
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.keyVaultManagedHardwareSecurityModuleRoleAssignment.KeyVaultManagedHardwareSecurityModuleRoleAssignment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/keyvaultmanagedhardwaresecuritymoduleroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedhardwaresecuritymoduleroleassignment"
 
 keyvaultmanagedhardwaresecuritymoduleroleassignment.KeyVaultManagedHardwareSecurityModuleRoleAssignment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -895,7 +895,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.keyVaultManagedHardwareSecurityModuleRoleAssignment.KeyVaultManagedHardwareSecurityModuleRoleAssignmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/keyvaultmanagedhardwaresecuritymoduleroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedhardwaresecuritymoduleroleassignment"
 
 &keyvaultmanagedhardwaresecuritymoduleroleassignment.KeyVaultManagedHardwareSecurityModuleRoleAssignmentConfig {
 	Connection: interface{},
@@ -911,7 +911,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/keyvaultmanagedha
 	Scope: *string,
 	Id: *string,
 	ManagedHsmId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.keyVaultManagedHardwareSecurityModuleRoleAssignment.KeyVaultManagedHardwareSecurityModuleRoleAssignmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.keyVaultManagedHardwareSecurityModuleRoleAssignment.KeyVaultManagedHardwareSecurityModuleRoleAssignmentTimeouts,
 	VaultBaseUrl: *string,
 }
 ```
@@ -1114,7 +1114,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.keyVaultManagedHardwareSecurityModuleRoleAssignment.KeyVaultManagedHardwareSecurityModuleRoleAssignmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/keyvaultmanagedhardwaresecuritymoduleroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedhardwaresecuritymoduleroleassignment"
 
 &keyvaultmanagedhardwaresecuritymoduleroleassignment.KeyVaultManagedHardwareSecurityModuleRoleAssignmentTimeouts {
 	Create: *string,
@@ -1176,7 +1176,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultManagedHardwareSecurityModuleRoleAssignment.KeyVaultManagedHardwareSecurityModuleRoleAssignmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/keyvaultmanagedhardwaresecuritymoduleroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultmanagedhardwaresecuritymoduleroleassignment"
 
 keyvaultmanagedhardwaresecuritymoduleroleassignment.NewKeyVaultManagedHardwareSecurityModuleRoleAssignmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KeyVaultManagedHardwareSecurityModuleRoleAssignmentTimeoutsOutputReference
 ```
