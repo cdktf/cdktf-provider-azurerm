@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermRecoveryServicesVault.DataAzurermRecoveryServicesVault.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrecoveryservicesvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermrecoveryservicesvault"
 
 dataazurermrecoveryservicesvault.NewDataAzurermRecoveryServicesVault(scope Construct, id *string, config DataAzurermRecoveryServicesVaultConfig) DataAzurermRecoveryServicesVault
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermRecoveryServicesVault.DataAzurermRecoveryServicesVault.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrecoveryservicesvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermrecoveryservicesvault"
 
 dataazurermrecoveryservicesvault.DataAzurermRecoveryServicesVault_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermRecoveryServicesVault.DataAzurermRecoveryServicesVault.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrecoveryservicesvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermrecoveryservicesvault"
 
 dataazurermrecoveryservicesvault.DataAzurermRecoveryServicesVault_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermrecoveryservicesvault.DataAzurermRecoveryServicesVault_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermRecoveryServicesVault.DataAzurermRecoveryServicesVault.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrecoveryservicesvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermrecoveryservicesvault"
 
 dataazurermrecoveryservicesvault.DataAzurermRecoveryServicesVault_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermrecoveryservicesvault.DataAzurermRecoveryServicesVault_IsTerraformDat
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermRecoveryServicesVault.DataAzurermRecoveryServicesVault.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrecoveryservicesvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermrecoveryservicesvault"
 
 dataazurermrecoveryservicesvault.DataAzurermRecoveryServicesVault_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -702,7 +702,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermRecoveryServicesVault.DataAzurermRecoveryServicesVaultConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrecoveryservicesvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermrecoveryservicesvault"
 
 &dataazurermrecoveryservicesvault.DataAzurermRecoveryServicesVaultConfig {
 	Connection: interface{},
@@ -715,7 +715,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrecoveryse
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermRecoveryServicesVault.DataAzurermRecoveryServicesVaultTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermRecoveryServicesVault.DataAzurermRecoveryServicesVaultTimeouts,
 }
 ```
 
@@ -865,7 +865,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermRecoveryServicesVault.DataAzurermRecoveryServicesVaultIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrecoveryservicesvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermrecoveryservicesvault"
 
 &dataazurermrecoveryservicesvault.DataAzurermRecoveryServicesVaultIdentity {
 
@@ -878,7 +878,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrecoveryse
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermRecoveryServicesVault.DataAzurermRecoveryServicesVaultTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrecoveryservicesvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermrecoveryservicesvault"
 
 &dataazurermrecoveryservicesvault.DataAzurermRecoveryServicesVaultTimeouts {
 	Read: *string,
@@ -912,7 +912,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermRecoveryServicesVault.DataAzurermRecoveryServicesVaultIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrecoveryservicesvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermrecoveryservicesvault"
 
 dataazurermrecoveryservicesvault.NewDataAzurermRecoveryServicesVaultIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermRecoveryServicesVaultIdentityList
 ```
@@ -1061,7 +1061,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermRecoveryServicesVault.DataAzurermRecoveryServicesVaultIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrecoveryservicesvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermrecoveryservicesvault"
 
 dataazurermrecoveryservicesvault.NewDataAzurermRecoveryServicesVaultIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermRecoveryServicesVaultIdentityOutputReference
 ```
@@ -1372,7 +1372,7 @@ func InternalValue() DataAzurermRecoveryServicesVaultIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermRecoveryServicesVault.DataAzurermRecoveryServicesVaultTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermrecoveryservicesvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermrecoveryservicesvault"
 
 dataazurermrecoveryservicesvault.NewDataAzurermRecoveryServicesVaultTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermRecoveryServicesVaultTimeoutsOutputReference
 ```

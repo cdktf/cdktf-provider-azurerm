@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlow(scope Construct, id *string, config DataFactoryFlowletDataFlowConfig) DataFactoryFlowletDataFlow
 ```
@@ -500,7 +500,7 @@ func ResetTransformation()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlow.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.DataFactoryFlowletDataFlow_IsConstruct(x interface{}) *bool
 ```
@@ -532,7 +532,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlow.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.DataFactoryFlowletDataFlow_IsTerraformElement(x interface{}) *bool
 ```
@@ -546,7 +546,7 @@ datafactoryflowletdataflow.DataFactoryFlowletDataFlow_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlow.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.DataFactoryFlowletDataFlow_IsTerraformResource(x interface{}) *bool
 ```
@@ -560,7 +560,7 @@ datafactoryflowletdataflow.DataFactoryFlowletDataFlow_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlow.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.DataFactoryFlowletDataFlow_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1053,7 +1053,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowConfig {
 	Connection: interface{},
@@ -1073,7 +1073,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdat
 	ScriptLines: *[]*string,
 	Sink: interface{},
 	Source: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTimeouts,
 	Transformation: interface{},
 }
 ```
@@ -1334,16 +1334,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSink.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowSink {
 	Name: *string,
-	Dataset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkDataset,
+	Dataset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkDataset,
 	Description: *string,
-	Flowlet: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkFlowlet,
-	LinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkLinkedService,
-	RejectedLinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkRejectedLinkedService,
-	SchemaLinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkSchemaLinkedService,
+	Flowlet: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkFlowlet,
+	LinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkLinkedService,
+	RejectedLinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkRejectedLinkedService,
+	SchemaLinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkSchemaLinkedService,
 }
 ```
 
@@ -1460,7 +1460,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkDataset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowSinkDataset {
 	Name: *string,
@@ -1506,7 +1506,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkFlowlet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowSinkFlowlet {
 	Name: *string,
@@ -1566,7 +1566,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkLinkedService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowSinkLinkedService {
 	Name: *string,
@@ -1612,7 +1612,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkRejectedLinkedService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowSinkRejectedLinkedService {
 	Name: *string,
@@ -1658,7 +1658,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkSchemaLinkedService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowSinkSchemaLinkedService {
 	Name: *string,
@@ -1704,16 +1704,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowSource {
 	Name: *string,
-	Dataset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceDataset,
+	Dataset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceDataset,
 	Description: *string,
-	Flowlet: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceFlowlet,
-	LinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceLinkedService,
-	RejectedLinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceRejectedLinkedService,
-	SchemaLinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceSchemaLinkedService,
+	Flowlet: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceFlowlet,
+	LinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceLinkedService,
+	RejectedLinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceRejectedLinkedService,
+	SchemaLinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceSchemaLinkedService,
 }
 ```
 
@@ -1830,7 +1830,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceDataset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowSourceDataset {
 	Name: *string,
@@ -1876,7 +1876,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceFlowlet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowSourceFlowlet {
 	Name: *string,
@@ -1936,7 +1936,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceLinkedService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowSourceLinkedService {
 	Name: *string,
@@ -1982,7 +1982,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceRejectedLinkedService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowSourceRejectedLinkedService {
 	Name: *string,
@@ -2028,7 +2028,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceSchemaLinkedService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowSourceSchemaLinkedService {
 	Name: *string,
@@ -2074,7 +2074,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowTimeouts {
 	Create: *string,
@@ -2148,14 +2148,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowTransformation {
 	Name: *string,
-	Dataset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationDataset,
+	Dataset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationDataset,
 	Description: *string,
-	Flowlet: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationFlowlet,
-	LinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationLinkedService,
+	Flowlet: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationFlowlet,
+	LinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationLinkedService,
 }
 ```
 
@@ -2242,7 +2242,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationDataset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowTransformationDataset {
 	Name: *string,
@@ -2288,7 +2288,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationFlowlet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowTransformationFlowlet {
 	Name: *string,
@@ -2348,7 +2348,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationLinkedService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 &datafactoryflowletdataflow.DataFactoryFlowletDataFlowTransformationLinkedService {
 	Name: *string,
@@ -2396,7 +2396,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkDatasetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSinkDatasetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowSinkDatasetOutputReference
 ```
@@ -2696,7 +2696,7 @@ func InternalValue() DataFactoryFlowletDataFlowSinkDataset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkFlowletOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSinkFlowletOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowSinkFlowletOutputReference
 ```
@@ -3025,7 +3025,7 @@ func InternalValue() DataFactoryFlowletDataFlowSinkFlowlet
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkLinkedServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSinkLinkedServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowSinkLinkedServiceOutputReference
 ```
@@ -3325,7 +3325,7 @@ func InternalValue() DataFactoryFlowletDataFlowSinkLinkedService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSinkList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataFactoryFlowletDataFlowSinkList
 ```
@@ -3485,7 +3485,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSinkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataFactoryFlowletDataFlowSinkOutputReference
 ```
@@ -4013,7 +4013,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkRejectedLinkedServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSinkRejectedLinkedServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowSinkRejectedLinkedServiceOutputReference
 ```
@@ -4313,7 +4313,7 @@ func InternalValue() DataFactoryFlowletDataFlowSinkRejectedLinkedService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSinkSchemaLinkedServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSinkSchemaLinkedServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowSinkSchemaLinkedServiceOutputReference
 ```
@@ -4613,7 +4613,7 @@ func InternalValue() DataFactoryFlowletDataFlowSinkSchemaLinkedService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceDatasetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSourceDatasetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowSourceDatasetOutputReference
 ```
@@ -4913,7 +4913,7 @@ func InternalValue() DataFactoryFlowletDataFlowSourceDataset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceFlowletOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSourceFlowletOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowSourceFlowletOutputReference
 ```
@@ -5242,7 +5242,7 @@ func InternalValue() DataFactoryFlowletDataFlowSourceFlowlet
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceLinkedServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSourceLinkedServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowSourceLinkedServiceOutputReference
 ```
@@ -5542,7 +5542,7 @@ func InternalValue() DataFactoryFlowletDataFlowSourceLinkedService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSourceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataFactoryFlowletDataFlowSourceList
 ```
@@ -5702,7 +5702,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataFactoryFlowletDataFlowSourceOutputReference
 ```
@@ -6230,7 +6230,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceRejectedLinkedServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSourceRejectedLinkedServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowSourceRejectedLinkedServiceOutputReference
 ```
@@ -6530,7 +6530,7 @@ func InternalValue() DataFactoryFlowletDataFlowSourceRejectedLinkedService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowSourceSchemaLinkedServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowSourceSchemaLinkedServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowSourceSchemaLinkedServiceOutputReference
 ```
@@ -6830,7 +6830,7 @@ func InternalValue() DataFactoryFlowletDataFlowSourceSchemaLinkedService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowTimeoutsOutputReference
 ```
@@ -7195,7 +7195,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationDatasetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowTransformationDatasetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowTransformationDatasetOutputReference
 ```
@@ -7495,7 +7495,7 @@ func InternalValue() DataFactoryFlowletDataFlowTransformationDataset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationFlowletOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowTransformationFlowletOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowTransformationFlowletOutputReference
 ```
@@ -7824,7 +7824,7 @@ func InternalValue() DataFactoryFlowletDataFlowTransformationFlowlet
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationLinkedServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowTransformationLinkedServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryFlowletDataFlowTransformationLinkedServiceOutputReference
 ```
@@ -8124,7 +8124,7 @@ func InternalValue() DataFactoryFlowletDataFlowTransformationLinkedService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowTransformationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataFactoryFlowletDataFlowTransformationList
 ```
@@ -8284,7 +8284,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryFlowletDataFlow.DataFactoryFlowletDataFlowTransformationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactoryflowletdataflow"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryflowletdataflow"
 
 datafactoryflowletdataflow.NewDataFactoryFlowletDataFlowTransformationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataFactoryFlowletDataFlowTransformationOutputReference
 ```
