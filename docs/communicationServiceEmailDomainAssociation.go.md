@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.communicationServiceEmailDomainAssociation.CommunicationServiceEmailDomainAssociation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationserviceemaildomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/communicationserviceemaildomainassociation"
 
 communicationserviceemaildomainassociation.NewCommunicationServiceEmailDomainAssociation(scope Construct, id *string, config CommunicationServiceEmailDomainAssociationConfig) CommunicationServiceEmailDomainAssociation
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.communicationServiceEmailDomainAssociation.CommunicationServiceEmailDomainAssociation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationserviceemaildomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/communicationserviceemaildomainassociation"
 
 communicationserviceemaildomainassociation.CommunicationServiceEmailDomainAssociation_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.communicationServiceEmailDomainAssociation.CommunicationServiceEmailDomainAssociation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationserviceemaildomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/communicationserviceemaildomainassociation"
 
 communicationserviceemaildomainassociation.CommunicationServiceEmailDomainAssociation_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ communicationserviceemaildomainassociation.CommunicationServiceEmailDomainAssoci
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.communicationServiceEmailDomainAssociation.CommunicationServiceEmailDomainAssociation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationserviceemaildomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/communicationserviceemaildomainassociation"
 
 communicationserviceemaildomainassociation.CommunicationServiceEmailDomainAssociation_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ communicationserviceemaildomainassociation.CommunicationServiceEmailDomainAssoci
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.communicationServiceEmailDomainAssociation.CommunicationServiceEmailDomainAssociation.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationserviceemaildomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/communicationserviceemaildomainassociation"
 
 communicationserviceemaildomainassociation.CommunicationServiceEmailDomainAssociation_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -782,7 +782,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.communicationServiceEmailDomainAssociation.CommunicationServiceEmailDomainAssociationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationserviceemaildomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/communicationserviceemaildomainassociation"
 
 &communicationserviceemaildomainassociation.CommunicationServiceEmailDomainAssociationConfig {
 	Connection: interface{},
@@ -795,7 +795,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationservicee
 	CommunicationServiceId: *string,
 	EmailServiceDomainId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.communicationServiceEmailDomainAssociation.CommunicationServiceEmailDomainAssociationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.communicationServiceEmailDomainAssociation.CommunicationServiceEmailDomainAssociationTimeouts,
 }
 ```
 
@@ -945,7 +945,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.communicationServiceEmailDomainAssociation.CommunicationServiceEmailDomainAssociationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationserviceemaildomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/communicationserviceemaildomainassociation"
 
 &communicationserviceemaildomainassociation.CommunicationServiceEmailDomainAssociationTimeouts {
 	Create: *string,
@@ -1007,7 +1007,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.communicationServiceEmailDomainAssociation.CommunicationServiceEmailDomainAssociationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/communicationserviceemaildomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/communicationserviceemaildomainassociation"
 
 communicationserviceemaildomainassociation.NewCommunicationServiceEmailDomainAssociationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CommunicationServiceEmailDomainAssociationTimeoutsOutputReference
 ```
