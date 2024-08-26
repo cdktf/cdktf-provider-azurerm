@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/app_service_managed_certificate
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/app_service_managed_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +8,42 @@ import * as cdktf from 'cdktf';
 
 export interface AppServiceManagedCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/app_service_managed_certificate#custom_hostname_binding_id AppServiceManagedCertificate#custom_hostname_binding_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/app_service_managed_certificate#custom_hostname_binding_id AppServiceManagedCertificate#custom_hostname_binding_id}
   */
   readonly customHostnameBindingId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/app_service_managed_certificate#id AppServiceManagedCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/app_service_managed_certificate#id AppServiceManagedCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/app_service_managed_certificate#tags AppServiceManagedCertificate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/app_service_managed_certificate#tags AppServiceManagedCertificate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/app_service_managed_certificate#timeouts AppServiceManagedCertificate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/app_service_managed_certificate#timeouts AppServiceManagedCertificate#timeouts}
   */
   readonly timeouts?: AppServiceManagedCertificateTimeouts;
 }
 export interface AppServiceManagedCertificateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/app_service_managed_certificate#create AppServiceManagedCertificate#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/app_service_managed_certificate#create AppServiceManagedCertificate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/app_service_managed_certificate#delete AppServiceManagedCertificate#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/app_service_managed_certificate#delete AppServiceManagedCertificate#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/app_service_managed_certificate#read AppServiceManagedCertificate#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/app_service_managed_certificate#read AppServiceManagedCertificate#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/app_service_managed_certificate#update AppServiceManagedCertificate#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/app_service_managed_certificate#update AppServiceManagedCertificate#update}
   */
   readonly update?: string;
 }
@@ -229,7 +224,7 @@ export class AppServiceManagedCertificateTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/app_service_managed_certificate azurerm_app_service_managed_certificate}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/app_service_managed_certificate azurerm_app_service_managed_certificate}
 */
 export class AppServiceManagedCertificate extends cdktf.TerraformResource {
 
@@ -245,7 +240,7 @@ export class AppServiceManagedCertificate extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AppServiceManagedCertificate resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AppServiceManagedCertificate to import
-  * @param importFromId The id of the existing AppServiceManagedCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/app_service_managed_certificate#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AppServiceManagedCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/app_service_managed_certificate#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AppServiceManagedCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -257,7 +252,7 @@ export class AppServiceManagedCertificate extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/app_service_managed_certificate azurerm_app_service_managed_certificate} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/app_service_managed_certificate azurerm_app_service_managed_certificate} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -268,8 +263,8 @@ export class AppServiceManagedCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_service_managed_certificate',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

@@ -4,12 +4,12 @@
 
 ### DataAzurermRedisEnterpriseDatabase <a name="DataAzurermRedisEnterpriseDatabase" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/redis_enterprise_database azurerm_redis_enterprise_database}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/redis_enterprise_database azurerm_redis_enterprise_database}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermredisenterprisedatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermredisenterprisedatabase"
 
 dataazurermredisenterprisedatabase.NewDataAzurermRedisEnterpriseDatabase(scope Construct, id *string, config DataAzurermRedisEnterpriseDatabaseConfig) DataAzurermRedisEnterpriseDatabase
 ```
@@ -69,7 +69,6 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.resetId">ResetId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.resetResourceGroupName">ResetResourceGroupName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
 
 ---
@@ -284,12 +283,6 @@ func PutTimeouts(value DataAzurermRedisEnterpriseDatabaseTimeouts)
 func ResetId()
 ```
 
-##### `ResetResourceGroupName` <a name="ResetResourceGroupName" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.resetResourceGroupName"></a>
-
-```go
-func ResetResourceGroupName()
-```
-
 ##### `ResetTimeouts` <a name="ResetTimeouts" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.resetTimeouts"></a>
 
 ```go
@@ -310,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermredisenterprisedatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermredisenterprisedatabase"
 
 dataazurermredisenterprisedatabase.DataAzurermRedisEnterpriseDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -342,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermredisenterprisedatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermredisenterprisedatabase"
 
 dataazurermredisenterprisedatabase.DataAzurermRedisEnterpriseDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -356,7 +349,7 @@ dataazurermredisenterprisedatabase.DataAzurermRedisEnterpriseDatabase_IsTerrafor
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermredisenterprisedatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermredisenterprisedatabase"
 
 dataazurermredisenterprisedatabase.DataAzurermRedisEnterpriseDatabase_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -370,7 +363,7 @@ dataazurermredisenterprisedatabase.DataAzurermRedisEnterpriseDatabase_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermredisenterprisedatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermredisenterprisedatabase"
 
 dataazurermredisenterprisedatabase.DataAzurermRedisEnterpriseDatabase_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -399,7 +392,7 @@ The construct id used in the generated config for the DataAzurermRedisEnterprise
 
 The id of the existing DataAzurermRedisEnterpriseDatabase that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/redis_enterprise_database#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/redis_enterprise_database#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -435,12 +428,10 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.property.clusterIdInput">ClusterIdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.property.resourceGroupNameInput">ResourceGroupNameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.property.clusterId">ClusterId</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.property.name">Name</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | *No description.* |
 
 ---
 
@@ -646,16 +637,6 @@ func NameInput() *string
 
 ---
 
-##### `ResourceGroupNameInput`<sup>Optional</sup> <a name="ResourceGroupNameInput" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.property.resourceGroupNameInput"></a>
-
-```go
-func ResourceGroupNameInput() *string
-```
-
-- *Type:* *string
-
----
-
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.property.timeoutsInput"></a>
 
 ```go
@@ -696,16 +677,6 @@ func Name() *string
 
 ---
 
-##### `ResourceGroupName`<sup>Required</sup> <a name="ResourceGroupName" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabase.property.resourceGroupName"></a>
-
-```go
-func ResourceGroupName() *string
-```
-
-- *Type:* *string
-
----
-
 #### Constants <a name="Constants" id="Constants"></a>
 
 | **Name** | **Type** | **Description** |
@@ -731,7 +702,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermredisenterprisedatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermredisenterprisedatabase"
 
 &dataazurermredisenterprisedatabase.DataAzurermRedisEnterpriseDatabaseConfig {
 	Connection: interface{},
@@ -744,8 +715,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermredise
 	ClusterId: *string,
 	Name: *string,
 	Id: *string,
-	ResourceGroupName: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseTimeouts,
 }
 ```
 
@@ -760,10 +730,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermredise
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseConfig.property.clusterId">ClusterId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/redis_enterprise_database#cluster_id DataAzurermRedisEnterpriseDatabase#cluster_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/redis_enterprise_database#name DataAzurermRedisEnterpriseDatabase#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/redis_enterprise_database#id DataAzurermRedisEnterpriseDatabase#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/redis_enterprise_database#resource_group_name DataAzurermRedisEnterpriseDatabase#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseConfig.property.clusterId">ClusterId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/redis_enterprise_database#cluster_id DataAzurermRedisEnterpriseDatabase#cluster_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/redis_enterprise_database#name DataAzurermRedisEnterpriseDatabase#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/redis_enterprise_database#id DataAzurermRedisEnterpriseDatabase#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseTimeouts">DataAzurermRedisEnterpriseDatabaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -846,7 +815,7 @@ ClusterId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/redis_enterprise_database#cluster_id DataAzurermRedisEnterpriseDatabase#cluster_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/redis_enterprise_database#cluster_id DataAzurermRedisEnterpriseDatabase#cluster_id}.
 
 ---
 
@@ -858,7 +827,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/redis_enterprise_database#name DataAzurermRedisEnterpriseDatabase#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/redis_enterprise_database#name DataAzurermRedisEnterpriseDatabase#name}.
 
 ---
 
@@ -870,22 +839,10 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/redis_enterprise_database#id DataAzurermRedisEnterpriseDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/redis_enterprise_database#id DataAzurermRedisEnterpriseDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-
----
-
-##### `ResourceGroupName`<sup>Optional</sup> <a name="ResourceGroupName" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseConfig.property.resourceGroupName"></a>
-
-```go
-ResourceGroupName *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/redis_enterprise_database#resource_group_name DataAzurermRedisEnterpriseDatabase#resource_group_name}.
 
 ---
 
@@ -899,7 +856,7 @@ Timeouts DataAzurermRedisEnterpriseDatabaseTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/redis_enterprise_database#timeouts DataAzurermRedisEnterpriseDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/redis_enterprise_database#timeouts DataAzurermRedisEnterpriseDatabase#timeouts}
 
 ---
 
@@ -908,7 +865,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermredisenterprisedatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermredisenterprisedatabase"
 
 &dataazurermredisenterprisedatabase.DataAzurermRedisEnterpriseDatabaseTimeouts {
 	Read: *string,
@@ -919,7 +876,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermredise
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/redis_enterprise_database#read DataAzurermRedisEnterpriseDatabase#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/redis_enterprise_database#read DataAzurermRedisEnterpriseDatabase#read}. |
 
 ---
 
@@ -931,7 +888,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/redis_enterprise_database#read DataAzurermRedisEnterpriseDatabase#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/redis_enterprise_database#read DataAzurermRedisEnterpriseDatabase#read}.
 
 ---
 
@@ -942,7 +899,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermRedisEnterpriseDatabase.DataAzurermRedisEnterpriseDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermredisenterprisedatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermredisenterprisedatabase"
 
 dataazurermredisenterprisedatabase.NewDataAzurermRedisEnterpriseDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermRedisEnterpriseDatabaseTimeoutsOutputReference
 ```

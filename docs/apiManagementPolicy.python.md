@@ -2,16 +2,16 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### ApiManagementPolicyA <a name="ApiManagementPolicyA" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA"></a>
+### ApiManagementPolicy <a name="ApiManagementPolicy" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy azurerm_api_management_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy azurerm_api_management_policy}.
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer"></a>
 
 ```python
 from cdktf_cdktf_provider_azurerm import api_management_policy
 
-apiManagementPolicy.ApiManagementPolicyA(
+apiManagementPolicy.ApiManagementPolicy(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
@@ -31,24 +31,24 @@ apiManagementPolicy.ApiManagementPolicyA(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.apiManagementId">api_management_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#api_management_id ApiManagementPolicyA#api_management_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#id ApiManagementPolicyA#id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts">ApiManagementPolicyTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.xmlContent">xml_content</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#xml_content ApiManagementPolicyA#xml_content}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.xmlLink">xml_link</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#xml_link ApiManagementPolicyA#xml_link}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.apiManagementId">api_management_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#api_management_id ApiManagementPolicy#api_management_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#id ApiManagementPolicy#id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts">ApiManagementPolicyTimeouts</a></code> | timeouts block. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.xmlContent">xml_content</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#xml_content ApiManagementPolicy#xml_content}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.xmlLink">xml_link</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#xml_link ApiManagementPolicy#xml_link}. |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
@@ -56,7 +56,7 @@ The scope in which to define this construct.
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.id"></a>
 
 - *Type:* str
 
@@ -66,90 +66,90 @@ Must be unique amongst siblings in the same scope
 
 ---
 
-##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.connection"></a>
+##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.connection"></a>
 
 - *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
 
 ---
 
-##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.count"></a>
+##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.count"></a>
 
 - *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
-##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.dependsOn"></a>
+##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.dependsOn"></a>
 
 - *Type:* typing.List[cdktf.ITerraformDependable]
 
 ---
 
-##### `for_each`<sup>Optional</sup> <a name="for_each" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.forEach"></a>
+##### `for_each`<sup>Optional</sup> <a name="for_each" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.forEach"></a>
 
 - *Type:* cdktf.ITerraformIterator
 
 ---
 
-##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.lifecycle"></a>
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.lifecycle"></a>
 
 - *Type:* cdktf.TerraformResourceLifecycle
 
 ---
 
-##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.provider"></a>
+##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.provider"></a>
 
 - *Type:* cdktf.TerraformProvider
 
 ---
 
-##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.provisioners"></a>
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.provisioners"></a>
 
 - *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
 
 ---
 
-##### `api_management_id`<sup>Required</sup> <a name="api_management_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.apiManagementId"></a>
+##### `api_management_id`<sup>Required</sup> <a name="api_management_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.apiManagementId"></a>
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#api_management_id ApiManagementPolicyA#api_management_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#api_management_id ApiManagementPolicy#api_management_id}.
 
 ---
 
-##### `id`<sup>Optional</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.id"></a>
+##### `id`<sup>Optional</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.id"></a>
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#id ApiManagementPolicyA#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#id ApiManagementPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 
 ---
 
-##### `timeouts`<sup>Optional</sup> <a name="timeouts" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.timeouts"></a>
+##### `timeouts`<sup>Optional</sup> <a name="timeouts" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.timeouts"></a>
 
 - *Type:* <a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts">ApiManagementPolicyTimeouts</a>
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#timeouts ApiManagementPolicyA#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#timeouts ApiManagementPolicy#timeouts}
 
 ---
 
-##### `xml_content`<sup>Optional</sup> <a name="xml_content" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.xmlContent"></a>
+##### `xml_content`<sup>Optional</sup> <a name="xml_content" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.xmlContent"></a>
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#xml_content ApiManagementPolicyA#xml_content}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#xml_content ApiManagementPolicy#xml_content}.
 
 ---
 
-##### `xml_link`<sup>Optional</sup> <a name="xml_link" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer.parameter.xmlLink"></a>
+##### `xml_link`<sup>Optional</sup> <a name="xml_link" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.Initializer.parameter.xmlLink"></a>
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#xml_link ApiManagementPolicyA#xml_link}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#xml_link ApiManagementPolicy#xml_link}.
 
 ---
 
@@ -157,38 +157,38 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.toString">to_string</a></code> | Returns a string representation of this construct. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.addOverride">add_override</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.overrideLogicalId">override_logical_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.resetOverrideLogicalId">reset_override_logical_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.toHclTerraform">to_hcl_terraform</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.toMetadata">to_metadata</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.toTerraform">to_terraform</a></code> | Adds this resource to the terraform JSON output. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.addMoveTarget">add_move_target</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getListAttribute">get_list_attribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getStringAttribute">get_string_attribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.hasResourceMove">has_resource_move</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.importFrom">import_from</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.moveFromId">move_from_id</a></code> | Move the resource corresponding to "id" to this resource. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.moveTo">move_to</a></code> | Moves this resource to the target resource given by moveTarget. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.putTimeouts">put_timeouts</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.resetId">reset_id</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.resetTimeouts">reset_timeouts</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.resetXmlContent">reset_xml_content</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.resetXmlLink">reset_xml_link</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.toString">to_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.addOverride">add_override</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.overrideLogicalId">override_logical_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.resetOverrideLogicalId">reset_override_logical_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.toHclTerraform">to_hcl_terraform</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.toMetadata">to_metadata</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.toTerraform">to_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.addMoveTarget">add_move_target</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.hasResourceMove">has_resource_move</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.importFrom">import_from</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.moveFromId">move_from_id</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.moveTo">move_to</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.putTimeouts">put_timeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.resetId">reset_id</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.resetTimeouts">reset_timeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.resetXmlContent">reset_xml_content</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.resetXmlLink">reset_xml_link</a></code> | *No description.* |
 
 ---
 
-##### `to_string` <a name="to_string" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.toString"></a>
+##### `to_string` <a name="to_string" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.toString"></a>
 
 ```python
 def to_string() -> str
@@ -196,7 +196,7 @@ def to_string() -> str
 
 Returns a string representation of this construct.
 
-##### `add_override` <a name="add_override" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.addOverride"></a>
+##### `add_override` <a name="add_override" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.addOverride"></a>
 
 ```python
 def add_override(
@@ -205,19 +205,19 @@ def add_override(
 ) -> None
 ```
 
-###### `path`<sup>Required</sup> <a name="path" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.addOverride.parameter.path"></a>
+###### `path`<sup>Required</sup> <a name="path" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.addOverride.parameter.path"></a>
 
 - *Type:* str
 
 ---
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.addOverride.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.addOverride.parameter.value"></a>
 
 - *Type:* typing.Any
 
 ---
 
-##### `override_logical_id` <a name="override_logical_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.overrideLogicalId"></a>
+##### `override_logical_id` <a name="override_logical_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.overrideLogicalId"></a>
 
 ```python
 def override_logical_id(
@@ -227,7 +227,7 @@ def override_logical_id(
 
 Overrides the auto-generated logical ID with a specific ID.
 
-###### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.overrideLogicalId.parameter.newLogicalId"></a>
+###### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.overrideLogicalId.parameter.newLogicalId"></a>
 
 - *Type:* str
 
@@ -235,7 +235,7 @@ The new logical ID to use for this stack element.
 
 ---
 
-##### `reset_override_logical_id` <a name="reset_override_logical_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.resetOverrideLogicalId"></a>
+##### `reset_override_logical_id` <a name="reset_override_logical_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.resetOverrideLogicalId"></a>
 
 ```python
 def reset_override_logical_id() -> None
@@ -243,19 +243,19 @@ def reset_override_logical_id() -> None
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
-##### `to_hcl_terraform` <a name="to_hcl_terraform" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.toHclTerraform"></a>
+##### `to_hcl_terraform` <a name="to_hcl_terraform" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.toHclTerraform"></a>
 
 ```python
 def to_hcl_terraform() -> typing.Any
 ```
 
-##### `to_metadata` <a name="to_metadata" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.toMetadata"></a>
+##### `to_metadata` <a name="to_metadata" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.toMetadata"></a>
 
 ```python
 def to_metadata() -> typing.Any
 ```
 
-##### `to_terraform` <a name="to_terraform" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.toTerraform"></a>
+##### `to_terraform` <a name="to_terraform" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.toTerraform"></a>
 
 ```python
 def to_terraform() -> typing.Any
@@ -263,7 +263,7 @@ def to_terraform() -> typing.Any
 
 Adds this resource to the terraform JSON output.
 
-##### `add_move_target` <a name="add_move_target" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.addMoveTarget"></a>
+##### `add_move_target` <a name="add_move_target" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.addMoveTarget"></a>
 
 ```python
 def add_move_target(
@@ -273,7 +273,7 @@ def add_move_target(
 
 Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 
-###### `move_target`<sup>Required</sup> <a name="move_target" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.addMoveTarget.parameter.moveTarget"></a>
+###### `move_target`<sup>Required</sup> <a name="move_target" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.addMoveTarget.parameter.moveTarget"></a>
 
 - *Type:* str
 
@@ -281,7 +281,7 @@ The string move target that will correspond to this resource.
 
 ---
 
-##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getAnyMapAttribute"></a>
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getAnyMapAttribute"></a>
 
 ```python
 def get_any_map_attribute(
@@ -289,13 +289,13 @@ def get_any_map_attribute(
 ) -> typing.Mapping[typing.Any]
 ```
 
-###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* str
 
 ---
 
-##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getBooleanAttribute"></a>
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getBooleanAttribute"></a>
 
 ```python
 def get_boolean_attribute(
@@ -303,13 +303,13 @@ def get_boolean_attribute(
 ) -> IResolvable
 ```
 
-###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* str
 
 ---
 
-##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getBooleanMapAttribute"></a>
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getBooleanMapAttribute"></a>
 
 ```python
 def get_boolean_map_attribute(
@@ -317,13 +317,13 @@ def get_boolean_map_attribute(
 ) -> typing.Mapping[bool]
 ```
 
-###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* str
 
 ---
 
-##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getListAttribute"></a>
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getListAttribute"></a>
 
 ```python
 def get_list_attribute(
@@ -331,13 +331,13 @@ def get_list_attribute(
 ) -> typing.List[str]
 ```
 
-###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* str
 
 ---
 
-##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getNumberAttribute"></a>
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getNumberAttribute"></a>
 
 ```python
 def get_number_attribute(
@@ -345,13 +345,13 @@ def get_number_attribute(
 ) -> typing.Union[int, float]
 ```
 
-###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* str
 
 ---
 
-##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getNumberListAttribute"></a>
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getNumberListAttribute"></a>
 
 ```python
 def get_number_list_attribute(
@@ -359,13 +359,13 @@ def get_number_list_attribute(
 ) -> typing.List[typing.Union[int, float]]
 ```
 
-###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* str
 
 ---
 
-##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getNumberMapAttribute"></a>
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getNumberMapAttribute"></a>
 
 ```python
 def get_number_map_attribute(
@@ -373,13 +373,13 @@ def get_number_map_attribute(
 ) -> typing.Mapping[typing.Union[int, float]]
 ```
 
-###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* str
 
 ---
 
-##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getStringAttribute"></a>
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getStringAttribute"></a>
 
 ```python
 def get_string_attribute(
@@ -387,13 +387,13 @@ def get_string_attribute(
 ) -> str
 ```
 
-###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* str
 
 ---
 
-##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getStringMapAttribute"></a>
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getStringMapAttribute"></a>
 
 ```python
 def get_string_map_attribute(
@@ -401,19 +401,19 @@ def get_string_map_attribute(
 ) -> typing.Mapping[str]
 ```
 
-###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* str
 
 ---
 
-##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.hasResourceMove"></a>
+##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.hasResourceMove"></a>
 
 ```python
 def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
 ```
 
-##### `import_from` <a name="import_from" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.importFrom"></a>
+##### `import_from` <a name="import_from" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.importFrom"></a>
 
 ```python
 def import_from(
@@ -422,19 +422,19 @@ def import_from(
 ) -> None
 ```
 
-###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.importFrom.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.importFrom.parameter.id"></a>
 
 - *Type:* str
 
 ---
 
-###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.importFrom.parameter.provider"></a>
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.importFrom.parameter.provider"></a>
 
 - *Type:* cdktf.TerraformProvider
 
 ---
 
-##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.interpolationForAttribute"></a>
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.interpolationForAttribute"></a>
 
 ```python
 def interpolation_for_attribute(
@@ -442,13 +442,13 @@ def interpolation_for_attribute(
 ) -> IResolvable
 ```
 
-###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.interpolationForAttribute.parameter.terraformAttribute"></a>
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* str
 
 ---
 
-##### `move_from_id` <a name="move_from_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.moveFromId"></a>
+##### `move_from_id` <a name="move_from_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.moveFromId"></a>
 
 ```python
 def move_from_id(
@@ -460,7 +460,7 @@ Move the resource corresponding to "id" to this resource.
 
 Note that the resource being moved from must be marked as moved using it's instance function.
 
-###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.moveFromId.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.moveFromId.parameter.id"></a>
 
 - *Type:* str
 
@@ -468,7 +468,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 
 ---
 
-##### `move_to` <a name="move_to" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.moveTo"></a>
+##### `move_to` <a name="move_to" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.moveTo"></a>
 
 ```python
 def move_to(
@@ -479,7 +479,7 @@ def move_to(
 
 Moves this resource to the target resource given by moveTarget.
 
-###### `move_target`<sup>Required</sup> <a name="move_target" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.moveTo.parameter.moveTarget"></a>
+###### `move_target`<sup>Required</sup> <a name="move_target" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.moveTo.parameter.moveTarget"></a>
 
 - *Type:* str
 
@@ -487,7 +487,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ---
 
-###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.moveTo.parameter.index"></a>
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.moveTo.parameter.index"></a>
 
 - *Type:* typing.Union[str, typing.Union[int, float]]
 
@@ -495,7 +495,7 @@ Optional The index corresponding to the key the resource is to appear in the for
 
 ---
 
-##### `move_to_id` <a name="move_to_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.moveToId"></a>
+##### `move_to_id` <a name="move_to_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.moveToId"></a>
 
 ```python
 def move_to_id(
@@ -505,7 +505,7 @@ def move_to_id(
 
 Moves this resource to the resource corresponding to "id".
 
-###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.moveToId.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.moveToId.parameter.id"></a>
 
 - *Type:* str
 
@@ -513,7 +513,7 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
-##### `put_timeouts` <a name="put_timeouts" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.putTimeouts"></a>
+##### `put_timeouts` <a name="put_timeouts" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.putTimeouts"></a>
 
 ```python
 def put_timeouts(
@@ -524,57 +524,57 @@ def put_timeouts(
 ) -> None
 ```
 
-###### `create`<sup>Optional</sup> <a name="create" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.putTimeouts.parameter.create"></a>
+###### `create`<sup>Optional</sup> <a name="create" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.putTimeouts.parameter.create"></a>
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#create ApiManagementPolicyA#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#create ApiManagementPolicy#create}.
 
 ---
 
-###### `delete`<sup>Optional</sup> <a name="delete" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.putTimeouts.parameter.delete"></a>
+###### `delete`<sup>Optional</sup> <a name="delete" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.putTimeouts.parameter.delete"></a>
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#delete ApiManagementPolicyA#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#delete ApiManagementPolicy#delete}.
 
 ---
 
-###### `read`<sup>Optional</sup> <a name="read" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.putTimeouts.parameter.read"></a>
+###### `read`<sup>Optional</sup> <a name="read" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.putTimeouts.parameter.read"></a>
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#read ApiManagementPolicyA#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#read ApiManagementPolicy#read}.
 
 ---
 
-###### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.putTimeouts.parameter.update"></a>
+###### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.putTimeouts.parameter.update"></a>
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#update ApiManagementPolicyA#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#update ApiManagementPolicy#update}.
 
 ---
 
-##### `reset_id` <a name="reset_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.resetId"></a>
+##### `reset_id` <a name="reset_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.resetId"></a>
 
 ```python
 def reset_id() -> None
 ```
 
-##### `reset_timeouts` <a name="reset_timeouts" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.resetTimeouts"></a>
+##### `reset_timeouts` <a name="reset_timeouts" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.resetTimeouts"></a>
 
 ```python
 def reset_timeouts() -> None
 ```
 
-##### `reset_xml_content` <a name="reset_xml_content" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.resetXmlContent"></a>
+##### `reset_xml_content` <a name="reset_xml_content" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.resetXmlContent"></a>
 
 ```python
 def reset_xml_content() -> None
 ```
 
-##### `reset_xml_link` <a name="reset_xml_link" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.resetXmlLink"></a>
+##### `reset_xml_link` <a name="reset_xml_link" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.resetXmlLink"></a>
 
 ```python
 def reset_xml_link() -> None
@@ -584,19 +584,19 @@ def reset_xml_link() -> None
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.isTerraformElement">is_terraform_element</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.isTerraformResource">is_terraform_resource</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a ApiManagementPolicyA resource upon running "cdktf plan <stack-name>". |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.isTerraformElement">is_terraform_element</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.isTerraformResource">is_terraform_resource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a ApiManagementPolicy resource upon running "cdktf plan <stack-name>". |
 
 ---
 
-##### `is_construct` <a name="is_construct" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.isConstruct"></a>
+##### `is_construct` <a name="is_construct" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.isConstruct"></a>
 
 ```python
 from cdktf_cdktf_provider_azurerm import api_management_policy
 
-apiManagementPolicy.ApiManagementPolicyA.is_construct(
+apiManagementPolicy.ApiManagementPolicy.is_construct(
   x: typing.Any
 )
 ```
@@ -617,7 +617,7 @@ library can be accidentally installed, and `instanceof` will behave
 unpredictably. It is safest to avoid using `instanceof`, and using
 this type-testing method instead.
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.isConstruct.parameter.x"></a>
 
 - *Type:* typing.Any
 
@@ -625,44 +625,44 @@ Any object.
 
 ---
 
-##### `is_terraform_element` <a name="is_terraform_element" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.isTerraformElement"></a>
+##### `is_terraform_element` <a name="is_terraform_element" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.isTerraformElement"></a>
 
 ```python
 from cdktf_cdktf_provider_azurerm import api_management_policy
 
-apiManagementPolicy.ApiManagementPolicyA.is_terraform_element(
+apiManagementPolicy.ApiManagementPolicy.is_terraform_element(
   x: typing.Any
 )
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.isTerraformElement.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.isTerraformElement.parameter.x"></a>
 
 - *Type:* typing.Any
 
 ---
 
-##### `is_terraform_resource` <a name="is_terraform_resource" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.isTerraformResource"></a>
+##### `is_terraform_resource` <a name="is_terraform_resource" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.isTerraformResource"></a>
 
 ```python
 from cdktf_cdktf_provider_azurerm import api_management_policy
 
-apiManagementPolicy.ApiManagementPolicyA.is_terraform_resource(
+apiManagementPolicy.ApiManagementPolicy.is_terraform_resource(
   x: typing.Any
 )
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.isTerraformResource.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.isTerraformResource.parameter.x"></a>
 
 - *Type:* typing.Any
 
 ---
 
-##### `generate_config_for_import` <a name="generate_config_for_import" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.generateConfigForImport"></a>
+##### `generate_config_for_import` <a name="generate_config_for_import" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.generateConfigForImport"></a>
 
 ```python
 from cdktf_cdktf_provider_azurerm import api_management_policy
 
-apiManagementPolicy.ApiManagementPolicyA.generate_config_for_import(
+apiManagementPolicy.ApiManagementPolicy.generate_config_for_import(
   scope: Construct,
   import_to_id: str,
   import_from_id: str,
@@ -670,9 +670,9 @@ apiManagementPolicy.ApiManagementPolicyA.generate_config_for_import(
 )
 ```
 
-Generates CDKTF code for importing a ApiManagementPolicyA resource upon running "cdktf plan <stack-name>".
+Generates CDKTF code for importing a ApiManagementPolicy resource upon running "cdktf plan <stack-name>".
 
-###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.generateConfigForImport.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.generateConfigForImport.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
@@ -680,29 +680,29 @@ The scope in which to define this construct.
 
 ---
 
-###### `import_to_id`<sup>Required</sup> <a name="import_to_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.generateConfigForImport.parameter.importToId"></a>
+###### `import_to_id`<sup>Required</sup> <a name="import_to_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.generateConfigForImport.parameter.importToId"></a>
 
 - *Type:* str
 
-The construct id used in the generated config for the ApiManagementPolicyA to import.
+The construct id used in the generated config for the ApiManagementPolicy to import.
 
 ---
 
-###### `import_from_id`<sup>Required</sup> <a name="import_from_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.generateConfigForImport.parameter.importFromId"></a>
+###### `import_from_id`<sup>Required</sup> <a name="import_from_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.generateConfigForImport.parameter.importFromId"></a>
 
 - *Type:* str
 
-The id of the existing ApiManagementPolicyA that should be imported.
+The id of the existing ApiManagementPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
-###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.generateConfigForImport.parameter.provider"></a>
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.generateConfigForImport.parameter.provider"></a>
 
 - *Type:* cdktf.TerraformProvider
 
-? Optional instance of the provider where the ApiManagementPolicyA to import is found.
+? Optional instance of the provider where the ApiManagementPolicy to import is found.
 
 ---
 
@@ -710,34 +710,34 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.cdktfStack">cdktf_stack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.friendlyUniqueId">friendly_unique_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeoutsOutputReference">ApiManagementPolicyTimeoutsOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.apiManagementIdInput">api_management_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts">ApiManagementPolicyTimeouts</a>]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.xmlContentInput">xml_content_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.xmlLinkInput">xml_link_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.apiManagementId">api_management_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.id">id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.xmlContent">xml_content</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.xmlLink">xml_link</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.cdktfStack">cdktf_stack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.friendlyUniqueId">friendly_unique_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeoutsOutputReference">ApiManagementPolicyTimeoutsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.apiManagementIdInput">api_management_id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts">ApiManagementPolicyTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.xmlContentInput">xml_content_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.xmlLinkInput">xml_link_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.apiManagementId">api_management_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.xmlContent">xml_content</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.xmlLink">xml_link</a></code> | <code>str</code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.node"></a>
 
 ```python
 node: Node
@@ -749,7 +749,7 @@ The tree node.
 
 ---
 
-##### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.cdktfStack"></a>
+##### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.cdktfStack"></a>
 
 ```python
 cdktf_stack: TerraformStack
@@ -759,7 +759,7 @@ cdktf_stack: TerraformStack
 
 ---
 
-##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.fqn"></a>
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.fqn"></a>
 
 ```python
 fqn: str
@@ -769,7 +769,7 @@ fqn: str
 
 ---
 
-##### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.friendlyUniqueId"></a>
+##### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.friendlyUniqueId"></a>
 
 ```python
 friendly_unique_id: str
@@ -779,7 +779,7 @@ friendly_unique_id: str
 
 ---
 
-##### `terraform_meta_arguments`<sup>Required</sup> <a name="terraform_meta_arguments" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.terraformMetaArguments"></a>
+##### `terraform_meta_arguments`<sup>Required</sup> <a name="terraform_meta_arguments" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.terraformMetaArguments"></a>
 
 ```python
 terraform_meta_arguments: typing.Mapping[typing.Any]
@@ -789,7 +789,7 @@ terraform_meta_arguments: typing.Mapping[typing.Any]
 
 ---
 
-##### `terraform_resource_type`<sup>Required</sup> <a name="terraform_resource_type" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.terraformResourceType"></a>
+##### `terraform_resource_type`<sup>Required</sup> <a name="terraform_resource_type" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.terraformResourceType"></a>
 
 ```python
 terraform_resource_type: str
@@ -799,7 +799,7 @@ terraform_resource_type: str
 
 ---
 
-##### `terraform_generator_metadata`<sup>Optional</sup> <a name="terraform_generator_metadata" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.terraformGeneratorMetadata"></a>
+##### `terraform_generator_metadata`<sup>Optional</sup> <a name="terraform_generator_metadata" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.terraformGeneratorMetadata"></a>
 
 ```python
 terraform_generator_metadata: TerraformProviderGeneratorMetadata
@@ -809,7 +809,7 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 
 ---
 
-##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.connection"></a>
+##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.connection"></a>
 
 ```python
 connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
@@ -819,7 +819,7 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 
 ---
 
-##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.count"></a>
+##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.count"></a>
 
 ```python
 count: typing.Union[typing.Union[int, float], TerraformCount]
@@ -829,7 +829,7 @@ count: typing.Union[typing.Union[int, float], TerraformCount]
 
 ---
 
-##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.dependsOn"></a>
+##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.dependsOn"></a>
 
 ```python
 depends_on: typing.List[str]
@@ -839,7 +839,7 @@ depends_on: typing.List[str]
 
 ---
 
-##### `for_each`<sup>Optional</sup> <a name="for_each" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.forEach"></a>
+##### `for_each`<sup>Optional</sup> <a name="for_each" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.forEach"></a>
 
 ```python
 for_each: ITerraformIterator
@@ -849,7 +849,7 @@ for_each: ITerraformIterator
 
 ---
 
-##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.lifecycle"></a>
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.lifecycle"></a>
 
 ```python
 lifecycle: TerraformResourceLifecycle
@@ -859,7 +859,7 @@ lifecycle: TerraformResourceLifecycle
 
 ---
 
-##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.provider"></a>
+##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.provider"></a>
 
 ```python
 provider: TerraformProvider
@@ -869,7 +869,7 @@ provider: TerraformProvider
 
 ---
 
-##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.provisioners"></a>
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.provisioners"></a>
 
 ```python
 provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
@@ -879,7 +879,7 @@ provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, Re
 
 ---
 
-##### `timeouts`<sup>Required</sup> <a name="timeouts" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.timeouts"></a>
+##### `timeouts`<sup>Required</sup> <a name="timeouts" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.timeouts"></a>
 
 ```python
 timeouts: ApiManagementPolicyTimeoutsOutputReference
@@ -889,7 +889,7 @@ timeouts: ApiManagementPolicyTimeoutsOutputReference
 
 ---
 
-##### `api_management_id_input`<sup>Optional</sup> <a name="api_management_id_input" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.apiManagementIdInput"></a>
+##### `api_management_id_input`<sup>Optional</sup> <a name="api_management_id_input" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.apiManagementIdInput"></a>
 
 ```python
 api_management_id_input: str
@@ -899,7 +899,7 @@ api_management_id_input: str
 
 ---
 
-##### `id_input`<sup>Optional</sup> <a name="id_input" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.idInput"></a>
+##### `id_input`<sup>Optional</sup> <a name="id_input" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.idInput"></a>
 
 ```python
 id_input: str
@@ -909,7 +909,7 @@ id_input: str
 
 ---
 
-##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.timeoutsInput"></a>
+##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.timeoutsInput"></a>
 
 ```python
 timeouts_input: typing.Union[IResolvable, ApiManagementPolicyTimeouts]
@@ -919,7 +919,7 @@ timeouts_input: typing.Union[IResolvable, ApiManagementPolicyTimeouts]
 
 ---
 
-##### `xml_content_input`<sup>Optional</sup> <a name="xml_content_input" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.xmlContentInput"></a>
+##### `xml_content_input`<sup>Optional</sup> <a name="xml_content_input" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.xmlContentInput"></a>
 
 ```python
 xml_content_input: str
@@ -929,7 +929,7 @@ xml_content_input: str
 
 ---
 
-##### `xml_link_input`<sup>Optional</sup> <a name="xml_link_input" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.xmlLinkInput"></a>
+##### `xml_link_input`<sup>Optional</sup> <a name="xml_link_input" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.xmlLinkInput"></a>
 
 ```python
 xml_link_input: str
@@ -939,7 +939,7 @@ xml_link_input: str
 
 ---
 
-##### `api_management_id`<sup>Required</sup> <a name="api_management_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.apiManagementId"></a>
+##### `api_management_id`<sup>Required</sup> <a name="api_management_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.apiManagementId"></a>
 
 ```python
 api_management_id: str
@@ -949,7 +949,7 @@ api_management_id: str
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.id"></a>
 
 ```python
 id: str
@@ -959,7 +959,7 @@ id: str
 
 ---
 
-##### `xml_content`<sup>Required</sup> <a name="xml_content" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.xmlContent"></a>
+##### `xml_content`<sup>Required</sup> <a name="xml_content" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.xmlContent"></a>
 
 ```python
 xml_content: str
@@ -969,7 +969,7 @@ xml_content: str
 
 ---
 
-##### `xml_link`<sup>Required</sup> <a name="xml_link" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.xmlLink"></a>
+##### `xml_link`<sup>Required</sup> <a name="xml_link" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.xmlLink"></a>
 
 ```python
 xml_link: str
@@ -983,11 +983,11 @@ xml_link: str
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.tfResourceType">tfResourceType</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.tfResourceType">tfResourceType</a></code> | <code>str</code> | *No description.* |
 
 ---
 
-##### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.property.tfResourceType"></a>
+##### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicy.property.tfResourceType"></a>
 
 ```python
 tfResourceType: str
@@ -999,14 +999,14 @@ tfResourceType: str
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### ApiManagementPolicyAConfig <a name="ApiManagementPolicyAConfig" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig"></a>
+### ApiManagementPolicyConfig <a name="ApiManagementPolicyConfig" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.Initializer"></a>
 
 ```python
 from cdktf_cdktf_provider_azurerm import api_management_policy
 
-apiManagementPolicy.ApiManagementPolicyAConfig(
+apiManagementPolicy.ApiManagementPolicyConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
   count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
@@ -1026,22 +1026,22 @@ apiManagementPolicy.ApiManagementPolicyAConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.apiManagementId">api_management_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#api_management_id ApiManagementPolicyA#api_management_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#id ApiManagementPolicyA#id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts">ApiManagementPolicyTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.xmlContent">xml_content</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#xml_content ApiManagementPolicyA#xml_content}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.xmlLink">xml_link</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#xml_link ApiManagementPolicyA#xml_link}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.apiManagementId">api_management_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#api_management_id ApiManagementPolicy#api_management_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#id ApiManagementPolicy#id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts">ApiManagementPolicyTimeouts</a></code> | timeouts block. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.xmlContent">xml_content</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#xml_content ApiManagementPolicy#xml_content}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.xmlLink">xml_link</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#xml_link ApiManagementPolicy#xml_link}. |
 
 ---
 
-##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.connection"></a>
+##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.connection"></a>
 
 ```python
 connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
@@ -1051,7 +1051,7 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 
 ---
 
-##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.count"></a>
+##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.count"></a>
 
 ```python
 count: typing.Union[typing.Union[int, float], TerraformCount]
@@ -1061,7 +1061,7 @@ count: typing.Union[typing.Union[int, float], TerraformCount]
 
 ---
 
-##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.dependsOn"></a>
+##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.dependsOn"></a>
 
 ```python
 depends_on: typing.List[ITerraformDependable]
@@ -1071,7 +1071,7 @@ depends_on: typing.List[ITerraformDependable]
 
 ---
 
-##### `for_each`<sup>Optional</sup> <a name="for_each" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.forEach"></a>
+##### `for_each`<sup>Optional</sup> <a name="for_each" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.forEach"></a>
 
 ```python
 for_each: ITerraformIterator
@@ -1081,7 +1081,7 @@ for_each: ITerraformIterator
 
 ---
 
-##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.lifecycle"></a>
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.lifecycle"></a>
 
 ```python
 lifecycle: TerraformResourceLifecycle
@@ -1091,7 +1091,7 @@ lifecycle: TerraformResourceLifecycle
 
 ---
 
-##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.provider"></a>
+##### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.provider"></a>
 
 ```python
 provider: TerraformProvider
@@ -1101,7 +1101,7 @@ provider: TerraformProvider
 
 ---
 
-##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.provisioners"></a>
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.provisioners"></a>
 
 ```python
 provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
@@ -1111,7 +1111,7 @@ provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, Re
 
 ---
 
-##### `api_management_id`<sup>Required</sup> <a name="api_management_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.apiManagementId"></a>
+##### `api_management_id`<sup>Required</sup> <a name="api_management_id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.apiManagementId"></a>
 
 ```python
 api_management_id: str
@@ -1119,11 +1119,11 @@ api_management_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#api_management_id ApiManagementPolicyA#api_management_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#api_management_id ApiManagementPolicy#api_management_id}.
 
 ---
 
-##### `id`<sup>Optional</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.id"></a>
+##### `id`<sup>Optional</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.id"></a>
 
 ```python
 id: str
@@ -1131,14 +1131,14 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#id ApiManagementPolicyA#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#id ApiManagementPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 
 ---
 
-##### `timeouts`<sup>Optional</sup> <a name="timeouts" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.timeouts"></a>
+##### `timeouts`<sup>Optional</sup> <a name="timeouts" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.timeouts"></a>
 
 ```python
 timeouts: ApiManagementPolicyTimeouts
@@ -1148,11 +1148,11 @@ timeouts: ApiManagementPolicyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#timeouts ApiManagementPolicyA#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#timeouts ApiManagementPolicy#timeouts}
 
 ---
 
-##### `xml_content`<sup>Optional</sup> <a name="xml_content" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.xmlContent"></a>
+##### `xml_content`<sup>Optional</sup> <a name="xml_content" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.xmlContent"></a>
 
 ```python
 xml_content: str
@@ -1160,11 +1160,11 @@ xml_content: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#xml_content ApiManagementPolicyA#xml_content}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#xml_content ApiManagementPolicy#xml_content}.
 
 ---
 
-##### `xml_link`<sup>Optional</sup> <a name="xml_link" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.xmlLink"></a>
+##### `xml_link`<sup>Optional</sup> <a name="xml_link" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyConfig.property.xmlLink"></a>
 
 ```python
 xml_link: str
@@ -1172,7 +1172,7 @@ xml_link: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#xml_link ApiManagementPolicyA#xml_link}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#xml_link ApiManagementPolicy#xml_link}.
 
 ---
 
@@ -1195,10 +1195,10 @@ apiManagementPolicy.ApiManagementPolicyTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#create ApiManagementPolicyA#create}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#delete ApiManagementPolicyA#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#read ApiManagementPolicyA#read}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#update ApiManagementPolicyA#update}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#create ApiManagementPolicy#create}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#delete ApiManagementPolicy#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#read ApiManagementPolicy#read}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#update ApiManagementPolicy#update}. |
 
 ---
 
@@ -1210,7 +1210,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#create ApiManagementPolicyA#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#create ApiManagementPolicy#create}.
 
 ---
 
@@ -1222,7 +1222,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#delete ApiManagementPolicyA#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#delete ApiManagementPolicy#delete}.
 
 ---
 
@@ -1234,7 +1234,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#read ApiManagementPolicyA#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#read ApiManagementPolicy#read}.
 
 ---
 
@@ -1246,7 +1246,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/api_management_policy#update ApiManagementPolicyA#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/api_management_policy#update ApiManagementPolicy#update}.
 
 ---
 

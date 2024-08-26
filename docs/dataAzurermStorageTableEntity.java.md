@@ -4,7 +4,7 @@
 
 ### DataAzurermStorageTableEntity <a name="DataAzurermStorageTableEntity" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity azurerm_storage_table_entity}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity azurerm_storage_table_entity}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer"></a>
 
@@ -25,10 +25,8 @@ DataAzurermStorageTableEntity.Builder.create(Construct scope, java.lang.String i
 //  .provisioners(RemoteExecProvisioner>)
     .partitionKey(java.lang.String)
     .rowKey(java.lang.String)
+    .storageTableId(java.lang.String)
 //  .id(java.lang.String)
-//  .storageAccountName(java.lang.String)
-//  .storageTableId(java.lang.String)
-//  .tableName(java.lang.String)
 //  .timeouts(DataAzurermStorageTableEntityTimeouts)
     .build();
 ```
@@ -44,12 +42,10 @@ DataAzurermStorageTableEntity.Builder.create(Construct scope, java.lang.String i
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.partitionKey">partitionKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#partition_key DataAzurermStorageTableEntity#partition_key}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.rowKey">rowKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#row_key DataAzurermStorageTableEntity#row_key}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#id DataAzurermStorageTableEntity#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.storageAccountName">storageAccountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#storage_account_name DataAzurermStorageTableEntity#storage_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.storageTableId">storageTableId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#storage_table_id DataAzurermStorageTableEntity#storage_table_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.tableName">tableName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#table_name DataAzurermStorageTableEntity#table_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.partitionKey">partitionKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#partition_key DataAzurermStorageTableEntity#partition_key}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.rowKey">rowKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#row_key DataAzurermStorageTableEntity#row_key}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.storageTableId">storageTableId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#storage_table_id DataAzurermStorageTableEntity#storage_table_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#id DataAzurermStorageTableEntity#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityTimeouts">DataAzurermStorageTableEntityTimeouts</a></code> | timeouts block. |
 
 ---
@@ -118,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#partition_key DataAzurermStorageTableEntity#partition_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#partition_key DataAzurermStorageTableEntity#partition_key}.
 
 ---
 
@@ -126,7 +122,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#row_key DataAzurermStorageTableEntity#row_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#row_key DataAzurermStorageTableEntity#row_key}.
+
+---
+
+##### `storageTableId`<sup>Required</sup> <a name="storageTableId" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.storageTableId"></a>
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#storage_table_id DataAzurermStorageTableEntity#storage_table_id}.
 
 ---
 
@@ -134,34 +138,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#id DataAzurermStorageTableEntity#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#id DataAzurermStorageTableEntity#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-
----
-
-##### `storageAccountName`<sup>Optional</sup> <a name="storageAccountName" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.storageAccountName"></a>
-
-- *Type:* java.lang.String
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#storage_account_name DataAzurermStorageTableEntity#storage_account_name}.
-
----
-
-##### `storageTableId`<sup>Optional</sup> <a name="storageTableId" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.storageTableId"></a>
-
-- *Type:* java.lang.String
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#storage_table_id DataAzurermStorageTableEntity#storage_table_id}.
-
----
-
-##### `tableName`<sup>Optional</sup> <a name="tableName" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.Initializer.parameter.tableName"></a>
-
-- *Type:* java.lang.String
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#table_name DataAzurermStorageTableEntity#table_name}.
 
 ---
 
@@ -171,7 +151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#timeouts DataAzurermStorageTableEntity#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#timeouts DataAzurermStorageTableEntity#timeouts}
 
 ---
 
@@ -198,9 +178,6 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.putTimeouts">putTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.resetId">resetId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.resetStorageAccountName">resetStorageAccountName</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.resetStorageTableId">resetStorageTableId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.resetTableName">resetTableName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.resetTimeouts">resetTimeouts</a></code> | *No description.* |
 
 ---
@@ -415,24 +392,6 @@ public void putTimeouts(DataAzurermStorageTableEntityTimeouts value)
 public void resetId()
 ```
 
-##### `resetStorageAccountName` <a name="resetStorageAccountName" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.resetStorageAccountName"></a>
-
-```java
-public void resetStorageAccountName()
-```
-
-##### `resetStorageTableId` <a name="resetStorageTableId" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.resetStorageTableId"></a>
-
-```java
-public void resetStorageTableId()
-```
-
-##### `resetTableName` <a name="resetTableName" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.resetTableName"></a>
-
-```java
-public void resetTableName()
-```
-
 ##### `resetTimeouts` <a name="resetTimeouts" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.resetTimeouts"></a>
 
 ```java
@@ -542,7 +501,7 @@ The construct id used in the generated config for the DataAzurermStorageTableEnt
 
 The id of the existing DataAzurermStorageTableEntity that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -575,16 +534,12 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.partitionKeyInput">partitionKeyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.rowKeyInput">rowKeyInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.storageAccountNameInput">storageAccountNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.storageTableIdInput">storageTableIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.tableNameInput">tableNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityTimeouts">DataAzurermStorageTableEntityTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.partitionKey">partitionKey</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.rowKey">rowKey</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.storageAccountName">storageAccountName</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.storageTableId">storageTableId</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.tableName">tableName</a></code> | <code>java.lang.String</code> | *No description.* |
 
 ---
 
@@ -760,30 +715,10 @@ public java.lang.String getRowKeyInput();
 
 ---
 
-##### `storageAccountNameInput`<sup>Optional</sup> <a name="storageAccountNameInput" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.storageAccountNameInput"></a>
-
-```java
-public java.lang.String getStorageAccountNameInput();
-```
-
-- *Type:* java.lang.String
-
----
-
 ##### `storageTableIdInput`<sup>Optional</sup> <a name="storageTableIdInput" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.storageTableIdInput"></a>
 
 ```java
 public java.lang.String getStorageTableIdInput();
-```
-
-- *Type:* java.lang.String
-
----
-
-##### `tableNameInput`<sup>Optional</sup> <a name="tableNameInput" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.tableNameInput"></a>
-
-```java
-public java.lang.String getTableNameInput();
 ```
 
 - *Type:* java.lang.String
@@ -830,30 +765,10 @@ public java.lang.String getRowKey();
 
 ---
 
-##### `storageAccountName`<sup>Required</sup> <a name="storageAccountName" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.storageAccountName"></a>
-
-```java
-public java.lang.String getStorageAccountName();
-```
-
-- *Type:* java.lang.String
-
----
-
 ##### `storageTableId`<sup>Required</sup> <a name="storageTableId" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.storageTableId"></a>
 
 ```java
 public java.lang.String getStorageTableId();
-```
-
-- *Type:* java.lang.String
-
----
-
-##### `tableName`<sup>Required</sup> <a name="tableName" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntity.property.tableName"></a>
-
-```java
-public java.lang.String getTableName();
 ```
 
 - *Type:* java.lang.String
@@ -901,10 +816,8 @@ DataAzurermStorageTableEntityConfig.builder()
 //  .provisioners(RemoteExecProvisioner>)
     .partitionKey(java.lang.String)
     .rowKey(java.lang.String)
+    .storageTableId(java.lang.String)
 //  .id(java.lang.String)
-//  .storageAccountName(java.lang.String)
-//  .storageTableId(java.lang.String)
-//  .tableName(java.lang.String)
 //  .timeouts(DataAzurermStorageTableEntityTimeouts)
     .build();
 ```
@@ -920,12 +833,10 @@ DataAzurermStorageTableEntityConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.partitionKey">partitionKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#partition_key DataAzurermStorageTableEntity#partition_key}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.rowKey">rowKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#row_key DataAzurermStorageTableEntity#row_key}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#id DataAzurermStorageTableEntity#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.storageAccountName">storageAccountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#storage_account_name DataAzurermStorageTableEntity#storage_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.storageTableId">storageTableId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#storage_table_id DataAzurermStorageTableEntity#storage_table_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.tableName">tableName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#table_name DataAzurermStorageTableEntity#table_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.partitionKey">partitionKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#partition_key DataAzurermStorageTableEntity#partition_key}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.rowKey">rowKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#row_key DataAzurermStorageTableEntity#row_key}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.storageTableId">storageTableId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#storage_table_id DataAzurermStorageTableEntity#storage_table_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#id DataAzurermStorageTableEntity#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityTimeouts">DataAzurermStorageTableEntityTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1008,7 +919,7 @@ public java.lang.String getPartitionKey();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#partition_key DataAzurermStorageTableEntity#partition_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#partition_key DataAzurermStorageTableEntity#partition_key}.
 
 ---
 
@@ -1020,7 +931,19 @@ public java.lang.String getRowKey();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#row_key DataAzurermStorageTableEntity#row_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#row_key DataAzurermStorageTableEntity#row_key}.
+
+---
+
+##### `storageTableId`<sup>Required</sup> <a name="storageTableId" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.storageTableId"></a>
+
+```java
+public java.lang.String getStorageTableId();
+```
+
+- *Type:* java.lang.String
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#storage_table_id DataAzurermStorageTableEntity#storage_table_id}.
 
 ---
 
@@ -1032,46 +955,10 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#id DataAzurermStorageTableEntity#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#id DataAzurermStorageTableEntity#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-
----
-
-##### `storageAccountName`<sup>Optional</sup> <a name="storageAccountName" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.storageAccountName"></a>
-
-```java
-public java.lang.String getStorageAccountName();
-```
-
-- *Type:* java.lang.String
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#storage_account_name DataAzurermStorageTableEntity#storage_account_name}.
-
----
-
-##### `storageTableId`<sup>Optional</sup> <a name="storageTableId" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.storageTableId"></a>
-
-```java
-public java.lang.String getStorageTableId();
-```
-
-- *Type:* java.lang.String
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#storage_table_id DataAzurermStorageTableEntity#storage_table_id}.
-
----
-
-##### `tableName`<sup>Optional</sup> <a name="tableName" id="@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityConfig.property.tableName"></a>
-
-```java
-public java.lang.String getTableName();
-```
-
-- *Type:* java.lang.String
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#table_name DataAzurermStorageTableEntity#table_name}.
 
 ---
 
@@ -1085,7 +972,7 @@ public DataAzurermStorageTableEntityTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#timeouts DataAzurermStorageTableEntity#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#timeouts DataAzurermStorageTableEntity#timeouts}
 
 ---
 
@@ -1105,7 +992,7 @@ DataAzurermStorageTableEntityTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#read DataAzurermStorageTableEntity#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageTableEntity.DataAzurermStorageTableEntityTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#read DataAzurermStorageTableEntity#read}. |
 
 ---
 
@@ -1117,7 +1004,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/storage_table_entity#read DataAzurermStorageTableEntity#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/storage_table_entity#read DataAzurermStorageTableEntity#read}.
 
 ---
 

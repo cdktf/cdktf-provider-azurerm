@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,120 +8,120 @@ import * as cdktf from 'cdktf';
 
 export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#capacity RedisCache#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#access_keys_authentication_enabled RedisCache#access_keys_authentication_enabled}
+  */
+  readonly accessKeysAuthenticationEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#capacity RedisCache#capacity}
   */
   readonly capacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#enable_non_ssl_port RedisCache#enable_non_ssl_port}
-  */
-  readonly enableNonSslPort?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#family RedisCache#family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#family RedisCache#family}
   */
   readonly family: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#id RedisCache#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#id RedisCache#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#location RedisCache#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#location RedisCache#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#minimum_tls_version RedisCache#minimum_tls_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#minimum_tls_version RedisCache#minimum_tls_version}
   */
   readonly minimumTlsVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#name RedisCache#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#name RedisCache#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#non_ssl_port_enabled RedisCache#non_ssl_port_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#non_ssl_port_enabled RedisCache#non_ssl_port_enabled}
   */
   readonly nonSslPortEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#private_static_ip_address RedisCache#private_static_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#private_static_ip_address RedisCache#private_static_ip_address}
   */
   readonly privateStaticIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#public_network_access_enabled RedisCache#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#public_network_access_enabled RedisCache#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#redis_version RedisCache#redis_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#redis_version RedisCache#redis_version}
   */
   readonly redisVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#replicas_per_master RedisCache#replicas_per_master}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#replicas_per_master RedisCache#replicas_per_master}
   */
   readonly replicasPerMaster?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#replicas_per_primary RedisCache#replicas_per_primary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#replicas_per_primary RedisCache#replicas_per_primary}
   */
   readonly replicasPerPrimary?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#resource_group_name RedisCache#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#resource_group_name RedisCache#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#shard_count RedisCache#shard_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#shard_count RedisCache#shard_count}
   */
   readonly shardCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#sku_name RedisCache#sku_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#sku_name RedisCache#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#subnet_id RedisCache#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#subnet_id RedisCache#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#tags RedisCache#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#tags RedisCache#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#tenant_settings RedisCache#tenant_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#tenant_settings RedisCache#tenant_settings}
   */
   readonly tenantSettings?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#zones RedisCache#zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#zones RedisCache#zones}
   */
   readonly zones?: string[];
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#identity RedisCache#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#identity RedisCache#identity}
   */
   readonly identity?: RedisCacheIdentity;
   /**
   * patch_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#patch_schedule RedisCache#patch_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#patch_schedule RedisCache#patch_schedule}
   */
   readonly patchSchedule?: RedisCachePatchSchedule[] | cdktf.IResolvable;
   /**
   * redis_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#redis_configuration RedisCache#redis_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#redis_configuration RedisCache#redis_configuration}
   */
   readonly redisConfiguration?: RedisCacheRedisConfiguration;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#timeouts RedisCache#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#timeouts RedisCache#timeouts}
   */
   readonly timeouts?: RedisCacheTimeouts;
 }
 export interface RedisCacheIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#identity_ids RedisCache#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#identity_ids RedisCache#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#type RedisCache#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#type RedisCache#type}
   */
   readonly type: string;
 }
@@ -246,15 +241,15 @@ export class RedisCacheIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface RedisCachePatchSchedule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#day_of_week RedisCache#day_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#day_of_week RedisCache#day_of_week}
   */
   readonly dayOfWeek: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maintenance_window RedisCache#maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maintenance_window RedisCache#maintenance_window}
   */
   readonly maintenanceWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#start_hour_utc RedisCache#start_hour_utc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#start_hour_utc RedisCache#start_hour_utc}
   */
   readonly startHourUtc?: number;
 }
@@ -425,71 +420,67 @@ export class RedisCachePatchScheduleList extends cdktf.ComplexList {
 }
 export interface RedisCacheRedisConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#active_directory_authentication_enabled RedisCache#active_directory_authentication_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#active_directory_authentication_enabled RedisCache#active_directory_authentication_enabled}
   */
   readonly activeDirectoryAuthenticationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#aof_backup_enabled RedisCache#aof_backup_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#aof_backup_enabled RedisCache#aof_backup_enabled}
   */
   readonly aofBackupEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#aof_storage_connection_string_0 RedisCache#aof_storage_connection_string_0}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#aof_storage_connection_string_0 RedisCache#aof_storage_connection_string_0}
   */
   readonly aofStorageConnectionString0?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#aof_storage_connection_string_1 RedisCache#aof_storage_connection_string_1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#aof_storage_connection_string_1 RedisCache#aof_storage_connection_string_1}
   */
   readonly aofStorageConnectionString1?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#authentication_enabled RedisCache#authentication_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#authentication_enabled RedisCache#authentication_enabled}
   */
   readonly authenticationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#data_persistence_authentication_method RedisCache#data_persistence_authentication_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#data_persistence_authentication_method RedisCache#data_persistence_authentication_method}
   */
   readonly dataPersistenceAuthenticationMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#enable_authentication RedisCache#enable_authentication}
-  */
-  readonly enableAuthentication?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maxfragmentationmemory_reserved RedisCache#maxfragmentationmemory_reserved}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maxfragmentationmemory_reserved RedisCache#maxfragmentationmemory_reserved}
   */
   readonly maxfragmentationmemoryReserved?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maxmemory_delta RedisCache#maxmemory_delta}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maxmemory_delta RedisCache#maxmemory_delta}
   */
   readonly maxmemoryDelta?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maxmemory_policy RedisCache#maxmemory_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maxmemory_policy RedisCache#maxmemory_policy}
   */
   readonly maxmemoryPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maxmemory_reserved RedisCache#maxmemory_reserved}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maxmemory_reserved RedisCache#maxmemory_reserved}
   */
   readonly maxmemoryReserved?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#notify_keyspace_events RedisCache#notify_keyspace_events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#notify_keyspace_events RedisCache#notify_keyspace_events}
   */
   readonly notifyKeyspaceEvents?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#rdb_backup_enabled RedisCache#rdb_backup_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#rdb_backup_enabled RedisCache#rdb_backup_enabled}
   */
   readonly rdbBackupEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#rdb_backup_frequency RedisCache#rdb_backup_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#rdb_backup_frequency RedisCache#rdb_backup_frequency}
   */
   readonly rdbBackupFrequency?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#rdb_backup_max_snapshot_count RedisCache#rdb_backup_max_snapshot_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#rdb_backup_max_snapshot_count RedisCache#rdb_backup_max_snapshot_count}
   */
   readonly rdbBackupMaxSnapshotCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#rdb_storage_connection_string RedisCache#rdb_storage_connection_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#rdb_storage_connection_string RedisCache#rdb_storage_connection_string}
   */
   readonly rdbStorageConnectionString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#storage_account_subscription_id RedisCache#storage_account_subscription_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#storage_account_subscription_id RedisCache#storage_account_subscription_id}
   */
   readonly storageAccountSubscriptionId?: string;
 }
@@ -506,7 +497,6 @@ export function redisCacheRedisConfigurationToTerraform(struct?: RedisCacheRedis
     aof_storage_connection_string_1: cdktf.stringToTerraform(struct!.aofStorageConnectionString1),
     authentication_enabled: cdktf.booleanToTerraform(struct!.authenticationEnabled),
     data_persistence_authentication_method: cdktf.stringToTerraform(struct!.dataPersistenceAuthenticationMethod),
-    enable_authentication: cdktf.booleanToTerraform(struct!.enableAuthentication),
     maxfragmentationmemory_reserved: cdktf.numberToTerraform(struct!.maxfragmentationmemoryReserved),
     maxmemory_delta: cdktf.numberToTerraform(struct!.maxmemoryDelta),
     maxmemory_policy: cdktf.stringToTerraform(struct!.maxmemoryPolicy),
@@ -562,12 +552,6 @@ export function redisCacheRedisConfigurationToHclTerraform(struct?: RedisCacheRe
       isBlock: false,
       type: "simple",
       storageClassType: "string",
-    },
-    enable_authentication: {
-      value: cdktf.booleanToHclTerraform(struct!.enableAuthentication),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "boolean",
     },
     maxfragmentationmemory_reserved: {
       value: cdktf.numberToHclTerraform(struct!.maxfragmentationmemoryReserved),
@@ -673,10 +657,6 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.dataPersistenceAuthenticationMethod = this._dataPersistenceAuthenticationMethod;
     }
-    if (this._enableAuthentication !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.enableAuthentication = this._enableAuthentication;
-    }
     if (this._maxfragmentationmemoryReserved !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxfragmentationmemoryReserved = this._maxfragmentationmemoryReserved;
@@ -729,7 +709,6 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
       this._aofStorageConnectionString1 = undefined;
       this._authenticationEnabled = undefined;
       this._dataPersistenceAuthenticationMethod = undefined;
-      this._enableAuthentication = undefined;
       this._maxfragmentationmemoryReserved = undefined;
       this._maxmemoryDelta = undefined;
       this._maxmemoryPolicy = undefined;
@@ -749,7 +728,6 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
       this._aofStorageConnectionString1 = value.aofStorageConnectionString1;
       this._authenticationEnabled = value.authenticationEnabled;
       this._dataPersistenceAuthenticationMethod = value.dataPersistenceAuthenticationMethod;
-      this._enableAuthentication = value.enableAuthentication;
       this._maxfragmentationmemoryReserved = value.maxfragmentationmemoryReserved;
       this._maxmemoryDelta = value.maxmemoryDelta;
       this._maxmemoryPolicy = value.maxmemoryPolicy;
@@ -827,7 +805,7 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
     return this._aofStorageConnectionString1;
   }
 
-  // authentication_enabled - computed: true, optional: true, required: false
+  // authentication_enabled - computed: false, optional: true, required: false
   private _authenticationEnabled?: boolean | cdktf.IResolvable; 
   public get authenticationEnabled() {
     return this.getBooleanAttribute('authentication_enabled');
@@ -857,22 +835,6 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get dataPersistenceAuthenticationMethodInput() {
     return this._dataPersistenceAuthenticationMethod;
-  }
-
-  // enable_authentication - computed: false, optional: true, required: false
-  private _enableAuthentication?: boolean | cdktf.IResolvable; 
-  public get enableAuthentication() {
-    return this.getBooleanAttribute('enable_authentication');
-  }
-  public set enableAuthentication(value: boolean | cdktf.IResolvable) {
-    this._enableAuthentication = value;
-  }
-  public resetEnableAuthentication() {
-    this._enableAuthentication = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enableAuthenticationInput() {
-    return this._enableAuthentication;
   }
 
   // maxclients - computed: true, optional: false, required: false
@@ -1042,19 +1004,19 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
 }
 export interface RedisCacheTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#create RedisCache#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#create RedisCache#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#delete RedisCache#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#delete RedisCache#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#read RedisCache#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#read RedisCache#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#update RedisCache#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#update RedisCache#update}
   */
   readonly update?: string;
 }
@@ -1235,7 +1197,7 @@ export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache azurerm_redis_cache}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache azurerm_redis_cache}
 */
 export class RedisCache extends cdktf.TerraformResource {
 
@@ -1251,7 +1213,7 @@ export class RedisCache extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a RedisCache resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the RedisCache to import
-  * @param importFromId The id of the existing RedisCache that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing RedisCache that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the RedisCache to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1263,7 +1225,7 @@ export class RedisCache extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache azurerm_redis_cache} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache azurerm_redis_cache} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1274,8 +1236,8 @@ export class RedisCache extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_redis_cache',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1285,8 +1247,8 @@ export class RedisCache extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._accessKeysAuthenticationEnabled = config.accessKeysAuthenticationEnabled;
     this._capacity = config.capacity;
-    this._enableNonSslPort = config.enableNonSslPort;
     this._family = config.family;
     this._id = config.id;
     this._location = config.location;
@@ -1315,6 +1277,22 @@ export class RedisCache extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // access_keys_authentication_enabled - computed: false, optional: true, required: false
+  private _accessKeysAuthenticationEnabled?: boolean | cdktf.IResolvable; 
+  public get accessKeysAuthenticationEnabled() {
+    return this.getBooleanAttribute('access_keys_authentication_enabled');
+  }
+  public set accessKeysAuthenticationEnabled(value: boolean | cdktf.IResolvable) {
+    this._accessKeysAuthenticationEnabled = value;
+  }
+  public resetAccessKeysAuthenticationEnabled() {
+    this._accessKeysAuthenticationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessKeysAuthenticationEnabledInput() {
+    return this._accessKeysAuthenticationEnabled;
+  }
+
   // capacity - computed: false, optional: false, required: true
   private _capacity?: number; 
   public get capacity() {
@@ -1326,22 +1304,6 @@ export class RedisCache extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get capacityInput() {
     return this._capacity;
-  }
-
-  // enable_non_ssl_port - computed: false, optional: true, required: false
-  private _enableNonSslPort?: boolean | cdktf.IResolvable; 
-  public get enableNonSslPort() {
-    return this.getBooleanAttribute('enable_non_ssl_port');
-  }
-  public set enableNonSslPort(value: boolean | cdktf.IResolvable) {
-    this._enableNonSslPort = value;
-  }
-  public resetEnableNonSslPort() {
-    this._enableNonSslPort = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enableNonSslPortInput() {
-    return this._enableNonSslPort;
   }
 
   // family - computed: false, optional: false, required: true
@@ -1420,7 +1382,7 @@ export class RedisCache extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // non_ssl_port_enabled - computed: true, optional: true, required: false
+  // non_ssl_port_enabled - computed: false, optional: true, required: false
   private _nonSslPortEnabled?: boolean | cdktf.IResolvable; 
   public get nonSslPortEnabled() {
     return this.getBooleanAttribute('non_ssl_port_enabled');
@@ -1483,7 +1445,7 @@ export class RedisCache extends cdktf.TerraformResource {
     return this._publicNetworkAccessEnabled;
   }
 
-  // redis_version - computed: true, optional: true, required: false
+  // redis_version - computed: false, optional: true, required: false
   private _redisVersion?: string; 
   public get redisVersion() {
     return this.getStringAttribute('redis_version');
@@ -1722,8 +1684,8 @@ export class RedisCache extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      access_keys_authentication_enabled: cdktf.booleanToTerraform(this._accessKeysAuthenticationEnabled),
       capacity: cdktf.numberToTerraform(this._capacity),
-      enable_non_ssl_port: cdktf.booleanToTerraform(this._enableNonSslPort),
       family: cdktf.stringToTerraform(this._family),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
@@ -1751,17 +1713,17 @@ export class RedisCache extends cdktf.TerraformResource {
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
+      access_keys_authentication_enabled: {
+        value: cdktf.booleanToHclTerraform(this._accessKeysAuthenticationEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
       capacity: {
         value: cdktf.numberToHclTerraform(this._capacity),
         isBlock: false,
         type: "simple",
         storageClassType: "number",
-      },
-      enable_non_ssl_port: {
-        value: cdktf.booleanToHclTerraform(this._enableNonSslPort),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "boolean",
       },
       family: {
         value: cdktf.stringToHclTerraform(this._family),

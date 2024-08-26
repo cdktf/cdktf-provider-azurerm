@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/windows_web_app
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/windows_web_app
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermWindowsWebAppConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/windows_web_app#id DataAzurermWindowsWebApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/windows_web_app#id DataAzurermWindowsWebApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/windows_web_app#name DataAzurermWindowsWebApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/windows_web_app#name DataAzurermWindowsWebApp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/windows_web_app#resource_group_name DataAzurermWindowsWebApp#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/windows_web_app#resource_group_name DataAzurermWindowsWebApp#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/windows_web_app#timeouts DataAzurermWindowsWebApp#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/windows_web_app#timeouts DataAzurermWindowsWebApp#timeouts}
   */
   readonly timeouts?: DataAzurermWindowsWebAppTimeouts;
 }
@@ -2809,21 +2804,6 @@ export class DataAzurermWindowsWebAppSiteConfigApplicationStackOutputReference e
     return this.getStringAttribute('current_stack');
   }
 
-  // docker_container_name - computed: true, optional: false, required: false
-  public get dockerContainerName() {
-    return this.getStringAttribute('docker_container_name');
-  }
-
-  // docker_container_registry - computed: true, optional: false, required: false
-  public get dockerContainerRegistry() {
-    return this.getStringAttribute('docker_container_registry');
-  }
-
-  // docker_container_tag - computed: true, optional: false, required: false
-  public get dockerContainerTag() {
-    return this.getStringAttribute('docker_container_tag');
-  }
-
   // docker_image_name - computed: true, optional: false, required: false
   public get dockerImageName() {
     return this.getStringAttribute('docker_image_name');
@@ -3225,11 +3205,6 @@ export class DataAzurermWindowsWebAppSiteConfigAutoHealSettingTriggerSlowRequest
     return this.getStringAttribute('interval');
   }
 
-  // path - computed: true, optional: false, required: false
-  public get path() {
-    return this.getStringAttribute('path');
-  }
-
   // time_taken - computed: true, optional: false, required: false
   public get timeTaken() {
     return this.getStringAttribute('time_taken');
@@ -3519,7 +3494,7 @@ export class DataAzurermWindowsWebAppSiteConfigAutoHealSettingTriggerOutputRefer
   }
 
   // status_code - computed: true, optional: false, required: false
-  private _statusCode = new DataAzurermWindowsWebAppSiteConfigAutoHealSettingTriggerStatusCodeList(this, "status_code", false);
+  private _statusCode = new DataAzurermWindowsWebAppSiteConfigAutoHealSettingTriggerStatusCodeList(this, "status_code", true);
   public get statusCode() {
     return this._statusCode;
   }
@@ -4440,11 +4415,6 @@ export class DataAzurermWindowsWebAppSiteConfigOutputReference extends cdktf.Com
     return this._applicationStack;
   }
 
-  // auto_heal_enabled - computed: true, optional: false, required: false
-  public get autoHealEnabled() {
-    return this.getBooleanAttribute('auto_heal_enabled');
-  }
-
   // auto_heal_setting - computed: true, optional: false, required: false
   private _autoHealSetting = new DataAzurermWindowsWebAppSiteConfigAutoHealSettingList(this, "auto_heal_setting", false);
   public get autoHealSetting() {
@@ -4882,7 +4852,7 @@ export class DataAzurermWindowsWebAppStorageAccountList extends cdktf.ComplexLis
 }
 export interface DataAzurermWindowsWebAppTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/windows_web_app#read DataAzurermWindowsWebApp#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/windows_web_app#read DataAzurermWindowsWebApp#read}
   */
   readonly read?: string;
 }
@@ -4976,7 +4946,7 @@ export class DataAzurermWindowsWebAppTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/windows_web_app azurerm_windows_web_app}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/windows_web_app azurerm_windows_web_app}
 */
 export class DataAzurermWindowsWebApp extends cdktf.TerraformDataSource {
 
@@ -4992,7 +4962,7 @@ export class DataAzurermWindowsWebApp extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermWindowsWebApp resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermWindowsWebApp to import
-  * @param importFromId The id of the existing DataAzurermWindowsWebApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/windows_web_app#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermWindowsWebApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/windows_web_app#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermWindowsWebApp to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -5004,7 +4974,7 @@ export class DataAzurermWindowsWebApp extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/windows_web_app azurerm_windows_web_app} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/windows_web_app azurerm_windows_web_app} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -5015,8 +4985,8 @@ export class DataAzurermWindowsWebApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_windows_web_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

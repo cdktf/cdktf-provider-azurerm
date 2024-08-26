@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,57 +8,57 @@ import * as cdktf from 'cdktf';
 
 export interface PrivateDnsResolverInboundEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#id PrivateDnsResolverInboundEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#id PrivateDnsResolverInboundEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#location PrivateDnsResolverInboundEndpoint#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#location PrivateDnsResolverInboundEndpoint#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#name PrivateDnsResolverInboundEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#name PrivateDnsResolverInboundEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#private_dns_resolver_id PrivateDnsResolverInboundEndpoint#private_dns_resolver_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#private_dns_resolver_id PrivateDnsResolverInboundEndpoint#private_dns_resolver_id}
   */
   readonly privateDnsResolverId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#tags PrivateDnsResolverInboundEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#tags PrivateDnsResolverInboundEndpoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * ip_configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#ip_configurations PrivateDnsResolverInboundEndpoint#ip_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#ip_configurations PrivateDnsResolverInboundEndpoint#ip_configurations}
   */
-  readonly ipConfigurations: PrivateDnsResolverInboundEndpointIpConfigurations[] | cdktf.IResolvable;
+  readonly ipConfigurations: PrivateDnsResolverInboundEndpointIpConfigurations;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#timeouts PrivateDnsResolverInboundEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#timeouts PrivateDnsResolverInboundEndpoint#timeouts}
   */
   readonly timeouts?: PrivateDnsResolverInboundEndpointTimeouts;
 }
 export interface PrivateDnsResolverInboundEndpointIpConfigurations {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#private_ip_address PrivateDnsResolverInboundEndpoint#private_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#private_ip_address PrivateDnsResolverInboundEndpoint#private_ip_address}
   */
   readonly privateIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#private_ip_allocation_method PrivateDnsResolverInboundEndpoint#private_ip_allocation_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#private_ip_allocation_method PrivateDnsResolverInboundEndpoint#private_ip_allocation_method}
   */
   readonly privateIpAllocationMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#subnet_id PrivateDnsResolverInboundEndpoint#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#subnet_id PrivateDnsResolverInboundEndpoint#subnet_id}
   */
   readonly subnetId: string;
 }
 
-export function privateDnsResolverInboundEndpointIpConfigurationsToTerraform(struct?: PrivateDnsResolverInboundEndpointIpConfigurations | cdktf.IResolvable): any {
+export function privateDnsResolverInboundEndpointIpConfigurationsToTerraform(struct?: PrivateDnsResolverInboundEndpointIpConfigurationsOutputReference | PrivateDnsResolverInboundEndpointIpConfigurations): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -76,7 +71,7 @@ export function privateDnsResolverInboundEndpointIpConfigurationsToTerraform(str
 }
 
 
-export function privateDnsResolverInboundEndpointIpConfigurationsToHclTerraform(struct?: PrivateDnsResolverInboundEndpointIpConfigurations | cdktf.IResolvable): any {
+export function privateDnsResolverInboundEndpointIpConfigurationsToHclTerraform(struct?: PrivateDnsResolverInboundEndpointIpConfigurationsOutputReference | PrivateDnsResolverInboundEndpointIpConfigurations): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -108,22 +103,16 @@ export function privateDnsResolverInboundEndpointIpConfigurationsToHclTerraform(
 
 export class PrivateDnsResolverInboundEndpointIpConfigurationsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): PrivateDnsResolverInboundEndpointIpConfigurations | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): PrivateDnsResolverInboundEndpointIpConfigurations | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._privateIpAddress !== undefined) {
@@ -141,21 +130,15 @@ export class PrivateDnsResolverInboundEndpointIpConfigurationsOutputReference ex
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: PrivateDnsResolverInboundEndpointIpConfigurations | cdktf.IResolvable | undefined) {
+  public set internalValue(value: PrivateDnsResolverInboundEndpointIpConfigurations | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
       this._privateIpAddress = undefined;
       this._privateIpAllocationMethod = undefined;
       this._subnetId = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
       this._privateIpAddress = value.privateIpAddress;
       this._privateIpAllocationMethod = value.privateIpAllocationMethod;
       this._subnetId = value.subnetId;
@@ -207,41 +190,21 @@ export class PrivateDnsResolverInboundEndpointIpConfigurationsOutputReference ex
     return this._subnetId;
   }
 }
-
-export class PrivateDnsResolverInboundEndpointIpConfigurationsList extends cdktf.ComplexList {
-  public internalValue? : PrivateDnsResolverInboundEndpointIpConfigurations[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): PrivateDnsResolverInboundEndpointIpConfigurationsOutputReference {
-    return new PrivateDnsResolverInboundEndpointIpConfigurationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface PrivateDnsResolverInboundEndpointTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#create PrivateDnsResolverInboundEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#create PrivateDnsResolverInboundEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#delete PrivateDnsResolverInboundEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#delete PrivateDnsResolverInboundEndpoint#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#read PrivateDnsResolverInboundEndpoint#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#read PrivateDnsResolverInboundEndpoint#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#update PrivateDnsResolverInboundEndpoint#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#update PrivateDnsResolverInboundEndpoint#update}
   */
   readonly update?: string;
 }
@@ -422,7 +385,7 @@ export class PrivateDnsResolverInboundEndpointTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint azurerm_private_dns_resolver_inbound_endpoint}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint azurerm_private_dns_resolver_inbound_endpoint}
 */
 export class PrivateDnsResolverInboundEndpoint extends cdktf.TerraformResource {
 
@@ -438,7 +401,7 @@ export class PrivateDnsResolverInboundEndpoint extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a PrivateDnsResolverInboundEndpoint resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the PrivateDnsResolverInboundEndpoint to import
-  * @param importFromId The id of the existing PrivateDnsResolverInboundEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing PrivateDnsResolverInboundEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the PrivateDnsResolverInboundEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -450,7 +413,7 @@ export class PrivateDnsResolverInboundEndpoint extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/private_dns_resolver_inbound_endpoint azurerm_private_dns_resolver_inbound_endpoint} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/private_dns_resolver_inbound_endpoint azurerm_private_dns_resolver_inbound_endpoint} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -461,8 +424,8 @@ export class PrivateDnsResolverInboundEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_private_dns_resolver_inbound_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -557,11 +520,11 @@ export class PrivateDnsResolverInboundEndpoint extends cdktf.TerraformResource {
   }
 
   // ip_configurations - computed: false, optional: false, required: true
-  private _ipConfigurations = new PrivateDnsResolverInboundEndpointIpConfigurationsList(this, "ip_configurations", false);
+  private _ipConfigurations = new PrivateDnsResolverInboundEndpointIpConfigurationsOutputReference(this, "ip_configurations");
   public get ipConfigurations() {
     return this._ipConfigurations;
   }
-  public putIpConfigurations(value: PrivateDnsResolverInboundEndpointIpConfigurations[] | cdktf.IResolvable) {
+  public putIpConfigurations(value: PrivateDnsResolverInboundEndpointIpConfigurations) {
     this._ipConfigurations.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -596,7 +559,7 @@ export class PrivateDnsResolverInboundEndpoint extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       private_dns_resolver_id: cdktf.stringToTerraform(this._privateDnsResolverId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      ip_configurations: cdktf.listMapper(privateDnsResolverInboundEndpointIpConfigurationsToTerraform, true)(this._ipConfigurations.internalValue),
+      ip_configurations: privateDnsResolverInboundEndpointIpConfigurationsToTerraform(this._ipConfigurations.internalValue),
       timeouts: privateDnsResolverInboundEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -634,7 +597,7 @@ export class PrivateDnsResolverInboundEndpoint extends cdktf.TerraformResource {
         storageClassType: "stringMap",
       },
       ip_configurations: {
-        value: cdktf.listMapperHcl(privateDnsResolverInboundEndpointIpConfigurationsToHclTerraform, true)(this._ipConfigurations.internalValue),
+        value: privateDnsResolverInboundEndpointIpConfigurationsToHclTerraform(this._ipConfigurations.internalValue),
         isBlock: true,
         type: "list",
         storageClassType: "PrivateDnsResolverInboundEndpointIpConfigurationsList",

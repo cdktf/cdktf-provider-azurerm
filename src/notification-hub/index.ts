@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,70 +8,76 @@ import * as cdktf from 'cdktf';
 
 export interface NotificationHubConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#id NotificationHub#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#id NotificationHub#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#location NotificationHub#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#location NotificationHub#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#name NotificationHub#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#name NotificationHub#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#namespace_name NotificationHub#namespace_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#namespace_name NotificationHub#namespace_name}
   */
   readonly namespaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#resource_group_name NotificationHub#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#resource_group_name NotificationHub#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#tags NotificationHub#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#tags NotificationHub#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * apns_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#apns_credential NotificationHub#apns_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#apns_credential NotificationHub#apns_credential}
   */
   readonly apnsCredential?: NotificationHubApnsCredential;
   /**
+  * browser_credential block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#browser_credential NotificationHub#browser_credential}
+  */
+  readonly browserCredential?: NotificationHubBrowserCredential;
+  /**
   * gcm_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#gcm_credential NotificationHub#gcm_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#gcm_credential NotificationHub#gcm_credential}
   */
   readonly gcmCredential?: NotificationHubGcmCredential;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#timeouts NotificationHub#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#timeouts NotificationHub#timeouts}
   */
   readonly timeouts?: NotificationHubTimeouts;
 }
 export interface NotificationHubApnsCredential {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#application_mode NotificationHub#application_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#application_mode NotificationHub#application_mode}
   */
   readonly applicationMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#bundle_id NotificationHub#bundle_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#bundle_id NotificationHub#bundle_id}
   */
   readonly bundleId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#key_id NotificationHub#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#key_id NotificationHub#key_id}
   */
   readonly keyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#team_id NotificationHub#team_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#team_id NotificationHub#team_id}
   */
   readonly teamId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#token NotificationHub#token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#token NotificationHub#token}
   */
   readonly token: string;
 }
@@ -259,9 +260,150 @@ export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexO
     return this._token;
   }
 }
+export interface NotificationHubBrowserCredential {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#subject NotificationHub#subject}
+  */
+  readonly subject: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#vapid_private_key NotificationHub#vapid_private_key}
+  */
+  readonly vapidPrivateKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#vapid_public_key NotificationHub#vapid_public_key}
+  */
+  readonly vapidPublicKey: string;
+}
+
+export function notificationHubBrowserCredentialToTerraform(struct?: NotificationHubBrowserCredentialOutputReference | NotificationHubBrowserCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    subject: cdktf.stringToTerraform(struct!.subject),
+    vapid_private_key: cdktf.stringToTerraform(struct!.vapidPrivateKey),
+    vapid_public_key: cdktf.stringToTerraform(struct!.vapidPublicKey),
+  }
+}
+
+
+export function notificationHubBrowserCredentialToHclTerraform(struct?: NotificationHubBrowserCredentialOutputReference | NotificationHubBrowserCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    subject: {
+      value: cdktf.stringToHclTerraform(struct!.subject),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vapid_private_key: {
+      value: cdktf.stringToHclTerraform(struct!.vapidPrivateKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vapid_public_key: {
+      value: cdktf.stringToHclTerraform(struct!.vapidPublicKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class NotificationHubBrowserCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NotificationHubBrowserCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._subject !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subject = this._subject;
+    }
+    if (this._vapidPrivateKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vapidPrivateKey = this._vapidPrivateKey;
+    }
+    if (this._vapidPublicKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vapidPublicKey = this._vapidPublicKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NotificationHubBrowserCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._subject = undefined;
+      this._vapidPrivateKey = undefined;
+      this._vapidPublicKey = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._subject = value.subject;
+      this._vapidPrivateKey = value.vapidPrivateKey;
+      this._vapidPublicKey = value.vapidPublicKey;
+    }
+  }
+
+  // subject - computed: false, optional: false, required: true
+  private _subject?: string; 
+  public get subject() {
+    return this.getStringAttribute('subject');
+  }
+  public set subject(value: string) {
+    this._subject = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subjectInput() {
+    return this._subject;
+  }
+
+  // vapid_private_key - computed: false, optional: false, required: true
+  private _vapidPrivateKey?: string; 
+  public get vapidPrivateKey() {
+    return this.getStringAttribute('vapid_private_key');
+  }
+  public set vapidPrivateKey(value: string) {
+    this._vapidPrivateKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vapidPrivateKeyInput() {
+    return this._vapidPrivateKey;
+  }
+
+  // vapid_public_key - computed: false, optional: false, required: true
+  private _vapidPublicKey?: string; 
+  public get vapidPublicKey() {
+    return this.getStringAttribute('vapid_public_key');
+  }
+  public set vapidPublicKey(value: string) {
+    this._vapidPublicKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vapidPublicKeyInput() {
+    return this._vapidPublicKey;
+  }
+}
 export interface NotificationHubGcmCredential {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#api_key NotificationHub#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#api_key NotificationHub#api_key}
   */
   readonly apiKey: string;
 }
@@ -342,19 +484,19 @@ export class NotificationHubGcmCredentialOutputReference extends cdktf.ComplexOb
 }
 export interface NotificationHubTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#create NotificationHub#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#create NotificationHub#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#delete NotificationHub#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#delete NotificationHub#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#read NotificationHub#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#read NotificationHub#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#update NotificationHub#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#update NotificationHub#update}
   */
   readonly update?: string;
 }
@@ -535,7 +677,7 @@ export class NotificationHubTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub azurerm_notification_hub}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub azurerm_notification_hub}
 */
 export class NotificationHub extends cdktf.TerraformResource {
 
@@ -551,7 +693,7 @@ export class NotificationHub extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NotificationHub resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NotificationHub to import
-  * @param importFromId The id of the existing NotificationHub that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NotificationHub that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NotificationHub to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -563,7 +705,7 @@ export class NotificationHub extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub azurerm_notification_hub} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub azurerm_notification_hub} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -574,8 +716,8 @@ export class NotificationHub extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_notification_hub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -592,6 +734,7 @@ export class NotificationHub extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._apnsCredential.internalValue = config.apnsCredential;
+    this._browserCredential.internalValue = config.browserCredential;
     this._gcmCredential.internalValue = config.gcmCredential;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -700,6 +843,22 @@ export class NotificationHub extends cdktf.TerraformResource {
     return this._apnsCredential.internalValue;
   }
 
+  // browser_credential - computed: false, optional: true, required: false
+  private _browserCredential = new NotificationHubBrowserCredentialOutputReference(this, "browser_credential");
+  public get browserCredential() {
+    return this._browserCredential;
+  }
+  public putBrowserCredential(value: NotificationHubBrowserCredential) {
+    this._browserCredential.internalValue = value;
+  }
+  public resetBrowserCredential() {
+    this._browserCredential.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get browserCredentialInput() {
+    return this._browserCredential.internalValue;
+  }
+
   // gcm_credential - computed: false, optional: true, required: false
   private _gcmCredential = new NotificationHubGcmCredentialOutputReference(this, "gcm_credential");
   public get gcmCredential() {
@@ -745,6 +904,7 @@ export class NotificationHub extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       apns_credential: notificationHubApnsCredentialToTerraform(this._apnsCredential.internalValue),
+      browser_credential: notificationHubBrowserCredentialToTerraform(this._browserCredential.internalValue),
       gcm_credential: notificationHubGcmCredentialToTerraform(this._gcmCredential.internalValue),
       timeouts: notificationHubTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -793,6 +953,12 @@ export class NotificationHub extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "NotificationHubApnsCredentialList",
+      },
+      browser_credential: {
+        value: notificationHubBrowserCredentialToHclTerraform(this._browserCredential.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NotificationHubBrowserCredentialList",
       },
       gcm_credential: {
         value: notificationHubGcmCredentialToHclTerraform(this._gcmCredential.internalValue),

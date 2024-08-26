@@ -4,7 +4,7 @@
 
 ### NotificationHub <a name="NotificationHub" id="@cdktf/provider-azurerm.notificationHub.NotificationHub"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub azurerm_notification_hub}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub azurerm_notification_hub}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.notificationHub.NotificationHub.Initializer"></a>
 
@@ -74,9 +74,11 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.putApnsCredential">PutApnsCredential</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.putBrowserCredential">PutBrowserCredential</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.putGcmCredential">PutGcmCredential</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.resetApnsCredential">ResetApnsCredential</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.resetBrowserCredential">ResetBrowserCredential</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.resetGcmCredential">ResetGcmCredential</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.resetTags">ResetTags</a></code> | *No description.* |
@@ -384,6 +386,18 @@ private void PutApnsCredential(NotificationHubApnsCredential Value)
 
 ---
 
+##### `PutBrowserCredential` <a name="PutBrowserCredential" id="@cdktf/provider-azurerm.notificationHub.NotificationHub.putBrowserCredential"></a>
+
+```csharp
+private void PutBrowserCredential(NotificationHubBrowserCredential Value)
+```
+
+###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.notificationHub.NotificationHub.putBrowserCredential.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential">NotificationHubBrowserCredential</a>
+
+---
+
 ##### `PutGcmCredential` <a name="PutGcmCredential" id="@cdktf/provider-azurerm.notificationHub.NotificationHub.putGcmCredential"></a>
 
 ```csharp
@@ -412,6 +426,12 @@ private void PutTimeouts(NotificationHubTimeouts Value)
 
 ```csharp
 private void ResetApnsCredential()
+```
+
+##### `ResetBrowserCredential` <a name="ResetBrowserCredential" id="@cdktf/provider-azurerm.notificationHub.NotificationHub.resetBrowserCredential"></a>
+
+```csharp
+private void ResetBrowserCredential()
 ```
 
 ##### `ResetGcmCredential` <a name="ResetGcmCredential" id="@cdktf/provider-azurerm.notificationHub.NotificationHub.resetGcmCredential"></a>
@@ -541,7 +561,7 @@ The construct id used in the generated config for the NotificationHub to import.
 
 The id of the existing NotificationHub that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -572,9 +592,11 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.property.apnsCredential">ApnsCredential</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredentialOutputReference">NotificationHubApnsCredentialOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.property.browserCredential">BrowserCredential</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference">NotificationHubBrowserCredentialOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.property.gcmCredential">GcmCredential</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubGcmCredentialOutputReference">NotificationHubGcmCredentialOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubTimeoutsOutputReference">NotificationHubTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.property.apnsCredentialInput">ApnsCredentialInput</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential">NotificationHubApnsCredential</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.property.browserCredentialInput">BrowserCredentialInput</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential">NotificationHubBrowserCredential</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.property.gcmCredentialInput">GcmCredentialInput</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubGcmCredential">NotificationHubGcmCredential</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHub.property.locationInput">LocationInput</a></code> | <code>string</code> | *No description.* |
@@ -744,6 +766,16 @@ public NotificationHubApnsCredentialOutputReference ApnsCredential { get; }
 
 ---
 
+##### `BrowserCredential`<sup>Required</sup> <a name="BrowserCredential" id="@cdktf/provider-azurerm.notificationHub.NotificationHub.property.browserCredential"></a>
+
+```csharp
+public NotificationHubBrowserCredentialOutputReference BrowserCredential { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference">NotificationHubBrowserCredentialOutputReference</a>
+
+---
+
 ##### `GcmCredential`<sup>Required</sup> <a name="GcmCredential" id="@cdktf/provider-azurerm.notificationHub.NotificationHub.property.gcmCredential"></a>
 
 ```csharp
@@ -771,6 +803,16 @@ public NotificationHubApnsCredential ApnsCredentialInput { get; }
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential">NotificationHubApnsCredential</a>
+
+---
+
+##### `BrowserCredentialInput`<sup>Optional</sup> <a name="BrowserCredentialInput" id="@cdktf/provider-azurerm.notificationHub.NotificationHub.property.browserCredentialInput"></a>
+
+```csharp
+public NotificationHubBrowserCredential BrowserCredentialInput { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential">NotificationHubBrowserCredential</a>
 
 ---
 
@@ -954,11 +996,11 @@ new NotificationHubApnsCredential {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential.property.applicationMode">ApplicationMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#application_mode NotificationHub#application_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential.property.bundleId">BundleId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#bundle_id NotificationHub#bundle_id}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential.property.keyId">KeyId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#key_id NotificationHub#key_id}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential.property.teamId">TeamId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#team_id NotificationHub#team_id}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential.property.token">Token</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#token NotificationHub#token}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential.property.applicationMode">ApplicationMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#application_mode NotificationHub#application_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential.property.bundleId">BundleId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#bundle_id NotificationHub#bundle_id}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential.property.keyId">KeyId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#key_id NotificationHub#key_id}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential.property.teamId">TeamId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#team_id NotificationHub#team_id}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential.property.token">Token</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#token NotificationHub#token}. |
 
 ---
 
@@ -970,7 +1012,7 @@ public string ApplicationMode { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#application_mode NotificationHub#application_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#application_mode NotificationHub#application_mode}.
 
 ---
 
@@ -982,7 +1024,7 @@ public string BundleId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#bundle_id NotificationHub#bundle_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#bundle_id NotificationHub#bundle_id}.
 
 ---
 
@@ -994,7 +1036,7 @@ public string KeyId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#key_id NotificationHub#key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#key_id NotificationHub#key_id}.
 
 ---
 
@@ -1006,7 +1048,7 @@ public string TeamId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#team_id NotificationHub#team_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#team_id NotificationHub#team_id}.
 
 ---
 
@@ -1018,7 +1060,67 @@ public string Token { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#token NotificationHub#token}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#token NotificationHub#token}.
+
+---
+
+### NotificationHubBrowserCredential <a name="NotificationHubBrowserCredential" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new NotificationHubBrowserCredential {
+    string Subject,
+    string VapidPrivateKey,
+    string VapidPublicKey
+};
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential.property.subject">Subject</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#subject NotificationHub#subject}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential.property.vapidPrivateKey">VapidPrivateKey</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#vapid_private_key NotificationHub#vapid_private_key}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential.property.vapidPublicKey">VapidPublicKey</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#vapid_public_key NotificationHub#vapid_public_key}. |
+
+---
+
+##### `Subject`<sup>Required</sup> <a name="Subject" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential.property.subject"></a>
+
+```csharp
+public string Subject { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#subject NotificationHub#subject}.
+
+---
+
+##### `VapidPrivateKey`<sup>Required</sup> <a name="VapidPrivateKey" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential.property.vapidPrivateKey"></a>
+
+```csharp
+public string VapidPrivateKey { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#vapid_private_key NotificationHub#vapid_private_key}.
+
+---
+
+##### `VapidPublicKey`<sup>Required</sup> <a name="VapidPublicKey" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential.property.vapidPublicKey"></a>
+
+```csharp
+public string VapidPublicKey { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#vapid_public_key NotificationHub#vapid_public_key}.
 
 ---
 
@@ -1042,6 +1144,7 @@ new NotificationHubConfig {
     string NamespaceName,
     string ResourceGroupName,
     NotificationHubApnsCredential ApnsCredential = null,
+    NotificationHubBrowserCredential BrowserCredential = null,
     NotificationHubGcmCredential GcmCredential = null,
     string Id = null,
     System.Collections.Generic.IDictionary<string, string> Tags = null,
@@ -1060,14 +1163,15 @@ new NotificationHubConfig {
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#location NotificationHub#location}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#name NotificationHub#name}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.namespaceName">NamespaceName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#namespace_name NotificationHub#namespace_name}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#resource_group_name NotificationHub#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#location NotificationHub#location}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#name NotificationHub#name}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.namespaceName">NamespaceName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#namespace_name NotificationHub#namespace_name}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#resource_group_name NotificationHub#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.apnsCredential">ApnsCredential</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential">NotificationHubApnsCredential</a></code> | apns_credential block. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.browserCredential">BrowserCredential</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential">NotificationHubBrowserCredential</a></code> | browser_credential block. |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.gcmCredential">GcmCredential</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubGcmCredential">NotificationHubGcmCredential</a></code> | gcm_credential block. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#id NotificationHub#id}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#tags NotificationHub#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#id NotificationHub#id}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#tags NotificationHub#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubTimeouts">NotificationHubTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1150,7 +1254,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#location NotificationHub#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#location NotificationHub#location}.
 
 ---
 
@@ -1162,7 +1266,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#name NotificationHub#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#name NotificationHub#name}.
 
 ---
 
@@ -1174,7 +1278,7 @@ public string NamespaceName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#namespace_name NotificationHub#namespace_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#namespace_name NotificationHub#namespace_name}.
 
 ---
 
@@ -1186,7 +1290,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#resource_group_name NotificationHub#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#resource_group_name NotificationHub#resource_group_name}.
 
 ---
 
@@ -1200,7 +1304,21 @@ public NotificationHubApnsCredential ApnsCredential { get; set; }
 
 apns_credential block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#apns_credential NotificationHub#apns_credential}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#apns_credential NotificationHub#apns_credential}
+
+---
+
+##### `BrowserCredential`<sup>Optional</sup> <a name="BrowserCredential" id="@cdktf/provider-azurerm.notificationHub.NotificationHubConfig.property.browserCredential"></a>
+
+```csharp
+public NotificationHubBrowserCredential BrowserCredential { get; set; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential">NotificationHubBrowserCredential</a>
+
+browser_credential block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#browser_credential NotificationHub#browser_credential}
 
 ---
 
@@ -1214,7 +1332,7 @@ public NotificationHubGcmCredential GcmCredential { get; set; }
 
 gcm_credential block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#gcm_credential NotificationHub#gcm_credential}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#gcm_credential NotificationHub#gcm_credential}
 
 ---
 
@@ -1226,7 +1344,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#id NotificationHub#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#id NotificationHub#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1241,7 +1359,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#tags NotificationHub#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#tags NotificationHub#tags}.
 
 ---
 
@@ -1255,7 +1373,7 @@ public NotificationHubTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#timeouts NotificationHub#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#timeouts NotificationHub#timeouts}
 
 ---
 
@@ -1275,7 +1393,7 @@ new NotificationHubGcmCredential {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubGcmCredential.property.apiKey">ApiKey</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#api_key NotificationHub#api_key}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubGcmCredential.property.apiKey">ApiKey</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#api_key NotificationHub#api_key}. |
 
 ---
 
@@ -1287,7 +1405,7 @@ public string ApiKey { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#api_key NotificationHub#api_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#api_key NotificationHub#api_key}.
 
 ---
 
@@ -1310,10 +1428,10 @@ new NotificationHubTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#create NotificationHub#create}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#delete NotificationHub#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#read NotificationHub#read}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#update NotificationHub#update}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#create NotificationHub#create}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#delete NotificationHub#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#read NotificationHub#read}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#update NotificationHub#update}. |
 
 ---
 
@@ -1325,7 +1443,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#create NotificationHub#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#create NotificationHub#create}.
 
 ---
 
@@ -1337,7 +1455,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#delete NotificationHub#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#delete NotificationHub#delete}.
 
 ---
 
@@ -1349,7 +1467,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#read NotificationHub#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#read NotificationHub#read}.
 
 ---
 
@@ -1361,7 +1479,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/notification_hub#update NotificationHub#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/notification_hub#update NotificationHub#update}.
 
 ---
 
@@ -1722,6 +1840,321 @@ public NotificationHubApnsCredential InternalValue { get; }
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubApnsCredential">NotificationHubApnsCredential</a>
+
+---
+
+
+### NotificationHubBrowserCredentialOutputReference <a name="NotificationHubBrowserCredentialOutputReference" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Azurerm;
+
+new NotificationHubBrowserCredentialOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getAnyMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getBooleanAttribute"></a>
+
+```csharp
+private IResolvable GetBooleanAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getBooleanMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getListAttribute"></a>
+
+```csharp
+private string[] GetListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getNumberAttribute"></a>
+
+```csharp
+private double GetNumberAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getNumberListAttribute"></a>
+
+```csharp
+private double[] GetNumberListAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getNumberMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getStringAttribute"></a>
+
+```csharp
+private string GetStringAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getStringMapAttribute"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
+```
+
+###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string Property)
+```
+
+###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.subjectInput">SubjectInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.vapidPrivateKeyInput">VapidPrivateKeyInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.vapidPublicKeyInput">VapidPublicKeyInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.subject">Subject</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.vapidPrivateKey">VapidPrivateKey</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.vapidPublicKey">VapidPublicKey</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential">NotificationHubBrowserCredential</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `SubjectInput`<sup>Optional</sup> <a name="SubjectInput" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.subjectInput"></a>
+
+```csharp
+public string SubjectInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `VapidPrivateKeyInput`<sup>Optional</sup> <a name="VapidPrivateKeyInput" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.vapidPrivateKeyInput"></a>
+
+```csharp
+public string VapidPrivateKeyInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `VapidPublicKeyInput`<sup>Optional</sup> <a name="VapidPublicKeyInput" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.vapidPublicKeyInput"></a>
+
+```csharp
+public string VapidPublicKeyInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `Subject`<sup>Required</sup> <a name="Subject" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.subject"></a>
+
+```csharp
+public string Subject { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `VapidPrivateKey`<sup>Required</sup> <a name="VapidPrivateKey" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.vapidPrivateKey"></a>
+
+```csharp
+public string VapidPrivateKey { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `VapidPublicKey`<sup>Required</sup> <a name="VapidPublicKey" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.vapidPublicKey"></a>
+
+```csharp
+public string VapidPublicKey { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredentialOutputReference.property.internalValue"></a>
+
+```csharp
+public NotificationHubBrowserCredential InternalValue { get; }
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.notificationHub.NotificationHubBrowserCredential">NotificationHubBrowserCredential</a>
 
 ---
 

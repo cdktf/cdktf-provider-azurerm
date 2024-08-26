@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/storage_share_directory
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface StorageShareDirectoryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory#id StorageShareDirectory#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/storage_share_directory#id StorageShareDirectory#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory#metadata StorageShareDirectory#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/storage_share_directory#metadata StorageShareDirectory#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory#name StorageShareDirectory#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/storage_share_directory#name StorageShareDirectory#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory#share_name StorageShareDirectory#share_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/storage_share_directory#storage_share_id StorageShareDirectory#storage_share_id}
   */
-  readonly shareName?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory#storage_account_name StorageShareDirectory#storage_account_name}
-  */
-  readonly storageAccountName?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory#storage_share_id StorageShareDirectory#storage_share_id}
-  */
-  readonly storageShareId?: string;
+  readonly storageShareId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory#timeouts StorageShareDirectory#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/storage_share_directory#timeouts StorageShareDirectory#timeouts}
   */
   readonly timeouts?: StorageShareDirectoryTimeouts;
 }
 export interface StorageShareDirectoryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory#create StorageShareDirectory#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/storage_share_directory#create StorageShareDirectory#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory#delete StorageShareDirectory#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/storage_share_directory#delete StorageShareDirectory#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory#read StorageShareDirectory#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/storage_share_directory#read StorageShareDirectory#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory#update StorageShareDirectory#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/storage_share_directory#update StorageShareDirectory#update}
   */
   readonly update?: string;
 }
@@ -241,7 +228,7 @@ export class StorageShareDirectoryTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory azurerm_storage_share_directory}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/storage_share_directory azurerm_storage_share_directory}
 */
 export class StorageShareDirectory extends cdktf.TerraformResource {
 
@@ -257,7 +244,7 @@ export class StorageShareDirectory extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a StorageShareDirectory resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the StorageShareDirectory to import
-  * @param importFromId The id of the existing StorageShareDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing StorageShareDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/storage_share_directory#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the StorageShareDirectory to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -269,7 +256,7 @@ export class StorageShareDirectory extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/storage_share_directory azurerm_storage_share_directory} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/storage_share_directory azurerm_storage_share_directory} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -280,8 +267,8 @@ export class StorageShareDirectory extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_share_directory',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -294,8 +281,6 @@ export class StorageShareDirectory extends cdktf.TerraformResource {
     this._id = config.id;
     this._metadata = config.metadata;
     this._name = config.name;
-    this._shareName = config.shareName;
-    this._storageAccountName = config.storageAccountName;
     this._storageShareId = config.storageShareId;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -349,48 +334,13 @@ export class StorageShareDirectory extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // share_name - computed: true, optional: true, required: false
-  private _shareName?: string; 
-  public get shareName() {
-    return this.getStringAttribute('share_name');
-  }
-  public set shareName(value: string) {
-    this._shareName = value;
-  }
-  public resetShareName() {
-    this._shareName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get shareNameInput() {
-    return this._shareName;
-  }
-
-  // storage_account_name - computed: true, optional: true, required: false
-  private _storageAccountName?: string; 
-  public get storageAccountName() {
-    return this.getStringAttribute('storage_account_name');
-  }
-  public set storageAccountName(value: string) {
-    this._storageAccountName = value;
-  }
-  public resetStorageAccountName() {
-    this._storageAccountName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageAccountNameInput() {
-    return this._storageAccountName;
-  }
-
-  // storage_share_id - computed: true, optional: true, required: false
+  // storage_share_id - computed: false, optional: false, required: true
   private _storageShareId?: string; 
   public get storageShareId() {
     return this.getStringAttribute('storage_share_id');
   }
   public set storageShareId(value: string) {
     this._storageShareId = value;
-  }
-  public resetStorageShareId() {
-    this._storageShareId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageShareIdInput() {
@@ -422,8 +372,6 @@ export class StorageShareDirectory extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
-      share_name: cdktf.stringToTerraform(this._shareName),
-      storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
       storage_share_id: cdktf.stringToTerraform(this._storageShareId),
       timeouts: storageShareDirectoryTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -445,18 +393,6 @@ export class StorageShareDirectory extends cdktf.TerraformResource {
       },
       name: {
         value: cdktf.stringToHclTerraform(this._name),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "string",
-      },
-      share_name: {
-        value: cdktf.stringToHclTerraform(this._shareName),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "string",
-      },
-      storage_account_name: {
-        value: cdktf.stringToHclTerraform(this._storageAccountName),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

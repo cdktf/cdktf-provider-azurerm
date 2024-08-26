@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,108 +8,100 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkInterfaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#accelerated_networking_enabled NetworkInterface#accelerated_networking_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#accelerated_networking_enabled NetworkInterface#accelerated_networking_enabled}
   */
   readonly acceleratedNetworkingEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#auxiliary_mode NetworkInterface#auxiliary_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#auxiliary_mode NetworkInterface#auxiliary_mode}
   */
   readonly auxiliaryMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#auxiliary_sku NetworkInterface#auxiliary_sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#auxiliary_sku NetworkInterface#auxiliary_sku}
   */
   readonly auxiliarySku?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#dns_servers NetworkInterface#dns_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#dns_servers NetworkInterface#dns_servers}
   */
   readonly dnsServers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#edge_zone NetworkInterface#edge_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#edge_zone NetworkInterface#edge_zone}
   */
   readonly edgeZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#enable_accelerated_networking NetworkInterface#enable_accelerated_networking}
-  */
-  readonly enableAcceleratedNetworking?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#enable_ip_forwarding NetworkInterface#enable_ip_forwarding}
-  */
-  readonly enableIpForwarding?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#id NetworkInterface#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#id NetworkInterface#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#internal_dns_name_label NetworkInterface#internal_dns_name_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#internal_dns_name_label NetworkInterface#internal_dns_name_label}
   */
   readonly internalDnsNameLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#ip_forwarding_enabled NetworkInterface#ip_forwarding_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#ip_forwarding_enabled NetworkInterface#ip_forwarding_enabled}
   */
   readonly ipForwardingEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#location NetworkInterface#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#location NetworkInterface#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#name NetworkInterface#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#name NetworkInterface#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#resource_group_name NetworkInterface#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#resource_group_name NetworkInterface#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#tags NetworkInterface#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#tags NetworkInterface#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * ip_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#ip_configuration NetworkInterface#ip_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#ip_configuration NetworkInterface#ip_configuration}
   */
   readonly ipConfiguration: NetworkInterfaceIpConfiguration[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#timeouts NetworkInterface#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#timeouts NetworkInterface#timeouts}
   */
   readonly timeouts?: NetworkInterfaceTimeouts;
 }
 export interface NetworkInterfaceIpConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#gateway_load_balancer_frontend_ip_configuration_id NetworkInterface#gateway_load_balancer_frontend_ip_configuration_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#gateway_load_balancer_frontend_ip_configuration_id NetworkInterface#gateway_load_balancer_frontend_ip_configuration_id}
   */
   readonly gatewayLoadBalancerFrontendIpConfigurationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#name NetworkInterface#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#name NetworkInterface#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#primary NetworkInterface#primary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#primary NetworkInterface#primary}
   */
   readonly primary?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#private_ip_address NetworkInterface#private_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#private_ip_address NetworkInterface#private_ip_address}
   */
   readonly privateIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#private_ip_address_allocation NetworkInterface#private_ip_address_allocation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#private_ip_address_allocation NetworkInterface#private_ip_address_allocation}
   */
   readonly privateIpAddressAllocation: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#private_ip_address_version NetworkInterface#private_ip_address_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#private_ip_address_version NetworkInterface#private_ip_address_version}
   */
   readonly privateIpAddressVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#public_ip_address_id NetworkInterface#public_ip_address_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#public_ip_address_id NetworkInterface#public_ip_address_id}
   */
   readonly publicIpAddressId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#subnet_id NetworkInterface#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#subnet_id NetworkInterface#subnet_id}
   */
   readonly subnetId?: string;
 }
@@ -427,19 +414,19 @@ export class NetworkInterfaceIpConfigurationList extends cdktf.ComplexList {
 }
 export interface NetworkInterfaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#create NetworkInterface#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#create NetworkInterface#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#delete NetworkInterface#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#delete NetworkInterface#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#read NetworkInterface#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#read NetworkInterface#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#update NetworkInterface#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#update NetworkInterface#update}
   */
   readonly update?: string;
 }
@@ -620,7 +607,7 @@ export class NetworkInterfaceTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface azurerm_network_interface}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface azurerm_network_interface}
 */
 export class NetworkInterface extends cdktf.TerraformResource {
 
@@ -636,7 +623,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkInterface resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkInterface to import
-  * @param importFromId The id of the existing NetworkInterface that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkInterface that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkInterface to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -648,7 +635,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/network_interface azurerm_network_interface} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/network_interface azurerm_network_interface} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -659,8 +646,8 @@ export class NetworkInterface extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_interface',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -675,8 +662,6 @@ export class NetworkInterface extends cdktf.TerraformResource {
     this._auxiliarySku = config.auxiliarySku;
     this._dnsServers = config.dnsServers;
     this._edgeZone = config.edgeZone;
-    this._enableAcceleratedNetworking = config.enableAcceleratedNetworking;
-    this._enableIpForwarding = config.enableIpForwarding;
     this._id = config.id;
     this._internalDnsNameLabel = config.internalDnsNameLabel;
     this._ipForwardingEnabled = config.ipForwardingEnabled;
@@ -692,7 +677,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // accelerated_networking_enabled - computed: true, optional: true, required: false
+  // accelerated_networking_enabled - computed: false, optional: true, required: false
   private _acceleratedNetworkingEnabled?: boolean | cdktf.IResolvable; 
   public get acceleratedNetworkingEnabled() {
     return this.getBooleanAttribute('accelerated_networking_enabled');
@@ -745,7 +730,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
     return this._auxiliarySku;
   }
 
-  // dns_servers - computed: true, optional: true, required: false
+  // dns_servers - computed: false, optional: true, required: false
   private _dnsServers?: string[]; 
   public get dnsServers() {
     return this.getListAttribute('dns_servers');
@@ -775,38 +760,6 @@ export class NetworkInterface extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get edgeZoneInput() {
     return this._edgeZone;
-  }
-
-  // enable_accelerated_networking - computed: true, optional: true, required: false
-  private _enableAcceleratedNetworking?: boolean | cdktf.IResolvable; 
-  public get enableAcceleratedNetworking() {
-    return this.getBooleanAttribute('enable_accelerated_networking');
-  }
-  public set enableAcceleratedNetworking(value: boolean | cdktf.IResolvable) {
-    this._enableAcceleratedNetworking = value;
-  }
-  public resetEnableAcceleratedNetworking() {
-    this._enableAcceleratedNetworking = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enableAcceleratedNetworkingInput() {
-    return this._enableAcceleratedNetworking;
-  }
-
-  // enable_ip_forwarding - computed: true, optional: true, required: false
-  private _enableIpForwarding?: boolean | cdktf.IResolvable; 
-  public get enableIpForwarding() {
-    return this.getBooleanAttribute('enable_ip_forwarding');
-  }
-  public set enableIpForwarding(value: boolean | cdktf.IResolvable) {
-    this._enableIpForwarding = value;
-  }
-  public resetEnableIpForwarding() {
-    this._enableIpForwarding = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enableIpForwardingInput() {
-    return this._enableIpForwarding;
   }
 
   // id - computed: true, optional: true, required: false
@@ -846,7 +799,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
     return this.getStringAttribute('internal_domain_name_suffix');
   }
 
-  // ip_forwarding_enabled - computed: true, optional: true, required: false
+  // ip_forwarding_enabled - computed: false, optional: true, required: false
   private _ipForwardingEnabled?: boolean | cdktf.IResolvable; 
   public get ipForwardingEnabled() {
     return this.getBooleanAttribute('ip_forwarding_enabled');
@@ -977,8 +930,6 @@ export class NetworkInterface extends cdktf.TerraformResource {
       auxiliary_sku: cdktf.stringToTerraform(this._auxiliarySku),
       dns_servers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._dnsServers),
       edge_zone: cdktf.stringToTerraform(this._edgeZone),
-      enable_accelerated_networking: cdktf.booleanToTerraform(this._enableAcceleratedNetworking),
-      enable_ip_forwarding: cdktf.booleanToTerraform(this._enableIpForwarding),
       id: cdktf.stringToTerraform(this._id),
       internal_dns_name_label: cdktf.stringToTerraform(this._internalDnsNameLabel),
       ip_forwarding_enabled: cdktf.booleanToTerraform(this._ipForwardingEnabled),
@@ -1022,18 +973,6 @@ export class NetworkInterface extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
-      },
-      enable_accelerated_networking: {
-        value: cdktf.booleanToHclTerraform(this._enableAcceleratedNetworking),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "boolean",
-      },
-      enable_ip_forwarding: {
-        value: cdktf.booleanToHclTerraform(this._enableIpForwarding),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "boolean",
       },
       id: {
         value: cdktf.stringToHclTerraform(this._id),

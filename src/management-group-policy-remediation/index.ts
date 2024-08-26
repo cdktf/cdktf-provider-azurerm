@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,74 +8,66 @@ import * as cdktf from 'cdktf';
 
 export interface ManagementGroupPolicyRemediationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#failure_percentage ManagementGroupPolicyRemediation#failure_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#failure_percentage ManagementGroupPolicyRemediation#failure_percentage}
   */
   readonly failurePercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#id ManagementGroupPolicyRemediation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#id ManagementGroupPolicyRemediation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#location_filters ManagementGroupPolicyRemediation#location_filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#location_filters ManagementGroupPolicyRemediation#location_filters}
   */
   readonly locationFilters?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#management_group_id ManagementGroupPolicyRemediation#management_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#management_group_id ManagementGroupPolicyRemediation#management_group_id}
   */
   readonly managementGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#name ManagementGroupPolicyRemediation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#name ManagementGroupPolicyRemediation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#parallel_deployments ManagementGroupPolicyRemediation#parallel_deployments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#parallel_deployments ManagementGroupPolicyRemediation#parallel_deployments}
   */
   readonly parallelDeployments?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#policy_assignment_id ManagementGroupPolicyRemediation#policy_assignment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#policy_assignment_id ManagementGroupPolicyRemediation#policy_assignment_id}
   */
   readonly policyAssignmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#policy_definition_id ManagementGroupPolicyRemediation#policy_definition_id}
-  */
-  readonly policyDefinitionId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#policy_definition_reference_id ManagementGroupPolicyRemediation#policy_definition_reference_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#policy_definition_reference_id ManagementGroupPolicyRemediation#policy_definition_reference_id}
   */
   readonly policyDefinitionReferenceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#resource_count ManagementGroupPolicyRemediation#resource_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#resource_count ManagementGroupPolicyRemediation#resource_count}
   */
   readonly resourceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#resource_discovery_mode ManagementGroupPolicyRemediation#resource_discovery_mode}
-  */
-  readonly resourceDiscoveryMode?: string;
-  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#timeouts ManagementGroupPolicyRemediation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#timeouts ManagementGroupPolicyRemediation#timeouts}
   */
   readonly timeouts?: ManagementGroupPolicyRemediationTimeouts;
 }
 export interface ManagementGroupPolicyRemediationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#create ManagementGroupPolicyRemediation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#create ManagementGroupPolicyRemediation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#delete ManagementGroupPolicyRemediation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#delete ManagementGroupPolicyRemediation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#read ManagementGroupPolicyRemediation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#read ManagementGroupPolicyRemediation#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#update ManagementGroupPolicyRemediation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#update ManagementGroupPolicyRemediation#update}
   */
   readonly update?: string;
 }
@@ -261,7 +248,7 @@ export class ManagementGroupPolicyRemediationTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation azurerm_management_group_policy_remediation}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation azurerm_management_group_policy_remediation}
 */
 export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
 
@@ -277,7 +264,7 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ManagementGroupPolicyRemediation resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ManagementGroupPolicyRemediation to import
-  * @param importFromId The id of the existing ManagementGroupPolicyRemediation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ManagementGroupPolicyRemediation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ManagementGroupPolicyRemediation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -289,7 +276,7 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_group_policy_remediation azurerm_management_group_policy_remediation} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_group_policy_remediation azurerm_management_group_policy_remediation} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -300,8 +287,8 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_management_group_policy_remediation',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -318,10 +305,8 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
     this._name = config.name;
     this._parallelDeployments = config.parallelDeployments;
     this._policyAssignmentId = config.policyAssignmentId;
-    this._policyDefinitionId = config.policyDefinitionId;
     this._policyDefinitionReferenceId = config.policyDefinitionReferenceId;
     this._resourceCount = config.resourceCount;
-    this._resourceDiscoveryMode = config.resourceDiscoveryMode;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -432,22 +417,6 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
     return this._policyAssignmentId;
   }
 
-  // policy_definition_id - computed: false, optional: true, required: false
-  private _policyDefinitionId?: string; 
-  public get policyDefinitionId() {
-    return this.getStringAttribute('policy_definition_id');
-  }
-  public set policyDefinitionId(value: string) {
-    this._policyDefinitionId = value;
-  }
-  public resetPolicyDefinitionId() {
-    this._policyDefinitionId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get policyDefinitionIdInput() {
-    return this._policyDefinitionId;
-  }
-
   // policy_definition_reference_id - computed: false, optional: true, required: false
   private _policyDefinitionReferenceId?: string; 
   public get policyDefinitionReferenceId() {
@@ -480,22 +449,6 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
     return this._resourceCount;
   }
 
-  // resource_discovery_mode - computed: false, optional: true, required: false
-  private _resourceDiscoveryMode?: string; 
-  public get resourceDiscoveryMode() {
-    return this.getStringAttribute('resource_discovery_mode');
-  }
-  public set resourceDiscoveryMode(value: string) {
-    this._resourceDiscoveryMode = value;
-  }
-  public resetResourceDiscoveryMode() {
-    this._resourceDiscoveryMode = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceDiscoveryModeInput() {
-    return this._resourceDiscoveryMode;
-  }
-
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ManagementGroupPolicyRemediationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -525,10 +478,8 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       parallel_deployments: cdktf.numberToTerraform(this._parallelDeployments),
       policy_assignment_id: cdktf.stringToTerraform(this._policyAssignmentId),
-      policy_definition_id: cdktf.stringToTerraform(this._policyDefinitionId),
       policy_definition_reference_id: cdktf.stringToTerraform(this._policyDefinitionReferenceId),
       resource_count: cdktf.numberToTerraform(this._resourceCount),
-      resource_discovery_mode: cdktf.stringToTerraform(this._resourceDiscoveryMode),
       timeouts: managementGroupPolicyRemediationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -577,12 +528,6 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
-      policy_definition_id: {
-        value: cdktf.stringToHclTerraform(this._policyDefinitionId),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "string",
-      },
       policy_definition_reference_id: {
         value: cdktf.stringToHclTerraform(this._policyDefinitionReferenceId),
         isBlock: false,
@@ -594,12 +539,6 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "number",
-      },
-      resource_discovery_mode: {
-        value: cdktf.stringToHclTerraform(this._resourceDiscoveryMode),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "string",
       },
       timeouts: {
         value: managementGroupPolicyRemediationTimeoutsToHclTerraform(this._timeouts.internalValue),

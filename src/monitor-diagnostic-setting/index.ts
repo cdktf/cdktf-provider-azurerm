@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,76 +8,70 @@ import * as cdktf from 'cdktf';
 
 export interface MonitorDiagnosticSettingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#eventhub_authorization_rule_id MonitorDiagnosticSetting#eventhub_authorization_rule_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#eventhub_authorization_rule_id MonitorDiagnosticSetting#eventhub_authorization_rule_id}
   */
   readonly eventhubAuthorizationRuleId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#eventhub_name MonitorDiagnosticSetting#eventhub_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#eventhub_name MonitorDiagnosticSetting#eventhub_name}
   */
   readonly eventhubName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#id MonitorDiagnosticSetting#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#id MonitorDiagnosticSetting#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#log_analytics_destination_type MonitorDiagnosticSetting#log_analytics_destination_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#log_analytics_destination_type MonitorDiagnosticSetting#log_analytics_destination_type}
   */
   readonly logAnalyticsDestinationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#log_analytics_workspace_id MonitorDiagnosticSetting#log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#log_analytics_workspace_id MonitorDiagnosticSetting#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#name MonitorDiagnosticSetting#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#name MonitorDiagnosticSetting#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#partner_solution_id MonitorDiagnosticSetting#partner_solution_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#partner_solution_id MonitorDiagnosticSetting#partner_solution_id}
   */
   readonly partnerSolutionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#storage_account_id MonitorDiagnosticSetting#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#storage_account_id MonitorDiagnosticSetting#storage_account_id}
   */
   readonly storageAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#target_resource_id MonitorDiagnosticSetting#target_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#target_resource_id MonitorDiagnosticSetting#target_resource_id}
   */
   readonly targetResourceId: string;
   /**
   * enabled_log block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#enabled_log MonitorDiagnosticSetting#enabled_log}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#enabled_log MonitorDiagnosticSetting#enabled_log}
   */
   readonly enabledLog?: MonitorDiagnosticSettingEnabledLog[] | cdktf.IResolvable;
   /**
-  * log block
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#log MonitorDiagnosticSetting#log}
-  */
-  readonly log?: MonitorDiagnosticSettingLog[] | cdktf.IResolvable;
-  /**
   * metric block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#metric MonitorDiagnosticSetting#metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#metric MonitorDiagnosticSetting#metric}
   */
   readonly metric?: MonitorDiagnosticSettingMetric[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#timeouts MonitorDiagnosticSetting#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#timeouts MonitorDiagnosticSetting#timeouts}
   */
   readonly timeouts?: MonitorDiagnosticSettingTimeouts;
 }
 export interface MonitorDiagnosticSettingEnabledLogRetentionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#days MonitorDiagnosticSetting#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#days MonitorDiagnosticSetting#days}
   */
   readonly days?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -192,17 +181,17 @@ export class MonitorDiagnosticSettingEnabledLogRetentionPolicyOutputReference ex
 }
 export interface MonitorDiagnosticSettingEnabledLog {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#category MonitorDiagnosticSetting#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#category MonitorDiagnosticSetting#category}
   */
   readonly category?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#category_group MonitorDiagnosticSetting#category_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#category_group MonitorDiagnosticSetting#category_group}
   */
   readonly categoryGroup?: string;
   /**
   * retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
   */
   readonly retentionPolicy?: MonitorDiagnosticSettingEnabledLogRetentionPolicy;
 }
@@ -374,344 +363,13 @@ export class MonitorDiagnosticSettingEnabledLogList extends cdktf.ComplexList {
     return new MonitorDiagnosticSettingEnabledLogOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
-export interface MonitorDiagnosticSettingLogRetentionPolicy {
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#days MonitorDiagnosticSetting#days}
-  */
-  readonly days?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
-  */
-  readonly enabled: boolean | cdktf.IResolvable;
-}
-
-export function monitorDiagnosticSettingLogRetentionPolicyToTerraform(struct?: MonitorDiagnosticSettingLogRetentionPolicyOutputReference | MonitorDiagnosticSettingLogRetentionPolicy): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    days: cdktf.numberToTerraform(struct!.days),
-    enabled: cdktf.booleanToTerraform(struct!.enabled),
-  }
-}
-
-
-export function monitorDiagnosticSettingLogRetentionPolicyToHclTerraform(struct?: MonitorDiagnosticSettingLogRetentionPolicyOutputReference | MonitorDiagnosticSettingLogRetentionPolicy): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  const attrs = {
-    days: {
-      value: cdktf.numberToHclTerraform(struct!.days),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "number",
-    },
-    enabled: {
-      value: cdktf.booleanToHclTerraform(struct!.enabled),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "boolean",
-    },
-  };
-
-  // remove undefined attributes
-  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
-}
-
-export class MonitorDiagnosticSettingLogRetentionPolicyOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): MonitorDiagnosticSettingLogRetentionPolicy | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._days !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.days = this._days;
-    }
-    if (this._enabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.enabled = this._enabled;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: MonitorDiagnosticSettingLogRetentionPolicy | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._days = undefined;
-      this._enabled = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._days = value.days;
-      this._enabled = value.enabled;
-    }
-  }
-
-  // days - computed: false, optional: true, required: false
-  private _days?: number; 
-  public get days() {
-    return this.getNumberAttribute('days');
-  }
-  public set days(value: number) {
-    this._days = value;
-  }
-  public resetDays() {
-    this._days = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get daysInput() {
-    return this._days;
-  }
-
-  // enabled - computed: false, optional: false, required: true
-  private _enabled?: boolean | cdktf.IResolvable; 
-  public get enabled() {
-    return this.getBooleanAttribute('enabled');
-  }
-  public set enabled(value: boolean | cdktf.IResolvable) {
-    this._enabled = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enabledInput() {
-    return this._enabled;
-  }
-}
-export interface MonitorDiagnosticSettingLog {
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#category MonitorDiagnosticSetting#category}
-  */
-  readonly category?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#category_group MonitorDiagnosticSetting#category_group}
-  */
-  readonly categoryGroup?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
-  */
-  readonly enabled?: boolean | cdktf.IResolvable;
-  /**
-  * retention_policy block
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
-  */
-  readonly retentionPolicy?: MonitorDiagnosticSettingLogRetentionPolicy;
-}
-
-export function monitorDiagnosticSettingLogToTerraform(struct?: MonitorDiagnosticSettingLog | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    category: cdktf.stringToTerraform(struct!.category),
-    category_group: cdktf.stringToTerraform(struct!.categoryGroup),
-    enabled: cdktf.booleanToTerraform(struct!.enabled),
-    retention_policy: monitorDiagnosticSettingLogRetentionPolicyToTerraform(struct!.retentionPolicy),
-  }
-}
-
-
-export function monitorDiagnosticSettingLogToHclTerraform(struct?: MonitorDiagnosticSettingLog | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  const attrs = {
-    category: {
-      value: cdktf.stringToHclTerraform(struct!.category),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    category_group: {
-      value: cdktf.stringToHclTerraform(struct!.categoryGroup),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    enabled: {
-      value: cdktf.booleanToHclTerraform(struct!.enabled),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "boolean",
-    },
-    retention_policy: {
-      value: monitorDiagnosticSettingLogRetentionPolicyToHclTerraform(struct!.retentionPolicy),
-      isBlock: true,
-      type: "list",
-      storageClassType: "MonitorDiagnosticSettingLogRetentionPolicyList",
-    },
-  };
-
-  // remove undefined attributes
-  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
-}
-
-export class MonitorDiagnosticSettingLogOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): MonitorDiagnosticSettingLog | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._category !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.category = this._category;
-    }
-    if (this._categoryGroup !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.categoryGroup = this._categoryGroup;
-    }
-    if (this._enabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.enabled = this._enabled;
-    }
-    if (this._retentionPolicy?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.retentionPolicy = this._retentionPolicy?.internalValue;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: MonitorDiagnosticSettingLog | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._category = undefined;
-      this._categoryGroup = undefined;
-      this._enabled = undefined;
-      this._retentionPolicy.internalValue = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._category = value.category;
-      this._categoryGroup = value.categoryGroup;
-      this._enabled = value.enabled;
-      this._retentionPolicy.internalValue = value.retentionPolicy;
-    }
-  }
-
-  // category - computed: false, optional: true, required: false
-  private _category?: string; 
-  public get category() {
-    return this.getStringAttribute('category');
-  }
-  public set category(value: string) {
-    this._category = value;
-  }
-  public resetCategory() {
-    this._category = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get categoryInput() {
-    return this._category;
-  }
-
-  // category_group - computed: false, optional: true, required: false
-  private _categoryGroup?: string; 
-  public get categoryGroup() {
-    return this.getStringAttribute('category_group');
-  }
-  public set categoryGroup(value: string) {
-    this._categoryGroup = value;
-  }
-  public resetCategoryGroup() {
-    this._categoryGroup = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get categoryGroupInput() {
-    return this._categoryGroup;
-  }
-
-  // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable; 
-  public get enabled() {
-    return this.getBooleanAttribute('enabled');
-  }
-  public set enabled(value: boolean | cdktf.IResolvable) {
-    this._enabled = value;
-  }
-  public resetEnabled() {
-    this._enabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enabledInput() {
-    return this._enabled;
-  }
-
-  // retention_policy - computed: false, optional: true, required: false
-  private _retentionPolicy = new MonitorDiagnosticSettingLogRetentionPolicyOutputReference(this, "retention_policy");
-  public get retentionPolicy() {
-    return this._retentionPolicy;
-  }
-  public putRetentionPolicy(value: MonitorDiagnosticSettingLogRetentionPolicy) {
-    this._retentionPolicy.internalValue = value;
-  }
-  public resetRetentionPolicy() {
-    this._retentionPolicy.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get retentionPolicyInput() {
-    return this._retentionPolicy.internalValue;
-  }
-}
-
-export class MonitorDiagnosticSettingLogList extends cdktf.ComplexList {
-  public internalValue? : MonitorDiagnosticSettingLog[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): MonitorDiagnosticSettingLogOutputReference {
-    return new MonitorDiagnosticSettingLogOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface MonitorDiagnosticSettingMetricRetentionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#days MonitorDiagnosticSetting#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#days MonitorDiagnosticSetting#days}
   */
   readonly days?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -821,17 +479,17 @@ export class MonitorDiagnosticSettingMetricRetentionPolicyOutputReference extend
 }
 export interface MonitorDiagnosticSettingMetric {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#category MonitorDiagnosticSetting#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#category MonitorDiagnosticSetting#category}
   */
   readonly category: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#retention_policy MonitorDiagnosticSetting#retention_policy}
   */
   readonly retentionPolicy?: MonitorDiagnosticSettingMetricRetentionPolicy;
 }
@@ -1002,19 +660,19 @@ export class MonitorDiagnosticSettingMetricList extends cdktf.ComplexList {
 }
 export interface MonitorDiagnosticSettingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#create MonitorDiagnosticSetting#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#create MonitorDiagnosticSetting#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#delete MonitorDiagnosticSetting#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#delete MonitorDiagnosticSetting#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#read MonitorDiagnosticSetting#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#read MonitorDiagnosticSetting#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#update MonitorDiagnosticSetting#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#update MonitorDiagnosticSetting#update}
   */
   readonly update?: string;
 }
@@ -1195,7 +853,7 @@ export class MonitorDiagnosticSettingTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting azurerm_monitor_diagnostic_setting}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting azurerm_monitor_diagnostic_setting}
 */
 export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
 
@@ -1211,7 +869,7 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MonitorDiagnosticSetting resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MonitorDiagnosticSetting to import
-  * @param importFromId The id of the existing MonitorDiagnosticSetting that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MonitorDiagnosticSetting that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MonitorDiagnosticSetting to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1223,7 +881,7 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/monitor_diagnostic_setting azurerm_monitor_diagnostic_setting} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/monitor_diagnostic_setting azurerm_monitor_diagnostic_setting} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1234,8 +892,8 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_diagnostic_setting',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1255,7 +913,6 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
     this._storageAccountId = config.storageAccountId;
     this._targetResourceId = config.targetResourceId;
     this._enabledLog.internalValue = config.enabledLog;
-    this._log.internalValue = config.log;
     this._metric.internalValue = config.metric;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -1418,22 +1075,6 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
     return this._enabledLog.internalValue;
   }
 
-  // log - computed: false, optional: true, required: false
-  private _log = new MonitorDiagnosticSettingLogList(this, "log", true);
-  public get log() {
-    return this._log;
-  }
-  public putLog(value: MonitorDiagnosticSettingLog[] | cdktf.IResolvable) {
-    this._log.internalValue = value;
-  }
-  public resetLog() {
-    this._log.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get logInput() {
-    return this._log.internalValue;
-  }
-
   // metric - computed: false, optional: true, required: false
   private _metric = new MonitorDiagnosticSettingMetricList(this, "metric", true);
   public get metric() {
@@ -1482,7 +1123,6 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
       enabled_log: cdktf.listMapper(monitorDiagnosticSettingEnabledLogToTerraform, true)(this._enabledLog.internalValue),
-      log: cdktf.listMapper(monitorDiagnosticSettingLogToTerraform, true)(this._log.internalValue),
       metric: cdktf.listMapper(monitorDiagnosticSettingMetricToTerraform, true)(this._metric.internalValue),
       timeouts: monitorDiagnosticSettingTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -1549,12 +1189,6 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
         isBlock: true,
         type: "set",
         storageClassType: "MonitorDiagnosticSettingEnabledLogList",
-      },
-      log: {
-        value: cdktf.listMapperHcl(monitorDiagnosticSettingLogToHclTerraform, true)(this._log.internalValue),
-        isBlock: true,
-        type: "set",
-        storageClassType: "MonitorDiagnosticSettingLogList",
       },
       metric: {
         value: cdktf.listMapperHcl(monitorDiagnosticSettingMetricToHclTerraform, true)(this._metric.internalValue),

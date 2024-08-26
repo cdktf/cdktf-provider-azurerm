@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,300 +8,284 @@ import * as cdktf from 'cdktf';
 
 export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#api_server_authorized_ip_ranges KubernetesCluster#api_server_authorized_ip_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#automatic_upgrade_channel KubernetesCluster#automatic_upgrade_channel}
   */
-  readonly apiServerAuthorizedIpRanges?: string[];
+  readonly automaticUpgradeChannel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#automatic_channel_upgrade KubernetesCluster#automatic_channel_upgrade}
-  */
-  readonly automaticChannelUpgrade?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#azure_policy_enabled KubernetesCluster#azure_policy_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#azure_policy_enabled KubernetesCluster#azure_policy_enabled}
   */
   readonly azurePolicyEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#cost_analysis_enabled KubernetesCluster#cost_analysis_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#cost_analysis_enabled KubernetesCluster#cost_analysis_enabled}
   */
   readonly costAnalysisEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#custom_ca_trust_certificates_base64 KubernetesCluster#custom_ca_trust_certificates_base64}
-  */
-  readonly customCaTrustCertificatesBase64?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#disk_encryption_set_id KubernetesCluster#disk_encryption_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#disk_encryption_set_id KubernetesCluster#disk_encryption_set_id}
   */
   readonly diskEncryptionSetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#dns_prefix KubernetesCluster#dns_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#dns_prefix KubernetesCluster#dns_prefix}
   */
   readonly dnsPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#dns_prefix_private_cluster KubernetesCluster#dns_prefix_private_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#dns_prefix_private_cluster KubernetesCluster#dns_prefix_private_cluster}
   */
   readonly dnsPrefixPrivateCluster?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#edge_zone KubernetesCluster#edge_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#edge_zone KubernetesCluster#edge_zone}
   */
   readonly edgeZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#enable_pod_security_policy KubernetesCluster#enable_pod_security_policy}
-  */
-  readonly enablePodSecurityPolicy?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#http_application_routing_enabled KubernetesCluster#http_application_routing_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#http_application_routing_enabled KubernetesCluster#http_application_routing_enabled}
   */
   readonly httpApplicationRoutingEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#id KubernetesCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#id KubernetesCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#image_cleaner_enabled KubernetesCluster#image_cleaner_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#image_cleaner_enabled KubernetesCluster#image_cleaner_enabled}
   */
   readonly imageCleanerEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#image_cleaner_interval_hours KubernetesCluster#image_cleaner_interval_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#image_cleaner_interval_hours KubernetesCluster#image_cleaner_interval_hours}
   */
   readonly imageCleanerIntervalHours?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#kubernetes_version KubernetesCluster#kubernetes_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#kubernetes_version KubernetesCluster#kubernetes_version}
   */
   readonly kubernetesVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#local_account_disabled KubernetesCluster#local_account_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#local_account_disabled KubernetesCluster#local_account_disabled}
   */
   readonly localAccountDisabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#location KubernetesCluster#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#location KubernetesCluster#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#name KubernetesCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#name KubernetesCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#node_os_channel_upgrade KubernetesCluster#node_os_channel_upgrade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#node_os_upgrade_channel KubernetesCluster#node_os_upgrade_channel}
   */
-  readonly nodeOsChannelUpgrade?: string;
+  readonly nodeOsUpgradeChannel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#node_resource_group KubernetesCluster#node_resource_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#node_resource_group KubernetesCluster#node_resource_group}
   */
   readonly nodeResourceGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#oidc_issuer_enabled KubernetesCluster#oidc_issuer_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#oidc_issuer_enabled KubernetesCluster#oidc_issuer_enabled}
   */
   readonly oidcIssuerEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#open_service_mesh_enabled KubernetesCluster#open_service_mesh_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#open_service_mesh_enabled KubernetesCluster#open_service_mesh_enabled}
   */
   readonly openServiceMeshEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#private_cluster_enabled KubernetesCluster#private_cluster_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#private_cluster_enabled KubernetesCluster#private_cluster_enabled}
   */
   readonly privateClusterEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#private_cluster_public_fqdn_enabled KubernetesCluster#private_cluster_public_fqdn_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#private_cluster_public_fqdn_enabled KubernetesCluster#private_cluster_public_fqdn_enabled}
   */
   readonly privateClusterPublicFqdnEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#private_dns_zone_id KubernetesCluster#private_dns_zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#private_dns_zone_id KubernetesCluster#private_dns_zone_id}
   */
   readonly privateDnsZoneId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#public_network_access_enabled KubernetesCluster#public_network_access_enabled}
-  */
-  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#resource_group_name KubernetesCluster#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#resource_group_name KubernetesCluster#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#role_based_access_control_enabled KubernetesCluster#role_based_access_control_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#role_based_access_control_enabled KubernetesCluster#role_based_access_control_enabled}
   */
   readonly roleBasedAccessControlEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#run_command_enabled KubernetesCluster#run_command_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#run_command_enabled KubernetesCluster#run_command_enabled}
   */
   readonly runCommandEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#sku_tier KubernetesCluster#sku_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#sku_tier KubernetesCluster#sku_tier}
   */
   readonly skuTier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#support_plan KubernetesCluster#support_plan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#support_plan KubernetesCluster#support_plan}
   */
   readonly supportPlan?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#tags KubernetesCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#tags KubernetesCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#workload_identity_enabled KubernetesCluster#workload_identity_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#workload_identity_enabled KubernetesCluster#workload_identity_enabled}
   */
   readonly workloadIdentityEnabled?: boolean | cdktf.IResolvable;
   /**
   * aci_connector_linux block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#aci_connector_linux KubernetesCluster#aci_connector_linux}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#aci_connector_linux KubernetesCluster#aci_connector_linux}
   */
   readonly aciConnectorLinux?: KubernetesClusterAciConnectorLinux;
   /**
   * api_server_access_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#api_server_access_profile KubernetesCluster#api_server_access_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#api_server_access_profile KubernetesCluster#api_server_access_profile}
   */
   readonly apiServerAccessProfile?: KubernetesClusterApiServerAccessProfile;
   /**
   * auto_scaler_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#auto_scaler_profile KubernetesCluster#auto_scaler_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#auto_scaler_profile KubernetesCluster#auto_scaler_profile}
   */
   readonly autoScalerProfile?: KubernetesClusterAutoScalerProfile;
   /**
   * azure_active_directory_role_based_access_control block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#azure_active_directory_role_based_access_control KubernetesCluster#azure_active_directory_role_based_access_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#azure_active_directory_role_based_access_control KubernetesCluster#azure_active_directory_role_based_access_control}
   */
   readonly azureActiveDirectoryRoleBasedAccessControl?: KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl;
   /**
   * confidential_computing block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#confidential_computing KubernetesCluster#confidential_computing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#confidential_computing KubernetesCluster#confidential_computing}
   */
   readonly confidentialComputing?: KubernetesClusterConfidentialComputing;
   /**
   * default_node_pool block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#default_node_pool KubernetesCluster#default_node_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#default_node_pool KubernetesCluster#default_node_pool}
   */
   readonly defaultNodePool: KubernetesClusterDefaultNodePool;
   /**
   * http_proxy_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#http_proxy_config KubernetesCluster#http_proxy_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#http_proxy_config KubernetesCluster#http_proxy_config}
   */
   readonly httpProxyConfig?: KubernetesClusterHttpProxyConfig;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#identity KubernetesCluster#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#identity KubernetesCluster#identity}
   */
   readonly identity?: KubernetesClusterIdentity;
   /**
   * ingress_application_gateway block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#ingress_application_gateway KubernetesCluster#ingress_application_gateway}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#ingress_application_gateway KubernetesCluster#ingress_application_gateway}
   */
   readonly ingressApplicationGateway?: KubernetesClusterIngressApplicationGateway;
   /**
   * key_management_service block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#key_management_service KubernetesCluster#key_management_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#key_management_service KubernetesCluster#key_management_service}
   */
   readonly keyManagementService?: KubernetesClusterKeyManagementService;
   /**
   * key_vault_secrets_provider block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#key_vault_secrets_provider KubernetesCluster#key_vault_secrets_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#key_vault_secrets_provider KubernetesCluster#key_vault_secrets_provider}
   */
   readonly keyVaultSecretsProvider?: KubernetesClusterKeyVaultSecretsProvider;
   /**
   * kubelet_identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#kubelet_identity KubernetesCluster#kubelet_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#kubelet_identity KubernetesCluster#kubelet_identity}
   */
   readonly kubeletIdentity?: KubernetesClusterKubeletIdentity;
   /**
   * linux_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#linux_profile KubernetesCluster#linux_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#linux_profile KubernetesCluster#linux_profile}
   */
   readonly linuxProfile?: KubernetesClusterLinuxProfile;
   /**
   * maintenance_window block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#maintenance_window KubernetesCluster#maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#maintenance_window KubernetesCluster#maintenance_window}
   */
   readonly maintenanceWindow?: KubernetesClusterMaintenanceWindow;
   /**
   * maintenance_window_auto_upgrade block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#maintenance_window_auto_upgrade KubernetesCluster#maintenance_window_auto_upgrade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#maintenance_window_auto_upgrade KubernetesCluster#maintenance_window_auto_upgrade}
   */
   readonly maintenanceWindowAutoUpgrade?: KubernetesClusterMaintenanceWindowAutoUpgrade;
   /**
   * maintenance_window_node_os block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#maintenance_window_node_os KubernetesCluster#maintenance_window_node_os}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#maintenance_window_node_os KubernetesCluster#maintenance_window_node_os}
   */
   readonly maintenanceWindowNodeOs?: KubernetesClusterMaintenanceWindowNodeOs;
   /**
   * microsoft_defender block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#microsoft_defender KubernetesCluster#microsoft_defender}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#microsoft_defender KubernetesCluster#microsoft_defender}
   */
   readonly microsoftDefender?: KubernetesClusterMicrosoftDefender;
   /**
   * monitor_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#monitor_metrics KubernetesCluster#monitor_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#monitor_metrics KubernetesCluster#monitor_metrics}
   */
   readonly monitorMetrics?: KubernetesClusterMonitorMetrics;
   /**
   * network_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#network_profile KubernetesCluster#network_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#network_profile KubernetesCluster#network_profile}
   */
   readonly networkProfile?: KubernetesClusterNetworkProfile;
   /**
   * oms_agent block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#oms_agent KubernetesCluster#oms_agent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#oms_agent KubernetesCluster#oms_agent}
   */
   readonly omsAgent?: KubernetesClusterOmsAgent;
   /**
   * service_mesh_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#service_mesh_profile KubernetesCluster#service_mesh_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#service_mesh_profile KubernetesCluster#service_mesh_profile}
   */
   readonly serviceMeshProfile?: KubernetesClusterServiceMeshProfile;
   /**
   * service_principal block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#service_principal KubernetesCluster#service_principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#service_principal KubernetesCluster#service_principal}
   */
   readonly servicePrincipal?: KubernetesClusterServicePrincipal;
   /**
   * storage_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#storage_profile KubernetesCluster#storage_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#storage_profile KubernetesCluster#storage_profile}
   */
   readonly storageProfile?: KubernetesClusterStorageProfile;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#timeouts KubernetesCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#timeouts KubernetesCluster#timeouts}
   */
   readonly timeouts?: KubernetesClusterTimeouts;
   /**
   * web_app_routing block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#web_app_routing KubernetesCluster#web_app_routing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#web_app_routing KubernetesCluster#web_app_routing}
   */
   readonly webAppRouting?: KubernetesClusterWebAppRouting;
   /**
   * windows_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#windows_profile KubernetesCluster#windows_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#windows_profile KubernetesCluster#windows_profile}
   */
   readonly windowsProfile?: KubernetesClusterWindowsProfile;
   /**
   * workload_autoscaler_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#workload_autoscaler_profile KubernetesCluster#workload_autoscaler_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#workload_autoscaler_profile KubernetesCluster#workload_autoscaler_profile}
   */
   readonly workloadAutoscalerProfile?: KubernetesClusterWorkloadAutoscalerProfile;
 }
@@ -597,7 +576,7 @@ export class KubernetesClusterAciConnectorLinuxConnectorIdentityList extends cdk
 }
 export interface KubernetesClusterAciConnectorLinux {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#subnet_name KubernetesCluster#subnet_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#subnet_name KubernetesCluster#subnet_name}
   */
   readonly subnetName: string;
 }
@@ -684,17 +663,9 @@ export class KubernetesClusterAciConnectorLinuxOutputReference extends cdktf.Com
 }
 export interface KubernetesClusterApiServerAccessProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#authorized_ip_ranges KubernetesCluster#authorized_ip_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#authorized_ip_ranges KubernetesCluster#authorized_ip_ranges}
   */
   readonly authorizedIpRanges?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}
-  */
-  readonly subnetId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#vnet_integration_enabled KubernetesCluster#vnet_integration_enabled}
-  */
-  readonly vnetIntegrationEnabled?: boolean | cdktf.IResolvable;
 }
 
 export function kubernetesClusterApiServerAccessProfileToTerraform(struct?: KubernetesClusterApiServerAccessProfileOutputReference | KubernetesClusterApiServerAccessProfile): any {
@@ -704,8 +675,6 @@ export function kubernetesClusterApiServerAccessProfileToTerraform(struct?: Kube
   }
   return {
     authorized_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.authorizedIpRanges),
-    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
-    vnet_integration_enabled: cdktf.booleanToTerraform(struct!.vnetIntegrationEnabled),
   }
 }
 
@@ -721,18 +690,6 @@ export function kubernetesClusterApiServerAccessProfileToHclTerraform(struct?: K
       isBlock: false,
       type: "set",
       storageClassType: "stringList",
-    },
-    subnet_id: {
-      value: cdktf.stringToHclTerraform(struct!.subnetId),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    vnet_integration_enabled: {
-      value: cdktf.booleanToHclTerraform(struct!.vnetIntegrationEnabled),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "boolean",
     },
   };
 
@@ -758,14 +715,6 @@ export class KubernetesClusterApiServerAccessProfileOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.authorizedIpRanges = this._authorizedIpRanges;
     }
-    if (this._subnetId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.subnetId = this._subnetId;
-    }
-    if (this._vnetIntegrationEnabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.vnetIntegrationEnabled = this._vnetIntegrationEnabled;
-    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -773,18 +722,14 @@ export class KubernetesClusterApiServerAccessProfileOutputReference extends cdkt
     if (value === undefined) {
       this.isEmptyObject = false;
       this._authorizedIpRanges = undefined;
-      this._subnetId = undefined;
-      this._vnetIntegrationEnabled = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._authorizedIpRanges = value.authorizedIpRanges;
-      this._subnetId = value.subnetId;
-      this._vnetIntegrationEnabled = value.vnetIntegrationEnabled;
     }
   }
 
-  // authorized_ip_ranges - computed: true, optional: true, required: false
+  // authorized_ip_ranges - computed: false, optional: true, required: false
   private _authorizedIpRanges?: string[]; 
   public get authorizedIpRanges() {
     return cdktf.Fn.tolist(this.getListAttribute('authorized_ip_ranges'));
@@ -799,106 +744,74 @@ export class KubernetesClusterApiServerAccessProfileOutputReference extends cdkt
   public get authorizedIpRangesInput() {
     return this._authorizedIpRanges;
   }
-
-  // subnet_id - computed: false, optional: true, required: false
-  private _subnetId?: string; 
-  public get subnetId() {
-    return this.getStringAttribute('subnet_id');
-  }
-  public set subnetId(value: string) {
-    this._subnetId = value;
-  }
-  public resetSubnetId() {
-    this._subnetId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get subnetIdInput() {
-    return this._subnetId;
-  }
-
-  // vnet_integration_enabled - computed: false, optional: true, required: false
-  private _vnetIntegrationEnabled?: boolean | cdktf.IResolvable; 
-  public get vnetIntegrationEnabled() {
-    return this.getBooleanAttribute('vnet_integration_enabled');
-  }
-  public set vnetIntegrationEnabled(value: boolean | cdktf.IResolvable) {
-    this._vnetIntegrationEnabled = value;
-  }
-  public resetVnetIntegrationEnabled() {
-    this._vnetIntegrationEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get vnetIntegrationEnabledInput() {
-    return this._vnetIntegrationEnabled;
-  }
 }
 export interface KubernetesClusterAutoScalerProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#balance_similar_node_groups KubernetesCluster#balance_similar_node_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#balance_similar_node_groups KubernetesCluster#balance_similar_node_groups}
   */
   readonly balanceSimilarNodeGroups?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#empty_bulk_delete_max KubernetesCluster#empty_bulk_delete_max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#empty_bulk_delete_max KubernetesCluster#empty_bulk_delete_max}
   */
   readonly emptyBulkDeleteMax?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#expander KubernetesCluster#expander}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#expander KubernetesCluster#expander}
   */
   readonly expander?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#max_graceful_termination_sec KubernetesCluster#max_graceful_termination_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#max_graceful_termination_sec KubernetesCluster#max_graceful_termination_sec}
   */
   readonly maxGracefulTerminationSec?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#max_node_provisioning_time KubernetesCluster#max_node_provisioning_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#max_node_provisioning_time KubernetesCluster#max_node_provisioning_time}
   */
   readonly maxNodeProvisioningTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#max_unready_nodes KubernetesCluster#max_unready_nodes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#max_unready_nodes KubernetesCluster#max_unready_nodes}
   */
   readonly maxUnreadyNodes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#max_unready_percentage KubernetesCluster#max_unready_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#max_unready_percentage KubernetesCluster#max_unready_percentage}
   */
   readonly maxUnreadyPercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#new_pod_scale_up_delay KubernetesCluster#new_pod_scale_up_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#new_pod_scale_up_delay KubernetesCluster#new_pod_scale_up_delay}
   */
   readonly newPodScaleUpDelay?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#scale_down_delay_after_add KubernetesCluster#scale_down_delay_after_add}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#scale_down_delay_after_add KubernetesCluster#scale_down_delay_after_add}
   */
   readonly scaleDownDelayAfterAdd?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#scale_down_delay_after_delete KubernetesCluster#scale_down_delay_after_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#scale_down_delay_after_delete KubernetesCluster#scale_down_delay_after_delete}
   */
   readonly scaleDownDelayAfterDelete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#scale_down_delay_after_failure KubernetesCluster#scale_down_delay_after_failure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#scale_down_delay_after_failure KubernetesCluster#scale_down_delay_after_failure}
   */
   readonly scaleDownDelayAfterFailure?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#scale_down_unneeded KubernetesCluster#scale_down_unneeded}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#scale_down_unneeded KubernetesCluster#scale_down_unneeded}
   */
   readonly scaleDownUnneeded?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#scale_down_unready KubernetesCluster#scale_down_unready}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#scale_down_unready KubernetesCluster#scale_down_unready}
   */
   readonly scaleDownUnready?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#scale_down_utilization_threshold KubernetesCluster#scale_down_utilization_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#scale_down_utilization_threshold KubernetesCluster#scale_down_utilization_threshold}
   */
   readonly scaleDownUtilizationThreshold?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#scan_interval KubernetesCluster#scan_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#scan_interval KubernetesCluster#scan_interval}
   */
   readonly scanInterval?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#skip_nodes_with_local_storage KubernetesCluster#skip_nodes_with_local_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#skip_nodes_with_local_storage KubernetesCluster#skip_nodes_with_local_storage}
   */
   readonly skipNodesWithLocalStorage?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#skip_nodes_with_system_pods KubernetesCluster#skip_nodes_with_system_pods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#skip_nodes_with_system_pods KubernetesCluster#skip_nodes_with_system_pods}
   */
   readonly skipNodesWithSystemPods?: boolean | cdktf.IResolvable;
 }
@@ -1446,31 +1359,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
 }
 export interface KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#admin_group_object_ids KubernetesCluster#admin_group_object_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#admin_group_object_ids KubernetesCluster#admin_group_object_ids}
   */
   readonly adminGroupObjectIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#azure_rbac_enabled KubernetesCluster#azure_rbac_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#azure_rbac_enabled KubernetesCluster#azure_rbac_enabled}
   */
   readonly azureRbacEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#client_app_id KubernetesCluster#client_app_id}
-  */
-  readonly clientAppId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#managed KubernetesCluster#managed}
-  */
-  readonly managed?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#server_app_id KubernetesCluster#server_app_id}
-  */
-  readonly serverAppId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#server_app_secret KubernetesCluster#server_app_secret}
-  */
-  readonly serverAppSecret?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#tenant_id KubernetesCluster#tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#tenant_id KubernetesCluster#tenant_id}
   */
   readonly tenantId?: string;
 }
@@ -1483,10 +1380,6 @@ export function kubernetesClusterAzureActiveDirectoryRoleBasedAccessControlToTer
   return {
     admin_group_object_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.adminGroupObjectIds),
     azure_rbac_enabled: cdktf.booleanToTerraform(struct!.azureRbacEnabled),
-    client_app_id: cdktf.stringToTerraform(struct!.clientAppId),
-    managed: cdktf.booleanToTerraform(struct!.managed),
-    server_app_id: cdktf.stringToTerraform(struct!.serverAppId),
-    server_app_secret: cdktf.stringToTerraform(struct!.serverAppSecret),
     tenant_id: cdktf.stringToTerraform(struct!.tenantId),
   }
 }
@@ -1509,30 +1402,6 @@ export function kubernetesClusterAzureActiveDirectoryRoleBasedAccessControlToHcl
       isBlock: false,
       type: "simple",
       storageClassType: "boolean",
-    },
-    client_app_id: {
-      value: cdktf.stringToHclTerraform(struct!.clientAppId),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    managed: {
-      value: cdktf.booleanToHclTerraform(struct!.managed),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "boolean",
-    },
-    server_app_id: {
-      value: cdktf.stringToHclTerraform(struct!.serverAppId),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    server_app_secret: {
-      value: cdktf.stringToHclTerraform(struct!.serverAppSecret),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
     },
     tenant_id: {
       value: cdktf.stringToHclTerraform(struct!.tenantId),
@@ -1568,22 +1437,6 @@ export class KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputRe
       hasAnyValues = true;
       internalValueResult.azureRbacEnabled = this._azureRbacEnabled;
     }
-    if (this._clientAppId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.clientAppId = this._clientAppId;
-    }
-    if (this._managed !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.managed = this._managed;
-    }
-    if (this._serverAppId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.serverAppId = this._serverAppId;
-    }
-    if (this._serverAppSecret !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.serverAppSecret = this._serverAppSecret;
-    }
     if (this._tenantId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tenantId = this._tenantId;
@@ -1596,20 +1449,12 @@ export class KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputRe
       this.isEmptyObject = false;
       this._adminGroupObjectIds = undefined;
       this._azureRbacEnabled = undefined;
-      this._clientAppId = undefined;
-      this._managed = undefined;
-      this._serverAppId = undefined;
-      this._serverAppSecret = undefined;
       this._tenantId = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._adminGroupObjectIds = value.adminGroupObjectIds;
       this._azureRbacEnabled = value.azureRbacEnabled;
-      this._clientAppId = value.clientAppId;
-      this._managed = value.managed;
-      this._serverAppId = value.serverAppId;
-      this._serverAppSecret = value.serverAppSecret;
       this._tenantId = value.tenantId;
     }
   }
@@ -1646,70 +1491,6 @@ export class KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputRe
     return this._azureRbacEnabled;
   }
 
-  // client_app_id - computed: false, optional: true, required: false
-  private _clientAppId?: string; 
-  public get clientAppId() {
-    return this.getStringAttribute('client_app_id');
-  }
-  public set clientAppId(value: string) {
-    this._clientAppId = value;
-  }
-  public resetClientAppId() {
-    this._clientAppId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get clientAppIdInput() {
-    return this._clientAppId;
-  }
-
-  // managed - computed: false, optional: true, required: false
-  private _managed?: boolean | cdktf.IResolvable; 
-  public get managed() {
-    return this.getBooleanAttribute('managed');
-  }
-  public set managed(value: boolean | cdktf.IResolvable) {
-    this._managed = value;
-  }
-  public resetManaged() {
-    this._managed = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get managedInput() {
-    return this._managed;
-  }
-
-  // server_app_id - computed: false, optional: true, required: false
-  private _serverAppId?: string; 
-  public get serverAppId() {
-    return this.getStringAttribute('server_app_id');
-  }
-  public set serverAppId(value: string) {
-    this._serverAppId = value;
-  }
-  public resetServerAppId() {
-    this._serverAppId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get serverAppIdInput() {
-    return this._serverAppId;
-  }
-
-  // server_app_secret - computed: false, optional: true, required: false
-  private _serverAppSecret?: string; 
-  public get serverAppSecret() {
-    return this.getStringAttribute('server_app_secret');
-  }
-  public set serverAppSecret(value: string) {
-    this._serverAppSecret = value;
-  }
-  public resetServerAppSecret() {
-    this._serverAppSecret = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get serverAppSecretInput() {
-    return this._serverAppSecret;
-  }
-
   // tenant_id - computed: true, optional: true, required: false
   private _tenantId?: string; 
   public get tenantId() {
@@ -1728,7 +1509,7 @@ export class KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputRe
 }
 export interface KubernetesClusterConfidentialComputing {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#sgx_quote_helper_enabled KubernetesCluster#sgx_quote_helper_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#sgx_quote_helper_enabled KubernetesCluster#sgx_quote_helper_enabled}
   */
   readonly sgxQuoteHelperEnabled: boolean | cdktf.IResolvable;
 }
@@ -1809,43 +1590,43 @@ export class KubernetesClusterConfidentialComputingOutputReference extends cdktf
 }
 export interface KubernetesClusterDefaultNodePoolKubeletConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#allowed_unsafe_sysctls KubernetesCluster#allowed_unsafe_sysctls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#allowed_unsafe_sysctls KubernetesCluster#allowed_unsafe_sysctls}
   */
   readonly allowedUnsafeSysctls?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#container_log_max_line KubernetesCluster#container_log_max_line}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#container_log_max_line KubernetesCluster#container_log_max_line}
   */
   readonly containerLogMaxLine?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#container_log_max_size_mb KubernetesCluster#container_log_max_size_mb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#container_log_max_size_mb KubernetesCluster#container_log_max_size_mb}
   */
   readonly containerLogMaxSizeMb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_enabled KubernetesCluster#cpu_cfs_quota_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#cpu_cfs_quota_enabled KubernetesCluster#cpu_cfs_quota_enabled}
   */
   readonly cpuCfsQuotaEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_period KubernetesCluster#cpu_cfs_quota_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#cpu_cfs_quota_period KubernetesCluster#cpu_cfs_quota_period}
   */
   readonly cpuCfsQuotaPeriod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#cpu_manager_policy KubernetesCluster#cpu_manager_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#cpu_manager_policy KubernetesCluster#cpu_manager_policy}
   */
   readonly cpuManagerPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#image_gc_high_threshold KubernetesCluster#image_gc_high_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#image_gc_high_threshold KubernetesCluster#image_gc_high_threshold}
   */
   readonly imageGcHighThreshold?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#image_gc_low_threshold KubernetesCluster#image_gc_low_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#image_gc_low_threshold KubernetesCluster#image_gc_low_threshold}
   */
   readonly imageGcLowThreshold?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#pod_max_pid KubernetesCluster#pod_max_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#pod_max_pid KubernetesCluster#pod_max_pid}
   */
   readonly podMaxPid?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#topology_manager_policy KubernetesCluster#topology_manager_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#topology_manager_policy KubernetesCluster#topology_manager_policy}
   */
   readonly topologyManagerPolicy?: string;
 }
@@ -2190,119 +1971,119 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
 }
 export interface KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#fs_aio_max_nr KubernetesCluster#fs_aio_max_nr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#fs_aio_max_nr KubernetesCluster#fs_aio_max_nr}
   */
   readonly fsAioMaxNr?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#fs_file_max KubernetesCluster#fs_file_max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#fs_file_max KubernetesCluster#fs_file_max}
   */
   readonly fsFileMax?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#fs_inotify_max_user_watches KubernetesCluster#fs_inotify_max_user_watches}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#fs_inotify_max_user_watches KubernetesCluster#fs_inotify_max_user_watches}
   */
   readonly fsInotifyMaxUserWatches?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#fs_nr_open KubernetesCluster#fs_nr_open}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#fs_nr_open KubernetesCluster#fs_nr_open}
   */
   readonly fsNrOpen?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#kernel_threads_max KubernetesCluster#kernel_threads_max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#kernel_threads_max KubernetesCluster#kernel_threads_max}
   */
   readonly kernelThreadsMax?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_core_netdev_max_backlog KubernetesCluster#net_core_netdev_max_backlog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_core_netdev_max_backlog KubernetesCluster#net_core_netdev_max_backlog}
   */
   readonly netCoreNetdevMaxBacklog?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_core_optmem_max KubernetesCluster#net_core_optmem_max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_core_optmem_max KubernetesCluster#net_core_optmem_max}
   */
   readonly netCoreOptmemMax?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_core_rmem_default KubernetesCluster#net_core_rmem_default}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_core_rmem_default KubernetesCluster#net_core_rmem_default}
   */
   readonly netCoreRmemDefault?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_core_rmem_max KubernetesCluster#net_core_rmem_max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_core_rmem_max KubernetesCluster#net_core_rmem_max}
   */
   readonly netCoreRmemMax?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_core_somaxconn KubernetesCluster#net_core_somaxconn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_core_somaxconn KubernetesCluster#net_core_somaxconn}
   */
   readonly netCoreSomaxconn?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_core_wmem_default KubernetesCluster#net_core_wmem_default}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_core_wmem_default KubernetesCluster#net_core_wmem_default}
   */
   readonly netCoreWmemDefault?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_core_wmem_max KubernetesCluster#net_core_wmem_max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_core_wmem_max KubernetesCluster#net_core_wmem_max}
   */
   readonly netCoreWmemMax?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_ipv4_ip_local_port_range_max KubernetesCluster#net_ipv4_ip_local_port_range_max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_ipv4_ip_local_port_range_max KubernetesCluster#net_ipv4_ip_local_port_range_max}
   */
   readonly netIpv4IpLocalPortRangeMax?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_ipv4_ip_local_port_range_min KubernetesCluster#net_ipv4_ip_local_port_range_min}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_ipv4_ip_local_port_range_min KubernetesCluster#net_ipv4_ip_local_port_range_min}
   */
   readonly netIpv4IpLocalPortRangeMin?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh1 KubernetesCluster#net_ipv4_neigh_default_gc_thresh1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh1 KubernetesCluster#net_ipv4_neigh_default_gc_thresh1}
   */
   readonly netIpv4NeighDefaultGcThresh1?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh2 KubernetesCluster#net_ipv4_neigh_default_gc_thresh2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh2 KubernetesCluster#net_ipv4_neigh_default_gc_thresh2}
   */
   readonly netIpv4NeighDefaultGcThresh2?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh3 KubernetesCluster#net_ipv4_neigh_default_gc_thresh3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh3 KubernetesCluster#net_ipv4_neigh_default_gc_thresh3}
   */
   readonly netIpv4NeighDefaultGcThresh3?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_fin_timeout KubernetesCluster#net_ipv4_tcp_fin_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_ipv4_tcp_fin_timeout KubernetesCluster#net_ipv4_tcp_fin_timeout}
   */
   readonly netIpv4TcpFinTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_intvl KubernetesCluster#net_ipv4_tcp_keepalive_intvl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_intvl KubernetesCluster#net_ipv4_tcp_keepalive_intvl}
   */
   readonly netIpv4TcpKeepaliveIntvl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_probes KubernetesCluster#net_ipv4_tcp_keepalive_probes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_probes KubernetesCluster#net_ipv4_tcp_keepalive_probes}
   */
   readonly netIpv4TcpKeepaliveProbes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_time KubernetesCluster#net_ipv4_tcp_keepalive_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_time KubernetesCluster#net_ipv4_tcp_keepalive_time}
   */
   readonly netIpv4TcpKeepaliveTime?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_syn_backlog KubernetesCluster#net_ipv4_tcp_max_syn_backlog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_syn_backlog KubernetesCluster#net_ipv4_tcp_max_syn_backlog}
   */
   readonly netIpv4TcpMaxSynBacklog?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_tw_buckets KubernetesCluster#net_ipv4_tcp_max_tw_buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_tw_buckets KubernetesCluster#net_ipv4_tcp_max_tw_buckets}
   */
   readonly netIpv4TcpMaxTwBuckets?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_tw_reuse KubernetesCluster#net_ipv4_tcp_tw_reuse}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_ipv4_tcp_tw_reuse KubernetesCluster#net_ipv4_tcp_tw_reuse}
   */
   readonly netIpv4TcpTwReuse?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_buckets KubernetesCluster#net_netfilter_nf_conntrack_buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_buckets KubernetesCluster#net_netfilter_nf_conntrack_buckets}
   */
   readonly netNetfilterNfConntrackBuckets?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_max KubernetesCluster#net_netfilter_nf_conntrack_max}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_max KubernetesCluster#net_netfilter_nf_conntrack_max}
   */
   readonly netNetfilterNfConntrackMax?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#vm_max_map_count KubernetesCluster#vm_max_map_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#vm_max_map_count KubernetesCluster#vm_max_map_count}
   */
   readonly vmMaxMapCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#vm_swappiness KubernetesCluster#vm_swappiness}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#vm_swappiness KubernetesCluster#vm_swappiness}
   */
   readonly vmSwappiness?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#vm_vfs_cache_pressure KubernetesCluster#vm_vfs_cache_pressure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#vm_vfs_cache_pressure KubernetesCluster#vm_vfs_cache_pressure}
   */
   readonly vmVfsCachePressure?: number;
 }
@@ -3198,21 +2979,21 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
 }
 export interface KubernetesClusterDefaultNodePoolLinuxOsConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#swap_file_size_mb KubernetesCluster#swap_file_size_mb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#swap_file_size_mb KubernetesCluster#swap_file_size_mb}
   */
   readonly swapFileSizeMb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#transparent_huge_page_defrag KubernetesCluster#transparent_huge_page_defrag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#transparent_huge_page_defrag KubernetesCluster#transparent_huge_page_defrag}
   */
   readonly transparentHugePageDefrag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#transparent_huge_page_enabled KubernetesCluster#transparent_huge_page_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#transparent_huge_page_enabled KubernetesCluster#transparent_huge_page_enabled}
   */
   readonly transparentHugePageEnabled?: string;
   /**
   * sysctl_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#sysctl_config KubernetesCluster#sysctl_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#sysctl_config KubernetesCluster#sysctl_config}
   */
   readonly sysctlConfig?: KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig;
 }
@@ -3383,15 +3164,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extend
 }
 export interface KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#port_end KubernetesCluster#port_end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#port_end KubernetesCluster#port_end}
   */
   readonly portEnd?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#port_start KubernetesCluster#port_start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#port_start KubernetesCluster#port_start}
   */
   readonly portStart?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#protocol KubernetesCluster#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#protocol KubernetesCluster#protocol}
   */
   readonly protocol?: string;
 }
@@ -3565,17 +3346,17 @@ export class KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsL
 }
 export interface KubernetesClusterDefaultNodePoolNodeNetworkProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#application_security_group_ids KubernetesCluster#application_security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#application_security_group_ids KubernetesCluster#application_security_group_ids}
   */
   readonly applicationSecurityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#node_public_ip_tags KubernetesCluster#node_public_ip_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#node_public_ip_tags KubernetesCluster#node_public_ip_tags}
   */
   readonly nodePublicIpTags?: { [key: string]: string };
   /**
   * allowed_host_ports block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#allowed_host_ports KubernetesCluster#allowed_host_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#allowed_host_ports KubernetesCluster#allowed_host_ports}
   */
   readonly allowedHostPorts?: KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts[] | cdktf.IResolvable;
 }
@@ -3717,15 +3498,15 @@ export class KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference e
 }
 export interface KubernetesClusterDefaultNodePoolUpgradeSettings {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#drain_timeout_in_minutes KubernetesCluster#drain_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#drain_timeout_in_minutes KubernetesCluster#drain_timeout_in_minutes}
   */
   readonly drainTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#max_surge KubernetesCluster#max_surge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#max_surge KubernetesCluster#max_surge}
   */
   readonly maxSurge: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#node_soak_duration_in_minutes KubernetesCluster#node_soak_duration_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#node_soak_duration_in_minutes KubernetesCluster#node_soak_duration_in_minutes}
   */
   readonly nodeSoakDurationInMinutes?: number;
 }
@@ -3864,167 +3645,155 @@ export class KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference exte
 }
 export interface KubernetesClusterDefaultNodePool {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#capacity_reservation_group_id KubernetesCluster#capacity_reservation_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#auto_scaling_enabled KubernetesCluster#auto_scaling_enabled}
+  */
+  readonly autoScalingEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#capacity_reservation_group_id KubernetesCluster#capacity_reservation_group_id}
   */
   readonly capacityReservationGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#custom_ca_trust_enabled KubernetesCluster#custom_ca_trust_enabled}
-  */
-  readonly customCaTrustEnabled?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#enable_auto_scaling KubernetesCluster#enable_auto_scaling}
-  */
-  readonly enableAutoScaling?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#enable_host_encryption KubernetesCluster#enable_host_encryption}
-  */
-  readonly enableHostEncryption?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#enable_node_public_ip KubernetesCluster#enable_node_public_ip}
-  */
-  readonly enableNodePublicIp?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#fips_enabled KubernetesCluster#fips_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#fips_enabled KubernetesCluster#fips_enabled}
   */
   readonly fipsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#gpu_instance KubernetesCluster#gpu_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#gpu_instance KubernetesCluster#gpu_instance}
   */
   readonly gpuInstance?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#host_group_id KubernetesCluster#host_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#host_encryption_enabled KubernetesCluster#host_encryption_enabled}
+  */
+  readonly hostEncryptionEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#host_group_id KubernetesCluster#host_group_id}
   */
   readonly hostGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#kubelet_disk_type KubernetesCluster#kubelet_disk_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#kubelet_disk_type KubernetesCluster#kubelet_disk_type}
   */
   readonly kubeletDiskType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#max_count KubernetesCluster#max_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#max_count KubernetesCluster#max_count}
   */
   readonly maxCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#max_pods KubernetesCluster#max_pods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#max_pods KubernetesCluster#max_pods}
   */
   readonly maxPods?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#message_of_the_day KubernetesCluster#message_of_the_day}
-  */
-  readonly messageOfTheDay?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#min_count KubernetesCluster#min_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#min_count KubernetesCluster#min_count}
   */
   readonly minCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#name KubernetesCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#name KubernetesCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#node_count KubernetesCluster#node_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#node_count KubernetesCluster#node_count}
   */
   readonly nodeCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#node_labels KubernetesCluster#node_labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#node_labels KubernetesCluster#node_labels}
   */
   readonly nodeLabels?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#node_public_ip_prefix_id KubernetesCluster#node_public_ip_prefix_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#node_public_ip_enabled KubernetesCluster#node_public_ip_enabled}
+  */
+  readonly nodePublicIpEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#node_public_ip_prefix_id KubernetesCluster#node_public_ip_prefix_id}
   */
   readonly nodePublicIpPrefixId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#node_taints KubernetesCluster#node_taints}
-  */
-  readonly nodeTaints?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#only_critical_addons_enabled KubernetesCluster#only_critical_addons_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#only_critical_addons_enabled KubernetesCluster#only_critical_addons_enabled}
   */
   readonly onlyCriticalAddonsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#orchestrator_version KubernetesCluster#orchestrator_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#orchestrator_version KubernetesCluster#orchestrator_version}
   */
   readonly orchestratorVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#os_disk_size_gb KubernetesCluster#os_disk_size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#os_disk_size_gb KubernetesCluster#os_disk_size_gb}
   */
   readonly osDiskSizeGb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#os_disk_type KubernetesCluster#os_disk_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#os_disk_type KubernetesCluster#os_disk_type}
   */
   readonly osDiskType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#os_sku KubernetesCluster#os_sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#os_sku KubernetesCluster#os_sku}
   */
   readonly osSku?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#pod_subnet_id KubernetesCluster#pod_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#pod_subnet_id KubernetesCluster#pod_subnet_id}
   */
   readonly podSubnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#proximity_placement_group_id KubernetesCluster#proximity_placement_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#proximity_placement_group_id KubernetesCluster#proximity_placement_group_id}
   */
   readonly proximityPlacementGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#scale_down_mode KubernetesCluster#scale_down_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#scale_down_mode KubernetesCluster#scale_down_mode}
   */
   readonly scaleDownMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#snapshot_id KubernetesCluster#snapshot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#snapshot_id KubernetesCluster#snapshot_id}
   */
   readonly snapshotId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#tags KubernetesCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#tags KubernetesCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#temporary_name_for_rotation KubernetesCluster#temporary_name_for_rotation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#temporary_name_for_rotation KubernetesCluster#temporary_name_for_rotation}
   */
   readonly temporaryNameForRotation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#type KubernetesCluster#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#type KubernetesCluster#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#ultra_ssd_enabled KubernetesCluster#ultra_ssd_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#ultra_ssd_enabled KubernetesCluster#ultra_ssd_enabled}
   */
   readonly ultraSsdEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#vm_size KubernetesCluster#vm_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#vm_size KubernetesCluster#vm_size}
   */
   readonly vmSize: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#vnet_subnet_id KubernetesCluster#vnet_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#vnet_subnet_id KubernetesCluster#vnet_subnet_id}
   */
   readonly vnetSubnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#workload_runtime KubernetesCluster#workload_runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#workload_runtime KubernetesCluster#workload_runtime}
   */
   readonly workloadRuntime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#zones KubernetesCluster#zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#zones KubernetesCluster#zones}
   */
   readonly zones?: string[];
   /**
   * kubelet_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#kubelet_config KubernetesCluster#kubelet_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#kubelet_config KubernetesCluster#kubelet_config}
   */
   readonly kubeletConfig?: KubernetesClusterDefaultNodePoolKubeletConfig;
   /**
   * linux_os_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#linux_os_config KubernetesCluster#linux_os_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#linux_os_config KubernetesCluster#linux_os_config}
   */
   readonly linuxOsConfig?: KubernetesClusterDefaultNodePoolLinuxOsConfig;
   /**
   * node_network_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#node_network_profile KubernetesCluster#node_network_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#node_network_profile KubernetesCluster#node_network_profile}
   */
   readonly nodeNetworkProfile?: KubernetesClusterDefaultNodePoolNodeNetworkProfile;
   /**
   * upgrade_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#upgrade_settings KubernetesCluster#upgrade_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#upgrade_settings KubernetesCluster#upgrade_settings}
   */
   readonly upgradeSettings?: KubernetesClusterDefaultNodePoolUpgradeSettings;
 }
@@ -4035,24 +3804,21 @@ export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesC
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    auto_scaling_enabled: cdktf.booleanToTerraform(struct!.autoScalingEnabled),
     capacity_reservation_group_id: cdktf.stringToTerraform(struct!.capacityReservationGroupId),
-    custom_ca_trust_enabled: cdktf.booleanToTerraform(struct!.customCaTrustEnabled),
-    enable_auto_scaling: cdktf.booleanToTerraform(struct!.enableAutoScaling),
-    enable_host_encryption: cdktf.booleanToTerraform(struct!.enableHostEncryption),
-    enable_node_public_ip: cdktf.booleanToTerraform(struct!.enableNodePublicIp),
     fips_enabled: cdktf.booleanToTerraform(struct!.fipsEnabled),
     gpu_instance: cdktf.stringToTerraform(struct!.gpuInstance),
+    host_encryption_enabled: cdktf.booleanToTerraform(struct!.hostEncryptionEnabled),
     host_group_id: cdktf.stringToTerraform(struct!.hostGroupId),
     kubelet_disk_type: cdktf.stringToTerraform(struct!.kubeletDiskType),
     max_count: cdktf.numberToTerraform(struct!.maxCount),
     max_pods: cdktf.numberToTerraform(struct!.maxPods),
-    message_of_the_day: cdktf.stringToTerraform(struct!.messageOfTheDay),
     min_count: cdktf.numberToTerraform(struct!.minCount),
     name: cdktf.stringToTerraform(struct!.name),
     node_count: cdktf.numberToTerraform(struct!.nodeCount),
     node_labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.nodeLabels),
+    node_public_ip_enabled: cdktf.booleanToTerraform(struct!.nodePublicIpEnabled),
     node_public_ip_prefix_id: cdktf.stringToTerraform(struct!.nodePublicIpPrefixId),
-    node_taints: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.nodeTaints),
     only_critical_addons_enabled: cdktf.booleanToTerraform(struct!.onlyCriticalAddonsEnabled),
     orchestrator_version: cdktf.stringToTerraform(struct!.orchestratorVersion),
     os_disk_size_gb: cdktf.numberToTerraform(struct!.osDiskSizeGb),
@@ -4084,35 +3850,17 @@ export function kubernetesClusterDefaultNodePoolToHclTerraform(struct?: Kubernet
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
+    auto_scaling_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.autoScalingEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
     capacity_reservation_group_id: {
       value: cdktf.stringToHclTerraform(struct!.capacityReservationGroupId),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
-    },
-    custom_ca_trust_enabled: {
-      value: cdktf.booleanToHclTerraform(struct!.customCaTrustEnabled),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "boolean",
-    },
-    enable_auto_scaling: {
-      value: cdktf.booleanToHclTerraform(struct!.enableAutoScaling),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "boolean",
-    },
-    enable_host_encryption: {
-      value: cdktf.booleanToHclTerraform(struct!.enableHostEncryption),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "boolean",
-    },
-    enable_node_public_ip: {
-      value: cdktf.booleanToHclTerraform(struct!.enableNodePublicIp),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "boolean",
     },
     fips_enabled: {
       value: cdktf.booleanToHclTerraform(struct!.fipsEnabled),
@@ -4125,6 +3873,12 @@ export function kubernetesClusterDefaultNodePoolToHclTerraform(struct?: Kubernet
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    host_encryption_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.hostEncryptionEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
     },
     host_group_id: {
       value: cdktf.stringToHclTerraform(struct!.hostGroupId),
@@ -4150,12 +3904,6 @@ export function kubernetesClusterDefaultNodePoolToHclTerraform(struct?: Kubernet
       type: "simple",
       storageClassType: "number",
     },
-    message_of_the_day: {
-      value: cdktf.stringToHclTerraform(struct!.messageOfTheDay),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
     min_count: {
       value: cdktf.numberToHclTerraform(struct!.minCount),
       isBlock: false,
@@ -4180,17 +3928,17 @@ export function kubernetesClusterDefaultNodePoolToHclTerraform(struct?: Kubernet
       type: "map",
       storageClassType: "stringMap",
     },
+    node_public_ip_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.nodePublicIpEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
     node_public_ip_prefix_id: {
       value: cdktf.stringToHclTerraform(struct!.nodePublicIpPrefixId),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
-    },
-    node_taints: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.nodeTaints),
-      isBlock: false,
-      type: "list",
-      storageClassType: "stringList",
     },
     only_critical_addons_enabled: {
       value: cdktf.booleanToHclTerraform(struct!.onlyCriticalAddonsEnabled),
@@ -4338,25 +4086,13 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   public get internalValue(): KubernetesClusterDefaultNodePool | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._autoScalingEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.autoScalingEnabled = this._autoScalingEnabled;
+    }
     if (this._capacityReservationGroupId !== undefined) {
       hasAnyValues = true;
       internalValueResult.capacityReservationGroupId = this._capacityReservationGroupId;
-    }
-    if (this._customCaTrustEnabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.customCaTrustEnabled = this._customCaTrustEnabled;
-    }
-    if (this._enableAutoScaling !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.enableAutoScaling = this._enableAutoScaling;
-    }
-    if (this._enableHostEncryption !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.enableHostEncryption = this._enableHostEncryption;
-    }
-    if (this._enableNodePublicIp !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.enableNodePublicIp = this._enableNodePublicIp;
     }
     if (this._fipsEnabled !== undefined) {
       hasAnyValues = true;
@@ -4365,6 +4101,10 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     if (this._gpuInstance !== undefined) {
       hasAnyValues = true;
       internalValueResult.gpuInstance = this._gpuInstance;
+    }
+    if (this._hostEncryptionEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostEncryptionEnabled = this._hostEncryptionEnabled;
     }
     if (this._hostGroupId !== undefined) {
       hasAnyValues = true;
@@ -4382,10 +4122,6 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.maxPods = this._maxPods;
     }
-    if (this._messageOfTheDay !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.messageOfTheDay = this._messageOfTheDay;
-    }
     if (this._minCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.minCount = this._minCount;
@@ -4402,13 +4138,13 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.nodeLabels = this._nodeLabels;
     }
+    if (this._nodePublicIpEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodePublicIpEnabled = this._nodePublicIpEnabled;
+    }
     if (this._nodePublicIpPrefixId !== undefined) {
       hasAnyValues = true;
       internalValueResult.nodePublicIpPrefixId = this._nodePublicIpPrefixId;
-    }
-    if (this._nodeTaints !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.nodeTaints = this._nodeTaints;
     }
     if (this._onlyCriticalAddonsEnabled !== undefined) {
       hasAnyValues = true;
@@ -4500,24 +4236,21 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   public set internalValue(value: KubernetesClusterDefaultNodePool | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._autoScalingEnabled = undefined;
       this._capacityReservationGroupId = undefined;
-      this._customCaTrustEnabled = undefined;
-      this._enableAutoScaling = undefined;
-      this._enableHostEncryption = undefined;
-      this._enableNodePublicIp = undefined;
       this._fipsEnabled = undefined;
       this._gpuInstance = undefined;
+      this._hostEncryptionEnabled = undefined;
       this._hostGroupId = undefined;
       this._kubeletDiskType = undefined;
       this._maxCount = undefined;
       this._maxPods = undefined;
-      this._messageOfTheDay = undefined;
       this._minCount = undefined;
       this._name = undefined;
       this._nodeCount = undefined;
       this._nodeLabels = undefined;
+      this._nodePublicIpEnabled = undefined;
       this._nodePublicIpPrefixId = undefined;
-      this._nodeTaints = undefined;
       this._onlyCriticalAddonsEnabled = undefined;
       this._orchestratorVersion = undefined;
       this._osDiskSizeGb = undefined;
@@ -4542,24 +4275,21 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._autoScalingEnabled = value.autoScalingEnabled;
       this._capacityReservationGroupId = value.capacityReservationGroupId;
-      this._customCaTrustEnabled = value.customCaTrustEnabled;
-      this._enableAutoScaling = value.enableAutoScaling;
-      this._enableHostEncryption = value.enableHostEncryption;
-      this._enableNodePublicIp = value.enableNodePublicIp;
       this._fipsEnabled = value.fipsEnabled;
       this._gpuInstance = value.gpuInstance;
+      this._hostEncryptionEnabled = value.hostEncryptionEnabled;
       this._hostGroupId = value.hostGroupId;
       this._kubeletDiskType = value.kubeletDiskType;
       this._maxCount = value.maxCount;
       this._maxPods = value.maxPods;
-      this._messageOfTheDay = value.messageOfTheDay;
       this._minCount = value.minCount;
       this._name = value.name;
       this._nodeCount = value.nodeCount;
       this._nodeLabels = value.nodeLabels;
+      this._nodePublicIpEnabled = value.nodePublicIpEnabled;
       this._nodePublicIpPrefixId = value.nodePublicIpPrefixId;
-      this._nodeTaints = value.nodeTaints;
       this._onlyCriticalAddonsEnabled = value.onlyCriticalAddonsEnabled;
       this._orchestratorVersion = value.orchestratorVersion;
       this._osDiskSizeGb = value.osDiskSizeGb;
@@ -4584,6 +4314,22 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     }
   }
 
+  // auto_scaling_enabled - computed: false, optional: true, required: false
+  private _autoScalingEnabled?: boolean | cdktf.IResolvable; 
+  public get autoScalingEnabled() {
+    return this.getBooleanAttribute('auto_scaling_enabled');
+  }
+  public set autoScalingEnabled(value: boolean | cdktf.IResolvable) {
+    this._autoScalingEnabled = value;
+  }
+  public resetAutoScalingEnabled() {
+    this._autoScalingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoScalingEnabledInput() {
+    return this._autoScalingEnabled;
+  }
+
   // capacity_reservation_group_id - computed: false, optional: true, required: false
   private _capacityReservationGroupId?: string; 
   public get capacityReservationGroupId() {
@@ -4598,70 +4344,6 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get capacityReservationGroupIdInput() {
     return this._capacityReservationGroupId;
-  }
-
-  // custom_ca_trust_enabled - computed: false, optional: true, required: false
-  private _customCaTrustEnabled?: boolean | cdktf.IResolvable; 
-  public get customCaTrustEnabled() {
-    return this.getBooleanAttribute('custom_ca_trust_enabled');
-  }
-  public set customCaTrustEnabled(value: boolean | cdktf.IResolvable) {
-    this._customCaTrustEnabled = value;
-  }
-  public resetCustomCaTrustEnabled() {
-    this._customCaTrustEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get customCaTrustEnabledInput() {
-    return this._customCaTrustEnabled;
-  }
-
-  // enable_auto_scaling - computed: false, optional: true, required: false
-  private _enableAutoScaling?: boolean | cdktf.IResolvable; 
-  public get enableAutoScaling() {
-    return this.getBooleanAttribute('enable_auto_scaling');
-  }
-  public set enableAutoScaling(value: boolean | cdktf.IResolvable) {
-    this._enableAutoScaling = value;
-  }
-  public resetEnableAutoScaling() {
-    this._enableAutoScaling = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enableAutoScalingInput() {
-    return this._enableAutoScaling;
-  }
-
-  // enable_host_encryption - computed: false, optional: true, required: false
-  private _enableHostEncryption?: boolean | cdktf.IResolvable; 
-  public get enableHostEncryption() {
-    return this.getBooleanAttribute('enable_host_encryption');
-  }
-  public set enableHostEncryption(value: boolean | cdktf.IResolvable) {
-    this._enableHostEncryption = value;
-  }
-  public resetEnableHostEncryption() {
-    this._enableHostEncryption = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enableHostEncryptionInput() {
-    return this._enableHostEncryption;
-  }
-
-  // enable_node_public_ip - computed: false, optional: true, required: false
-  private _enableNodePublicIp?: boolean | cdktf.IResolvable; 
-  public get enableNodePublicIp() {
-    return this.getBooleanAttribute('enable_node_public_ip');
-  }
-  public set enableNodePublicIp(value: boolean | cdktf.IResolvable) {
-    this._enableNodePublicIp = value;
-  }
-  public resetEnableNodePublicIp() {
-    this._enableNodePublicIp = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enableNodePublicIpInput() {
-    return this._enableNodePublicIp;
   }
 
   // fips_enabled - computed: false, optional: true, required: false
@@ -4694,6 +4376,22 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get gpuInstanceInput() {
     return this._gpuInstance;
+  }
+
+  // host_encryption_enabled - computed: false, optional: true, required: false
+  private _hostEncryptionEnabled?: boolean | cdktf.IResolvable; 
+  public get hostEncryptionEnabled() {
+    return this.getBooleanAttribute('host_encryption_enabled');
+  }
+  public set hostEncryptionEnabled(value: boolean | cdktf.IResolvable) {
+    this._hostEncryptionEnabled = value;
+  }
+  public resetHostEncryptionEnabled() {
+    this._hostEncryptionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostEncryptionEnabledInput() {
+    return this._hostEncryptionEnabled;
   }
 
   // host_group_id - computed: false, optional: true, required: false
@@ -4760,22 +4458,6 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     return this._maxPods;
   }
 
-  // message_of_the_day - computed: false, optional: true, required: false
-  private _messageOfTheDay?: string; 
-  public get messageOfTheDay() {
-    return this.getStringAttribute('message_of_the_day');
-  }
-  public set messageOfTheDay(value: string) {
-    this._messageOfTheDay = value;
-  }
-  public resetMessageOfTheDay() {
-    this._messageOfTheDay = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get messageOfTheDayInput() {
-    return this._messageOfTheDay;
-  }
-
   // min_count - computed: false, optional: true, required: false
   private _minCount?: number; 
   public get minCount() {
@@ -4837,6 +4519,22 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     return this._nodeLabels;
   }
 
+  // node_public_ip_enabled - computed: false, optional: true, required: false
+  private _nodePublicIpEnabled?: boolean | cdktf.IResolvable; 
+  public get nodePublicIpEnabled() {
+    return this.getBooleanAttribute('node_public_ip_enabled');
+  }
+  public set nodePublicIpEnabled(value: boolean | cdktf.IResolvable) {
+    this._nodePublicIpEnabled = value;
+  }
+  public resetNodePublicIpEnabled() {
+    this._nodePublicIpEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodePublicIpEnabledInput() {
+    return this._nodePublicIpEnabled;
+  }
+
   // node_public_ip_prefix_id - computed: false, optional: true, required: false
   private _nodePublicIpPrefixId?: string; 
   public get nodePublicIpPrefixId() {
@@ -4851,22 +4549,6 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get nodePublicIpPrefixIdInput() {
     return this._nodePublicIpPrefixId;
-  }
-
-  // node_taints - computed: false, optional: true, required: false
-  private _nodeTaints?: string[]; 
-  public get nodeTaints() {
-    return this.getListAttribute('node_taints');
-  }
-  public set nodeTaints(value: string[]) {
-    this._nodeTaints = value;
-  }
-  public resetNodeTaints() {
-    this._nodeTaints = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nodeTaintsInput() {
-    return this._nodeTaints;
   }
 
   // only_critical_addons_enabled - computed: false, optional: true, required: false
@@ -5204,19 +4886,19 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
 }
 export interface KubernetesClusterHttpProxyConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#http_proxy KubernetesCluster#http_proxy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#http_proxy KubernetesCluster#http_proxy}
   */
   readonly httpProxy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#https_proxy KubernetesCluster#https_proxy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#https_proxy KubernetesCluster#https_proxy}
   */
   readonly httpsProxy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#no_proxy KubernetesCluster#no_proxy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#no_proxy KubernetesCluster#no_proxy}
   */
   readonly noProxy?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#trusted_ca KubernetesCluster#trusted_ca}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#trusted_ca KubernetesCluster#trusted_ca}
   */
   readonly trustedCa?: string;
 }
@@ -5387,11 +5069,11 @@ export class KubernetesClusterHttpProxyConfigOutputReference extends cdktf.Compl
 }
 export interface KubernetesClusterIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#identity_ids KubernetesCluster#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#identity_ids KubernetesCluster#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#type KubernetesCluster#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#type KubernetesCluster#type}
   */
   readonly type: string;
 }
@@ -5596,19 +5278,19 @@ export class KubernetesClusterIngressApplicationGatewayIngressApplicationGateway
 }
 export interface KubernetesClusterIngressApplicationGateway {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#gateway_id KubernetesCluster#gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#gateway_id KubernetesCluster#gateway_id}
   */
   readonly gatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#gateway_name KubernetesCluster#gateway_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#gateway_name KubernetesCluster#gateway_name}
   */
   readonly gatewayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#subnet_cidr KubernetesCluster#subnet_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#subnet_cidr KubernetesCluster#subnet_cidr}
   */
   readonly subnetCidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}
   */
   readonly subnetId?: string;
 }
@@ -5790,11 +5472,11 @@ export class KubernetesClusterIngressApplicationGatewayOutputReference extends c
 }
 export interface KubernetesClusterKeyManagementService {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#key_vault_key_id KubernetesCluster#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#key_vault_key_id KubernetesCluster#key_vault_key_id}
   */
   readonly keyVaultKeyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#key_vault_network_access KubernetesCluster#key_vault_network_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#key_vault_network_access KubernetesCluster#key_vault_network_access}
   */
   readonly keyVaultNetworkAccess?: string;
 }
@@ -5989,11 +5671,11 @@ export class KubernetesClusterKeyVaultSecretsProviderSecretIdentityList extends 
 }
 export interface KubernetesClusterKeyVaultSecretsProvider {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#secret_rotation_enabled KubernetesCluster#secret_rotation_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#secret_rotation_enabled KubernetesCluster#secret_rotation_enabled}
   */
   readonly secretRotationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#secret_rotation_interval KubernetesCluster#secret_rotation_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#secret_rotation_interval KubernetesCluster#secret_rotation_interval}
   */
   readonly secretRotationInterval?: string;
 }
@@ -6112,15 +5794,15 @@ export class KubernetesClusterKeyVaultSecretsProviderOutputReference extends cdk
 }
 export interface KubernetesClusterKubeletIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#client_id KubernetesCluster#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#client_id KubernetesCluster#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#object_id KubernetesCluster#object_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#object_id KubernetesCluster#object_id}
   */
   readonly objectId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#user_assigned_identity_id KubernetesCluster#user_assigned_identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#user_assigned_identity_id KubernetesCluster#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId?: string;
 }
@@ -6262,7 +5944,7 @@ export class KubernetesClusterKubeletIdentityOutputReference extends cdktf.Compl
 }
 export interface KubernetesClusterLinuxProfileSshKey {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#key_data KubernetesCluster#key_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#key_data KubernetesCluster#key_data}
   */
   readonly keyData: string;
 }
@@ -6343,13 +6025,13 @@ export class KubernetesClusterLinuxProfileSshKeyOutputReference extends cdktf.Co
 }
 export interface KubernetesClusterLinuxProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#admin_username KubernetesCluster#admin_username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#admin_username KubernetesCluster#admin_username}
   */
   readonly adminUsername: string;
   /**
   * ssh_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#ssh_key KubernetesCluster#ssh_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#ssh_key KubernetesCluster#ssh_key}
   */
   readonly sshKey: KubernetesClusterLinuxProfileSshKey;
 }
@@ -6456,11 +6138,11 @@ export class KubernetesClusterLinuxProfileOutputReference extends cdktf.ComplexO
 }
 export interface KubernetesClusterMaintenanceWindowAllowed {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#day KubernetesCluster#day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#day KubernetesCluster#day}
   */
   readonly day: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#hours KubernetesCluster#hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#hours KubernetesCluster#hours}
   */
   readonly hours: number[];
 }
@@ -6599,11 +6281,11 @@ export class KubernetesClusterMaintenanceWindowAllowedList extends cdktf.Complex
 }
 export interface KubernetesClusterMaintenanceWindowNotAllowed {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#end KubernetesCluster#end}
   */
   readonly end: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#start KubernetesCluster#start}
   */
   readonly start: string;
 }
@@ -6744,13 +6426,13 @@ export interface KubernetesClusterMaintenanceWindow {
   /**
   * allowed block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#allowed KubernetesCluster#allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#allowed KubernetesCluster#allowed}
   */
   readonly allowed?: KubernetesClusterMaintenanceWindowAllowed[] | cdktf.IResolvable;
   /**
   * not_allowed block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
   */
   readonly notAllowed?: KubernetesClusterMaintenanceWindowNotAllowed[] | cdktf.IResolvable;
 }
@@ -6863,11 +6545,11 @@ export class KubernetesClusterMaintenanceWindowOutputReference extends cdktf.Com
 }
 export interface KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#end KubernetesCluster#end}
   */
   readonly end: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#start KubernetesCluster#start}
   */
   readonly start: string;
 }
@@ -7006,45 +6688,45 @@ export class KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowedList extends
 }
 export interface KubernetesClusterMaintenanceWindowAutoUpgrade {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}
   */
   readonly dayOfMonth?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}
   */
   readonly dayOfWeek?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#duration KubernetesCluster#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#duration KubernetesCluster#duration}
   */
   readonly duration: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#frequency KubernetesCluster#frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#frequency KubernetesCluster#frequency}
   */
   readonly frequency: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}
   */
   readonly interval: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}
   */
   readonly startDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}
   */
   readonly startTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}
   */
   readonly utcOffset?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#week_index KubernetesCluster#week_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#week_index KubernetesCluster#week_index}
   */
   readonly weekIndex?: string;
   /**
   * not_allowed block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
   */
   readonly notAllowed?: KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed[] | cdktf.IResolvable;
 }
@@ -7380,11 +7062,11 @@ export class KubernetesClusterMaintenanceWindowAutoUpgradeOutputReference extend
 }
 export interface KubernetesClusterMaintenanceWindowNodeOsNotAllowed {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#end KubernetesCluster#end}
   */
   readonly end: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#start KubernetesCluster#start}
   */
   readonly start: string;
 }
@@ -7523,45 +7205,45 @@ export class KubernetesClusterMaintenanceWindowNodeOsNotAllowedList extends cdkt
 }
 export interface KubernetesClusterMaintenanceWindowNodeOs {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}
   */
   readonly dayOfMonth?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}
   */
   readonly dayOfWeek?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#duration KubernetesCluster#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#duration KubernetesCluster#duration}
   */
   readonly duration: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#frequency KubernetesCluster#frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#frequency KubernetesCluster#frequency}
   */
   readonly frequency: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}
   */
   readonly interval: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}
   */
   readonly startDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}
   */
   readonly startTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}
   */
   readonly utcOffset?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#week_index KubernetesCluster#week_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#week_index KubernetesCluster#week_index}
   */
   readonly weekIndex?: string;
   /**
   * not_allowed block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
   */
   readonly notAllowed?: KubernetesClusterMaintenanceWindowNodeOsNotAllowed[] | cdktf.IResolvable;
 }
@@ -7897,7 +7579,7 @@ export class KubernetesClusterMaintenanceWindowNodeOsOutputReference extends cdk
 }
 export interface KubernetesClusterMicrosoftDefender {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
 }
@@ -7978,11 +7660,11 @@ export class KubernetesClusterMicrosoftDefenderOutputReference extends cdktf.Com
 }
 export interface KubernetesClusterMonitorMetrics {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#annotations_allowed KubernetesCluster#annotations_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#annotations_allowed KubernetesCluster#annotations_allowed}
   */
   readonly annotationsAllowed?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#labels_allowed KubernetesCluster#labels_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#labels_allowed KubernetesCluster#labels_allowed}
   */
   readonly labelsAllowed?: string;
 }
@@ -8095,27 +7777,27 @@ export class KubernetesClusterMonitorMetricsOutputReference extends cdktf.Comple
 }
 export interface KubernetesClusterNetworkProfileLoadBalancerProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}
   */
   readonly idleTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}
   */
   readonly managedOutboundIpCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#managed_outbound_ipv6_count KubernetesCluster#managed_outbound_ipv6_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#managed_outbound_ipv6_count KubernetesCluster#managed_outbound_ipv6_count}
   */
   readonly managedOutboundIpv6Count?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#outbound_ip_address_ids KubernetesCluster#outbound_ip_address_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#outbound_ip_address_ids KubernetesCluster#outbound_ip_address_ids}
   */
   readonly outboundIpAddressIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#outbound_ip_prefix_ids KubernetesCluster#outbound_ip_prefix_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#outbound_ip_prefix_ids KubernetesCluster#outbound_ip_prefix_ids}
   */
   readonly outboundIpPrefixIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#outbound_ports_allocated KubernetesCluster#outbound_ports_allocated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#outbound_ports_allocated KubernetesCluster#outbound_ports_allocated}
   */
   readonly outboundPortsAllocated?: number;
 }
@@ -8349,11 +8031,11 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
 }
 export interface KubernetesClusterNetworkProfileNatGatewayProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}
   */
   readonly idleTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}
   */
   readonly managedOutboundIpCount?: number;
 }
@@ -8471,83 +8153,67 @@ export class KubernetesClusterNetworkProfileNatGatewayProfileOutputReference ext
 }
 export interface KubernetesClusterNetworkProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#dns_service_ip KubernetesCluster#dns_service_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#dns_service_ip KubernetesCluster#dns_service_ip}
   */
   readonly dnsServiceIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#docker_bridge_cidr KubernetesCluster#docker_bridge_cidr}
-  */
-  readonly dockerBridgeCidr?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#ebpf_data_plane KubernetesCluster#ebpf_data_plane}
-  */
-  readonly ebpfDataPlane?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#ip_versions KubernetesCluster#ip_versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#ip_versions KubernetesCluster#ip_versions}
   */
   readonly ipVersions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#load_balancer_sku KubernetesCluster#load_balancer_sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#load_balancer_sku KubernetesCluster#load_balancer_sku}
   */
   readonly loadBalancerSku?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#network_data_plane KubernetesCluster#network_data_plane}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#network_data_plane KubernetesCluster#network_data_plane}
   */
   readonly networkDataPlane?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#network_mode KubernetesCluster#network_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#network_mode KubernetesCluster#network_mode}
   */
   readonly networkMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#network_plugin KubernetesCluster#network_plugin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#network_plugin KubernetesCluster#network_plugin}
   */
   readonly networkPlugin: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#network_plugin_mode KubernetesCluster#network_plugin_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#network_plugin_mode KubernetesCluster#network_plugin_mode}
   */
   readonly networkPluginMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#network_policy KubernetesCluster#network_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#network_policy KubernetesCluster#network_policy}
   */
   readonly networkPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#outbound_ip_address_ids KubernetesCluster#outbound_ip_address_ids}
-  */
-  readonly outboundIpAddressIds?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#outbound_ip_prefix_ids KubernetesCluster#outbound_ip_prefix_ids}
-  */
-  readonly outboundIpPrefixIds?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#outbound_type KubernetesCluster#outbound_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#outbound_type KubernetesCluster#outbound_type}
   */
   readonly outboundType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#pod_cidr KubernetesCluster#pod_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#pod_cidr KubernetesCluster#pod_cidr}
   */
   readonly podCidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#pod_cidrs KubernetesCluster#pod_cidrs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#pod_cidrs KubernetesCluster#pod_cidrs}
   */
   readonly podCidrs?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#service_cidr KubernetesCluster#service_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#service_cidr KubernetesCluster#service_cidr}
   */
   readonly serviceCidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#service_cidrs KubernetesCluster#service_cidrs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#service_cidrs KubernetesCluster#service_cidrs}
   */
   readonly serviceCidrs?: string[];
   /**
   * load_balancer_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#load_balancer_profile KubernetesCluster#load_balancer_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#load_balancer_profile KubernetesCluster#load_balancer_profile}
   */
   readonly loadBalancerProfile?: KubernetesClusterNetworkProfileLoadBalancerProfile;
   /**
   * nat_gateway_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#nat_gateway_profile KubernetesCluster#nat_gateway_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#nat_gateway_profile KubernetesCluster#nat_gateway_profile}
   */
   readonly natGatewayProfile?: KubernetesClusterNetworkProfileNatGatewayProfile;
 }
@@ -8559,8 +8225,6 @@ export function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesCl
   }
   return {
     dns_service_ip: cdktf.stringToTerraform(struct!.dnsServiceIp),
-    docker_bridge_cidr: cdktf.stringToTerraform(struct!.dockerBridgeCidr),
-    ebpf_data_plane: cdktf.stringToTerraform(struct!.ebpfDataPlane),
     ip_versions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipVersions),
     load_balancer_sku: cdktf.stringToTerraform(struct!.loadBalancerSku),
     network_data_plane: cdktf.stringToTerraform(struct!.networkDataPlane),
@@ -8568,8 +8232,6 @@ export function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesCl
     network_plugin: cdktf.stringToTerraform(struct!.networkPlugin),
     network_plugin_mode: cdktf.stringToTerraform(struct!.networkPluginMode),
     network_policy: cdktf.stringToTerraform(struct!.networkPolicy),
-    outbound_ip_address_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.outboundIpAddressIds),
-    outbound_ip_prefix_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.outboundIpPrefixIds),
     outbound_type: cdktf.stringToTerraform(struct!.outboundType),
     pod_cidr: cdktf.stringToTerraform(struct!.podCidr),
     pod_cidrs: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.podCidrs),
@@ -8589,18 +8251,6 @@ export function kubernetesClusterNetworkProfileToHclTerraform(struct?: Kubernete
   const attrs = {
     dns_service_ip: {
       value: cdktf.stringToHclTerraform(struct!.dnsServiceIp),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    docker_bridge_cidr: {
-      value: cdktf.stringToHclTerraform(struct!.dockerBridgeCidr),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    ebpf_data_plane: {
-      value: cdktf.stringToHclTerraform(struct!.ebpfDataPlane),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -8646,18 +8296,6 @@ export function kubernetesClusterNetworkProfileToHclTerraform(struct?: Kubernete
       isBlock: false,
       type: "simple",
       storageClassType: "string",
-    },
-    outbound_ip_address_ids: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.outboundIpAddressIds),
-      isBlock: false,
-      type: "set",
-      storageClassType: "stringList",
-    },
-    outbound_ip_prefix_ids: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.outboundIpPrefixIds),
-      isBlock: false,
-      type: "set",
-      storageClassType: "stringList",
     },
     outbound_type: {
       value: cdktf.stringToHclTerraform(struct!.outboundType),
@@ -8725,14 +8363,6 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.dnsServiceIp = this._dnsServiceIp;
     }
-    if (this._dockerBridgeCidr !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.dockerBridgeCidr = this._dockerBridgeCidr;
-    }
-    if (this._ebpfDataPlane !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.ebpfDataPlane = this._ebpfDataPlane;
-    }
     if (this._ipVersions !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipVersions = this._ipVersions;
@@ -8760,14 +8390,6 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
     if (this._networkPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.networkPolicy = this._networkPolicy;
-    }
-    if (this._outboundIpAddressIds !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.outboundIpAddressIds = this._outboundIpAddressIds;
-    }
-    if (this._outboundIpPrefixIds !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.outboundIpPrefixIds = this._outboundIpPrefixIds;
     }
     if (this._outboundType !== undefined) {
       hasAnyValues = true;
@@ -8804,8 +8426,6 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
     if (value === undefined) {
       this.isEmptyObject = false;
       this._dnsServiceIp = undefined;
-      this._dockerBridgeCidr = undefined;
-      this._ebpfDataPlane = undefined;
       this._ipVersions = undefined;
       this._loadBalancerSku = undefined;
       this._networkDataPlane = undefined;
@@ -8813,8 +8433,6 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
       this._networkPlugin = undefined;
       this._networkPluginMode = undefined;
       this._networkPolicy = undefined;
-      this._outboundIpAddressIds = undefined;
-      this._outboundIpPrefixIds = undefined;
       this._outboundType = undefined;
       this._podCidr = undefined;
       this._podCidrs = undefined;
@@ -8826,8 +8444,6 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._dnsServiceIp = value.dnsServiceIp;
-      this._dockerBridgeCidr = value.dockerBridgeCidr;
-      this._ebpfDataPlane = value.ebpfDataPlane;
       this._ipVersions = value.ipVersions;
       this._loadBalancerSku = value.loadBalancerSku;
       this._networkDataPlane = value.networkDataPlane;
@@ -8835,8 +8451,6 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
       this._networkPlugin = value.networkPlugin;
       this._networkPluginMode = value.networkPluginMode;
       this._networkPolicy = value.networkPolicy;
-      this._outboundIpAddressIds = value.outboundIpAddressIds;
-      this._outboundIpPrefixIds = value.outboundIpPrefixIds;
       this._outboundType = value.outboundType;
       this._podCidr = value.podCidr;
       this._podCidrs = value.podCidrs;
@@ -8861,38 +8475,6 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get dnsServiceIpInput() {
     return this._dnsServiceIp;
-  }
-
-  // docker_bridge_cidr - computed: true, optional: true, required: false
-  private _dockerBridgeCidr?: string; 
-  public get dockerBridgeCidr() {
-    return this.getStringAttribute('docker_bridge_cidr');
-  }
-  public set dockerBridgeCidr(value: string) {
-    this._dockerBridgeCidr = value;
-  }
-  public resetDockerBridgeCidr() {
-    this._dockerBridgeCidr = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dockerBridgeCidrInput() {
-    return this._dockerBridgeCidr;
-  }
-
-  // ebpf_data_plane - computed: true, optional: true, required: false
-  private _ebpfDataPlane?: string; 
-  public get ebpfDataPlane() {
-    return this.getStringAttribute('ebpf_data_plane');
-  }
-  public set ebpfDataPlane(value: string) {
-    this._ebpfDataPlane = value;
-  }
-  public resetEbpfDataPlane() {
-    this._ebpfDataPlane = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get ebpfDataPlaneInput() {
-    return this._ebpfDataPlane;
   }
 
   // ip_versions - computed: true, optional: true, required: false
@@ -8927,7 +8509,7 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
     return this._loadBalancerSku;
   }
 
-  // network_data_plane - computed: true, optional: true, required: false
+  // network_data_plane - computed: false, optional: true, required: false
   private _networkDataPlane?: string; 
   public get networkDataPlane() {
     return this.getStringAttribute('network_data_plane');
@@ -9002,38 +8584,6 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get networkPolicyInput() {
     return this._networkPolicy;
-  }
-
-  // outbound_ip_address_ids - computed: true, optional: true, required: false
-  private _outboundIpAddressIds?: string[]; 
-  public get outboundIpAddressIds() {
-    return cdktf.Fn.tolist(this.getListAttribute('outbound_ip_address_ids'));
-  }
-  public set outboundIpAddressIds(value: string[]) {
-    this._outboundIpAddressIds = value;
-  }
-  public resetOutboundIpAddressIds() {
-    this._outboundIpAddressIds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get outboundIpAddressIdsInput() {
-    return this._outboundIpAddressIds;
-  }
-
-  // outbound_ip_prefix_ids - computed: true, optional: true, required: false
-  private _outboundIpPrefixIds?: string[]; 
-  public get outboundIpPrefixIds() {
-    return cdktf.Fn.tolist(this.getListAttribute('outbound_ip_prefix_ids'));
-  }
-  public set outboundIpPrefixIds(value: string[]) {
-    this._outboundIpPrefixIds = value;
-  }
-  public resetOutboundIpPrefixIds() {
-    this._outboundIpPrefixIds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get outboundIpPrefixIdsInput() {
-    return this._outboundIpPrefixIds;
   }
 
   // outbound_type - computed: false, optional: true, required: false
@@ -9235,11 +8785,11 @@ export class KubernetesClusterOmsAgentOmsAgentIdentityList extends cdktf.Complex
 }
 export interface KubernetesClusterOmsAgent {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}
   */
   readonly msiAuthForMonitoringEnabled?: boolean | cdktf.IResolvable;
 }
@@ -9355,23 +8905,23 @@ export class KubernetesClusterOmsAgentOutputReference extends cdktf.ComplexObjec
 }
 export interface KubernetesClusterServiceMeshProfileCertificateAuthority {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#cert_chain_object_name KubernetesCluster#cert_chain_object_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#cert_chain_object_name KubernetesCluster#cert_chain_object_name}
   */
   readonly certChainObjectName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#cert_object_name KubernetesCluster#cert_object_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#cert_object_name KubernetesCluster#cert_object_name}
   */
   readonly certObjectName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#key_object_name KubernetesCluster#key_object_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#key_object_name KubernetesCluster#key_object_name}
   */
   readonly keyObjectName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#key_vault_id KubernetesCluster#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#key_vault_id KubernetesCluster#key_vault_id}
   */
   readonly keyVaultId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#root_cert_object_name KubernetesCluster#root_cert_object_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#root_cert_object_name KubernetesCluster#root_cert_object_name}
   */
   readonly rootCertObjectName: string;
 }
@@ -9556,21 +9106,25 @@ export class KubernetesClusterServiceMeshProfileCertificateAuthorityOutputRefere
 }
 export interface KubernetesClusterServiceMeshProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#external_ingress_gateway_enabled KubernetesCluster#external_ingress_gateway_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#external_ingress_gateway_enabled KubernetesCluster#external_ingress_gateway_enabled}
   */
   readonly externalIngressGatewayEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#internal_ingress_gateway_enabled KubernetesCluster#internal_ingress_gateway_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#internal_ingress_gateway_enabled KubernetesCluster#internal_ingress_gateway_enabled}
   */
   readonly internalIngressGatewayEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#mode KubernetesCluster#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#mode KubernetesCluster#mode}
   */
   readonly mode: string;
   /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#revisions KubernetesCluster#revisions}
+  */
+  readonly revisions: string[];
+  /**
   * certificate_authority block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#certificate_authority KubernetesCluster#certificate_authority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#certificate_authority KubernetesCluster#certificate_authority}
   */
   readonly certificateAuthority?: KubernetesClusterServiceMeshProfileCertificateAuthority;
 }
@@ -9584,6 +9138,7 @@ export function kubernetesClusterServiceMeshProfileToTerraform(struct?: Kubernet
     external_ingress_gateway_enabled: cdktf.booleanToTerraform(struct!.externalIngressGatewayEnabled),
     internal_ingress_gateway_enabled: cdktf.booleanToTerraform(struct!.internalIngressGatewayEnabled),
     mode: cdktf.stringToTerraform(struct!.mode),
+    revisions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.revisions),
     certificate_authority: kubernetesClusterServiceMeshProfileCertificateAuthorityToTerraform(struct!.certificateAuthority),
   }
 }
@@ -9612,6 +9167,12 @@ export function kubernetesClusterServiceMeshProfileToHclTerraform(struct?: Kuber
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    revisions: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.revisions),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
     },
     certificate_authority: {
       value: kubernetesClusterServiceMeshProfileCertificateAuthorityToHclTerraform(struct!.certificateAuthority),
@@ -9651,6 +9212,10 @@ export class KubernetesClusterServiceMeshProfileOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
+    if (this._revisions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.revisions = this._revisions;
+    }
     if (this._certificateAuthority?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.certificateAuthority = this._certificateAuthority?.internalValue;
@@ -9664,6 +9229,7 @@ export class KubernetesClusterServiceMeshProfileOutputReference extends cdktf.Co
       this._externalIngressGatewayEnabled = undefined;
       this._internalIngressGatewayEnabled = undefined;
       this._mode = undefined;
+      this._revisions = undefined;
       this._certificateAuthority.internalValue = undefined;
     }
     else {
@@ -9671,6 +9237,7 @@ export class KubernetesClusterServiceMeshProfileOutputReference extends cdktf.Co
       this._externalIngressGatewayEnabled = value.externalIngressGatewayEnabled;
       this._internalIngressGatewayEnabled = value.internalIngressGatewayEnabled;
       this._mode = value.mode;
+      this._revisions = value.revisions;
       this._certificateAuthority.internalValue = value.certificateAuthority;
     }
   }
@@ -9720,6 +9287,19 @@ export class KubernetesClusterServiceMeshProfileOutputReference extends cdktf.Co
     return this._mode;
   }
 
+  // revisions - computed: false, optional: false, required: true
+  private _revisions?: string[]; 
+  public get revisions() {
+    return this.getListAttribute('revisions');
+  }
+  public set revisions(value: string[]) {
+    this._revisions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get revisionsInput() {
+    return this._revisions;
+  }
+
   // certificate_authority - computed: false, optional: true, required: false
   private _certificateAuthority = new KubernetesClusterServiceMeshProfileCertificateAuthorityOutputReference(this, "certificate_authority");
   public get certificateAuthority() {
@@ -9738,11 +9318,11 @@ export class KubernetesClusterServiceMeshProfileOutputReference extends cdktf.Co
 }
 export interface KubernetesClusterServicePrincipal {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#client_id KubernetesCluster#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#client_id KubernetesCluster#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#client_secret KubernetesCluster#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#client_secret KubernetesCluster#client_secret}
   */
   readonly clientSecret: string;
 }
@@ -9849,23 +9429,19 @@ export class KubernetesClusterServicePrincipalOutputReference extends cdktf.Comp
 }
 export interface KubernetesClusterStorageProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#blob_driver_enabled KubernetesCluster#blob_driver_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#blob_driver_enabled KubernetesCluster#blob_driver_enabled}
   */
   readonly blobDriverEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#disk_driver_enabled KubernetesCluster#disk_driver_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#disk_driver_enabled KubernetesCluster#disk_driver_enabled}
   */
   readonly diskDriverEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#disk_driver_version KubernetesCluster#disk_driver_version}
-  */
-  readonly diskDriverVersion?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#file_driver_enabled KubernetesCluster#file_driver_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#file_driver_enabled KubernetesCluster#file_driver_enabled}
   */
   readonly fileDriverEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#snapshot_controller_enabled KubernetesCluster#snapshot_controller_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#snapshot_controller_enabled KubernetesCluster#snapshot_controller_enabled}
   */
   readonly snapshotControllerEnabled?: boolean | cdktf.IResolvable;
 }
@@ -9878,7 +9454,6 @@ export function kubernetesClusterStorageProfileToTerraform(struct?: KubernetesCl
   return {
     blob_driver_enabled: cdktf.booleanToTerraform(struct!.blobDriverEnabled),
     disk_driver_enabled: cdktf.booleanToTerraform(struct!.diskDriverEnabled),
-    disk_driver_version: cdktf.stringToTerraform(struct!.diskDriverVersion),
     file_driver_enabled: cdktf.booleanToTerraform(struct!.fileDriverEnabled),
     snapshot_controller_enabled: cdktf.booleanToTerraform(struct!.snapshotControllerEnabled),
   }
@@ -9902,12 +9477,6 @@ export function kubernetesClusterStorageProfileToHclTerraform(struct?: Kubernete
       isBlock: false,
       type: "simple",
       storageClassType: "boolean",
-    },
-    disk_driver_version: {
-      value: cdktf.stringToHclTerraform(struct!.diskDriverVersion),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
     },
     file_driver_enabled: {
       value: cdktf.booleanToHclTerraform(struct!.fileDriverEnabled),
@@ -9949,10 +9518,6 @@ export class KubernetesClusterStorageProfileOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.diskDriverEnabled = this._diskDriverEnabled;
     }
-    if (this._diskDriverVersion !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.diskDriverVersion = this._diskDriverVersion;
-    }
     if (this._fileDriverEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileDriverEnabled = this._fileDriverEnabled;
@@ -9969,7 +9534,6 @@ export class KubernetesClusterStorageProfileOutputReference extends cdktf.Comple
       this.isEmptyObject = false;
       this._blobDriverEnabled = undefined;
       this._diskDriverEnabled = undefined;
-      this._diskDriverVersion = undefined;
       this._fileDriverEnabled = undefined;
       this._snapshotControllerEnabled = undefined;
     }
@@ -9977,7 +9541,6 @@ export class KubernetesClusterStorageProfileOutputReference extends cdktf.Comple
       this.isEmptyObject = Object.keys(value).length === 0;
       this._blobDriverEnabled = value.blobDriverEnabled;
       this._diskDriverEnabled = value.diskDriverEnabled;
-      this._diskDriverVersion = value.diskDriverVersion;
       this._fileDriverEnabled = value.fileDriverEnabled;
       this._snapshotControllerEnabled = value.snapshotControllerEnabled;
     }
@@ -10015,22 +9578,6 @@ export class KubernetesClusterStorageProfileOutputReference extends cdktf.Comple
     return this._diskDriverEnabled;
   }
 
-  // disk_driver_version - computed: false, optional: true, required: false
-  private _diskDriverVersion?: string; 
-  public get diskDriverVersion() {
-    return this.getStringAttribute('disk_driver_version');
-  }
-  public set diskDriverVersion(value: string) {
-    this._diskDriverVersion = value;
-  }
-  public resetDiskDriverVersion() {
-    this._diskDriverVersion = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get diskDriverVersionInput() {
-    return this._diskDriverVersion;
-  }
-
   // file_driver_enabled - computed: false, optional: true, required: false
   private _fileDriverEnabled?: boolean | cdktf.IResolvable; 
   public get fileDriverEnabled() {
@@ -10065,19 +9612,19 @@ export class KubernetesClusterStorageProfileOutputReference extends cdktf.Comple
 }
 export interface KubernetesClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#create KubernetesCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#create KubernetesCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#delete KubernetesCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#delete KubernetesCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#read KubernetesCluster#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#read KubernetesCluster#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#update KubernetesCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#update KubernetesCluster#update}
   */
   readonly update?: string;
 }
@@ -10343,13 +9890,9 @@ export class KubernetesClusterWebAppRoutingWebAppRoutingIdentityList extends cdk
 }
 export interface KubernetesClusterWebAppRouting {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#dns_zone_id KubernetesCluster#dns_zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#dns_zone_ids KubernetesCluster#dns_zone_ids}
   */
-  readonly dnsZoneId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#dns_zone_ids KubernetesCluster#dns_zone_ids}
-  */
-  readonly dnsZoneIds?: string[];
+  readonly dnsZoneIds: string[];
 }
 
 export function kubernetesClusterWebAppRoutingToTerraform(struct?: KubernetesClusterWebAppRoutingOutputReference | KubernetesClusterWebAppRouting): any {
@@ -10358,7 +9901,6 @@ export function kubernetesClusterWebAppRoutingToTerraform(struct?: KubernetesClu
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    dns_zone_id: cdktf.stringToTerraform(struct!.dnsZoneId),
     dns_zone_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.dnsZoneIds),
   }
 }
@@ -10370,12 +9912,6 @@ export function kubernetesClusterWebAppRoutingToHclTerraform(struct?: Kubernetes
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
-    dns_zone_id: {
-      value: cdktf.stringToHclTerraform(struct!.dnsZoneId),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
     dns_zone_ids: {
       value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.dnsZoneIds),
       isBlock: false,
@@ -10402,10 +9938,6 @@ export class KubernetesClusterWebAppRoutingOutputReference extends cdktf.Complex
   public get internalValue(): KubernetesClusterWebAppRouting | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dnsZoneId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.dnsZoneId = this._dnsZoneId;
-    }
     if (this._dnsZoneIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.dnsZoneIds = this._dnsZoneIds;
@@ -10416,42 +9948,21 @@ export class KubernetesClusterWebAppRoutingOutputReference extends cdktf.Complex
   public set internalValue(value: KubernetesClusterWebAppRouting | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._dnsZoneId = undefined;
       this._dnsZoneIds = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._dnsZoneId = value.dnsZoneId;
       this._dnsZoneIds = value.dnsZoneIds;
     }
   }
 
-  // dns_zone_id - computed: false, optional: true, required: false
-  private _dnsZoneId?: string; 
-  public get dnsZoneId() {
-    return this.getStringAttribute('dns_zone_id');
-  }
-  public set dnsZoneId(value: string) {
-    this._dnsZoneId = value;
-  }
-  public resetDnsZoneId() {
-    this._dnsZoneId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dnsZoneIdInput() {
-    return this._dnsZoneId;
-  }
-
-  // dns_zone_ids - computed: false, optional: true, required: false
+  // dns_zone_ids - computed: false, optional: false, required: true
   private _dnsZoneIds?: string[]; 
   public get dnsZoneIds() {
     return this.getListAttribute('dns_zone_ids');
   }
   public set dnsZoneIds(value: string[]) {
     this._dnsZoneIds = value;
-  }
-  public resetDnsZoneIds() {
-    this._dnsZoneIds = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dnsZoneIdsInput() {
@@ -10466,11 +9977,11 @@ export class KubernetesClusterWebAppRoutingOutputReference extends cdktf.Complex
 }
 export interface KubernetesClusterWindowsProfileGmsa {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#dns_server KubernetesCluster#dns_server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#dns_server KubernetesCluster#dns_server}
   */
   readonly dnsServer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#root_domain KubernetesCluster#root_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#root_domain KubernetesCluster#root_domain}
   */
   readonly rootDomain: string;
 }
@@ -10577,21 +10088,21 @@ export class KubernetesClusterWindowsProfileGmsaOutputReference extends cdktf.Co
 }
 export interface KubernetesClusterWindowsProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#admin_password KubernetesCluster#admin_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#admin_password KubernetesCluster#admin_password}
   */
-  readonly adminPassword?: string;
+  readonly adminPassword: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#admin_username KubernetesCluster#admin_username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#admin_username KubernetesCluster#admin_username}
   */
   readonly adminUsername: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#license KubernetesCluster#license}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#license KubernetesCluster#license}
   */
   readonly license?: string;
   /**
   * gmsa block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#gmsa KubernetesCluster#gmsa}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#gmsa KubernetesCluster#gmsa}
   */
   readonly gmsa?: KubernetesClusterWindowsProfileGmsa;
 }
@@ -10696,16 +10207,13 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
     }
   }
 
-  // admin_password - computed: false, optional: true, required: false
+  // admin_password - computed: false, optional: false, required: true
   private _adminPassword?: string; 
   public get adminPassword() {
     return this.getStringAttribute('admin_password');
   }
   public set adminPassword(value: string) {
     this._adminPassword = value;
-  }
-  public resetAdminPassword() {
-    this._adminPassword = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get adminPasswordInput() {
@@ -10759,11 +10267,11 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
 }
 export interface KubernetesClusterWorkloadAutoscalerProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}
   */
   readonly kedaEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}
   */
   readonly verticalPodAutoscalerEnabled?: boolean | cdktf.IResolvable;
 }
@@ -10858,11 +10366,6 @@ export class KubernetesClusterWorkloadAutoscalerProfileOutputReference extends c
     return this._kedaEnabled;
   }
 
-  // vertical_pod_autoscaler_controlled_values - computed: true, optional: false, required: false
-  public get verticalPodAutoscalerControlledValues() {
-    return this.getStringAttribute('vertical_pod_autoscaler_controlled_values');
-  }
-
   // vertical_pod_autoscaler_enabled - computed: false, optional: true, required: false
   private _verticalPodAutoscalerEnabled?: boolean | cdktf.IResolvable; 
   public get verticalPodAutoscalerEnabled() {
@@ -10878,15 +10381,10 @@ export class KubernetesClusterWorkloadAutoscalerProfileOutputReference extends c
   public get verticalPodAutoscalerEnabledInput() {
     return this._verticalPodAutoscalerEnabled;
   }
-
-  // vertical_pod_autoscaler_update_mode - computed: true, optional: false, required: false
-  public get verticalPodAutoscalerUpdateMode() {
-    return this.getStringAttribute('vertical_pod_autoscaler_update_mode');
-  }
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster azurerm_kubernetes_cluster}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster azurerm_kubernetes_cluster}
 */
 export class KubernetesCluster extends cdktf.TerraformResource {
 
@@ -10902,7 +10400,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a KubernetesCluster resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the KubernetesCluster to import
-  * @param importFromId The id of the existing KubernetesCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing KubernetesCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the KubernetesCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -10914,7 +10412,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/kubernetes_cluster azurerm_kubernetes_cluster} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/kubernetes_cluster azurerm_kubernetes_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -10925,8 +10423,8 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -10936,16 +10434,13 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
-    this._apiServerAuthorizedIpRanges = config.apiServerAuthorizedIpRanges;
-    this._automaticChannelUpgrade = config.automaticChannelUpgrade;
+    this._automaticUpgradeChannel = config.automaticUpgradeChannel;
     this._azurePolicyEnabled = config.azurePolicyEnabled;
     this._costAnalysisEnabled = config.costAnalysisEnabled;
-    this._customCaTrustCertificatesBase64 = config.customCaTrustCertificatesBase64;
     this._diskEncryptionSetId = config.diskEncryptionSetId;
     this._dnsPrefix = config.dnsPrefix;
     this._dnsPrefixPrivateCluster = config.dnsPrefixPrivateCluster;
     this._edgeZone = config.edgeZone;
-    this._enablePodSecurityPolicy = config.enablePodSecurityPolicy;
     this._httpApplicationRoutingEnabled = config.httpApplicationRoutingEnabled;
     this._id = config.id;
     this._imageCleanerEnabled = config.imageCleanerEnabled;
@@ -10954,14 +10449,13 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._localAccountDisabled = config.localAccountDisabled;
     this._location = config.location;
     this._name = config.name;
-    this._nodeOsChannelUpgrade = config.nodeOsChannelUpgrade;
+    this._nodeOsUpgradeChannel = config.nodeOsUpgradeChannel;
     this._nodeResourceGroup = config.nodeResourceGroup;
     this._oidcIssuerEnabled = config.oidcIssuerEnabled;
     this._openServiceMeshEnabled = config.openServiceMeshEnabled;
     this._privateClusterEnabled = config.privateClusterEnabled;
     this._privateClusterPublicFqdnEnabled = config.privateClusterPublicFqdnEnabled;
     this._privateDnsZoneId = config.privateDnsZoneId;
-    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._roleBasedAccessControlEnabled = config.roleBasedAccessControlEnabled;
     this._runCommandEnabled = config.runCommandEnabled;
@@ -11002,36 +10496,20 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // api_server_authorized_ip_ranges - computed: true, optional: true, required: false
-  private _apiServerAuthorizedIpRanges?: string[]; 
-  public get apiServerAuthorizedIpRanges() {
-    return cdktf.Fn.tolist(this.getListAttribute('api_server_authorized_ip_ranges'));
+  // automatic_upgrade_channel - computed: false, optional: true, required: false
+  private _automaticUpgradeChannel?: string; 
+  public get automaticUpgradeChannel() {
+    return this.getStringAttribute('automatic_upgrade_channel');
   }
-  public set apiServerAuthorizedIpRanges(value: string[]) {
-    this._apiServerAuthorizedIpRanges = value;
+  public set automaticUpgradeChannel(value: string) {
+    this._automaticUpgradeChannel = value;
   }
-  public resetApiServerAuthorizedIpRanges() {
-    this._apiServerAuthorizedIpRanges = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get apiServerAuthorizedIpRangesInput() {
-    return this._apiServerAuthorizedIpRanges;
-  }
-
-  // automatic_channel_upgrade - computed: false, optional: true, required: false
-  private _automaticChannelUpgrade?: string; 
-  public get automaticChannelUpgrade() {
-    return this.getStringAttribute('automatic_channel_upgrade');
-  }
-  public set automaticChannelUpgrade(value: string) {
-    this._automaticChannelUpgrade = value;
-  }
-  public resetAutomaticChannelUpgrade() {
-    this._automaticChannelUpgrade = undefined;
+  public resetAutomaticUpgradeChannel() {
+    this._automaticUpgradeChannel = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get automaticChannelUpgradeInput() {
-    return this._automaticChannelUpgrade;
+  public get automaticUpgradeChannelInput() {
+    return this._automaticUpgradeChannel;
   }
 
   // azure_policy_enabled - computed: false, optional: true, required: false
@@ -11069,22 +10547,6 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // current_kubernetes_version - computed: true, optional: false, required: false
   public get currentKubernetesVersion() {
     return this.getStringAttribute('current_kubernetes_version');
-  }
-
-  // custom_ca_trust_certificates_base64 - computed: false, optional: true, required: false
-  private _customCaTrustCertificatesBase64?: string[]; 
-  public get customCaTrustCertificatesBase64() {
-    return this.getListAttribute('custom_ca_trust_certificates_base64');
-  }
-  public set customCaTrustCertificatesBase64(value: string[]) {
-    this._customCaTrustCertificatesBase64 = value;
-  }
-  public resetCustomCaTrustCertificatesBase64() {
-    this._customCaTrustCertificatesBase64 = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get customCaTrustCertificatesBase64Input() {
-    return this._customCaTrustCertificatesBase64;
   }
 
   // disk_encryption_set_id - computed: false, optional: true, required: false
@@ -11149,22 +10611,6 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get edgeZoneInput() {
     return this._edgeZone;
-  }
-
-  // enable_pod_security_policy - computed: false, optional: true, required: false
-  private _enablePodSecurityPolicy?: boolean | cdktf.IResolvable; 
-  public get enablePodSecurityPolicy() {
-    return this.getBooleanAttribute('enable_pod_security_policy');
-  }
-  public set enablePodSecurityPolicy(value: boolean | cdktf.IResolvable) {
-    this._enablePodSecurityPolicy = value;
-  }
-  public resetEnablePodSecurityPolicy() {
-    this._enablePodSecurityPolicy = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enablePodSecurityPolicyInput() {
-    return this._enablePodSecurityPolicy;
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -11321,20 +10767,20 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // node_os_channel_upgrade - computed: false, optional: true, required: false
-  private _nodeOsChannelUpgrade?: string; 
-  public get nodeOsChannelUpgrade() {
-    return this.getStringAttribute('node_os_channel_upgrade');
+  // node_os_upgrade_channel - computed: false, optional: true, required: false
+  private _nodeOsUpgradeChannel?: string; 
+  public get nodeOsUpgradeChannel() {
+    return this.getStringAttribute('node_os_upgrade_channel');
   }
-  public set nodeOsChannelUpgrade(value: string) {
-    this._nodeOsChannelUpgrade = value;
+  public set nodeOsUpgradeChannel(value: string) {
+    this._nodeOsUpgradeChannel = value;
   }
-  public resetNodeOsChannelUpgrade() {
-    this._nodeOsChannelUpgrade = undefined;
+  public resetNodeOsUpgradeChannel() {
+    this._nodeOsUpgradeChannel = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get nodeOsChannelUpgradeInput() {
-    return this._nodeOsChannelUpgrade;
+  public get nodeOsUpgradeChannelInput() {
+    return this._nodeOsUpgradeChannel;
   }
 
   // node_resource_group - computed: true, optional: true, required: false
@@ -11451,22 +10897,6 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // private_fqdn - computed: true, optional: false, required: false
   public get privateFqdn() {
     return this.getStringAttribute('private_fqdn');
-  }
-
-  // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
-  public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled');
-  }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
-    this._publicNetworkAccessEnabled = value;
-  }
-  public resetPublicNetworkAccessEnabled() {
-    this._publicNetworkAccessEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get publicNetworkAccessEnabledInput() {
-    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -12013,16 +11443,13 @@ export class KubernetesCluster extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_server_authorized_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(this._apiServerAuthorizedIpRanges),
-      automatic_channel_upgrade: cdktf.stringToTerraform(this._automaticChannelUpgrade),
+      automatic_upgrade_channel: cdktf.stringToTerraform(this._automaticUpgradeChannel),
       azure_policy_enabled: cdktf.booleanToTerraform(this._azurePolicyEnabled),
       cost_analysis_enabled: cdktf.booleanToTerraform(this._costAnalysisEnabled),
-      custom_ca_trust_certificates_base64: cdktf.listMapper(cdktf.stringToTerraform, false)(this._customCaTrustCertificatesBase64),
       disk_encryption_set_id: cdktf.stringToTerraform(this._diskEncryptionSetId),
       dns_prefix: cdktf.stringToTerraform(this._dnsPrefix),
       dns_prefix_private_cluster: cdktf.stringToTerraform(this._dnsPrefixPrivateCluster),
       edge_zone: cdktf.stringToTerraform(this._edgeZone),
-      enable_pod_security_policy: cdktf.booleanToTerraform(this._enablePodSecurityPolicy),
       http_application_routing_enabled: cdktf.booleanToTerraform(this._httpApplicationRoutingEnabled),
       id: cdktf.stringToTerraform(this._id),
       image_cleaner_enabled: cdktf.booleanToTerraform(this._imageCleanerEnabled),
@@ -12031,14 +11458,13 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       local_account_disabled: cdktf.booleanToTerraform(this._localAccountDisabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
-      node_os_channel_upgrade: cdktf.stringToTerraform(this._nodeOsChannelUpgrade),
+      node_os_upgrade_channel: cdktf.stringToTerraform(this._nodeOsUpgradeChannel),
       node_resource_group: cdktf.stringToTerraform(this._nodeResourceGroup),
       oidc_issuer_enabled: cdktf.booleanToTerraform(this._oidcIssuerEnabled),
       open_service_mesh_enabled: cdktf.booleanToTerraform(this._openServiceMeshEnabled),
       private_cluster_enabled: cdktf.booleanToTerraform(this._privateClusterEnabled),
       private_cluster_public_fqdn_enabled: cdktf.booleanToTerraform(this._privateClusterPublicFqdnEnabled),
       private_dns_zone_id: cdktf.stringToTerraform(this._privateDnsZoneId),
-      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       role_based_access_control_enabled: cdktf.booleanToTerraform(this._roleBasedAccessControlEnabled),
       run_command_enabled: cdktf.booleanToTerraform(this._runCommandEnabled),
@@ -12078,14 +11504,8 @@ export class KubernetesCluster extends cdktf.TerraformResource {
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
-      api_server_authorized_ip_ranges: {
-        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._apiServerAuthorizedIpRanges),
-        isBlock: false,
-        type: "set",
-        storageClassType: "stringList",
-      },
-      automatic_channel_upgrade: {
-        value: cdktf.stringToHclTerraform(this._automaticChannelUpgrade),
+      automatic_upgrade_channel: {
+        value: cdktf.stringToHclTerraform(this._automaticUpgradeChannel),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
@@ -12101,12 +11521,6 @@ export class KubernetesCluster extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
-      },
-      custom_ca_trust_certificates_base64: {
-        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._customCaTrustCertificatesBase64),
-        isBlock: false,
-        type: "list",
-        storageClassType: "stringList",
       },
       disk_encryption_set_id: {
         value: cdktf.stringToHclTerraform(this._diskEncryptionSetId),
@@ -12131,12 +11545,6 @@ export class KubernetesCluster extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
-      },
-      enable_pod_security_policy: {
-        value: cdktf.booleanToHclTerraform(this._enablePodSecurityPolicy),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "boolean",
       },
       http_application_routing_enabled: {
         value: cdktf.booleanToHclTerraform(this._httpApplicationRoutingEnabled),
@@ -12186,8 +11594,8 @@ export class KubernetesCluster extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
-      node_os_channel_upgrade: {
-        value: cdktf.stringToHclTerraform(this._nodeOsChannelUpgrade),
+      node_os_upgrade_channel: {
+        value: cdktf.stringToHclTerraform(this._nodeOsUpgradeChannel),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
@@ -12227,12 +11635,6 @@ export class KubernetesCluster extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
-      },
-      public_network_access_enabled: {
-        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "boolean",
       },
       resource_group_name: {
         value: cdktf.stringToHclTerraform(this._resourceGroupName),
