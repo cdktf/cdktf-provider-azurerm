@@ -4,12 +4,12 @@
 
 ### CognitiveDeployment <a name="CognitiveDeployment" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment azurerm_cognitive_deployment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment azurerm_cognitive_deployment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cognitivedeployment"
 
 cognitivedeployment.NewCognitiveDeployment(scope Construct, id *string, config CognitiveDeploymentConfig) CognitiveDeployment
 ```
@@ -74,7 +74,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.putModel">PutModel</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.putScale">PutScale</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.putSku">PutSku</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.resetRaiPolicyName">ResetRaiPolicyName</a></code> | *No description.* |
@@ -383,15 +383,15 @@ func PutModel(value CognitiveDeploymentModel)
 
 ---
 
-##### `PutScale` <a name="PutScale" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.putScale"></a>
+##### `PutSku` <a name="PutSku" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.putSku"></a>
 
 ```go
-func PutScale(value CognitiveDeploymentScale)
+func PutSku(value CognitiveDeploymentSku)
 ```
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.putScale.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.putSku.parameter.value"></a>
 
-- *Type:* <a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale">CognitiveDeploymentScale</a>
+- *Type:* <a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku">CognitiveDeploymentSku</a>
 
 ---
 
@@ -445,7 +445,7 @@ func ResetVersionUpgradeOption()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cognitivedeployment"
 
 cognitivedeployment.CognitiveDeployment_IsConstruct(x interface{}) *bool
 ```
@@ -477,7 +477,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cognitivedeployment"
 
 cognitivedeployment.CognitiveDeployment_IsTerraformElement(x interface{}) *bool
 ```
@@ -491,7 +491,7 @@ cognitivedeployment.CognitiveDeployment_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cognitivedeployment"
 
 cognitivedeployment.CognitiveDeployment_IsTerraformResource(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ cognitivedeployment.CognitiveDeployment_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cognitivedeployment"
 
 cognitivedeployment.CognitiveDeployment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -534,7 +534,7 @@ The construct id used in the generated config for the CognitiveDeployment to imp
 
 The id of the existing CognitiveDeployment that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -565,14 +565,14 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.model">Model</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentModelOutputReference">CognitiveDeploymentModelOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.scale">Scale</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference">CognitiveDeploymentScaleOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.sku">Sku</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference">CognitiveDeploymentSkuOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentTimeoutsOutputReference">CognitiveDeploymentTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.cognitiveAccountIdInput">CognitiveAccountIdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.modelInput">ModelInput</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentModel">CognitiveDeploymentModel</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.raiPolicyNameInput">RaiPolicyNameInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.scaleInput">ScaleInput</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale">CognitiveDeploymentScale</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.skuInput">SkuInput</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku">CognitiveDeploymentSku</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.versionUpgradeOptionInput">VersionUpgradeOptionInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.cognitiveAccountId">CognitiveAccountId</a></code> | <code>*string</code> | *No description.* |
@@ -735,13 +735,13 @@ func Model() CognitiveDeploymentModelOutputReference
 
 ---
 
-##### `Scale`<sup>Required</sup> <a name="Scale" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.scale"></a>
+##### `Sku`<sup>Required</sup> <a name="Sku" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.sku"></a>
 
 ```go
-func Scale() CognitiveDeploymentScaleOutputReference
+func Sku() CognitiveDeploymentSkuOutputReference
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference">CognitiveDeploymentScaleOutputReference</a>
+- *Type:* <a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference">CognitiveDeploymentSkuOutputReference</a>
 
 ---
 
@@ -805,13 +805,13 @@ func RaiPolicyNameInput() *string
 
 ---
 
-##### `ScaleInput`<sup>Optional</sup> <a name="ScaleInput" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.scaleInput"></a>
+##### `SkuInput`<sup>Optional</sup> <a name="SkuInput" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeployment.property.skuInput"></a>
 
 ```go
-func ScaleInput() CognitiveDeploymentScale
+func SkuInput() CognitiveDeploymentSku
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale">CognitiveDeploymentScale</a>
+- *Type:* <a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku">CognitiveDeploymentSku</a>
 
 ---
 
@@ -910,7 +910,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cognitivedeployment"
 
 &cognitivedeployment.CognitiveDeploymentConfig {
 	Connection: interface{},
@@ -921,12 +921,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployme
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	CognitiveAccountId: *string,
-	Model: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cognitiveDeployment.CognitiveDeploymentModel,
+	Model: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.cognitiveDeployment.CognitiveDeploymentModel,
 	Name: *string,
-	Scale: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cognitiveDeployment.CognitiveDeploymentScale,
+	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.cognitiveDeployment.CognitiveDeploymentSku,
 	Id: *string,
 	RaiPolicyName: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.cognitiveDeployment.CognitiveDeploymentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.cognitiveDeployment.CognitiveDeploymentTimeouts,
 	VersionUpgradeOption: *string,
 }
 ```
@@ -942,14 +942,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployme
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.cognitiveAccountId">CognitiveAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#cognitive_account_id CognitiveDeployment#cognitive_account_id}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.cognitiveAccountId">CognitiveAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#cognitive_account_id CognitiveDeployment#cognitive_account_id}. |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.model">Model</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentModel">CognitiveDeploymentModel</a></code> | model block. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#name CognitiveDeployment#name}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.scale">Scale</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale">CognitiveDeploymentScale</a></code> | scale block. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#id CognitiveDeployment#id}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.raiPolicyName">RaiPolicyName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#rai_policy_name CognitiveDeployment#rai_policy_name}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#name CognitiveDeployment#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.sku">Sku</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku">CognitiveDeploymentSku</a></code> | sku block. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#id CognitiveDeployment#id}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.raiPolicyName">RaiPolicyName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#rai_policy_name CognitiveDeployment#rai_policy_name}. |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentTimeouts">CognitiveDeploymentTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.versionUpgradeOption">VersionUpgradeOption</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#version_upgrade_option CognitiveDeployment#version_upgrade_option}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.versionUpgradeOption">VersionUpgradeOption</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#version_upgrade_option CognitiveDeployment#version_upgrade_option}. |
 
 ---
 
@@ -1031,7 +1031,7 @@ CognitiveAccountId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#cognitive_account_id CognitiveDeployment#cognitive_account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#cognitive_account_id CognitiveDeployment#cognitive_account_id}.
 
 ---
 
@@ -1045,7 +1045,7 @@ Model CognitiveDeploymentModel
 
 model block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#model CognitiveDeployment#model}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#model CognitiveDeployment#model}
 
 ---
 
@@ -1057,21 +1057,21 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#name CognitiveDeployment#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#name CognitiveDeployment#name}.
 
 ---
 
-##### `Scale`<sup>Required</sup> <a name="Scale" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.scale"></a>
+##### `Sku`<sup>Required</sup> <a name="Sku" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentConfig.property.sku"></a>
 
 ```go
-Scale CognitiveDeploymentScale
+Sku CognitiveDeploymentSku
 ```
 
-- *Type:* <a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale">CognitiveDeploymentScale</a>
+- *Type:* <a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku">CognitiveDeploymentSku</a>
 
-scale block.
+sku block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#scale CognitiveDeployment#scale}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#sku CognitiveDeployment#sku}
 
 ---
 
@@ -1083,7 +1083,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#id CognitiveDeployment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#id CognitiveDeployment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1098,7 +1098,7 @@ RaiPolicyName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#rai_policy_name CognitiveDeployment#rai_policy_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#rai_policy_name CognitiveDeployment#rai_policy_name}.
 
 ---
 
@@ -1112,7 +1112,7 @@ Timeouts CognitiveDeploymentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#timeouts CognitiveDeployment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#timeouts CognitiveDeployment#timeouts}
 
 ---
 
@@ -1124,7 +1124,7 @@ VersionUpgradeOption *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#version_upgrade_option CognitiveDeployment#version_upgrade_option}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#version_upgrade_option CognitiveDeployment#version_upgrade_option}.
 
 ---
 
@@ -1133,7 +1133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentModel.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cognitivedeployment"
 
 &cognitivedeployment.CognitiveDeploymentModel {
 	Format: *string,
@@ -1146,9 +1146,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployme
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentModel.property.format">Format</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#format CognitiveDeployment#format}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentModel.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#name CognitiveDeployment#name}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentModel.property.version">Version</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#version CognitiveDeployment#version}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentModel.property.format">Format</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#format CognitiveDeployment#format}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentModel.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#name CognitiveDeployment#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentModel.property.version">Version</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#version CognitiveDeployment#version}. |
 
 ---
 
@@ -1160,7 +1160,7 @@ Format *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#format CognitiveDeployment#format}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#format CognitiveDeployment#format}.
 
 ---
 
@@ -1172,7 +1172,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#name CognitiveDeployment#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#name CognitiveDeployment#name}.
 
 ---
 
@@ -1184,19 +1184,19 @@ Version *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#version CognitiveDeployment#version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#version CognitiveDeployment#version}.
 
 ---
 
-### CognitiveDeploymentScale <a name="CognitiveDeploymentScale" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale"></a>
+### CognitiveDeploymentSku <a name="CognitiveDeploymentSku" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cognitivedeployment"
 
-&cognitivedeployment.CognitiveDeploymentScale {
-	Type: *string,
+&cognitivedeployment.CognitiveDeploymentSku {
+	Name: *string,
 	Capacity: *f64,
 	Family: *string,
 	Size: *string,
@@ -1208,27 +1208,27 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployme
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#type CognitiveDeployment#type}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale.property.capacity">Capacity</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#capacity CognitiveDeployment#capacity}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale.property.family">Family</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#family CognitiveDeployment#family}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale.property.size">Size</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#size CognitiveDeployment#size}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale.property.tier">Tier</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#tier CognitiveDeployment#tier}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#name CognitiveDeployment#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku.property.capacity">Capacity</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#capacity CognitiveDeployment#capacity}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku.property.family">Family</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#family CognitiveDeployment#family}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku.property.size">Size</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#size CognitiveDeployment#size}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku.property.tier">Tier</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#tier CognitiveDeployment#tier}. |
 
 ---
 
-##### `Type`<sup>Required</sup> <a name="Type" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale.property.type"></a>
+##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku.property.name"></a>
 
 ```go
-Type *string
+Name *string
 ```
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#type CognitiveDeployment#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#name CognitiveDeployment#name}.
 
 ---
 
-##### `Capacity`<sup>Optional</sup> <a name="Capacity" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale.property.capacity"></a>
+##### `Capacity`<sup>Optional</sup> <a name="Capacity" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku.property.capacity"></a>
 
 ```go
 Capacity *f64
@@ -1236,11 +1236,11 @@ Capacity *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#capacity CognitiveDeployment#capacity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#capacity CognitiveDeployment#capacity}.
 
 ---
 
-##### `Family`<sup>Optional</sup> <a name="Family" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale.property.family"></a>
+##### `Family`<sup>Optional</sup> <a name="Family" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku.property.family"></a>
 
 ```go
 Family *string
@@ -1248,11 +1248,11 @@ Family *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#family CognitiveDeployment#family}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#family CognitiveDeployment#family}.
 
 ---
 
-##### `Size`<sup>Optional</sup> <a name="Size" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale.property.size"></a>
+##### `Size`<sup>Optional</sup> <a name="Size" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku.property.size"></a>
 
 ```go
 Size *string
@@ -1260,11 +1260,11 @@ Size *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#size CognitiveDeployment#size}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#size CognitiveDeployment#size}.
 
 ---
 
-##### `Tier`<sup>Optional</sup> <a name="Tier" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale.property.tier"></a>
+##### `Tier`<sup>Optional</sup> <a name="Tier" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku.property.tier"></a>
 
 ```go
 Tier *string
@@ -1272,7 +1272,7 @@ Tier *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#tier CognitiveDeployment#tier}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#tier CognitiveDeployment#tier}.
 
 ---
 
@@ -1281,7 +1281,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cognitivedeployment"
 
 &cognitivedeployment.CognitiveDeploymentTimeouts {
 	Create: *string,
@@ -1295,10 +1295,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployme
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#create CognitiveDeployment#create}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#delete CognitiveDeployment#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#read CognitiveDeployment#read}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#update CognitiveDeployment#update}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#create CognitiveDeployment#create}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#delete CognitiveDeployment#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#read CognitiveDeployment#read}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#update CognitiveDeployment#update}. |
 
 ---
 
@@ -1310,7 +1310,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#create CognitiveDeployment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#create CognitiveDeployment#create}.
 
 ---
 
@@ -1322,7 +1322,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#delete CognitiveDeployment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#delete CognitiveDeployment#delete}.
 
 ---
 
@@ -1334,7 +1334,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#read CognitiveDeployment#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#read CognitiveDeployment#read}.
 
 ---
 
@@ -1346,7 +1346,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#update CognitiveDeployment#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#update CognitiveDeployment#update}.
 
 ---
 
@@ -1357,7 +1357,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentModelOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cognitivedeployment"
 
 cognitivedeployment.NewCognitiveDeploymentModelOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CognitiveDeploymentModelOutputReference
 ```
@@ -1674,24 +1674,24 @@ func InternalValue() CognitiveDeploymentModel
 ---
 
 
-### CognitiveDeploymentScaleOutputReference <a name="CognitiveDeploymentScaleOutputReference" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference"></a>
+### CognitiveDeploymentSkuOutputReference <a name="CognitiveDeploymentSkuOutputReference" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cognitivedeployment"
 
-cognitivedeployment.NewCognitiveDeploymentScaleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CognitiveDeploymentScaleOutputReference
+cognitivedeployment.NewCognitiveDeploymentSkuOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CognitiveDeploymentSkuOutputReference
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
 
@@ -1699,7 +1699,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
@@ -1711,153 +1711,153 @@ The attribute on the parent resource this class is referencing.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.resetCapacity">ResetCapacity</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.resetFamily">ResetFamily</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.resetSize">ResetSize</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.resetTier">ResetTier</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.resetCapacity">ResetCapacity</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.resetFamily">ResetFamily</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.resetSize">ResetSize</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.resetTier">ResetTier</a></code> | *No description.* |
 
 ---
 
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.computeFqn"></a>
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.computeFqn"></a>
 
 ```go
 func ComputeFqn() *string
 ```
 
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getAnyMapAttribute"></a>
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getAnyMapAttribute"></a>
 
 ```go
 func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getBooleanAttribute"></a>
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getBooleanAttribute"></a>
 
 ```go
 func GetBooleanAttribute(terraformAttribute *string) IResolvable
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getBooleanMapAttribute"></a>
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getBooleanMapAttribute"></a>
 
 ```go
 func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getListAttribute"></a>
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getListAttribute"></a>
 
 ```go
 func GetListAttribute(terraformAttribute *string) *[]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getNumberAttribute"></a>
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getNumberAttribute"></a>
 
 ```go
 func GetNumberAttribute(terraformAttribute *string) *f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getNumberListAttribute"></a>
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getNumberListAttribute"></a>
 
 ```go
 func GetNumberListAttribute(terraformAttribute *string) *[]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getNumberMapAttribute"></a>
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getNumberMapAttribute"></a>
 
 ```go
 func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getStringAttribute"></a>
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getStringAttribute"></a>
 
 ```go
 func GetStringAttribute(terraformAttribute *string) *string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getStringMapAttribute"></a>
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getStringMapAttribute"></a>
 
 ```go
 func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
 
 ---
 
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.interpolationForAttribute"></a>
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.interpolationForAttribute"></a>
 
 ```go
 func InterpolationForAttribute(property *string) IResolvable
 ```
 
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* *string
 
 ---
 
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.resolve"></a>
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.resolve"></a>
 
 ```go
 func Resolve(_context IResolveContext) interface{}
@@ -1865,13 +1865,13 @@ func Resolve(_context IResolveContext) interface{}
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.resolve.parameter._context"></a>
 
 - *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
 
 ---
 
-##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.toString"></a>
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.toString"></a>
 
 ```go
 func ToString() *string
@@ -1881,25 +1881,25 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
-##### `ResetCapacity` <a name="ResetCapacity" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.resetCapacity"></a>
+##### `ResetCapacity` <a name="ResetCapacity" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.resetCapacity"></a>
 
 ```go
 func ResetCapacity()
 ```
 
-##### `ResetFamily` <a name="ResetFamily" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.resetFamily"></a>
+##### `ResetFamily` <a name="ResetFamily" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.resetFamily"></a>
 
 ```go
 func ResetFamily()
 ```
 
-##### `ResetSize` <a name="ResetSize" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.resetSize"></a>
+##### `ResetSize` <a name="ResetSize" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.resetSize"></a>
 
 ```go
 func ResetSize()
 ```
 
-##### `ResetTier` <a name="ResetTier" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.resetTier"></a>
+##### `ResetTier` <a name="ResetTier" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.resetTier"></a>
 
 ```go
 func ResetTier()
@@ -1910,23 +1910,23 @@ func ResetTier()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.capacityInput">CapacityInput</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.familyInput">FamilyInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.sizeInput">SizeInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.tierInput">TierInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.typeInput">TypeInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.capacity">Capacity</a></code> | <code>*f64</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.family">Family</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.size">Size</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.tier">Tier</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.type">Type</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale">CognitiveDeploymentScale</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.capacityInput">CapacityInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.familyInput">FamilyInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.sizeInput">SizeInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.tierInput">TierInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.capacity">Capacity</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.family">Family</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.name">Name</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.size">Size</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.tier">Tier</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku">CognitiveDeploymentSku</a></code> | *No description.* |
 
 ---
 
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.creationStack"></a>
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.creationStack"></a>
 
 ```go
 func CreationStack() *[]*string
@@ -1940,7 +1940,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.fqn"></a>
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.fqn"></a>
 
 ```go
 func Fqn() *string
@@ -1950,7 +1950,7 @@ func Fqn() *string
 
 ---
 
-##### `CapacityInput`<sup>Optional</sup> <a name="CapacityInput" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.capacityInput"></a>
+##### `CapacityInput`<sup>Optional</sup> <a name="CapacityInput" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.capacityInput"></a>
 
 ```go
 func CapacityInput() *f64
@@ -1960,7 +1960,7 @@ func CapacityInput() *f64
 
 ---
 
-##### `FamilyInput`<sup>Optional</sup> <a name="FamilyInput" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.familyInput"></a>
+##### `FamilyInput`<sup>Optional</sup> <a name="FamilyInput" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.familyInput"></a>
 
 ```go
 func FamilyInput() *string
@@ -1970,7 +1970,17 @@ func FamilyInput() *string
 
 ---
 
-##### `SizeInput`<sup>Optional</sup> <a name="SizeInput" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.sizeInput"></a>
+##### `NameInput`<sup>Optional</sup> <a name="NameInput" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.nameInput"></a>
+
+```go
+func NameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SizeInput`<sup>Optional</sup> <a name="SizeInput" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.sizeInput"></a>
 
 ```go
 func SizeInput() *string
@@ -1980,7 +1990,7 @@ func SizeInput() *string
 
 ---
 
-##### `TierInput`<sup>Optional</sup> <a name="TierInput" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.tierInput"></a>
+##### `TierInput`<sup>Optional</sup> <a name="TierInput" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.tierInput"></a>
 
 ```go
 func TierInput() *string
@@ -1990,17 +2000,7 @@ func TierInput() *string
 
 ---
 
-##### `TypeInput`<sup>Optional</sup> <a name="TypeInput" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.typeInput"></a>
-
-```go
-func TypeInput() *string
-```
-
-- *Type:* *string
-
----
-
-##### `Capacity`<sup>Required</sup> <a name="Capacity" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.capacity"></a>
+##### `Capacity`<sup>Required</sup> <a name="Capacity" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.capacity"></a>
 
 ```go
 func Capacity() *f64
@@ -2010,7 +2010,7 @@ func Capacity() *f64
 
 ---
 
-##### `Family`<sup>Required</sup> <a name="Family" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.family"></a>
+##### `Family`<sup>Required</sup> <a name="Family" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.family"></a>
 
 ```go
 func Family() *string
@@ -2020,7 +2020,17 @@ func Family() *string
 
 ---
 
-##### `Size`<sup>Required</sup> <a name="Size" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.size"></a>
+##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.name"></a>
+
+```go
+func Name() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Size`<sup>Required</sup> <a name="Size" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.size"></a>
 
 ```go
 func Size() *string
@@ -2030,7 +2040,7 @@ func Size() *string
 
 ---
 
-##### `Tier`<sup>Required</sup> <a name="Tier" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.tier"></a>
+##### `Tier`<sup>Required</sup> <a name="Tier" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.tier"></a>
 
 ```go
 func Tier() *string
@@ -2040,23 +2050,13 @@ func Tier() *string
 
 ---
 
-##### `Type`<sup>Required</sup> <a name="Type" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.type"></a>
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSkuOutputReference.property.internalValue"></a>
 
 ```go
-func Type() *string
+func InternalValue() CognitiveDeploymentSku
 ```
 
-- *Type:* *string
-
----
-
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScaleOutputReference.property.internalValue"></a>
-
-```go
-func InternalValue() CognitiveDeploymentScale
-```
-
-- *Type:* <a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentScale">CognitiveDeploymentScale</a>
+- *Type:* <a href="#@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentSku">CognitiveDeploymentSku</a>
 
 ---
 
@@ -2066,7 +2066,7 @@ func InternalValue() CognitiveDeploymentScale
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveDeployment.CognitiveDeploymentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/cognitivedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cognitivedeployment"
 
 cognitivedeployment.NewCognitiveDeploymentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CognitiveDeploymentTimeoutsOutputReference
 ```

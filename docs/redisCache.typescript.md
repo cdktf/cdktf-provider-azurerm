@@ -4,7 +4,7 @@
 
 ### RedisCache <a name="RedisCache" id="@cdktf/provider-azurerm.redisCache.RedisCache"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache azurerm_redis_cache}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache azurerm_redis_cache}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.redisCache.RedisCache.Initializer"></a>
 
@@ -77,7 +77,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.putPatchSchedule">putPatchSchedule</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.putRedisConfiguration">putRedisConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.putTimeouts">putTimeouts</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.resetEnableNonSslPort">resetEnableNonSslPort</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.resetAccessKeysAuthenticationEnabled">resetAccessKeysAuthenticationEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.resetIdentity">resetIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.resetMinimumTlsVersion">resetMinimumTlsVersion</a></code> | *No description.* |
@@ -434,10 +434,10 @@ public putTimeouts(value: RedisCacheTimeouts): void
 
 ---
 
-##### `resetEnableNonSslPort` <a name="resetEnableNonSslPort" id="@cdktf/provider-azurerm.redisCache.RedisCache.resetEnableNonSslPort"></a>
+##### `resetAccessKeysAuthenticationEnabled` <a name="resetAccessKeysAuthenticationEnabled" id="@cdktf/provider-azurerm.redisCache.RedisCache.resetAccessKeysAuthenticationEnabled"></a>
 
 ```typescript
-public resetEnableNonSslPort(): void
+public resetAccessKeysAuthenticationEnabled(): void
 ```
 
 ##### `resetId` <a name="resetId" id="@cdktf/provider-azurerm.redisCache.RedisCache.resetId"></a>
@@ -645,7 +645,7 @@ The construct id used in the generated config for the RedisCache to import.
 
 The id of the existing RedisCache that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -686,8 +686,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.secondaryConnectionString">secondaryConnectionString</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.sslPort">sslPort</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheTimeoutsOutputReference">RedisCacheTimeoutsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.accessKeysAuthenticationEnabledInput">accessKeysAuthenticationEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.capacityInput">capacityInput</a></code> | <code>number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.enableNonSslPortInput">enableNonSslPortInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.familyInput">familyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.identityInput">identityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheIdentity">RedisCacheIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
@@ -710,8 +710,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.tenantSettingsInput">tenantSettingsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.redisCache.RedisCacheTimeouts">RedisCacheTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.zonesInput">zonesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.accessKeysAuthenticationEnabled">accessKeysAuthenticationEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.capacity">capacity</a></code> | <code>number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.enableNonSslPort">enableNonSslPort</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.family">family</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCache.property.location">location</a></code> | <code>string</code> | *No description.* |
@@ -985,6 +985,16 @@ public readonly timeouts: RedisCacheTimeoutsOutputReference;
 
 ---
 
+##### `accessKeysAuthenticationEnabledInput`<sup>Optional</sup> <a name="accessKeysAuthenticationEnabledInput" id="@cdktf/provider-azurerm.redisCache.RedisCache.property.accessKeysAuthenticationEnabledInput"></a>
+
+```typescript
+public readonly accessKeysAuthenticationEnabledInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
 ##### `capacityInput`<sup>Optional</sup> <a name="capacityInput" id="@cdktf/provider-azurerm.redisCache.RedisCache.property.capacityInput"></a>
 
 ```typescript
@@ -992,16 +1002,6 @@ public readonly capacityInput: number;
 ```
 
 - *Type:* number
-
----
-
-##### `enableNonSslPortInput`<sup>Optional</sup> <a name="enableNonSslPortInput" id="@cdktf/provider-azurerm.redisCache.RedisCache.property.enableNonSslPortInput"></a>
-
-```typescript
-public readonly enableNonSslPortInput: boolean | IResolvable;
-```
-
-- *Type:* boolean | cdktf.IResolvable
 
 ---
 
@@ -1225,6 +1225,16 @@ public readonly zonesInput: string[];
 
 ---
 
+##### `accessKeysAuthenticationEnabled`<sup>Required</sup> <a name="accessKeysAuthenticationEnabled" id="@cdktf/provider-azurerm.redisCache.RedisCache.property.accessKeysAuthenticationEnabled"></a>
+
+```typescript
+public readonly accessKeysAuthenticationEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
 ##### `capacity`<sup>Required</sup> <a name="capacity" id="@cdktf/provider-azurerm.redisCache.RedisCache.property.capacity"></a>
 
 ```typescript
@@ -1232,16 +1242,6 @@ public readonly capacity: number;
 ```
 
 - *Type:* number
-
----
-
-##### `enableNonSslPort`<sup>Required</sup> <a name="enableNonSslPort" id="@cdktf/provider-azurerm.redisCache.RedisCache.property.enableNonSslPort"></a>
-
-```typescript
-public readonly enableNonSslPort: boolean | IResolvable;
-```
-
-- *Type:* boolean | cdktf.IResolvable
 
 ---
 
@@ -1466,30 +1466,30 @@ const redisCacheConfig: redisCache.RedisCacheConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.capacity">capacity</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#capacity RedisCache#capacity}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.family">family</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#family RedisCache#family}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#location RedisCache#location}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#name RedisCache#name}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#resource_group_name RedisCache#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.skuName">skuName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#sku_name RedisCache#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.enableNonSslPort">enableNonSslPort</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#enable_non_ssl_port RedisCache#enable_non_ssl_port}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#id RedisCache#id}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.capacity">capacity</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#capacity RedisCache#capacity}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.family">family</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#family RedisCache#family}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#location RedisCache#location}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#name RedisCache#name}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#resource_group_name RedisCache#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.skuName">skuName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#sku_name RedisCache#sku_name}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.accessKeysAuthenticationEnabled">accessKeysAuthenticationEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#access_keys_authentication_enabled RedisCache#access_keys_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#id RedisCache#id}. |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheIdentity">RedisCacheIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.minimumTlsVersion">minimumTlsVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#minimum_tls_version RedisCache#minimum_tls_version}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.nonSslPortEnabled">nonSslPortEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#non_ssl_port_enabled RedisCache#non_ssl_port_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.minimumTlsVersion">minimumTlsVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#minimum_tls_version RedisCache#minimum_tls_version}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.nonSslPortEnabled">nonSslPortEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#non_ssl_port_enabled RedisCache#non_ssl_port_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.patchSchedule">patchSchedule</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.redisCache.RedisCachePatchSchedule">RedisCachePatchSchedule</a>[]</code> | patch_schedule block. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.privateStaticIpAddress">privateStaticIpAddress</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#private_static_ip_address RedisCache#private_static_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#public_network_access_enabled RedisCache#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.privateStaticIpAddress">privateStaticIpAddress</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#private_static_ip_address RedisCache#private_static_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#public_network_access_enabled RedisCache#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.redisConfiguration">redisConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration">RedisCacheRedisConfiguration</a></code> | redis_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.redisVersion">redisVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#redis_version RedisCache#redis_version}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.replicasPerMaster">replicasPerMaster</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#replicas_per_master RedisCache#replicas_per_master}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.replicasPerPrimary">replicasPerPrimary</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#replicas_per_primary RedisCache#replicas_per_primary}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.shardCount">shardCount</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#shard_count RedisCache#shard_count}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.subnetId">subnetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#subnet_id RedisCache#subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#tags RedisCache#tags}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.tenantSettings">tenantSettings</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#tenant_settings RedisCache#tenant_settings}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.redisVersion">redisVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#redis_version RedisCache#redis_version}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.replicasPerMaster">replicasPerMaster</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#replicas_per_master RedisCache#replicas_per_master}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.replicasPerPrimary">replicasPerPrimary</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#replicas_per_primary RedisCache#replicas_per_primary}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.shardCount">shardCount</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#shard_count RedisCache#shard_count}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.subnetId">subnetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#subnet_id RedisCache#subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#tags RedisCache#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.tenantSettings">tenantSettings</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#tenant_settings RedisCache#tenant_settings}. |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheTimeouts">RedisCacheTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.zones">zones</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#zones RedisCache#zones}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.zones">zones</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#zones RedisCache#zones}. |
 
 ---
 
@@ -1571,7 +1571,7 @@ public readonly capacity: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#capacity RedisCache#capacity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#capacity RedisCache#capacity}.
 
 ---
 
@@ -1583,7 +1583,7 @@ public readonly family: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#family RedisCache#family}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#family RedisCache#family}.
 
 ---
 
@@ -1595,7 +1595,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#location RedisCache#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#location RedisCache#location}.
 
 ---
 
@@ -1607,7 +1607,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#name RedisCache#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#name RedisCache#name}.
 
 ---
 
@@ -1619,7 +1619,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#resource_group_name RedisCache#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#resource_group_name RedisCache#resource_group_name}.
 
 ---
 
@@ -1631,19 +1631,19 @@ public readonly skuName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#sku_name RedisCache#sku_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#sku_name RedisCache#sku_name}.
 
 ---
 
-##### `enableNonSslPort`<sup>Optional</sup> <a name="enableNonSslPort" id="@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.enableNonSslPort"></a>
+##### `accessKeysAuthenticationEnabled`<sup>Optional</sup> <a name="accessKeysAuthenticationEnabled" id="@cdktf/provider-azurerm.redisCache.RedisCacheConfig.property.accessKeysAuthenticationEnabled"></a>
 
 ```typescript
-public readonly enableNonSslPort: boolean | IResolvable;
+public readonly accessKeysAuthenticationEnabled: boolean | IResolvable;
 ```
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#enable_non_ssl_port RedisCache#enable_non_ssl_port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#access_keys_authentication_enabled RedisCache#access_keys_authentication_enabled}.
 
 ---
 
@@ -1655,7 +1655,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#id RedisCache#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#id RedisCache#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1672,7 +1672,7 @@ public readonly identity: RedisCacheIdentity;
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#identity RedisCache#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#identity RedisCache#identity}
 
 ---
 
@@ -1684,7 +1684,7 @@ public readonly minimumTlsVersion: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#minimum_tls_version RedisCache#minimum_tls_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#minimum_tls_version RedisCache#minimum_tls_version}.
 
 ---
 
@@ -1696,7 +1696,7 @@ public readonly nonSslPortEnabled: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#non_ssl_port_enabled RedisCache#non_ssl_port_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#non_ssl_port_enabled RedisCache#non_ssl_port_enabled}.
 
 ---
 
@@ -1710,7 +1710,7 @@ public readonly patchSchedule: IResolvable | RedisCachePatchSchedule[];
 
 patch_schedule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#patch_schedule RedisCache#patch_schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#patch_schedule RedisCache#patch_schedule}
 
 ---
 
@@ -1722,7 +1722,7 @@ public readonly privateStaticIpAddress: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#private_static_ip_address RedisCache#private_static_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#private_static_ip_address RedisCache#private_static_ip_address}.
 
 ---
 
@@ -1734,7 +1734,7 @@ public readonly publicNetworkAccessEnabled: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#public_network_access_enabled RedisCache#public_network_access_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#public_network_access_enabled RedisCache#public_network_access_enabled}.
 
 ---
 
@@ -1748,7 +1748,7 @@ public readonly redisConfiguration: RedisCacheRedisConfiguration;
 
 redis_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#redis_configuration RedisCache#redis_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#redis_configuration RedisCache#redis_configuration}
 
 ---
 
@@ -1760,7 +1760,7 @@ public readonly redisVersion: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#redis_version RedisCache#redis_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#redis_version RedisCache#redis_version}.
 
 ---
 
@@ -1772,7 +1772,7 @@ public readonly replicasPerMaster: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#replicas_per_master RedisCache#replicas_per_master}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#replicas_per_master RedisCache#replicas_per_master}.
 
 ---
 
@@ -1784,7 +1784,7 @@ public readonly replicasPerPrimary: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#replicas_per_primary RedisCache#replicas_per_primary}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#replicas_per_primary RedisCache#replicas_per_primary}.
 
 ---
 
@@ -1796,7 +1796,7 @@ public readonly shardCount: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#shard_count RedisCache#shard_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#shard_count RedisCache#shard_count}.
 
 ---
 
@@ -1808,7 +1808,7 @@ public readonly subnetId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#subnet_id RedisCache#subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#subnet_id RedisCache#subnet_id}.
 
 ---
 
@@ -1820,7 +1820,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#tags RedisCache#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#tags RedisCache#tags}.
 
 ---
 
@@ -1832,7 +1832,7 @@ public readonly tenantSettings: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#tenant_settings RedisCache#tenant_settings}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#tenant_settings RedisCache#tenant_settings}.
 
 ---
 
@@ -1846,7 +1846,7 @@ public readonly timeouts: RedisCacheTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#timeouts RedisCache#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#timeouts RedisCache#timeouts}
 
 ---
 
@@ -1858,7 +1858,7 @@ public readonly zones: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#zones RedisCache#zones}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#zones RedisCache#zones}.
 
 ---
 
@@ -1876,8 +1876,8 @@ const redisCacheIdentity: redisCache.RedisCacheIdentity = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheIdentity.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#type RedisCache#type}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheIdentity.property.identityIds">identityIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#identity_ids RedisCache#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheIdentity.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#type RedisCache#type}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheIdentity.property.identityIds">identityIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#identity_ids RedisCache#identity_ids}. |
 
 ---
 
@@ -1889,7 +1889,7 @@ public readonly type: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#type RedisCache#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#type RedisCache#type}.
 
 ---
 
@@ -1901,7 +1901,7 @@ public readonly identityIds: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#identity_ids RedisCache#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#identity_ids RedisCache#identity_ids}.
 
 ---
 
@@ -1919,9 +1919,9 @@ const redisCachePatchSchedule: redisCache.RedisCachePatchSchedule = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCachePatchSchedule.property.dayOfWeek">dayOfWeek</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#day_of_week RedisCache#day_of_week}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCachePatchSchedule.property.maintenanceWindow">maintenanceWindow</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maintenance_window RedisCache#maintenance_window}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCachePatchSchedule.property.startHourUtc">startHourUtc</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#start_hour_utc RedisCache#start_hour_utc}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCachePatchSchedule.property.dayOfWeek">dayOfWeek</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#day_of_week RedisCache#day_of_week}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCachePatchSchedule.property.maintenanceWindow">maintenanceWindow</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maintenance_window RedisCache#maintenance_window}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCachePatchSchedule.property.startHourUtc">startHourUtc</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#start_hour_utc RedisCache#start_hour_utc}. |
 
 ---
 
@@ -1933,7 +1933,7 @@ public readonly dayOfWeek: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#day_of_week RedisCache#day_of_week}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#day_of_week RedisCache#day_of_week}.
 
 ---
 
@@ -1945,7 +1945,7 @@ public readonly maintenanceWindow: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maintenance_window RedisCache#maintenance_window}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maintenance_window RedisCache#maintenance_window}.
 
 ---
 
@@ -1957,7 +1957,7 @@ public readonly startHourUtc: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#start_hour_utc RedisCache#start_hour_utc}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#start_hour_utc RedisCache#start_hour_utc}.
 
 ---
 
@@ -1975,23 +1975,22 @@ const redisCacheRedisConfiguration: redisCache.RedisCacheRedisConfiguration = { 
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.activeDirectoryAuthenticationEnabled">activeDirectoryAuthenticationEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#active_directory_authentication_enabled RedisCache#active_directory_authentication_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.aofBackupEnabled">aofBackupEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#aof_backup_enabled RedisCache#aof_backup_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.aofStorageConnectionString0">aofStorageConnectionString0</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#aof_storage_connection_string_0 RedisCache#aof_storage_connection_string_0}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.aofStorageConnectionString1">aofStorageConnectionString1</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#aof_storage_connection_string_1 RedisCache#aof_storage_connection_string_1}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.authenticationEnabled">authenticationEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#authentication_enabled RedisCache#authentication_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.dataPersistenceAuthenticationMethod">dataPersistenceAuthenticationMethod</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#data_persistence_authentication_method RedisCache#data_persistence_authentication_method}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.enableAuthentication">enableAuthentication</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#enable_authentication RedisCache#enable_authentication}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.maxfragmentationmemoryReserved">maxfragmentationmemoryReserved</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maxfragmentationmemory_reserved RedisCache#maxfragmentationmemory_reserved}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.maxmemoryDelta">maxmemoryDelta</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maxmemory_delta RedisCache#maxmemory_delta}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.maxmemoryPolicy">maxmemoryPolicy</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maxmemory_policy RedisCache#maxmemory_policy}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.maxmemoryReserved">maxmemoryReserved</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maxmemory_reserved RedisCache#maxmemory_reserved}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.notifyKeyspaceEvents">notifyKeyspaceEvents</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#notify_keyspace_events RedisCache#notify_keyspace_events}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.rdbBackupEnabled">rdbBackupEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#rdb_backup_enabled RedisCache#rdb_backup_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.rdbBackupFrequency">rdbBackupFrequency</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#rdb_backup_frequency RedisCache#rdb_backup_frequency}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.rdbBackupMaxSnapshotCount">rdbBackupMaxSnapshotCount</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#rdb_backup_max_snapshot_count RedisCache#rdb_backup_max_snapshot_count}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.rdbStorageConnectionString">rdbStorageConnectionString</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#rdb_storage_connection_string RedisCache#rdb_storage_connection_string}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.storageAccountSubscriptionId">storageAccountSubscriptionId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#storage_account_subscription_id RedisCache#storage_account_subscription_id}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.activeDirectoryAuthenticationEnabled">activeDirectoryAuthenticationEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#active_directory_authentication_enabled RedisCache#active_directory_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.aofBackupEnabled">aofBackupEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#aof_backup_enabled RedisCache#aof_backup_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.aofStorageConnectionString0">aofStorageConnectionString0</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#aof_storage_connection_string_0 RedisCache#aof_storage_connection_string_0}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.aofStorageConnectionString1">aofStorageConnectionString1</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#aof_storage_connection_string_1 RedisCache#aof_storage_connection_string_1}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.authenticationEnabled">authenticationEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#authentication_enabled RedisCache#authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.dataPersistenceAuthenticationMethod">dataPersistenceAuthenticationMethod</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#data_persistence_authentication_method RedisCache#data_persistence_authentication_method}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.maxfragmentationmemoryReserved">maxfragmentationmemoryReserved</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maxfragmentationmemory_reserved RedisCache#maxfragmentationmemory_reserved}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.maxmemoryDelta">maxmemoryDelta</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maxmemory_delta RedisCache#maxmemory_delta}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.maxmemoryPolicy">maxmemoryPolicy</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maxmemory_policy RedisCache#maxmemory_policy}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.maxmemoryReserved">maxmemoryReserved</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maxmemory_reserved RedisCache#maxmemory_reserved}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.notifyKeyspaceEvents">notifyKeyspaceEvents</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#notify_keyspace_events RedisCache#notify_keyspace_events}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.rdbBackupEnabled">rdbBackupEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#rdb_backup_enabled RedisCache#rdb_backup_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.rdbBackupFrequency">rdbBackupFrequency</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#rdb_backup_frequency RedisCache#rdb_backup_frequency}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.rdbBackupMaxSnapshotCount">rdbBackupMaxSnapshotCount</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#rdb_backup_max_snapshot_count RedisCache#rdb_backup_max_snapshot_count}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.rdbStorageConnectionString">rdbStorageConnectionString</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#rdb_storage_connection_string RedisCache#rdb_storage_connection_string}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.storageAccountSubscriptionId">storageAccountSubscriptionId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#storage_account_subscription_id RedisCache#storage_account_subscription_id}. |
 
 ---
 
@@ -2003,7 +2002,7 @@ public readonly activeDirectoryAuthenticationEnabled: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#active_directory_authentication_enabled RedisCache#active_directory_authentication_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#active_directory_authentication_enabled RedisCache#active_directory_authentication_enabled}.
 
 ---
 
@@ -2015,7 +2014,7 @@ public readonly aofBackupEnabled: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#aof_backup_enabled RedisCache#aof_backup_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#aof_backup_enabled RedisCache#aof_backup_enabled}.
 
 ---
 
@@ -2027,7 +2026,7 @@ public readonly aofStorageConnectionString0: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#aof_storage_connection_string_0 RedisCache#aof_storage_connection_string_0}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#aof_storage_connection_string_0 RedisCache#aof_storage_connection_string_0}.
 
 ---
 
@@ -2039,7 +2038,7 @@ public readonly aofStorageConnectionString1: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#aof_storage_connection_string_1 RedisCache#aof_storage_connection_string_1}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#aof_storage_connection_string_1 RedisCache#aof_storage_connection_string_1}.
 
 ---
 
@@ -2051,7 +2050,7 @@ public readonly authenticationEnabled: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#authentication_enabled RedisCache#authentication_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#authentication_enabled RedisCache#authentication_enabled}.
 
 ---
 
@@ -2063,19 +2062,7 @@ public readonly dataPersistenceAuthenticationMethod: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#data_persistence_authentication_method RedisCache#data_persistence_authentication_method}.
-
----
-
-##### `enableAuthentication`<sup>Optional</sup> <a name="enableAuthentication" id="@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfiguration.property.enableAuthentication"></a>
-
-```typescript
-public readonly enableAuthentication: boolean | IResolvable;
-```
-
-- *Type:* boolean | cdktf.IResolvable
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#enable_authentication RedisCache#enable_authentication}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#data_persistence_authentication_method RedisCache#data_persistence_authentication_method}.
 
 ---
 
@@ -2087,7 +2074,7 @@ public readonly maxfragmentationmemoryReserved: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maxfragmentationmemory_reserved RedisCache#maxfragmentationmemory_reserved}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maxfragmentationmemory_reserved RedisCache#maxfragmentationmemory_reserved}.
 
 ---
 
@@ -2099,7 +2086,7 @@ public readonly maxmemoryDelta: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maxmemory_delta RedisCache#maxmemory_delta}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maxmemory_delta RedisCache#maxmemory_delta}.
 
 ---
 
@@ -2111,7 +2098,7 @@ public readonly maxmemoryPolicy: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maxmemory_policy RedisCache#maxmemory_policy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maxmemory_policy RedisCache#maxmemory_policy}.
 
 ---
 
@@ -2123,7 +2110,7 @@ public readonly maxmemoryReserved: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#maxmemory_reserved RedisCache#maxmemory_reserved}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#maxmemory_reserved RedisCache#maxmemory_reserved}.
 
 ---
 
@@ -2135,7 +2122,7 @@ public readonly notifyKeyspaceEvents: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#notify_keyspace_events RedisCache#notify_keyspace_events}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#notify_keyspace_events RedisCache#notify_keyspace_events}.
 
 ---
 
@@ -2147,7 +2134,7 @@ public readonly rdbBackupEnabled: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#rdb_backup_enabled RedisCache#rdb_backup_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#rdb_backup_enabled RedisCache#rdb_backup_enabled}.
 
 ---
 
@@ -2159,7 +2146,7 @@ public readonly rdbBackupFrequency: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#rdb_backup_frequency RedisCache#rdb_backup_frequency}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#rdb_backup_frequency RedisCache#rdb_backup_frequency}.
 
 ---
 
@@ -2171,7 +2158,7 @@ public readonly rdbBackupMaxSnapshotCount: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#rdb_backup_max_snapshot_count RedisCache#rdb_backup_max_snapshot_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#rdb_backup_max_snapshot_count RedisCache#rdb_backup_max_snapshot_count}.
 
 ---
 
@@ -2183,7 +2170,7 @@ public readonly rdbStorageConnectionString: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#rdb_storage_connection_string RedisCache#rdb_storage_connection_string}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#rdb_storage_connection_string RedisCache#rdb_storage_connection_string}.
 
 ---
 
@@ -2195,7 +2182,7 @@ public readonly storageAccountSubscriptionId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#storage_account_subscription_id RedisCache#storage_account_subscription_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#storage_account_subscription_id RedisCache#storage_account_subscription_id}.
 
 ---
 
@@ -2213,10 +2200,10 @@ const redisCacheTimeouts: redisCache.RedisCacheTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#create RedisCache#create}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#delete RedisCache#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#read RedisCache#read}. |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#update RedisCache#update}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#create RedisCache#create}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#delete RedisCache#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#read RedisCache#read}. |
+| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#update RedisCache#update}. |
 
 ---
 
@@ -2228,7 +2215,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#create RedisCache#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#create RedisCache#create}.
 
 ---
 
@@ -2240,7 +2227,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#delete RedisCache#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#delete RedisCache#delete}.
 
 ---
 
@@ -2252,7 +2239,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#read RedisCache#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#read RedisCache#read}.
 
 ---
 
@@ -2264,7 +2251,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/redis_cache#update RedisCache#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/redis_cache#update RedisCache#update}.
 
 ---
 
@@ -3155,7 +3142,6 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.resetAofStorageConnectionString1">resetAofStorageConnectionString1</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.resetAuthenticationEnabled">resetAuthenticationEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.resetDataPersistenceAuthenticationMethod">resetDataPersistenceAuthenticationMethod</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.resetEnableAuthentication">resetEnableAuthentication</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.resetMaxfragmentationmemoryReserved">resetMaxfragmentationmemoryReserved</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.resetMaxmemoryDelta">resetMaxmemoryDelta</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.resetMaxmemoryPolicy">resetMaxmemoryPolicy</a></code> | *No description.* |
@@ -3355,12 +3341,6 @@ public resetAuthenticationEnabled(): void
 public resetDataPersistenceAuthenticationMethod(): void
 ```
 
-##### `resetEnableAuthentication` <a name="resetEnableAuthentication" id="@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.resetEnableAuthentication"></a>
-
-```typescript
-public resetEnableAuthentication(): void
-```
-
 ##### `resetMaxfragmentationmemoryReserved` <a name="resetMaxfragmentationmemoryReserved" id="@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.resetMaxfragmentationmemoryReserved"></a>
 
 ```typescript
@@ -3435,7 +3415,6 @@ public resetStorageAccountSubscriptionId(): void
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.aofStorageConnectionString1Input">aofStorageConnectionString1Input</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.authenticationEnabledInput">authenticationEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.dataPersistenceAuthenticationMethodInput">dataPersistenceAuthenticationMethodInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.enableAuthenticationInput">enableAuthenticationInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.maxfragmentationmemoryReservedInput">maxfragmentationmemoryReservedInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.maxmemoryDeltaInput">maxmemoryDeltaInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.maxmemoryPolicyInput">maxmemoryPolicyInput</a></code> | <code>string</code> | *No description.* |
@@ -3452,7 +3431,6 @@ public resetStorageAccountSubscriptionId(): void
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.aofStorageConnectionString1">aofStorageConnectionString1</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.authenticationEnabled">authenticationEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.dataPersistenceAuthenticationMethod">dataPersistenceAuthenticationMethod</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.enableAuthentication">enableAuthentication</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.maxfragmentationmemoryReserved">maxfragmentationmemoryReserved</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.maxmemoryDelta">maxmemoryDelta</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.maxmemoryPolicy">maxmemoryPolicy</a></code> | <code>string</code> | *No description.* |
@@ -3558,16 +3536,6 @@ public readonly dataPersistenceAuthenticationMethodInput: string;
 ```
 
 - *Type:* string
-
----
-
-##### `enableAuthenticationInput`<sup>Optional</sup> <a name="enableAuthenticationInput" id="@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.enableAuthenticationInput"></a>
-
-```typescript
-public readonly enableAuthenticationInput: boolean | IResolvable;
-```
-
-- *Type:* boolean | cdktf.IResolvable
 
 ---
 
@@ -3728,16 +3696,6 @@ public readonly dataPersistenceAuthenticationMethod: string;
 ```
 
 - *Type:* string
-
----
-
-##### `enableAuthentication`<sup>Required</sup> <a name="enableAuthentication" id="@cdktf/provider-azurerm.redisCache.RedisCacheRedisConfigurationOutputReference.property.enableAuthentication"></a>
-
-```typescript
-public readonly enableAuthentication: boolean | IResolvable;
-```
-
-- *Type:* boolean | cdktf.IResolvable
 
 ---
 

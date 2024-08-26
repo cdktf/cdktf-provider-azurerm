@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,58 +13,58 @@ import * as cdktf from 'cdktf';
 
 export interface DevCenterCatalogConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#dev_center_id DevCenterCatalog#dev_center_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#dev_center_id DevCenterCatalog#dev_center_id}
   */
   readonly devCenterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#id DevCenterCatalog#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#id DevCenterCatalog#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#name DevCenterCatalog#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#name DevCenterCatalog#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#resource_group_name DevCenterCatalog#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#resource_group_name DevCenterCatalog#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * catalog_adogit block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#catalog_adogit DevCenterCatalog#catalog_adogit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#catalog_adogit DevCenterCatalog#catalog_adogit}
   */
   readonly catalogAdogit?: DevCenterCatalogCatalogAdogit;
   /**
   * catalog_github block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#catalog_github DevCenterCatalog#catalog_github}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#catalog_github DevCenterCatalog#catalog_github}
   */
   readonly catalogGithub?: DevCenterCatalogCatalogGithub;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#timeouts DevCenterCatalog#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#timeouts DevCenterCatalog#timeouts}
   */
   readonly timeouts?: DevCenterCatalogTimeouts;
 }
 export interface DevCenterCatalogCatalogAdogit {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#branch DevCenterCatalog#branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#branch DevCenterCatalog#branch}
   */
   readonly branch: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#key_vault_key_url DevCenterCatalog#key_vault_key_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#key_vault_key_url DevCenterCatalog#key_vault_key_url}
   */
   readonly keyVaultKeyUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#path DevCenterCatalog#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#path DevCenterCatalog#path}
   */
   readonly path: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#uri DevCenterCatalog#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#uri DevCenterCatalog#uri}
   */
   readonly uri: string;
 }
@@ -223,19 +223,19 @@ export class DevCenterCatalogCatalogAdogitOutputReference extends cdktf.ComplexO
 }
 export interface DevCenterCatalogCatalogGithub {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#branch DevCenterCatalog#branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#branch DevCenterCatalog#branch}
   */
   readonly branch: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#key_vault_key_url DevCenterCatalog#key_vault_key_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#key_vault_key_url DevCenterCatalog#key_vault_key_url}
   */
   readonly keyVaultKeyUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#path DevCenterCatalog#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#path DevCenterCatalog#path}
   */
   readonly path: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#uri DevCenterCatalog#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#uri DevCenterCatalog#uri}
   */
   readonly uri: string;
 }
@@ -394,19 +394,19 @@ export class DevCenterCatalogCatalogGithubOutputReference extends cdktf.ComplexO
 }
 export interface DevCenterCatalogTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#create DevCenterCatalog#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#create DevCenterCatalog#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#delete DevCenterCatalog#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#delete DevCenterCatalog#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#read DevCenterCatalog#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#read DevCenterCatalog#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#update DevCenterCatalog#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#update DevCenterCatalog#update}
   */
   readonly update?: string;
 }
@@ -587,7 +587,7 @@ export class DevCenterCatalogTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog azurerm_dev_center_catalog}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog azurerm_dev_center_catalog}
 */
 export class DevCenterCatalog extends cdktf.TerraformResource {
 
@@ -603,7 +603,7 @@ export class DevCenterCatalog extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DevCenterCatalog resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DevCenterCatalog to import
-  * @param importFromId The id of the existing DevCenterCatalog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DevCenterCatalog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DevCenterCatalog to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -615,7 +615,7 @@ export class DevCenterCatalog extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_center_catalog azurerm_dev_center_catalog} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_center_catalog azurerm_dev_center_catalog} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -626,8 +626,8 @@ export class DevCenterCatalog extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dev_center_catalog',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

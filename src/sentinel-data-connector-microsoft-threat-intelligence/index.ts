@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_data_connector_microsoft_threat_intelligence
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,46 @@ import * as cdktf from 'cdktf';
 
 export interface SentinelDataConnectorMicrosoftThreatIntelligenceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#bing_safety_phishing_url_lookback_date SentinelDataConnectorMicrosoftThreatIntelligence#bing_safety_phishing_url_lookback_date}
-  */
-  readonly bingSafetyPhishingUrlLookbackDate?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#id SentinelDataConnectorMicrosoftThreatIntelligence#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#id SentinelDataConnectorMicrosoftThreatIntelligence#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#log_analytics_workspace_id SentinelDataConnectorMicrosoftThreatIntelligence#log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#log_analytics_workspace_id SentinelDataConnectorMicrosoftThreatIntelligence#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#microsoft_emerging_threat_feed_lookback_date SentinelDataConnectorMicrosoftThreatIntelligence#microsoft_emerging_threat_feed_lookback_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#microsoft_emerging_threat_feed_lookback_date SentinelDataConnectorMicrosoftThreatIntelligence#microsoft_emerging_threat_feed_lookback_date}
   */
-  readonly microsoftEmergingThreatFeedLookbackDate?: string;
+  readonly microsoftEmergingThreatFeedLookbackDate: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#name SentinelDataConnectorMicrosoftThreatIntelligence#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#name SentinelDataConnectorMicrosoftThreatIntelligence#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#tenant_id SentinelDataConnectorMicrosoftThreatIntelligence#tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#tenant_id SentinelDataConnectorMicrosoftThreatIntelligence#tenant_id}
   */
   readonly tenantId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#timeouts SentinelDataConnectorMicrosoftThreatIntelligence#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#timeouts SentinelDataConnectorMicrosoftThreatIntelligence#timeouts}
   */
   readonly timeouts?: SentinelDataConnectorMicrosoftThreatIntelligenceTimeouts;
 }
 export interface SentinelDataConnectorMicrosoftThreatIntelligenceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#create SentinelDataConnectorMicrosoftThreatIntelligence#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#create SentinelDataConnectorMicrosoftThreatIntelligence#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#delete SentinelDataConnectorMicrosoftThreatIntelligence#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#delete SentinelDataConnectorMicrosoftThreatIntelligence#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#read SentinelDataConnectorMicrosoftThreatIntelligence#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#read SentinelDataConnectorMicrosoftThreatIntelligence#read}
   */
   readonly read?: string;
 }
@@ -208,7 +204,7 @@ export class SentinelDataConnectorMicrosoftThreatIntelligenceTimeoutsOutputRefer
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence azurerm_sentinel_data_connector_microsoft_threat_intelligence}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_data_connector_microsoft_threat_intelligence azurerm_sentinel_data_connector_microsoft_threat_intelligence}
 */
 export class SentinelDataConnectorMicrosoftThreatIntelligence extends cdktf.TerraformResource {
 
@@ -224,7 +220,7 @@ export class SentinelDataConnectorMicrosoftThreatIntelligence extends cdktf.Terr
   * Generates CDKTF code for importing a SentinelDataConnectorMicrosoftThreatIntelligence resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SentinelDataConnectorMicrosoftThreatIntelligence to import
-  * @param importFromId The id of the existing SentinelDataConnectorMicrosoftThreatIntelligence that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SentinelDataConnectorMicrosoftThreatIntelligence that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SentinelDataConnectorMicrosoftThreatIntelligence to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -236,7 +232,7 @@ export class SentinelDataConnectorMicrosoftThreatIntelligence extends cdktf.Terr
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence azurerm_sentinel_data_connector_microsoft_threat_intelligence} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_data_connector_microsoft_threat_intelligence azurerm_sentinel_data_connector_microsoft_threat_intelligence} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -247,8 +243,8 @@ export class SentinelDataConnectorMicrosoftThreatIntelligence extends cdktf.Terr
       terraformResourceType: 'azurerm_sentinel_data_connector_microsoft_threat_intelligence',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -258,7 +254,6 @@ export class SentinelDataConnectorMicrosoftThreatIntelligence extends cdktf.Terr
       connection: config.connection,
       forEach: config.forEach
     });
-    this._bingSafetyPhishingUrlLookbackDate = config.bingSafetyPhishingUrlLookbackDate;
     this._id = config.id;
     this._logAnalyticsWorkspaceId = config.logAnalyticsWorkspaceId;
     this._microsoftEmergingThreatFeedLookbackDate = config.microsoftEmergingThreatFeedLookbackDate;
@@ -270,22 +265,6 @@ export class SentinelDataConnectorMicrosoftThreatIntelligence extends cdktf.Terr
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // bing_safety_phishing_url_lookback_date - computed: false, optional: true, required: false
-  private _bingSafetyPhishingUrlLookbackDate?: string; 
-  public get bingSafetyPhishingUrlLookbackDate() {
-    return this.getStringAttribute('bing_safety_phishing_url_lookback_date');
-  }
-  public set bingSafetyPhishingUrlLookbackDate(value: string) {
-    this._bingSafetyPhishingUrlLookbackDate = value;
-  }
-  public resetBingSafetyPhishingUrlLookbackDate() {
-    this._bingSafetyPhishingUrlLookbackDate = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get bingSafetyPhishingUrlLookbackDateInput() {
-    return this._bingSafetyPhishingUrlLookbackDate;
-  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -316,16 +295,13 @@ export class SentinelDataConnectorMicrosoftThreatIntelligence extends cdktf.Terr
     return this._logAnalyticsWorkspaceId;
   }
 
-  // microsoft_emerging_threat_feed_lookback_date - computed: false, optional: true, required: false
+  // microsoft_emerging_threat_feed_lookback_date - computed: false, optional: false, required: true
   private _microsoftEmergingThreatFeedLookbackDate?: string; 
   public get microsoftEmergingThreatFeedLookbackDate() {
     return this.getStringAttribute('microsoft_emerging_threat_feed_lookback_date');
   }
   public set microsoftEmergingThreatFeedLookbackDate(value: string) {
     this._microsoftEmergingThreatFeedLookbackDate = value;
-  }
-  public resetMicrosoftEmergingThreatFeedLookbackDate() {
-    this._microsoftEmergingThreatFeedLookbackDate = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get microsoftEmergingThreatFeedLookbackDateInput() {
@@ -383,7 +359,6 @@ export class SentinelDataConnectorMicrosoftThreatIntelligence extends cdktf.Terr
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bing_safety_phishing_url_lookback_date: cdktf.stringToTerraform(this._bingSafetyPhishingUrlLookbackDate),
       id: cdktf.stringToTerraform(this._id),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       microsoft_emerging_threat_feed_lookback_date: cdktf.stringToTerraform(this._microsoftEmergingThreatFeedLookbackDate),
@@ -395,12 +370,6 @@ export class SentinelDataConnectorMicrosoftThreatIntelligence extends cdktf.Terr
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
-      bing_safety_phishing_url_lookback_date: {
-        value: cdktf.stringToHclTerraform(this._bingSafetyPhishingUrlLookbackDate),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "string",
-      },
       id: {
         value: cdktf.stringToHclTerraform(this._id),
         isBlock: false,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface DevTestLabConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab#id DevTestLab#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab#id DevTestLab#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab#location DevTestLab#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab#location DevTestLab#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab#name DevTestLab#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab#name DevTestLab#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab#resource_group_name DevTestLab#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab#resource_group_name DevTestLab#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab#storage_type DevTestLab#storage_type}
-  */
-  readonly storageType?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab#tags DevTestLab#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab#tags DevTestLab#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab#timeouts DevTestLab#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab#timeouts DevTestLab#timeouts}
   */
   readonly timeouts?: DevTestLabTimeouts;
 }
 export interface DevTestLabTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab#create DevTestLab#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab#create DevTestLab#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab#delete DevTestLab#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab#delete DevTestLab#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab#read DevTestLab#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab#read DevTestLab#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab#update DevTestLab#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab#update DevTestLab#update}
   */
   readonly update?: string;
 }
@@ -241,7 +237,7 @@ export class DevTestLabTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab azurerm_dev_test_lab}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab azurerm_dev_test_lab}
 */
 export class DevTestLab extends cdktf.TerraformResource {
 
@@ -257,7 +253,7 @@ export class DevTestLab extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DevTestLab resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DevTestLab to import
-  * @param importFromId The id of the existing DevTestLab that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DevTestLab that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DevTestLab to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -269,7 +265,7 @@ export class DevTestLab extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dev_test_lab azurerm_dev_test_lab} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dev_test_lab azurerm_dev_test_lab} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -280,8 +276,8 @@ export class DevTestLab extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dev_test_lab',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -295,7 +291,6 @@ export class DevTestLab extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._storageType = config.storageType;
     this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -384,22 +379,6 @@ export class DevTestLab extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
-  // storage_type - computed: false, optional: true, required: false
-  private _storageType?: string; 
-  public get storageType() {
-    return this.getStringAttribute('storage_type');
-  }
-  public set storageType(value: string) {
-    this._storageType = value;
-  }
-  public resetStorageType() {
-    this._storageType = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageTypeInput() {
-    return this._storageType;
-  }
-
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string }; 
   public get tags() {
@@ -447,7 +426,6 @@ export class DevTestLab extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      storage_type: cdktf.stringToTerraform(this._storageType),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: devTestLabTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -475,12 +453,6 @@ export class DevTestLab extends cdktf.TerraformResource {
       },
       resource_group_name: {
         value: cdktf.stringToHclTerraform(this._resourceGroupName),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "string",
-      },
-      storage_type: {
-        value: cdktf.stringToHclTerraform(this._storageType),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

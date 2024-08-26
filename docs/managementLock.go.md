@@ -4,12 +4,12 @@
 
 ### ManagementLock <a name="ManagementLock" id="@cdktf/provider-azurerm.managementLock.ManagementLock"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock azurerm_management_lock}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock azurerm_management_lock}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managementLock.ManagementLock.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/managementlock"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managementlock"
 
 managementlock.NewManagementLock(scope Construct, id *string, config ManagementLockConfig) ManagementLock
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.managementLock.ManagementLock.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/managementlock"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managementlock"
 
 managementlock.ManagementLock_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.managementLock.ManagementLock.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/managementlock"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managementlock"
 
 managementlock.ManagementLock_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ managementlock.ManagementLock_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.managementLock.ManagementLock.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/managementlock"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managementlock"
 
 managementlock.ManagementLock_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ managementlock.ManagementLock_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.managementLock.ManagementLock.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/managementlock"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managementlock"
 
 managementlock.ManagementLock_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the ManagementLock to import.
 
 The id of the existing ManagementLock that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -833,7 +833,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managementLock.ManagementLockConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/managementlock"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managementlock"
 
 &managementlock.ManagementLockConfig {
 	Connection: interface{},
@@ -848,7 +848,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/managementlock"
 	Scope: *string,
 	Id: *string,
 	Notes: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.managementLock.ManagementLockTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.managementLock.ManagementLockTimeouts,
 }
 ```
 
@@ -863,11 +863,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/managementlock"
 | <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.lockLevel">LockLevel</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#lock_level ManagementLock#lock_level}. |
-| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#name ManagementLock#name}. |
-| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.scope">Scope</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#scope ManagementLock#scope}. |
-| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#id ManagementLock#id}. |
-| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.notes">Notes</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#notes ManagementLock#notes}. |
+| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.lockLevel">LockLevel</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#lock_level ManagementLock#lock_level}. |
+| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#name ManagementLock#name}. |
+| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.scope">Scope</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#scope ManagementLock#scope}. |
+| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#id ManagementLock#id}. |
+| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.notes">Notes</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#notes ManagementLock#notes}. |
 | <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockTimeouts">ManagementLockTimeouts</a></code> | timeouts block. |
 
 ---
@@ -950,7 +950,7 @@ LockLevel *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#lock_level ManagementLock#lock_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#lock_level ManagementLock#lock_level}.
 
 ---
 
@@ -962,7 +962,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#name ManagementLock#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#name ManagementLock#name}.
 
 ---
 
@@ -974,7 +974,7 @@ Scope *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#scope ManagementLock#scope}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#scope ManagementLock#scope}.
 
 ---
 
@@ -986,7 +986,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#id ManagementLock#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#id ManagementLock#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1001,7 +1001,7 @@ Notes *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#notes ManagementLock#notes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#notes ManagementLock#notes}.
 
 ---
 
@@ -1015,7 +1015,7 @@ Timeouts ManagementLockTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#timeouts ManagementLock#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#timeouts ManagementLock#timeouts}
 
 ---
 
@@ -1024,7 +1024,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managementLock.ManagementLockTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/managementlock"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managementlock"
 
 &managementlock.ManagementLockTimeouts {
 	Create: *string,
@@ -1037,9 +1037,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/managementlock"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#create ManagementLock#create}. |
-| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#delete ManagementLock#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#read ManagementLock#read}. |
+| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#create ManagementLock#create}. |
+| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#delete ManagementLock#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.managementLock.ManagementLockTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#read ManagementLock#read}. |
 
 ---
 
@@ -1051,7 +1051,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#create ManagementLock#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#create ManagementLock#create}.
 
 ---
 
@@ -1063,7 +1063,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#delete ManagementLock#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#delete ManagementLock#delete}.
 
 ---
 
@@ -1075,7 +1075,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/management_lock#read ManagementLock#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/management_lock#read ManagementLock#read}.
 
 ---
 
@@ -1086,7 +1086,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managementLock.ManagementLockTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/managementlock"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managementlock"
 
 managementlock.NewManagementLockTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ManagementLockTimeoutsOutputReference
 ```

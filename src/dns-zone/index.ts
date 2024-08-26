@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,72 +13,68 @@ import * as cdktf from 'cdktf';
 
 export interface DnsZoneConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#id DnsZone#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#id DnsZone#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#name DnsZone#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#name DnsZone#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#resource_group_name DnsZone#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#resource_group_name DnsZone#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#tags DnsZone#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#tags DnsZone#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * soa_record block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#soa_record DnsZone#soa_record}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#soa_record DnsZone#soa_record}
   */
   readonly soaRecord?: DnsZoneSoaRecord;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#timeouts DnsZone#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#timeouts DnsZone#timeouts}
   */
   readonly timeouts?: DnsZoneTimeouts;
 }
 export interface DnsZoneSoaRecord {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#email DnsZone#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#email DnsZone#email}
   */
   readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#expire_time DnsZone#expire_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#expire_time DnsZone#expire_time}
   */
   readonly expireTime?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#host_name DnsZone#host_name}
-  */
-  readonly hostName?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#minimum_ttl DnsZone#minimum_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#minimum_ttl DnsZone#minimum_ttl}
   */
   readonly minimumTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#refresh_time DnsZone#refresh_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#refresh_time DnsZone#refresh_time}
   */
   readonly refreshTime?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#retry_time DnsZone#retry_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#retry_time DnsZone#retry_time}
   */
   readonly retryTime?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#serial_number DnsZone#serial_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#serial_number DnsZone#serial_number}
   */
   readonly serialNumber?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#tags DnsZone#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#tags DnsZone#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#ttl DnsZone#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#ttl DnsZone#ttl}
   */
   readonly ttl?: number;
 }
@@ -91,7 +87,6 @@ export function dnsZoneSoaRecordToTerraform(struct?: DnsZoneSoaRecordOutputRefer
   return {
     email: cdktf.stringToTerraform(struct!.email),
     expire_time: cdktf.numberToTerraform(struct!.expireTime),
-    host_name: cdktf.stringToTerraform(struct!.hostName),
     minimum_ttl: cdktf.numberToTerraform(struct!.minimumTtl),
     refresh_time: cdktf.numberToTerraform(struct!.refreshTime),
     retry_time: cdktf.numberToTerraform(struct!.retryTime),
@@ -119,12 +114,6 @@ export function dnsZoneSoaRecordToHclTerraform(struct?: DnsZoneSoaRecordOutputRe
       isBlock: false,
       type: "simple",
       storageClassType: "number",
-    },
-    host_name: {
-      value: cdktf.stringToHclTerraform(struct!.hostName),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
     },
     minimum_ttl: {
       value: cdktf.numberToHclTerraform(struct!.minimumTtl),
@@ -190,10 +179,6 @@ export class DnsZoneSoaRecordOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.expireTime = this._expireTime;
     }
-    if (this._hostName !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.hostName = this._hostName;
-    }
     if (this._minimumTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.minimumTtl = this._minimumTtl;
@@ -226,7 +211,6 @@ export class DnsZoneSoaRecordOutputReference extends cdktf.ComplexObject {
       this.isEmptyObject = false;
       this._email = undefined;
       this._expireTime = undefined;
-      this._hostName = undefined;
       this._minimumTtl = undefined;
       this._refreshTime = undefined;
       this._retryTime = undefined;
@@ -238,7 +222,6 @@ export class DnsZoneSoaRecordOutputReference extends cdktf.ComplexObject {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._email = value.email;
       this._expireTime = value.expireTime;
-      this._hostName = value.hostName;
       this._minimumTtl = value.minimumTtl;
       this._refreshTime = value.refreshTime;
       this._retryTime = value.retryTime;
@@ -282,20 +265,9 @@ export class DnsZoneSoaRecordOutputReference extends cdktf.ComplexObject {
     return this.getStringAttribute('fqdn');
   }
 
-  // host_name - computed: true, optional: true, required: false
-  private _hostName?: string; 
+  // host_name - computed: true, optional: false, required: false
   public get hostName() {
     return this.getStringAttribute('host_name');
-  }
-  public set hostName(value: string) {
-    this._hostName = value;
-  }
-  public resetHostName() {
-    this._hostName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get hostNameInput() {
-    return this._hostName;
   }
 
   // minimum_ttl - computed: false, optional: true, required: false
@@ -396,19 +368,19 @@ export class DnsZoneSoaRecordOutputReference extends cdktf.ComplexObject {
 }
 export interface DnsZoneTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#create DnsZone#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#create DnsZone#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#delete DnsZone#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#delete DnsZone#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#read DnsZone#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#read DnsZone#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#update DnsZone#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#update DnsZone#update}
   */
   readonly update?: string;
 }
@@ -589,7 +561,7 @@ export class DnsZoneTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone azurerm_dns_zone}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone azurerm_dns_zone}
 */
 export class DnsZone extends cdktf.TerraformResource {
 
@@ -605,7 +577,7 @@ export class DnsZone extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DnsZone resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DnsZone to import
-  * @param importFromId The id of the existing DnsZone that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DnsZone that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DnsZone to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -617,7 +589,7 @@ export class DnsZone extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/dns_zone azurerm_dns_zone} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/dns_zone azurerm_dns_zone} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -628,8 +600,8 @@ export class DnsZone extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dns_zone',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

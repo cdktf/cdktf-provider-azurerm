@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,58 +13,58 @@ import * as cdktf from 'cdktf';
 
 export interface CognitiveDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#cognitive_account_id CognitiveDeployment#cognitive_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#cognitive_account_id CognitiveDeployment#cognitive_account_id}
   */
   readonly cognitiveAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#id CognitiveDeployment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#id CognitiveDeployment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#name CognitiveDeployment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#name CognitiveDeployment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#rai_policy_name CognitiveDeployment#rai_policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#rai_policy_name CognitiveDeployment#rai_policy_name}
   */
   readonly raiPolicyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#version_upgrade_option CognitiveDeployment#version_upgrade_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#version_upgrade_option CognitiveDeployment#version_upgrade_option}
   */
   readonly versionUpgradeOption?: string;
   /**
   * model block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#model CognitiveDeployment#model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#model CognitiveDeployment#model}
   */
   readonly model: CognitiveDeploymentModel;
   /**
-  * scale block
+  * sku block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#scale CognitiveDeployment#scale}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#sku CognitiveDeployment#sku}
   */
-  readonly scale: CognitiveDeploymentScale;
+  readonly sku: CognitiveDeploymentSku;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#timeouts CognitiveDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#timeouts CognitiveDeployment#timeouts}
   */
   readonly timeouts?: CognitiveDeploymentTimeouts;
 }
 export interface CognitiveDeploymentModel {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#format CognitiveDeployment#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#format CognitiveDeployment#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#name CognitiveDeployment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#name CognitiveDeployment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#version CognitiveDeployment#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#version CognitiveDeployment#version}
   */
   readonly version?: string;
 }
@@ -198,30 +198,30 @@ export class CognitiveDeploymentModelOutputReference extends cdktf.ComplexObject
     return this._version;
   }
 }
-export interface CognitiveDeploymentScale {
+export interface CognitiveDeploymentSku {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#capacity CognitiveDeployment#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#capacity CognitiveDeployment#capacity}
   */
   readonly capacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#family CognitiveDeployment#family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#family CognitiveDeployment#family}
   */
   readonly family?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#size CognitiveDeployment#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#name CognitiveDeployment#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#size CognitiveDeployment#size}
   */
   readonly size?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#tier CognitiveDeployment#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#tier CognitiveDeployment#tier}
   */
   readonly tier?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#type CognitiveDeployment#type}
-  */
-  readonly type: string;
 }
 
-export function cognitiveDeploymentScaleToTerraform(struct?: CognitiveDeploymentScaleOutputReference | CognitiveDeploymentScale): any {
+export function cognitiveDeploymentSkuToTerraform(struct?: CognitiveDeploymentSkuOutputReference | CognitiveDeploymentSku): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -229,14 +229,14 @@ export function cognitiveDeploymentScaleToTerraform(struct?: CognitiveDeployment
   return {
     capacity: cdktf.numberToTerraform(struct!.capacity),
     family: cdktf.stringToTerraform(struct!.family),
+    name: cdktf.stringToTerraform(struct!.name),
     size: cdktf.stringToTerraform(struct!.size),
     tier: cdktf.stringToTerraform(struct!.tier),
-    type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
 
-export function cognitiveDeploymentScaleToHclTerraform(struct?: CognitiveDeploymentScaleOutputReference | CognitiveDeploymentScale): any {
+export function cognitiveDeploymentSkuToHclTerraform(struct?: CognitiveDeploymentSkuOutputReference | CognitiveDeploymentSku): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -254,6 +254,12 @@ export function cognitiveDeploymentScaleToHclTerraform(struct?: CognitiveDeploym
       type: "simple",
       storageClassType: "string",
     },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
     size: {
       value: cdktf.stringToHclTerraform(struct!.size),
       isBlock: false,
@@ -266,19 +272,13 @@ export function cognitiveDeploymentScaleToHclTerraform(struct?: CognitiveDeploym
       type: "simple",
       storageClassType: "string",
     },
-    type: {
-      value: cdktf.stringToHclTerraform(struct!.type),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
   };
 
   // remove undefined attributes
   return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
-export class CognitiveDeploymentScaleOutputReference extends cdktf.ComplexObject {
+export class CognitiveDeploymentSkuOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
   /**
@@ -289,7 +289,7 @@ export class CognitiveDeploymentScaleOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CognitiveDeploymentScale | undefined {
+  public get internalValue(): CognitiveDeploymentSku | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._capacity !== undefined) {
@@ -300,6 +300,10 @@ export class CognitiveDeploymentScaleOutputReference extends cdktf.ComplexObject
       hasAnyValues = true;
       internalValueResult.family = this._family;
     }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
     if (this._size !== undefined) {
       hasAnyValues = true;
       internalValueResult.size = this._size;
@@ -308,29 +312,25 @@ export class CognitiveDeploymentScaleOutputReference extends cdktf.ComplexObject
       hasAnyValues = true;
       internalValueResult.tier = this._tier;
     }
-    if (this._type !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.type = this._type;
-    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CognitiveDeploymentScale | undefined) {
+  public set internalValue(value: CognitiveDeploymentSku | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
       this._capacity = undefined;
       this._family = undefined;
+      this._name = undefined;
       this._size = undefined;
       this._tier = undefined;
-      this._type = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._capacity = value.capacity;
       this._family = value.family;
+      this._name = value.name;
       this._size = value.size;
       this._tier = value.tier;
-      this._type = value.type;
     }
   }
 
@@ -366,6 +366,19 @@ export class CognitiveDeploymentScaleOutputReference extends cdktf.ComplexObject
     return this._family;
   }
 
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
   // size - computed: false, optional: true, required: false
   private _size?: string; 
   public get size() {
@@ -397,35 +410,22 @@ export class CognitiveDeploymentScaleOutputReference extends cdktf.ComplexObject
   public get tierInput() {
     return this._tier;
   }
-
-  // type - computed: false, optional: false, required: true
-  private _type?: string; 
-  public get type() {
-    return this.getStringAttribute('type');
-  }
-  public set type(value: string) {
-    this._type = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get typeInput() {
-    return this._type;
-  }
 }
 export interface CognitiveDeploymentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#create CognitiveDeployment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#create CognitiveDeployment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#delete CognitiveDeployment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#delete CognitiveDeployment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#read CognitiveDeployment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#read CognitiveDeployment#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#update CognitiveDeployment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#update CognitiveDeployment#update}
   */
   readonly update?: string;
 }
@@ -606,7 +606,7 @@ export class CognitiveDeploymentTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment azurerm_cognitive_deployment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment azurerm_cognitive_deployment}
 */
 export class CognitiveDeployment extends cdktf.TerraformResource {
 
@@ -622,7 +622,7 @@ export class CognitiveDeployment extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CognitiveDeployment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CognitiveDeployment to import
-  * @param importFromId The id of the existing CognitiveDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CognitiveDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CognitiveDeployment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -634,7 +634,7 @@ export class CognitiveDeployment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/cognitive_deployment azurerm_cognitive_deployment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/cognitive_deployment azurerm_cognitive_deployment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -645,8 +645,8 @@ export class CognitiveDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cognitive_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -662,7 +662,7 @@ export class CognitiveDeployment extends cdktf.TerraformResource {
     this._raiPolicyName = config.raiPolicyName;
     this._versionUpgradeOption = config.versionUpgradeOption;
     this._model.internalValue = config.model;
-    this._scale.internalValue = config.scale;
+    this._sku.internalValue = config.sku;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -757,17 +757,17 @@ export class CognitiveDeployment extends cdktf.TerraformResource {
     return this._model.internalValue;
   }
 
-  // scale - computed: false, optional: false, required: true
-  private _scale = new CognitiveDeploymentScaleOutputReference(this, "scale");
-  public get scale() {
-    return this._scale;
+  // sku - computed: false, optional: false, required: true
+  private _sku = new CognitiveDeploymentSkuOutputReference(this, "sku");
+  public get sku() {
+    return this._sku;
   }
-  public putScale(value: CognitiveDeploymentScale) {
-    this._scale.internalValue = value;
+  public putSku(value: CognitiveDeploymentSku) {
+    this._sku.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
-  public get scaleInput() {
-    return this._scale.internalValue;
+  public get skuInput() {
+    return this._sku.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -798,7 +798,7 @@ export class CognitiveDeployment extends cdktf.TerraformResource {
       rai_policy_name: cdktf.stringToTerraform(this._raiPolicyName),
       version_upgrade_option: cdktf.stringToTerraform(this._versionUpgradeOption),
       model: cognitiveDeploymentModelToTerraform(this._model.internalValue),
-      scale: cognitiveDeploymentScaleToTerraform(this._scale.internalValue),
+      sku: cognitiveDeploymentSkuToTerraform(this._sku.internalValue),
       timeouts: cognitiveDeploymentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -841,11 +841,11 @@ export class CognitiveDeployment extends cdktf.TerraformResource {
         type: "list",
         storageClassType: "CognitiveDeploymentModelList",
       },
-      scale: {
-        value: cognitiveDeploymentScaleToHclTerraform(this._scale.internalValue),
+      sku: {
+        value: cognitiveDeploymentSkuToHclTerraform(this._sku.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "CognitiveDeploymentScaleList",
+        storageClassType: "CognitiveDeploymentSkuList",
       },
       timeouts: {
         value: cognitiveDeploymentTimeoutsToHclTerraform(this._timeouts.internalValue),

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,80 +13,90 @@ import * as cdktf from 'cdktf';
 
 export interface ImageConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#hyper_v_generation Image#hyper_v_generation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#hyper_v_generation Image#hyper_v_generation}
   */
   readonly hyperVGeneration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#id Image#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#id Image#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#location Image#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#location Image#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#name Image#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#name Image#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#resource_group_name Image#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#resource_group_name Image#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#source_virtual_machine_id Image#source_virtual_machine_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#source_virtual_machine_id Image#source_virtual_machine_id}
   */
   readonly sourceVirtualMachineId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#tags Image#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#tags Image#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#zone_resilient Image#zone_resilient}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#zone_resilient Image#zone_resilient}
   */
   readonly zoneResilient?: boolean | cdktf.IResolvable;
   /**
   * data_disk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#data_disk Image#data_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#data_disk Image#data_disk}
   */
   readonly dataDisk?: ImageDataDisk[] | cdktf.IResolvable;
   /**
   * os_disk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#os_disk Image#os_disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#os_disk Image#os_disk}
   */
   readonly osDisk?: ImageOsDisk;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#timeouts Image#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#timeouts Image#timeouts}
   */
   readonly timeouts?: ImageTimeouts;
 }
 export interface ImageDataDisk {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#blob_uri Image#blob_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#blob_uri Image#blob_uri}
   */
   readonly blobUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#caching Image#caching}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#caching Image#caching}
   */
   readonly caching?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#lun Image#lun}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#disk_encryption_set_id Image#disk_encryption_set_id}
+  */
+  readonly diskEncryptionSetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#lun Image#lun}
   */
   readonly lun?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#managed_disk_id Image#managed_disk_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#managed_disk_id Image#managed_disk_id}
   */
   readonly managedDiskId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#size_gb Image#size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#size_gb Image#size_gb}
   */
   readonly sizeGb?: number;
+  /**
+  * The type of storage disk
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#storage_type Image#storage_type}
+  */
+  readonly storageType: string;
 }
 
 export function imageDataDiskToTerraform(struct?: ImageDataDisk | cdktf.IResolvable): any {
@@ -97,9 +107,11 @@ export function imageDataDiskToTerraform(struct?: ImageDataDisk | cdktf.IResolva
   return {
     blob_uri: cdktf.stringToTerraform(struct!.blobUri),
     caching: cdktf.stringToTerraform(struct!.caching),
+    disk_encryption_set_id: cdktf.stringToTerraform(struct!.diskEncryptionSetId),
     lun: cdktf.numberToTerraform(struct!.lun),
     managed_disk_id: cdktf.stringToTerraform(struct!.managedDiskId),
     size_gb: cdktf.numberToTerraform(struct!.sizeGb),
+    storage_type: cdktf.stringToTerraform(struct!.storageType),
   }
 }
 
@@ -122,6 +134,12 @@ export function imageDataDiskToHclTerraform(struct?: ImageDataDisk | cdktf.IReso
       type: "simple",
       storageClassType: "string",
     },
+    disk_encryption_set_id: {
+      value: cdktf.stringToHclTerraform(struct!.diskEncryptionSetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
     lun: {
       value: cdktf.numberToHclTerraform(struct!.lun),
       isBlock: false,
@@ -139,6 +157,12 @@ export function imageDataDiskToHclTerraform(struct?: ImageDataDisk | cdktf.IReso
       isBlock: false,
       type: "simple",
       storageClassType: "number",
+    },
+    storage_type: {
+      value: cdktf.stringToHclTerraform(struct!.storageType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
     },
   };
 
@@ -174,6 +198,10 @@ export class ImageDataDiskOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.caching = this._caching;
     }
+    if (this._diskEncryptionSetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskEncryptionSetId = this._diskEncryptionSetId;
+    }
     if (this._lun !== undefined) {
       hasAnyValues = true;
       internalValueResult.lun = this._lun;
@@ -186,6 +214,10 @@ export class ImageDataDiskOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.sizeGb = this._sizeGb;
     }
+    if (this._storageType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageType = this._storageType;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -195,9 +227,11 @@ export class ImageDataDiskOutputReference extends cdktf.ComplexObject {
       this.resolvableValue = undefined;
       this._blobUri = undefined;
       this._caching = undefined;
+      this._diskEncryptionSetId = undefined;
       this._lun = undefined;
       this._managedDiskId = undefined;
       this._sizeGb = undefined;
+      this._storageType = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -208,9 +242,11 @@ export class ImageDataDiskOutputReference extends cdktf.ComplexObject {
       this.resolvableValue = undefined;
       this._blobUri = value.blobUri;
       this._caching = value.caching;
+      this._diskEncryptionSetId = value.diskEncryptionSetId;
       this._lun = value.lun;
       this._managedDiskId = value.managedDiskId;
       this._sizeGb = value.sizeGb;
+      this._storageType = value.storageType;
     }
   }
 
@@ -244,6 +280,22 @@ export class ImageDataDiskOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get cachingInput() {
     return this._caching;
+  }
+
+  // disk_encryption_set_id - computed: false, optional: true, required: false
+  private _diskEncryptionSetId?: string; 
+  public get diskEncryptionSetId() {
+    return this.getStringAttribute('disk_encryption_set_id');
+  }
+  public set diskEncryptionSetId(value: string) {
+    this._diskEncryptionSetId = value;
+  }
+  public resetDiskEncryptionSetId() {
+    this._diskEncryptionSetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionSetIdInput() {
+    return this._diskEncryptionSetId;
   }
 
   // lun - computed: false, optional: true, required: false
@@ -293,6 +345,19 @@ export class ImageDataDiskOutputReference extends cdktf.ComplexObject {
   public get sizeGbInput() {
     return this._sizeGb;
   }
+
+  // storage_type - computed: false, optional: false, required: true
+  private _storageType?: string; 
+  public get storageType() {
+    return this.getStringAttribute('storage_type');
+  }
+  public set storageType(value: string) {
+    this._storageType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageTypeInput() {
+    return this._storageType;
+  }
 }
 
 export class ImageDataDiskList extends cdktf.ComplexList {
@@ -316,33 +381,39 @@ export class ImageDataDiskList extends cdktf.ComplexList {
 }
 export interface ImageOsDisk {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#blob_uri Image#blob_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#blob_uri Image#blob_uri}
   */
   readonly blobUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#caching Image#caching}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#caching Image#caching}
   */
   readonly caching?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#disk_encryption_set_id Image#disk_encryption_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#disk_encryption_set_id Image#disk_encryption_set_id}
   */
   readonly diskEncryptionSetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#managed_disk_id Image#managed_disk_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#managed_disk_id Image#managed_disk_id}
   */
   readonly managedDiskId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#os_state Image#os_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#os_state Image#os_state}
   */
   readonly osState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#os_type Image#os_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#os_type Image#os_type}
   */
   readonly osType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#size_gb Image#size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#size_gb Image#size_gb}
   */
   readonly sizeGb?: number;
+  /**
+  * The type of storage disk
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#storage_type Image#storage_type}
+  */
+  readonly storageType: string;
 }
 
 export function imageOsDiskToTerraform(struct?: ImageOsDiskOutputReference | ImageOsDisk): any {
@@ -358,6 +429,7 @@ export function imageOsDiskToTerraform(struct?: ImageOsDiskOutputReference | Ima
     os_state: cdktf.stringToTerraform(struct!.osState),
     os_type: cdktf.stringToTerraform(struct!.osType),
     size_gb: cdktf.numberToTerraform(struct!.sizeGb),
+    storage_type: cdktf.stringToTerraform(struct!.storageType),
   }
 }
 
@@ -410,6 +482,12 @@ export function imageOsDiskToHclTerraform(struct?: ImageOsDiskOutputReference | 
       type: "simple",
       storageClassType: "number",
     },
+    storage_type: {
+      value: cdktf.stringToHclTerraform(struct!.storageType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
   };
 
   // remove undefined attributes
@@ -458,6 +536,10 @@ export class ImageOsDiskOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.sizeGb = this._sizeGb;
     }
+    if (this._storageType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageType = this._storageType;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -471,6 +553,7 @@ export class ImageOsDiskOutputReference extends cdktf.ComplexObject {
       this._osState = undefined;
       this._osType = undefined;
       this._sizeGb = undefined;
+      this._storageType = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -481,6 +564,7 @@ export class ImageOsDiskOutputReference extends cdktf.ComplexObject {
       this._osState = value.osState;
       this._osType = value.osType;
       this._sizeGb = value.sizeGb;
+      this._storageType = value.storageType;
     }
   }
 
@@ -595,22 +679,35 @@ export class ImageOsDiskOutputReference extends cdktf.ComplexObject {
   public get sizeGbInput() {
     return this._sizeGb;
   }
+
+  // storage_type - computed: false, optional: false, required: true
+  private _storageType?: string; 
+  public get storageType() {
+    return this.getStringAttribute('storage_type');
+  }
+  public set storageType(value: string) {
+    this._storageType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageTypeInput() {
+    return this._storageType;
+  }
 }
 export interface ImageTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#create Image#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#create Image#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#delete Image#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#delete Image#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#read Image#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#read Image#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#update Image#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#update Image#update}
   */
   readonly update?: string;
 }
@@ -791,7 +888,7 @@ export class ImageTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image azurerm_image}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image azurerm_image}
 */
 export class Image extends cdktf.TerraformResource {
 
@@ -807,7 +904,7 @@ export class Image extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a Image resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Image to import
-  * @param importFromId The id of the existing Image that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Image that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Image to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -819,7 +916,7 @@ export class Image extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/image azurerm_image} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/image azurerm_image} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -830,8 +927,8 @@ export class Image extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_image',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

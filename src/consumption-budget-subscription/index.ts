@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,68 +13,68 @@ import * as cdktf from 'cdktf';
 
 export interface ConsumptionBudgetSubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#amount ConsumptionBudgetSubscription#amount}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#amount ConsumptionBudgetSubscription#amount}
   */
   readonly amount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#etag ConsumptionBudgetSubscription#etag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#etag ConsumptionBudgetSubscription#etag}
   */
   readonly etag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#id ConsumptionBudgetSubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#id ConsumptionBudgetSubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#name ConsumptionBudgetSubscription#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#name ConsumptionBudgetSubscription#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#subscription_id ConsumptionBudgetSubscription#subscription_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#subscription_id ConsumptionBudgetSubscription#subscription_id}
   */
   readonly subscriptionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#time_grain ConsumptionBudgetSubscription#time_grain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#time_grain ConsumptionBudgetSubscription#time_grain}
   */
   readonly timeGrain?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#filter ConsumptionBudgetSubscription#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#filter ConsumptionBudgetSubscription#filter}
   */
   readonly filter?: ConsumptionBudgetSubscriptionFilter;
   /**
   * notification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#notification ConsumptionBudgetSubscription#notification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#notification ConsumptionBudgetSubscription#notification}
   */
   readonly notification: ConsumptionBudgetSubscriptionNotification[] | cdktf.IResolvable;
   /**
   * time_period block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#time_period ConsumptionBudgetSubscription#time_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#time_period ConsumptionBudgetSubscription#time_period}
   */
   readonly timePeriod: ConsumptionBudgetSubscriptionTimePeriod;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#timeouts ConsumptionBudgetSubscription#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#timeouts ConsumptionBudgetSubscription#timeouts}
   */
   readonly timeouts?: ConsumptionBudgetSubscriptionTimeouts;
 }
 export interface ConsumptionBudgetSubscriptionFilterDimension {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#name ConsumptionBudgetSubscription#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#name ConsumptionBudgetSubscription#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#operator ConsumptionBudgetSubscription#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#operator ConsumptionBudgetSubscription#operator}
   */
   readonly operator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#values ConsumptionBudgetSubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#values ConsumptionBudgetSubscription#values}
   */
   readonly values: string[];
 }
@@ -240,426 +240,17 @@ export class ConsumptionBudgetSubscriptionFilterDimensionList extends cdktf.Comp
     return new ConsumptionBudgetSubscriptionFilterDimensionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
-export interface ConsumptionBudgetSubscriptionFilterNotDimension {
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#name ConsumptionBudgetSubscription#name}
-  */
-  readonly name: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#operator ConsumptionBudgetSubscription#operator}
-  */
-  readonly operator?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#values ConsumptionBudgetSubscription#values}
-  */
-  readonly values: string[];
-}
-
-export function consumptionBudgetSubscriptionFilterNotDimensionToTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference | ConsumptionBudgetSubscriptionFilterNotDimension): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    name: cdktf.stringToTerraform(struct!.name),
-    operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
-  }
-}
-
-
-export function consumptionBudgetSubscriptionFilterNotDimensionToHclTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference | ConsumptionBudgetSubscriptionFilterNotDimension): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  const attrs = {
-    name: {
-      value: cdktf.stringToHclTerraform(struct!.name),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    operator: {
-      value: cdktf.stringToHclTerraform(struct!.operator),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    values: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
-      isBlock: false,
-      type: "list",
-      storageClassType: "stringList",
-    },
-  };
-
-  // remove undefined attributes
-  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
-}
-
-export class ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): ConsumptionBudgetSubscriptionFilterNotDimension | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._name !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.name = this._name;
-    }
-    if (this._operator !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.operator = this._operator;
-    }
-    if (this._values !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.values = this._values;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: ConsumptionBudgetSubscriptionFilterNotDimension | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._name = undefined;
-      this._operator = undefined;
-      this._values = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._name = value.name;
-      this._operator = value.operator;
-      this._values = value.values;
-    }
-  }
-
-  // name - computed: false, optional: false, required: true
-  private _name?: string; 
-  public get name() {
-    return this.getStringAttribute('name');
-  }
-  public set name(value: string) {
-    this._name = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nameInput() {
-    return this._name;
-  }
-
-  // operator - computed: false, optional: true, required: false
-  private _operator?: string; 
-  public get operator() {
-    return this.getStringAttribute('operator');
-  }
-  public set operator(value: string) {
-    this._operator = value;
-  }
-  public resetOperator() {
-    this._operator = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get operatorInput() {
-    return this._operator;
-  }
-
-  // values - computed: false, optional: false, required: true
-  private _values?: string[]; 
-  public get values() {
-    return this.getListAttribute('values');
-  }
-  public set values(value: string[]) {
-    this._values = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get valuesInput() {
-    return this._values;
-  }
-}
-export interface ConsumptionBudgetSubscriptionFilterNotTag {
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#name ConsumptionBudgetSubscription#name}
-  */
-  readonly name: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#operator ConsumptionBudgetSubscription#operator}
-  */
-  readonly operator?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#values ConsumptionBudgetSubscription#values}
-  */
-  readonly values: string[];
-}
-
-export function consumptionBudgetSubscriptionFilterNotTagToTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotTagOutputReference | ConsumptionBudgetSubscriptionFilterNotTag): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    name: cdktf.stringToTerraform(struct!.name),
-    operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
-  }
-}
-
-
-export function consumptionBudgetSubscriptionFilterNotTagToHclTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotTagOutputReference | ConsumptionBudgetSubscriptionFilterNotTag): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  const attrs = {
-    name: {
-      value: cdktf.stringToHclTerraform(struct!.name),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    operator: {
-      value: cdktf.stringToHclTerraform(struct!.operator),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    values: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
-      isBlock: false,
-      type: "list",
-      storageClassType: "stringList",
-    },
-  };
-
-  // remove undefined attributes
-  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
-}
-
-export class ConsumptionBudgetSubscriptionFilterNotTagOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): ConsumptionBudgetSubscriptionFilterNotTag | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._name !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.name = this._name;
-    }
-    if (this._operator !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.operator = this._operator;
-    }
-    if (this._values !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.values = this._values;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: ConsumptionBudgetSubscriptionFilterNotTag | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._name = undefined;
-      this._operator = undefined;
-      this._values = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._name = value.name;
-      this._operator = value.operator;
-      this._values = value.values;
-    }
-  }
-
-  // name - computed: false, optional: false, required: true
-  private _name?: string; 
-  public get name() {
-    return this.getStringAttribute('name');
-  }
-  public set name(value: string) {
-    this._name = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nameInput() {
-    return this._name;
-  }
-
-  // operator - computed: false, optional: true, required: false
-  private _operator?: string; 
-  public get operator() {
-    return this.getStringAttribute('operator');
-  }
-  public set operator(value: string) {
-    this._operator = value;
-  }
-  public resetOperator() {
-    this._operator = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get operatorInput() {
-    return this._operator;
-  }
-
-  // values - computed: false, optional: false, required: true
-  private _values?: string[]; 
-  public get values() {
-    return this.getListAttribute('values');
-  }
-  public set values(value: string[]) {
-    this._values = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get valuesInput() {
-    return this._values;
-  }
-}
-export interface ConsumptionBudgetSubscriptionFilterNot {
-  /**
-  * dimension block
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#dimension ConsumptionBudgetSubscription#dimension}
-  */
-  readonly dimension?: ConsumptionBudgetSubscriptionFilterNotDimension;
-  /**
-  * tag block
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#tag ConsumptionBudgetSubscription#tag}
-  */
-  readonly tag?: ConsumptionBudgetSubscriptionFilterNotTag;
-}
-
-export function consumptionBudgetSubscriptionFilterNotToTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotOutputReference | ConsumptionBudgetSubscriptionFilterNot): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    dimension: consumptionBudgetSubscriptionFilterNotDimensionToTerraform(struct!.dimension),
-    tag: consumptionBudgetSubscriptionFilterNotTagToTerraform(struct!.tag),
-  }
-}
-
-
-export function consumptionBudgetSubscriptionFilterNotToHclTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotOutputReference | ConsumptionBudgetSubscriptionFilterNot): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  const attrs = {
-    dimension: {
-      value: consumptionBudgetSubscriptionFilterNotDimensionToHclTerraform(struct!.dimension),
-      isBlock: true,
-      type: "list",
-      storageClassType: "ConsumptionBudgetSubscriptionFilterNotDimensionList",
-    },
-    tag: {
-      value: consumptionBudgetSubscriptionFilterNotTagToHclTerraform(struct!.tag),
-      isBlock: true,
-      type: "list",
-      storageClassType: "ConsumptionBudgetSubscriptionFilterNotTagList",
-    },
-  };
-
-  // remove undefined attributes
-  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
-}
-
-export class ConsumptionBudgetSubscriptionFilterNotOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): ConsumptionBudgetSubscriptionFilterNot | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._dimension?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.dimension = this._dimension?.internalValue;
-    }
-    if (this._tag?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.tag = this._tag?.internalValue;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: ConsumptionBudgetSubscriptionFilterNot | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._dimension.internalValue = undefined;
-      this._tag.internalValue = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._dimension.internalValue = value.dimension;
-      this._tag.internalValue = value.tag;
-    }
-  }
-
-  // dimension - computed: false, optional: true, required: false
-  private _dimension = new ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference(this, "dimension");
-  public get dimension() {
-    return this._dimension;
-  }
-  public putDimension(value: ConsumptionBudgetSubscriptionFilterNotDimension) {
-    this._dimension.internalValue = value;
-  }
-  public resetDimension() {
-    this._dimension.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dimensionInput() {
-    return this._dimension.internalValue;
-  }
-
-  // tag - computed: false, optional: true, required: false
-  private _tag = new ConsumptionBudgetSubscriptionFilterNotTagOutputReference(this, "tag");
-  public get tag() {
-    return this._tag;
-  }
-  public putTag(value: ConsumptionBudgetSubscriptionFilterNotTag) {
-    this._tag.internalValue = value;
-  }
-  public resetTag() {
-    this._tag.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagInput() {
-    return this._tag.internalValue;
-  }
-}
 export interface ConsumptionBudgetSubscriptionFilterTag {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#name ConsumptionBudgetSubscription#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#name ConsumptionBudgetSubscription#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#operator ConsumptionBudgetSubscription#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#operator ConsumptionBudgetSubscription#operator}
   */
   readonly operator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#values ConsumptionBudgetSubscription#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#values ConsumptionBudgetSubscription#values}
   */
   readonly values: string[];
 }
@@ -829,19 +420,13 @@ export interface ConsumptionBudgetSubscriptionFilter {
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#dimension ConsumptionBudgetSubscription#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#dimension ConsumptionBudgetSubscription#dimension}
   */
   readonly dimension?: ConsumptionBudgetSubscriptionFilterDimension[] | cdktf.IResolvable;
   /**
-  * not block
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#not ConsumptionBudgetSubscription#not}
-  */
-  readonly not?: ConsumptionBudgetSubscriptionFilterNot;
-  /**
   * tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#tag ConsumptionBudgetSubscription#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#tag ConsumptionBudgetSubscription#tag}
   */
   readonly tag?: ConsumptionBudgetSubscriptionFilterTag[] | cdktf.IResolvable;
 }
@@ -853,7 +438,6 @@ export function consumptionBudgetSubscriptionFilterToTerraform(struct?: Consumpt
   }
   return {
     dimension: cdktf.listMapper(consumptionBudgetSubscriptionFilterDimensionToTerraform, true)(struct!.dimension),
-    not: consumptionBudgetSubscriptionFilterNotToTerraform(struct!.not),
     tag: cdktf.listMapper(consumptionBudgetSubscriptionFilterTagToTerraform, true)(struct!.tag),
   }
 }
@@ -870,12 +454,6 @@ export function consumptionBudgetSubscriptionFilterToHclTerraform(struct?: Consu
       isBlock: true,
       type: "set",
       storageClassType: "ConsumptionBudgetSubscriptionFilterDimensionList",
-    },
-    not: {
-      value: consumptionBudgetSubscriptionFilterNotToHclTerraform(struct!.not),
-      isBlock: true,
-      type: "list",
-      storageClassType: "ConsumptionBudgetSubscriptionFilterNotList",
     },
     tag: {
       value: cdktf.listMapperHcl(consumptionBudgetSubscriptionFilterTagToHclTerraform, true)(struct!.tag),
@@ -907,10 +485,6 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.dimension = this._dimension?.internalValue;
     }
-    if (this._not?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.not = this._not?.internalValue;
-    }
     if (this._tag?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag?.internalValue;
@@ -922,13 +496,11 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
     if (value === undefined) {
       this.isEmptyObject = false;
       this._dimension.internalValue = undefined;
-      this._not.internalValue = undefined;
       this._tag.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._dimension.internalValue = value.dimension;
-      this._not.internalValue = value.not;
       this._tag.internalValue = value.tag;
     }
   }
@@ -949,22 +521,6 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
     return this._dimension.internalValue;
   }
 
-  // not - computed: false, optional: true, required: false
-  private _not = new ConsumptionBudgetSubscriptionFilterNotOutputReference(this, "not");
-  public get not() {
-    return this._not;
-  }
-  public putNot(value: ConsumptionBudgetSubscriptionFilterNot) {
-    this._not.internalValue = value;
-  }
-  public resetNot() {
-    this._not.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get notInput() {
-    return this._not.internalValue;
-  }
-
   // tag - computed: false, optional: true, required: false
   private _tag = new ConsumptionBudgetSubscriptionFilterTagList(this, "tag", true);
   public get tag() {
@@ -983,31 +539,31 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
 }
 export interface ConsumptionBudgetSubscriptionNotification {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#contact_emails ConsumptionBudgetSubscription#contact_emails}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#contact_emails ConsumptionBudgetSubscription#contact_emails}
   */
   readonly contactEmails?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#contact_groups ConsumptionBudgetSubscription#contact_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#contact_groups ConsumptionBudgetSubscription#contact_groups}
   */
   readonly contactGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#contact_roles ConsumptionBudgetSubscription#contact_roles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#contact_roles ConsumptionBudgetSubscription#contact_roles}
   */
   readonly contactRoles?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#enabled ConsumptionBudgetSubscription#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#enabled ConsumptionBudgetSubscription#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#operator ConsumptionBudgetSubscription#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#operator ConsumptionBudgetSubscription#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#threshold ConsumptionBudgetSubscription#threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#threshold ConsumptionBudgetSubscription#threshold}
   */
   readonly threshold: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#threshold_type ConsumptionBudgetSubscription#threshold_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#threshold_type ConsumptionBudgetSubscription#threshold_type}
   */
   readonly thresholdType?: string;
 }
@@ -1291,11 +847,11 @@ export class ConsumptionBudgetSubscriptionNotificationList extends cdktf.Complex
 }
 export interface ConsumptionBudgetSubscriptionTimePeriod {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#end_date ConsumptionBudgetSubscription#end_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#end_date ConsumptionBudgetSubscription#end_date}
   */
   readonly endDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#start_date ConsumptionBudgetSubscription#start_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#start_date ConsumptionBudgetSubscription#start_date}
   */
   readonly startDate: string;
 }
@@ -1405,19 +961,19 @@ export class ConsumptionBudgetSubscriptionTimePeriodOutputReference extends cdkt
 }
 export interface ConsumptionBudgetSubscriptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#create ConsumptionBudgetSubscription#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#create ConsumptionBudgetSubscription#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#delete ConsumptionBudgetSubscription#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#delete ConsumptionBudgetSubscription#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#read ConsumptionBudgetSubscription#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#read ConsumptionBudgetSubscription#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#update ConsumptionBudgetSubscription#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#update ConsumptionBudgetSubscription#update}
   */
   readonly update?: string;
 }
@@ -1598,7 +1154,7 @@ export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription azurerm_consumption_budget_subscription}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription azurerm_consumption_budget_subscription}
 */
 export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
 
@@ -1614,7 +1170,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ConsumptionBudgetSubscription resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ConsumptionBudgetSubscription to import
-  * @param importFromId The id of the existing ConsumptionBudgetSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ConsumptionBudgetSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ConsumptionBudgetSubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1626,7 +1182,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/consumption_budget_subscription azurerm_consumption_budget_subscription} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/consumption_budget_subscription azurerm_consumption_budget_subscription} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1637,8 +1193,8 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_consumption_budget_subscription',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

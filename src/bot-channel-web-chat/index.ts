@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,56 +13,52 @@ import * as cdktf from 'cdktf';
 
 export interface BotChannelWebChatConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#bot_name BotChannelWebChat#bot_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#bot_name BotChannelWebChat#bot_name}
   */
   readonly botName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#id BotChannelWebChat#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#id BotChannelWebChat#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#location BotChannelWebChat#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#location BotChannelWebChat#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#resource_group_name BotChannelWebChat#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#resource_group_name BotChannelWebChat#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#site_names BotChannelWebChat#site_names}
-  */
-  readonly siteNames?: string[];
-  /**
   * site block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#site BotChannelWebChat#site}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#site BotChannelWebChat#site}
   */
   readonly site?: BotChannelWebChatSite[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#timeouts BotChannelWebChat#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#timeouts BotChannelWebChat#timeouts}
   */
   readonly timeouts?: BotChannelWebChatTimeouts;
 }
 export interface BotChannelWebChatSite {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#endpoint_parameters_enabled BotChannelWebChat#endpoint_parameters_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#endpoint_parameters_enabled BotChannelWebChat#endpoint_parameters_enabled}
   */
   readonly endpointParametersEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#name BotChannelWebChat#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#name BotChannelWebChat#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#storage_enabled BotChannelWebChat#storage_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#storage_enabled BotChannelWebChat#storage_enabled}
   */
   readonly storageEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#user_upload_enabled BotChannelWebChat#user_upload_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#user_upload_enabled BotChannelWebChat#user_upload_enabled}
   */
   readonly userUploadEnabled?: boolean | cdktf.IResolvable;
 }
@@ -262,19 +258,19 @@ export class BotChannelWebChatSiteList extends cdktf.ComplexList {
 }
 export interface BotChannelWebChatTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#create BotChannelWebChat#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#create BotChannelWebChat#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#delete BotChannelWebChat#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#delete BotChannelWebChat#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#read BotChannelWebChat#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#read BotChannelWebChat#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#update BotChannelWebChat#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#update BotChannelWebChat#update}
   */
   readonly update?: string;
 }
@@ -455,7 +451,7 @@ export class BotChannelWebChatTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat azurerm_bot_channel_web_chat}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat azurerm_bot_channel_web_chat}
 */
 export class BotChannelWebChat extends cdktf.TerraformResource {
 
@@ -471,7 +467,7 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BotChannelWebChat resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BotChannelWebChat to import
-  * @param importFromId The id of the existing BotChannelWebChat that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BotChannelWebChat that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BotChannelWebChat to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -483,7 +479,7 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/bot_channel_web_chat azurerm_bot_channel_web_chat} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/bot_channel_web_chat azurerm_bot_channel_web_chat} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -494,8 +490,8 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_bot_channel_web_chat',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -509,7 +505,6 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
     this._id = config.id;
     this._location = config.location;
     this._resourceGroupName = config.resourceGroupName;
-    this._siteNames = config.siteNames;
     this._site.internalValue = config.site;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -573,22 +568,6 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
-  // site_names - computed: true, optional: true, required: false
-  private _siteNames?: string[]; 
-  public get siteNames() {
-    return cdktf.Fn.tolist(this.getListAttribute('site_names'));
-  }
-  public set siteNames(value: string[]) {
-    this._siteNames = value;
-  }
-  public resetSiteNames() {
-    this._siteNames = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get siteNamesInput() {
-    return this._siteNames;
-  }
-
   // site - computed: false, optional: true, required: false
   private _site = new BotChannelWebChatSiteList(this, "site", true);
   public get site() {
@@ -631,7 +610,6 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      site_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._siteNames),
       site: cdktf.listMapper(botChannelWebChatSiteToTerraform, true)(this._site.internalValue),
       timeouts: botChannelWebChatTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -662,12 +640,6 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
-      },
-      site_names: {
-        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._siteNames),
-        isBlock: false,
-        type: "set",
-        storageClassType: "stringList",
       },
       site: {
         value: cdktf.listMapperHcl(botChannelWebChatSiteToHclTerraform, true)(this._site.internalValue),

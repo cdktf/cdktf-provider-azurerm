@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_log_analytics_workspace_onboarding
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_log_analytics_workspace_onboarding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +13,38 @@ import * as cdktf from 'cdktf';
 
 export interface SentinelLogAnalyticsWorkspaceOnboardingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_log_analytics_workspace_onboarding#customer_managed_key_enabled SentinelLogAnalyticsWorkspaceOnboarding#customer_managed_key_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_log_analytics_workspace_onboarding#customer_managed_key_enabled SentinelLogAnalyticsWorkspaceOnboarding#customer_managed_key_enabled}
   */
   readonly customerManagedKeyEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_log_analytics_workspace_onboarding#id SentinelLogAnalyticsWorkspaceOnboarding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_log_analytics_workspace_onboarding#id SentinelLogAnalyticsWorkspaceOnboarding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_log_analytics_workspace_onboarding#resource_group_name SentinelLogAnalyticsWorkspaceOnboarding#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_log_analytics_workspace_onboarding#workspace_id SentinelLogAnalyticsWorkspaceOnboarding#workspace_id}
   */
-  readonly resourceGroupName?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_log_analytics_workspace_onboarding#workspace_id SentinelLogAnalyticsWorkspaceOnboarding#workspace_id}
-  */
-  readonly workspaceId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_log_analytics_workspace_onboarding#workspace_name SentinelLogAnalyticsWorkspaceOnboarding#workspace_name}
-  */
-  readonly workspaceName?: string;
+  readonly workspaceId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_log_analytics_workspace_onboarding#timeouts SentinelLogAnalyticsWorkspaceOnboarding#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_log_analytics_workspace_onboarding#timeouts SentinelLogAnalyticsWorkspaceOnboarding#timeouts}
   */
   readonly timeouts?: SentinelLogAnalyticsWorkspaceOnboardingTimeouts;
 }
 export interface SentinelLogAnalyticsWorkspaceOnboardingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_log_analytics_workspace_onboarding#create SentinelLogAnalyticsWorkspaceOnboarding#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_log_analytics_workspace_onboarding#create SentinelLogAnalyticsWorkspaceOnboarding#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_log_analytics_workspace_onboarding#delete SentinelLogAnalyticsWorkspaceOnboarding#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_log_analytics_workspace_onboarding#delete SentinelLogAnalyticsWorkspaceOnboarding#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_log_analytics_workspace_onboarding#read SentinelLogAnalyticsWorkspaceOnboarding#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_log_analytics_workspace_onboarding#read SentinelLogAnalyticsWorkspaceOnboarding#read}
   */
   readonly read?: string;
 }
@@ -204,7 +196,7 @@ export class SentinelLogAnalyticsWorkspaceOnboardingTimeoutsOutputReference exte
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_log_analytics_workspace_onboarding azurerm_sentinel_log_analytics_workspace_onboarding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_log_analytics_workspace_onboarding azurerm_sentinel_log_analytics_workspace_onboarding}
 */
 export class SentinelLogAnalyticsWorkspaceOnboarding extends cdktf.TerraformResource {
 
@@ -220,7 +212,7 @@ export class SentinelLogAnalyticsWorkspaceOnboarding extends cdktf.TerraformReso
   * Generates CDKTF code for importing a SentinelLogAnalyticsWorkspaceOnboarding resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SentinelLogAnalyticsWorkspaceOnboarding to import
-  * @param importFromId The id of the existing SentinelLogAnalyticsWorkspaceOnboarding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_log_analytics_workspace_onboarding#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SentinelLogAnalyticsWorkspaceOnboarding that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_log_analytics_workspace_onboarding#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SentinelLogAnalyticsWorkspaceOnboarding to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -232,19 +224,19 @@ export class SentinelLogAnalyticsWorkspaceOnboarding extends cdktf.TerraformReso
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_log_analytics_workspace_onboarding azurerm_sentinel_log_analytics_workspace_onboarding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_log_analytics_workspace_onboarding azurerm_sentinel_log_analytics_workspace_onboarding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options SentinelLogAnalyticsWorkspaceOnboardingConfig = {}
+  * @param options SentinelLogAnalyticsWorkspaceOnboardingConfig
   */
-  public constructor(scope: Construct, id: string, config: SentinelLogAnalyticsWorkspaceOnboardingConfig = {}) {
+  public constructor(scope: Construct, id: string, config: SentinelLogAnalyticsWorkspaceOnboardingConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_log_analytics_workspace_onboarding',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -256,9 +248,7 @@ export class SentinelLogAnalyticsWorkspaceOnboarding extends cdktf.TerraformReso
     });
     this._customerManagedKeyEnabled = config.customerManagedKeyEnabled;
     this._id = config.id;
-    this._resourceGroupName = config.resourceGroupName;
     this._workspaceId = config.workspaceId;
-    this._workspaceName = config.workspaceName;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -298,23 +288,7 @@ export class SentinelLogAnalyticsWorkspaceOnboarding extends cdktf.TerraformReso
     return this._id;
   }
 
-  // resource_group_name - computed: true, optional: true, required: false
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  public resetResourceGroupName() {
-    this._resourceGroupName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
-  // workspace_id - computed: true, optional: true, required: false
+  // workspace_id - computed: false, optional: false, required: true
   private _workspaceId?: string; 
   public get workspaceId() {
     return this.getStringAttribute('workspace_id');
@@ -322,28 +296,9 @@ export class SentinelLogAnalyticsWorkspaceOnboarding extends cdktf.TerraformReso
   public set workspaceId(value: string) {
     this._workspaceId = value;
   }
-  public resetWorkspaceId() {
-    this._workspaceId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get workspaceIdInput() {
     return this._workspaceId;
-  }
-
-  // workspace_name - computed: true, optional: true, required: false
-  private _workspaceName?: string; 
-  public get workspaceName() {
-    return this.getStringAttribute('workspace_name');
-  }
-  public set workspaceName(value: string) {
-    this._workspaceName = value;
-  }
-  public resetWorkspaceName() {
-    this._workspaceName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get workspaceNameInput() {
-    return this._workspaceName;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -370,9 +325,7 @@ export class SentinelLogAnalyticsWorkspaceOnboarding extends cdktf.TerraformReso
     return {
       customer_managed_key_enabled: cdktf.booleanToTerraform(this._customerManagedKeyEnabled),
       id: cdktf.stringToTerraform(this._id),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       workspace_id: cdktf.stringToTerraform(this._workspaceId),
-      workspace_name: cdktf.stringToTerraform(this._workspaceName),
       timeouts: sentinelLogAnalyticsWorkspaceOnboardingTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -391,20 +344,8 @@ export class SentinelLogAnalyticsWorkspaceOnboarding extends cdktf.TerraformReso
         type: "simple",
         storageClassType: "string",
       },
-      resource_group_name: {
-        value: cdktf.stringToHclTerraform(this._resourceGroupName),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "string",
-      },
       workspace_id: {
         value: cdktf.stringToHclTerraform(this._workspaceId),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "string",
-      },
-      workspace_name: {
-        value: cdktf.stringToHclTerraform(this._workspaceName),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

@@ -4,7 +4,7 @@
 
 ### ContainerAppJob <a name="ContainerAppJob" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job azurerm_container_app_job}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job azurerm_container_app_job}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.Initializer"></a>
 
@@ -76,23 +76,19 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putEventTriggerConfig">putEventTriggerConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putIdentity">putIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putManualTriggerConfig">putManualTriggerConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putRegistries">putRegistries</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putRegistry">putRegistry</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putScheduleTriggerConfig">putScheduleTriggerConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putSecret">putSecret</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putSecrets">putSecrets</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putTemplate">putTemplate</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putTimeouts">putTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetEventTriggerConfig">resetEventTriggerConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetIdentity">resetIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetManualTriggerConfig">resetManualTriggerConfig</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetRegistries">resetRegistries</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetRegistry">resetRegistry</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetReplicaRetryLimit">resetReplicaRetryLimit</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetScheduleTriggerConfig">resetScheduleTriggerConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetSecret">resetSecret</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetSecrets">resetSecrets</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetTags">resetTags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetTimeouts">resetTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetWorkloadProfileName">resetWorkloadProfileName</a></code> | *No description.* |
@@ -423,18 +419,6 @@ public putManualTriggerConfig(value: ContainerAppJobManualTriggerConfig): void
 
 ---
 
-##### `putRegistries` <a name="putRegistries" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putRegistries"></a>
-
-```typescript
-public putRegistries(value: IResolvable | ContainerAppJobRegistries[]): void
-```
-
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putRegistries.parameter.value"></a>
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries">ContainerAppJobRegistries</a>[]
-
----
-
 ##### `putRegistry` <a name="putRegistry" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putRegistry"></a>
 
 ```typescript
@@ -468,18 +452,6 @@ public putSecret(value: IResolvable | ContainerAppJobSecret[]): void
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putSecret.parameter.value"></a>
 
 - *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecret">ContainerAppJobSecret</a>[]
-
----
-
-##### `putSecrets` <a name="putSecrets" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putSecrets"></a>
-
-```typescript
-public putSecrets(value: IResolvable | ContainerAppJobSecrets[]): void
-```
-
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.putSecrets.parameter.value"></a>
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets">ContainerAppJobSecrets</a>[]
 
 ---
 
@@ -531,12 +503,6 @@ public resetIdentity(): void
 public resetManualTriggerConfig(): void
 ```
 
-##### `resetRegistries` <a name="resetRegistries" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetRegistries"></a>
-
-```typescript
-public resetRegistries(): void
-```
-
 ##### `resetRegistry` <a name="resetRegistry" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetRegistry"></a>
 
 ```typescript
@@ -559,12 +525,6 @@ public resetScheduleTriggerConfig(): void
 
 ```typescript
 public resetSecret(): void
-```
-
-##### `resetSecrets` <a name="resetSecrets" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetSecrets"></a>
-
-```typescript
-public resetSecrets(): void
 ```
 
 ##### `resetTags` <a name="resetTags" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.resetTags"></a>
@@ -688,7 +648,7 @@ The construct id used in the generated config for the ContainerAppJob to import.
 
 The id of the existing ContainerAppJob that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -723,11 +683,9 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobIdentityOutputReference">ContainerAppJobIdentityOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.manualTriggerConfig">manualTriggerConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobManualTriggerConfigOutputReference">ContainerAppJobManualTriggerConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.outboundIpAddresses">outboundIpAddresses</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.registries">registries</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList">ContainerAppJobRegistriesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.registry">registry</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistryList">ContainerAppJobRegistryList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.scheduleTriggerConfig">scheduleTriggerConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobScheduleTriggerConfigOutputReference">ContainerAppJobScheduleTriggerConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.secret">secret</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretList">ContainerAppJobSecretList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.secrets">secrets</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList">ContainerAppJobSecretsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.template">template</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateOutputReference">ContainerAppJobTemplateOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTimeoutsOutputReference">ContainerAppJobTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.containerAppEnvironmentIdInput">containerAppEnvironmentIdInput</a></code> | <code>string</code> | *No description.* |
@@ -737,14 +695,12 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.locationInput">locationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.manualTriggerConfigInput">manualTriggerConfigInput</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobManualTriggerConfig">ContainerAppJobManualTriggerConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.registriesInput">registriesInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries">ContainerAppJobRegistries</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.registryInput">registryInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistry">ContainerAppJobRegistry</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.replicaRetryLimitInput">replicaRetryLimitInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.replicaTimeoutInSecondsInput">replicaTimeoutInSecondsInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.scheduleTriggerConfigInput">scheduleTriggerConfigInput</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobScheduleTriggerConfig">ContainerAppJobScheduleTriggerConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.secretInput">secretInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecret">ContainerAppJobSecret</a>[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.secretsInput">secretsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets">ContainerAppJobSecrets</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.templateInput">templateInput</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplate">ContainerAppJobTemplate</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTimeouts">ContainerAppJobTimeouts</a></code> | *No description.* |
@@ -953,16 +909,6 @@ public readonly outboundIpAddresses: string[];
 
 ---
 
-##### `registries`<sup>Required</sup> <a name="registries" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.registries"></a>
-
-```typescript
-public readonly registries: ContainerAppJobRegistriesList;
-```
-
-- *Type:* <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList">ContainerAppJobRegistriesList</a>
-
----
-
 ##### `registry`<sup>Required</sup> <a name="registry" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.registry"></a>
 
 ```typescript
@@ -990,16 +936,6 @@ public readonly secret: ContainerAppJobSecretList;
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretList">ContainerAppJobSecretList</a>
-
----
-
-##### `secrets`<sup>Required</sup> <a name="secrets" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.secrets"></a>
-
-```typescript
-public readonly secrets: ContainerAppJobSecretsList;
-```
-
-- *Type:* <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList">ContainerAppJobSecretsList</a>
 
 ---
 
@@ -1093,16 +1029,6 @@ public readonly nameInput: string;
 
 ---
 
-##### `registriesInput`<sup>Optional</sup> <a name="registriesInput" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.registriesInput"></a>
-
-```typescript
-public readonly registriesInput: IResolvable | ContainerAppJobRegistries[];
-```
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries">ContainerAppJobRegistries</a>[]
-
----
-
 ##### `registryInput`<sup>Optional</sup> <a name="registryInput" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.registryInput"></a>
 
 ```typescript
@@ -1160,16 +1086,6 @@ public readonly secretInput: IResolvable | ContainerAppJobSecret[];
 ```
 
 - *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecret">ContainerAppJobSecret</a>[]
-
----
-
-##### `secretsInput`<sup>Optional</sup> <a name="secretsInput" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.property.secretsInput"></a>
-
-```typescript
-public readonly secretsInput: IResolvable | ContainerAppJobSecrets[];
-```
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets">ContainerAppJobSecrets</a>[]
 
 ---
 
@@ -1344,25 +1260,23 @@ const containerAppJobConfig: containerAppJob.ContainerAppJobConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.containerAppEnvironmentId">containerAppEnvironmentId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#container_app_environment_id ContainerAppJob#container_app_environment_id}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#location ContainerAppJob#location}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.replicaTimeoutInSeconds">replicaTimeoutInSeconds</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#replica_timeout_in_seconds ContainerAppJob#replica_timeout_in_seconds}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#resource_group_name ContainerAppJob#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.containerAppEnvironmentId">containerAppEnvironmentId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#container_app_environment_id ContainerAppJob#container_app_environment_id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#location ContainerAppJob#location}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.replicaTimeoutInSeconds">replicaTimeoutInSeconds</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#replica_timeout_in_seconds ContainerAppJob#replica_timeout_in_seconds}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#resource_group_name ContainerAppJob#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.template">template</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplate">ContainerAppJobTemplate</a></code> | template block. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.eventTriggerConfig">eventTriggerConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfig">ContainerAppJobEventTriggerConfig</a></code> | event_trigger_config block. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#id ContainerAppJob#id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#id ContainerAppJob#id}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobIdentity">ContainerAppJobIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.manualTriggerConfig">manualTriggerConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobManualTriggerConfig">ContainerAppJobManualTriggerConfig</a></code> | manual_trigger_config block. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.registries">registries</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries">ContainerAppJobRegistries</a>[]</code> | registries block. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.registry">registry</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistry">ContainerAppJobRegistry</a>[]</code> | registry block. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.replicaRetryLimit">replicaRetryLimit</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#replica_retry_limit ContainerAppJob#replica_retry_limit}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.replicaRetryLimit">replicaRetryLimit</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#replica_retry_limit ContainerAppJob#replica_retry_limit}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.scheduleTriggerConfig">scheduleTriggerConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobScheduleTriggerConfig">ContainerAppJobScheduleTriggerConfig</a></code> | schedule_trigger_config block. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.secret">secret</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecret">ContainerAppJobSecret</a>[]</code> | secret block. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.secrets">secrets</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets">ContainerAppJobSecrets</a>[]</code> | secrets block. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#tags ContainerAppJob#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#tags ContainerAppJob#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTimeouts">ContainerAppJobTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.workloadProfileName">workloadProfileName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#workload_profile_name ContainerAppJob#workload_profile_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.workloadProfileName">workloadProfileName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#workload_profile_name ContainerAppJob#workload_profile_name}. |
 
 ---
 
@@ -1444,7 +1358,7 @@ public readonly containerAppEnvironmentId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#container_app_environment_id ContainerAppJob#container_app_environment_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#container_app_environment_id ContainerAppJob#container_app_environment_id}.
 
 ---
 
@@ -1456,7 +1370,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#location ContainerAppJob#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#location ContainerAppJob#location}.
 
 ---
 
@@ -1468,7 +1382,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}.
 
 ---
 
@@ -1480,7 +1394,7 @@ public readonly replicaTimeoutInSeconds: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#replica_timeout_in_seconds ContainerAppJob#replica_timeout_in_seconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#replica_timeout_in_seconds ContainerAppJob#replica_timeout_in_seconds}.
 
 ---
 
@@ -1492,7 +1406,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#resource_group_name ContainerAppJob#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#resource_group_name ContainerAppJob#resource_group_name}.
 
 ---
 
@@ -1506,7 +1420,7 @@ public readonly template: ContainerAppJobTemplate;
 
 template block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#template ContainerAppJob#template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#template ContainerAppJob#template}
 
 ---
 
@@ -1520,7 +1434,7 @@ public readonly eventTriggerConfig: ContainerAppJobEventTriggerConfig;
 
 event_trigger_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#event_trigger_config ContainerAppJob#event_trigger_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#event_trigger_config ContainerAppJob#event_trigger_config}
 
 ---
 
@@ -1532,7 +1446,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#id ContainerAppJob#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#id ContainerAppJob#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1549,7 +1463,7 @@ public readonly identity: ContainerAppJobIdentity;
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#identity ContainerAppJob#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#identity ContainerAppJob#identity}
 
 ---
 
@@ -1563,21 +1477,7 @@ public readonly manualTriggerConfig: ContainerAppJobManualTriggerConfig;
 
 manual_trigger_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#manual_trigger_config ContainerAppJob#manual_trigger_config}
-
----
-
-##### `registries`<sup>Optional</sup> <a name="registries" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.registries"></a>
-
-```typescript
-public readonly registries: IResolvable | ContainerAppJobRegistries[];
-```
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries">ContainerAppJobRegistries</a>[]
-
-registries block.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#registries ContainerAppJob#registries}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#manual_trigger_config ContainerAppJob#manual_trigger_config}
 
 ---
 
@@ -1591,7 +1491,7 @@ public readonly registry: IResolvable | ContainerAppJobRegistry[];
 
 registry block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#registry ContainerAppJob#registry}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#registry ContainerAppJob#registry}
 
 ---
 
@@ -1603,7 +1503,7 @@ public readonly replicaRetryLimit: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#replica_retry_limit ContainerAppJob#replica_retry_limit}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#replica_retry_limit ContainerAppJob#replica_retry_limit}.
 
 ---
 
@@ -1617,7 +1517,7 @@ public readonly scheduleTriggerConfig: ContainerAppJobScheduleTriggerConfig;
 
 schedule_trigger_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#schedule_trigger_config ContainerAppJob#schedule_trigger_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#schedule_trigger_config ContainerAppJob#schedule_trigger_config}
 
 ---
 
@@ -1631,21 +1531,7 @@ public readonly secret: IResolvable | ContainerAppJobSecret[];
 
 secret block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#secret ContainerAppJob#secret}
-
----
-
-##### `secrets`<sup>Optional</sup> <a name="secrets" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.property.secrets"></a>
-
-```typescript
-public readonly secrets: IResolvable | ContainerAppJobSecrets[];
-```
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets">ContainerAppJobSecrets</a>[]
-
-secrets block.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#secrets ContainerAppJob#secrets}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#secret ContainerAppJob#secret}
 
 ---
 
@@ -1657,7 +1543,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#tags ContainerAppJob#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#tags ContainerAppJob#tags}.
 
 ---
 
@@ -1671,7 +1557,7 @@ public readonly timeouts: ContainerAppJobTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#timeouts ContainerAppJob#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#timeouts ContainerAppJob#timeouts}
 
 ---
 
@@ -1683,7 +1569,7 @@ public readonly workloadProfileName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#workload_profile_name ContainerAppJob#workload_profile_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#workload_profile_name ContainerAppJob#workload_profile_name}.
 
 ---
 
@@ -1701,8 +1587,8 @@ const containerAppJobEventTriggerConfig: containerAppJob.ContainerAppJobEventTri
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfig.property.parallelism">parallelism</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#parallelism ContainerAppJob#parallelism}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfig.property.replicaCompletionCount">replicaCompletionCount</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#replica_completion_count ContainerAppJob#replica_completion_count}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfig.property.parallelism">parallelism</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#parallelism ContainerAppJob#parallelism}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfig.property.replicaCompletionCount">replicaCompletionCount</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#replica_completion_count ContainerAppJob#replica_completion_count}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfig.property.scale">scale</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScale">ContainerAppJobEventTriggerConfigScale</a>[]</code> | scale block. |
 
 ---
@@ -1715,7 +1601,7 @@ public readonly parallelism: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#parallelism ContainerAppJob#parallelism}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#parallelism ContainerAppJob#parallelism}.
 
 ---
 
@@ -1727,7 +1613,7 @@ public readonly replicaCompletionCount: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#replica_completion_count ContainerAppJob#replica_completion_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#replica_completion_count ContainerAppJob#replica_completion_count}.
 
 ---
 
@@ -1741,7 +1627,7 @@ public readonly scale: IResolvable | ContainerAppJobEventTriggerConfigScale[];
 
 scale block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#scale ContainerAppJob#scale}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#scale ContainerAppJob#scale}
 
 ---
 
@@ -1759,9 +1645,9 @@ const containerAppJobEventTriggerConfigScale: containerAppJob.ContainerAppJobEve
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScale.property.maxExecutions">maxExecutions</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#max_executions ContainerAppJob#max_executions}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScale.property.minExecutions">minExecutions</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#min_executions ContainerAppJob#min_executions}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScale.property.pollingIntervalInSeconds">pollingIntervalInSeconds</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#polling_interval_in_seconds ContainerAppJob#polling_interval_in_seconds}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScale.property.maxExecutions">maxExecutions</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#max_executions ContainerAppJob#max_executions}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScale.property.minExecutions">minExecutions</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#min_executions ContainerAppJob#min_executions}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScale.property.pollingIntervalInSeconds">pollingIntervalInSeconds</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#polling_interval_in_seconds ContainerAppJob#polling_interval_in_seconds}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScale.property.rules">rules</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRules">ContainerAppJobEventTriggerConfigScaleRules</a>[]</code> | rules block. |
 
 ---
@@ -1774,7 +1660,7 @@ public readonly maxExecutions: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#max_executions ContainerAppJob#max_executions}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#max_executions ContainerAppJob#max_executions}.
 
 ---
 
@@ -1786,7 +1672,7 @@ public readonly minExecutions: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#min_executions ContainerAppJob#min_executions}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#min_executions ContainerAppJob#min_executions}.
 
 ---
 
@@ -1798,7 +1684,7 @@ public readonly pollingIntervalInSeconds: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#polling_interval_in_seconds ContainerAppJob#polling_interval_in_seconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#polling_interval_in_seconds ContainerAppJob#polling_interval_in_seconds}.
 
 ---
 
@@ -1812,7 +1698,7 @@ public readonly rules: IResolvable | ContainerAppJobEventTriggerConfigScaleRules
 
 rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#rules ContainerAppJob#rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#rules ContainerAppJob#rules}
 
 ---
 
@@ -1830,9 +1716,9 @@ const containerAppJobEventTriggerConfigScaleRules: containerAppJob.ContainerAppJ
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRules.property.customRuleType">customRuleType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#custom_rule_type ContainerAppJob#custom_rule_type}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRules.property.metadata">metadata</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#metadata ContainerAppJob#metadata}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRules.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRules.property.customRuleType">customRuleType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#custom_rule_type ContainerAppJob#custom_rule_type}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRules.property.metadata">metadata</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#metadata ContainerAppJob#metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRules.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRules.property.authentication">authentication</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRulesAuthentication">ContainerAppJobEventTriggerConfigScaleRulesAuthentication</a>[]</code> | authentication block. |
 
 ---
@@ -1845,7 +1731,7 @@ public readonly customRuleType: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#custom_rule_type ContainerAppJob#custom_rule_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#custom_rule_type ContainerAppJob#custom_rule_type}.
 
 ---
 
@@ -1857,7 +1743,7 @@ public readonly metadata: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#metadata ContainerAppJob#metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#metadata ContainerAppJob#metadata}.
 
 ---
 
@@ -1869,7 +1755,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}.
 
 ---
 
@@ -1883,7 +1769,7 @@ public readonly authentication: IResolvable | ContainerAppJobEventTriggerConfigS
 
 authentication block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#authentication ContainerAppJob#authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#authentication ContainerAppJob#authentication}
 
 ---
 
@@ -1901,8 +1787,8 @@ const containerAppJobEventTriggerConfigScaleRulesAuthentication: containerAppJob
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRulesAuthentication.property.secretName">secretName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#secret_name ContainerAppJob#secret_name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRulesAuthentication.property.triggerParameter">triggerParameter</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#trigger_parameter ContainerAppJob#trigger_parameter}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRulesAuthentication.property.secretName">secretName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#secret_name ContainerAppJob#secret_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRulesAuthentication.property.triggerParameter">triggerParameter</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#trigger_parameter ContainerAppJob#trigger_parameter}. |
 
 ---
 
@@ -1914,7 +1800,7 @@ public readonly secretName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#secret_name ContainerAppJob#secret_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#secret_name ContainerAppJob#secret_name}.
 
 ---
 
@@ -1926,7 +1812,7 @@ public readonly triggerParameter: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#trigger_parameter ContainerAppJob#trigger_parameter}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#trigger_parameter ContainerAppJob#trigger_parameter}.
 
 ---
 
@@ -1944,8 +1830,8 @@ const containerAppJobIdentity: containerAppJob.ContainerAppJobIdentity = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobIdentity.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#type ContainerAppJob#type}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobIdentity.property.identityIds">identityIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#identity_ids ContainerAppJob#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobIdentity.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#type ContainerAppJob#type}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobIdentity.property.identityIds">identityIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#identity_ids ContainerAppJob#identity_ids}. |
 
 ---
 
@@ -1957,7 +1843,7 @@ public readonly type: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#type ContainerAppJob#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#type ContainerAppJob#type}.
 
 ---
 
@@ -1969,7 +1855,7 @@ public readonly identityIds: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#identity_ids ContainerAppJob#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#identity_ids ContainerAppJob#identity_ids}.
 
 ---
 
@@ -1987,8 +1873,8 @@ const containerAppJobManualTriggerConfig: containerAppJob.ContainerAppJobManualT
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobManualTriggerConfig.property.parallelism">parallelism</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#parallelism ContainerAppJob#parallelism}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobManualTriggerConfig.property.replicaCompletionCount">replicaCompletionCount</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#replica_completion_count ContainerAppJob#replica_completion_count}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobManualTriggerConfig.property.parallelism">parallelism</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#parallelism ContainerAppJob#parallelism}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobManualTriggerConfig.property.replicaCompletionCount">replicaCompletionCount</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#replica_completion_count ContainerAppJob#replica_completion_count}. |
 
 ---
 
@@ -2000,7 +1886,7 @@ public readonly parallelism: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#parallelism ContainerAppJob#parallelism}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#parallelism ContainerAppJob#parallelism}.
 
 ---
 
@@ -2012,84 +1898,7 @@ public readonly replicaCompletionCount: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#replica_completion_count ContainerAppJob#replica_completion_count}.
-
----
-
-### ContainerAppJobRegistries <a name="ContainerAppJobRegistries" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries"></a>
-
-#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries.Initializer"></a>
-
-```typescript
-import { containerAppJob } from '@cdktf/provider-azurerm'
-
-const containerAppJobRegistries: containerAppJob.ContainerAppJobRegistries = { ... }
-```
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries.property.server">server</a></code> | <code>string</code> | The hostname for the Container Registry. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries.property.identity">identity</a></code> | <code>string</code> | ID of the System or User Managed Identity used to pull images from the Container Registry. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries.property.passwordSecretName">passwordSecretName</a></code> | <code>string</code> | The name of the Secret Reference containing the password value for this user on the Container Registry. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries.property.username">username</a></code> | <code>string</code> | The username to use for this Container Registry. |
-
----
-
-##### `server`<sup>Required</sup> <a name="server" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries.property.server"></a>
-
-```typescript
-public readonly server: string;
-```
-
-- *Type:* string
-
-The hostname for the Container Registry.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#server ContainerAppJob#server}
-
----
-
-##### `identity`<sup>Optional</sup> <a name="identity" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries.property.identity"></a>
-
-```typescript
-public readonly identity: string;
-```
-
-- *Type:* string
-
-ID of the System or User Managed Identity used to pull images from the Container Registry.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#identity ContainerAppJob#identity}
-
----
-
-##### `passwordSecretName`<sup>Optional</sup> <a name="passwordSecretName" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries.property.passwordSecretName"></a>
-
-```typescript
-public readonly passwordSecretName: string;
-```
-
-- *Type:* string
-
-The name of the Secret Reference containing the password value for this user on the Container Registry.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#password_secret_name ContainerAppJob#password_secret_name}
-
----
-
-##### `username`<sup>Optional</sup> <a name="username" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries.property.username"></a>
-
-```typescript
-public readonly username: string;
-```
-
-- *Type:* string
-
-The username to use for this Container Registry.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#username ContainerAppJob#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#replica_completion_count ContainerAppJob#replica_completion_count}.
 
 ---
 
@@ -2124,7 +1933,7 @@ public readonly server: string;
 
 The hostname for the Container Registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#server ContainerAppJob#server}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#server ContainerAppJob#server}
 
 ---
 
@@ -2138,7 +1947,7 @@ public readonly identity: string;
 
 ID of the System or User Managed Identity used to pull images from the Container Registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#identity ContainerAppJob#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#identity ContainerAppJob#identity}
 
 ---
 
@@ -2152,7 +1961,7 @@ public readonly passwordSecretName: string;
 
 The name of the Secret Reference containing the password value for this user on the Container Registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#password_secret_name ContainerAppJob#password_secret_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#password_secret_name ContainerAppJob#password_secret_name}
 
 ---
 
@@ -2166,7 +1975,7 @@ public readonly username: string;
 
 The username to use for this Container Registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#username ContainerAppJob#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#username ContainerAppJob#username}
 
 ---
 
@@ -2184,9 +1993,9 @@ const containerAppJobScheduleTriggerConfig: containerAppJob.ContainerAppJobSched
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobScheduleTriggerConfig.property.cronExpression">cronExpression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#cron_expression ContainerAppJob#cron_expression}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobScheduleTriggerConfig.property.parallelism">parallelism</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#parallelism ContainerAppJob#parallelism}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobScheduleTriggerConfig.property.replicaCompletionCount">replicaCompletionCount</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#replica_completion_count ContainerAppJob#replica_completion_count}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobScheduleTriggerConfig.property.cronExpression">cronExpression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#cron_expression ContainerAppJob#cron_expression}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobScheduleTriggerConfig.property.parallelism">parallelism</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#parallelism ContainerAppJob#parallelism}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobScheduleTriggerConfig.property.replicaCompletionCount">replicaCompletionCount</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#replica_completion_count ContainerAppJob#replica_completion_count}. |
 
 ---
 
@@ -2198,7 +2007,7 @@ public readonly cronExpression: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#cron_expression ContainerAppJob#cron_expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#cron_expression ContainerAppJob#cron_expression}.
 
 ---
 
@@ -2210,7 +2019,7 @@ public readonly parallelism: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#parallelism ContainerAppJob#parallelism}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#parallelism ContainerAppJob#parallelism}.
 
 ---
 
@@ -2222,7 +2031,7 @@ public readonly replicaCompletionCount: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#replica_completion_count ContainerAppJob#replica_completion_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#replica_completion_count ContainerAppJob#replica_completion_count}.
 
 ---
 
@@ -2257,7 +2066,7 @@ public readonly name: string;
 
 The secret name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}
 
 ---
 
@@ -2271,7 +2080,7 @@ public readonly identity: string;
 
 The identity to use for accessing key vault reference.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#identity ContainerAppJob#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#identity ContainerAppJob#identity}
 
 ---
 
@@ -2285,7 +2094,7 @@ public readonly keyVaultSecretId: string;
 
 The Key Vault Secret ID. Could be either one of `id` or `versionless_id`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#key_vault_secret_id ContainerAppJob#key_vault_secret_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#key_vault_secret_id ContainerAppJob#key_vault_secret_id}
 
 ---
 
@@ -2299,84 +2108,7 @@ public readonly value: string;
 
 The value for this secret.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#value ContainerAppJob#value}
-
----
-
-### ContainerAppJobSecrets <a name="ContainerAppJobSecrets" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets"></a>
-
-#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets.Initializer"></a>
-
-```typescript
-import { containerAppJob } from '@cdktf/provider-azurerm'
-
-const containerAppJobSecrets: containerAppJob.ContainerAppJobSecrets = { ... }
-```
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets.property.name">name</a></code> | <code>string</code> | The secret name. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets.property.identity">identity</a></code> | <code>string</code> | The identity to use for accessing key vault reference. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets.property.keyVaultSecretId">keyVaultSecretId</a></code> | <code>string</code> | The Key Vault Secret ID. Could be either one of `id` or `versionless_id`. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets.property.value">value</a></code> | <code>string</code> | The value for this secret. |
-
----
-
-##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets.property.name"></a>
-
-```typescript
-public readonly name: string;
-```
-
-- *Type:* string
-
-The secret name.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}
-
----
-
-##### `identity`<sup>Optional</sup> <a name="identity" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets.property.identity"></a>
-
-```typescript
-public readonly identity: string;
-```
-
-- *Type:* string
-
-The identity to use for accessing key vault reference.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#identity ContainerAppJob#identity}
-
----
-
-##### `keyVaultSecretId`<sup>Optional</sup> <a name="keyVaultSecretId" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets.property.keyVaultSecretId"></a>
-
-```typescript
-public readonly keyVaultSecretId: string;
-```
-
-- *Type:* string
-
-The Key Vault Secret ID. Could be either one of `id` or `versionless_id`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#key_vault_secret_id ContainerAppJob#key_vault_secret_id}
-
----
-
-##### `value`<sup>Optional</sup> <a name="value" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets.property.value"></a>
-
-```typescript
-public readonly value: string;
-```
-
-- *Type:* string
-
-The value for this secret.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#value ContainerAppJob#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#value ContainerAppJob#value}
 
 ---
 
@@ -2410,7 +2142,7 @@ public readonly container: IResolvable | ContainerAppJobTemplateContainer[];
 
 container block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#container ContainerAppJob#container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#container ContainerAppJob#container}
 
 ---
 
@@ -2424,7 +2156,7 @@ public readonly initContainer: IResolvable | ContainerAppJobTemplateInitContaine
 
 init_container block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#init_container ContainerAppJob#init_container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#init_container ContainerAppJob#init_container}
 
 ---
 
@@ -2438,7 +2170,7 @@ public readonly volume: IResolvable | ContainerAppJobTemplateVolume[];
 
 volume block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#volume ContainerAppJob#volume}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#volume ContainerAppJob#volume}
 
 ---
 
@@ -2482,7 +2214,7 @@ The amount of vCPU to allocate to the container.
 
 Possible values include `0.25`, `0.5`, `0.75`, `1.0`, `1.25`, `1.5`, `1.75`, and `2.0`. **NOTE:** `cpu` and `memory` must be specified in `0.25'/'0.5Gi` combination increments. e.g. `1.0` / `2.0` or `0.5` / `1.0`. When there's a workload profile specified, there's no such constraint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#cpu ContainerAppJob#cpu}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#cpu ContainerAppJob#cpu}
 
 ---
 
@@ -2496,7 +2228,7 @@ public readonly image: string;
 
 The image to use to create the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#image ContainerAppJob#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#image ContainerAppJob#image}
 
 ---
 
@@ -2512,7 +2244,7 @@ The amount of memory to allocate to the container.
 
 Possible values include `0.5Gi`, `1.0Gi`, `1.5Gi`, `2.0Gi`, `2.5Gi`, `3.0Gi`, `3.5Gi`, and `4.0Gi`. **NOTE:** `cpu` and `memory` must be specified in `0.25'/'0.5Gi` combination increments. e.g. `1.25` / `2.5Gi` or `0.75` / `1.5Gi`. When there's a workload profile specified, there's no such constraint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#memory ContainerAppJob#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#memory ContainerAppJob#memory}
 
 ---
 
@@ -2526,7 +2258,7 @@ public readonly name: string;
 
 The name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}
 
 ---
 
@@ -2540,7 +2272,7 @@ public readonly args: string[];
 
 A list of args to pass to the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#args ContainerAppJob#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#args ContainerAppJob#args}
 
 ---
 
@@ -2556,7 +2288,7 @@ A command to pass to the container to override the default.
 
 This is provided as a list of command line elements without spaces.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#command ContainerAppJob#command}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#command ContainerAppJob#command}
 
 ---
 
@@ -2570,7 +2302,7 @@ public readonly env: IResolvable | ContainerAppJobTemplateContainerEnv[];
 
 env block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#env ContainerAppJob#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#env ContainerAppJob#env}
 
 ---
 
@@ -2584,7 +2316,7 @@ public readonly livenessProbe: IResolvable | ContainerAppJobTemplateContainerLiv
 
 liveness_probe block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#liveness_probe ContainerAppJob#liveness_probe}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#liveness_probe ContainerAppJob#liveness_probe}
 
 ---
 
@@ -2598,7 +2330,7 @@ public readonly readinessProbe: IResolvable | ContainerAppJobTemplateContainerRe
 
 readiness_probe block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#readiness_probe ContainerAppJob#readiness_probe}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#readiness_probe ContainerAppJob#readiness_probe}
 
 ---
 
@@ -2612,7 +2344,7 @@ public readonly startupProbe: IResolvable | ContainerAppJobTemplateContainerStar
 
 startup_probe block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#startup_probe ContainerAppJob#startup_probe}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#startup_probe ContainerAppJob#startup_probe}
 
 ---
 
@@ -2626,7 +2358,7 @@ public readonly volumeMounts: IResolvable | ContainerAppJobTemplateContainerVolu
 
 volume_mounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#volume_mounts ContainerAppJob#volume_mounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#volume_mounts ContainerAppJob#volume_mounts}
 
 ---
 
@@ -2660,7 +2392,7 @@ public readonly name: string;
 
 The name of the environment variable for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}
 
 ---
 
@@ -2674,7 +2406,7 @@ public readonly secretName: string;
 
 The name of the secret that contains the value for this environment variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#secret_name ContainerAppJob#secret_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#secret_name ContainerAppJob#secret_name}
 
 ---
 
@@ -2688,7 +2420,7 @@ public readonly value: string;
 
 The value for this environment variable. **NOTE:** This value is ignored if `secret_name` is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#value ContainerAppJob#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#value ContainerAppJob#value}
 
 ---
 
@@ -2728,7 +2460,7 @@ public readonly port: number;
 
 The port number on which to connect. Possible values are between `1` and `65535`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#port ContainerAppJob#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#port ContainerAppJob#port}
 
 ---
 
@@ -2742,7 +2474,7 @@ public readonly transport: string;
 
 Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#transport ContainerAppJob#transport}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#transport ContainerAppJob#transport}
 
 ---
 
@@ -2758,7 +2490,7 @@ The number of consecutive failures required to consider this probe as failed.
 
 Possible values are between `1` and `10`. Defaults to `3`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#failure_count_threshold ContainerAppJob#failure_count_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#failure_count_threshold ContainerAppJob#failure_count_threshold}
 
 ---
 
@@ -2772,7 +2504,7 @@ public readonly header: IResolvable | ContainerAppJobTemplateContainerLivenessPr
 
 header block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#header ContainerAppJob#header}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#header ContainerAppJob#header}
 
 ---
 
@@ -2788,7 +2520,7 @@ The probe hostname.
 
 Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#host ContainerAppJob#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#host ContainerAppJob#host}
 
 ---
 
@@ -2802,7 +2534,7 @@ public readonly initialDelay: number;
 
 The time in seconds to wait after the container has started before the probe is started.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#initial_delay ContainerAppJob#initial_delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#initial_delay ContainerAppJob#initial_delay}
 
 ---
 
@@ -2816,7 +2548,7 @@ public readonly intervalSeconds: number;
 
 How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#interval_seconds ContainerAppJob#interval_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#interval_seconds ContainerAppJob#interval_seconds}
 
 ---
 
@@ -2832,7 +2564,7 @@ The URI to use with the `host` for http type probes.
 
 Not valid for `TCP` type probes. Defaults to `/`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#path ContainerAppJob#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#path ContainerAppJob#path}
 
 ---
 
@@ -2846,7 +2578,7 @@ public readonly timeout: number;
 
 Time in seconds after which the probe times out. Possible values are between `1` an `240`. Defaults to `1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#timeout ContainerAppJob#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#timeout ContainerAppJob#timeout}
 
 ---
 
@@ -2879,7 +2611,7 @@ public readonly name: string;
 
 The HTTP Header Name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}
 
 ---
 
@@ -2893,7 +2625,7 @@ public readonly value: string;
 
 The HTTP Header value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#value ContainerAppJob#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#value ContainerAppJob#value}
 
 ---
 
@@ -2933,7 +2665,7 @@ public readonly port: number;
 
 The port number on which to connect. Possible values are between `1` and `65535`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#port ContainerAppJob#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#port ContainerAppJob#port}
 
 ---
 
@@ -2947,7 +2679,7 @@ public readonly transport: string;
 
 Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#transport ContainerAppJob#transport}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#transport ContainerAppJob#transport}
 
 ---
 
@@ -2963,7 +2695,7 @@ The number of consecutive failures required to consider this probe as failed.
 
 Possible values are between `1` and `10`. Defaults to `3`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#failure_count_threshold ContainerAppJob#failure_count_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#failure_count_threshold ContainerAppJob#failure_count_threshold}
 
 ---
 
@@ -2977,7 +2709,7 @@ public readonly header: IResolvable | ContainerAppJobTemplateContainerReadinessP
 
 header block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#header ContainerAppJob#header}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#header ContainerAppJob#header}
 
 ---
 
@@ -2993,7 +2725,7 @@ The probe hostname.
 
 Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#host ContainerAppJob#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#host ContainerAppJob#host}
 
 ---
 
@@ -3007,7 +2739,7 @@ public readonly intervalSeconds: number;
 
 How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#interval_seconds ContainerAppJob#interval_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#interval_seconds ContainerAppJob#interval_seconds}
 
 ---
 
@@ -3021,7 +2753,7 @@ public readonly path: string;
 
 The URI to use for http type probes. Not valid for `TCP` type probes. Defaults to `/`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#path ContainerAppJob#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#path ContainerAppJob#path}
 
 ---
 
@@ -3037,7 +2769,7 @@ The number of consecutive successful responses required to consider this probe a
 
 Possible values are between `1` and `10`. Defaults to `3`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#success_count_threshold ContainerAppJob#success_count_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#success_count_threshold ContainerAppJob#success_count_threshold}
 
 ---
 
@@ -3051,7 +2783,7 @@ public readonly timeout: number;
 
 Time in seconds after which the probe times out. Possible values are between `1` an `240`. Defaults to `1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#timeout ContainerAppJob#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#timeout ContainerAppJob#timeout}
 
 ---
 
@@ -3084,7 +2816,7 @@ public readonly name: string;
 
 The HTTP Header Name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}
 
 ---
 
@@ -3098,7 +2830,7 @@ public readonly value: string;
 
 The HTTP Header value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#value ContainerAppJob#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#value ContainerAppJob#value}
 
 ---
 
@@ -3137,7 +2869,7 @@ public readonly port: number;
 
 The port number on which to connect. Possible values are between `1` and `65535`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#port ContainerAppJob#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#port ContainerAppJob#port}
 
 ---
 
@@ -3151,7 +2883,7 @@ public readonly transport: string;
 
 Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#transport ContainerAppJob#transport}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#transport ContainerAppJob#transport}
 
 ---
 
@@ -3167,7 +2899,7 @@ The number of consecutive failures required to consider this probe as failed.
 
 Possible values are between `1` and `10`. Defaults to `3`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#failure_count_threshold ContainerAppJob#failure_count_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#failure_count_threshold ContainerAppJob#failure_count_threshold}
 
 ---
 
@@ -3181,7 +2913,7 @@ public readonly header: IResolvable | ContainerAppJobTemplateContainerStartupPro
 
 header block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#header ContainerAppJob#header}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#header ContainerAppJob#header}
 
 ---
 
@@ -3197,7 +2929,7 @@ The probe hostname.
 
 Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#host ContainerAppJob#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#host ContainerAppJob#host}
 
 ---
 
@@ -3211,7 +2943,7 @@ public readonly intervalSeconds: number;
 
 How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#interval_seconds ContainerAppJob#interval_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#interval_seconds ContainerAppJob#interval_seconds}
 
 ---
 
@@ -3227,7 +2959,7 @@ The URI to use with the `host` for http type probes.
 
 Not valid for `TCP` type probes. Defaults to `/`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#path ContainerAppJob#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#path ContainerAppJob#path}
 
 ---
 
@@ -3241,7 +2973,7 @@ public readonly timeout: number;
 
 Time in seconds after which the probe times out. Possible values are between `1` an `240`. Defaults to `1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#timeout ContainerAppJob#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#timeout ContainerAppJob#timeout}
 
 ---
 
@@ -3274,7 +3006,7 @@ public readonly name: string;
 
 The HTTP Header Name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}
 
 ---
 
@@ -3288,7 +3020,7 @@ public readonly value: string;
 
 The HTTP Header value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#value ContainerAppJob#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#value ContainerAppJob#value}
 
 ---
 
@@ -3321,7 +3053,7 @@ public readonly name: string;
 
 The name of the Volume to be mounted in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}
 
 ---
 
@@ -3335,7 +3067,7 @@ public readonly path: string;
 
 The path in the container at which to mount this volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#path ContainerAppJob#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#path ContainerAppJob#path}
 
 ---
 
@@ -3374,7 +3106,7 @@ public readonly image: string;
 
 The image to use to create the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#image ContainerAppJob#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#image ContainerAppJob#image}
 
 ---
 
@@ -3388,7 +3120,7 @@ public readonly name: string;
 
 The name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}
 
 ---
 
@@ -3402,7 +3134,7 @@ public readonly args: string[];
 
 A list of args to pass to the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#args ContainerAppJob#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#args ContainerAppJob#args}
 
 ---
 
@@ -3418,7 +3150,7 @@ A command to pass to the container to override the default.
 
 This is provided as a list of command line elements without spaces.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#command ContainerAppJob#command}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#command ContainerAppJob#command}
 
 ---
 
@@ -3434,7 +3166,7 @@ The amount of vCPU to allocate to the container.
 
 Possible values include `0.25`, `0.5`, `0.75`, `1.0`, `1.25`, `1.5`, `1.75`, and `2.0`. **NOTE:** `cpu` and `memory` must be specified in `0.25'/'0.5Gi` combination increments. e.g. `1.0` / `2.0` or `0.5` / `1.0`. When there's a workload profile specified, there's no such constraint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#cpu ContainerAppJob#cpu}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#cpu ContainerAppJob#cpu}
 
 ---
 
@@ -3448,7 +3180,7 @@ public readonly env: IResolvable | ContainerAppJobTemplateInitContainerEnv[];
 
 env block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#env ContainerAppJob#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#env ContainerAppJob#env}
 
 ---
 
@@ -3464,7 +3196,7 @@ The amount of memory to allocate to the container.
 
 Possible values include `0.5Gi`, `1.0Gi`, `1.5Gi`, `2.0Gi`, `2.5Gi`, `3.0Gi`, `3.5Gi`, and `4.0Gi`. **NOTE:** `cpu` and `memory` must be specified in `0.25'/'0.5Gi` combination increments. e.g. `1.25` / `2.5Gi` or `0.75` / `1.5Gi`. When there's a workload profile specified, there's no such constraint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#memory ContainerAppJob#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#memory ContainerAppJob#memory}
 
 ---
 
@@ -3478,7 +3210,7 @@ public readonly volumeMounts: IResolvable | ContainerAppJobTemplateInitContainer
 
 volume_mounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#volume_mounts ContainerAppJob#volume_mounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#volume_mounts ContainerAppJob#volume_mounts}
 
 ---
 
@@ -3512,7 +3244,7 @@ public readonly name: string;
 
 The name of the environment variable for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}
 
 ---
 
@@ -3526,7 +3258,7 @@ public readonly secretName: string;
 
 The name of the secret that contains the value for this environment variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#secret_name ContainerAppJob#secret_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#secret_name ContainerAppJob#secret_name}
 
 ---
 
@@ -3540,7 +3272,7 @@ public readonly value: string;
 
 The value for this environment variable. **NOTE:** This value is ignored if `secret_name` is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#value ContainerAppJob#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#value ContainerAppJob#value}
 
 ---
 
@@ -3573,7 +3305,7 @@ public readonly name: string;
 
 The name of the Volume to be mounted in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}
 
 ---
 
@@ -3587,7 +3319,7 @@ public readonly path: string;
 
 The path in the container at which to mount this volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#path ContainerAppJob#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#path ContainerAppJob#path}
 
 ---
 
@@ -3621,7 +3353,7 @@ public readonly name: string;
 
 The name of the volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#name ContainerAppJob#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#name ContainerAppJob#name}
 
 ---
 
@@ -3635,7 +3367,7 @@ public readonly storageName: string;
 
 The name of the `AzureFile` storage. Required when `storage_type` is `AzureFile`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#storage_name ContainerAppJob#storage_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#storage_name ContainerAppJob#storage_name}
 
 ---
 
@@ -3649,7 +3381,7 @@ public readonly storageType: string;
 
 The type of storage volume. Possible values include `AzureFile` and `EmptyDir`. Defaults to `EmptyDir`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#storage_type ContainerAppJob#storage_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#storage_type ContainerAppJob#storage_type}
 
 ---
 
@@ -3667,10 +3399,10 @@ const containerAppJobTimeouts: containerAppJob.ContainerAppJobTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#create ContainerAppJob#create}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#delete ContainerAppJob#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#read ContainerAppJob#read}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#update ContainerAppJob#update}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#create ContainerAppJob#create}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#delete ContainerAppJob#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#read ContainerAppJob#read}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#update ContainerAppJob#update}. |
 
 ---
 
@@ -3682,7 +3414,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#create ContainerAppJob#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#create ContainerAppJob#create}.
 
 ---
 
@@ -3694,7 +3426,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#delete ContainerAppJob#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#delete ContainerAppJob#delete}.
 
 ---
 
@@ -3706,7 +3438,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#read ContainerAppJob#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#read ContainerAppJob#read}.
 
 ---
 
@@ -3718,7 +3450,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/container_app_job#update ContainerAppJob#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/container_app_job#update ContainerAppJob#update}.
 
 ---
 
@@ -6264,542 +5996,6 @@ public readonly internalValue: ContainerAppJobManualTriggerConfig;
 ---
 
 
-### ContainerAppJobRegistriesList <a name="ContainerAppJobRegistriesList" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList"></a>
-
-#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.Initializer"></a>
-
-```typescript
-import { containerAppJob } from '@cdktf/provider-azurerm'
-
-new containerAppJob.ContainerAppJobRegistriesList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
-```
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
-
----
-
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.Initializer.parameter.terraformResource"></a>
-
-- *Type:* cdktf.IInterpolatingParent
-
-The parent resource.
-
----
-
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.Initializer.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
-The attribute on the parent resource this class is referencing.
-
----
-
-##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.Initializer.parameter.wrapsSet"></a>
-
-- *Type:* boolean
-
-whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
-
----
-
-#### Methods <a name="Methods" id="Methods"></a>
-
-| **Name** | **Description** |
-| --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.computeFqn">computeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.toString">toString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.get">get</a></code> | *No description.* |
-
----
-
-##### `allWithMapKey` <a name="allWithMapKey" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.allWithMapKey"></a>
-
-```typescript
-public allWithMapKey(mapKeyAttributeName: string): DynamicListTerraformIterator
-```
-
-Creating an iterator for this complex list.
-
-The list will be converted into a map with the mapKeyAttributeName as the key.
-
-###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.allWithMapKey.parameter.mapKeyAttributeName"></a>
-
-- *Type:* string
-
----
-
-##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.computeFqn"></a>
-
-```typescript
-public computeFqn(): string
-```
-
-##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.resolve"></a>
-
-```typescript
-public resolve(_context: IResolveContext): any
-```
-
-Produce the Token's value at resolution time.
-
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.resolve.parameter._context"></a>
-
-- *Type:* cdktf.IResolveContext
-
----
-
-##### `toString` <a name="toString" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.toString"></a>
-
-```typescript
-public toString(): string
-```
-
-Return a string representation of this resolvable object.
-
-Returns a reversible string representation.
-
-##### `get` <a name="get" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.get"></a>
-
-```typescript
-public get(index: number): ContainerAppJobRegistriesOutputReference
-```
-
-###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.get.parameter.index"></a>
-
-- *Type:* number
-
-the index of the item to return.
-
----
-
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries">ContainerAppJobRegistries</a>[]</code> | *No description.* |
-
----
-
-##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.property.creationStack"></a>
-
-```typescript
-public readonly creationStack: string[];
-```
-
-- *Type:* string[]
-
-The creation stack of this resolvable which will be appended to errors thrown during resolution.
-
-If this returns an empty array the stack will not be attached.
-
----
-
-##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.property.fqn"></a>
-
-```typescript
-public readonly fqn: string;
-```
-
-- *Type:* string
-
----
-
-##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesList.property.internalValue"></a>
-
-```typescript
-public readonly internalValue: IResolvable | ContainerAppJobRegistries[];
-```
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries">ContainerAppJobRegistries</a>[]
-
----
-
-
-### ContainerAppJobRegistriesOutputReference <a name="ContainerAppJobRegistriesOutputReference" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference"></a>
-
-#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.Initializer"></a>
-
-```typescript
-import { containerAppJob } from '@cdktf/provider-azurerm'
-
-new containerAppJob.ContainerAppJobRegistriesOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
-```
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>number</code> | the index of this item in the list. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
-
----
-
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.Initializer.parameter.terraformResource"></a>
-
-- *Type:* cdktf.IInterpolatingParent
-
-The parent resource.
-
----
-
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.Initializer.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
-The attribute on the parent resource this class is referencing.
-
----
-
-##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.Initializer.parameter.complexObjectIndex"></a>
-
-- *Type:* number
-
-the index of this item in the list.
-
----
-
-##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
-
-- *Type:* boolean
-
-whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
-
----
-
-#### Methods <a name="Methods" id="Methods"></a>
-
-| **Name** | **Description** |
-| --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.resetIdentity">resetIdentity</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.resetPasswordSecretName">resetPasswordSecretName</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.resetUsername">resetUsername</a></code> | *No description.* |
-
----
-
-##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.computeFqn"></a>
-
-```typescript
-public computeFqn(): string
-```
-
-##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getAnyMapAttribute"></a>
-
-```typescript
-public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getBooleanAttribute"></a>
-
-```typescript
-public getBooleanAttribute(terraformAttribute: string): IResolvable
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getBooleanMapAttribute"></a>
-
-```typescript
-public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getListAttribute"></a>
-
-```typescript
-public getListAttribute(terraformAttribute: string): string[]
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getListAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getNumberAttribute"></a>
-
-```typescript
-public getNumberAttribute(terraformAttribute: string): number
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getNumberListAttribute"></a>
-
-```typescript
-public getNumberListAttribute(terraformAttribute: string): number[]
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getNumberMapAttribute"></a>
-
-```typescript
-public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getStringAttribute"></a>
-
-```typescript
-public getStringAttribute(terraformAttribute: string): string
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getStringMapAttribute"></a>
-
-```typescript
-public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.interpolationForAttribute"></a>
-
-```typescript
-public interpolationForAttribute(property: string): IResolvable
-```
-
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.interpolationForAttribute.parameter.property"></a>
-
-- *Type:* string
-
----
-
-##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.resolve"></a>
-
-```typescript
-public resolve(_context: IResolveContext): any
-```
-
-Produce the Token's value at resolution time.
-
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.resolve.parameter._context"></a>
-
-- *Type:* cdktf.IResolveContext
-
----
-
-##### `toString` <a name="toString" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.toString"></a>
-
-```typescript
-public toString(): string
-```
-
-Return a string representation of this resolvable object.
-
-Returns a reversible string representation.
-
-##### `resetIdentity` <a name="resetIdentity" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.resetIdentity"></a>
-
-```typescript
-public resetIdentity(): void
-```
-
-##### `resetPasswordSecretName` <a name="resetPasswordSecretName" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.resetPasswordSecretName"></a>
-
-```typescript
-public resetPasswordSecretName(): void
-```
-
-##### `resetUsername` <a name="resetUsername" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.resetUsername"></a>
-
-```typescript
-public resetUsername(): void
-```
-
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.identityInput">identityInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.passwordSecretNameInput">passwordSecretNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.serverInput">serverInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.usernameInput">usernameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.identity">identity</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.passwordSecretName">passwordSecretName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.server">server</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.username">username</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries">ContainerAppJobRegistries</a></code> | *No description.* |
-
----
-
-##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.creationStack"></a>
-
-```typescript
-public readonly creationStack: string[];
-```
-
-- *Type:* string[]
-
-The creation stack of this resolvable which will be appended to errors thrown during resolution.
-
-If this returns an empty array the stack will not be attached.
-
----
-
-##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.fqn"></a>
-
-```typescript
-public readonly fqn: string;
-```
-
-- *Type:* string
-
----
-
-##### `identityInput`<sup>Optional</sup> <a name="identityInput" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.identityInput"></a>
-
-```typescript
-public readonly identityInput: string;
-```
-
-- *Type:* string
-
----
-
-##### `passwordSecretNameInput`<sup>Optional</sup> <a name="passwordSecretNameInput" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.passwordSecretNameInput"></a>
-
-```typescript
-public readonly passwordSecretNameInput: string;
-```
-
-- *Type:* string
-
----
-
-##### `serverInput`<sup>Optional</sup> <a name="serverInput" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.serverInput"></a>
-
-```typescript
-public readonly serverInput: string;
-```
-
-- *Type:* string
-
----
-
-##### `usernameInput`<sup>Optional</sup> <a name="usernameInput" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.usernameInput"></a>
-
-```typescript
-public readonly usernameInput: string;
-```
-
-- *Type:* string
-
----
-
-##### `identity`<sup>Required</sup> <a name="identity" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.identity"></a>
-
-```typescript
-public readonly identity: string;
-```
-
-- *Type:* string
-
----
-
-##### `passwordSecretName`<sup>Required</sup> <a name="passwordSecretName" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.passwordSecretName"></a>
-
-```typescript
-public readonly passwordSecretName: string;
-```
-
-- *Type:* string
-
----
-
-##### `server`<sup>Required</sup> <a name="server" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.server"></a>
-
-```typescript
-public readonly server: string;
-```
-
-- *Type:* string
-
----
-
-##### `username`<sup>Required</sup> <a name="username" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.username"></a>
-
-```typescript
-public readonly username: string;
-```
-
-- *Type:* string
-
----
-
-##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistriesOutputReference.property.internalValue"></a>
-
-```typescript
-public readonly internalValue: IResolvable | ContainerAppJobRegistries;
-```
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistries">ContainerAppJobRegistries</a>
-
----
-
-
 ### ContainerAppJobRegistryList <a name="ContainerAppJobRegistryList" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistryList"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistryList.Initializer"></a>
@@ -8197,542 +7393,6 @@ public readonly internalValue: IResolvable | ContainerAppJobSecret;
 ```
 
 - *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecret">ContainerAppJobSecret</a>
-
----
-
-
-### ContainerAppJobSecretsList <a name="ContainerAppJobSecretsList" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList"></a>
-
-#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.Initializer"></a>
-
-```typescript
-import { containerAppJob } from '@cdktf/provider-azurerm'
-
-new containerAppJob.ContainerAppJobSecretsList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
-```
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
-
----
-
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.Initializer.parameter.terraformResource"></a>
-
-- *Type:* cdktf.IInterpolatingParent
-
-The parent resource.
-
----
-
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.Initializer.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
-The attribute on the parent resource this class is referencing.
-
----
-
-##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.Initializer.parameter.wrapsSet"></a>
-
-- *Type:* boolean
-
-whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
-
----
-
-#### Methods <a name="Methods" id="Methods"></a>
-
-| **Name** | **Description** |
-| --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.allWithMapKey">allWithMapKey</a></code> | Creating an iterator for this complex list. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.computeFqn">computeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.toString">toString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.get">get</a></code> | *No description.* |
-
----
-
-##### `allWithMapKey` <a name="allWithMapKey" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.allWithMapKey"></a>
-
-```typescript
-public allWithMapKey(mapKeyAttributeName: string): DynamicListTerraformIterator
-```
-
-Creating an iterator for this complex list.
-
-The list will be converted into a map with the mapKeyAttributeName as the key.
-
-###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
-
-- *Type:* string
-
----
-
-##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.computeFqn"></a>
-
-```typescript
-public computeFqn(): string
-```
-
-##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.resolve"></a>
-
-```typescript
-public resolve(_context: IResolveContext): any
-```
-
-Produce the Token's value at resolution time.
-
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.resolve.parameter._context"></a>
-
-- *Type:* cdktf.IResolveContext
-
----
-
-##### `toString` <a name="toString" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.toString"></a>
-
-```typescript
-public toString(): string
-```
-
-Return a string representation of this resolvable object.
-
-Returns a reversible string representation.
-
-##### `get` <a name="get" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.get"></a>
-
-```typescript
-public get(index: number): ContainerAppJobSecretsOutputReference
-```
-
-###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.get.parameter.index"></a>
-
-- *Type:* number
-
-the index of the item to return.
-
----
-
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets">ContainerAppJobSecrets</a>[]</code> | *No description.* |
-
----
-
-##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.property.creationStack"></a>
-
-```typescript
-public readonly creationStack: string[];
-```
-
-- *Type:* string[]
-
-The creation stack of this resolvable which will be appended to errors thrown during resolution.
-
-If this returns an empty array the stack will not be attached.
-
----
-
-##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.property.fqn"></a>
-
-```typescript
-public readonly fqn: string;
-```
-
-- *Type:* string
-
----
-
-##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsList.property.internalValue"></a>
-
-```typescript
-public readonly internalValue: IResolvable | ContainerAppJobSecrets[];
-```
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets">ContainerAppJobSecrets</a>[]
-
----
-
-
-### ContainerAppJobSecretsOutputReference <a name="ContainerAppJobSecretsOutputReference" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference"></a>
-
-#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.Initializer"></a>
-
-```typescript
-import { containerAppJob } from '@cdktf/provider-azurerm'
-
-new containerAppJob.ContainerAppJobSecretsOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
-```
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>number</code> | the index of this item in the list. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
-
----
-
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.Initializer.parameter.terraformResource"></a>
-
-- *Type:* cdktf.IInterpolatingParent
-
-The parent resource.
-
----
-
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.Initializer.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
-The attribute on the parent resource this class is referencing.
-
----
-
-##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.Initializer.parameter.complexObjectIndex"></a>
-
-- *Type:* number
-
-the index of this item in the list.
-
----
-
-##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
-
-- *Type:* boolean
-
-whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
-
----
-
-#### Methods <a name="Methods" id="Methods"></a>
-
-| **Name** | **Description** |
-| --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.resetIdentity">resetIdentity</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.resetKeyVaultSecretId">resetKeyVaultSecretId</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.resetValue">resetValue</a></code> | *No description.* |
-
----
-
-##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.computeFqn"></a>
-
-```typescript
-public computeFqn(): string
-```
-
-##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getAnyMapAttribute"></a>
-
-```typescript
-public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getBooleanAttribute"></a>
-
-```typescript
-public getBooleanAttribute(terraformAttribute: string): IResolvable
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getBooleanMapAttribute"></a>
-
-```typescript
-public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getListAttribute"></a>
-
-```typescript
-public getListAttribute(terraformAttribute: string): string[]
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getNumberAttribute"></a>
-
-```typescript
-public getNumberAttribute(terraformAttribute: string): number
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getNumberListAttribute"></a>
-
-```typescript
-public getNumberListAttribute(terraformAttribute: string): number[]
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getNumberMapAttribute"></a>
-
-```typescript
-public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getStringAttribute"></a>
-
-```typescript
-public getStringAttribute(terraformAttribute: string): string
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getStringMapAttribute"></a>
-
-```typescript
-public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
-```
-
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.interpolationForAttribute"></a>
-
-```typescript
-public interpolationForAttribute(property: string): IResolvable
-```
-
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.interpolationForAttribute.parameter.property"></a>
-
-- *Type:* string
-
----
-
-##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.resolve"></a>
-
-```typescript
-public resolve(_context: IResolveContext): any
-```
-
-Produce the Token's value at resolution time.
-
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.resolve.parameter._context"></a>
-
-- *Type:* cdktf.IResolveContext
-
----
-
-##### `toString` <a name="toString" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.toString"></a>
-
-```typescript
-public toString(): string
-```
-
-Return a string representation of this resolvable object.
-
-Returns a reversible string representation.
-
-##### `resetIdentity` <a name="resetIdentity" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.resetIdentity"></a>
-
-```typescript
-public resetIdentity(): void
-```
-
-##### `resetKeyVaultSecretId` <a name="resetKeyVaultSecretId" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.resetKeyVaultSecretId"></a>
-
-```typescript
-public resetKeyVaultSecretId(): void
-```
-
-##### `resetValue` <a name="resetValue" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.resetValue"></a>
-
-```typescript
-public resetValue(): void
-```
-
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.identityInput">identityInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.keyVaultSecretIdInput">keyVaultSecretIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.valueInput">valueInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.identity">identity</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.keyVaultSecretId">keyVaultSecretId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.value">value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets">ContainerAppJobSecrets</a></code> | *No description.* |
-
----
-
-##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.creationStack"></a>
-
-```typescript
-public readonly creationStack: string[];
-```
-
-- *Type:* string[]
-
-The creation stack of this resolvable which will be appended to errors thrown during resolution.
-
-If this returns an empty array the stack will not be attached.
-
----
-
-##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.fqn"></a>
-
-```typescript
-public readonly fqn: string;
-```
-
-- *Type:* string
-
----
-
-##### `identityInput`<sup>Optional</sup> <a name="identityInput" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.identityInput"></a>
-
-```typescript
-public readonly identityInput: string;
-```
-
-- *Type:* string
-
----
-
-##### `keyVaultSecretIdInput`<sup>Optional</sup> <a name="keyVaultSecretIdInput" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.keyVaultSecretIdInput"></a>
-
-```typescript
-public readonly keyVaultSecretIdInput: string;
-```
-
-- *Type:* string
-
----
-
-##### `nameInput`<sup>Optional</sup> <a name="nameInput" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.nameInput"></a>
-
-```typescript
-public readonly nameInput: string;
-```
-
-- *Type:* string
-
----
-
-##### `valueInput`<sup>Optional</sup> <a name="valueInput" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.valueInput"></a>
-
-```typescript
-public readonly valueInput: string;
-```
-
-- *Type:* string
-
----
-
-##### `identity`<sup>Required</sup> <a name="identity" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.identity"></a>
-
-```typescript
-public readonly identity: string;
-```
-
-- *Type:* string
-
----
-
-##### `keyVaultSecretId`<sup>Required</sup> <a name="keyVaultSecretId" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.keyVaultSecretId"></a>
-
-```typescript
-public readonly keyVaultSecretId: string;
-```
-
-- *Type:* string
-
----
-
-##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.name"></a>
-
-```typescript
-public readonly name: string;
-```
-
-- *Type:* string
-
----
-
-##### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.value"></a>
-
-```typescript
-public readonly value: string;
-```
-
-- *Type:* string
-
----
-
-##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretsOutputReference.property.internalValue"></a>
-
-```typescript
-public readonly internalValue: IResolvable | ContainerAppJobSecrets;
-```
-
-- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecrets">ContainerAppJobSecrets</a>
 
 ---
 

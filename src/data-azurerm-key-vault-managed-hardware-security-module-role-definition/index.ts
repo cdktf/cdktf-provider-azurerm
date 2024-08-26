@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/key_vault_managed_hardware_security_module_role_definition
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,28 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#id DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#id DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#managed_hsm_id DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#managed_hsm_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#managed_hsm_id DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#managed_hsm_id}
   */
-  readonly managedHsmId?: string;
+  readonly managedHsmId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#name DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#name DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#vault_base_url DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#vault_base_url}
-  */
-  readonly vaultBaseUrl?: string;
-  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#timeouts DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#timeouts DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#timeouts}
   */
   readonly timeouts?: DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeouts;
 }
@@ -130,7 +126,7 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionPermi
 }
 export interface DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#read DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#read DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition#read}
   */
   readonly read?: string;
 }
@@ -224,7 +220,7 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeo
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition azurerm_key_vault_managed_hardware_security_module_role_definition}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/key_vault_managed_hardware_security_module_role_definition azurerm_key_vault_managed_hardware_security_module_role_definition}
 */
 export class DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition extends cdktf.TerraformDataSource {
 
@@ -240,7 +236,7 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition exte
   * Generates CDKTF code for importing a DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition to import
-  * @param importFromId The id of the existing DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/key_vault_managed_hardware_security_module_role_definition#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -252,7 +248,7 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition exte
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/data-sources/key_vault_managed_hardware_security_module_role_definition azurerm_key_vault_managed_hardware_security_module_role_definition} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/key_vault_managed_hardware_security_module_role_definition azurerm_key_vault_managed_hardware_security_module_role_definition} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -263,8 +259,8 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition exte
       terraformResourceType: 'azurerm_key_vault_managed_hardware_security_module_role_definition',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -277,7 +273,6 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition exte
     this._id = config.id;
     this._managedHsmId = config.managedHsmId;
     this._name = config.name;
-    this._vaultBaseUrl = config.vaultBaseUrl;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -311,16 +306,13 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition exte
     return this._id;
   }
 
-  // managed_hsm_id - computed: true, optional: true, required: false
+  // managed_hsm_id - computed: false, optional: false, required: true
   private _managedHsmId?: string; 
   public get managedHsmId() {
     return this.getStringAttribute('managed_hsm_id');
   }
   public set managedHsmId(value: string) {
     this._managedHsmId = value;
-  }
-  public resetManagedHsmId() {
-    this._managedHsmId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get managedHsmIdInput() {
@@ -361,22 +353,6 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition exte
     return this.getStringAttribute('role_type');
   }
 
-  // vault_base_url - computed: true, optional: true, required: false
-  private _vaultBaseUrl?: string; 
-  public get vaultBaseUrl() {
-    return this.getStringAttribute('vault_base_url');
-  }
-  public set vaultBaseUrl(value: string) {
-    this._vaultBaseUrl = value;
-  }
-  public resetVaultBaseUrl() {
-    this._vaultBaseUrl = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get vaultBaseUrlInput() {
-    return this._vaultBaseUrl;
-  }
-
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -402,7 +378,6 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition exte
       id: cdktf.stringToTerraform(this._id),
       managed_hsm_id: cdktf.stringToTerraform(this._managedHsmId),
       name: cdktf.stringToTerraform(this._name),
-      vault_base_url: cdktf.stringToTerraform(this._vaultBaseUrl),
       timeouts: dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -423,12 +398,6 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition exte
       },
       name: {
         value: cdktf.stringToHclTerraform(this._name),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "string",
-      },
-      vault_base_url: {
-        value: cdktf.stringToHclTerraform(this._vaultBaseUrl),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

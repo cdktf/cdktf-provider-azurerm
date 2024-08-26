@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,134 +13,128 @@ import * as cdktf from 'cdktf';
 
 export interface SentinelAlertRuleScheduledConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#alert_rule_template_guid SentinelAlertRuleScheduled#alert_rule_template_guid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#alert_rule_template_guid SentinelAlertRuleScheduled#alert_rule_template_guid}
   */
   readonly alertRuleTemplateGuid?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#alert_rule_template_version SentinelAlertRuleScheduled#alert_rule_template_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#alert_rule_template_version SentinelAlertRuleScheduled#alert_rule_template_version}
   */
   readonly alertRuleTemplateVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#custom_details SentinelAlertRuleScheduled#custom_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#custom_details SentinelAlertRuleScheduled#custom_details}
   */
   readonly customDetails?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#description SentinelAlertRuleScheduled#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#description SentinelAlertRuleScheduled#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#display_name SentinelAlertRuleScheduled#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#display_name SentinelAlertRuleScheduled#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#enabled SentinelAlertRuleScheduled#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#enabled SentinelAlertRuleScheduled#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#id SentinelAlertRuleScheduled#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#id SentinelAlertRuleScheduled#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#log_analytics_workspace_id SentinelAlertRuleScheduled#log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#log_analytics_workspace_id SentinelAlertRuleScheduled#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#name SentinelAlertRuleScheduled#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#name SentinelAlertRuleScheduled#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#query SentinelAlertRuleScheduled#query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#query SentinelAlertRuleScheduled#query}
   */
   readonly query: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#query_frequency SentinelAlertRuleScheduled#query_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#query_frequency SentinelAlertRuleScheduled#query_frequency}
   */
   readonly queryFrequency?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#query_period SentinelAlertRuleScheduled#query_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#query_period SentinelAlertRuleScheduled#query_period}
   */
   readonly queryPeriod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#severity SentinelAlertRuleScheduled#severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#severity SentinelAlertRuleScheduled#severity}
   */
   readonly severity: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#suppression_duration SentinelAlertRuleScheduled#suppression_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#suppression_duration SentinelAlertRuleScheduled#suppression_duration}
   */
   readonly suppressionDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#suppression_enabled SentinelAlertRuleScheduled#suppression_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#suppression_enabled SentinelAlertRuleScheduled#suppression_enabled}
   */
   readonly suppressionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#tactics SentinelAlertRuleScheduled#tactics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#tactics SentinelAlertRuleScheduled#tactics}
   */
   readonly tactics?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#techniques SentinelAlertRuleScheduled#techniques}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#techniques SentinelAlertRuleScheduled#techniques}
   */
   readonly techniques?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#trigger_operator SentinelAlertRuleScheduled#trigger_operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#trigger_operator SentinelAlertRuleScheduled#trigger_operator}
   */
   readonly triggerOperator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#trigger_threshold SentinelAlertRuleScheduled#trigger_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#trigger_threshold SentinelAlertRuleScheduled#trigger_threshold}
   */
   readonly triggerThreshold?: number;
   /**
   * alert_details_override block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#alert_details_override SentinelAlertRuleScheduled#alert_details_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#alert_details_override SentinelAlertRuleScheduled#alert_details_override}
   */
   readonly alertDetailsOverride?: SentinelAlertRuleScheduledAlertDetailsOverride[] | cdktf.IResolvable;
   /**
   * entity_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#entity_mapping SentinelAlertRuleScheduled#entity_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#entity_mapping SentinelAlertRuleScheduled#entity_mapping}
   */
   readonly entityMapping?: SentinelAlertRuleScheduledEntityMapping[] | cdktf.IResolvable;
   /**
   * event_grouping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#event_grouping SentinelAlertRuleScheduled#event_grouping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#event_grouping SentinelAlertRuleScheduled#event_grouping}
   */
   readonly eventGrouping?: SentinelAlertRuleScheduledEventGrouping;
   /**
   * incident block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#incident SentinelAlertRuleScheduled#incident}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#incident SentinelAlertRuleScheduled#incident}
   */
   readonly incident?: SentinelAlertRuleScheduledIncident;
   /**
-  * incident_configuration block
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#incident_configuration SentinelAlertRuleScheduled#incident_configuration}
-  */
-  readonly incidentConfiguration?: SentinelAlertRuleScheduledIncidentConfiguration;
-  /**
   * sentinel_entity_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#sentinel_entity_mapping SentinelAlertRuleScheduled#sentinel_entity_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#sentinel_entity_mapping SentinelAlertRuleScheduled#sentinel_entity_mapping}
   */
   readonly sentinelEntityMapping?: SentinelAlertRuleScheduledSentinelEntityMapping[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#timeouts SentinelAlertRuleScheduled#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#timeouts SentinelAlertRuleScheduled#timeouts}
   */
   readonly timeouts?: SentinelAlertRuleScheduledTimeouts;
 }
 export interface SentinelAlertRuleScheduledAlertDetailsOverrideDynamicProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#name SentinelAlertRuleScheduled#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#name SentinelAlertRuleScheduled#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#value SentinelAlertRuleScheduled#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#value SentinelAlertRuleScheduled#value}
   */
   readonly value: string;
 }
@@ -279,25 +273,25 @@ export class SentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyList e
 }
 export interface SentinelAlertRuleScheduledAlertDetailsOverride {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#description_format SentinelAlertRuleScheduled#description_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#description_format SentinelAlertRuleScheduled#description_format}
   */
   readonly descriptionFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#display_name_format SentinelAlertRuleScheduled#display_name_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#display_name_format SentinelAlertRuleScheduled#display_name_format}
   */
   readonly displayNameFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#severity_column_name SentinelAlertRuleScheduled#severity_column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#severity_column_name SentinelAlertRuleScheduled#severity_column_name}
   */
   readonly severityColumnName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#tactics_column_name SentinelAlertRuleScheduled#tactics_column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#tactics_column_name SentinelAlertRuleScheduled#tactics_column_name}
   */
   readonly tacticsColumnName?: string;
   /**
   * dynamic_property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#dynamic_property SentinelAlertRuleScheduled#dynamic_property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#dynamic_property SentinelAlertRuleScheduled#dynamic_property}
   */
   readonly dynamicProperty?: SentinelAlertRuleScheduledAlertDetailsOverrideDynamicProperty[] | cdktf.IResolvable;
 }
@@ -529,11 +523,11 @@ export class SentinelAlertRuleScheduledAlertDetailsOverrideList extends cdktf.Co
 }
 export interface SentinelAlertRuleScheduledEntityMappingFieldMapping {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#column_name SentinelAlertRuleScheduled#column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#column_name SentinelAlertRuleScheduled#column_name}
   */
   readonly columnName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#identifier SentinelAlertRuleScheduled#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#identifier SentinelAlertRuleScheduled#identifier}
   */
   readonly identifier: string;
 }
@@ -672,13 +666,13 @@ export class SentinelAlertRuleScheduledEntityMappingFieldMappingList extends cdk
 }
 export interface SentinelAlertRuleScheduledEntityMapping {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#entity_type SentinelAlertRuleScheduled#entity_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#entity_type SentinelAlertRuleScheduled#entity_type}
   */
   readonly entityType: string;
   /**
   * field_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#field_mapping SentinelAlertRuleScheduled#field_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#field_mapping SentinelAlertRuleScheduled#field_mapping}
   */
   readonly fieldMapping: SentinelAlertRuleScheduledEntityMappingFieldMapping[] | cdktf.IResolvable;
 }
@@ -817,7 +811,7 @@ export class SentinelAlertRuleScheduledEntityMappingList extends cdktf.ComplexLi
 }
 export interface SentinelAlertRuleScheduledEventGrouping {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#aggregation_method SentinelAlertRuleScheduled#aggregation_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#aggregation_method SentinelAlertRuleScheduled#aggregation_method}
   */
   readonly aggregationMethod: string;
 }
@@ -898,31 +892,31 @@ export class SentinelAlertRuleScheduledEventGroupingOutputReference extends cdkt
 }
 export interface SentinelAlertRuleScheduledIncidentGrouping {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#by_alert_details SentinelAlertRuleScheduled#by_alert_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#by_alert_details SentinelAlertRuleScheduled#by_alert_details}
   */
   readonly byAlertDetails?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#by_custom_details SentinelAlertRuleScheduled#by_custom_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#by_custom_details SentinelAlertRuleScheduled#by_custom_details}
   */
   readonly byCustomDetails?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#by_entities SentinelAlertRuleScheduled#by_entities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#by_entities SentinelAlertRuleScheduled#by_entities}
   */
   readonly byEntities?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#enabled SentinelAlertRuleScheduled#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#enabled SentinelAlertRuleScheduled#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#entity_matching_method SentinelAlertRuleScheduled#entity_matching_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#entity_matching_method SentinelAlertRuleScheduled#entity_matching_method}
   */
   readonly entityMatchingMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#lookback_duration SentinelAlertRuleScheduled#lookback_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#lookback_duration SentinelAlertRuleScheduled#lookback_duration}
   */
   readonly lookbackDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#reopen_closed_incidents SentinelAlertRuleScheduled#reopen_closed_incidents}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#reopen_closed_incidents SentinelAlertRuleScheduled#reopen_closed_incidents}
   */
   readonly reopenClosedIncidents?: boolean | cdktf.IResolvable;
 }
@@ -1180,13 +1174,13 @@ export class SentinelAlertRuleScheduledIncidentGroupingOutputReference extends c
 }
 export interface SentinelAlertRuleScheduledIncident {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#create_incident_enabled SentinelAlertRuleScheduled#create_incident_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#create_incident_enabled SentinelAlertRuleScheduled#create_incident_enabled}
   */
   readonly createIncidentEnabled: boolean | cdktf.IResolvable;
   /**
   * grouping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#grouping SentinelAlertRuleScheduled#grouping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#grouping SentinelAlertRuleScheduled#grouping}
   */
   readonly grouping: SentinelAlertRuleScheduledIncidentGrouping;
 }
@@ -1291,404 +1285,9 @@ export class SentinelAlertRuleScheduledIncidentOutputReference extends cdktf.Com
     return this._grouping.internalValue;
   }
 }
-export interface SentinelAlertRuleScheduledIncidentConfigurationGrouping {
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#enabled SentinelAlertRuleScheduled#enabled}
-  */
-  readonly enabled?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#entity_matching_method SentinelAlertRuleScheduled#entity_matching_method}
-  */
-  readonly entityMatchingMethod?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#group_by_alert_details SentinelAlertRuleScheduled#group_by_alert_details}
-  */
-  readonly groupByAlertDetails?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#group_by_custom_details SentinelAlertRuleScheduled#group_by_custom_details}
-  */
-  readonly groupByCustomDetails?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#group_by_entities SentinelAlertRuleScheduled#group_by_entities}
-  */
-  readonly groupByEntities?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#lookback_duration SentinelAlertRuleScheduled#lookback_duration}
-  */
-  readonly lookbackDuration?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#reopen_closed_incidents SentinelAlertRuleScheduled#reopen_closed_incidents}
-  */
-  readonly reopenClosedIncidents?: boolean | cdktf.IResolvable;
-}
-
-export function sentinelAlertRuleScheduledIncidentConfigurationGroupingToTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference | SentinelAlertRuleScheduledIncidentConfigurationGrouping): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    enabled: cdktf.booleanToTerraform(struct!.enabled),
-    entity_matching_method: cdktf.stringToTerraform(struct!.entityMatchingMethod),
-    group_by_alert_details: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.groupByAlertDetails),
-    group_by_custom_details: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.groupByCustomDetails),
-    group_by_entities: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.groupByEntities),
-    lookback_duration: cdktf.stringToTerraform(struct!.lookbackDuration),
-    reopen_closed_incidents: cdktf.booleanToTerraform(struct!.reopenClosedIncidents),
-  }
-}
-
-
-export function sentinelAlertRuleScheduledIncidentConfigurationGroupingToHclTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference | SentinelAlertRuleScheduledIncidentConfigurationGrouping): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  const attrs = {
-    enabled: {
-      value: cdktf.booleanToHclTerraform(struct!.enabled),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "boolean",
-    },
-    entity_matching_method: {
-      value: cdktf.stringToHclTerraform(struct!.entityMatchingMethod),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    group_by_alert_details: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.groupByAlertDetails),
-      isBlock: false,
-      type: "list",
-      storageClassType: "stringList",
-    },
-    group_by_custom_details: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.groupByCustomDetails),
-      isBlock: false,
-      type: "list",
-      storageClassType: "stringList",
-    },
-    group_by_entities: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.groupByEntities),
-      isBlock: false,
-      type: "list",
-      storageClassType: "stringList",
-    },
-    lookback_duration: {
-      value: cdktf.stringToHclTerraform(struct!.lookbackDuration),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    reopen_closed_incidents: {
-      value: cdktf.booleanToHclTerraform(struct!.reopenClosedIncidents),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "boolean",
-    },
-  };
-
-  // remove undefined attributes
-  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
-}
-
-export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): SentinelAlertRuleScheduledIncidentConfigurationGrouping | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._enabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.enabled = this._enabled;
-    }
-    if (this._entityMatchingMethod !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.entityMatchingMethod = this._entityMatchingMethod;
-    }
-    if (this._groupByAlertDetails !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.groupByAlertDetails = this._groupByAlertDetails;
-    }
-    if (this._groupByCustomDetails !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.groupByCustomDetails = this._groupByCustomDetails;
-    }
-    if (this._groupByEntities !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.groupByEntities = this._groupByEntities;
-    }
-    if (this._lookbackDuration !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.lookbackDuration = this._lookbackDuration;
-    }
-    if (this._reopenClosedIncidents !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.reopenClosedIncidents = this._reopenClosedIncidents;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: SentinelAlertRuleScheduledIncidentConfigurationGrouping | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._enabled = undefined;
-      this._entityMatchingMethod = undefined;
-      this._groupByAlertDetails = undefined;
-      this._groupByCustomDetails = undefined;
-      this._groupByEntities = undefined;
-      this._lookbackDuration = undefined;
-      this._reopenClosedIncidents = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._enabled = value.enabled;
-      this._entityMatchingMethod = value.entityMatchingMethod;
-      this._groupByAlertDetails = value.groupByAlertDetails;
-      this._groupByCustomDetails = value.groupByCustomDetails;
-      this._groupByEntities = value.groupByEntities;
-      this._lookbackDuration = value.lookbackDuration;
-      this._reopenClosedIncidents = value.reopenClosedIncidents;
-    }
-  }
-
-  // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable; 
-  public get enabled() {
-    return this.getBooleanAttribute('enabled');
-  }
-  public set enabled(value: boolean | cdktf.IResolvable) {
-    this._enabled = value;
-  }
-  public resetEnabled() {
-    this._enabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enabledInput() {
-    return this._enabled;
-  }
-
-  // entity_matching_method - computed: false, optional: true, required: false
-  private _entityMatchingMethod?: string; 
-  public get entityMatchingMethod() {
-    return this.getStringAttribute('entity_matching_method');
-  }
-  public set entityMatchingMethod(value: string) {
-    this._entityMatchingMethod = value;
-  }
-  public resetEntityMatchingMethod() {
-    this._entityMatchingMethod = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get entityMatchingMethodInput() {
-    return this._entityMatchingMethod;
-  }
-
-  // group_by_alert_details - computed: false, optional: true, required: false
-  private _groupByAlertDetails?: string[]; 
-  public get groupByAlertDetails() {
-    return this.getListAttribute('group_by_alert_details');
-  }
-  public set groupByAlertDetails(value: string[]) {
-    this._groupByAlertDetails = value;
-  }
-  public resetGroupByAlertDetails() {
-    this._groupByAlertDetails = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get groupByAlertDetailsInput() {
-    return this._groupByAlertDetails;
-  }
-
-  // group_by_custom_details - computed: false, optional: true, required: false
-  private _groupByCustomDetails?: string[]; 
-  public get groupByCustomDetails() {
-    return this.getListAttribute('group_by_custom_details');
-  }
-  public set groupByCustomDetails(value: string[]) {
-    this._groupByCustomDetails = value;
-  }
-  public resetGroupByCustomDetails() {
-    this._groupByCustomDetails = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get groupByCustomDetailsInput() {
-    return this._groupByCustomDetails;
-  }
-
-  // group_by_entities - computed: false, optional: true, required: false
-  private _groupByEntities?: string[]; 
-  public get groupByEntities() {
-    return this.getListAttribute('group_by_entities');
-  }
-  public set groupByEntities(value: string[]) {
-    this._groupByEntities = value;
-  }
-  public resetGroupByEntities() {
-    this._groupByEntities = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get groupByEntitiesInput() {
-    return this._groupByEntities;
-  }
-
-  // lookback_duration - computed: false, optional: true, required: false
-  private _lookbackDuration?: string; 
-  public get lookbackDuration() {
-    return this.getStringAttribute('lookback_duration');
-  }
-  public set lookbackDuration(value: string) {
-    this._lookbackDuration = value;
-  }
-  public resetLookbackDuration() {
-    this._lookbackDuration = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get lookbackDurationInput() {
-    return this._lookbackDuration;
-  }
-
-  // reopen_closed_incidents - computed: false, optional: true, required: false
-  private _reopenClosedIncidents?: boolean | cdktf.IResolvable; 
-  public get reopenClosedIncidents() {
-    return this.getBooleanAttribute('reopen_closed_incidents');
-  }
-  public set reopenClosedIncidents(value: boolean | cdktf.IResolvable) {
-    this._reopenClosedIncidents = value;
-  }
-  public resetReopenClosedIncidents() {
-    this._reopenClosedIncidents = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get reopenClosedIncidentsInput() {
-    return this._reopenClosedIncidents;
-  }
-}
-export interface SentinelAlertRuleScheduledIncidentConfiguration {
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#create_incident SentinelAlertRuleScheduled#create_incident}
-  */
-  readonly createIncident: boolean | cdktf.IResolvable;
-  /**
-  * grouping block
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#grouping SentinelAlertRuleScheduled#grouping}
-  */
-  readonly grouping: SentinelAlertRuleScheduledIncidentConfigurationGrouping;
-}
-
-export function sentinelAlertRuleScheduledIncidentConfigurationToTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationOutputReference | SentinelAlertRuleScheduledIncidentConfiguration): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    create_incident: cdktf.booleanToTerraform(struct!.createIncident),
-    grouping: sentinelAlertRuleScheduledIncidentConfigurationGroupingToTerraform(struct!.grouping),
-  }
-}
-
-
-export function sentinelAlertRuleScheduledIncidentConfigurationToHclTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationOutputReference | SentinelAlertRuleScheduledIncidentConfiguration): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  const attrs = {
-    create_incident: {
-      value: cdktf.booleanToHclTerraform(struct!.createIncident),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "boolean",
-    },
-    grouping: {
-      value: sentinelAlertRuleScheduledIncidentConfigurationGroupingToHclTerraform(struct!.grouping),
-      isBlock: true,
-      type: "list",
-      storageClassType: "SentinelAlertRuleScheduledIncidentConfigurationGroupingList",
-    },
-  };
-
-  // remove undefined attributes
-  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
-}
-
-export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): SentinelAlertRuleScheduledIncidentConfiguration | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._createIncident !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.createIncident = this._createIncident;
-    }
-    if (this._grouping?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.grouping = this._grouping?.internalValue;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: SentinelAlertRuleScheduledIncidentConfiguration | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._createIncident = undefined;
-      this._grouping.internalValue = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._createIncident = value.createIncident;
-      this._grouping.internalValue = value.grouping;
-    }
-  }
-
-  // create_incident - computed: false, optional: false, required: true
-  private _createIncident?: boolean | cdktf.IResolvable; 
-  public get createIncident() {
-    return this.getBooleanAttribute('create_incident');
-  }
-  public set createIncident(value: boolean | cdktf.IResolvable) {
-    this._createIncident = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get createIncidentInput() {
-    return this._createIncident;
-  }
-
-  // grouping - computed: false, optional: false, required: true
-  private _grouping = new SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference(this, "grouping");
-  public get grouping() {
-    return this._grouping;
-  }
-  public putGrouping(value: SentinelAlertRuleScheduledIncidentConfigurationGrouping) {
-    this._grouping.internalValue = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get groupingInput() {
-    return this._grouping.internalValue;
-  }
-}
 export interface SentinelAlertRuleScheduledSentinelEntityMapping {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#column_name SentinelAlertRuleScheduled#column_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#column_name SentinelAlertRuleScheduled#column_name}
   */
   readonly columnName: string;
 }
@@ -1801,19 +1400,19 @@ export class SentinelAlertRuleScheduledSentinelEntityMappingList extends cdktf.C
 }
 export interface SentinelAlertRuleScheduledTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#create SentinelAlertRuleScheduled#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#create SentinelAlertRuleScheduled#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#delete SentinelAlertRuleScheduled#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#delete SentinelAlertRuleScheduled#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#read SentinelAlertRuleScheduled#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#read SentinelAlertRuleScheduled#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#update SentinelAlertRuleScheduled#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#update SentinelAlertRuleScheduled#update}
   */
   readonly update?: string;
 }
@@ -1994,7 +1593,7 @@ export class SentinelAlertRuleScheduledTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled azurerm_sentinel_alert_rule_scheduled}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled azurerm_sentinel_alert_rule_scheduled}
 */
 export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
 
@@ -2010,7 +1609,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SentinelAlertRuleScheduled resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SentinelAlertRuleScheduled to import
-  * @param importFromId The id of the existing SentinelAlertRuleScheduled that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SentinelAlertRuleScheduled that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SentinelAlertRuleScheduled to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2022,7 +1621,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.116.0/docs/resources/sentinel_alert_rule_scheduled azurerm_sentinel_alert_rule_scheduled} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/sentinel_alert_rule_scheduled azurerm_sentinel_alert_rule_scheduled} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2033,8 +1632,8 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sentinel_alert_rule_scheduled',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.116.0',
-        providerVersionConstraint: '~> 3.10'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2067,7 +1666,6 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
     this._entityMapping.internalValue = config.entityMapping;
     this._eventGrouping.internalValue = config.eventGrouping;
     this._incident.internalValue = config.incident;
-    this._incidentConfiguration.internalValue = config.incidentConfiguration;
     this._sentinelEntityMapping.internalValue = config.sentinelEntityMapping;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -2429,22 +2027,6 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
     return this._incident.internalValue;
   }
 
-  // incident_configuration - computed: false, optional: true, required: false
-  private _incidentConfiguration = new SentinelAlertRuleScheduledIncidentConfigurationOutputReference(this, "incident_configuration");
-  public get incidentConfiguration() {
-    return this._incidentConfiguration;
-  }
-  public putIncidentConfiguration(value: SentinelAlertRuleScheduledIncidentConfiguration) {
-    this._incidentConfiguration.internalValue = value;
-  }
-  public resetIncidentConfiguration() {
-    this._incidentConfiguration.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get incidentConfigurationInput() {
-    return this._incidentConfiguration.internalValue;
-  }
-
   // sentinel_entity_mapping - computed: false, optional: true, required: false
   private _sentinelEntityMapping = new SentinelAlertRuleScheduledSentinelEntityMappingList(this, "sentinel_entity_mapping", false);
   public get sentinelEntityMapping() {
@@ -2506,7 +2088,6 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
       entity_mapping: cdktf.listMapper(sentinelAlertRuleScheduledEntityMappingToTerraform, true)(this._entityMapping.internalValue),
       event_grouping: sentinelAlertRuleScheduledEventGroupingToTerraform(this._eventGrouping.internalValue),
       incident: sentinelAlertRuleScheduledIncidentToTerraform(this._incident.internalValue),
-      incident_configuration: sentinelAlertRuleScheduledIncidentConfigurationToTerraform(this._incidentConfiguration.internalValue),
       sentinel_entity_mapping: cdktf.listMapper(sentinelAlertRuleScheduledSentinelEntityMappingToTerraform, true)(this._sentinelEntityMapping.internalValue),
       timeouts: sentinelAlertRuleScheduledTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -2651,12 +2232,6 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "SentinelAlertRuleScheduledIncidentList",
-      },
-      incident_configuration: {
-        value: sentinelAlertRuleScheduledIncidentConfigurationToHclTerraform(this._incidentConfiguration.internalValue),
-        isBlock: true,
-        type: "list",
-        storageClassType: "SentinelAlertRuleScheduledIncidentConfigurationList",
       },
       sentinel_entity_mapping: {
         value: cdktf.listMapperHcl(sentinelAlertRuleScheduledSentinelEntityMappingToHclTerraform, true)(this._sentinelEntityMapping.internalValue),

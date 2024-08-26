@@ -13,7 +13,7 @@ const actions = require("@actions/core");
 // const { versionMatchesConstraint } = require('cdktf-cli/lib/dependencies/version-constraints');
 
 // set by the projen file that generates this script
-const CONSTRAINT = "~> 3.10";
+const CONSTRAINT = "~> 4.0";
 const FQ_PROVIDER_NAME = "hashicorp/azurerm";
 
 (async function main() {
