@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/site_recovery_services_vault_hyperv_site
 // generated from terraform resource schema
 
