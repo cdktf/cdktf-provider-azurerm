@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/resources/data_protection_backup_policy_kubernetes_cluster
 // generated from terraform resource schema
 
