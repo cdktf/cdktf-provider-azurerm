@@ -1,3 +1,3 @@
 # `data_azurerm_images`
 
-Refer to the Terraform Registry for docs: [`data_azurerm_images`](https://registry.terraform.io/providers/hashicorp/azurerm/4.0.1/docs/data-sources/images).
+Refer to the Terraform Registry for docs: [`data_azurerm_images`](https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/images).
