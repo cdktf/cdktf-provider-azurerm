@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.redisCacheAccessPolicy.RedisCacheAccessPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/rediscacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscacheaccesspolicy"
 
 rediscacheaccesspolicy.NewRedisCacheAccessPolicy(scope Construct, id *string, config RedisCacheAccessPolicyConfig) RedisCacheAccessPolicy
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.redisCacheAccessPolicy.RedisCacheAccessPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/rediscacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscacheaccesspolicy"
 
 rediscacheaccesspolicy.RedisCacheAccessPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.redisCacheAccessPolicy.RedisCacheAccessPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/rediscacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscacheaccesspolicy"
 
 rediscacheaccesspolicy.RedisCacheAccessPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ rediscacheaccesspolicy.RedisCacheAccessPolicy_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.redisCacheAccessPolicy.RedisCacheAccessPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/rediscacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscacheaccesspolicy"
 
 rediscacheaccesspolicy.RedisCacheAccessPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ rediscacheaccesspolicy.RedisCacheAccessPolicy_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.redisCacheAccessPolicy.RedisCacheAccessPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/rediscacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscacheaccesspolicy"
 
 rediscacheaccesspolicy.RedisCacheAccessPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -804,7 +804,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.redisCacheAccessPolicy.RedisCacheAccessPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/rediscacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscacheaccesspolicy"
 
 &rediscacheaccesspolicy.RedisCacheAccessPolicyConfig {
 	Connection: interface{},
@@ -818,7 +818,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/rediscacheaccessp
 	Permissions: *string,
 	RedisCacheId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.redisCacheAccessPolicy.RedisCacheAccessPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.redisCacheAccessPolicy.RedisCacheAccessPolicyTimeouts,
 }
 ```
 
@@ -981,7 +981,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.redisCacheAccessPolicy.RedisCacheAccessPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/rediscacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscacheaccesspolicy"
 
 &rediscacheaccesspolicy.RedisCacheAccessPolicyTimeouts {
 	Create: *string,
@@ -1057,7 +1057,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.redisCacheAccessPolicy.RedisCacheAccessPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/rediscacheaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/rediscacheaccesspolicy"
 
 rediscacheaccesspolicy.NewRedisCacheAccessPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RedisCacheAccessPolicyTimeoutsOutputReference
 ```
