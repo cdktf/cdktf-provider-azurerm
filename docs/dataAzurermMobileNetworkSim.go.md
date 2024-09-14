@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSim.DataAzurermMobileNetworkSim.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksim"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmobilenetworksim"
 
 dataazurermmobilenetworksim.NewDataAzurermMobileNetworkSim(scope Construct, id *string, config DataAzurermMobileNetworkSimConfig) DataAzurermMobileNetworkSim
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSim.DataAzurermMobileNetworkSim.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksim"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmobilenetworksim"
 
 dataazurermmobilenetworksim.DataAzurermMobileNetworkSim_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSim.DataAzurermMobileNetworkSim.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksim"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmobilenetworksim"
 
 dataazurermmobilenetworksim.DataAzurermMobileNetworkSim_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermmobilenetworksim.DataAzurermMobileNetworkSim_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSim.DataAzurermMobileNetworkSim.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksim"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmobilenetworksim"
 
 dataazurermmobilenetworksim.DataAzurermMobileNetworkSim_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermmobilenetworksim.DataAzurermMobileNetworkSim_IsTerraformDataSource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSim.DataAzurermMobileNetworkSim.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksim"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmobilenetworksim"
 
 dataazurermmobilenetworksim.DataAzurermMobileNetworkSim_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -746,7 +746,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSim.DataAzurermMobileNetworkSimConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksim"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmobilenetworksim"
 
 &dataazurermmobilenetworksim.DataAzurermMobileNetworkSimConfig {
 	Connection: interface{},
@@ -759,7 +759,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetw
 	MobileNetworkSimGroupId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMobileNetworkSim.DataAzurermMobileNetworkSimTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermMobileNetworkSim.DataAzurermMobileNetworkSimTimeouts,
 }
 ```
 
@@ -909,7 +909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSim.DataAzurermMobileNetworkSimStaticIpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksim"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmobilenetworksim"
 
 &dataazurermmobilenetworksim.DataAzurermMobileNetworkSimStaticIpConfiguration {
 
@@ -922,7 +922,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetw
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSim.DataAzurermMobileNetworkSimTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksim"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmobilenetworksim"
 
 &dataazurermmobilenetworksim.DataAzurermMobileNetworkSimTimeouts {
 	Read: *string,
@@ -956,7 +956,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSim.DataAzurermMobileNetworkSimStaticIpConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksim"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmobilenetworksim"
 
 dataazurermmobilenetworksim.NewDataAzurermMobileNetworkSimStaticIpConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMobileNetworkSimStaticIpConfigurationList
 ```
@@ -1105,7 +1105,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSim.DataAzurermMobileNetworkSimStaticIpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksim"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmobilenetworksim"
 
 dataazurermmobilenetworksim.NewDataAzurermMobileNetworkSimStaticIpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMobileNetworkSimStaticIpConfigurationOutputReference
 ```
@@ -1405,7 +1405,7 @@ func InternalValue() DataAzurermMobileNetworkSimStaticIpConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSim.DataAzurermMobileNetworkSimTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksim"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmobilenetworksim"
 
 dataazurermmobilenetworksim.NewDataAzurermMobileNetworkSimTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMobileNetworkSimTimeoutsOutputReference
 ```
