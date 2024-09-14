@@ -4,12 +4,12 @@
 
 ### DataAzurermSearchService <a name="DataAzurermSearchService" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/search_service azurerm_search_service}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/search_service azurerm_search_service}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 dataazurermsearchservice.NewDataAzurermSearchService(scope Construct, id *string, config DataAzurermSearchServiceConfig) DataAzurermSearchService
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 dataazurermsearchservice.DataAzurermSearchService_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 dataazurermsearchservice.DataAzurermSearchService_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermsearchservice.DataAzurermSearchService_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 dataazurermsearchservice.DataAzurermSearchService_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermsearchservice.DataAzurermSearchService_IsTerraformDataSource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 dataazurermsearchservice.DataAzurermSearchService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermSearchService t
 
 The id of the existing DataAzurermSearchService that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/search_service#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/search_service#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -746,7 +746,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 &dataazurermsearchservice.DataAzurermSearchServiceConfig {
 	Connection: interface{},
@@ -759,7 +759,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearch
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermSearchService.DataAzurermSearchServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeouts,
 }
 ```
 
@@ -774,9 +774,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearch
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/search_service#name DataAzurermSearchService#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/search_service#resource_group_name DataAzurermSearchService#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/search_service#id DataAzurermSearchService#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/search_service#name DataAzurermSearchService#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/search_service#resource_group_name DataAzurermSearchService#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/search_service#id DataAzurermSearchService#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeouts">DataAzurermSearchServiceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -859,7 +859,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/search_service#name DataAzurermSearchService#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/search_service#name DataAzurermSearchService#name}.
 
 ---
 
@@ -871,7 +871,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/search_service#resource_group_name DataAzurermSearchService#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/search_service#resource_group_name DataAzurermSearchService#resource_group_name}.
 
 ---
 
@@ -883,7 +883,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/search_service#id DataAzurermSearchService#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/search_service#id DataAzurermSearchService#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -900,7 +900,7 @@ Timeouts DataAzurermSearchServiceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/search_service#timeouts DataAzurermSearchService#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/search_service#timeouts DataAzurermSearchService#timeouts}
 
 ---
 
@@ -909,7 +909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 &dataazurermsearchservice.DataAzurermSearchServiceIdentity {
 
@@ -922,7 +922,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearch
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceQueryKeys.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 &dataazurermsearchservice.DataAzurermSearchServiceQueryKeys {
 
@@ -935,7 +935,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearch
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 &dataazurermsearchservice.DataAzurermSearchServiceTimeouts {
 	Read: *string,
@@ -946,7 +946,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearch
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/search_service#read DataAzurermSearchService#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/search_service#read DataAzurermSearchService#read}. |
 
 ---
 
@@ -958,7 +958,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/search_service#read DataAzurermSearchService#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/search_service#read DataAzurermSearchService#read}.
 
 ---
 
@@ -969,7 +969,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 dataazurermsearchservice.NewDataAzurermSearchServiceIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermSearchServiceIdentityList
 ```
@@ -1118,7 +1118,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 dataazurermsearchservice.NewDataAzurermSearchServiceIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermSearchServiceIdentityOutputReference
 ```
@@ -1418,7 +1418,7 @@ func InternalValue() DataAzurermSearchServiceIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceQueryKeysList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 dataazurermsearchservice.NewDataAzurermSearchServiceQueryKeysList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermSearchServiceQueryKeysList
 ```
@@ -1567,7 +1567,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceQueryKeysOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 dataazurermsearchservice.NewDataAzurermSearchServiceQueryKeysOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermSearchServiceQueryKeysOutputReference
 ```
@@ -1856,7 +1856,7 @@ func InternalValue() DataAzurermSearchServiceQueryKeys
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSearchService.DataAzurermSearchServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsearchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsearchservice"
 
 dataazurermsearchservice.NewDataAzurermSearchServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermSearchServiceTimeoutsOutputReference
 ```

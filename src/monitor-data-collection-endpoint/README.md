@@ -1,3 +1,3 @@
 # `azurerm_monitor_data_collection_endpoint`
 
-Refer to the Terraform Registry for docs: [`azurerm_monitor_data_collection_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/monitor_data_collection_endpoint).
+Refer to the Terraform Registry for docs: [`azurerm_monitor_data_collection_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/monitor_data_collection_endpoint).
