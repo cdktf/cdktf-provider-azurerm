@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +13,54 @@ import * as cdktf from 'cdktf';
 
 export interface DataProtectionResourceGuardConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard#id DataProtectionResourceGuard#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard#id DataProtectionResourceGuard#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard#location DataProtectionResourceGuard#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard#location DataProtectionResourceGuard#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard#name DataProtectionResourceGuard#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard#name DataProtectionResourceGuard#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard#resource_group_name DataProtectionResourceGuard#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard#resource_group_name DataProtectionResourceGuard#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard#tags DataProtectionResourceGuard#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard#tags DataProtectionResourceGuard#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard#vault_critical_operation_exclusion_list DataProtectionResourceGuard#vault_critical_operation_exclusion_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard#vault_critical_operation_exclusion_list DataProtectionResourceGuard#vault_critical_operation_exclusion_list}
   */
   readonly vaultCriticalOperationExclusionList?: string[];
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard#timeouts DataProtectionResourceGuard#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard#timeouts DataProtectionResourceGuard#timeouts}
   */
   readonly timeouts?: DataProtectionResourceGuardTimeouts;
 }
 export interface DataProtectionResourceGuardTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard#create DataProtectionResourceGuard#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard#create DataProtectionResourceGuard#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard#delete DataProtectionResourceGuard#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard#delete DataProtectionResourceGuard#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard#read DataProtectionResourceGuard#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard#read DataProtectionResourceGuard#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard#update DataProtectionResourceGuard#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard#update DataProtectionResourceGuard#update}
   */
   readonly update?: string;
 }
@@ -241,7 +241,7 @@ export class DataProtectionResourceGuardTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard azurerm_data_protection_resource_guard}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard azurerm_data_protection_resource_guard}
 */
 export class DataProtectionResourceGuard extends cdktf.TerraformResource {
 
@@ -257,7 +257,7 @@ export class DataProtectionResourceGuard extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataProtectionResourceGuard resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataProtectionResourceGuard to import
-  * @param importFromId The id of the existing DataProtectionResourceGuard that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataProtectionResourceGuard that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataProtectionResourceGuard to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -269,7 +269,7 @@ export class DataProtectionResourceGuard extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/data_protection_resource_guard azurerm_data_protection_resource_guard} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/data_protection_resource_guard azurerm_data_protection_resource_guard} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -280,7 +280,7 @@ export class DataProtectionResourceGuard extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_protection_resource_guard',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.1.0',
+        providerVersion: '4.2.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

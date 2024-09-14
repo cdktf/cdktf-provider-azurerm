@@ -97,6 +97,8 @@ Object.defineProperty(exports, 'applicationSecurityGroup', { get: function () { 
 Object.defineProperty(exports, 'arcKubernetesCluster', { get: function () { return require('./arc-kubernetes-cluster'); } });
 Object.defineProperty(exports, 'arcKubernetesClusterExtension', { get: function () { return require('./arc-kubernetes-cluster-extension'); } });
 Object.defineProperty(exports, 'arcKubernetesFluxConfiguration', { get: function () { return require('./arc-kubernetes-flux-configuration'); } });
+Object.defineProperty(exports, 'arcMachine', { get: function () { return require('./arc-machine'); } });
+Object.defineProperty(exports, 'arcMachineAutomanageConfigurationAssignment', { get: function () { return require('./arc-machine-automanage-configuration-assignment'); } });
 Object.defineProperty(exports, 'arcMachineExtension', { get: function () { return require('./arc-machine-extension'); } });
 Object.defineProperty(exports, 'arcPrivateLinkScope', { get: function () { return require('./arc-private-link-scope'); } });
 Object.defineProperty(exports, 'arcResourceBridgeAppliance', { get: function () { return require('./arc-resource-bridge-appliance'); } });
@@ -554,7 +556,6 @@ Object.defineProperty(exports, 'mapsAccount', { get: function () { return requir
 Object.defineProperty(exports, 'mapsCreator', { get: function () { return require('./maps-creator'); } });
 Object.defineProperty(exports, 'marketplaceAgreement', { get: function () { return require('./marketplace-agreement'); } });
 Object.defineProperty(exports, 'marketplaceRoleAssignment', { get: function () { return require('./marketplace-role-assignment'); } });
-Object.defineProperty(exports, 'mediaServicesAccountFilter', { get: function () { return require('./media-services-account-filter'); } });
 Object.defineProperty(exports, 'mobileNetwork', { get: function () { return require('./mobile-network'); } });
 Object.defineProperty(exports, 'mobileNetworkAttachedDataNetwork', { get: function () { return require('./mobile-network-attached-data-network'); } });
 Object.defineProperty(exports, 'mobileNetworkDataNetwork', { get: function () { return require('./mobile-network-data-network'); } });

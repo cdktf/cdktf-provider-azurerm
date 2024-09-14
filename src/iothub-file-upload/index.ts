@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,74 +13,74 @@ import * as cdktf from 'cdktf';
 
 export interface IothubFileUploadAConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#authentication_type IothubFileUploadA#authentication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#authentication_type IothubFileUploadA#authentication_type}
   */
   readonly authenticationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#connection_string IothubFileUploadA#connection_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#connection_string IothubFileUploadA#connection_string}
   */
   readonly connectionString: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#container_name IothubFileUploadA#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#container_name IothubFileUploadA#container_name}
   */
   readonly containerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#default_ttl IothubFileUploadA#default_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#default_ttl IothubFileUploadA#default_ttl}
   */
   readonly defaultTtl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#id IothubFileUploadA#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#id IothubFileUploadA#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#identity_id IothubFileUploadA#identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#identity_id IothubFileUploadA#identity_id}
   */
   readonly identityId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#iothub_id IothubFileUploadA#iothub_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#iothub_id IothubFileUploadA#iothub_id}
   */
   readonly iothubId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#lock_duration IothubFileUploadA#lock_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#lock_duration IothubFileUploadA#lock_duration}
   */
   readonly lockDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#max_delivery_count IothubFileUploadA#max_delivery_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#max_delivery_count IothubFileUploadA#max_delivery_count}
   */
   readonly maxDeliveryCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#notifications_enabled IothubFileUploadA#notifications_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#notifications_enabled IothubFileUploadA#notifications_enabled}
   */
   readonly notificationsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#sas_ttl IothubFileUploadA#sas_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#sas_ttl IothubFileUploadA#sas_ttl}
   */
   readonly sasTtl?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#timeouts IothubFileUploadA#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#timeouts IothubFileUploadA#timeouts}
   */
   readonly timeouts?: IothubFileUploadTimeouts;
 }
 export interface IothubFileUploadTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#create IothubFileUploadA#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#create IothubFileUploadA#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#delete IothubFileUploadA#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#delete IothubFileUploadA#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#read IothubFileUploadA#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#read IothubFileUploadA#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#update IothubFileUploadA#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#update IothubFileUploadA#update}
   */
   readonly update?: string;
 }
@@ -261,7 +261,7 @@ export class IothubFileUploadTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload azurerm_iothub_file_upload}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload azurerm_iothub_file_upload}
 */
 export class IothubFileUploadA extends cdktf.TerraformResource {
 
@@ -277,7 +277,7 @@ export class IothubFileUploadA extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IothubFileUploadA resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IothubFileUploadA to import
-  * @param importFromId The id of the existing IothubFileUploadA that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IothubFileUploadA that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IothubFileUploadA to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -289,7 +289,7 @@ export class IothubFileUploadA extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/iothub_file_upload azurerm_iothub_file_upload} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/iothub_file_upload azurerm_iothub_file_upload} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -300,7 +300,7 @@ export class IothubFileUploadA extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_iothub_file_upload',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.1.0',
+        providerVersion: '4.2.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

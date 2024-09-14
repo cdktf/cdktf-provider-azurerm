@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,112 +13,116 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlManagedInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#administrator_login MssqlManagedInstance#administrator_login}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#administrator_login MssqlManagedInstance#administrator_login}
   */
   readonly administratorLogin: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#administrator_login_password MssqlManagedInstance#administrator_login_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#administrator_login_password MssqlManagedInstance#administrator_login_password}
   */
   readonly administratorLoginPassword: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#collation MssqlManagedInstance#collation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#collation MssqlManagedInstance#collation}
   */
   readonly collation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#dns_zone_partner_id MssqlManagedInstance#dns_zone_partner_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#dns_zone_partner_id MssqlManagedInstance#dns_zone_partner_id}
   */
   readonly dnsZonePartnerId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#id MssqlManagedInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#id MssqlManagedInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#license_type MssqlManagedInstance#license_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#license_type MssqlManagedInstance#license_type}
   */
   readonly licenseType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#location MssqlManagedInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#location MssqlManagedInstance#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#maintenance_configuration_name MssqlManagedInstance#maintenance_configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#maintenance_configuration_name MssqlManagedInstance#maintenance_configuration_name}
   */
   readonly maintenanceConfigurationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#minimum_tls_version MssqlManagedInstance#minimum_tls_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#minimum_tls_version MssqlManagedInstance#minimum_tls_version}
   */
   readonly minimumTlsVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#name MssqlManagedInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#name MssqlManagedInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#proxy_override MssqlManagedInstance#proxy_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#proxy_override MssqlManagedInstance#proxy_override}
   */
   readonly proxyOverride?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#public_data_endpoint_enabled MssqlManagedInstance#public_data_endpoint_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#public_data_endpoint_enabled MssqlManagedInstance#public_data_endpoint_enabled}
   */
   readonly publicDataEndpointEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#resource_group_name MssqlManagedInstance#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#resource_group_name MssqlManagedInstance#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#sku_name MssqlManagedInstance#sku_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#service_principal_type MssqlManagedInstance#service_principal_type}
+  */
+  readonly servicePrincipalType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#sku_name MssqlManagedInstance#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#storage_account_type MssqlManagedInstance#storage_account_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#storage_account_type MssqlManagedInstance#storage_account_type}
   */
   readonly storageAccountType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#storage_size_in_gb MssqlManagedInstance#storage_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#storage_size_in_gb MssqlManagedInstance#storage_size_in_gb}
   */
   readonly storageSizeInGb: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#subnet_id MssqlManagedInstance#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#subnet_id MssqlManagedInstance#subnet_id}
   */
   readonly subnetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#tags MssqlManagedInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#tags MssqlManagedInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#timezone_id MssqlManagedInstance#timezone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#timezone_id MssqlManagedInstance#timezone_id}
   */
   readonly timezoneId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#vcores MssqlManagedInstance#vcores}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#vcores MssqlManagedInstance#vcores}
   */
   readonly vcores: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#zone_redundant_enabled MssqlManagedInstance#zone_redundant_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#zone_redundant_enabled MssqlManagedInstance#zone_redundant_enabled}
   */
   readonly zoneRedundantEnabled?: boolean | cdktf.IResolvable;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#identity MssqlManagedInstance#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#identity MssqlManagedInstance#identity}
   */
   readonly identity?: MssqlManagedInstanceIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#timeouts MssqlManagedInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#timeouts MssqlManagedInstance#timeouts}
   */
   readonly timeouts?: MssqlManagedInstanceTimeouts;
 }
 export interface MssqlManagedInstanceIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#identity_ids MssqlManagedInstance#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#identity_ids MssqlManagedInstance#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#type MssqlManagedInstance#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#type MssqlManagedInstance#type}
   */
   readonly type: string;
 }
@@ -238,19 +242,19 @@ export class MssqlManagedInstanceIdentityOutputReference extends cdktf.ComplexOb
 }
 export interface MssqlManagedInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#create MssqlManagedInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#create MssqlManagedInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#delete MssqlManagedInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#delete MssqlManagedInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#read MssqlManagedInstance#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#read MssqlManagedInstance#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#update MssqlManagedInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#update MssqlManagedInstance#update}
   */
   readonly update?: string;
 }
@@ -431,7 +435,7 @@ export class MssqlManagedInstanceTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance azurerm_mssql_managed_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance azurerm_mssql_managed_instance}
 */
 export class MssqlManagedInstance extends cdktf.TerraformResource {
 
@@ -447,7 +451,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MssqlManagedInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MssqlManagedInstance to import
-  * @param importFromId The id of the existing MssqlManagedInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MssqlManagedInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MssqlManagedInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -459,7 +463,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/mssql_managed_instance azurerm_mssql_managed_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/mssql_managed_instance azurerm_mssql_managed_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -470,7 +474,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_managed_instance',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.1.0',
+        providerVersion: '4.2.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -494,6 +498,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
     this._proxyOverride = config.proxyOverride;
     this._publicDataEndpointEnabled = config.publicDataEndpointEnabled;
     this._resourceGroupName = config.resourceGroupName;
+    this._servicePrincipalType = config.servicePrincipalType;
     this._skuName = config.skuName;
     this._storageAccountType = config.storageAccountType;
     this._storageSizeInGb = config.storageSizeInGb;
@@ -710,6 +715,22 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
+  // service_principal_type - computed: false, optional: true, required: false
+  private _servicePrincipalType?: string; 
+  public get servicePrincipalType() {
+    return this.getStringAttribute('service_principal_type');
+  }
+  public set servicePrincipalType(value: string) {
+    this._servicePrincipalType = value;
+  }
+  public resetServicePrincipalType() {
+    this._servicePrincipalType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicePrincipalTypeInput() {
+    return this._servicePrincipalType;
+  }
+
   // sku_name - computed: false, optional: false, required: true
   private _skuName?: string; 
   public get skuName() {
@@ -877,6 +898,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
       proxy_override: cdktf.stringToTerraform(this._proxyOverride),
       public_data_endpoint_enabled: cdktf.booleanToTerraform(this._publicDataEndpointEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_principal_type: cdktf.stringToTerraform(this._servicePrincipalType),
       sku_name: cdktf.stringToTerraform(this._skuName),
       storage_account_type: cdktf.stringToTerraform(this._storageAccountType),
       storage_size_in_gb: cdktf.numberToTerraform(this._storageSizeInGb),
@@ -966,6 +988,12 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
       },
       resource_group_name: {
         value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_principal_type: {
+        value: cdktf.stringToHclTerraform(this._servicePrincipalType),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

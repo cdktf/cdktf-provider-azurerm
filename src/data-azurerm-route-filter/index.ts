@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/route_filter
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/route_filter
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermRouteFilterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/route_filter#id DataAzurermRouteFilter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/route_filter#id DataAzurermRouteFilter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/route_filter#name DataAzurermRouteFilter#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/route_filter#name DataAzurermRouteFilter#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/route_filter#resource_group_name DataAzurermRouteFilter#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/route_filter#resource_group_name DataAzurermRouteFilter#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/route_filter#timeouts DataAzurermRouteFilter#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/route_filter#timeouts DataAzurermRouteFilter#timeouts}
   */
   readonly timeouts?: DataAzurermRouteFilterTimeouts;
 }
@@ -126,7 +126,7 @@ export class DataAzurermRouteFilterRuleList extends cdktf.ComplexList {
 }
 export interface DataAzurermRouteFilterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/route_filter#read DataAzurermRouteFilter#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/route_filter#read DataAzurermRouteFilter#read}
   */
   readonly read?: string;
 }
@@ -220,7 +220,7 @@ export class DataAzurermRouteFilterTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/route_filter azurerm_route_filter}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/route_filter azurerm_route_filter}
 */
 export class DataAzurermRouteFilter extends cdktf.TerraformDataSource {
 
@@ -236,7 +236,7 @@ export class DataAzurermRouteFilter extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermRouteFilter resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermRouteFilter to import
-  * @param importFromId The id of the existing DataAzurermRouteFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/route_filter#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermRouteFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/route_filter#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermRouteFilter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -248,7 +248,7 @@ export class DataAzurermRouteFilter extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/data-sources/route_filter azurerm_route_filter} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/data-sources/route_filter azurerm_route_filter} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -259,7 +259,7 @@ export class DataAzurermRouteFilter extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_route_filter',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.1.0',
+        providerVersion: '4.2.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

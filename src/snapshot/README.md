@@ -1,3 +1,3 @@
 # `azurerm_snapshot`
 
-Refer to the Terraform Registry for docs: [`azurerm_snapshot`](https://registry.terraform.io/providers/hashicorp/azurerm/4.1.0/docs/resources/snapshot).
+Refer to the Terraform Registry for docs: [`azurerm_snapshot`](https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/snapshot).
