@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/private_dns_resolver_dns_forwarding_ruleset
 // generated from terraform resource schema
 
