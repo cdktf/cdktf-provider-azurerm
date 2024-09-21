@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/container_app_custom_domain
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/container_app_custom_domain
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,19 +15,19 @@ export interface ContainerAppCustomDomainConfig extends cdktf.TerraformMetaArgum
   /**
   * The Binding type. Possible values include `Disabled` and `SniEnabled`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/container_app_custom_domain#certificate_binding_type ContainerAppCustomDomain#certificate_binding_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/container_app_custom_domain#certificate_binding_type ContainerAppCustomDomain#certificate_binding_type}
   */
   readonly certificateBindingType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/container_app_custom_domain#container_app_environment_certificate_id ContainerAppCustomDomain#container_app_environment_certificate_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/container_app_custom_domain#container_app_environment_certificate_id ContainerAppCustomDomain#container_app_environment_certificate_id}
   */
   readonly containerAppEnvironmentCertificateId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/container_app_custom_domain#container_app_id ContainerAppCustomDomain#container_app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/container_app_custom_domain#container_app_id ContainerAppCustomDomain#container_app_id}
   */
   readonly containerAppId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/container_app_custom_domain#id ContainerAppCustomDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/container_app_custom_domain#id ContainerAppCustomDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -36,27 +36,27 @@ export interface ContainerAppCustomDomainConfig extends cdktf.TerraformMetaArgum
   /**
   * The hostname of the Certificate. Must be the CN or a named SAN in the certificate.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/container_app_custom_domain#name ContainerAppCustomDomain#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/container_app_custom_domain#name ContainerAppCustomDomain#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/container_app_custom_domain#timeouts ContainerAppCustomDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/container_app_custom_domain#timeouts ContainerAppCustomDomain#timeouts}
   */
   readonly timeouts?: ContainerAppCustomDomainTimeouts;
 }
 export interface ContainerAppCustomDomainTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/container_app_custom_domain#create ContainerAppCustomDomain#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/container_app_custom_domain#create ContainerAppCustomDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/container_app_custom_domain#delete ContainerAppCustomDomain#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/container_app_custom_domain#delete ContainerAppCustomDomain#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/container_app_custom_domain#read ContainerAppCustomDomain#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/container_app_custom_domain#read ContainerAppCustomDomain#read}
   */
   readonly read?: string;
 }
@@ -208,7 +208,7 @@ export class ContainerAppCustomDomainTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/container_app_custom_domain azurerm_container_app_custom_domain}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/container_app_custom_domain azurerm_container_app_custom_domain}
 */
 export class ContainerAppCustomDomain extends cdktf.TerraformResource {
 
@@ -224,7 +224,7 @@ export class ContainerAppCustomDomain extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ContainerAppCustomDomain resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerAppCustomDomain to import
-  * @param importFromId The id of the existing ContainerAppCustomDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/container_app_custom_domain#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerAppCustomDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/container_app_custom_domain#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerAppCustomDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -236,7 +236,7 @@ export class ContainerAppCustomDomain extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.2.0/docs/resources/container_app_custom_domain azurerm_container_app_custom_domain} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/container_app_custom_domain azurerm_container_app_custom_domain} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -247,7 +247,7 @@ export class ContainerAppCustomDomain extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_app_custom_domain',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.2.0',
+        providerVersion: '4.3.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -300,6 +300,11 @@ export class ContainerAppCustomDomain extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get containerAppEnvironmentCertificateIdInput() {
     return this._containerAppEnvironmentCertificateId;
+  }
+
+  // container_app_environment_managed_certificate_id - computed: true, optional: false, required: false
+  public get containerAppEnvironmentManagedCertificateId() {
+    return this.getStringAttribute('container_app_environment_managed_certificate_id');
   }
 
   // container_app_id - computed: false, optional: false, required: true
