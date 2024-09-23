@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 synapseworkspace.NewSynapseWorkspace(scope Construct, id *string, config SynapseWorkspaceConfig) SynapseWorkspace
 ```
@@ -569,7 +569,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 synapseworkspace.SynapseWorkspace_IsConstruct(x interface{}) *bool
 ```
@@ -601,7 +601,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 synapseworkspace.SynapseWorkspace_IsTerraformElement(x interface{}) *bool
 ```
@@ -615,7 +615,7 @@ synapseworkspace.SynapseWorkspace_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 synapseworkspace.SynapseWorkspace_IsTerraformResource(x interface{}) *bool
 ```
@@ -629,7 +629,7 @@ synapseworkspace.SynapseWorkspace_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspace.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 synapseworkspace.SynapseWorkspace_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1353,7 +1353,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceAzureDevopsRepo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 &synapseworkspace.SynapseWorkspaceAzureDevopsRepo {
 	AccountName: *string,
@@ -1469,7 +1469,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 &synapseworkspace.SynapseWorkspaceConfig {
 	Connection: interface{},
@@ -1484,13 +1484,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
 	ResourceGroupName: *string,
 	StorageDataLakeGen2FilesystemId: *string,
 	AzureadAuthenticationOnly: interface{},
-	AzureDevopsRepo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.synapseWorkspace.SynapseWorkspaceAzureDevopsRepo,
+	AzureDevopsRepo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.synapseWorkspace.SynapseWorkspaceAzureDevopsRepo,
 	ComputeSubnetId: *string,
-	CustomerManagedKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.synapseWorkspace.SynapseWorkspaceCustomerManagedKey,
+	CustomerManagedKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.synapseWorkspace.SynapseWorkspaceCustomerManagedKey,
 	DataExfiltrationProtectionEnabled: interface{},
-	GithubRepo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.synapseWorkspace.SynapseWorkspaceGithubRepo,
+	GithubRepo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.synapseWorkspace.SynapseWorkspaceGithubRepo,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.synapseWorkspace.SynapseWorkspaceIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.synapseWorkspace.SynapseWorkspaceIdentity,
 	LinkingAllowedForAadTenantIds: *[]*string,
 	ManagedResourceGroupName: *string,
 	ManagedVirtualNetworkEnabled: interface{},
@@ -1500,7 +1500,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
 	SqlAdministratorLoginPassword: *string,
 	SqlIdentityControlEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.synapseWorkspace.SynapseWorkspaceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.synapseWorkspace.SynapseWorkspaceTimeouts,
 }
 ```
 
@@ -1892,7 +1892,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceCustomerManagedKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 &synapseworkspace.SynapseWorkspaceCustomerManagedKey {
 	KeyVersionlessId: *string,
@@ -1952,7 +1952,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceGithubRepo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 &synapseworkspace.SynapseWorkspaceGithubRepo {
 	AccountName: *string,
@@ -2054,7 +2054,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 &synapseworkspace.SynapseWorkspaceIdentity {
 	Type: *string,
@@ -2100,7 +2100,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 &synapseworkspace.SynapseWorkspaceTimeouts {
 	Create: *string,
@@ -2176,7 +2176,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceAzureDevopsRepoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 synapseworkspace.NewSynapseWorkspaceAzureDevopsRepoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SynapseWorkspaceAzureDevopsRepoOutputReference
 ```
@@ -2593,7 +2593,7 @@ func InternalValue() SynapseWorkspaceAzureDevopsRepo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceCustomerManagedKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 synapseworkspace.NewSynapseWorkspaceCustomerManagedKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SynapseWorkspaceCustomerManagedKeyOutputReference
 ```
@@ -2922,7 +2922,7 @@ func InternalValue() SynapseWorkspaceCustomerManagedKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceGithubRepoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 synapseworkspace.NewSynapseWorkspaceGithubRepoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SynapseWorkspaceGithubRepoOutputReference
 ```
@@ -3317,7 +3317,7 @@ func InternalValue() SynapseWorkspaceGithubRepo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 synapseworkspace.NewSynapseWorkspaceIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SynapseWorkspaceIdentityOutputReference
 ```
@@ -3639,7 +3639,7 @@ func InternalValue() SynapseWorkspaceIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseWorkspace.SynapseWorkspaceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/synapseworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseworkspace"
 
 synapseworkspace.NewSynapseWorkspaceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SynapseWorkspaceTimeoutsOutputReference
 ```
