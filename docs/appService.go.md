@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppService(scope Construct, id *string, config AppServiceConfig) AppService
 ```
@@ -621,7 +621,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.appService.AppService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.AppService_IsConstruct(x interface{}) *bool
 ```
@@ -653,7 +653,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.appService.AppService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.AppService_IsTerraformElement(x interface{}) *bool
 ```
@@ -667,7 +667,7 @@ appservice.AppService_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.appService.AppService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.AppService_IsTerraformResource(x interface{}) *bool
 ```
@@ -681,7 +681,7 @@ appservice.AppService_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.appService.AppService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.AppService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1471,22 +1471,22 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceAuthSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceAuthSettings {
 	Enabled: interface{},
-	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceAuthSettingsActiveDirectory,
+	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceAuthSettingsActiveDirectory,
 	AdditionalLoginParams: *map[string]*string,
 	AllowedExternalRedirectUrls: *[]*string,
 	DefaultProvider: *string,
-	Facebook: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceAuthSettingsFacebook,
-	Google: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceAuthSettingsGoogle,
+	Facebook: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceAuthSettingsFacebook,
+	Google: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceAuthSettingsGoogle,
 	Issuer: *string,
-	Microsoft: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceAuthSettingsMicrosoft,
+	Microsoft: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceAuthSettingsMicrosoft,
 	RuntimeVersion: *string,
 	TokenRefreshExtensionHours: *f64,
 	TokenStoreEnabled: interface{},
-	Twitter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceAuthSettingsTwitter,
+	Twitter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceAuthSettingsTwitter,
 	UnauthenticatedClientAction: *string,
 }
 ```
@@ -1695,7 +1695,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceAuthSettingsActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceAuthSettingsActiveDirectory {
 	ClientId: *string,
@@ -1755,7 +1755,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceAuthSettingsFacebook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceAuthSettingsFacebook {
 	AppId: *string,
@@ -1815,7 +1815,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceAuthSettingsGoogle.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceAuthSettingsGoogle {
 	ClientId: *string,
@@ -1875,7 +1875,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceAuthSettingsMicrosoft.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceAuthSettingsMicrosoft {
 	ClientId: *string,
@@ -1935,7 +1935,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceAuthSettingsTwitter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceAuthSettingsTwitter {
 	ConsumerKey: *string,
@@ -1981,11 +1981,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceBackup {
 	Name: *string,
-	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceBackupSchedule,
+	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceBackupSchedule,
 	StorageAccountUrl: *string,
 	Enabled: interface{},
 }
@@ -2057,7 +2057,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceBackupSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceBackupSchedule {
 	FrequencyInterval: *f64,
@@ -2145,7 +2145,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceConfig {
 	Connection: interface{},
@@ -2160,8 +2160,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
 	Name: *string,
 	ResourceGroupName: *string,
 	AppSettings: *map[string]*string,
-	AuthSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceAuthSettings,
-	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceBackup,
+	AuthSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceAuthSettings,
+	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceBackup,
 	ClientAffinityEnabled: interface{},
 	ClientCertEnabled: interface{},
 	ClientCertMode: *string,
@@ -2169,14 +2169,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
 	Enabled: interface{},
 	HttpsOnly: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceIdentity,
 	KeyVaultReferenceIdentityId: *string,
-	Logs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceLogs,
-	SiteConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceSiteConfig,
-	SourceControl: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceSourceControl,
+	Logs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceLogs,
+	SiteConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceSiteConfig,
+	SourceControl: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceSourceControl,
 	StorageAccount: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceTimeouts,
 }
 ```
 
@@ -2576,7 +2576,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceConnectionString.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceConnectionString {
 	Name: *string,
@@ -2636,7 +2636,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceIdentity {
 	Type: *string,
@@ -2682,13 +2682,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceLogs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceLogs {
-	ApplicationLogs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceLogsApplicationLogs,
+	ApplicationLogs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceLogsApplicationLogs,
 	DetailedErrorMessagesEnabled: interface{},
 	FailedRequestTracingEnabled: interface{},
-	HttpLogs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceLogsHttpLogs,
+	HttpLogs: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceLogsHttpLogs,
 }
 ```
 
@@ -2760,10 +2760,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceLogsApplicationLogs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceLogsApplicationLogs {
-	AzureBlobStorage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceLogsApplicationLogsAzureBlobStorage,
+	AzureBlobStorage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceLogsApplicationLogsAzureBlobStorage,
 	FileSystemLevel: *string,
 }
 ```
@@ -2808,7 +2808,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceLogsApplicationLogsAzureBlobStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceLogsApplicationLogsAzureBlobStorage {
 	Level: *string,
@@ -2868,11 +2868,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceLogsHttpLogs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceLogsHttpLogs {
-	AzureBlobStorage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceLogsHttpLogsAzureBlobStorage,
-	FileSystem: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceLogsHttpLogsFileSystem,
+	AzureBlobStorage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceLogsHttpLogsAzureBlobStorage,
+	FileSystem: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceLogsHttpLogsFileSystem,
 }
 ```
 
@@ -2918,7 +2918,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceLogsHttpLogsAzureBlobStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceLogsHttpLogsAzureBlobStorage {
 	RetentionInDays: *f64,
@@ -2964,7 +2964,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceLogsHttpLogsFileSystem.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceLogsHttpLogsFileSystem {
 	RetentionInDays: *f64,
@@ -3010,7 +3010,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceSiteConfig {
 	AcrUseManagedIdentityCredentials: interface{},
@@ -3018,7 +3018,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
 	AlwaysOn: interface{},
 	AppCommandLine: *string,
 	AutoSwapSlotName: *string,
-	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appService.AppServiceSiteConfigCors,
+	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.appService.AppServiceSiteConfigCors,
 	DefaultDocuments: *[]*string,
 	DotnetFrameworkVersion: *string,
 	FtpsState: *string,
@@ -3464,7 +3464,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigCors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceSiteConfigCors {
 	AllowedOrigins: *[]*string,
@@ -3510,7 +3510,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceSiteConfigIpRestriction {
 	Action: *string,
@@ -3626,7 +3626,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceSiteConfigIpRestrictionHeaders {
 	XAzureFdid: *[]*string,
@@ -3700,7 +3700,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigScmIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceSiteConfigScmIpRestriction {
 	Action: *string,
@@ -3816,7 +3816,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigScmIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceSiteConfigScmIpRestrictionHeaders {
 	XAzureFdid: *[]*string,
@@ -3890,7 +3890,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceSiteCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceSiteCredential {
 
@@ -3903,7 +3903,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceSourceControl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceSourceControl {
 	Branch: *string,
@@ -3991,7 +3991,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceStorageAccount {
 	AccessKey: *string,
@@ -4093,7 +4093,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appService.AppServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 &appservice.AppServiceTimeouts {
 	Create: *string,
@@ -4169,7 +4169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceAuthSettingsActiveDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceAuthSettingsActiveDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceAuthSettingsActiveDirectoryOutputReference
 ```
@@ -4498,7 +4498,7 @@ func InternalValue() AppServiceAuthSettingsActiveDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceAuthSettingsFacebookOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceAuthSettingsFacebookOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceAuthSettingsFacebookOutputReference
 ```
@@ -4820,7 +4820,7 @@ func InternalValue() AppServiceAuthSettingsFacebook
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceAuthSettingsGoogleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceAuthSettingsGoogleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceAuthSettingsGoogleOutputReference
 ```
@@ -5142,7 +5142,7 @@ func InternalValue() AppServiceAuthSettingsGoogle
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceAuthSettingsMicrosoftOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceAuthSettingsMicrosoftOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceAuthSettingsMicrosoftOutputReference
 ```
@@ -5464,7 +5464,7 @@ func InternalValue() AppServiceAuthSettingsMicrosoft
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceAuthSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceAuthSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceAuthSettingsOutputReference
 ```
@@ -6177,7 +6177,7 @@ func InternalValue() AppServiceAuthSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceAuthSettingsTwitterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceAuthSettingsTwitterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceAuthSettingsTwitterOutputReference
 ```
@@ -6470,7 +6470,7 @@ func InternalValue() AppServiceAuthSettingsTwitter
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceBackupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceBackupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceBackupOutputReference
 ```
@@ -6827,7 +6827,7 @@ func InternalValue() AppServiceBackup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceBackupScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceBackupScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceBackupScheduleOutputReference
 ```
@@ -7207,7 +7207,7 @@ func InternalValue() AppServiceBackupSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceConnectionStringList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceConnectionStringList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppServiceConnectionStringList
 ```
@@ -7367,7 +7367,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceConnectionStringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceConnectionStringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppServiceConnectionStringOutputReference
 ```
@@ -7700,7 +7700,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceIdentityOutputReference
 ```
@@ -8022,7 +8022,7 @@ func InternalValue() AppServiceIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceLogsApplicationLogsAzureBlobStorageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceLogsApplicationLogsAzureBlobStorageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceLogsApplicationLogsAzureBlobStorageOutputReference
 ```
@@ -8337,7 +8337,7 @@ func InternalValue() AppServiceLogsApplicationLogsAzureBlobStorage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceLogsApplicationLogsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceLogsApplicationLogsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceLogsApplicationLogsOutputReference
 ```
@@ -8657,7 +8657,7 @@ func InternalValue() AppServiceLogsApplicationLogs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceLogsHttpLogsAzureBlobStorageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceLogsHttpLogsAzureBlobStorageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceLogsHttpLogsAzureBlobStorageOutputReference
 ```
@@ -8950,7 +8950,7 @@ func InternalValue() AppServiceLogsHttpLogsAzureBlobStorage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceLogsHttpLogsFileSystemOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceLogsHttpLogsFileSystemOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceLogsHttpLogsFileSystemOutputReference
 ```
@@ -9243,7 +9243,7 @@ func InternalValue() AppServiceLogsHttpLogsFileSystem
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceLogsHttpLogsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceLogsHttpLogsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceLogsHttpLogsOutputReference
 ```
@@ -9576,7 +9576,7 @@ func InternalValue() AppServiceLogsHttpLogs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceLogsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceLogsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceLogsOutputReference
 ```
@@ -9967,7 +9967,7 @@ func InternalValue() AppServiceLogs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigCorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceSiteConfigCorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceSiteConfigCorsOutputReference
 ```
@@ -10267,7 +10267,7 @@ func InternalValue() AppServiceSiteConfigCors
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceSiteConfigIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppServiceSiteConfigIpRestrictionHeadersList
 ```
@@ -10427,7 +10427,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceSiteConfigIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppServiceSiteConfigIpRestrictionHeadersOutputReference
 ```
@@ -10810,7 +10810,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceSiteConfigIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppServiceSiteConfigIpRestrictionList
 ```
@@ -10970,7 +10970,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceSiteConfigIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppServiceSiteConfigIpRestrictionOutputReference
 ```
@@ -11453,7 +11453,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceSiteConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceSiteConfigOutputReference
 ```
@@ -12640,7 +12640,7 @@ func InternalValue() AppServiceSiteConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigScmIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceSiteConfigScmIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppServiceSiteConfigScmIpRestrictionHeadersList
 ```
@@ -12800,7 +12800,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigScmIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceSiteConfigScmIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppServiceSiteConfigScmIpRestrictionHeadersOutputReference
 ```
@@ -13183,7 +13183,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigScmIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceSiteConfigScmIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppServiceSiteConfigScmIpRestrictionList
 ```
@@ -13343,7 +13343,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceSiteConfigScmIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceSiteConfigScmIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppServiceSiteConfigScmIpRestrictionOutputReference
 ```
@@ -13826,7 +13826,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceSiteCredentialList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceSiteCredentialList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppServiceSiteCredentialList
 ```
@@ -13975,7 +13975,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceSiteCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceSiteCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppServiceSiteCredentialOutputReference
 ```
@@ -14264,7 +14264,7 @@ func InternalValue() AppServiceSiteCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceSourceControlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceSourceControlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceSourceControlOutputReference
 ```
@@ -14658,7 +14658,7 @@ func InternalValue() AppServiceSourceControl
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceStorageAccountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceStorageAccountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppServiceStorageAccountList
 ```
@@ -14818,7 +14818,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceStorageAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceStorageAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppServiceStorageAccountOutputReference
 ```
@@ -15224,7 +15224,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appService.AppServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/appservice"
 
 appservice.NewAppServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceTimeoutsOutputReference
 ```
