@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappVolumeQuotaRule.DataAzurermNetappVolumeQuotaRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappvolumequotarule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolumequotarule"
 
 dataazurermnetappvolumequotarule.NewDataAzurermNetappVolumeQuotaRule(scope Construct, id *string, config DataAzurermNetappVolumeQuotaRuleConfig) DataAzurermNetappVolumeQuotaRule
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermNetappVolumeQuotaRule.DataAzurermNetappVolumeQuotaRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappvolumequotarule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolumequotarule"
 
 dataazurermnetappvolumequotarule.DataAzurermNetappVolumeQuotaRule_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermNetappVolumeQuotaRule.DataAzurermNetappVolumeQuotaRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappvolumequotarule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolumequotarule"
 
 dataazurermnetappvolumequotarule.DataAzurermNetappVolumeQuotaRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermnetappvolumequotarule.DataAzurermNetappVolumeQuotaRule_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermNetappVolumeQuotaRule.DataAzurermNetappVolumeQuotaRule.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappvolumequotarule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolumequotarule"
 
 dataazurermnetappvolumequotarule.DataAzurermNetappVolumeQuotaRule_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermnetappvolumequotarule.DataAzurermNetappVolumeQuotaRule_IsTerraformDat
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermNetappVolumeQuotaRule.DataAzurermNetappVolumeQuotaRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappvolumequotarule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolumequotarule"
 
 dataazurermnetappvolumequotarule.DataAzurermNetappVolumeQuotaRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -702,7 +702,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetappVolumeQuotaRule.DataAzurermNetappVolumeQuotaRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappvolumequotarule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolumequotarule"
 
 &dataazurermnetappvolumequotarule.DataAzurermNetappVolumeQuotaRuleConfig {
 	Connection: interface{},
@@ -715,7 +715,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetapp
 	Name: *string,
 	VolumeId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermNetappVolumeQuotaRule.DataAzurermNetappVolumeQuotaRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermNetappVolumeQuotaRule.DataAzurermNetappVolumeQuotaRuleTimeouts,
 }
 ```
 
@@ -865,7 +865,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetappVolumeQuotaRule.DataAzurermNetappVolumeQuotaRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappvolumequotarule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolumequotarule"
 
 &dataazurermnetappvolumequotarule.DataAzurermNetappVolumeQuotaRuleTimeouts {
 	Read: *string,
@@ -899,7 +899,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappVolumeQuotaRule.DataAzurermNetappVolumeQuotaRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappvolumequotarule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolumequotarule"
 
 dataazurermnetappvolumequotarule.NewDataAzurermNetappVolumeQuotaRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermNetappVolumeQuotaRuleTimeoutsOutputReference
 ```
