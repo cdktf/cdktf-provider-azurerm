@@ -4,7 +4,7 @@
 
 ### WebPubsubCustomDomain <a name="WebPubsubCustomDomain" id="@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomain"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain azurerm_web_pubsub_custom_domain}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain azurerm_web_pubsub_custom_domain}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomain.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the WebPubsubCustomDomain to i
 
 The id of the existing WebPubsubCustomDomain that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -842,11 +842,11 @@ const webPubsubCustomDomainConfig: webPubsubCustomDomain.WebPubsubCustomDomainCo
 | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.domainName">domainName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#domain_name WebPubsubCustomDomain#domain_name}. |
-| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#name WebPubsubCustomDomain#name}. |
-| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.webPubsubCustomCertificateId">webPubsubCustomCertificateId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#web_pubsub_custom_certificate_id WebPubsubCustomDomain#web_pubsub_custom_certificate_id}. |
-| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.webPubsubId">webPubsubId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#web_pubsub_id WebPubsubCustomDomain#web_pubsub_id}. |
-| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#id WebPubsubCustomDomain#id}. |
+| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.domainName">domainName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#domain_name WebPubsubCustomDomain#domain_name}. |
+| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#name WebPubsubCustomDomain#name}. |
+| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.webPubsubCustomCertificateId">webPubsubCustomCertificateId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#web_pubsub_custom_certificate_id WebPubsubCustomDomain#web_pubsub_custom_certificate_id}. |
+| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.webPubsubId">webPubsubId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#web_pubsub_id WebPubsubCustomDomain#web_pubsub_id}. |
+| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#id WebPubsubCustomDomain#id}. |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainTimeouts">WebPubsubCustomDomainTimeouts</a></code> | timeouts block. |
 
 ---
@@ -929,7 +929,7 @@ public readonly domainName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#domain_name WebPubsubCustomDomain#domain_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#domain_name WebPubsubCustomDomain#domain_name}.
 
 ---
 
@@ -941,7 +941,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#name WebPubsubCustomDomain#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#name WebPubsubCustomDomain#name}.
 
 ---
 
@@ -953,7 +953,7 @@ public readonly webPubsubCustomCertificateId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#web_pubsub_custom_certificate_id WebPubsubCustomDomain#web_pubsub_custom_certificate_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#web_pubsub_custom_certificate_id WebPubsubCustomDomain#web_pubsub_custom_certificate_id}.
 
 ---
 
@@ -965,7 +965,7 @@ public readonly webPubsubId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#web_pubsub_id WebPubsubCustomDomain#web_pubsub_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#web_pubsub_id WebPubsubCustomDomain#web_pubsub_id}.
 
 ---
 
@@ -977,7 +977,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#id WebPubsubCustomDomain#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#id WebPubsubCustomDomain#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -994,7 +994,7 @@ public readonly timeouts: WebPubsubCustomDomainTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#timeouts WebPubsubCustomDomain#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#timeouts WebPubsubCustomDomain#timeouts}
 
 ---
 
@@ -1012,9 +1012,9 @@ const webPubsubCustomDomainTimeouts: webPubsubCustomDomain.WebPubsubCustomDomain
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#create WebPubsubCustomDomain#create}. |
-| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#delete WebPubsubCustomDomain#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#read WebPubsubCustomDomain#read}. |
+| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#create WebPubsubCustomDomain#create}. |
+| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#delete WebPubsubCustomDomain#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.webPubsubCustomDomain.WebPubsubCustomDomainTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#read WebPubsubCustomDomain#read}. |
 
 ---
 
@@ -1026,7 +1026,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#create WebPubsubCustomDomain#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#create WebPubsubCustomDomain#create}.
 
 ---
 
@@ -1038,7 +1038,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#delete WebPubsubCustomDomain#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#delete WebPubsubCustomDomain#delete}.
 
 ---
 
@@ -1050,7 +1050,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/web_pubsub_custom_domain#read WebPubsubCustomDomain#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/web_pubsub_custom_domain#read WebPubsubCustomDomain#read}.
 
 ---
 

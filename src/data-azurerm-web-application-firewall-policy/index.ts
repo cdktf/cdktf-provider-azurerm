@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/data-sources/web_application_firewall_policy
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/data-sources/web_application_firewall_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,34 +13,34 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermWebApplicationFirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/data-sources/web_application_firewall_policy#id DataAzurermWebApplicationFirewallPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/data-sources/web_application_firewall_policy#id DataAzurermWebApplicationFirewallPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/data-sources/web_application_firewall_policy#name DataAzurermWebApplicationFirewallPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/data-sources/web_application_firewall_policy#name DataAzurermWebApplicationFirewallPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/data-sources/web_application_firewall_policy#resource_group_name DataAzurermWebApplicationFirewallPolicy#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/data-sources/web_application_firewall_policy#resource_group_name DataAzurermWebApplicationFirewallPolicy#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/data-sources/web_application_firewall_policy#tags DataAzurermWebApplicationFirewallPolicy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/data-sources/web_application_firewall_policy#tags DataAzurermWebApplicationFirewallPolicy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/data-sources/web_application_firewall_policy#timeouts DataAzurermWebApplicationFirewallPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/data-sources/web_application_firewall_policy#timeouts DataAzurermWebApplicationFirewallPolicy#timeouts}
   */
   readonly timeouts?: DataAzurermWebApplicationFirewallPolicyTimeouts;
 }
 export interface DataAzurermWebApplicationFirewallPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/data-sources/web_application_firewall_policy#read DataAzurermWebApplicationFirewallPolicy#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/data-sources/web_application_firewall_policy#read DataAzurermWebApplicationFirewallPolicy#read}
   */
   readonly read?: string;
 }
@@ -134,7 +134,7 @@ export class DataAzurermWebApplicationFirewallPolicyTimeoutsOutputReference exte
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/data-sources/web_application_firewall_policy azurerm_web_application_firewall_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/data-sources/web_application_firewall_policy azurerm_web_application_firewall_policy}
 */
 export class DataAzurermWebApplicationFirewallPolicy extends cdktf.TerraformDataSource {
 
@@ -150,7 +150,7 @@ export class DataAzurermWebApplicationFirewallPolicy extends cdktf.TerraformData
   * Generates CDKTF code for importing a DataAzurermWebApplicationFirewallPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermWebApplicationFirewallPolicy to import
-  * @param importFromId The id of the existing DataAzurermWebApplicationFirewallPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/data-sources/web_application_firewall_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermWebApplicationFirewallPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/data-sources/web_application_firewall_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermWebApplicationFirewallPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -162,7 +162,7 @@ export class DataAzurermWebApplicationFirewallPolicy extends cdktf.TerraformData
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/data-sources/web_application_firewall_policy azurerm_web_application_firewall_policy} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/data-sources/web_application_firewall_policy azurerm_web_application_firewall_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -173,7 +173,7 @@ export class DataAzurermWebApplicationFirewallPolicy extends cdktf.TerraformData
       terraformResourceType: 'azurerm_web_application_firewall_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.3.0',
+        providerVersion: '4.4.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

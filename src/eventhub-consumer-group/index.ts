@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +13,54 @@ import * as cdktf from 'cdktf';
 
 export interface EventhubConsumerGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}
   */
   readonly eventhubName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group#id EventhubConsumerGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group#id EventhubConsumerGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group#name EventhubConsumerGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group#name EventhubConsumerGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}
   */
   readonly namespaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}
   */
   readonly userMetadata?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group#timeouts EventhubConsumerGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group#timeouts EventhubConsumerGroup#timeouts}
   */
   readonly timeouts?: EventhubConsumerGroupTimeouts;
 }
 export interface EventhubConsumerGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group#create EventhubConsumerGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group#create EventhubConsumerGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group#delete EventhubConsumerGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group#delete EventhubConsumerGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group#read EventhubConsumerGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group#read EventhubConsumerGroup#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group#update EventhubConsumerGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group#update EventhubConsumerGroup#update}
   */
   readonly update?: string;
 }
@@ -241,7 +241,7 @@ export class EventhubConsumerGroupTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group azurerm_eventhub_consumer_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group azurerm_eventhub_consumer_group}
 */
 export class EventhubConsumerGroup extends cdktf.TerraformResource {
 
@@ -257,7 +257,7 @@ export class EventhubConsumerGroup extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a EventhubConsumerGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the EventhubConsumerGroup to import
-  * @param importFromId The id of the existing EventhubConsumerGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing EventhubConsumerGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the EventhubConsumerGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -269,7 +269,7 @@ export class EventhubConsumerGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.3.0/docs/resources/eventhub_consumer_group azurerm_eventhub_consumer_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/eventhub_consumer_group azurerm_eventhub_consumer_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -280,7 +280,7 @@ export class EventhubConsumerGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_eventhub_consumer_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.3.0',
+        providerVersion: '4.4.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
