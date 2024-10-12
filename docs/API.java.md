@@ -1235,6 +1235,7 @@ The following submodules are available:
 - [stackHciDeploymentSetting](./stackHciDeploymentSetting.java.md)
 - [stackHciLogicalNetwork](./stackHciLogicalNetwork.java.md)
 - [stackHciStoragePath](./stackHciStoragePath.java.md)
+- [stackHciVirtualHardDisk](./stackHciVirtualHardDisk.java.md)
 - [staticSite](./staticSite.java.md)
 - [staticSiteCustomDomain](./staticSiteCustomDomain.java.md)
 - [staticWebApp](./staticWebApp.java.md)

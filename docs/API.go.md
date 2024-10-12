@@ -1235,6 +1235,7 @@ The following submodules are available:
 - [stackHciDeploymentSetting](./stackHciDeploymentSetting.go.md)
 - [stackHciLogicalNetwork](./stackHciLogicalNetwork.go.md)
 - [stackHciStoragePath](./stackHciStoragePath.go.md)
+- [stackHciVirtualHardDisk](./stackHciVirtualHardDisk.go.md)
 - [staticSite](./staticSite.go.md)
 - [staticSiteCustomDomain](./staticSiteCustomDomain.go.md)
 - [staticWebApp](./staticWebApp.go.md)

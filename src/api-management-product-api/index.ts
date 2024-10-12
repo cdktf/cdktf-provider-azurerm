@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/api_management_product_api
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/api_management_product_api
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementProductApiConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/api_management_product_api#api_management_name ApiManagementProductApi#api_management_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/api_management_product_api#api_management_name ApiManagementProductApi#api_management_name}
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/api_management_product_api#api_name ApiManagementProductApi#api_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/api_management_product_api#api_name ApiManagementProductApi#api_name}
   */
   readonly apiName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/api_management_product_api#id ApiManagementProductApi#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/api_management_product_api#id ApiManagementProductApi#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/api_management_product_api#product_id ApiManagementProductApi#product_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/api_management_product_api#product_id ApiManagementProductApi#product_id}
   */
   readonly productId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/api_management_product_api#resource_group_name ApiManagementProductApi#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/api_management_product_api#resource_group_name ApiManagementProductApi#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/api_management_product_api#timeouts ApiManagementProductApi#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/api_management_product_api#timeouts ApiManagementProductApi#timeouts}
   */
   readonly timeouts?: ApiManagementProductApiTimeouts;
 }
 export interface ApiManagementProductApiTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/api_management_product_api#create ApiManagementProductApi#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/api_management_product_api#create ApiManagementProductApi#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/api_management_product_api#delete ApiManagementProductApi#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/api_management_product_api#delete ApiManagementProductApi#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/api_management_product_api#read ApiManagementProductApi#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/api_management_product_api#read ApiManagementProductApi#read}
   */
   readonly read?: string;
 }
@@ -204,7 +199,7 @@ export class ApiManagementProductApiTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/api_management_product_api azurerm_api_management_product_api}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/api_management_product_api azurerm_api_management_product_api}
 */
 export class ApiManagementProductApi extends cdktf.TerraformResource {
 
@@ -220,7 +215,7 @@ export class ApiManagementProductApi extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApiManagementProductApi resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApiManagementProductApi to import
-  * @param importFromId The id of the existing ApiManagementProductApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/api_management_product_api#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApiManagementProductApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/api_management_product_api#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApiManagementProductApi to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -232,7 +227,7 @@ export class ApiManagementProductApi extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/api_management_product_api azurerm_api_management_product_api} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/api_management_product_api azurerm_api_management_product_api} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -243,7 +238,7 @@ export class ApiManagementProductApi extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_product_api',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.4.0',
+        providerVersion: '4.5.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

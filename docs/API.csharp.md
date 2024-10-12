@@ -1235,6 +1235,7 @@ The following submodules are available:
 - [stackHciDeploymentSetting](./stackHciDeploymentSetting.csharp.md)
 - [stackHciLogicalNetwork](./stackHciLogicalNetwork.csharp.md)
 - [stackHciStoragePath](./stackHciStoragePath.csharp.md)
+- [stackHciVirtualHardDisk](./stackHciVirtualHardDisk.csharp.md)
 - [staticSite](./staticSite.csharp.md)
 - [staticSiteCustomDomain](./staticSiteCustomDomain.csharp.md)
 - [staticWebApp](./staticWebApp.csharp.md)
