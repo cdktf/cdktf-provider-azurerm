@@ -1235,6 +1235,7 @@ The following submodules are available:
 - [stackHciDeploymentSetting](./stackHciDeploymentSetting.typescript.md)
 - [stackHciLogicalNetwork](./stackHciLogicalNetwork.typescript.md)
 - [stackHciStoragePath](./stackHciStoragePath.typescript.md)
+- [stackHciVirtualHardDisk](./stackHciVirtualHardDisk.typescript.md)
 - [staticSite](./staticSite.typescript.md)
 - [staticSiteCustomDomain](./staticSiteCustomDomain.typescript.md)
 - [staticWebApp](./staticWebApp.typescript.md)

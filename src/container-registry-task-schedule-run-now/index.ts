@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/container_registry_task_schedule_run_now
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/container_registry_task_schedule_run_now
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,11 +13,11 @@ import * as cdktf from 'cdktf';
 
 export interface ContainerRegistryTaskScheduleRunNowConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/container_registry_task_schedule_run_now#container_registry_task_id ContainerRegistryTaskScheduleRunNow#container_registry_task_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/container_registry_task_schedule_run_now#container_registry_task_id ContainerRegistryTaskScheduleRunNow#container_registry_task_id}
   */
   readonly containerRegistryTaskId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/container_registry_task_schedule_run_now#id ContainerRegistryTaskScheduleRunNow#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/container_registry_task_schedule_run_now#id ContainerRegistryTaskScheduleRunNow#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -26,21 +26,21 @@ export interface ContainerRegistryTaskScheduleRunNowConfig extends cdktf.Terrafo
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/container_registry_task_schedule_run_now#timeouts ContainerRegistryTaskScheduleRunNow#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/container_registry_task_schedule_run_now#timeouts ContainerRegistryTaskScheduleRunNow#timeouts}
   */
   readonly timeouts?: ContainerRegistryTaskScheduleRunNowTimeouts;
 }
 export interface ContainerRegistryTaskScheduleRunNowTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/container_registry_task_schedule_run_now#create ContainerRegistryTaskScheduleRunNow#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/container_registry_task_schedule_run_now#create ContainerRegistryTaskScheduleRunNow#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/container_registry_task_schedule_run_now#delete ContainerRegistryTaskScheduleRunNow#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/container_registry_task_schedule_run_now#delete ContainerRegistryTaskScheduleRunNow#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/container_registry_task_schedule_run_now#read ContainerRegistryTaskScheduleRunNow#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/container_registry_task_schedule_run_now#read ContainerRegistryTaskScheduleRunNow#read}
   */
   readonly read?: string;
 }
@@ -192,7 +192,7 @@ export class ContainerRegistryTaskScheduleRunNowTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/container_registry_task_schedule_run_now azurerm_container_registry_task_schedule_run_now}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/container_registry_task_schedule_run_now azurerm_container_registry_task_schedule_run_now}
 */
 export class ContainerRegistryTaskScheduleRunNow extends cdktf.TerraformResource {
 
@@ -208,7 +208,7 @@ export class ContainerRegistryTaskScheduleRunNow extends cdktf.TerraformResource
   * Generates CDKTF code for importing a ContainerRegistryTaskScheduleRunNow resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerRegistryTaskScheduleRunNow to import
-  * @param importFromId The id of the existing ContainerRegistryTaskScheduleRunNow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/container_registry_task_schedule_run_now#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerRegistryTaskScheduleRunNow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/container_registry_task_schedule_run_now#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerRegistryTaskScheduleRunNow to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -220,7 +220,7 @@ export class ContainerRegistryTaskScheduleRunNow extends cdktf.TerraformResource
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/resources/container_registry_task_schedule_run_now azurerm_container_registry_task_schedule_run_now} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/container_registry_task_schedule_run_now azurerm_container_registry_task_schedule_run_now} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -231,7 +231,7 @@ export class ContainerRegistryTaskScheduleRunNow extends cdktf.TerraformResource
       terraformResourceType: 'azurerm_container_registry_task_schedule_run_now',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.4.0',
+        providerVersion: '4.5.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

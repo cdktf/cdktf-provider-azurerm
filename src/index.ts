@@ -883,6 +883,7 @@ export * as stackHciCluster from './stack-hci-cluster';
 export * as stackHciDeploymentSetting from './stack-hci-deployment-setting';
 export * as stackHciLogicalNetwork from './stack-hci-logical-network';
 export * as stackHciStoragePath from './stack-hci-storage-path';
+export * as stackHciVirtualHardDisk from './stack-hci-virtual-hard-disk';
 export * as staticSite from './static-site';
 export * as staticSiteCustomDomain from './static-site-custom-domain';
 export * as staticWebApp from './static-web-app';

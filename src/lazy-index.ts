@@ -883,6 +883,7 @@ Object.defineProperty(exports, 'stackHciCluster', { get: function () { return re
 Object.defineProperty(exports, 'stackHciDeploymentSetting', { get: function () { return require('./stack-hci-deployment-setting'); } });
 Object.defineProperty(exports, 'stackHciLogicalNetwork', { get: function () { return require('./stack-hci-logical-network'); } });
 Object.defineProperty(exports, 'stackHciStoragePath', { get: function () { return require('./stack-hci-storage-path'); } });
+Object.defineProperty(exports, 'stackHciVirtualHardDisk', { get: function () { return require('./stack-hci-virtual-hard-disk'); } });
 Object.defineProperty(exports, 'staticSite', { get: function () { return require('./static-site'); } });
 Object.defineProperty(exports, 'staticSiteCustomDomain', { get: function () { return require('./static-site-custom-domain'); } });
 Object.defineProperty(exports, 'staticWebApp', { get: function () { return require('./static-web-app'); } });

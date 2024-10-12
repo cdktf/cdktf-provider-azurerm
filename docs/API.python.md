@@ -1235,6 +1235,7 @@ The following submodules are available:
 - [stackHciDeploymentSetting](./stackHciDeploymentSetting.python.md)
 - [stackHciLogicalNetwork](./stackHciLogicalNetwork.python.md)
 - [stackHciStoragePath](./stackHciStoragePath.python.md)
+- [stackHciVirtualHardDisk](./stackHciVirtualHardDisk.python.md)
 - [staticSite](./staticSite.python.md)
 - [staticSiteCustomDomain](./staticSiteCustomDomain.python.md)
 - [staticWebApp](./staticWebApp.python.md)

@@ -1,3 +1,3 @@
 # `data_azurerm_nginx_deployment`
 
-Refer to the Terraform Registry for docs: [`data_azurerm_nginx_deployment`](https://registry.terraform.io/providers/hashicorp/azurerm/4.4.0/docs/data-sources/nginx_deployment).
+Refer to the Terraform Registry for docs: [`data_azurerm_nginx_deployment`](https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/data-sources/nginx_deployment).
