@@ -322,6 +322,7 @@ export * as dedicatedHardwareSecurityModule from './dedicated-hardware-security-
 export * as dedicatedHost from './dedicated-host';
 export * as dedicatedHostGroup from './dedicated-host-group';
 export * as devCenter from './dev-center';
+export * as devCenterAttachedNetwork from './dev-center-attached-network';
 export * as devCenterCatalog from './dev-center-catalog';
 export * as devCenterDevBoxDefinition from './dev-center-dev-box-definition';
 export * as devCenterEnvironmentType from './dev-center-environment-type';
@@ -667,6 +668,8 @@ export * as nginxDeployment from './nginx-deployment';
 export * as notificationHub from './notification-hub';
 export * as notificationHubAuthorizationRule from './notification-hub-authorization-rule';
 export * as notificationHubNamespace from './notification-hub-namespace';
+export * as oracleCloudVmCluster from './oracle-cloud-vm-cluster';
+export * as oracleExadataInfrastructure from './oracle-exadata-infrastructure';
 export * as orbitalContact from './orbital-contact';
 export * as orbitalContactProfile from './orbital-contact-profile';
 export * as orbitalSpacecraft from './orbital-spacecraft';
@@ -1280,6 +1283,9 @@ export * as dataAzurermNginxConfiguration from './data-azurerm-nginx-configurati
 export * as dataAzurermNginxDeployment from './data-azurerm-nginx-deployment';
 export * as dataAzurermNotificationHub from './data-azurerm-notification-hub';
 export * as dataAzurermNotificationHubNamespace from './data-azurerm-notification-hub-namespace';
+export * as dataAzurermOracleCloudVmCluster from './data-azurerm-oracle-cloud-vm-cluster';
+export * as dataAzurermOracleDbServers from './data-azurerm-oracle-db-servers';
+export * as dataAzurermOracleExadataInfrastructure from './data-azurerm-oracle-exadata-infrastructure';
 export * as dataAzurermOrchestratedVirtualMachineScaleSet from './data-azurerm-orchestrated-virtual-machine-scale-set';
 export * as dataAzurermPaloAltoLocalRulestack from './data-azurerm-palo-alto-local-rulestack';
 export * as dataAzurermPlatformImage from './data-azurerm-platform-image';
