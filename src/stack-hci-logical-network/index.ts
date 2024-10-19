@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,60 +8,60 @@ import * as cdktf from 'cdktf';
 
 export interface StackHciLogicalNetworkConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#custom_location_id StackHciLogicalNetwork#custom_location_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#custom_location_id StackHciLogicalNetwork#custom_location_id}
   */
   readonly customLocationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#dns_servers StackHciLogicalNetwork#dns_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#dns_servers StackHciLogicalNetwork#dns_servers}
   */
   readonly dnsServers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#id StackHciLogicalNetwork#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#id StackHciLogicalNetwork#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#location StackHciLogicalNetwork#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#location StackHciLogicalNetwork#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#name StackHciLogicalNetwork#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#name StackHciLogicalNetwork#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#resource_group_name StackHciLogicalNetwork#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#resource_group_name StackHciLogicalNetwork#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#tags StackHciLogicalNetwork#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#tags StackHciLogicalNetwork#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#virtual_switch_name StackHciLogicalNetwork#virtual_switch_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#virtual_switch_name StackHciLogicalNetwork#virtual_switch_name}
   */
   readonly virtualSwitchName: string;
   /**
   * subnet block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#subnet StackHciLogicalNetwork#subnet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#subnet StackHciLogicalNetwork#subnet}
   */
   readonly subnet: StackHciLogicalNetworkSubnet;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#timeouts StackHciLogicalNetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#timeouts StackHciLogicalNetwork#timeouts}
   */
   readonly timeouts?: StackHciLogicalNetworkTimeouts;
 }
 export interface StackHciLogicalNetworkSubnetIpPool {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#end StackHciLogicalNetwork#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#end StackHciLogicalNetwork#end}
   */
   readonly end: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#start StackHciLogicalNetwork#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#start StackHciLogicalNetwork#start}
   */
   readonly start: string;
 }
@@ -205,20 +200,20 @@ export class StackHciLogicalNetworkSubnetIpPoolList extends cdktf.ComplexList {
 }
 export interface StackHciLogicalNetworkSubnetRoute {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#address_prefix StackHciLogicalNetwork#address_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#address_prefix StackHciLogicalNetwork#address_prefix}
   */
   readonly addressPrefix: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#name StackHciLogicalNetwork#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#name StackHciLogicalNetwork#name}
   */
-  readonly name: string;
+  readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#next_hop_ip_address StackHciLogicalNetwork#next_hop_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#next_hop_ip_address StackHciLogicalNetwork#next_hop_ip_address}
   */
   readonly nextHopIpAddress: string;
 }
 
-export function stackHciLogicalNetworkSubnetRouteToTerraform(struct?: StackHciLogicalNetworkSubnetRoute | cdktf.IResolvable): any {
+export function stackHciLogicalNetworkSubnetRouteToTerraform(struct?: StackHciLogicalNetworkSubnetRouteOutputReference | StackHciLogicalNetworkSubnetRoute): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -231,7 +226,7 @@ export function stackHciLogicalNetworkSubnetRouteToTerraform(struct?: StackHciLo
 }
 
 
-export function stackHciLogicalNetworkSubnetRouteToHclTerraform(struct?: StackHciLogicalNetworkSubnetRoute | cdktf.IResolvable): any {
+export function stackHciLogicalNetworkSubnetRouteToHclTerraform(struct?: StackHciLogicalNetworkSubnetRouteOutputReference | StackHciLogicalNetworkSubnetRoute): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -263,22 +258,16 @@ export function stackHciLogicalNetworkSubnetRouteToHclTerraform(struct?: StackHc
 
 export class StackHciLogicalNetworkSubnetRouteOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StackHciLogicalNetworkSubnetRoute | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): StackHciLogicalNetworkSubnetRoute | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._addressPrefix !== undefined) {
@@ -296,21 +285,15 @@ export class StackHciLogicalNetworkSubnetRouteOutputReference extends cdktf.Comp
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StackHciLogicalNetworkSubnetRoute | cdktf.IResolvable | undefined) {
+  public set internalValue(value: StackHciLogicalNetworkSubnetRoute | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
       this._addressPrefix = undefined;
       this._name = undefined;
       this._nextHopIpAddress = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
       this._addressPrefix = value.addressPrefix;
       this._name = value.name;
       this._nextHopIpAddress = value.nextHopIpAddress;
@@ -330,13 +313,16 @@ export class StackHciLogicalNetworkSubnetRouteOutputReference extends cdktf.Comp
     return this._addressPrefix;
   }
 
-  // name - computed: false, optional: false, required: true
+  // name - computed: false, optional: true, required: false
   private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
@@ -356,51 +342,31 @@ export class StackHciLogicalNetworkSubnetRouteOutputReference extends cdktf.Comp
     return this._nextHopIpAddress;
   }
 }
-
-export class StackHciLogicalNetworkSubnetRouteList extends cdktf.ComplexList {
-  public internalValue? : StackHciLogicalNetworkSubnetRoute[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): StackHciLogicalNetworkSubnetRouteOutputReference {
-    return new StackHciLogicalNetworkSubnetRouteOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface StackHciLogicalNetworkSubnet {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#address_prefix StackHciLogicalNetwork#address_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#address_prefix StackHciLogicalNetwork#address_prefix}
   */
   readonly addressPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#ip_allocation_method StackHciLogicalNetwork#ip_allocation_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#ip_allocation_method StackHciLogicalNetwork#ip_allocation_method}
   */
   readonly ipAllocationMethod: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#vlan_id StackHciLogicalNetwork#vlan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#vlan_id StackHciLogicalNetwork#vlan_id}
   */
   readonly vlanId?: number;
   /**
   * ip_pool block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#ip_pool StackHciLogicalNetwork#ip_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#ip_pool StackHciLogicalNetwork#ip_pool}
   */
   readonly ipPool?: StackHciLogicalNetworkSubnetIpPool[] | cdktf.IResolvable;
   /**
   * route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#route StackHciLogicalNetwork#route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#route StackHciLogicalNetwork#route}
   */
-  readonly route?: StackHciLogicalNetworkSubnetRoute[] | cdktf.IResolvable;
+  readonly route?: StackHciLogicalNetworkSubnetRoute;
 }
 
 export function stackHciLogicalNetworkSubnetToTerraform(struct?: StackHciLogicalNetworkSubnetOutputReference | StackHciLogicalNetworkSubnet): any {
@@ -413,7 +379,7 @@ export function stackHciLogicalNetworkSubnetToTerraform(struct?: StackHciLogical
     ip_allocation_method: cdktf.stringToTerraform(struct!.ipAllocationMethod),
     vlan_id: cdktf.numberToTerraform(struct!.vlanId),
     ip_pool: cdktf.listMapper(stackHciLogicalNetworkSubnetIpPoolToTerraform, true)(struct!.ipPool),
-    route: cdktf.listMapper(stackHciLogicalNetworkSubnetRouteToTerraform, true)(struct!.route),
+    route: stackHciLogicalNetworkSubnetRouteToTerraform(struct!.route),
   }
 }
 
@@ -449,7 +415,7 @@ export function stackHciLogicalNetworkSubnetToHclTerraform(struct?: StackHciLogi
       storageClassType: "StackHciLogicalNetworkSubnetIpPoolList",
     },
     route: {
-      value: cdktf.listMapperHcl(stackHciLogicalNetworkSubnetRouteToHclTerraform, true)(struct!.route),
+      value: stackHciLogicalNetworkSubnetRouteToHclTerraform(struct!.route),
       isBlock: true,
       type: "list",
       storageClassType: "StackHciLogicalNetworkSubnetRouteList",
@@ -578,11 +544,11 @@ export class StackHciLogicalNetworkSubnetOutputReference extends cdktf.ComplexOb
   }
 
   // route - computed: false, optional: true, required: false
-  private _route = new StackHciLogicalNetworkSubnetRouteList(this, "route", false);
+  private _route = new StackHciLogicalNetworkSubnetRouteOutputReference(this, "route");
   public get route() {
     return this._route;
   }
-  public putRoute(value: StackHciLogicalNetworkSubnetRoute[] | cdktf.IResolvable) {
+  public putRoute(value: StackHciLogicalNetworkSubnetRoute) {
     this._route.internalValue = value;
   }
   public resetRoute() {
@@ -595,19 +561,19 @@ export class StackHciLogicalNetworkSubnetOutputReference extends cdktf.ComplexOb
 }
 export interface StackHciLogicalNetworkTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#create StackHciLogicalNetwork#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#create StackHciLogicalNetwork#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#delete StackHciLogicalNetwork#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#delete StackHciLogicalNetwork#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#read StackHciLogicalNetwork#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#read StackHciLogicalNetwork#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#update StackHciLogicalNetwork#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#update StackHciLogicalNetwork#update}
   */
   readonly update?: string;
 }
@@ -788,7 +754,7 @@ export class StackHciLogicalNetworkTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network azurerm_stack_hci_logical_network}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network azurerm_stack_hci_logical_network}
 */
 export class StackHciLogicalNetwork extends cdktf.TerraformResource {
 
@@ -804,7 +770,7 @@ export class StackHciLogicalNetwork extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a StackHciLogicalNetwork resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the StackHciLogicalNetwork to import
-  * @param importFromId The id of the existing StackHciLogicalNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing StackHciLogicalNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the StackHciLogicalNetwork to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -816,7 +782,7 @@ export class StackHciLogicalNetwork extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/stack_hci_logical_network azurerm_stack_hci_logical_network} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/stack_hci_logical_network azurerm_stack_hci_logical_network} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -827,7 +793,7 @@ export class StackHciLogicalNetwork extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stack_hci_logical_network',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.5.0',
+        providerVersion: '4.6.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

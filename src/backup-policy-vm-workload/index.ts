@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,62 +8,62 @@ import * as cdktf from 'cdktf';
 
 export interface BackupPolicyVmWorkloadConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#id BackupPolicyVmWorkload#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#id BackupPolicyVmWorkload#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#name BackupPolicyVmWorkload#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#name BackupPolicyVmWorkload#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#recovery_vault_name BackupPolicyVmWorkload#recovery_vault_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#recovery_vault_name BackupPolicyVmWorkload#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#resource_group_name BackupPolicyVmWorkload#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#resource_group_name BackupPolicyVmWorkload#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#workload_type BackupPolicyVmWorkload#workload_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#workload_type BackupPolicyVmWorkload#workload_type}
   */
   readonly workloadType: string;
   /**
   * protection_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#protection_policy BackupPolicyVmWorkload#protection_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#protection_policy BackupPolicyVmWorkload#protection_policy}
   */
   readonly protectionPolicy: BackupPolicyVmWorkloadProtectionPolicy[] | cdktf.IResolvable;
   /**
   * settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#settings BackupPolicyVmWorkload#settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#settings BackupPolicyVmWorkload#settings}
   */
   readonly settings: BackupPolicyVmWorkloadSettings;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#timeouts BackupPolicyVmWorkload#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#timeouts BackupPolicyVmWorkload#timeouts}
   */
   readonly timeouts?: BackupPolicyVmWorkloadTimeouts;
 }
 export interface BackupPolicyVmWorkloadProtectionPolicyBackup {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#frequency BackupPolicyVmWorkload#frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#frequency BackupPolicyVmWorkload#frequency}
   */
   readonly frequency?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#frequency_in_minutes BackupPolicyVmWorkload#frequency_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#frequency_in_minutes BackupPolicyVmWorkload#frequency_in_minutes}
   */
   readonly frequencyInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#time BackupPolicyVmWorkload#time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#time BackupPolicyVmWorkload#time}
   */
   readonly time?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#weekdays BackupPolicyVmWorkload#weekdays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#weekdays BackupPolicyVmWorkload#weekdays}
   */
   readonly weekdays?: string[];
 }
@@ -239,7 +234,7 @@ export class BackupPolicyVmWorkloadProtectionPolicyBackupOutputReference extends
 }
 export interface BackupPolicyVmWorkloadProtectionPolicyRetentionDaily {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#count BackupPolicyVmWorkload#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#count BackupPolicyVmWorkload#count}
   */
   readonly count: number;
 }
@@ -320,23 +315,23 @@ export class BackupPolicyVmWorkloadProtectionPolicyRetentionDailyOutputReference
 }
 export interface BackupPolicyVmWorkloadProtectionPolicyRetentionMonthly {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#count BackupPolicyVmWorkload#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#count BackupPolicyVmWorkload#count}
   */
   readonly count: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#format_type BackupPolicyVmWorkload#format_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#format_type BackupPolicyVmWorkload#format_type}
   */
   readonly formatType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#monthdays BackupPolicyVmWorkload#monthdays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#monthdays BackupPolicyVmWorkload#monthdays}
   */
   readonly monthdays?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#weekdays BackupPolicyVmWorkload#weekdays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#weekdays BackupPolicyVmWorkload#weekdays}
   */
   readonly weekdays?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#weeks BackupPolicyVmWorkload#weeks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#weeks BackupPolicyVmWorkload#weeks}
   */
   readonly weeks?: string[];
 }
@@ -530,11 +525,11 @@ export class BackupPolicyVmWorkloadProtectionPolicyRetentionMonthlyOutputReferen
 }
 export interface BackupPolicyVmWorkloadProtectionPolicyRetentionWeekly {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#count BackupPolicyVmWorkload#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#count BackupPolicyVmWorkload#count}
   */
   readonly count: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#weekdays BackupPolicyVmWorkload#weekdays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#weekdays BackupPolicyVmWorkload#weekdays}
   */
   readonly weekdays: string[];
 }
@@ -641,27 +636,27 @@ export class BackupPolicyVmWorkloadProtectionPolicyRetentionWeeklyOutputReferenc
 }
 export interface BackupPolicyVmWorkloadProtectionPolicyRetentionYearly {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#count BackupPolicyVmWorkload#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#count BackupPolicyVmWorkload#count}
   */
   readonly count: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#format_type BackupPolicyVmWorkload#format_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#format_type BackupPolicyVmWorkload#format_type}
   */
   readonly formatType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#monthdays BackupPolicyVmWorkload#monthdays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#monthdays BackupPolicyVmWorkload#monthdays}
   */
   readonly monthdays?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#months BackupPolicyVmWorkload#months}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#months BackupPolicyVmWorkload#months}
   */
   readonly months: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#weekdays BackupPolicyVmWorkload#weekdays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#weekdays BackupPolicyVmWorkload#weekdays}
   */
   readonly weekdays?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#weeks BackupPolicyVmWorkload#weeks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#weeks BackupPolicyVmWorkload#weeks}
   */
   readonly weeks?: string[];
 }
@@ -881,7 +876,7 @@ export class BackupPolicyVmWorkloadProtectionPolicyRetentionYearlyOutputReferenc
 }
 export interface BackupPolicyVmWorkloadProtectionPolicySimpleRetention {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#count BackupPolicyVmWorkload#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#count BackupPolicyVmWorkload#count}
   */
   readonly count: number;
 }
@@ -962,43 +957,43 @@ export class BackupPolicyVmWorkloadProtectionPolicySimpleRetentionOutputReferenc
 }
 export interface BackupPolicyVmWorkloadProtectionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#policy_type BackupPolicyVmWorkload#policy_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#policy_type BackupPolicyVmWorkload#policy_type}
   */
   readonly policyType: string;
   /**
   * backup block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#backup BackupPolicyVmWorkload#backup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#backup BackupPolicyVmWorkload#backup}
   */
   readonly backup: BackupPolicyVmWorkloadProtectionPolicyBackup;
   /**
   * retention_daily block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#retention_daily BackupPolicyVmWorkload#retention_daily}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#retention_daily BackupPolicyVmWorkload#retention_daily}
   */
   readonly retentionDaily?: BackupPolicyVmWorkloadProtectionPolicyRetentionDaily;
   /**
   * retention_monthly block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#retention_monthly BackupPolicyVmWorkload#retention_monthly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#retention_monthly BackupPolicyVmWorkload#retention_monthly}
   */
   readonly retentionMonthly?: BackupPolicyVmWorkloadProtectionPolicyRetentionMonthly;
   /**
   * retention_weekly block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#retention_weekly BackupPolicyVmWorkload#retention_weekly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#retention_weekly BackupPolicyVmWorkload#retention_weekly}
   */
   readonly retentionWeekly?: BackupPolicyVmWorkloadProtectionPolicyRetentionWeekly;
   /**
   * retention_yearly block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#retention_yearly BackupPolicyVmWorkload#retention_yearly}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#retention_yearly BackupPolicyVmWorkload#retention_yearly}
   */
   readonly retentionYearly?: BackupPolicyVmWorkloadProtectionPolicyRetentionYearly;
   /**
   * simple_retention block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#simple_retention BackupPolicyVmWorkload#simple_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#simple_retention BackupPolicyVmWorkload#simple_retention}
   */
   readonly simpleRetention?: BackupPolicyVmWorkloadProtectionPolicySimpleRetention;
 }
@@ -1282,11 +1277,11 @@ export class BackupPolicyVmWorkloadProtectionPolicyList extends cdktf.ComplexLis
 }
 export interface BackupPolicyVmWorkloadSettings {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#compression_enabled BackupPolicyVmWorkload#compression_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#compression_enabled BackupPolicyVmWorkload#compression_enabled}
   */
   readonly compressionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#time_zone BackupPolicyVmWorkload#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#time_zone BackupPolicyVmWorkload#time_zone}
   */
   readonly timeZone: string;
 }
@@ -1396,19 +1391,19 @@ export class BackupPolicyVmWorkloadSettingsOutputReference extends cdktf.Complex
 }
 export interface BackupPolicyVmWorkloadTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#create BackupPolicyVmWorkload#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#create BackupPolicyVmWorkload#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#delete BackupPolicyVmWorkload#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#delete BackupPolicyVmWorkload#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#read BackupPolicyVmWorkload#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#read BackupPolicyVmWorkload#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#update BackupPolicyVmWorkload#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#update BackupPolicyVmWorkload#update}
   */
   readonly update?: string;
 }
@@ -1589,7 +1584,7 @@ export class BackupPolicyVmWorkloadTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload azurerm_backup_policy_vm_workload}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload azurerm_backup_policy_vm_workload}
 */
 export class BackupPolicyVmWorkload extends cdktf.TerraformResource {
 
@@ -1605,7 +1600,7 @@ export class BackupPolicyVmWorkload extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a BackupPolicyVmWorkload resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the BackupPolicyVmWorkload to import
-  * @param importFromId The id of the existing BackupPolicyVmWorkload that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing BackupPolicyVmWorkload that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the BackupPolicyVmWorkload to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1617,7 +1612,7 @@ export class BackupPolicyVmWorkload extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.5.0/docs/resources/backup_policy_vm_workload azurerm_backup_policy_vm_workload} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/backup_policy_vm_workload azurerm_backup_policy_vm_workload} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1628,7 +1623,7 @@ export class BackupPolicyVmWorkload extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_backup_policy_vm_workload',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.5.0',
+        providerVersion: '4.6.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
