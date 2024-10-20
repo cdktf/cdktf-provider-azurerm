@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_interface_application_gateway_backend_address_pool_association
 // generated from terraform resource schema
 
