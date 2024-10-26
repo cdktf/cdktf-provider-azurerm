@@ -330,6 +330,7 @@ Object.defineProperty(exports, 'devCenterGallery', { get: function () { return r
 Object.defineProperty(exports, 'devCenterNetworkConnection', { get: function () { return require('./dev-center-network-connection'); } });
 Object.defineProperty(exports, 'devCenterProject', { get: function () { return require('./dev-center-project'); } });
 Object.defineProperty(exports, 'devCenterProjectEnvironmentType', { get: function () { return require('./dev-center-project-environment-type'); } });
+Object.defineProperty(exports, 'devCenterProjectPool', { get: function () { return require('./dev-center-project-pool'); } });
 Object.defineProperty(exports, 'devTestGlobalVmShutdownSchedule', { get: function () { return require('./dev-test-global-vm-shutdown-schedule'); } });
 Object.defineProperty(exports, 'devTestLab', { get: function () { return require('./dev-test-lab'); } });
 Object.defineProperty(exports, 'devTestLinuxVirtualMachine', { get: function () { return require('./dev-test-linux-virtual-machine'); } });
@@ -668,6 +669,7 @@ Object.defineProperty(exports, 'nginxDeployment', { get: function () { return re
 Object.defineProperty(exports, 'notificationHub', { get: function () { return require('./notification-hub'); } });
 Object.defineProperty(exports, 'notificationHubAuthorizationRule', { get: function () { return require('./notification-hub-authorization-rule'); } });
 Object.defineProperty(exports, 'notificationHubNamespace', { get: function () { return require('./notification-hub-namespace'); } });
+Object.defineProperty(exports, 'oracleAutonomousDatabase', { get: function () { return require('./oracle-autonomous-database'); } });
 Object.defineProperty(exports, 'oracleCloudVmCluster', { get: function () { return require('./oracle-cloud-vm-cluster'); } });
 Object.defineProperty(exports, 'oracleExadataInfrastructure', { get: function () { return require('./oracle-exadata-infrastructure'); } });
 Object.defineProperty(exports, 'orbitalContact', { get: function () { return require('./orbital-contact'); } });
@@ -988,6 +990,7 @@ Object.defineProperty(exports, 'trafficManagerExternalEndpoint', { get: function
 Object.defineProperty(exports, 'trafficManagerNestedEndpoint', { get: function () { return require('./traffic-manager-nested-endpoint'); } });
 Object.defineProperty(exports, 'trafficManagerProfile', { get: function () { return require('./traffic-manager-profile'); } });
 Object.defineProperty(exports, 'userAssignedIdentity', { get: function () { return require('./user-assigned-identity'); } });
+Object.defineProperty(exports, 'videoIndexerAccount', { get: function () { return require('./video-indexer-account'); } });
 Object.defineProperty(exports, 'virtualDesktopApplication', { get: function () { return require('./virtual-desktop-application'); } });
 Object.defineProperty(exports, 'virtualDesktopApplicationGroup', { get: function () { return require('./virtual-desktop-application-group'); } });
 Object.defineProperty(exports, 'virtualDesktopHostPool', { get: function () { return require('./virtual-desktop-host-pool'); } });
@@ -1283,9 +1286,15 @@ Object.defineProperty(exports, 'dataAzurermNginxConfiguration', { get: function 
 Object.defineProperty(exports, 'dataAzurermNginxDeployment', { get: function () { return require('./data-azurerm-nginx-deployment'); } });
 Object.defineProperty(exports, 'dataAzurermNotificationHub', { get: function () { return require('./data-azurerm-notification-hub'); } });
 Object.defineProperty(exports, 'dataAzurermNotificationHubNamespace', { get: function () { return require('./data-azurerm-notification-hub-namespace'); } });
+Object.defineProperty(exports, 'dataAzurermOracleAdbsCharacterSets', { get: function () { return require('./data-azurerm-oracle-adbs-character-sets'); } });
+Object.defineProperty(exports, 'dataAzurermOracleAdbsNationalCharacterSets', { get: function () { return require('./data-azurerm-oracle-adbs-national-character-sets'); } });
+Object.defineProperty(exports, 'dataAzurermOracleAutonomousDatabase', { get: function () { return require('./data-azurerm-oracle-autonomous-database'); } });
 Object.defineProperty(exports, 'dataAzurermOracleCloudVmCluster', { get: function () { return require('./data-azurerm-oracle-cloud-vm-cluster'); } });
+Object.defineProperty(exports, 'dataAzurermOracleDbNodes', { get: function () { return require('./data-azurerm-oracle-db-nodes'); } });
 Object.defineProperty(exports, 'dataAzurermOracleDbServers', { get: function () { return require('./data-azurerm-oracle-db-servers'); } });
+Object.defineProperty(exports, 'dataAzurermOracleDbSystemShapes', { get: function () { return require('./data-azurerm-oracle-db-system-shapes'); } });
 Object.defineProperty(exports, 'dataAzurermOracleExadataInfrastructure', { get: function () { return require('./data-azurerm-oracle-exadata-infrastructure'); } });
+Object.defineProperty(exports, 'dataAzurermOracleGiVersions', { get: function () { return require('./data-azurerm-oracle-gi-versions'); } });
 Object.defineProperty(exports, 'dataAzurermOrchestratedVirtualMachineScaleSet', { get: function () { return require('./data-azurerm-orchestrated-virtual-machine-scale-set'); } });
 Object.defineProperty(exports, 'dataAzurermPaloAltoLocalRulestack', { get: function () { return require('./data-azurerm-palo-alto-local-rulestack'); } });
 Object.defineProperty(exports, 'dataAzurermPlatformImage', { get: function () { return require('./data-azurerm-platform-image'); } });
