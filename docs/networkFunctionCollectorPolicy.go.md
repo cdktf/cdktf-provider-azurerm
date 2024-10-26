@@ -4,12 +4,12 @@
 
 ### NetworkFunctionCollectorPolicy <a name="NetworkFunctionCollectorPolicy" id="@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy azurerm_network_function_collector_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy azurerm_network_function_collector_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctioncollectorpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkfunctioncollectorpolicy"
 
 networkfunctioncollectorpolicy.NewNetworkFunctionCollectorPolicy(scope Construct, id *string, config NetworkFunctionCollectorPolicyConfig) NetworkFunctionCollectorPolicy
 ```
@@ -438,7 +438,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctioncollectorpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkfunctioncollectorpolicy"
 
 networkfunctioncollectorpolicy.NetworkFunctionCollectorPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -470,7 +470,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctioncollectorpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkfunctioncollectorpolicy"
 
 networkfunctioncollectorpolicy.NetworkFunctionCollectorPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -484,7 +484,7 @@ networkfunctioncollectorpolicy.NetworkFunctionCollectorPolicy_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctioncollectorpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkfunctioncollectorpolicy"
 
 networkfunctioncollectorpolicy.NetworkFunctionCollectorPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -498,7 +498,7 @@ networkfunctioncollectorpolicy.NetworkFunctionCollectorPolicy_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctioncollectorpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkfunctioncollectorpolicy"
 
 networkfunctioncollectorpolicy.NetworkFunctionCollectorPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -527,7 +527,7 @@ The construct id used in the generated config for the NetworkFunctionCollectorPo
 
 The id of the existing NetworkFunctionCollectorPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -903,7 +903,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctioncollectorpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkfunctioncollectorpolicy"
 
 &networkfunctioncollectorpolicy.NetworkFunctionCollectorPolicyConfig {
 	Connection: interface{},
@@ -913,14 +913,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctionco
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	IpfxEmission: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxEmission,
-	IpfxIngestion: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxIngestion,
+	IpfxEmission: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxEmission,
+	IpfxIngestion: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxIngestion,
 	Location: *string,
 	Name: *string,
 	TrafficCollectorId: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyTimeouts,
 }
 ```
 
@@ -937,11 +937,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctionco
 | <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.ipfxEmission">IpfxEmission</a></code> | <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxEmission">NetworkFunctionCollectorPolicyIpfxEmission</a></code> | ipfx_emission block. |
 | <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.ipfxIngestion">IpfxIngestion</a></code> | <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxIngestion">NetworkFunctionCollectorPolicyIpfxIngestion</a></code> | ipfx_ingestion block. |
-| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#location NetworkFunctionCollectorPolicy#location}. |
-| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#name NetworkFunctionCollectorPolicy#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.trafficCollectorId">TrafficCollectorId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#traffic_collector_id NetworkFunctionCollectorPolicy#traffic_collector_id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#id NetworkFunctionCollectorPolicy#id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#tags NetworkFunctionCollectorPolicy#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#location NetworkFunctionCollectorPolicy#location}. |
+| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#name NetworkFunctionCollectorPolicy#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.trafficCollectorId">TrafficCollectorId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#traffic_collector_id NetworkFunctionCollectorPolicy#traffic_collector_id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#id NetworkFunctionCollectorPolicy#id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#tags NetworkFunctionCollectorPolicy#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyTimeouts">NetworkFunctionCollectorPolicyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1026,7 +1026,7 @@ IpfxEmission NetworkFunctionCollectorPolicyIpfxEmission
 
 ipfx_emission block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#ipfx_emission NetworkFunctionCollectorPolicy#ipfx_emission}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#ipfx_emission NetworkFunctionCollectorPolicy#ipfx_emission}
 
 ---
 
@@ -1040,7 +1040,7 @@ IpfxIngestion NetworkFunctionCollectorPolicyIpfxIngestion
 
 ipfx_ingestion block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#ipfx_ingestion NetworkFunctionCollectorPolicy#ipfx_ingestion}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#ipfx_ingestion NetworkFunctionCollectorPolicy#ipfx_ingestion}
 
 ---
 
@@ -1052,7 +1052,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#location NetworkFunctionCollectorPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#location NetworkFunctionCollectorPolicy#location}.
 
 ---
 
@@ -1064,7 +1064,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#name NetworkFunctionCollectorPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#name NetworkFunctionCollectorPolicy#name}.
 
 ---
 
@@ -1076,7 +1076,7 @@ TrafficCollectorId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#traffic_collector_id NetworkFunctionCollectorPolicy#traffic_collector_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#traffic_collector_id NetworkFunctionCollectorPolicy#traffic_collector_id}.
 
 ---
 
@@ -1088,7 +1088,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#id NetworkFunctionCollectorPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#id NetworkFunctionCollectorPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1103,7 +1103,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#tags NetworkFunctionCollectorPolicy#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#tags NetworkFunctionCollectorPolicy#tags}.
 
 ---
 
@@ -1117,7 +1117,7 @@ Timeouts NetworkFunctionCollectorPolicyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#timeouts NetworkFunctionCollectorPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#timeouts NetworkFunctionCollectorPolicy#timeouts}
 
 ---
 
@@ -1126,7 +1126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxEmission.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctioncollectorpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkfunctioncollectorpolicy"
 
 &networkfunctioncollectorpolicy.NetworkFunctionCollectorPolicyIpfxEmission {
 	DestinationTypes: *[]*string,
@@ -1137,7 +1137,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctionco
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxEmission.property.destinationTypes">DestinationTypes</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#destination_types NetworkFunctionCollectorPolicy#destination_types}. |
+| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxEmission.property.destinationTypes">DestinationTypes</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#destination_types NetworkFunctionCollectorPolicy#destination_types}. |
 
 ---
 
@@ -1149,7 +1149,7 @@ DestinationTypes *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#destination_types NetworkFunctionCollectorPolicy#destination_types}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#destination_types NetworkFunctionCollectorPolicy#destination_types}.
 
 ---
 
@@ -1158,7 +1158,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxIngestion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctioncollectorpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkfunctioncollectorpolicy"
 
 &networkfunctioncollectorpolicy.NetworkFunctionCollectorPolicyIpfxIngestion {
 	SourceResourceIds: *[]*string,
@@ -1169,7 +1169,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctionco
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxIngestion.property.sourceResourceIds">SourceResourceIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#source_resource_ids NetworkFunctionCollectorPolicy#source_resource_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxIngestion.property.sourceResourceIds">SourceResourceIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#source_resource_ids NetworkFunctionCollectorPolicy#source_resource_ids}. |
 
 ---
 
@@ -1181,7 +1181,7 @@ SourceResourceIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#source_resource_ids NetworkFunctionCollectorPolicy#source_resource_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#source_resource_ids NetworkFunctionCollectorPolicy#source_resource_ids}.
 
 ---
 
@@ -1190,7 +1190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctioncollectorpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkfunctioncollectorpolicy"
 
 &networkfunctioncollectorpolicy.NetworkFunctionCollectorPolicyTimeouts {
 	Create: *string,
@@ -1204,10 +1204,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctionco
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#create NetworkFunctionCollectorPolicy#create}. |
-| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#delete NetworkFunctionCollectorPolicy#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#read NetworkFunctionCollectorPolicy#read}. |
-| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#update NetworkFunctionCollectorPolicy#update}. |
+| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#create NetworkFunctionCollectorPolicy#create}. |
+| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#delete NetworkFunctionCollectorPolicy#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#read NetworkFunctionCollectorPolicy#read}. |
+| <code><a href="#@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#update NetworkFunctionCollectorPolicy#update}. |
 
 ---
 
@@ -1219,7 +1219,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#create NetworkFunctionCollectorPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#create NetworkFunctionCollectorPolicy#create}.
 
 ---
 
@@ -1231,7 +1231,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#delete NetworkFunctionCollectorPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#delete NetworkFunctionCollectorPolicy#delete}.
 
 ---
 
@@ -1243,7 +1243,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#read NetworkFunctionCollectorPolicy#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#read NetworkFunctionCollectorPolicy#read}.
 
 ---
 
@@ -1255,7 +1255,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/network_function_collector_policy#update NetworkFunctionCollectorPolicy#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_function_collector_policy#update NetworkFunctionCollectorPolicy#update}.
 
 ---
 
@@ -1266,7 +1266,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxEmissionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctioncollectorpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkfunctioncollectorpolicy"
 
 networkfunctioncollectorpolicy.NewNetworkFunctionCollectorPolicyIpfxEmissionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkFunctionCollectorPolicyIpfxEmissionOutputReference
 ```
@@ -1537,7 +1537,7 @@ func InternalValue() NetworkFunctionCollectorPolicyIpfxEmission
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyIpfxIngestionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctioncollectorpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkfunctioncollectorpolicy"
 
 networkfunctioncollectorpolicy.NewNetworkFunctionCollectorPolicyIpfxIngestionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkFunctionCollectorPolicyIpfxIngestionOutputReference
 ```
@@ -1808,7 +1808,7 @@ func InternalValue() NetworkFunctionCollectorPolicyIpfxIngestion
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkFunctionCollectorPolicy.NetworkFunctionCollectorPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkfunctioncollectorpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkfunctioncollectorpolicy"
 
 networkfunctioncollectorpolicy.NewNetworkFunctionCollectorPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkFunctionCollectorPolicyTimeoutsOutputReference
 ```

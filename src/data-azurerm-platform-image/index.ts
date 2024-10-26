@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/data-sources/platform_image
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/data-sources/platform_image
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +8,42 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermPlatformImageConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/data-sources/platform_image#id DataAzurermPlatformImage#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/data-sources/platform_image#id DataAzurermPlatformImage#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/data-sources/platform_image#location DataAzurermPlatformImage#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/data-sources/platform_image#location DataAzurermPlatformImage#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/data-sources/platform_image#offer DataAzurermPlatformImage#offer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/data-sources/platform_image#offer DataAzurermPlatformImage#offer}
   */
   readonly offer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/data-sources/platform_image#publisher DataAzurermPlatformImage#publisher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/data-sources/platform_image#publisher DataAzurermPlatformImage#publisher}
   */
   readonly publisher: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/data-sources/platform_image#sku DataAzurermPlatformImage#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/data-sources/platform_image#sku DataAzurermPlatformImage#sku}
   */
   readonly sku: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/data-sources/platform_image#version DataAzurermPlatformImage#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/data-sources/platform_image#version DataAzurermPlatformImage#version}
   */
   readonly version?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/data-sources/platform_image#timeouts DataAzurermPlatformImage#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/data-sources/platform_image#timeouts DataAzurermPlatformImage#timeouts}
   */
   readonly timeouts?: DataAzurermPlatformImageTimeouts;
 }
 export interface DataAzurermPlatformImageTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/data-sources/platform_image#read DataAzurermPlatformImage#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/data-sources/platform_image#read DataAzurermPlatformImage#read}
   */
   readonly read?: string;
 }
@@ -142,7 +137,7 @@ export class DataAzurermPlatformImageTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/data-sources/platform_image azurerm_platform_image}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/data-sources/platform_image azurerm_platform_image}
 */
 export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
 
@@ -158,7 +153,7 @@ export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermPlatformImage resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermPlatformImage to import
-  * @param importFromId The id of the existing DataAzurermPlatformImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/data-sources/platform_image#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermPlatformImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/data-sources/platform_image#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermPlatformImage to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -170,7 +165,7 @@ export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/data-sources/platform_image azurerm_platform_image} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/data-sources/platform_image azurerm_platform_image} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -181,7 +176,7 @@ export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_platform_image',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.6.0',
+        providerVersion: '4.7.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

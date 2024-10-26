@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,67 +8,67 @@ import * as cdktf from 'cdktf';
 
 export interface StorageDataLakeGen2PathConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#filesystem_name StorageDataLakeGen2Path#filesystem_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#filesystem_name StorageDataLakeGen2Path#filesystem_name}
   */
   readonly filesystemName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#group StorageDataLakeGen2Path#group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#group StorageDataLakeGen2Path#group}
   */
   readonly group?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#id StorageDataLakeGen2Path#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#id StorageDataLakeGen2Path#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#owner StorageDataLakeGen2Path#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#owner StorageDataLakeGen2Path#owner}
   */
   readonly owner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#path StorageDataLakeGen2Path#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#path StorageDataLakeGen2Path#path}
   */
   readonly path: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#resource StorageDataLakeGen2Path#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#resource StorageDataLakeGen2Path#resource}
   */
   readonly resource: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#storage_account_id StorageDataLakeGen2Path#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#storage_account_id StorageDataLakeGen2Path#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
   * ace block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#ace StorageDataLakeGen2Path#ace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#ace StorageDataLakeGen2Path#ace}
   */
   readonly ace?: StorageDataLakeGen2PathAce[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#timeouts StorageDataLakeGen2Path#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#timeouts StorageDataLakeGen2Path#timeouts}
   */
   readonly timeouts?: StorageDataLakeGen2PathTimeouts;
 }
 export interface StorageDataLakeGen2PathAce {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#id StorageDataLakeGen2Path#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#id StorageDataLakeGen2Path#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#permissions StorageDataLakeGen2Path#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#permissions StorageDataLakeGen2Path#permissions}
   */
   readonly permissions: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#scope StorageDataLakeGen2Path#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#scope StorageDataLakeGen2Path#scope}
   */
   readonly scope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#type StorageDataLakeGen2Path#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#type StorageDataLakeGen2Path#type}
   */
   readonly type: string;
 }
@@ -270,19 +265,19 @@ export class StorageDataLakeGen2PathAceList extends cdktf.ComplexList {
 }
 export interface StorageDataLakeGen2PathTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#create StorageDataLakeGen2Path#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#create StorageDataLakeGen2Path#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#delete StorageDataLakeGen2Path#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#delete StorageDataLakeGen2Path#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#read StorageDataLakeGen2Path#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#read StorageDataLakeGen2Path#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#update StorageDataLakeGen2Path#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#update StorageDataLakeGen2Path#update}
   */
   readonly update?: string;
 }
@@ -463,7 +458,7 @@ export class StorageDataLakeGen2PathTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path azurerm_storage_data_lake_gen2_path}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path azurerm_storage_data_lake_gen2_path}
 */
 export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
 
@@ -479,7 +474,7 @@ export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a StorageDataLakeGen2Path resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the StorageDataLakeGen2Path to import
-  * @param importFromId The id of the existing StorageDataLakeGen2Path that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing StorageDataLakeGen2Path that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the StorageDataLakeGen2Path to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -491,7 +486,7 @@ export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.6.0/docs/resources/storage_data_lake_gen2_path azurerm_storage_data_lake_gen2_path} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/storage_data_lake_gen2_path azurerm_storage_data_lake_gen2_path} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -502,7 +497,7 @@ export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_data_lake_gen2_path',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.6.0',
+        providerVersion: '4.7.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
