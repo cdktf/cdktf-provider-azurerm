@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalcontact"
 
 orbitalcontact.NewOrbitalContact(scope Construct, id *string, config OrbitalContactConfig) OrbitalContact
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalcontact"
 
 orbitalcontact.OrbitalContact_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalcontact"
 
 orbitalcontact.OrbitalContact_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ orbitalcontact.OrbitalContact_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalcontact"
 
 orbitalcontact.OrbitalContact_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ orbitalcontact.OrbitalContact_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalcontact"
 
 orbitalcontact.OrbitalContact_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -870,7 +870,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalcontact"
 
 &orbitalcontact.OrbitalContactConfig {
 	Connection: interface{},
@@ -887,7 +887,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalcontact"
 	ReservationStartTime: *string,
 	SpacecraftId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orbitalContact.OrbitalContactTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.orbitalContact.OrbitalContactTimeouts,
 }
 ```
 
@@ -1089,7 +1089,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContactTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalcontact"
 
 &orbitalcontact.OrbitalContactTimeouts {
 	Create: *string,
@@ -1151,7 +1151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContactTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalcontact"
 
 orbitalcontact.NewOrbitalContactTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrbitalContactTimeoutsOutputReference
 ```

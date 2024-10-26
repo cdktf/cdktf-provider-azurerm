@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.oracleCloudVmCluster.OracleCloudVmCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/oraclecloudvmcluster"
 
 oraclecloudvmcluster.NewOracleCloudVmCluster(scope Construct, id *string, config OracleCloudVmClusterConfig) OracleCloudVmCluster
 ```
@@ -495,7 +495,7 @@ func ResetTimeZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.oracleCloudVmCluster.OracleCloudVmCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/oraclecloudvmcluster"
 
 oraclecloudvmcluster.OracleCloudVmCluster_IsConstruct(x interface{}) *bool
 ```
@@ -527,7 +527,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.oracleCloudVmCluster.OracleCloudVmCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/oraclecloudvmcluster"
 
 oraclecloudvmcluster.OracleCloudVmCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -541,7 +541,7 @@ oraclecloudvmcluster.OracleCloudVmCluster_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.oracleCloudVmCluster.OracleCloudVmCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/oraclecloudvmcluster"
 
 oraclecloudvmcluster.OracleCloudVmCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -555,7 +555,7 @@ oraclecloudvmcluster.OracleCloudVmCluster_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.oracleCloudVmCluster.OracleCloudVmCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/oraclecloudvmcluster"
 
 oraclecloudvmcluster.OracleCloudVmCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1367,7 +1367,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.oracleCloudVmCluster.OracleCloudVmClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/oraclecloudvmcluster"
 
 &oraclecloudvmcluster.OracleCloudVmClusterConfig {
 	Connection: interface{},
@@ -1392,7 +1392,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oraclecloudvmcluster"
 	VirtualNetworkId: *string,
 	BackupSubnetCidr: *string,
 	ClusterName: *string,
-	DataCollectionOptions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.oracleCloudVmCluster.OracleCloudVmClusterDataCollectionOptions,
+	DataCollectionOptions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.oracleCloudVmCluster.OracleCloudVmClusterDataCollectionOptions,
 	DataStoragePercentage: *f64,
 	DataStorageSizeInTbs: *f64,
 	DbNodeStorageSizeInGbs: *f64,
@@ -1401,7 +1401,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oraclecloudvmcluster"
 	MemorySizeInGbs: *f64,
 	SparseDiskgroupEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.oracleCloudVmCluster.OracleCloudVmClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.oracleCloudVmCluster.OracleCloudVmClusterTimeouts,
 	TimeZone: *string,
 }
 ```
@@ -1840,7 +1840,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.oracleCloudVmCluster.OracleCloudVmClusterDataCollectionOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/oraclecloudvmcluster"
 
 &oraclecloudvmcluster.OracleCloudVmClusterDataCollectionOptions {
 	DiagnosticsEventsEnabled: interface{},
@@ -1900,7 +1900,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.oracleCloudVmCluster.OracleCloudVmClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/oraclecloudvmcluster"
 
 &oraclecloudvmcluster.OracleCloudVmClusterTimeouts {
 	Create: *string,
@@ -1976,7 +1976,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.oracleCloudVmCluster.OracleCloudVmClusterDataCollectionOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/oraclecloudvmcluster"
 
 oraclecloudvmcluster.NewOracleCloudVmClusterDataCollectionOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OracleCloudVmClusterDataCollectionOptionsOutputReference
 ```
@@ -2312,7 +2312,7 @@ func InternalValue() OracleCloudVmClusterDataCollectionOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.oracleCloudVmCluster.OracleCloudVmClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/oraclecloudvmcluster"
 
 oraclecloudvmcluster.NewOracleCloudVmClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OracleCloudVmClusterTimeoutsOutputReference
 ```
