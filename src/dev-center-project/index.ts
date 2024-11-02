@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,62 +8,62 @@ import * as cdktf from 'cdktf';
 
 export interface DevCenterProjectConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#description DevCenterProject#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#description DevCenterProject#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#dev_center_id DevCenterProject#dev_center_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#dev_center_id DevCenterProject#dev_center_id}
   */
   readonly devCenterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#id DevCenterProject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#id DevCenterProject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#location DevCenterProject#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#location DevCenterProject#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#maximum_dev_boxes_per_user DevCenterProject#maximum_dev_boxes_per_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#maximum_dev_boxes_per_user DevCenterProject#maximum_dev_boxes_per_user}
   */
   readonly maximumDevBoxesPerUser?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#name DevCenterProject#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#name DevCenterProject#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#resource_group_name DevCenterProject#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#resource_group_name DevCenterProject#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#tags DevCenterProject#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#tags DevCenterProject#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#timeouts DevCenterProject#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#timeouts DevCenterProject#timeouts}
   */
   readonly timeouts?: DevCenterProjectTimeouts;
 }
 export interface DevCenterProjectTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#create DevCenterProject#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#create DevCenterProject#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#delete DevCenterProject#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#delete DevCenterProject#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#read DevCenterProject#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#read DevCenterProject#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#update DevCenterProject#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#update DevCenterProject#update}
   */
   readonly update?: string;
 }
@@ -249,7 +244,7 @@ export class DevCenterProjectTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project azurerm_dev_center_project}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project azurerm_dev_center_project}
 */
 export class DevCenterProject extends cdktf.TerraformResource {
 
@@ -265,7 +260,7 @@ export class DevCenterProject extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DevCenterProject resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DevCenterProject to import
-  * @param importFromId The id of the existing DevCenterProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DevCenterProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DevCenterProject to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -277,7 +272,7 @@ export class DevCenterProject extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_center_project azurerm_dev_center_project} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_center_project azurerm_dev_center_project} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -288,7 +283,7 @@ export class DevCenterProject extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dev_center_project',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.7.0',
+        providerVersion: '4.8.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

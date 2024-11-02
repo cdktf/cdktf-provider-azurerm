@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_interface_security_group_association
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/network_interface_security_group_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,38 +8,38 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkInterfaceSecurityGroupAssociationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_interface_security_group_association#id NetworkInterfaceSecurityGroupAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/network_interface_security_group_association#id NetworkInterfaceSecurityGroupAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_interface_security_group_association#network_interface_id NetworkInterfaceSecurityGroupAssociation#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/network_interface_security_group_association#network_interface_id NetworkInterfaceSecurityGroupAssociation#network_interface_id}
   */
   readonly networkInterfaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_interface_security_group_association#network_security_group_id NetworkInterfaceSecurityGroupAssociation#network_security_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/network_interface_security_group_association#network_security_group_id NetworkInterfaceSecurityGroupAssociation#network_security_group_id}
   */
   readonly networkSecurityGroupId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_interface_security_group_association#timeouts NetworkInterfaceSecurityGroupAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/network_interface_security_group_association#timeouts NetworkInterfaceSecurityGroupAssociation#timeouts}
   */
   readonly timeouts?: NetworkInterfaceSecurityGroupAssociationTimeouts;
 }
 export interface NetworkInterfaceSecurityGroupAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_interface_security_group_association#create NetworkInterfaceSecurityGroupAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/network_interface_security_group_association#create NetworkInterfaceSecurityGroupAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_interface_security_group_association#delete NetworkInterfaceSecurityGroupAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/network_interface_security_group_association#delete NetworkInterfaceSecurityGroupAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_interface_security_group_association#read NetworkInterfaceSecurityGroupAssociation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/network_interface_security_group_association#read NetworkInterfaceSecurityGroupAssociation#read}
   */
   readonly read?: string;
 }
@@ -196,7 +191,7 @@ export class NetworkInterfaceSecurityGroupAssociationTimeoutsOutputReference ext
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_interface_security_group_association azurerm_network_interface_security_group_association}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/network_interface_security_group_association azurerm_network_interface_security_group_association}
 */
 export class NetworkInterfaceSecurityGroupAssociation extends cdktf.TerraformResource {
 
@@ -212,7 +207,7 @@ export class NetworkInterfaceSecurityGroupAssociation extends cdktf.TerraformRes
   * Generates CDKTF code for importing a NetworkInterfaceSecurityGroupAssociation resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkInterfaceSecurityGroupAssociation to import
-  * @param importFromId The id of the existing NetworkInterfaceSecurityGroupAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_interface_security_group_association#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkInterfaceSecurityGroupAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/network_interface_security_group_association#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkInterfaceSecurityGroupAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -224,7 +219,7 @@ export class NetworkInterfaceSecurityGroupAssociation extends cdktf.TerraformRes
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/network_interface_security_group_association azurerm_network_interface_security_group_association} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/network_interface_security_group_association azurerm_network_interface_security_group_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -235,7 +230,7 @@ export class NetworkInterfaceSecurityGroupAssociation extends cdktf.TerraformRes
       terraformResourceType: 'azurerm_network_interface_security_group_association',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.7.0',
+        providerVersion: '4.8.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

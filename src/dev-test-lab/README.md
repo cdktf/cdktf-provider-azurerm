@@ -1,3 +1,3 @@
 # `azurerm_dev_test_lab`
 
-Refer to the Terraform Registry for docs: [`azurerm_dev_test_lab`](https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/dev_test_lab).
+Refer to the Terraform Registry for docs: [`azurerm_dev_test_lab`](https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/dev_test_lab).
