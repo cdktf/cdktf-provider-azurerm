@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultCertificateContacts.KeyVaultCertificateContacts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultcertificatecontacts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/keyvaultcertificatecontacts"
 
 keyvaultcertificatecontacts.NewKeyVaultCertificateContacts(scope Construct, id *string, config KeyVaultCertificateContactsConfig) KeyVaultCertificateContacts
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.keyVaultCertificateContacts.KeyVaultCertificateContacts.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultcertificatecontacts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/keyvaultcertificatecontacts"
 
 keyvaultcertificatecontacts.KeyVaultCertificateContacts_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.keyVaultCertificateContacts.KeyVaultCertificateContacts.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultcertificatecontacts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/keyvaultcertificatecontacts"
 
 keyvaultcertificatecontacts.KeyVaultCertificateContacts_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ keyvaultcertificatecontacts.KeyVaultCertificateContacts_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.keyVaultCertificateContacts.KeyVaultCertificateContacts.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultcertificatecontacts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/keyvaultcertificatecontacts"
 
 keyvaultcertificatecontacts.KeyVaultCertificateContacts_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ keyvaultcertificatecontacts.KeyVaultCertificateContacts_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.keyVaultCertificateContacts.KeyVaultCertificateContacts.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultcertificatecontacts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/keyvaultcertificatecontacts"
 
 keyvaultcertificatecontacts.KeyVaultCertificateContacts_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -802,7 +802,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.keyVaultCertificateContacts.KeyVaultCertificateContactsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultcertificatecontacts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/keyvaultcertificatecontacts"
 
 &keyvaultcertificatecontacts.KeyVaultCertificateContactsConfig {
 	Connection: interface{},
@@ -815,7 +815,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultcertificateco
 	KeyVaultId: *string,
 	Contact: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.keyVaultCertificateContacts.KeyVaultCertificateContactsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.keyVaultCertificateContacts.KeyVaultCertificateContactsTimeouts,
 }
 ```
 
@@ -967,7 +967,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.keyVaultCertificateContacts.KeyVaultCertificateContactsContact.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultcertificatecontacts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/keyvaultcertificatecontacts"
 
 &keyvaultcertificatecontacts.KeyVaultCertificateContactsContact {
 	Email: *string,
@@ -1027,7 +1027,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.keyVaultCertificateContacts.KeyVaultCertificateContactsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultcertificatecontacts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/keyvaultcertificatecontacts"
 
 &keyvaultcertificatecontacts.KeyVaultCertificateContactsTimeouts {
 	Create: *string,
@@ -1103,7 +1103,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultCertificateContacts.KeyVaultCertificateContactsContactList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultcertificatecontacts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/keyvaultcertificatecontacts"
 
 keyvaultcertificatecontacts.NewKeyVaultCertificateContactsContactList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) KeyVaultCertificateContactsContactList
 ```
@@ -1263,7 +1263,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultCertificateContacts.KeyVaultCertificateContactsContactOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultcertificatecontacts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/keyvaultcertificatecontacts"
 
 keyvaultcertificatecontacts.NewKeyVaultCertificateContactsContactOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) KeyVaultCertificateContactsContactOutputReference
 ```
@@ -1610,7 +1610,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultCertificateContacts.KeyVaultCertificateContactsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultcertificatecontacts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/keyvaultcertificatecontacts"
 
 keyvaultcertificatecontacts.NewKeyVaultCertificateContactsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KeyVaultCertificateContactsTimeoutsOutputReference
 ```
