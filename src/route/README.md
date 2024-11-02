@@ -1,3 +1,3 @@
 # `azurerm_route`
 
-Refer to the Terraform Registry for docs: [`azurerm_route`](https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route).
+Refer to the Terraform Registry for docs: [`azurerm_route`](https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route).

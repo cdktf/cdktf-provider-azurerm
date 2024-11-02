@@ -540,6 +540,7 @@ Object.defineProperty(exports, 'machineLearningDatastoreFileshare', { get: funct
 Object.defineProperty(exports, 'machineLearningInferenceCluster', { get: function () { return require('./machine-learning-inference-cluster'); } });
 Object.defineProperty(exports, 'machineLearningSynapseSpark', { get: function () { return require('./machine-learning-synapse-spark'); } });
 Object.defineProperty(exports, 'machineLearningWorkspace', { get: function () { return require('./machine-learning-workspace'); } });
+Object.defineProperty(exports, 'machineLearningWorkspaceNetworkOutboundRuleFqdn', { get: function () { return require('./machine-learning-workspace-network-outbound-rule-fqdn'); } });
 Object.defineProperty(exports, 'maintenanceAssignmentDedicatedHost', { get: function () { return require('./maintenance-assignment-dedicated-host'); } });
 Object.defineProperty(exports, 'maintenanceAssignmentDynamicScope', { get: function () { return require('./maintenance-assignment-dynamic-scope'); } });
 Object.defineProperty(exports, 'maintenanceAssignmentVirtualMachine', { get: function () { return require('./maintenance-assignment-virtual-machine'); } });
@@ -886,7 +887,9 @@ Object.defineProperty(exports, 'springCloudStorage', { get: function () { return
 Object.defineProperty(exports, 'sshPublicKey', { get: function () { return require('./ssh-public-key'); } });
 Object.defineProperty(exports, 'stackHciCluster', { get: function () { return require('./stack-hci-cluster'); } });
 Object.defineProperty(exports, 'stackHciDeploymentSetting', { get: function () { return require('./stack-hci-deployment-setting'); } });
+Object.defineProperty(exports, 'stackHciExtension', { get: function () { return require('./stack-hci-extension'); } });
 Object.defineProperty(exports, 'stackHciLogicalNetwork', { get: function () { return require('./stack-hci-logical-network'); } });
+Object.defineProperty(exports, 'stackHciMarketplaceGalleryImage', { get: function () { return require('./stack-hci-marketplace-gallery-image'); } });
 Object.defineProperty(exports, 'stackHciStoragePath', { get: function () { return require('./stack-hci-storage-path'); } });
 Object.defineProperty(exports, 'stackHciVirtualHardDisk', { get: function () { return require('./stack-hci-virtual-hard-disk'); } });
 Object.defineProperty(exports, 'staticSite', { get: function () { return require('./static-site'); } });
@@ -989,6 +992,7 @@ Object.defineProperty(exports, 'trafficManagerAzureEndpoint', { get: function ()
 Object.defineProperty(exports, 'trafficManagerExternalEndpoint', { get: function () { return require('./traffic-manager-external-endpoint'); } });
 Object.defineProperty(exports, 'trafficManagerNestedEndpoint', { get: function () { return require('./traffic-manager-nested-endpoint'); } });
 Object.defineProperty(exports, 'trafficManagerProfile', { get: function () { return require('./traffic-manager-profile'); } });
+Object.defineProperty(exports, 'trustedSigningAccount', { get: function () { return require('./trusted-signing-account'); } });
 Object.defineProperty(exports, 'userAssignedIdentity', { get: function () { return require('./user-assigned-identity'); } });
 Object.defineProperty(exports, 'videoIndexerAccount', { get: function () { return require('./video-indexer-account'); } });
 Object.defineProperty(exports, 'virtualDesktopApplication', { get: function () { return require('./virtual-desktop-application'); } });
@@ -1408,6 +1412,7 @@ Object.defineProperty(exports, 'dataAzurermVirtualMachineScaleSet', { get: funct
 Object.defineProperty(exports, 'dataAzurermVirtualNetwork', { get: function () { return require('./data-azurerm-virtual-network'); } });
 Object.defineProperty(exports, 'dataAzurermVirtualNetworkGateway', { get: function () { return require('./data-azurerm-virtual-network-gateway'); } });
 Object.defineProperty(exports, 'dataAzurermVirtualNetworkGatewayConnection', { get: function () { return require('./data-azurerm-virtual-network-gateway-connection'); } });
+Object.defineProperty(exports, 'dataAzurermVirtualNetworkPeering', { get: function () { return require('./data-azurerm-virtual-network-peering'); } });
 Object.defineProperty(exports, 'dataAzurermVirtualWan', { get: function () { return require('./data-azurerm-virtual-wan'); } });
 Object.defineProperty(exports, 'dataAzurermVmwarePrivateCloud', { get: function () { return require('./data-azurerm-vmware-private-cloud'); } });
 Object.defineProperty(exports, 'dataAzurermVpnGateway', { get: function () { return require('./data-azurerm-vpn-gateway'); } });

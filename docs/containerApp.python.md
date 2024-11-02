@@ -4,7 +4,7 @@
 
 ### ContainerApp <a name="ContainerApp" id="@cdktf/provider-azurerm.containerApp.ContainerApp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app azurerm_container_app}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app azurerm_container_app}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer"></a>
 
@@ -52,19 +52,19 @@ containerApp.ContainerApp(
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.containerAppEnvironmentId">container_app_environment_id</a></code> | <code>str</code> | The ID of the Container App Environment to host this Container App. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.name">name</a></code> | <code>str</code> | The name for this Container App. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#resource_group_name ContainerApp#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.revisionMode">revision_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#revision_mode ContainerApp#revision_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#resource_group_name ContainerApp#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.revisionMode">revision_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#revision_mode ContainerApp#revision_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.template">template</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate">ContainerAppTemplate</a></code> | template block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.dapr">dapr</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDapr">ContainerAppDapr</a></code> | dapr block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#id ContainerApp#id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#id ContainerApp#id}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIdentity">ContainerAppIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.ingress">ingress</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress">ContainerAppIngress</a></code> | ingress block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.maxInactiveRevisions">max_inactive_revisions</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#max_inactive_revisions ContainerApp#max_inactive_revisions}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.maxInactiveRevisions">max_inactive_revisions</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#max_inactive_revisions ContainerApp#max_inactive_revisions}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.registry">registry</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]]</code> | registry block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.secret">secret</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]]</code> | secret block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#tags ContainerApp#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#tags ContainerApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.workloadProfileName">workload_profile_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#workload_profile_name ContainerApp#workload_profile_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.workloadProfileName">workload_profile_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#workload_profile_name ContainerApp#workload_profile_name}. |
 
 ---
 
@@ -134,7 +134,7 @@ Must be unique amongst siblings in the same scope
 
 The ID of the Container App Environment to host this Container App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#container_app_environment_id ContainerApp#container_app_environment_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#container_app_environment_id ContainerApp#container_app_environment_id}
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name for this Container App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#resource_group_name ContainerApp#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#resource_group_name ContainerApp#resource_group_name}.
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#revision_mode ContainerApp#revision_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#revision_mode ContainerApp#revision_mode}.
 
 ---
 
@@ -170,7 +170,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 template block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#template ContainerApp#template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#template ContainerApp#template}
 
 ---
 
@@ -180,7 +180,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 dapr block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#dapr ContainerApp#dapr}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#dapr ContainerApp#dapr}
 
 ---
 
@@ -188,7 +188,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#id ContainerApp#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#id ContainerApp#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -201,7 +201,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#identity ContainerApp#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#identity ContainerApp#identity}
 
 ---
 
@@ -211,7 +211,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ingress block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#ingress ContainerApp#ingress}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#ingress ContainerApp#ingress}
 
 ---
 
@@ -219,7 +219,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#max_inactive_revisions ContainerApp#max_inactive_revisions}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#max_inactive_revisions ContainerApp#max_inactive_revisions}.
 
 ---
 
@@ -229,7 +229,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 registry block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#registry ContainerApp#registry}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#registry ContainerApp#registry}
 
 ---
 
@@ -239,7 +239,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 secret block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#secret ContainerApp#secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#secret ContainerApp#secret}
 
 ---
 
@@ -247,7 +247,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#tags ContainerApp#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#tags ContainerApp#tags}.
 
 ---
 
@@ -257,7 +257,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#timeouts ContainerApp#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#timeouts ContainerApp#timeouts}
 
 ---
 
@@ -265,7 +265,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#workload_profile_name ContainerApp#workload_profile_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#workload_profile_name ContainerApp#workload_profile_name}.
 
 ---
 
@@ -657,7 +657,7 @@ def put_dapr(
 
 The Dapr Application Identifier.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#app_id ContainerApp#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#app_id ContainerApp#app_id}
 
 ---
 
@@ -667,7 +667,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The port which the application is listening on. This is the same as the `ingress` port.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#app_port ContainerApp#app_port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#app_port ContainerApp#app_port}
 
 ---
 
@@ -677,7 +677,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The protocol for the app. Possible values include `http` and `grpc`. Defaults to `http`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#app_protocol ContainerApp#app_protocol}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#app_protocol ContainerApp#app_protocol}
 
 ---
 
@@ -694,7 +694,7 @@ def put_identity(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#type ContainerApp#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#type ContainerApp#type}.
 
 ---
 
@@ -702,7 +702,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#identity_ids ContainerApp#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#identity_ids ContainerApp#identity_ids}.
 
 ---
 
@@ -726,7 +726,7 @@ def put_ingress(
 
 The target port on the container for the Ingress traffic.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#target_port ContainerApp#target_port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#target_port ContainerApp#target_port}
 
 ---
 
@@ -736,7 +736,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 traffic_weight block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#traffic_weight ContainerApp#traffic_weight}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#traffic_weight ContainerApp#traffic_weight}
 
 ---
 
@@ -746,7 +746,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Should this ingress allow insecure connections?
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#allow_insecure_connections ContainerApp#allow_insecure_connections}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#allow_insecure_connections ContainerApp#allow_insecure_connections}
 
 ---
 
@@ -756,7 +756,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The exposed port on the container for the Ingress traffic.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#exposed_port ContainerApp#exposed_port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#exposed_port ContainerApp#exposed_port}
 
 ---
 
@@ -766,7 +766,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Is this an external Ingress.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#external_enabled ContainerApp#external_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#external_enabled ContainerApp#external_enabled}
 
 ---
 
@@ -776,7 +776,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ip_security_restriction block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#ip_security_restriction ContainerApp#ip_security_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#ip_security_restriction ContainerApp#ip_security_restriction}
 
 ---
 
@@ -786,7 +786,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`, `tcp`. Defaults to `auto`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#transport ContainerApp#transport}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#transport ContainerApp#transport}
 
 ---
 
@@ -841,7 +841,7 @@ def put_template(
 
 container block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#container ContainerApp#container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#container ContainerApp#container}
 
 ---
 
@@ -851,7 +851,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 azure_queue_scale_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#azure_queue_scale_rule ContainerApp#azure_queue_scale_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#azure_queue_scale_rule ContainerApp#azure_queue_scale_rule}
 
 ---
 
@@ -861,7 +861,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 custom_scale_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#custom_scale_rule ContainerApp#custom_scale_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#custom_scale_rule ContainerApp#custom_scale_rule}
 
 ---
 
@@ -871,7 +871,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 http_scale_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#http_scale_rule ContainerApp#http_scale_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#http_scale_rule ContainerApp#http_scale_rule}
 
 ---
 
@@ -881,7 +881,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 init_container block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#init_container ContainerApp#init_container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#init_container ContainerApp#init_container}
 
 ---
 
@@ -891,7 +891,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The maximum number of replicas for this container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#max_replicas ContainerApp#max_replicas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#max_replicas ContainerApp#max_replicas}
 
 ---
 
@@ -901,7 +901,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The minimum number of replicas for this container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#min_replicas ContainerApp#min_replicas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#min_replicas ContainerApp#min_replicas}
 
 ---
 
@@ -913,7 +913,7 @@ The suffix for the revision.
 
 This value must be unique for the lifetime of the Resource. If omitted the service will use a hash function to create one.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#revision_suffix ContainerApp#revision_suffix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#revision_suffix ContainerApp#revision_suffix}
 
 ---
 
@@ -923,7 +923,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 tcp_scale_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#tcp_scale_rule ContainerApp#tcp_scale_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#tcp_scale_rule ContainerApp#tcp_scale_rule}
 
 ---
 
@@ -933,7 +933,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 volume block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#volume ContainerApp#volume}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#volume ContainerApp#volume}
 
 ---
 
@@ -952,7 +952,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#create ContainerApp#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#create ContainerApp#create}.
 
 ---
 
@@ -960,7 +960,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#delete ContainerApp#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#delete ContainerApp#delete}.
 
 ---
 
@@ -968,7 +968,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#read ContainerApp#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#read ContainerApp#read}.
 
 ---
 
@@ -976,7 +976,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#update ContainerApp#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#update ContainerApp#update}.
 
 ---
 
@@ -1154,7 +1154,7 @@ The construct id used in the generated config for the ContainerApp to import.
 
 The id of the existing ContainerApp that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1780,19 +1780,19 @@ containerApp.ContainerAppConfig(
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.containerAppEnvironmentId">container_app_environment_id</a></code> | <code>str</code> | The ID of the Container App Environment to host this Container App. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.name">name</a></code> | <code>str</code> | The name for this Container App. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#resource_group_name ContainerApp#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.revisionMode">revision_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#revision_mode ContainerApp#revision_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#resource_group_name ContainerApp#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.revisionMode">revision_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#revision_mode ContainerApp#revision_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.template">template</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate">ContainerAppTemplate</a></code> | template block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.dapr">dapr</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDapr">ContainerAppDapr</a></code> | dapr block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#id ContainerApp#id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#id ContainerApp#id}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIdentity">ContainerAppIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.ingress">ingress</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress">ContainerAppIngress</a></code> | ingress block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.maxInactiveRevisions">max_inactive_revisions</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#max_inactive_revisions ContainerApp#max_inactive_revisions}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.maxInactiveRevisions">max_inactive_revisions</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#max_inactive_revisions ContainerApp#max_inactive_revisions}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.registry">registry</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]]</code> | registry block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.secret">secret</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]]</code> | secret block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#tags ContainerApp#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#tags ContainerApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.workloadProfileName">workload_profile_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#workload_profile_name ContainerApp#workload_profile_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.workloadProfileName">workload_profile_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#workload_profile_name ContainerApp#workload_profile_name}. |
 
 ---
 
@@ -1876,7 +1876,7 @@ container_app_environment_id: str
 
 The ID of the Container App Environment to host this Container App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#container_app_environment_id ContainerApp#container_app_environment_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#container_app_environment_id ContainerApp#container_app_environment_id}
 
 ---
 
@@ -1890,7 +1890,7 @@ name: str
 
 The name for this Container App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -1902,7 +1902,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#resource_group_name ContainerApp#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#resource_group_name ContainerApp#resource_group_name}.
 
 ---
 
@@ -1914,7 +1914,7 @@ revision_mode: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#revision_mode ContainerApp#revision_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#revision_mode ContainerApp#revision_mode}.
 
 ---
 
@@ -1928,7 +1928,7 @@ template: ContainerAppTemplate
 
 template block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#template ContainerApp#template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#template ContainerApp#template}
 
 ---
 
@@ -1942,7 +1942,7 @@ dapr: ContainerAppDapr
 
 dapr block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#dapr ContainerApp#dapr}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#dapr ContainerApp#dapr}
 
 ---
 
@@ -1954,7 +1954,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#id ContainerApp#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#id ContainerApp#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1971,7 +1971,7 @@ identity: ContainerAppIdentity
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#identity ContainerApp#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#identity ContainerApp#identity}
 
 ---
 
@@ -1985,7 +1985,7 @@ ingress: ContainerAppIngress
 
 ingress block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#ingress ContainerApp#ingress}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#ingress ContainerApp#ingress}
 
 ---
 
@@ -1997,7 +1997,7 @@ max_inactive_revisions: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#max_inactive_revisions ContainerApp#max_inactive_revisions}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#max_inactive_revisions ContainerApp#max_inactive_revisions}.
 
 ---
 
@@ -2011,7 +2011,7 @@ registry: typing.Union[IResolvable, typing.List[ContainerAppRegistry]]
 
 registry block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#registry ContainerApp#registry}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#registry ContainerApp#registry}
 
 ---
 
@@ -2025,7 +2025,7 @@ secret: typing.Union[IResolvable, typing.List[ContainerAppSecret]]
 
 secret block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#secret ContainerApp#secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#secret ContainerApp#secret}
 
 ---
 
@@ -2037,7 +2037,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#tags ContainerApp#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#tags ContainerApp#tags}.
 
 ---
 
@@ -2051,7 +2051,7 @@ timeouts: ContainerAppTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#timeouts ContainerApp#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#timeouts ContainerApp#timeouts}
 
 ---
 
@@ -2063,7 +2063,7 @@ workload_profile_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#workload_profile_name ContainerApp#workload_profile_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#workload_profile_name ContainerApp#workload_profile_name}.
 
 ---
 
@@ -2101,7 +2101,7 @@ app_id: str
 
 The Dapr Application Identifier.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#app_id ContainerApp#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#app_id ContainerApp#app_id}
 
 ---
 
@@ -2115,7 +2115,7 @@ app_port: typing.Union[int, float]
 
 The port which the application is listening on. This is the same as the `ingress` port.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#app_port ContainerApp#app_port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#app_port ContainerApp#app_port}
 
 ---
 
@@ -2129,7 +2129,7 @@ app_protocol: str
 
 The protocol for the app. Possible values include `http` and `grpc`. Defaults to `http`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#app_protocol ContainerApp#app_protocol}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#app_protocol ContainerApp#app_protocol}
 
 ---
 
@@ -2150,8 +2150,8 @@ containerApp.ContainerAppIdentity(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIdentity.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#type ContainerApp#type}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIdentity.property.identityIds">identity_ids</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#identity_ids ContainerApp#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIdentity.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#type ContainerApp#type}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIdentity.property.identityIds">identity_ids</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#identity_ids ContainerApp#identity_ids}. |
 
 ---
 
@@ -2163,7 +2163,7 @@ type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#type ContainerApp#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#type ContainerApp#type}.
 
 ---
 
@@ -2175,7 +2175,7 @@ identity_ids: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#identity_ids ContainerApp#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#identity_ids ContainerApp#identity_ids}.
 
 ---
 
@@ -2221,7 +2221,7 @@ target_port: typing.Union[int, float]
 
 The target port on the container for the Ingress traffic.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#target_port ContainerApp#target_port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#target_port ContainerApp#target_port}
 
 ---
 
@@ -2235,7 +2235,7 @@ traffic_weight: typing.Union[IResolvable, typing.List[ContainerAppIngressTraffic
 
 traffic_weight block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#traffic_weight ContainerApp#traffic_weight}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#traffic_weight ContainerApp#traffic_weight}
 
 ---
 
@@ -2249,7 +2249,7 @@ allow_insecure_connections: typing.Union[bool, IResolvable]
 
 Should this ingress allow insecure connections?
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#allow_insecure_connections ContainerApp#allow_insecure_connections}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#allow_insecure_connections ContainerApp#allow_insecure_connections}
 
 ---
 
@@ -2263,7 +2263,7 @@ exposed_port: typing.Union[int, float]
 
 The exposed port on the container for the Ingress traffic.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#exposed_port ContainerApp#exposed_port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#exposed_port ContainerApp#exposed_port}
 
 ---
 
@@ -2277,7 +2277,7 @@ external_enabled: typing.Union[bool, IResolvable]
 
 Is this an external Ingress.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#external_enabled ContainerApp#external_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#external_enabled ContainerApp#external_enabled}
 
 ---
 
@@ -2291,7 +2291,7 @@ ip_security_restriction: typing.Union[IResolvable, typing.List[ContainerAppIngre
 
 ip_security_restriction block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#ip_security_restriction ContainerApp#ip_security_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#ip_security_restriction ContainerApp#ip_security_restriction}
 
 ---
 
@@ -2305,7 +2305,7 @@ transport: str
 
 The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`, `tcp`. Defaults to `auto`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#transport ContainerApp#transport}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#transport ContainerApp#transport}
 
 ---
 
@@ -2356,7 +2356,7 @@ action: str
 
 The action. Allow or Deny.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#action ContainerApp#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#action ContainerApp#action}
 
 ---
 
@@ -2370,7 +2370,7 @@ ip_address_range: str
 
 The incoming IP address or range of IP addresses (in CIDR notation).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#ip_address_range ContainerApp#ip_address_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#ip_address_range ContainerApp#ip_address_range}
 
 ---
 
@@ -2384,7 +2384,7 @@ name: str
 
 Name for the IP restriction rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -2398,7 +2398,7 @@ description: str
 
 Describe the IP restriction rule that is being sent to the container-app.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#description ContainerApp#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#description ContainerApp#description}
 
 ---
 
@@ -2438,7 +2438,7 @@ percentage: typing.Union[int, float]
 
 The percentage of traffic to send to this revision.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#percentage ContainerApp#percentage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#percentage ContainerApp#percentage}
 
 ---
 
@@ -2452,7 +2452,7 @@ label: str
 
 The label to apply to the revision as a name prefix for routing traffic.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#label ContainerApp#label}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#label ContainerApp#label}
 
 ---
 
@@ -2466,7 +2466,7 @@ latest_revision: typing.Union[bool, IResolvable]
 
 This traffic Weight relates to the latest stable Container Revision.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#latest_revision ContainerApp#latest_revision}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#latest_revision ContainerApp#latest_revision}
 
 ---
 
@@ -2482,7 +2482,7 @@ The suffix string to append to the revision.
 
 This must be unique for the Container App's lifetime. A default hash created by the service will be used if this value is omitted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#revision_suffix ContainerApp#revision_suffix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#revision_suffix ContainerApp#revision_suffix}
 
 ---
 
@@ -2522,7 +2522,7 @@ server: str
 
 The hostname for the Container Registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#server ContainerApp#server}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#server ContainerApp#server}
 
 ---
 
@@ -2536,7 +2536,7 @@ identity: str
 
 ID of the System or User Managed Identity used to pull images from the Container Registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#identity ContainerApp#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#identity ContainerApp#identity}
 
 ---
 
@@ -2550,7 +2550,7 @@ password_secret_name: str
 
 The name of the Secret Reference containing the password value for this user on the Container Registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#password_secret_name ContainerApp#password_secret_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#password_secret_name ContainerApp#password_secret_name}
 
 ---
 
@@ -2564,7 +2564,7 @@ username: str
 
 The username to use for this Container Registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#username ContainerApp#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#username ContainerApp#username}
 
 ---
 
@@ -2604,7 +2604,7 @@ name: str
 
 The secret name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -2618,7 +2618,7 @@ identity: str
 
 The identity to use for accessing key vault reference.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#identity ContainerApp#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#identity ContainerApp#identity}
 
 ---
 
@@ -2632,7 +2632,7 @@ key_vault_secret_id: str
 
 The Key Vault Secret ID. Could be either one of `id` or `versionless_id`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#key_vault_secret_id ContainerApp#key_vault_secret_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#key_vault_secret_id ContainerApp#key_vault_secret_id}
 
 ---
 
@@ -2646,7 +2646,7 @@ value: str
 
 The value for this secret.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#value ContainerApp#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#value ContainerApp#value}
 
 ---
 
@@ -2698,7 +2698,7 @@ container: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainer]]
 
 container block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#container ContainerApp#container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#container ContainerApp#container}
 
 ---
 
@@ -2712,7 +2712,7 @@ azure_queue_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTempla
 
 azure_queue_scale_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#azure_queue_scale_rule ContainerApp#azure_queue_scale_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#azure_queue_scale_rule ContainerApp#azure_queue_scale_rule}
 
 ---
 
@@ -2726,7 +2726,7 @@ custom_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateCus
 
 custom_scale_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#custom_scale_rule ContainerApp#custom_scale_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#custom_scale_rule ContainerApp#custom_scale_rule}
 
 ---
 
@@ -2740,7 +2740,7 @@ http_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateHttpS
 
 http_scale_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#http_scale_rule ContainerApp#http_scale_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#http_scale_rule ContainerApp#http_scale_rule}
 
 ---
 
@@ -2754,7 +2754,7 @@ init_container: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitCo
 
 init_container block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#init_container ContainerApp#init_container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#init_container ContainerApp#init_container}
 
 ---
 
@@ -2768,7 +2768,7 @@ max_replicas: typing.Union[int, float]
 
 The maximum number of replicas for this container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#max_replicas ContainerApp#max_replicas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#max_replicas ContainerApp#max_replicas}
 
 ---
 
@@ -2782,7 +2782,7 @@ min_replicas: typing.Union[int, float]
 
 The minimum number of replicas for this container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#min_replicas ContainerApp#min_replicas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#min_replicas ContainerApp#min_replicas}
 
 ---
 
@@ -2798,7 +2798,7 @@ The suffix for the revision.
 
 This value must be unique for the lifetime of the Resource. If omitted the service will use a hash function to create one.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#revision_suffix ContainerApp#revision_suffix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#revision_suffix ContainerApp#revision_suffix}
 
 ---
 
@@ -2812,7 +2812,7 @@ tcp_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateTcpSca
 
 tcp_scale_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#tcp_scale_rule ContainerApp#tcp_scale_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#tcp_scale_rule ContainerApp#tcp_scale_rule}
 
 ---
 
@@ -2826,7 +2826,7 @@ volume: typing.Union[IResolvable, typing.List[ContainerAppTemplateVolume]]
 
 volume block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#volume ContainerApp#volume}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#volume ContainerApp#volume}
 
 ---
 
@@ -2850,9 +2850,9 @@ containerApp.ContainerAppTemplateAzureQueueScaleRule(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.authentication">authentication</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]]</code> | authentication block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.queueLength">queue_length</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#queue_length ContainerApp#queue_length}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.queueName">queue_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#queue_name ContainerApp#queue_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.queueLength">queue_length</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#queue_length ContainerApp#queue_length}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.queueName">queue_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#queue_name ContainerApp#queue_name}. |
 
 ---
 
@@ -2866,7 +2866,7 @@ authentication: typing.Union[IResolvable, typing.List[ContainerAppTemplateAzureQ
 
 authentication block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#authentication ContainerApp#authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#authentication ContainerApp#authentication}
 
 ---
 
@@ -2878,7 +2878,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}.
 
 ---
 
@@ -2890,7 +2890,7 @@ queue_length: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#queue_length ContainerApp#queue_length}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#queue_length ContainerApp#queue_length}.
 
 ---
 
@@ -2902,7 +2902,7 @@ queue_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#queue_name ContainerApp#queue_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#queue_name ContainerApp#queue_name}.
 
 ---
 
@@ -2923,8 +2923,8 @@ containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication.property.secretName">secret_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#secret_name ContainerApp#secret_name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication.property.triggerParameter">trigger_parameter</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication.property.secretName">secret_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#secret_name ContainerApp#secret_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication.property.triggerParameter">trigger_parameter</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}. |
 
 ---
 
@@ -2936,7 +2936,7 @@ secret_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#secret_name ContainerApp#secret_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#secret_name ContainerApp#secret_name}.
 
 ---
 
@@ -2948,7 +2948,7 @@ trigger_parameter: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}.
 
 ---
 
@@ -3004,7 +3004,7 @@ The amount of vCPU to allocate to the container.
 
 Possible values include `0.25`, `0.5`, `0.75`, `1.0`, `1.25`, `1.5`, `1.75`, and `2.0`. **NOTE:** `cpu` and `memory` must be specified in `0.25'/'0.5Gi` combination increments. e.g. `1.0` / `2.0` or `0.5` / `1.0`. When there's a workload profile specified, there's no such constraint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#cpu ContainerApp#cpu}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#cpu ContainerApp#cpu}
 
 ---
 
@@ -3018,7 +3018,7 @@ image: str
 
 The image to use to create the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#image ContainerApp#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#image ContainerApp#image}
 
 ---
 
@@ -3034,7 +3034,7 @@ The amount of memory to allocate to the container.
 
 Possible values include `0.5Gi`, `1.0Gi`, `1.5Gi`, `2.0Gi`, `2.5Gi`, `3.0Gi`, `3.5Gi`, and `4.0Gi`. **NOTE:** `cpu` and `memory` must be specified in `0.25'/'0.5Gi` combination increments. e.g. `1.25` / `2.5Gi` or `0.75` / `1.5Gi`. When there's a workload profile specified, there's no such constraint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#memory ContainerApp#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#memory ContainerApp#memory}
 
 ---
 
@@ -3048,7 +3048,7 @@ name: str
 
 The name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -3062,7 +3062,7 @@ args: typing.List[str]
 
 A list of args to pass to the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#args ContainerApp#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#args ContainerApp#args}
 
 ---
 
@@ -3078,7 +3078,7 @@ A command to pass to the container to override the default.
 
 This is provided as a list of command line elements without spaces.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#command ContainerApp#command}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#command ContainerApp#command}
 
 ---
 
@@ -3092,7 +3092,7 @@ env: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerEnv]]
 
 env block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#env ContainerApp#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#env ContainerApp#env}
 
 ---
 
@@ -3106,7 +3106,7 @@ liveness_probe: typing.Union[IResolvable, typing.List[ContainerAppTemplateContai
 
 liveness_probe block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#liveness_probe ContainerApp#liveness_probe}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#liveness_probe ContainerApp#liveness_probe}
 
 ---
 
@@ -3120,7 +3120,7 @@ readiness_probe: typing.Union[IResolvable, typing.List[ContainerAppTemplateConta
 
 readiness_probe block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#readiness_probe ContainerApp#readiness_probe}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#readiness_probe ContainerApp#readiness_probe}
 
 ---
 
@@ -3134,7 +3134,7 @@ startup_probe: typing.Union[IResolvable, typing.List[ContainerAppTemplateContain
 
 startup_probe block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#startup_probe ContainerApp#startup_probe}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#startup_probe ContainerApp#startup_probe}
 
 ---
 
@@ -3148,7 +3148,7 @@ volume_mounts: typing.Union[IResolvable, typing.List[ContainerAppTemplateContain
 
 volume_mounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#volume_mounts ContainerApp#volume_mounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#volume_mounts ContainerApp#volume_mounts}
 
 ---
 
@@ -3186,7 +3186,7 @@ name: str
 
 The name of the environment variable for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -3200,7 +3200,7 @@ secret_name: str
 
 The name of the secret that contains the value for this environment variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#secret_name ContainerApp#secret_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#secret_name ContainerApp#secret_name}
 
 ---
 
@@ -3214,7 +3214,7 @@ value: str
 
 The value for this environment variable. **NOTE:** This value is ignored if `secret_name` is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#value ContainerApp#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#value ContainerApp#value}
 
 ---
 
@@ -3264,7 +3264,7 @@ port: typing.Union[int, float]
 
 The port number on which to connect. Possible values are between `1` and `65535`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#port ContainerApp#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#port ContainerApp#port}
 
 ---
 
@@ -3278,7 +3278,7 @@ transport: str
 
 Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#transport ContainerApp#transport}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#transport ContainerApp#transport}
 
 ---
 
@@ -3294,7 +3294,7 @@ The number of consecutive failures required to consider this probe as failed.
 
 Possible values are between `1` and `30`. Defaults to `3`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#failure_count_threshold ContainerApp#failure_count_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#failure_count_threshold ContainerApp#failure_count_threshold}
 
 ---
 
@@ -3308,7 +3308,7 @@ header: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerLiven
 
 header block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#header ContainerApp#header}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#header ContainerApp#header}
 
 ---
 
@@ -3324,7 +3324,7 @@ The probe hostname.
 
 Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#host ContainerApp#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#host ContainerApp#host}
 
 ---
 
@@ -3340,7 +3340,7 @@ The number of seconds elapsed after the container has started before the probe i
 
 Possible values are between `0` and `60`. Defaults to `1` seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#initial_delay ContainerApp#initial_delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#initial_delay ContainerApp#initial_delay}
 
 ---
 
@@ -3354,7 +3354,7 @@ interval_seconds: typing.Union[int, float]
 
 How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#interval_seconds ContainerApp#interval_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#interval_seconds ContainerApp#interval_seconds}
 
 ---
 
@@ -3370,7 +3370,7 @@ The URI to use with the `host` for http type probes.
 
 Not valid for `TCP` type probes. Defaults to `/`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#path ContainerApp#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#path ContainerApp#path}
 
 ---
 
@@ -3384,7 +3384,7 @@ timeout: typing.Union[int, float]
 
 Time in seconds after which the probe times out. Possible values are between `1` an `240`. Defaults to `1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#timeout ContainerApp#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#timeout ContainerApp#timeout}
 
 ---
 
@@ -3420,7 +3420,7 @@ name: str
 
 The HTTP Header Name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -3434,7 +3434,7 @@ value: str
 
 The HTTP Header value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#value ContainerApp#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#value ContainerApp#value}
 
 ---
 
@@ -3486,7 +3486,7 @@ port: typing.Union[int, float]
 
 The port number on which to connect. Possible values are between `1` and `65535`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#port ContainerApp#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#port ContainerApp#port}
 
 ---
 
@@ -3500,7 +3500,7 @@ transport: str
 
 Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#transport ContainerApp#transport}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#transport ContainerApp#transport}
 
 ---
 
@@ -3516,7 +3516,7 @@ The number of consecutive failures required to consider this probe as failed.
 
 Possible values are between `1` and `30`. Defaults to `3`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#failure_count_threshold ContainerApp#failure_count_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#failure_count_threshold ContainerApp#failure_count_threshold}
 
 ---
 
@@ -3530,7 +3530,7 @@ header: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerReadi
 
 header block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#header ContainerApp#header}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#header ContainerApp#header}
 
 ---
 
@@ -3546,7 +3546,7 @@ The probe hostname.
 
 Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#host ContainerApp#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#host ContainerApp#host}
 
 ---
 
@@ -3562,7 +3562,7 @@ The number of seconds elapsed after the container has started before the probe i
 
 Possible values are between `0` and `60`. Defaults to `0` seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#initial_delay ContainerApp#initial_delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#initial_delay ContainerApp#initial_delay}
 
 ---
 
@@ -3576,7 +3576,7 @@ interval_seconds: typing.Union[int, float]
 
 How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#interval_seconds ContainerApp#interval_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#interval_seconds ContainerApp#interval_seconds}
 
 ---
 
@@ -3590,7 +3590,7 @@ path: str
 
 The URI to use for http type probes. Not valid for `TCP` type probes. Defaults to `/`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#path ContainerApp#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#path ContainerApp#path}
 
 ---
 
@@ -3606,7 +3606,7 @@ The number of consecutive successful responses required to consider this probe a
 
 Possible values are between `1` and `10`. Defaults to `3`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#success_count_threshold ContainerApp#success_count_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#success_count_threshold ContainerApp#success_count_threshold}
 
 ---
 
@@ -3620,7 +3620,7 @@ timeout: typing.Union[int, float]
 
 Time in seconds after which the probe times out. Possible values are between `1` an `240`. Defaults to `1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#timeout ContainerApp#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#timeout ContainerApp#timeout}
 
 ---
 
@@ -3656,7 +3656,7 @@ name: str
 
 The HTTP Header Name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -3670,7 +3670,7 @@ value: str
 
 The HTTP Header value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#value ContainerApp#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#value ContainerApp#value}
 
 ---
 
@@ -3720,7 +3720,7 @@ port: typing.Union[int, float]
 
 The port number on which to connect. Possible values are between `1` and `65535`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#port ContainerApp#port}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#port ContainerApp#port}
 
 ---
 
@@ -3734,7 +3734,7 @@ transport: str
 
 Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#transport ContainerApp#transport}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#transport ContainerApp#transport}
 
 ---
 
@@ -3750,7 +3750,7 @@ The number of consecutive failures required to consider this probe as failed.
 
 Possible values are between `1` and `30`. Defaults to `3`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#failure_count_threshold ContainerApp#failure_count_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#failure_count_threshold ContainerApp#failure_count_threshold}
 
 ---
 
@@ -3764,7 +3764,7 @@ header: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerStart
 
 header block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#header ContainerApp#header}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#header ContainerApp#header}
 
 ---
 
@@ -3780,7 +3780,7 @@ The probe hostname.
 
 Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#host ContainerApp#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#host ContainerApp#host}
 
 ---
 
@@ -3796,7 +3796,7 @@ The number of seconds elapsed after the container has started before the probe i
 
 Possible values are between `0` and `60`. Defaults to `0` seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#initial_delay ContainerApp#initial_delay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#initial_delay ContainerApp#initial_delay}
 
 ---
 
@@ -3810,7 +3810,7 @@ interval_seconds: typing.Union[int, float]
 
 How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#interval_seconds ContainerApp#interval_seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#interval_seconds ContainerApp#interval_seconds}
 
 ---
 
@@ -3826,7 +3826,7 @@ The URI to use with the `host` for http type probes.
 
 Not valid for `TCP` type probes. Defaults to `/`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#path ContainerApp#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#path ContainerApp#path}
 
 ---
 
@@ -3840,7 +3840,7 @@ timeout: typing.Union[int, float]
 
 Time in seconds after which the probe times out. Possible values are between `1` an `240`. Defaults to `1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#timeout ContainerApp#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#timeout ContainerApp#timeout}
 
 ---
 
@@ -3876,7 +3876,7 @@ name: str
 
 The HTTP Header Name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -3890,7 +3890,7 @@ value: str
 
 The HTTP Header value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#value ContainerApp#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#value ContainerApp#value}
 
 ---
 
@@ -3926,7 +3926,7 @@ name: str
 
 The name of the Volume to be mounted in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -3940,7 +3940,7 @@ path: str
 
 The path in the container at which to mount this volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#path ContainerApp#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#path ContainerApp#path}
 
 ---
 
@@ -3963,9 +3963,9 @@ containerApp.ContainerAppTemplateCustomScaleRule(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.customRuleType">custom_rule_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#custom_rule_type ContainerApp#custom_rule_type}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.metadata">metadata</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#metadata ContainerApp#metadata}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.customRuleType">custom_rule_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#custom_rule_type ContainerApp#custom_rule_type}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.metadata">metadata</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#metadata ContainerApp#metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.authentication">authentication</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]]</code> | authentication block. |
 
 ---
@@ -3978,7 +3978,7 @@ custom_rule_type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#custom_rule_type ContainerApp#custom_rule_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#custom_rule_type ContainerApp#custom_rule_type}.
 
 ---
 
@@ -3990,7 +3990,7 @@ metadata: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#metadata ContainerApp#metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#metadata ContainerApp#metadata}.
 
 ---
 
@@ -4002,7 +4002,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}.
 
 ---
 
@@ -4016,7 +4016,7 @@ authentication: typing.Union[IResolvable, typing.List[ContainerAppTemplateCustom
 
 authentication block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#authentication ContainerApp#authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#authentication ContainerApp#authentication}
 
 ---
 
@@ -4037,8 +4037,8 @@ containerApp.ContainerAppTemplateCustomScaleRuleAuthentication(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication.property.secretName">secret_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#secret_name ContainerApp#secret_name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication.property.triggerParameter">trigger_parameter</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication.property.secretName">secret_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#secret_name ContainerApp#secret_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication.property.triggerParameter">trigger_parameter</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}. |
 
 ---
 
@@ -4050,7 +4050,7 @@ secret_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#secret_name ContainerApp#secret_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#secret_name ContainerApp#secret_name}.
 
 ---
 
@@ -4062,7 +4062,7 @@ trigger_parameter: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}.
 
 ---
 
@@ -4084,8 +4084,8 @@ containerApp.ContainerAppTemplateHttpScaleRule(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.concurrentRequests">concurrent_requests</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.concurrentRequests">concurrent_requests</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.authentication">authentication</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]]</code> | authentication block. |
 
 ---
@@ -4098,7 +4098,7 @@ concurrent_requests: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}.
 
 ---
 
@@ -4110,7 +4110,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}.
 
 ---
 
@@ -4124,7 +4124,7 @@ authentication: typing.Union[IResolvable, typing.List[ContainerAppTemplateHttpSc
 
 authentication block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#authentication ContainerApp#authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#authentication ContainerApp#authentication}
 
 ---
 
@@ -4145,8 +4145,8 @@ containerApp.ContainerAppTemplateHttpScaleRuleAuthentication(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication.property.secretName">secret_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#secret_name ContainerApp#secret_name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication.property.triggerParameter">trigger_parameter</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication.property.secretName">secret_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#secret_name ContainerApp#secret_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication.property.triggerParameter">trigger_parameter</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}. |
 
 ---
 
@@ -4158,7 +4158,7 @@ secret_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#secret_name ContainerApp#secret_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#secret_name ContainerApp#secret_name}.
 
 ---
 
@@ -4170,7 +4170,7 @@ trigger_parameter: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}.
 
 ---
 
@@ -4218,7 +4218,7 @@ image: str
 
 The image to use to create the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#image ContainerApp#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#image ContainerApp#image}
 
 ---
 
@@ -4232,7 +4232,7 @@ name: str
 
 The name of the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -4246,7 +4246,7 @@ args: typing.List[str]
 
 A list of args to pass to the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#args ContainerApp#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#args ContainerApp#args}
 
 ---
 
@@ -4262,7 +4262,7 @@ A command to pass to the container to override the default.
 
 This is provided as a list of command line elements without spaces.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#command ContainerApp#command}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#command ContainerApp#command}
 
 ---
 
@@ -4278,7 +4278,7 @@ The amount of vCPU to allocate to the container.
 
 Possible values include `0.25`, `0.5`, `0.75`, `1.0`, `1.25`, `1.5`, `1.75`, and `2.0`. **NOTE:** `cpu` and `memory` must be specified in `0.25'/'0.5Gi` combination increments. e.g. `1.0` / `2.0` or `0.5` / `1.0`. When there's a workload profile specified, there's no such constraint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#cpu ContainerApp#cpu}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#cpu ContainerApp#cpu}
 
 ---
 
@@ -4292,7 +4292,7 @@ env: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainerEnv]
 
 env block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#env ContainerApp#env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#env ContainerApp#env}
 
 ---
 
@@ -4308,7 +4308,7 @@ The amount of memory to allocate to the container.
 
 Possible values include `0.5Gi`, `1.0Gi`, `1.5Gi`, `2.0Gi`, `2.5Gi`, `3.0Gi`, `3.5Gi`, and `4.0Gi`. **NOTE:** `cpu` and `memory` must be specified in `0.25'/'0.5Gi` combination increments. e.g. `1.25` / `2.5Gi` or `0.75` / `1.5Gi`. When there's a workload profile specified, there's no such constraint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#memory ContainerApp#memory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#memory ContainerApp#memory}
 
 ---
 
@@ -4322,7 +4322,7 @@ volume_mounts: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitCon
 
 volume_mounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#volume_mounts ContainerApp#volume_mounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#volume_mounts ContainerApp#volume_mounts}
 
 ---
 
@@ -4360,7 +4360,7 @@ name: str
 
 The name of the environment variable for the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -4374,7 +4374,7 @@ secret_name: str
 
 The name of the secret that contains the value for this environment variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#secret_name ContainerApp#secret_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#secret_name ContainerApp#secret_name}
 
 ---
 
@@ -4388,7 +4388,7 @@ value: str
 
 The value for this environment variable. **NOTE:** This value is ignored if `secret_name` is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#value ContainerApp#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#value ContainerApp#value}
 
 ---
 
@@ -4424,7 +4424,7 @@ name: str
 
 The name of the Volume to be mounted in the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -4438,7 +4438,7 @@ path: str
 
 The path in the container at which to mount this volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#path ContainerApp#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#path ContainerApp#path}
 
 ---
 
@@ -4460,8 +4460,8 @@ containerApp.ContainerAppTemplateTcpScaleRule(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.concurrentRequests">concurrent_requests</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.concurrentRequests">concurrent_requests</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.authentication">authentication</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]]</code> | authentication block. |
 
 ---
@@ -4474,7 +4474,7 @@ concurrent_requests: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}.
 
 ---
 
@@ -4486,7 +4486,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}.
 
 ---
 
@@ -4500,7 +4500,7 @@ authentication: typing.Union[IResolvable, typing.List[ContainerAppTemplateTcpSca
 
 authentication block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#authentication ContainerApp#authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#authentication ContainerApp#authentication}
 
 ---
 
@@ -4521,8 +4521,8 @@ containerApp.ContainerAppTemplateTcpScaleRuleAuthentication(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication.property.secretName">secret_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#secret_name ContainerApp#secret_name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication.property.triggerParameter">trigger_parameter</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication.property.secretName">secret_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#secret_name ContainerApp#secret_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication.property.triggerParameter">trigger_parameter</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}. |
 
 ---
 
@@ -4534,7 +4534,7 @@ secret_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#secret_name ContainerApp#secret_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#secret_name ContainerApp#secret_name}.
 
 ---
 
@@ -4546,7 +4546,7 @@ trigger_parameter: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}.
 
 ---
 
@@ -4584,7 +4584,7 @@ name: str
 
 The name of the volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#name ContainerApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#name ContainerApp#name}
 
 ---
 
@@ -4598,7 +4598,7 @@ storage_name: str
 
 The name of the `AzureFile` storage. Required when `storage_type` is `AzureFile`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#storage_name ContainerApp#storage_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#storage_name ContainerApp#storage_name}
 
 ---
 
@@ -4612,7 +4612,7 @@ storage_type: str
 
 The type of storage volume. Possible values include `AzureFile` and `EmptyDir`. Defaults to `EmptyDir`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#storage_type ContainerApp#storage_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#storage_type ContainerApp#storage_type}
 
 ---
 
@@ -4635,10 +4635,10 @@ containerApp.ContainerAppTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#create ContainerApp#create}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#delete ContainerApp#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#read ContainerApp#read}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#update ContainerApp#update}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#create ContainerApp#create}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#delete ContainerApp#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#read ContainerApp#read}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#update ContainerApp#update}. |
 
 ---
 
@@ -4650,7 +4650,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#create ContainerApp#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#create ContainerApp#create}.
 
 ---
 
@@ -4662,7 +4662,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#delete ContainerApp#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#delete ContainerApp#delete}.
 
 ---
 
@@ -4674,7 +4674,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#read ContainerApp#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#read ContainerApp#read}.
 
 ---
 
@@ -4686,7 +4686,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/container_app#update ContainerApp#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/container_app#update ContainerApp#update}.
 
 ---
 

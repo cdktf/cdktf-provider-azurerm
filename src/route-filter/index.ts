@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +13,54 @@ import * as cdktf from 'cdktf';
 
 export interface RouteFilterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#id RouteFilter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#id RouteFilter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#location RouteFilter#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#location RouteFilter#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#name RouteFilter#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#name RouteFilter#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#resource_group_name RouteFilter#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#resource_group_name RouteFilter#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#rule RouteFilter#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#rule RouteFilter#rule}
   */
   readonly rule?: RouteFilterRule[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#tags RouteFilter#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#tags RouteFilter#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#timeouts RouteFilter#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#timeouts RouteFilter#timeouts}
   */
   readonly timeouts?: RouteFilterTimeouts;
 }
 export interface RouteFilterRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#access RouteFilter#access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#access RouteFilter#access}
   */
   readonly access?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#communities RouteFilter#communities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#communities RouteFilter#communities}
   */
   readonly communities?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#name RouteFilter#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#name RouteFilter#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#rule_type RouteFilter#rule_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#rule_type RouteFilter#rule_type}
   */
   readonly ruleType?: string;
 }
@@ -263,19 +263,19 @@ export class RouteFilterRuleList extends cdktf.ComplexList {
 }
 export interface RouteFilterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#create RouteFilter#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#create RouteFilter#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#delete RouteFilter#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#delete RouteFilter#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#read RouteFilter#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#read RouteFilter#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#update RouteFilter#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#update RouteFilter#update}
   */
   readonly update?: string;
 }
@@ -456,7 +456,7 @@ export class RouteFilterTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter azurerm_route_filter}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter azurerm_route_filter}
 */
 export class RouteFilter extends cdktf.TerraformResource {
 
@@ -472,7 +472,7 @@ export class RouteFilter extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a RouteFilter resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the RouteFilter to import
-  * @param importFromId The id of the existing RouteFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing RouteFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the RouteFilter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -484,7 +484,7 @@ export class RouteFilter extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.7.0/docs/resources/route_filter azurerm_route_filter} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/route_filter azurerm_route_filter} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -495,7 +495,7 @@ export class RouteFilter extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_route_filter',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.7.0',
+        providerVersion: '4.8.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
