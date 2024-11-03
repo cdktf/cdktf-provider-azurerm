@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/machine_learning_datastore_datalake_gen2
 // generated from terraform resource schema
 
