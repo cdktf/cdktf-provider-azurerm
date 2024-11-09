@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,128 +8,144 @@ import * as cdktf from 'cdktf';
 
 export interface OracleCloudVmClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#backup_subnet_cidr OracleCloudVmCluster#backup_subnet_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#backup_subnet_cidr OracleCloudVmCluster#backup_subnet_cidr}
   */
   readonly backupSubnetCidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#cloud_exadata_infrastructure_id OracleCloudVmCluster#cloud_exadata_infrastructure_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#cloud_exadata_infrastructure_id OracleCloudVmCluster#cloud_exadata_infrastructure_id}
   */
   readonly cloudExadataInfrastructureId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#cluster_name OracleCloudVmCluster#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#cluster_name OracleCloudVmCluster#cluster_name}
   */
   readonly clusterName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#cpu_core_count OracleCloudVmCluster#cpu_core_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#cpu_core_count OracleCloudVmCluster#cpu_core_count}
   */
   readonly cpuCoreCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#data_storage_percentage OracleCloudVmCluster#data_storage_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#data_storage_percentage OracleCloudVmCluster#data_storage_percentage}
   */
   readonly dataStoragePercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#data_storage_size_in_tbs OracleCloudVmCluster#data_storage_size_in_tbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#data_storage_size_in_tbs OracleCloudVmCluster#data_storage_size_in_tbs}
   */
   readonly dataStorageSizeInTbs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#db_node_storage_size_in_gbs OracleCloudVmCluster#db_node_storage_size_in_gbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#db_node_storage_size_in_gbs OracleCloudVmCluster#db_node_storage_size_in_gbs}
   */
   readonly dbNodeStorageSizeInGbs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#db_servers OracleCloudVmCluster#db_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#db_servers OracleCloudVmCluster#db_servers}
   */
   readonly dbServers: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#display_name OracleCloudVmCluster#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#display_name OracleCloudVmCluster#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#gi_version OracleCloudVmCluster#gi_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#domain OracleCloudVmCluster#domain}
+  */
+  readonly domain?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#gi_version OracleCloudVmCluster#gi_version}
   */
   readonly giVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#hostname OracleCloudVmCluster#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#hostname OracleCloudVmCluster#hostname}
   */
   readonly hostname: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#id OracleCloudVmCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#id OracleCloudVmCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#license_model OracleCloudVmCluster#license_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#license_model OracleCloudVmCluster#license_model}
   */
   readonly licenseModel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#local_backup_enabled OracleCloudVmCluster#local_backup_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#local_backup_enabled OracleCloudVmCluster#local_backup_enabled}
   */
   readonly localBackupEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#location OracleCloudVmCluster#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#location OracleCloudVmCluster#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#memory_size_in_gbs OracleCloudVmCluster#memory_size_in_gbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#memory_size_in_gbs OracleCloudVmCluster#memory_size_in_gbs}
   */
   readonly memorySizeInGbs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#name OracleCloudVmCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#name OracleCloudVmCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#resource_group_name OracleCloudVmCluster#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#resource_group_name OracleCloudVmCluster#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#sparse_diskgroup_enabled OracleCloudVmCluster#sparse_diskgroup_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#scan_listener_port_tcp OracleCloudVmCluster#scan_listener_port_tcp}
+  */
+  readonly scanListenerPortTcp?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#scan_listener_port_tcp_ssl OracleCloudVmCluster#scan_listener_port_tcp_ssl}
+  */
+  readonly scanListenerPortTcpSsl?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#sparse_diskgroup_enabled OracleCloudVmCluster#sparse_diskgroup_enabled}
   */
   readonly sparseDiskgroupEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#ssh_public_keys OracleCloudVmCluster#ssh_public_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#ssh_public_keys OracleCloudVmCluster#ssh_public_keys}
   */
   readonly sshPublicKeys: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#subnet_id OracleCloudVmCluster#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#subnet_id OracleCloudVmCluster#subnet_id}
   */
   readonly subnetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#tags OracleCloudVmCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#tags OracleCloudVmCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#time_zone OracleCloudVmCluster#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#time_zone OracleCloudVmCluster#time_zone}
   */
   readonly timeZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#virtual_network_id OracleCloudVmCluster#virtual_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#virtual_network_id OracleCloudVmCluster#virtual_network_id}
   */
   readonly virtualNetworkId: string;
   /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#zone_id OracleCloudVmCluster#zone_id}
+  */
+  readonly zoneId?: string;
+  /**
   * data_collection_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#data_collection_options OracleCloudVmCluster#data_collection_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#data_collection_options OracleCloudVmCluster#data_collection_options}
   */
   readonly dataCollectionOptions?: OracleCloudVmClusterDataCollectionOptions;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#timeouts OracleCloudVmCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#timeouts OracleCloudVmCluster#timeouts}
   */
   readonly timeouts?: OracleCloudVmClusterTimeouts;
 }
 export interface OracleCloudVmClusterDataCollectionOptions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#diagnostics_events_enabled OracleCloudVmCluster#diagnostics_events_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#diagnostics_events_enabled OracleCloudVmCluster#diagnostics_events_enabled}
   */
   readonly diagnosticsEventsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#health_monitoring_enabled OracleCloudVmCluster#health_monitoring_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#health_monitoring_enabled OracleCloudVmCluster#health_monitoring_enabled}
   */
   readonly healthMonitoringEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#incident_logs_enabled OracleCloudVmCluster#incident_logs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#incident_logs_enabled OracleCloudVmCluster#incident_logs_enabled}
   */
   readonly incidentLogsEnabled?: boolean | cdktf.IResolvable;
 }
@@ -276,19 +287,19 @@ export class OracleCloudVmClusterDataCollectionOptionsOutputReference extends cd
 }
 export interface OracleCloudVmClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#create OracleCloudVmCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#create OracleCloudVmCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#delete OracleCloudVmCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#delete OracleCloudVmCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#read OracleCloudVmCluster#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#read OracleCloudVmCluster#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#update OracleCloudVmCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#update OracleCloudVmCluster#update}
   */
   readonly update?: string;
 }
@@ -469,7 +480,7 @@ export class OracleCloudVmClusterTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster azurerm_oracle_cloud_vm_cluster}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster azurerm_oracle_cloud_vm_cluster}
 */
 export class OracleCloudVmCluster extends cdktf.TerraformResource {
 
@@ -485,7 +496,7 @@ export class OracleCloudVmCluster extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a OracleCloudVmCluster resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the OracleCloudVmCluster to import
-  * @param importFromId The id of the existing OracleCloudVmCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing OracleCloudVmCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the OracleCloudVmCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -497,7 +508,7 @@ export class OracleCloudVmCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/oracle_cloud_vm_cluster azurerm_oracle_cloud_vm_cluster} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/oracle_cloud_vm_cluster azurerm_oracle_cloud_vm_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -508,7 +519,7 @@ export class OracleCloudVmCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_oracle_cloud_vm_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.8.0',
+        providerVersion: '4.9.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -528,6 +539,7 @@ export class OracleCloudVmCluster extends cdktf.TerraformResource {
     this._dbNodeStorageSizeInGbs = config.dbNodeStorageSizeInGbs;
     this._dbServers = config.dbServers;
     this._displayName = config.displayName;
+    this._domain = config.domain;
     this._giVersion = config.giVersion;
     this._hostname = config.hostname;
     this._id = config.id;
@@ -537,12 +549,15 @@ export class OracleCloudVmCluster extends cdktf.TerraformResource {
     this._memorySizeInGbs = config.memorySizeInGbs;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._scanListenerPortTcp = config.scanListenerPortTcp;
+    this._scanListenerPortTcpSsl = config.scanListenerPortTcpSsl;
     this._sparseDiskgroupEnabled = config.sparseDiskgroupEnabled;
     this._sshPublicKeys = config.sshPublicKeys;
     this._subnetId = config.subnetId;
     this._tags = config.tags;
     this._timeZone = config.timeZone;
     this._virtualNetworkId = config.virtualNetworkId;
+    this._zoneId = config.zoneId;
     this._dataCollectionOptions.internalValue = config.dataCollectionOptions;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -683,6 +698,22 @@ export class OracleCloudVmCluster extends cdktf.TerraformResource {
     return this._displayName;
   }
 
+  // domain - computed: true, optional: true, required: false
+  private _domain?: string; 
+  public get domain() {
+    return this.getStringAttribute('domain');
+  }
+  public set domain(value: string) {
+    this._domain = value;
+  }
+  public resetDomain() {
+    this._domain = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainInput() {
+    return this._domain;
+  }
+
   // gi_version - computed: false, optional: false, required: true
   private _giVersion?: string; 
   public get giVersion() {
@@ -819,6 +850,38 @@ export class OracleCloudVmCluster extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
+  // scan_listener_port_tcp - computed: false, optional: true, required: false
+  private _scanListenerPortTcp?: number; 
+  public get scanListenerPortTcp() {
+    return this.getNumberAttribute('scan_listener_port_tcp');
+  }
+  public set scanListenerPortTcp(value: number) {
+    this._scanListenerPortTcp = value;
+  }
+  public resetScanListenerPortTcp() {
+    this._scanListenerPortTcp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scanListenerPortTcpInput() {
+    return this._scanListenerPortTcp;
+  }
+
+  // scan_listener_port_tcp_ssl - computed: false, optional: true, required: false
+  private _scanListenerPortTcpSsl?: number; 
+  public get scanListenerPortTcpSsl() {
+    return this.getNumberAttribute('scan_listener_port_tcp_ssl');
+  }
+  public set scanListenerPortTcpSsl(value: number) {
+    this._scanListenerPortTcpSsl = value;
+  }
+  public resetScanListenerPortTcpSsl() {
+    this._scanListenerPortTcpSsl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scanListenerPortTcpSslInput() {
+    return this._scanListenerPortTcpSsl;
+  }
+
   // sparse_diskgroup_enabled - computed: true, optional: true, required: false
   private _sparseDiskgroupEnabled?: boolean | cdktf.IResolvable; 
   public get sparseDiskgroupEnabled() {
@@ -906,6 +969,22 @@ export class OracleCloudVmCluster extends cdktf.TerraformResource {
     return this._virtualNetworkId;
   }
 
+  // zone_id - computed: true, optional: true, required: false
+  private _zoneId?: string; 
+  public get zoneId() {
+    return this.getStringAttribute('zone_id');
+  }
+  public set zoneId(value: string) {
+    this._zoneId = value;
+  }
+  public resetZoneId() {
+    this._zoneId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneIdInput() {
+    return this._zoneId;
+  }
+
   // data_collection_options - computed: false, optional: true, required: false
   private _dataCollectionOptions = new OracleCloudVmClusterDataCollectionOptionsOutputReference(this, "data_collection_options");
   public get dataCollectionOptions() {
@@ -953,6 +1032,7 @@ export class OracleCloudVmCluster extends cdktf.TerraformResource {
       db_node_storage_size_in_gbs: cdktf.numberToTerraform(this._dbNodeStorageSizeInGbs),
       db_servers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._dbServers),
       display_name: cdktf.stringToTerraform(this._displayName),
+      domain: cdktf.stringToTerraform(this._domain),
       gi_version: cdktf.stringToTerraform(this._giVersion),
       hostname: cdktf.stringToTerraform(this._hostname),
       id: cdktf.stringToTerraform(this._id),
@@ -962,12 +1042,15 @@ export class OracleCloudVmCluster extends cdktf.TerraformResource {
       memory_size_in_gbs: cdktf.numberToTerraform(this._memorySizeInGbs),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      scan_listener_port_tcp: cdktf.numberToTerraform(this._scanListenerPortTcp),
+      scan_listener_port_tcp_ssl: cdktf.numberToTerraform(this._scanListenerPortTcpSsl),
       sparse_diskgroup_enabled: cdktf.booleanToTerraform(this._sparseDiskgroupEnabled),
       ssh_public_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(this._sshPublicKeys),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       time_zone: cdktf.stringToTerraform(this._timeZone),
       virtual_network_id: cdktf.stringToTerraform(this._virtualNetworkId),
+      zone_id: cdktf.stringToTerraform(this._zoneId),
       data_collection_options: oracleCloudVmClusterDataCollectionOptionsToTerraform(this._dataCollectionOptions.internalValue),
       timeouts: oracleCloudVmClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -1029,6 +1112,12 @@ export class OracleCloudVmCluster extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
+      domain: {
+        value: cdktf.stringToHclTerraform(this._domain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       gi_version: {
         value: cdktf.stringToHclTerraform(this._giVersion),
         isBlock: false,
@@ -1083,6 +1172,18 @@ export class OracleCloudVmCluster extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
+      scan_listener_port_tcp: {
+        value: cdktf.numberToHclTerraform(this._scanListenerPortTcp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      scan_listener_port_tcp_ssl: {
+        value: cdktf.numberToHclTerraform(this._scanListenerPortTcpSsl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
       sparse_diskgroup_enabled: {
         value: cdktf.booleanToHclTerraform(this._sparseDiskgroupEnabled),
         isBlock: false,
@@ -1115,6 +1216,12 @@ export class OracleCloudVmCluster extends cdktf.TerraformResource {
       },
       virtual_network_id: {
         value: cdktf.stringToHclTerraform(this._virtualNetworkId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      zone_id: {
+        value: cdktf.stringToHclTerraform(this._zoneId),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

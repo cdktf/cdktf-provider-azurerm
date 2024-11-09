@@ -1,3 +1,3 @@
 # `azurerm_kubernetes_flux_configuration`
 
-Refer to the Terraform Registry for docs: [`azurerm_kubernetes_flux_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/kubernetes_flux_configuration).
+Refer to the Terraform Registry for docs: [`azurerm_kubernetes_flux_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/kubernetes_flux_configuration).
