@@ -4,7 +4,7 @@
 
 ### PublicIp <a name="PublicIp" id="@cdktf/provider-azurerm.publicIp.PublicIp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip azurerm_public_ip}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip azurerm_public_ip}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.publicIp.PublicIp.Initializer"></a>
 
@@ -77,6 +77,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.resetDdosProtectionMode">ResetDdosProtectionMode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.resetDdosProtectionPlanId">ResetDdosProtectionPlanId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.resetDomainNameLabel">ResetDomainNameLabel</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.resetDomainNameLabelScope">ResetDomainNameLabelScope</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.resetEdgeZone">ResetEdgeZone</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.resetIdleTimeoutInMinutes">ResetIdleTimeoutInMinutes</a></code> | *No description.* |
@@ -410,6 +411,12 @@ private void ResetDdosProtectionPlanId()
 private void ResetDomainNameLabel()
 ```
 
+##### `ResetDomainNameLabelScope` <a name="ResetDomainNameLabelScope" id="@cdktf/provider-azurerm.publicIp.PublicIp.resetDomainNameLabelScope"></a>
+
+```csharp
+private void ResetDomainNameLabelScope()
+```
+
 ##### `ResetEdgeZone` <a name="ResetEdgeZone" id="@cdktf/provider-azurerm.publicIp.PublicIp.resetEdgeZone"></a>
 
 ```csharp
@@ -585,7 +592,7 @@ The construct id used in the generated config for the PublicIp to import.
 
 The id of the existing PublicIp that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -622,6 +629,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.ddosProtectionModeInput">DdosProtectionModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.ddosProtectionPlanIdInput">DdosProtectionPlanIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.domainNameLabelInput">DomainNameLabelInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.domainNameLabelScopeInput">DomainNameLabelScopeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.edgeZoneInput">EdgeZoneInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.idleTimeoutInMinutesInput">IdleTimeoutInMinutesInput</a></code> | <code>double</code> | *No description.* |
@@ -641,6 +649,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.ddosProtectionMode">DdosProtectionMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.ddosProtectionPlanId">DdosProtectionPlanId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.domainNameLabel">DomainNameLabel</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.domainNameLabelScope">DomainNameLabelScope</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.edgeZone">EdgeZone</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIp.property.idleTimeoutInMinutes">IdleTimeoutInMinutes</a></code> | <code>double</code> | *No description.* |
@@ -870,6 +879,16 @@ public string DomainNameLabelInput { get; }
 
 ---
 
+##### `DomainNameLabelScopeInput`<sup>Optional</sup> <a name="DomainNameLabelScopeInput" id="@cdktf/provider-azurerm.publicIp.PublicIp.property.domainNameLabelScopeInput"></a>
+
+```csharp
+public string DomainNameLabelScopeInput { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `EdgeZoneInput`<sup>Optional</sup> <a name="EdgeZoneInput" id="@cdktf/provider-azurerm.publicIp.PublicIp.property.edgeZoneInput"></a>
 
 ```csharp
@@ -1060,6 +1079,16 @@ public string DomainNameLabel { get; }
 
 ---
 
+##### `DomainNameLabelScope`<sup>Required</sup> <a name="DomainNameLabelScope" id="@cdktf/provider-azurerm.publicIp.PublicIp.property.domainNameLabelScope"></a>
+
+```csharp
+public string DomainNameLabelScope { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `EdgeZone`<sup>Required</sup> <a name="EdgeZone" id="@cdktf/provider-azurerm.publicIp.PublicIp.property.edgeZone"></a>
 
 ```csharp
@@ -1242,6 +1271,7 @@ new PublicIpConfig {
     string DdosProtectionMode = null,
     string DdosProtectionPlanId = null,
     string DomainNameLabel = null,
+    string DomainNameLabelScope = null,
     string EdgeZone = null,
     string Id = null,
     double IdleTimeoutInMinutes = null,
@@ -1268,25 +1298,26 @@ new PublicIpConfig {
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.allocationMethod">AllocationMethod</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#allocation_method PublicIp#allocation_method}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#location PublicIp#location}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#name PublicIp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#resource_group_name PublicIp#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.ddosProtectionMode">DdosProtectionMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#ddos_protection_mode PublicIp#ddos_protection_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.ddosProtectionPlanId">DdosProtectionPlanId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#ddos_protection_plan_id PublicIp#ddos_protection_plan_id}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.domainNameLabel">DomainNameLabel</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#domain_name_label PublicIp#domain_name_label}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.edgeZone">EdgeZone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#edge_zone PublicIp#edge_zone}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#id PublicIp#id}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.idleTimeoutInMinutes">IdleTimeoutInMinutes</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#idle_timeout_in_minutes PublicIp#idle_timeout_in_minutes}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.ipTags">IpTags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#ip_tags PublicIp#ip_tags}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.ipVersion">IpVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#ip_version PublicIp#ip_version}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.publicIpPrefixId">PublicIpPrefixId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#public_ip_prefix_id PublicIp#public_ip_prefix_id}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.reverseFqdn">ReverseFqdn</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#reverse_fqdn PublicIp#reverse_fqdn}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.sku">Sku</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#sku PublicIp#sku}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.skuTier">SkuTier</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#sku_tier PublicIp#sku_tier}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#tags PublicIp#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.allocationMethod">AllocationMethod</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#allocation_method PublicIp#allocation_method}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#location PublicIp#location}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#name PublicIp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#resource_group_name PublicIp#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.ddosProtectionMode">DdosProtectionMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#ddos_protection_mode PublicIp#ddos_protection_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.ddosProtectionPlanId">DdosProtectionPlanId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#ddos_protection_plan_id PublicIp#ddos_protection_plan_id}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.domainNameLabel">DomainNameLabel</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#domain_name_label PublicIp#domain_name_label}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.domainNameLabelScope">DomainNameLabelScope</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#domain_name_label_scope PublicIp#domain_name_label_scope}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.edgeZone">EdgeZone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#edge_zone PublicIp#edge_zone}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#id PublicIp#id}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.idleTimeoutInMinutes">IdleTimeoutInMinutes</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#idle_timeout_in_minutes PublicIp#idle_timeout_in_minutes}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.ipTags">IpTags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#ip_tags PublicIp#ip_tags}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.ipVersion">IpVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#ip_version PublicIp#ip_version}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.publicIpPrefixId">PublicIpPrefixId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#public_ip_prefix_id PublicIp#public_ip_prefix_id}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.reverseFqdn">ReverseFqdn</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#reverse_fqdn PublicIp#reverse_fqdn}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.sku">Sku</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#sku PublicIp#sku}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.skuTier">SkuTier</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#sku_tier PublicIp#sku_tier}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#tags PublicIp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpTimeouts">PublicIpTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.zones">Zones</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#zones PublicIp#zones}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.zones">Zones</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#zones PublicIp#zones}. |
 
 ---
 
@@ -1368,7 +1399,7 @@ public string AllocationMethod { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#allocation_method PublicIp#allocation_method}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#allocation_method PublicIp#allocation_method}.
 
 ---
 
@@ -1380,7 +1411,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#location PublicIp#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#location PublicIp#location}.
 
 ---
 
@@ -1392,7 +1423,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#name PublicIp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#name PublicIp#name}.
 
 ---
 
@@ -1404,7 +1435,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#resource_group_name PublicIp#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#resource_group_name PublicIp#resource_group_name}.
 
 ---
 
@@ -1416,7 +1447,7 @@ public string DdosProtectionMode { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#ddos_protection_mode PublicIp#ddos_protection_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#ddos_protection_mode PublicIp#ddos_protection_mode}.
 
 ---
 
@@ -1428,7 +1459,7 @@ public string DdosProtectionPlanId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#ddos_protection_plan_id PublicIp#ddos_protection_plan_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#ddos_protection_plan_id PublicIp#ddos_protection_plan_id}.
 
 ---
 
@@ -1440,7 +1471,19 @@ public string DomainNameLabel { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#domain_name_label PublicIp#domain_name_label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#domain_name_label PublicIp#domain_name_label}.
+
+---
+
+##### `DomainNameLabelScope`<sup>Optional</sup> <a name="DomainNameLabelScope" id="@cdktf/provider-azurerm.publicIp.PublicIpConfig.property.domainNameLabelScope"></a>
+
+```csharp
+public string DomainNameLabelScope { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#domain_name_label_scope PublicIp#domain_name_label_scope}.
 
 ---
 
@@ -1452,7 +1495,7 @@ public string EdgeZone { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#edge_zone PublicIp#edge_zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#edge_zone PublicIp#edge_zone}.
 
 ---
 
@@ -1464,7 +1507,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#id PublicIp#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#id PublicIp#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1479,7 +1522,7 @@ public double IdleTimeoutInMinutes { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#idle_timeout_in_minutes PublicIp#idle_timeout_in_minutes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#idle_timeout_in_minutes PublicIp#idle_timeout_in_minutes}.
 
 ---
 
@@ -1491,7 +1534,7 @@ public System.Collections.Generic.IDictionary<string, string> IpTags { get; set;
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#ip_tags PublicIp#ip_tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#ip_tags PublicIp#ip_tags}.
 
 ---
 
@@ -1503,7 +1546,7 @@ public string IpVersion { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#ip_version PublicIp#ip_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#ip_version PublicIp#ip_version}.
 
 ---
 
@@ -1515,7 +1558,7 @@ public string PublicIpPrefixId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#public_ip_prefix_id PublicIp#public_ip_prefix_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#public_ip_prefix_id PublicIp#public_ip_prefix_id}.
 
 ---
 
@@ -1527,7 +1570,7 @@ public string ReverseFqdn { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#reverse_fqdn PublicIp#reverse_fqdn}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#reverse_fqdn PublicIp#reverse_fqdn}.
 
 ---
 
@@ -1539,7 +1582,7 @@ public string Sku { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#sku PublicIp#sku}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#sku PublicIp#sku}.
 
 ---
 
@@ -1551,7 +1594,7 @@ public string SkuTier { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#sku_tier PublicIp#sku_tier}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#sku_tier PublicIp#sku_tier}.
 
 ---
 
@@ -1563,7 +1606,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#tags PublicIp#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#tags PublicIp#tags}.
 
 ---
 
@@ -1577,7 +1620,7 @@ public PublicIpTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#timeouts PublicIp#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#timeouts PublicIp#timeouts}
 
 ---
 
@@ -1589,7 +1632,7 @@ public string[] Zones { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#zones PublicIp#zones}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#zones PublicIp#zones}.
 
 ---
 
@@ -1612,10 +1655,10 @@ new PublicIpTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#create PublicIp#create}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#delete PublicIp#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#read PublicIp#read}. |
-| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#update PublicIp#update}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#create PublicIp#create}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#delete PublicIp#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#read PublicIp#read}. |
+| <code><a href="#@cdktf/provider-azurerm.publicIp.PublicIpTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#update PublicIp#update}. |
 
 ---
 
@@ -1627,7 +1670,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#create PublicIp#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#create PublicIp#create}.
 
 ---
 
@@ -1639,7 +1682,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#delete PublicIp#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#delete PublicIp#delete}.
 
 ---
 
@@ -1651,7 +1694,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#read PublicIp#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#read PublicIp#read}.
 
 ---
 
@@ -1663,7 +1706,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/public_ip#update PublicIp#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/public_ip#update PublicIp#update}.
 
 ---
 

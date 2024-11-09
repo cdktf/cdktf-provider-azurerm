@@ -1,3 +1,3 @@
 # `azurerm_cdn_frontdoor_route`
 
-Refer to the Terraform Registry for docs: [`azurerm_cdn_frontdoor_route`](https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/cdn_frontdoor_route).
+Refer to the Terraform Registry for docs: [`azurerm_cdn_frontdoor_route`](https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/cdn_frontdoor_route).

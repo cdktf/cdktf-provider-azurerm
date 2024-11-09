@@ -1,3 +1,3 @@
 # `azurerm_lb`
 
-Refer to the Terraform Registry for docs: [`azurerm_lb`](https://registry.terraform.io/providers/hashicorp/azurerm/4.8.0/docs/resources/lb).
+Refer to the Terraform Registry for docs: [`azurerm_lb`](https://registry.terraform.io/providers/hashicorp/azurerm/4.9.0/docs/resources/lb).
