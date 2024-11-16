@@ -633,6 +633,8 @@ export * as natGatewayPublicIpAssociation from './nat-gateway-public-ip-associat
 export * as natGatewayPublicIpPrefixAssociation from './nat-gateway-public-ip-prefix-association';
 export * as netappAccount from './netapp-account';
 export * as netappAccountEncryption from './netapp-account-encryption';
+export * as netappBackupPolicy from './netapp-backup-policy';
+export * as netappBackupVault from './netapp-backup-vault';
 export * as netappPool from './netapp-pool';
 export * as netappSnapshot from './netapp-snapshot';
 export * as netappSnapshotPolicy from './netapp-snapshot-policy';
@@ -1221,6 +1223,7 @@ export * as dataAzurermKeyVaultCertificates from './data-azurerm-key-vault-certi
 export * as dataAzurermKeyVaultEncryptedValue from './data-azurerm-key-vault-encrypted-value';
 export * as dataAzurermKeyVaultKey from './data-azurerm-key-vault-key';
 export * as dataAzurermKeyVaultManagedHardwareSecurityModule from './data-azurerm-key-vault-managed-hardware-security-module';
+export * as dataAzurermKeyVaultManagedHardwareSecurityModuleKey from './data-azurerm-key-vault-managed-hardware-security-module-key';
 export * as dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition from './data-azurerm-key-vault-managed-hardware-security-module-role-definition';
 export * as dataAzurermKeyVaultSecret from './data-azurerm-key-vault-secret';
 export * as dataAzurermKeyVaultSecrets from './data-azurerm-key-vault-secrets';
@@ -1278,6 +1281,8 @@ export * as dataAzurermMysqlFlexibleServer from './data-azurerm-mysql-flexible-s
 export * as dataAzurermNatGateway from './data-azurerm-nat-gateway';
 export * as dataAzurermNetappAccount from './data-azurerm-netapp-account';
 export * as dataAzurermNetappAccountEncryption from './data-azurerm-netapp-account-encryption';
+export * as dataAzurermNetappBackupPolicy from './data-azurerm-netapp-backup-policy';
+export * as dataAzurermNetappBackupVault from './data-azurerm-netapp-backup-vault';
 export * as dataAzurermNetappPool from './data-azurerm-netapp-pool';
 export * as dataAzurermNetappSnapshot from './data-azurerm-netapp-snapshot';
 export * as dataAzurermNetappSnapshotPolicy from './data-azurerm-netapp-snapshot-policy';
