@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dnsZone.DnsZone.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dnszone"
 
 dnszone.NewDnsZone(scope Construct, id *string, config DnsZoneConfig) DnsZone
 ```
@@ -432,7 +432,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dnsZone.DnsZone.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dnszone"
 
 dnszone.DnsZone_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dnsZone.DnsZone.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dnszone"
 
 dnszone.DnsZone_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ dnszone.DnsZone_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dnsZone.DnsZone.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dnszone"
 
 dnszone.DnsZone_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ dnszone.DnsZone_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dnsZone.DnsZone.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dnszone"
 
 dnszone.DnsZone_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -886,7 +886,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dnsZone.DnsZoneConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dnszone"
 
 &dnszone.DnsZoneConfig {
 	Connection: interface{},
@@ -899,9 +899,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dnszone"
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	SoaRecord: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dnsZone.DnsZoneSoaRecord,
+	SoaRecord: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dnsZone.DnsZoneSoaRecord,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dnsZone.DnsZoneTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dnsZone.DnsZoneTimeouts,
 }
 ```
 
@@ -1079,7 +1079,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dnsZone.DnsZoneSoaRecord.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dnszone"
 
 &dnszone.DnsZoneSoaRecord {
 	Email: *string,
@@ -1209,7 +1209,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dnsZone.DnsZoneTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dnszone"
 
 &dnszone.DnsZoneTimeouts {
 	Create: *string,
@@ -1285,7 +1285,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dnsZone.DnsZoneSoaRecordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dnszone"
 
 dnszone.NewDnsZoneSoaRecordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DnsZoneSoaRecordOutputReference
 ```
@@ -1781,7 +1781,7 @@ func InternalValue() DnsZoneSoaRecord
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dnsZone.DnsZoneTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dnszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dnszone"
 
 dnszone.NewDnsZoneTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DnsZoneTimeoutsOutputReference
 ```
