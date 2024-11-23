@@ -731,6 +731,7 @@ The following submodules are available:
 - [eventgridDomain](./eventgridDomain.python.md)
 - [eventgridDomainTopic](./eventgridDomainTopic.python.md)
 - [eventgridEventSubscription](./eventgridEventSubscription.python.md)
+- [eventgridNamespace](./eventgridNamespace.python.md)
 - [eventgridSystemTopic](./eventgridSystemTopic.python.md)
 - [eventgridSystemTopicEventSubscription](./eventgridSystemTopicEventSubscription.python.md)
 - [eventgridTopic](./eventgridTopic.python.md)

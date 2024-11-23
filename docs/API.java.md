@@ -731,6 +731,7 @@ The following submodules are available:
 - [eventgridDomain](./eventgridDomain.java.md)
 - [eventgridDomainTopic](./eventgridDomainTopic.java.md)
 - [eventgridEventSubscription](./eventgridEventSubscription.java.md)
+- [eventgridNamespace](./eventgridNamespace.java.md)
 - [eventgridSystemTopic](./eventgridSystemTopic.java.md)
 - [eventgridSystemTopicEventSubscription](./eventgridSystemTopicEventSubscription.java.md)
 - [eventgridTopic](./eventgridTopic.java.md)

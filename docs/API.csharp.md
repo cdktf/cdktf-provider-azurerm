@@ -731,6 +731,7 @@ The following submodules are available:
 - [eventgridDomain](./eventgridDomain.csharp.md)
 - [eventgridDomainTopic](./eventgridDomainTopic.csharp.md)
 - [eventgridEventSubscription](./eventgridEventSubscription.csharp.md)
+- [eventgridNamespace](./eventgridNamespace.csharp.md)
 - [eventgridSystemTopic](./eventgridSystemTopic.csharp.md)
 - [eventgridSystemTopicEventSubscription](./eventgridSystemTopicEventSubscription.csharp.md)
 - [eventgridTopic](./eventgridTopic.csharp.md)

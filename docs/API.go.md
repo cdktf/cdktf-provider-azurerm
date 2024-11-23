@@ -731,6 +731,7 @@ The following submodules are available:
 - [eventgridDomain](./eventgridDomain.go.md)
 - [eventgridDomainTopic](./eventgridDomainTopic.go.md)
 - [eventgridEventSubscription](./eventgridEventSubscription.go.md)
+- [eventgridNamespace](./eventgridNamespace.go.md)
 - [eventgridSystemTopic](./eventgridSystemTopic.go.md)
 - [eventgridSystemTopicEventSubscription](./eventgridSystemTopicEventSubscription.go.md)
 - [eventgridTopic](./eventgridTopic.go.md)
