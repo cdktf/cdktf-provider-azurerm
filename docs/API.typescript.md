@@ -731,6 +731,7 @@ The following submodules are available:
 - [eventgridDomain](./eventgridDomain.typescript.md)
 - [eventgridDomainTopic](./eventgridDomainTopic.typescript.md)
 - [eventgridEventSubscription](./eventgridEventSubscription.typescript.md)
+- [eventgridNamespace](./eventgridNamespace.typescript.md)
 - [eventgridSystemTopic](./eventgridSystemTopic.typescript.md)
 - [eventgridSystemTopicEventSubscription](./eventgridSystemTopicEventSubscription.typescript.md)
 - [eventgridTopic](./eventgridTopic.typescript.md)
