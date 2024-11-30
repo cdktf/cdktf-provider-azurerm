@@ -445,6 +445,7 @@ The following submodules are available:
 - [dataAzurermMonitorWorkspace](./dataAzurermMonitorWorkspace.python.md)
 - [dataAzurermMssqlDatabase](./dataAzurermMssqlDatabase.python.md)
 - [dataAzurermMssqlElasticpool](./dataAzurermMssqlElasticpool.python.md)
+- [dataAzurermMssqlManagedDatabase](./dataAzurermMssqlManagedDatabase.python.md)
 - [dataAzurermMssqlManagedInstance](./dataAzurermMssqlManagedInstance.python.md)
 - [dataAzurermMssqlServer](./dataAzurermMssqlServer.python.md)
 - [dataAzurermMysqlFlexibleServer](./dataAzurermMysqlFlexibleServer.python.md)

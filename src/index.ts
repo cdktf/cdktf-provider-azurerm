@@ -1276,6 +1276,7 @@ export * as dataAzurermMonitorScheduledQueryRulesLog from './data-azurerm-monito
 export * as dataAzurermMonitorWorkspace from './data-azurerm-monitor-workspace';
 export * as dataAzurermMssqlDatabase from './data-azurerm-mssql-database';
 export * as dataAzurermMssqlElasticpool from './data-azurerm-mssql-elasticpool';
+export * as dataAzurermMssqlManagedDatabase from './data-azurerm-mssql-managed-database';
 export * as dataAzurermMssqlManagedInstance from './data-azurerm-mssql-managed-instance';
 export * as dataAzurermMssqlServer from './data-azurerm-mssql-server';
 export * as dataAzurermMysqlFlexibleServer from './data-azurerm-mysql-flexible-server';

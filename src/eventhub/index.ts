@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,64 +13,68 @@ import * as cdktf from 'cdktf';
 
 export interface EventhubConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#id Eventhub#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#id Eventhub#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#message_retention Eventhub#message_retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#message_retention Eventhub#message_retention}
   */
   readonly messageRetention: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#name Eventhub#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#name Eventhub#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#namespace_name Eventhub#namespace_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#namespace_id Eventhub#namespace_id}
   */
-  readonly namespaceName: string;
+  readonly namespaceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#partition_count Eventhub#partition_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#namespace_name Eventhub#namespace_name}
+  */
+  readonly namespaceName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#partition_count Eventhub#partition_count}
   */
   readonly partitionCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#resource_group_name Eventhub#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#resource_group_name Eventhub#resource_group_name}
   */
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#status Eventhub#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#status Eventhub#status}
   */
   readonly status?: string;
   /**
   * capture_description block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#capture_description Eventhub#capture_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#capture_description Eventhub#capture_description}
   */
   readonly captureDescription?: EventhubCaptureDescription;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#timeouts Eventhub#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#timeouts Eventhub#timeouts}
   */
   readonly timeouts?: EventhubTimeouts;
 }
 export interface EventhubCaptureDescriptionDestination {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#archive_name_format Eventhub#archive_name_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#archive_name_format Eventhub#archive_name_format}
   */
   readonly archiveNameFormat: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#blob_container_name Eventhub#blob_container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#blob_container_name Eventhub#blob_container_name}
   */
   readonly blobContainerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#name Eventhub#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#name Eventhub#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#storage_account_id Eventhub#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#storage_account_id Eventhub#storage_account_id}
   */
   readonly storageAccountId: string;
 }
@@ -229,29 +233,29 @@ export class EventhubCaptureDescriptionDestinationOutputReference extends cdktf.
 }
 export interface EventhubCaptureDescription {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#enabled Eventhub#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#enabled Eventhub#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#encoding Eventhub#encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#encoding Eventhub#encoding}
   */
   readonly encoding: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#interval_in_seconds Eventhub#interval_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#interval_in_seconds Eventhub#interval_in_seconds}
   */
   readonly intervalInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#size_limit_in_bytes Eventhub#size_limit_in_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#size_limit_in_bytes Eventhub#size_limit_in_bytes}
   */
   readonly sizeLimitInBytes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#skip_empty_archives Eventhub#skip_empty_archives}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#skip_empty_archives Eventhub#skip_empty_archives}
   */
   readonly skipEmptyArchives?: boolean | cdktf.IResolvable;
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#destination Eventhub#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#destination Eventhub#destination}
   */
   readonly destination: EventhubCaptureDescriptionDestination;
 }
@@ -471,19 +475,19 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
 }
 export interface EventhubTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#create Eventhub#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#create Eventhub#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#delete Eventhub#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#delete Eventhub#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#read Eventhub#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#read Eventhub#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#update Eventhub#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#update Eventhub#update}
   */
   readonly update?: string;
 }
@@ -664,7 +668,7 @@ export class EventhubTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub azurerm_eventhub}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub azurerm_eventhub}
 */
 export class Eventhub extends cdktf.TerraformResource {
 
@@ -680,7 +684,7 @@ export class Eventhub extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a Eventhub resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Eventhub to import
-  * @param importFromId The id of the existing Eventhub that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Eventhub that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Eventhub to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -692,7 +696,7 @@ export class Eventhub extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/eventhub azurerm_eventhub} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/eventhub azurerm_eventhub} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -703,7 +707,7 @@ export class Eventhub extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_eventhub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.11.0',
+        providerVersion: '4.12.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -717,6 +721,7 @@ export class Eventhub extends cdktf.TerraformResource {
     this._id = config.id;
     this._messageRetention = config.messageRetention;
     this._name = config.name;
+    this._namespaceId = config.namespaceId;
     this._namespaceName = config.namespaceName;
     this._partitionCount = config.partitionCount;
     this._resourceGroupName = config.resourceGroupName;
@@ -771,13 +776,32 @@ export class Eventhub extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // namespace_name - computed: false, optional: false, required: true
+  // namespace_id - computed: true, optional: true, required: false
+  private _namespaceId?: string; 
+  public get namespaceId() {
+    return this.getStringAttribute('namespace_id');
+  }
+  public set namespaceId(value: string) {
+    this._namespaceId = value;
+  }
+  public resetNamespaceId() {
+    this._namespaceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceIdInput() {
+    return this._namespaceId;
+  }
+
+  // namespace_name - computed: true, optional: true, required: false
   private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  public resetNamespaceName() {
+    this._namespaceName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
@@ -802,13 +826,16 @@ export class Eventhub extends cdktf.TerraformResource {
     return cdktf.Fn.tolist(this.getListAttribute('partition_ids'));
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
+  // resource_group_name - computed: true, optional: true, required: false
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
@@ -872,6 +899,7 @@ export class Eventhub extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       message_retention: cdktf.numberToTerraform(this._messageRetention),
       name: cdktf.stringToTerraform(this._name),
+      namespace_id: cdktf.stringToTerraform(this._namespaceId),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       partition_count: cdktf.numberToTerraform(this._partitionCount),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
@@ -897,6 +925,12 @@ export class Eventhub extends cdktf.TerraformResource {
       },
       name: {
         value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      namespace_id: {
+        value: cdktf.stringToHclTerraform(this._namespaceId),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

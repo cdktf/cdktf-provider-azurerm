@@ -445,6 +445,7 @@ The following submodules are available:
 - [dataAzurermMonitorWorkspace](./dataAzurermMonitorWorkspace.csharp.md)
 - [dataAzurermMssqlDatabase](./dataAzurermMssqlDatabase.csharp.md)
 - [dataAzurermMssqlElasticpool](./dataAzurermMssqlElasticpool.csharp.md)
+- [dataAzurermMssqlManagedDatabase](./dataAzurermMssqlManagedDatabase.csharp.md)
 - [dataAzurermMssqlManagedInstance](./dataAzurermMssqlManagedInstance.csharp.md)
 - [dataAzurermMssqlServer](./dataAzurermMssqlServer.csharp.md)
 - [dataAzurermMysqlFlexibleServer](./dataAzurermMysqlFlexibleServer.csharp.md)

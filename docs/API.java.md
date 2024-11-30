@@ -445,6 +445,7 @@ The following submodules are available:
 - [dataAzurermMonitorWorkspace](./dataAzurermMonitorWorkspace.java.md)
 - [dataAzurermMssqlDatabase](./dataAzurermMssqlDatabase.java.md)
 - [dataAzurermMssqlElasticpool](./dataAzurermMssqlElasticpool.java.md)
+- [dataAzurermMssqlManagedDatabase](./dataAzurermMssqlManagedDatabase.java.md)
 - [dataAzurermMssqlManagedInstance](./dataAzurermMssqlManagedInstance.java.md)
 - [dataAzurermMssqlServer](./dataAzurermMssqlServer.java.md)
 - [dataAzurermMysqlFlexibleServer](./dataAzurermMysqlFlexibleServer.java.md)

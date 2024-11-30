@@ -1276,6 +1276,7 @@ Object.defineProperty(exports, 'dataAzurermMonitorScheduledQueryRulesLog', { get
 Object.defineProperty(exports, 'dataAzurermMonitorWorkspace', { get: function () { return require('./data-azurerm-monitor-workspace'); } });
 Object.defineProperty(exports, 'dataAzurermMssqlDatabase', { get: function () { return require('./data-azurerm-mssql-database'); } });
 Object.defineProperty(exports, 'dataAzurermMssqlElasticpool', { get: function () { return require('./data-azurerm-mssql-elasticpool'); } });
+Object.defineProperty(exports, 'dataAzurermMssqlManagedDatabase', { get: function () { return require('./data-azurerm-mssql-managed-database'); } });
 Object.defineProperty(exports, 'dataAzurermMssqlManagedInstance', { get: function () { return require('./data-azurerm-mssql-managed-instance'); } });
 Object.defineProperty(exports, 'dataAzurermMssqlServer', { get: function () { return require('./data-azurerm-mssql-server'); } });
 Object.defineProperty(exports, 'dataAzurermMysqlFlexibleServer', { get: function () { return require('./data-azurerm-mysql-flexible-server'); } });
