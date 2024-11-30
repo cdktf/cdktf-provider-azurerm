@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,94 +8,100 @@ import * as cdktf from 'cdktf';
 
 export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#access_connector_id DatabricksWorkspace#access_connector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#access_connector_id DatabricksWorkspace#access_connector_id}
   */
   readonly accessConnectorId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#customer_managed_key_enabled DatabricksWorkspace#customer_managed_key_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#customer_managed_key_enabled DatabricksWorkspace#customer_managed_key_enabled}
   */
   readonly customerManagedKeyEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#default_storage_firewall_enabled DatabricksWorkspace#default_storage_firewall_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#default_storage_firewall_enabled DatabricksWorkspace#default_storage_firewall_enabled}
   */
   readonly defaultStorageFirewallEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#id DatabricksWorkspace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#id DatabricksWorkspace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#infrastructure_encryption_enabled DatabricksWorkspace#infrastructure_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#infrastructure_encryption_enabled DatabricksWorkspace#infrastructure_encryption_enabled}
   */
   readonly infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#load_balancer_backend_address_pool_id DatabricksWorkspace#load_balancer_backend_address_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#load_balancer_backend_address_pool_id DatabricksWorkspace#load_balancer_backend_address_pool_id}
   */
   readonly loadBalancerBackendAddressPoolId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#location DatabricksWorkspace#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#location DatabricksWorkspace#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#managed_disk_cmk_key_vault_id DatabricksWorkspace#managed_disk_cmk_key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#managed_disk_cmk_key_vault_id DatabricksWorkspace#managed_disk_cmk_key_vault_id}
   */
   readonly managedDiskCmkKeyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#managed_disk_cmk_key_vault_key_id DatabricksWorkspace#managed_disk_cmk_key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#managed_disk_cmk_key_vault_key_id DatabricksWorkspace#managed_disk_cmk_key_vault_key_id}
   */
   readonly managedDiskCmkKeyVaultKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#managed_disk_cmk_rotation_to_latest_version_enabled DatabricksWorkspace#managed_disk_cmk_rotation_to_latest_version_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#managed_disk_cmk_rotation_to_latest_version_enabled DatabricksWorkspace#managed_disk_cmk_rotation_to_latest_version_enabled}
   */
   readonly managedDiskCmkRotationToLatestVersionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#managed_resource_group_name DatabricksWorkspace#managed_resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#managed_resource_group_name DatabricksWorkspace#managed_resource_group_name}
   */
   readonly managedResourceGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#managed_services_cmk_key_vault_id DatabricksWorkspace#managed_services_cmk_key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#managed_services_cmk_key_vault_id DatabricksWorkspace#managed_services_cmk_key_vault_id}
   */
   readonly managedServicesCmkKeyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#managed_services_cmk_key_vault_key_id DatabricksWorkspace#managed_services_cmk_key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#managed_services_cmk_key_vault_key_id DatabricksWorkspace#managed_services_cmk_key_vault_key_id}
   */
   readonly managedServicesCmkKeyVaultKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#name DatabricksWorkspace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#name DatabricksWorkspace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#network_security_group_rules_required DatabricksWorkspace#network_security_group_rules_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#network_security_group_rules_required DatabricksWorkspace#network_security_group_rules_required}
   */
   readonly networkSecurityGroupRulesRequired?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#public_network_access_enabled DatabricksWorkspace#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#public_network_access_enabled DatabricksWorkspace#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#resource_group_name DatabricksWorkspace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#resource_group_name DatabricksWorkspace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#sku DatabricksWorkspace#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#sku DatabricksWorkspace#sku}
   */
   readonly sku: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#tags DatabricksWorkspace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#tags DatabricksWorkspace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * custom_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#custom_parameters DatabricksWorkspace#custom_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#custom_parameters DatabricksWorkspace#custom_parameters}
   */
   readonly customParameters?: DatabricksWorkspaceCustomParameters;
   /**
+  * enhanced_security_compliance block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#enhanced_security_compliance DatabricksWorkspace#enhanced_security_compliance}
+  */
+  readonly enhancedSecurityCompliance?: DatabricksWorkspaceEnhancedSecurityCompliance;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#timeouts DatabricksWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#timeouts DatabricksWorkspace#timeouts}
   */
   readonly timeouts?: DatabricksWorkspaceTimeouts;
 }
@@ -276,51 +277,51 @@ export class DatabricksWorkspaceStorageAccountIdentityList extends cdktf.Complex
 }
 export interface DatabricksWorkspaceCustomParameters {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#machine_learning_workspace_id DatabricksWorkspace#machine_learning_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#machine_learning_workspace_id DatabricksWorkspace#machine_learning_workspace_id}
   */
   readonly machineLearningWorkspaceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#nat_gateway_name DatabricksWorkspace#nat_gateway_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#nat_gateway_name DatabricksWorkspace#nat_gateway_name}
   */
   readonly natGatewayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#no_public_ip DatabricksWorkspace#no_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#no_public_ip DatabricksWorkspace#no_public_ip}
   */
   readonly noPublicIp?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#private_subnet_name DatabricksWorkspace#private_subnet_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#private_subnet_name DatabricksWorkspace#private_subnet_name}
   */
   readonly privateSubnetName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#private_subnet_network_security_group_association_id DatabricksWorkspace#private_subnet_network_security_group_association_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#private_subnet_network_security_group_association_id DatabricksWorkspace#private_subnet_network_security_group_association_id}
   */
   readonly privateSubnetNetworkSecurityGroupAssociationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#public_ip_name DatabricksWorkspace#public_ip_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#public_ip_name DatabricksWorkspace#public_ip_name}
   */
   readonly publicIpName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#public_subnet_name DatabricksWorkspace#public_subnet_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#public_subnet_name DatabricksWorkspace#public_subnet_name}
   */
   readonly publicSubnetName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#public_subnet_network_security_group_association_id DatabricksWorkspace#public_subnet_network_security_group_association_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#public_subnet_network_security_group_association_id DatabricksWorkspace#public_subnet_network_security_group_association_id}
   */
   readonly publicSubnetNetworkSecurityGroupAssociationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#storage_account_name DatabricksWorkspace#storage_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#storage_account_name DatabricksWorkspace#storage_account_name}
   */
   readonly storageAccountName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#storage_account_sku_name DatabricksWorkspace#storage_account_sku_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#storage_account_sku_name DatabricksWorkspace#storage_account_sku_name}
   */
   readonly storageAccountSkuName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#virtual_network_id DatabricksWorkspace#virtual_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#virtual_network_id DatabricksWorkspace#virtual_network_id}
   */
   readonly virtualNetworkId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#vnet_address_prefix DatabricksWorkspace#vnet_address_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#vnet_address_prefix DatabricksWorkspace#vnet_address_prefix}
   */
   readonly vnetAddressPrefix?: string;
 }
@@ -721,21 +722,204 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
     return this._vnetAddressPrefix;
   }
 }
+export interface DatabricksWorkspaceEnhancedSecurityCompliance {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#automatic_cluster_update_enabled DatabricksWorkspace#automatic_cluster_update_enabled}
+  */
+  readonly automaticClusterUpdateEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#compliance_security_profile_enabled DatabricksWorkspace#compliance_security_profile_enabled}
+  */
+  readonly complianceSecurityProfileEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#compliance_security_profile_standards DatabricksWorkspace#compliance_security_profile_standards}
+  */
+  readonly complianceSecurityProfileStandards?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#enhanced_security_monitoring_enabled DatabricksWorkspace#enhanced_security_monitoring_enabled}
+  */
+  readonly enhancedSecurityMonitoringEnabled?: boolean | cdktf.IResolvable;
+}
+
+export function databricksWorkspaceEnhancedSecurityComplianceToTerraform(struct?: DatabricksWorkspaceEnhancedSecurityComplianceOutputReference | DatabricksWorkspaceEnhancedSecurityCompliance): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    automatic_cluster_update_enabled: cdktf.booleanToTerraform(struct!.automaticClusterUpdateEnabled),
+    compliance_security_profile_enabled: cdktf.booleanToTerraform(struct!.complianceSecurityProfileEnabled),
+    compliance_security_profile_standards: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.complianceSecurityProfileStandards),
+    enhanced_security_monitoring_enabled: cdktf.booleanToTerraform(struct!.enhancedSecurityMonitoringEnabled),
+  }
+}
+
+
+export function databricksWorkspaceEnhancedSecurityComplianceToHclTerraform(struct?: DatabricksWorkspaceEnhancedSecurityComplianceOutputReference | DatabricksWorkspaceEnhancedSecurityCompliance): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    automatic_cluster_update_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.automaticClusterUpdateEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    compliance_security_profile_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.complianceSecurityProfileEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    compliance_security_profile_standards: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.complianceSecurityProfileStandards),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    enhanced_security_monitoring_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enhancedSecurityMonitoringEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DatabricksWorkspaceEnhancedSecurityComplianceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DatabricksWorkspaceEnhancedSecurityCompliance | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._automaticClusterUpdateEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.automaticClusterUpdateEnabled = this._automaticClusterUpdateEnabled;
+    }
+    if (this._complianceSecurityProfileEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.complianceSecurityProfileEnabled = this._complianceSecurityProfileEnabled;
+    }
+    if (this._complianceSecurityProfileStandards !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.complianceSecurityProfileStandards = this._complianceSecurityProfileStandards;
+    }
+    if (this._enhancedSecurityMonitoringEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enhancedSecurityMonitoringEnabled = this._enhancedSecurityMonitoringEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatabricksWorkspaceEnhancedSecurityCompliance | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._automaticClusterUpdateEnabled = undefined;
+      this._complianceSecurityProfileEnabled = undefined;
+      this._complianceSecurityProfileStandards = undefined;
+      this._enhancedSecurityMonitoringEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._automaticClusterUpdateEnabled = value.automaticClusterUpdateEnabled;
+      this._complianceSecurityProfileEnabled = value.complianceSecurityProfileEnabled;
+      this._complianceSecurityProfileStandards = value.complianceSecurityProfileStandards;
+      this._enhancedSecurityMonitoringEnabled = value.enhancedSecurityMonitoringEnabled;
+    }
+  }
+
+  // automatic_cluster_update_enabled - computed: false, optional: true, required: false
+  private _automaticClusterUpdateEnabled?: boolean | cdktf.IResolvable; 
+  public get automaticClusterUpdateEnabled() {
+    return this.getBooleanAttribute('automatic_cluster_update_enabled');
+  }
+  public set automaticClusterUpdateEnabled(value: boolean | cdktf.IResolvable) {
+    this._automaticClusterUpdateEnabled = value;
+  }
+  public resetAutomaticClusterUpdateEnabled() {
+    this._automaticClusterUpdateEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticClusterUpdateEnabledInput() {
+    return this._automaticClusterUpdateEnabled;
+  }
+
+  // compliance_security_profile_enabled - computed: false, optional: true, required: false
+  private _complianceSecurityProfileEnabled?: boolean | cdktf.IResolvable; 
+  public get complianceSecurityProfileEnabled() {
+    return this.getBooleanAttribute('compliance_security_profile_enabled');
+  }
+  public set complianceSecurityProfileEnabled(value: boolean | cdktf.IResolvable) {
+    this._complianceSecurityProfileEnabled = value;
+  }
+  public resetComplianceSecurityProfileEnabled() {
+    this._complianceSecurityProfileEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get complianceSecurityProfileEnabledInput() {
+    return this._complianceSecurityProfileEnabled;
+  }
+
+  // compliance_security_profile_standards - computed: false, optional: true, required: false
+  private _complianceSecurityProfileStandards?: string[]; 
+  public get complianceSecurityProfileStandards() {
+    return cdktf.Fn.tolist(this.getListAttribute('compliance_security_profile_standards'));
+  }
+  public set complianceSecurityProfileStandards(value: string[]) {
+    this._complianceSecurityProfileStandards = value;
+  }
+  public resetComplianceSecurityProfileStandards() {
+    this._complianceSecurityProfileStandards = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get complianceSecurityProfileStandardsInput() {
+    return this._complianceSecurityProfileStandards;
+  }
+
+  // enhanced_security_monitoring_enabled - computed: false, optional: true, required: false
+  private _enhancedSecurityMonitoringEnabled?: boolean | cdktf.IResolvable; 
+  public get enhancedSecurityMonitoringEnabled() {
+    return this.getBooleanAttribute('enhanced_security_monitoring_enabled');
+  }
+  public set enhancedSecurityMonitoringEnabled(value: boolean | cdktf.IResolvable) {
+    this._enhancedSecurityMonitoringEnabled = value;
+  }
+  public resetEnhancedSecurityMonitoringEnabled() {
+    this._enhancedSecurityMonitoringEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enhancedSecurityMonitoringEnabledInput() {
+    return this._enhancedSecurityMonitoringEnabled;
+  }
+}
 export interface DatabricksWorkspaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#create DatabricksWorkspace#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#create DatabricksWorkspace#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#delete DatabricksWorkspace#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#delete DatabricksWorkspace#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#read DatabricksWorkspace#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#read DatabricksWorkspace#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#update DatabricksWorkspace#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#update DatabricksWorkspace#update}
   */
   readonly update?: string;
 }
@@ -916,7 +1100,7 @@ export class DatabricksWorkspaceTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace azurerm_databricks_workspace}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace azurerm_databricks_workspace}
 */
 export class DatabricksWorkspace extends cdktf.TerraformResource {
 
@@ -932,7 +1116,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DatabricksWorkspace resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DatabricksWorkspace to import
-  * @param importFromId The id of the existing DatabricksWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DatabricksWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DatabricksWorkspace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -944,7 +1128,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.11.0/docs/resources/databricks_workspace azurerm_databricks_workspace} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.12.0/docs/resources/databricks_workspace azurerm_databricks_workspace} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -955,7 +1139,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_databricks_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.11.0',
+        providerVersion: '4.12.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -986,6 +1170,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
     this._sku = config.sku;
     this._tags = config.tags;
     this._customParameters.internalValue = config.customParameters;
+    this._enhancedSecurityCompliance.internalValue = config.enhancedSecurityCompliance;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1333,6 +1518,22 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
     return this._customParameters.internalValue;
   }
 
+  // enhanced_security_compliance - computed: false, optional: true, required: false
+  private _enhancedSecurityCompliance = new DatabricksWorkspaceEnhancedSecurityComplianceOutputReference(this, "enhanced_security_compliance");
+  public get enhancedSecurityCompliance() {
+    return this._enhancedSecurityCompliance;
+  }
+  public putEnhancedSecurityCompliance(value: DatabricksWorkspaceEnhancedSecurityCompliance) {
+    this._enhancedSecurityCompliance.internalValue = value;
+  }
+  public resetEnhancedSecurityCompliance() {
+    this._enhancedSecurityCompliance.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enhancedSecurityComplianceInput() {
+    return this._enhancedSecurityCompliance.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new DatabricksWorkspaceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -1375,6 +1576,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       custom_parameters: databricksWorkspaceCustomParametersToTerraform(this._customParameters.internalValue),
+      enhanced_security_compliance: databricksWorkspaceEnhancedSecurityComplianceToTerraform(this._enhancedSecurityCompliance.internalValue),
       timeouts: databricksWorkspaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -1500,6 +1702,12 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "DatabricksWorkspaceCustomParametersList",
+      },
+      enhanced_security_compliance: {
+        value: databricksWorkspaceEnhancedSecurityComplianceToHclTerraform(this._enhancedSecurityCompliance.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DatabricksWorkspaceEnhancedSecurityComplianceList",
       },
       timeouts: {
         value: databricksWorkspaceTimeoutsToHclTerraform(this._timeouts.internalValue),

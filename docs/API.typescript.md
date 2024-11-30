@@ -445,6 +445,7 @@ The following submodules are available:
 - [dataAzurermMonitorWorkspace](./dataAzurermMonitorWorkspace.typescript.md)
 - [dataAzurermMssqlDatabase](./dataAzurermMssqlDatabase.typescript.md)
 - [dataAzurermMssqlElasticpool](./dataAzurermMssqlElasticpool.typescript.md)
+- [dataAzurermMssqlManagedDatabase](./dataAzurermMssqlManagedDatabase.typescript.md)
 - [dataAzurermMssqlManagedInstance](./dataAzurermMssqlManagedInstance.typescript.md)
 - [dataAzurermMssqlServer](./dataAzurermMssqlServer.typescript.md)
 - [dataAzurermMysqlFlexibleServer](./dataAzurermMysqlFlexibleServer.typescript.md)

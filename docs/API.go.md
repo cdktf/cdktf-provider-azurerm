@@ -445,6 +445,7 @@ The following submodules are available:
 - [dataAzurermMonitorWorkspace](./dataAzurermMonitorWorkspace.go.md)
 - [dataAzurermMssqlDatabase](./dataAzurermMssqlDatabase.go.md)
 - [dataAzurermMssqlElasticpool](./dataAzurermMssqlElasticpool.go.md)
+- [dataAzurermMssqlManagedDatabase](./dataAzurermMssqlManagedDatabase.go.md)
 - [dataAzurermMssqlManagedInstance](./dataAzurermMssqlManagedInstance.go.md)
 - [dataAzurermMssqlServer](./dataAzurermMssqlServer.go.md)
 - [dataAzurermMysqlFlexibleServer](./dataAzurermMysqlFlexibleServer.go.md)
