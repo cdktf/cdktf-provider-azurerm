@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 storageaccountqueueproperties.NewStorageAccountQueuePropertiesA(scope Construct, id *string, config StorageAccountQueuePropertiesAConfig) StorageAccountQueuePropertiesA
 ```
@@ -485,7 +485,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesA.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 storageaccountqueueproperties.StorageAccountQueuePropertiesA_IsConstruct(x interface{}) *bool
 ```
@@ -517,7 +517,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesA.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 storageaccountqueueproperties.StorageAccountQueuePropertiesA_IsTerraformElement(x interface{}) *bool
 ```
@@ -531,7 +531,7 @@ storageaccountqueueproperties.StorageAccountQueuePropertiesA_IsTerraformElement(
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesA.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 storageaccountqueueproperties.StorageAccountQueuePropertiesA_IsTerraformResource(x interface{}) *bool
 ```
@@ -545,7 +545,7 @@ storageaccountqueueproperties.StorageAccountQueuePropertiesA_IsTerraformResource
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesA.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 storageaccountqueueproperties.StorageAccountQueuePropertiesA_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -928,7 +928,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesAConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 &storageaccountqueueproperties.StorageAccountQueuePropertiesAConfig {
 	Connection: interface{},
@@ -940,11 +940,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueuepr
 	Provisioners: *[]interface{},
 	StorageAccountId: *string,
 	CorsRule: interface{},
-	HourMetrics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesHourMetricsA,
+	HourMetrics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.storageAccountQueueProperties.StorageAccountQueuePropertiesHourMetricsA,
 	Id: *string,
-	Logging: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesLoggingA,
-	MinuteMetrics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesMinuteMetricsA,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesTimeouts,
+	Logging: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.storageAccountQueueProperties.StorageAccountQueuePropertiesLoggingA,
+	MinuteMetrics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.storageAccountQueueProperties.StorageAccountQueuePropertiesMinuteMetricsA,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.storageAccountQueueProperties.StorageAccountQueuePropertiesTimeouts,
 }
 ```
 
@@ -1141,7 +1141,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesCorsRuleA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 &storageaccountqueueproperties.StorageAccountQueuePropertiesCorsRuleA {
 	AllowedHeaders: *[]*string,
@@ -1229,7 +1229,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesHourMetricsA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 &storageaccountqueueproperties.StorageAccountQueuePropertiesHourMetricsA {
 	Version: *string,
@@ -1289,7 +1289,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesLoggingA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 &storageaccountqueueproperties.StorageAccountQueuePropertiesLoggingA {
 	Delete: interface{},
@@ -1377,7 +1377,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesMinuteMetricsA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 &storageaccountqueueproperties.StorageAccountQueuePropertiesMinuteMetricsA {
 	Version: *string,
@@ -1437,7 +1437,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 &storageaccountqueueproperties.StorageAccountQueuePropertiesTimeouts {
 	Create: *string,
@@ -1513,7 +1513,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesCorsRuleAList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 storageaccountqueueproperties.NewStorageAccountQueuePropertiesCorsRuleAList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageAccountQueuePropertiesCorsRuleAList
 ```
@@ -1673,7 +1673,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesCorsRuleAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 storageaccountqueueproperties.NewStorageAccountQueuePropertiesCorsRuleAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageAccountQueuePropertiesCorsRuleAOutputReference
 ```
@@ -2050,7 +2050,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesHourMetricsAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 storageaccountqueueproperties.NewStorageAccountQueuePropertiesHourMetricsAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountQueuePropertiesHourMetricsAOutputReference
 ```
@@ -2379,7 +2379,7 @@ func InternalValue() StorageAccountQueuePropertiesHourMetricsA
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesLoggingAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 storageaccountqueueproperties.NewStorageAccountQueuePropertiesLoggingAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountQueuePropertiesLoggingAOutputReference
 ```
@@ -2745,7 +2745,7 @@ func InternalValue() StorageAccountQueuePropertiesLoggingA
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesMinuteMetricsAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 storageaccountqueueproperties.NewStorageAccountQueuePropertiesMinuteMetricsAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountQueuePropertiesMinuteMetricsAOutputReference
 ```
@@ -3074,7 +3074,7 @@ func InternalValue() StorageAccountQueuePropertiesMinuteMetricsA
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccountQueueProperties.StorageAccountQueuePropertiesTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccountqueueproperties"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/storageaccountqueueproperties"
 
 storageaccountqueueproperties.NewStorageAccountQueuePropertiesTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountQueuePropertiesTimeoutsOutputReference
 ```

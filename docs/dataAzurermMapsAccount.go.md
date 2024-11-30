@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmapsaccount"
 
 dataazurermmapsaccount.NewDataAzurermMapsAccount(scope Construct, id *string, config DataAzurermMapsAccountConfig) DataAzurermMapsAccount
 ```
@@ -310,7 +310,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmapsaccount"
 
 dataazurermmapsaccount.DataAzurermMapsAccount_IsConstruct(x interface{}) *bool
 ```
@@ -342,7 +342,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmapsaccount"
 
 dataazurermmapsaccount.DataAzurermMapsAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ dataazurermmapsaccount.DataAzurermMapsAccount_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmapsaccount"
 
 dataazurermmapsaccount.DataAzurermMapsAccount_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ dataazurermmapsaccount.DataAzurermMapsAccount_IsTerraformDataSource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmapsaccount"
 
 dataazurermmapsaccount.DataAzurermMapsAccount_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -731,7 +731,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmapsaccount"
 
 &dataazurermmapsaccount.DataAzurermMapsAccountConfig {
 	Connection: interface{},
@@ -745,7 +745,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmapsaccoun
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts,
 }
 ```
 
@@ -908,7 +908,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmapsaccount"
 
 &dataazurermmapsaccount.DataAzurermMapsAccountTimeouts {
 	Read: *string,
@@ -942,7 +942,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmapsaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmapsaccount"
 
 dataazurermmapsaccount.NewDataAzurermMapsAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMapsAccountTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 dataazurermmysqlflexibleserver.NewDataAzurermMysqlFlexibleServer(scope Construct, id *string, config DataAzurermMysqlFlexibleServerConfig) DataAzurermMysqlFlexibleServer
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 dataazurermmysqlflexibleserver.DataAzurermMysqlFlexibleServer_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 dataazurermmysqlflexibleserver.DataAzurermMysqlFlexibleServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermmysqlflexibleserver.DataAzurermMysqlFlexibleServer_IsTerraformElement
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServer.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 dataazurermmysqlflexibleserver.DataAzurermMysqlFlexibleServer_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermmysqlflexibleserver.DataAzurermMysqlFlexibleServer_IsTerraformDataSou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServer.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 dataazurermmysqlflexibleserver.DataAzurermMysqlFlexibleServer_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -856,7 +856,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 &dataazurermmysqlflexibleserver.DataAzurermMysqlFlexibleServerConfig {
 	Connection: interface{},
@@ -869,7 +869,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexi
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerTimeouts,
 }
 ```
 
@@ -1019,7 +1019,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerHighAvailability.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 &dataazurermmysqlflexibleserver.DataAzurermMysqlFlexibleServerHighAvailability {
 
@@ -1032,7 +1032,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerMaintenanceWindow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 &dataazurermmysqlflexibleserver.DataAzurermMysqlFlexibleServerMaintenanceWindow {
 
@@ -1045,7 +1045,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 &dataazurermmysqlflexibleserver.DataAzurermMysqlFlexibleServerStorage {
 
@@ -1058,7 +1058,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 &dataazurermmysqlflexibleserver.DataAzurermMysqlFlexibleServerTimeouts {
 	Read: *string,
@@ -1092,7 +1092,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerHighAvailabilityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 dataazurermmysqlflexibleserver.NewDataAzurermMysqlFlexibleServerHighAvailabilityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMysqlFlexibleServerHighAvailabilityList
 ```
@@ -1241,7 +1241,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerHighAvailabilityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 dataazurermmysqlflexibleserver.NewDataAzurermMysqlFlexibleServerHighAvailabilityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMysqlFlexibleServerHighAvailabilityOutputReference
 ```
@@ -1530,7 +1530,7 @@ func InternalValue() DataAzurermMysqlFlexibleServerHighAvailability
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerMaintenanceWindowList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 dataazurermmysqlflexibleserver.NewDataAzurermMysqlFlexibleServerMaintenanceWindowList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMysqlFlexibleServerMaintenanceWindowList
 ```
@@ -1679,7 +1679,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerMaintenanceWindowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 dataazurermmysqlflexibleserver.NewDataAzurermMysqlFlexibleServerMaintenanceWindowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMysqlFlexibleServerMaintenanceWindowOutputReference
 ```
@@ -1979,7 +1979,7 @@ func InternalValue() DataAzurermMysqlFlexibleServerMaintenanceWindow
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerStorageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 dataazurermmysqlflexibleserver.NewDataAzurermMysqlFlexibleServerStorageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMysqlFlexibleServerStorageList
 ```
@@ -2128,7 +2128,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerStorageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 dataazurermmysqlflexibleserver.NewDataAzurermMysqlFlexibleServerStorageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMysqlFlexibleServerStorageOutputReference
 ```
@@ -2439,7 +2439,7 @@ func InternalValue() DataAzurermMysqlFlexibleServerStorage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMysqlFlexibleServer.DataAzurermMysqlFlexibleServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmysqlflexibleserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmysqlflexibleserver"
 
 dataazurermmysqlflexibleserver.NewDataAzurermMysqlFlexibleServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMysqlFlexibleServerTimeoutsOutputReference
 ```
