@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVm.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 siterecoveryvmwarereplicatedvm.NewSiteRecoveryVmwareReplicatedVm(scope Construct, id *string, config SiteRecoveryVmwareReplicatedVmConfig) SiteRecoveryVmwareReplicatedVm
 ```
@@ -529,7 +529,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVm.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 siterecoveryvmwarereplicatedvm.SiteRecoveryVmwareReplicatedVm_IsConstruct(x interface{}) *bool
 ```
@@ -561,7 +561,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVm.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 siterecoveryvmwarereplicatedvm.SiteRecoveryVmwareReplicatedVm_IsTerraformElement(x interface{}) *bool
 ```
@@ -575,7 +575,7 @@ siterecoveryvmwarereplicatedvm.SiteRecoveryVmwareReplicatedVm_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVm.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 siterecoveryvmwarereplicatedvm.SiteRecoveryVmwareReplicatedVm_IsTerraformResource(x interface{}) *bool
 ```
@@ -589,7 +589,7 @@ siterecoveryvmwarereplicatedvm.SiteRecoveryVmwareReplicatedVm_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVm.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 siterecoveryvmwarereplicatedvm.SiteRecoveryVmwareReplicatedVm_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1346,7 +1346,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVmConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 &siterecoveryvmwarereplicatedvm.SiteRecoveryVmwareReplicatedVmConfig {
 	Connection: interface{},
@@ -1379,7 +1379,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwar
 	TargetVmSize: *string,
 	TargetZone: *string,
 	TestNetworkId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVmTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVmTimeouts,
 }
 ```
 
@@ -1793,7 +1793,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVmManagedDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 &siterecoveryvmwarereplicatedvm.SiteRecoveryVmwareReplicatedVmManagedDisk {
 	DiskId: *string,
@@ -1867,7 +1867,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVmNetworkInterface.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 &siterecoveryvmwarereplicatedvm.SiteRecoveryVmwareReplicatedVmNetworkInterface {
 	IsPrimary: interface{},
@@ -1955,7 +1955,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVmTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 &siterecoveryvmwarereplicatedvm.SiteRecoveryVmwareReplicatedVmTimeouts {
 	Create: *string,
@@ -2031,7 +2031,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVmManagedDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 siterecoveryvmwarereplicatedvm.NewSiteRecoveryVmwareReplicatedVmManagedDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SiteRecoveryVmwareReplicatedVmManagedDiskList
 ```
@@ -2191,7 +2191,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVmManagedDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 siterecoveryvmwarereplicatedvm.NewSiteRecoveryVmwareReplicatedVmManagedDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SiteRecoveryVmwareReplicatedVmManagedDiskOutputReference
 ```
@@ -2560,7 +2560,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVmNetworkInterfaceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 siterecoveryvmwarereplicatedvm.NewSiteRecoveryVmwareReplicatedVmNetworkInterfaceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SiteRecoveryVmwareReplicatedVmNetworkInterfaceList
 ```
@@ -2720,7 +2720,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVmNetworkInterfaceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 siterecoveryvmwarereplicatedvm.NewSiteRecoveryVmwareReplicatedVmNetworkInterfaceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SiteRecoveryVmwareReplicatedVmNetworkInterfaceOutputReference
 ```
@@ -3118,7 +3118,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicatedVm.SiteRecoveryVmwareReplicatedVmTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/siterecoveryvmwarereplicatedvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/siterecoveryvmwarereplicatedvm"
 
 siterecoveryvmwarereplicatedvm.NewSiteRecoveryVmwareReplicatedVmTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SiteRecoveryVmwareReplicatedVmTimeoutsOutputReference
 ```
