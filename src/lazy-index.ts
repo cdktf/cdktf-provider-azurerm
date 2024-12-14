@@ -183,6 +183,7 @@ Object.defineProperty(exports, 'chaosStudioExperiment', { get: function () { ret
 Object.defineProperty(exports, 'chaosStudioTarget', { get: function () { return require('./chaos-studio-target'); } });
 Object.defineProperty(exports, 'cognitiveAccount', { get: function () { return require('./cognitive-account'); } });
 Object.defineProperty(exports, 'cognitiveAccountCustomerManagedKey', { get: function () { return require('./cognitive-account-customer-managed-key'); } });
+Object.defineProperty(exports, 'cognitiveAccountRaiBlocklist', { get: function () { return require('./cognitive-account-rai-blocklist'); } });
 Object.defineProperty(exports, 'cognitiveDeployment', { get: function () { return require('./cognitive-deployment'); } });
 Object.defineProperty(exports, 'communicationService', { get: function () { return require('./communication-service'); } });
 Object.defineProperty(exports, 'communicationServiceEmailDomainAssociation', { get: function () { return require('./communication-service-email-domain-association'); } });
@@ -389,6 +390,7 @@ Object.defineProperty(exports, 'expressRouteGateway', { get: function () { retur
 Object.defineProperty(exports, 'expressRoutePort', { get: function () { return require('./express-route-port'); } });
 Object.defineProperty(exports, 'expressRoutePortAuthorization', { get: function () { return require('./express-route-port-authorization'); } });
 Object.defineProperty(exports, 'extendedCustomLocation', { get: function () { return require('./extended-custom-location'); } });
+Object.defineProperty(exports, 'fabricCapacity', { get: function () { return require('./fabric-capacity'); } });
 Object.defineProperty(exports, 'federatedIdentityCredential', { get: function () { return require('./federated-identity-credential'); } });
 Object.defineProperty(exports, 'firewall', { get: function () { return require('./firewall'); } });
 Object.defineProperty(exports, 'firewallApplicationRuleCollection', { get: function () { return require('./firewall-application-rule-collection'); } });
