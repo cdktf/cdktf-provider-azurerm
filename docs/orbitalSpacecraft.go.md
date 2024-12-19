@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orbitalSpacecraft.OrbitalSpacecraft.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalspacecraft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalspacecraft"
 
 orbitalspacecraft.NewOrbitalSpacecraft(scope Construct, id *string, config OrbitalSpacecraftConfig) OrbitalSpacecraft
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.orbitalSpacecraft.OrbitalSpacecraft.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalspacecraft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalspacecraft"
 
 orbitalspacecraft.OrbitalSpacecraft_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.orbitalSpacecraft.OrbitalSpacecraft.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalspacecraft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalspacecraft"
 
 orbitalspacecraft.OrbitalSpacecraft_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ orbitalspacecraft.OrbitalSpacecraft_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.orbitalSpacecraft.OrbitalSpacecraft.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalspacecraft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalspacecraft"
 
 orbitalspacecraft.OrbitalSpacecraft_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ orbitalspacecraft.OrbitalSpacecraft_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.orbitalSpacecraft.OrbitalSpacecraft.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalspacecraft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalspacecraft"
 
 orbitalspacecraft.OrbitalSpacecraft_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -934,7 +934,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orbitalSpacecraft.OrbitalSpacecraftConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalspacecraft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalspacecraft"
 
 &orbitalspacecraft.OrbitalSpacecraftConfig {
 	Connection: interface{},
@@ -953,7 +953,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalspacecraft
 	TwoLineElements: *[]*string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.orbitalSpacecraft.OrbitalSpacecraftTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.orbitalSpacecraft.OrbitalSpacecraftTimeouts,
 }
 ```
 
@@ -1183,7 +1183,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orbitalSpacecraft.OrbitalSpacecraftLinks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalspacecraft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalspacecraft"
 
 &orbitalspacecraft.OrbitalSpacecraftLinks {
 	BandwidthMhz: *f64,
@@ -1271,7 +1271,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orbitalSpacecraft.OrbitalSpacecraftTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalspacecraft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalspacecraft"
 
 &orbitalspacecraft.OrbitalSpacecraftTimeouts {
 	Create: *string,
@@ -1347,7 +1347,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orbitalSpacecraft.OrbitalSpacecraftLinksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalspacecraft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalspacecraft"
 
 orbitalspacecraft.NewOrbitalSpacecraftLinksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrbitalSpacecraftLinksList
 ```
@@ -1507,7 +1507,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orbitalSpacecraft.OrbitalSpacecraftLinksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalspacecraft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalspacecraft"
 
 orbitalspacecraft.NewOrbitalSpacecraftLinksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrbitalSpacecraftLinksOutputReference
 ```
@@ -1884,7 +1884,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orbitalSpacecraft.OrbitalSpacecraftTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/orbitalspacecraft"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/orbitalspacecraft"
 
 orbitalspacecraft.NewOrbitalSpacecraftTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrbitalSpacecraftTimeoutsOutputReference
 ```

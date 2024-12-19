@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManager.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 dataazurermnetworkmanager.NewDataAzurermNetworkManager(scope Construct, id *string, config DataAzurermNetworkManagerConfig) DataAzurermNetworkManager
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManager.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 dataazurermnetworkmanager.DataAzurermNetworkManager_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManager.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 dataazurermnetworkmanager.DataAzurermNetworkManager_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermnetworkmanager.DataAzurermNetworkManager_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManager.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 dataazurermnetworkmanager.DataAzurermNetworkManager_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermnetworkmanager.DataAzurermNetworkManager_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManager.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 dataazurermnetworkmanager.DataAzurermNetworkManager_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -724,7 +724,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManagerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 &dataazurermnetworkmanager.DataAzurermNetworkManagerConfig {
 	Connection: interface{},
@@ -737,7 +737,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetwor
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermNetworkManager.DataAzurermNetworkManagerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermNetworkManager.DataAzurermNetworkManagerTimeouts,
 }
 ```
 
@@ -887,7 +887,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManagerCrossTenantScopes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 &dataazurermnetworkmanager.DataAzurermNetworkManagerCrossTenantScopes {
 
@@ -900,7 +900,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetwor
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManagerScope.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 &dataazurermnetworkmanager.DataAzurermNetworkManagerScope {
 
@@ -913,7 +913,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetwor
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManagerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 &dataazurermnetworkmanager.DataAzurermNetworkManagerTimeouts {
 	Read: *string,
@@ -947,7 +947,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManagerCrossTenantScopesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 dataazurermnetworkmanager.NewDataAzurermNetworkManagerCrossTenantScopesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermNetworkManagerCrossTenantScopesList
 ```
@@ -1096,7 +1096,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManagerCrossTenantScopesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 dataazurermnetworkmanager.NewDataAzurermNetworkManagerCrossTenantScopesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermNetworkManagerCrossTenantScopesOutputReference
 ```
@@ -1396,7 +1396,7 @@ func InternalValue() DataAzurermNetworkManagerCrossTenantScopes
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManagerScopeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 dataazurermnetworkmanager.NewDataAzurermNetworkManagerScopeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermNetworkManagerScopeList
 ```
@@ -1545,7 +1545,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManagerScopeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 dataazurermnetworkmanager.NewDataAzurermNetworkManagerScopeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermNetworkManagerScopeOutputReference
 ```
@@ -1834,7 +1834,7 @@ func InternalValue() DataAzurermNetworkManagerScope
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetworkManager.DataAzurermNetworkManagerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetworkmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkmanager"
 
 dataazurermnetworkmanager.NewDataAzurermNetworkManagerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermNetworkManagerTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.NewDatadogMonitorTagRule(scope Construct, id *string, config DatadogMonitorTagRuleConfig) DatadogMonitorTagRule
 ```
@@ -452,7 +452,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.DatadogMonitorTagRule_IsConstruct(x interface{}) *bool
 ```
@@ -484,7 +484,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.DatadogMonitorTagRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -498,7 +498,7 @@ datadogmonitortagrule.DatadogMonitorTagRule_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.DatadogMonitorTagRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -512,7 +512,7 @@ datadogmonitortagrule.DatadogMonitorTagRule_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.DatadogMonitorTagRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -873,7 +873,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 &datadogmonitortagrule.DatadogMonitorTagRuleConfig {
 	Connection: interface{},
@@ -888,7 +888,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortag
 	Log: interface{},
 	Metric: interface{},
 	Name: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.datadogMonitorTagRule.DatadogMonitorTagRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleTimeouts,
 }
 ```
 
@@ -1068,7 +1068,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleLog.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 &datadogmonitortagrule.DatadogMonitorTagRuleLog {
 	AadLogEnabled: interface{},
@@ -1144,7 +1144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleLogFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 &datadogmonitortagrule.DatadogMonitorTagRuleLogFilter {
 	Action: *string,
@@ -1204,7 +1204,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleMetric.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 &datadogmonitortagrule.DatadogMonitorTagRuleMetric {
 	Filter: interface{},
@@ -1238,7 +1238,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleMetricFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 &datadogmonitortagrule.DatadogMonitorTagRuleMetricFilter {
 	Action: *string,
@@ -1298,7 +1298,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 &datadogmonitortagrule.DatadogMonitorTagRuleTimeouts {
 	Create: *string,
@@ -1374,7 +1374,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleLogFilterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.NewDatadogMonitorTagRuleLogFilterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DatadogMonitorTagRuleLogFilterList
 ```
@@ -1534,7 +1534,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleLogFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.NewDatadogMonitorTagRuleLogFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DatadogMonitorTagRuleLogFilterOutputReference
 ```
@@ -1867,7 +1867,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleLogList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.NewDatadogMonitorTagRuleLogList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DatadogMonitorTagRuleLogList
 ```
@@ -2027,7 +2027,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleLogOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.NewDatadogMonitorTagRuleLogOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DatadogMonitorTagRuleLogOutputReference
 ```
@@ -2423,7 +2423,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleMetricFilterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.NewDatadogMonitorTagRuleMetricFilterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DatadogMonitorTagRuleMetricFilterList
 ```
@@ -2583,7 +2583,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleMetricFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.NewDatadogMonitorTagRuleMetricFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DatadogMonitorTagRuleMetricFilterOutputReference
 ```
@@ -2916,7 +2916,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleMetricList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.NewDatadogMonitorTagRuleMetricList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DatadogMonitorTagRuleMetricList
 ```
@@ -3076,7 +3076,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleMetricOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.NewDatadogMonitorTagRuleMetricOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DatadogMonitorTagRuleMetricOutputReference
 ```
@@ -3385,7 +3385,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.datadogMonitorTagRule.DatadogMonitorTagRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/datadogmonitortagrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datadogmonitortagrule"
 
 datadogmonitortagrule.NewDatadogMonitorTagRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DatadogMonitorTagRuleTimeoutsOutputReference
 ```

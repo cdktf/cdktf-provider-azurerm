@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleAdbsNationalCharacterSets.DataAzurermOracleAdbsNationalCharacterSets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracleadbsnationalcharactersets"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleadbsnationalcharactersets"
 
 dataazurermoracleadbsnationalcharactersets.NewDataAzurermOracleAdbsNationalCharacterSets(scope Construct, id *string, config DataAzurermOracleAdbsNationalCharacterSetsConfig) DataAzurermOracleAdbsNationalCharacterSets
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermOracleAdbsNationalCharacterSets.DataAzurermOracleAdbsNationalCharacterSets.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracleadbsnationalcharactersets"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleadbsnationalcharactersets"
 
 dataazurermoracleadbsnationalcharactersets.DataAzurermOracleAdbsNationalCharacterSets_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermOracleAdbsNationalCharacterSets.DataAzurermOracleAdbsNationalCharacterSets.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracleadbsnationalcharactersets"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleadbsnationalcharactersets"
 
 dataazurermoracleadbsnationalcharactersets.DataAzurermOracleAdbsNationalCharacterSets_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermoracleadbsnationalcharactersets.DataAzurermOracleAdbsNationalCharacte
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermOracleAdbsNationalCharacterSets.DataAzurermOracleAdbsNationalCharacterSets.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracleadbsnationalcharactersets"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleadbsnationalcharactersets"
 
 dataazurermoracleadbsnationalcharactersets.DataAzurermOracleAdbsNationalCharacterSets_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermoracleadbsnationalcharactersets.DataAzurermOracleAdbsNationalCharacte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermOracleAdbsNationalCharacterSets.DataAzurermOracleAdbsNationalCharacterSets.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracleadbsnationalcharactersets"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleadbsnationalcharactersets"
 
 dataazurermoracleadbsnationalcharactersets.DataAzurermOracleAdbsNationalCharacterSets_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -647,7 +647,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleAdbsNationalCharacterSets.DataAzurermOracleAdbsNationalCharacterSetsCharacterSets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracleadbsnationalcharactersets"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleadbsnationalcharactersets"
 
 &dataazurermoracleadbsnationalcharactersets.DataAzurermOracleAdbsNationalCharacterSetsCharacterSets {
 
@@ -660,7 +660,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracle
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleAdbsNationalCharacterSets.DataAzurermOracleAdbsNationalCharacterSetsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracleadbsnationalcharactersets"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleadbsnationalcharactersets"
 
 &dataazurermoracleadbsnationalcharactersets.DataAzurermOracleAdbsNationalCharacterSetsConfig {
 	Connection: interface{},
@@ -672,7 +672,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracle
 	Provisioners: *[]interface{},
 	Location: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermOracleAdbsNationalCharacterSets.DataAzurermOracleAdbsNationalCharacterSetsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermOracleAdbsNationalCharacterSets.DataAzurermOracleAdbsNationalCharacterSetsTimeouts,
 }
 ```
 
@@ -809,7 +809,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleAdbsNationalCharacterSets.DataAzurermOracleAdbsNationalCharacterSetsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracleadbsnationalcharactersets"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleadbsnationalcharactersets"
 
 &dataazurermoracleadbsnationalcharactersets.DataAzurermOracleAdbsNationalCharacterSetsTimeouts {
 	Read: *string,
@@ -843,7 +843,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleAdbsNationalCharacterSets.DataAzurermOracleAdbsNationalCharacterSetsCharacterSetsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracleadbsnationalcharactersets"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleadbsnationalcharactersets"
 
 dataazurermoracleadbsnationalcharactersets.NewDataAzurermOracleAdbsNationalCharacterSetsCharacterSetsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermOracleAdbsNationalCharacterSetsCharacterSetsList
 ```
@@ -992,7 +992,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleAdbsNationalCharacterSets.DataAzurermOracleAdbsNationalCharacterSetsCharacterSetsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracleadbsnationalcharactersets"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleadbsnationalcharactersets"
 
 dataazurermoracleadbsnationalcharactersets.NewDataAzurermOracleAdbsNationalCharacterSetsCharacterSetsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermOracleAdbsNationalCharacterSetsCharacterSetsOutputReference
 ```
@@ -1270,7 +1270,7 @@ func InternalValue() DataAzurermOracleAdbsNationalCharacterSetsCharacterSets
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleAdbsNationalCharacterSets.DataAzurermOracleAdbsNationalCharacterSetsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracleadbsnationalcharactersets"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleadbsnationalcharactersets"
 
 dataazurermoracleadbsnationalcharactersets.NewDataAzurermOracleAdbsNationalCharacterSetsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermOracleAdbsNationalCharacterSetsTimeoutsOutputReference
 ```
