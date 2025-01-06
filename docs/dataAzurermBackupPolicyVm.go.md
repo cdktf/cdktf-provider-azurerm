@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyVm.DataAzurermBackupPolicyVm.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermbackuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyvm"
 
 dataazurermbackuppolicyvm.NewDataAzurermBackupPolicyVm(scope Construct, id *string, config DataAzurermBackupPolicyVmConfig) DataAzurermBackupPolicyVm
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyVm.DataAzurermBackupPolicyVm.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermbackuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyvm"
 
 dataazurermbackuppolicyvm.DataAzurermBackupPolicyVm_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyVm.DataAzurermBackupPolicyVm.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermbackuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyvm"
 
 dataazurermbackuppolicyvm.DataAzurermBackupPolicyVm_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermbackuppolicyvm.DataAzurermBackupPolicyVm_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyVm.DataAzurermBackupPolicyVm.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermbackuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyvm"
 
 dataazurermbackuppolicyvm.DataAzurermBackupPolicyVm_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermbackuppolicyvm.DataAzurermBackupPolicyVm_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyVm.DataAzurermBackupPolicyVm.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermbackuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyvm"
 
 dataazurermbackuppolicyvm.DataAzurermBackupPolicyVm_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -680,7 +680,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyVm.DataAzurermBackupPolicyVmConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermbackuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyvm"
 
 &dataazurermbackuppolicyvm.DataAzurermBackupPolicyVmConfig {
 	Connection: interface{},
@@ -694,7 +694,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermbackup
 	RecoveryVaultName: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermBackupPolicyVm.DataAzurermBackupPolicyVmTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermBackupPolicyVm.DataAzurermBackupPolicyVmTimeouts,
 }
 ```
 
@@ -857,7 +857,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyVm.DataAzurermBackupPolicyVmTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermbackuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyvm"
 
 &dataazurermbackuppolicyvm.DataAzurermBackupPolicyVmTimeouts {
 	Read: *string,
@@ -891,7 +891,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBackupPolicyVm.DataAzurermBackupPolicyVmTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermbackuppolicyvm"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbackuppolicyvm"
 
 dataazurermbackuppolicyvm.NewDataAzurermBackupPolicyVmTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermBackupPolicyVmTimeoutsOutputReference
 ```
