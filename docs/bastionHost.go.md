@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/bastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/bastionhost"
 
 bastionhost.NewBastionHost(scope Construct, id *string, config BastionHostConfig) BastionHost
 ```
@@ -509,7 +509,7 @@ func ResetZones()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.bastionHost.BastionHost.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/bastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/bastionhost"
 
 bastionhost.BastionHost_IsConstruct(x interface{}) *bool
 ```
@@ -541,7 +541,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.bastionHost.BastionHost.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/bastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/bastionhost"
 
 bastionhost.BastionHost_IsTerraformElement(x interface{}) *bool
 ```
@@ -555,7 +555,7 @@ bastionhost.BastionHost_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.bastionHost.BastionHost.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/bastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/bastionhost"
 
 bastionhost.BastionHost_IsTerraformResource(x interface{}) *bool
 ```
@@ -569,7 +569,7 @@ bastionhost.BastionHost_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.bastionHost.BastionHost.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/bastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/bastionhost"
 
 bastionhost.BastionHost_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1205,7 +1205,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.bastionHost.BastionHostConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/bastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/bastionhost"
 
 &bastionhost.BastionHostConfig {
 	Connection: interface{},
@@ -1221,7 +1221,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/bastionhost"
 	CopyPasteEnabled: interface{},
 	FileCopyEnabled: interface{},
 	Id: *string,
-	IpConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.bastionHost.BastionHostIpConfiguration,
+	IpConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.bastionHost.BastionHostIpConfiguration,
 	IpConnectEnabled: interface{},
 	KerberosEnabled: interface{},
 	ScaleUnits: *f64,
@@ -1229,7 +1229,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/bastionhost"
 	ShareableLinkEnabled: interface{},
 	Sku: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.bastionHost.BastionHostTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.bastionHost.BastionHostTimeouts,
 	TunnelingEnabled: interface{},
 	VirtualNetworkId: *string,
 	Zones: *[]*string,
@@ -1566,7 +1566,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.bastionHost.BastionHostIpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/bastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/bastionhost"
 
 &bastionhost.BastionHostIpConfiguration {
 	Name: *string,
@@ -1626,7 +1626,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.bastionHost.BastionHostTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/bastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/bastionhost"
 
 &bastionhost.BastionHostTimeouts {
 	Create: *string,
@@ -1702,7 +1702,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.bastionHost.BastionHostIpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/bastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/bastionhost"
 
 bastionhost.NewBastionHostIpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BastionHostIpConfigurationOutputReference
 ```
@@ -2017,7 +2017,7 @@ func InternalValue() BastionHostIpConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.bastionHost.BastionHostTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/bastionhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/bastionhost"
 
 bastionhost.NewBastionHostTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BastionHostTimeoutsOutputReference
 ```
