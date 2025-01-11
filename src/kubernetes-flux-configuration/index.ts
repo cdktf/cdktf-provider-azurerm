@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,66 +8,66 @@ import * as cdktf from 'cdktf';
 
 export interface KubernetesFluxConfigurationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#cluster_id KubernetesFluxConfiguration#cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#cluster_id KubernetesFluxConfiguration#cluster_id}
   */
   readonly clusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#continuous_reconciliation_enabled KubernetesFluxConfiguration#continuous_reconciliation_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#continuous_reconciliation_enabled KubernetesFluxConfiguration#continuous_reconciliation_enabled}
   */
   readonly continuousReconciliationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#id KubernetesFluxConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#id KubernetesFluxConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#name KubernetesFluxConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#name KubernetesFluxConfiguration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#namespace KubernetesFluxConfiguration#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#namespace KubernetesFluxConfiguration#namespace}
   */
   readonly namespace: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#scope KubernetesFluxConfiguration#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#scope KubernetesFluxConfiguration#scope}
   */
   readonly scope?: string;
   /**
   * blob_storage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#blob_storage KubernetesFluxConfiguration#blob_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#blob_storage KubernetesFluxConfiguration#blob_storage}
   */
   readonly blobStorage?: KubernetesFluxConfigurationBlobStorage;
   /**
   * bucket block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#bucket KubernetesFluxConfiguration#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#bucket KubernetesFluxConfiguration#bucket}
   */
   readonly bucket?: KubernetesFluxConfigurationBucket;
   /**
   * git_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#git_repository KubernetesFluxConfiguration#git_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#git_repository KubernetesFluxConfiguration#git_repository}
   */
   readonly gitRepository?: KubernetesFluxConfigurationGitRepository;
   /**
   * kustomizations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#kustomizations KubernetesFluxConfiguration#kustomizations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#kustomizations KubernetesFluxConfiguration#kustomizations}
   */
   readonly kustomizations: KubernetesFluxConfigurationKustomizations[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#timeouts KubernetesFluxConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#timeouts KubernetesFluxConfiguration#timeouts}
   */
   readonly timeouts?: KubernetesFluxConfigurationTimeouts;
 }
 export interface KubernetesFluxConfigurationBlobStorageManagedIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#client_id KubernetesFluxConfiguration#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#client_id KubernetesFluxConfiguration#client_id}
   */
   readonly clientId: string;
 }
@@ -153,27 +148,27 @@ export class KubernetesFluxConfigurationBlobStorageManagedIdentityOutputReferenc
 }
 export interface KubernetesFluxConfigurationBlobStorageServicePrincipal {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#client_certificate_base64 KubernetesFluxConfiguration#client_certificate_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#client_certificate_base64 KubernetesFluxConfiguration#client_certificate_base64}
   */
   readonly clientCertificateBase64?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#client_certificate_password KubernetesFluxConfiguration#client_certificate_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#client_certificate_password KubernetesFluxConfiguration#client_certificate_password}
   */
   readonly clientCertificatePassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#client_certificate_send_chain KubernetesFluxConfiguration#client_certificate_send_chain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#client_certificate_send_chain KubernetesFluxConfiguration#client_certificate_send_chain}
   */
   readonly clientCertificateSendChain?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#client_id KubernetesFluxConfiguration#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#client_id KubernetesFluxConfiguration#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#client_secret KubernetesFluxConfiguration#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#client_secret KubernetesFluxConfiguration#client_secret}
   */
   readonly clientSecret?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#tenant_id KubernetesFluxConfiguration#tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#tenant_id KubernetesFluxConfiguration#tenant_id}
   */
   readonly tenantId: string;
 }
@@ -396,39 +391,39 @@ export class KubernetesFluxConfigurationBlobStorageServicePrincipalOutputReferen
 }
 export interface KubernetesFluxConfigurationBlobStorage {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#account_key KubernetesFluxConfiguration#account_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#account_key KubernetesFluxConfiguration#account_key}
   */
   readonly accountKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#container_id KubernetesFluxConfiguration#container_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#container_id KubernetesFluxConfiguration#container_id}
   */
   readonly containerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#local_auth_reference KubernetesFluxConfiguration#local_auth_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#local_auth_reference KubernetesFluxConfiguration#local_auth_reference}
   */
   readonly localAuthReference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#sas_token KubernetesFluxConfiguration#sas_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#sas_token KubernetesFluxConfiguration#sas_token}
   */
   readonly sasToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#sync_interval_in_seconds KubernetesFluxConfiguration#sync_interval_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#sync_interval_in_seconds KubernetesFluxConfiguration#sync_interval_in_seconds}
   */
   readonly syncIntervalInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#timeout_in_seconds KubernetesFluxConfiguration#timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#timeout_in_seconds KubernetesFluxConfiguration#timeout_in_seconds}
   */
   readonly timeoutInSeconds?: number;
   /**
   * managed_identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#managed_identity KubernetesFluxConfiguration#managed_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#managed_identity KubernetesFluxConfiguration#managed_identity}
   */
   readonly managedIdentity?: KubernetesFluxConfigurationBlobStorageManagedIdentity;
   /**
   * service_principal block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#service_principal KubernetesFluxConfiguration#service_principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#service_principal KubernetesFluxConfiguration#service_principal}
   */
   readonly servicePrincipal?: KubernetesFluxConfigurationBlobStorageServicePrincipal;
 }
@@ -712,35 +707,35 @@ export class KubernetesFluxConfigurationBlobStorageOutputReference extends cdktf
 }
 export interface KubernetesFluxConfigurationBucket {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#access_key KubernetesFluxConfiguration#access_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#access_key KubernetesFluxConfiguration#access_key}
   */
   readonly accessKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#bucket_name KubernetesFluxConfiguration#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#bucket_name KubernetesFluxConfiguration#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#local_auth_reference KubernetesFluxConfiguration#local_auth_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#local_auth_reference KubernetesFluxConfiguration#local_auth_reference}
   */
   readonly localAuthReference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#secret_key_base64 KubernetesFluxConfiguration#secret_key_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#secret_key_base64 KubernetesFluxConfiguration#secret_key_base64}
   */
   readonly secretKeyBase64?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#sync_interval_in_seconds KubernetesFluxConfiguration#sync_interval_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#sync_interval_in_seconds KubernetesFluxConfiguration#sync_interval_in_seconds}
   */
   readonly syncIntervalInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#timeout_in_seconds KubernetesFluxConfiguration#timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#timeout_in_seconds KubernetesFluxConfiguration#timeout_in_seconds}
   */
   readonly timeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#tls_enabled KubernetesFluxConfiguration#tls_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#tls_enabled KubernetesFluxConfiguration#tls_enabled}
   */
   readonly tlsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#url KubernetesFluxConfiguration#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#url KubernetesFluxConfiguration#url}
   */
   readonly url: string;
 }
@@ -1021,47 +1016,47 @@ export class KubernetesFluxConfigurationBucketOutputReference extends cdktf.Comp
 }
 export interface KubernetesFluxConfigurationGitRepository {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#https_ca_cert_base64 KubernetesFluxConfiguration#https_ca_cert_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#https_ca_cert_base64 KubernetesFluxConfiguration#https_ca_cert_base64}
   */
   readonly httpsCaCertBase64?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#https_key_base64 KubernetesFluxConfiguration#https_key_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#https_key_base64 KubernetesFluxConfiguration#https_key_base64}
   */
   readonly httpsKeyBase64?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#https_user KubernetesFluxConfiguration#https_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#https_user KubernetesFluxConfiguration#https_user}
   */
   readonly httpsUser?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#local_auth_reference KubernetesFluxConfiguration#local_auth_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#local_auth_reference KubernetesFluxConfiguration#local_auth_reference}
   */
   readonly localAuthReference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#reference_type KubernetesFluxConfiguration#reference_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#reference_type KubernetesFluxConfiguration#reference_type}
   */
   readonly referenceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#reference_value KubernetesFluxConfiguration#reference_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#reference_value KubernetesFluxConfiguration#reference_value}
   */
   readonly referenceValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#ssh_known_hosts_base64 KubernetesFluxConfiguration#ssh_known_hosts_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#ssh_known_hosts_base64 KubernetesFluxConfiguration#ssh_known_hosts_base64}
   */
   readonly sshKnownHostsBase64?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#ssh_private_key_base64 KubernetesFluxConfiguration#ssh_private_key_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#ssh_private_key_base64 KubernetesFluxConfiguration#ssh_private_key_base64}
   */
   readonly sshPrivateKeyBase64?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#sync_interval_in_seconds KubernetesFluxConfiguration#sync_interval_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#sync_interval_in_seconds KubernetesFluxConfiguration#sync_interval_in_seconds}
   */
   readonly syncIntervalInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#timeout_in_seconds KubernetesFluxConfiguration#timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#timeout_in_seconds KubernetesFluxConfiguration#timeout_in_seconds}
   */
   readonly timeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#url KubernetesFluxConfiguration#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#url KubernetesFluxConfiguration#url}
   */
   readonly url: string;
 }
@@ -1424,39 +1419,344 @@ export class KubernetesFluxConfigurationGitRepositoryOutputReference extends cdk
     return this._url;
   }
 }
-export interface KubernetesFluxConfigurationKustomizations {
+export interface KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFrom {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#depends_on KubernetesFluxConfiguration#depends_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#kind KubernetesFluxConfiguration#kind}
   */
-  readonly dependsOn?: string[];
+  readonly kind: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#garbage_collection_enabled KubernetesFluxConfiguration#garbage_collection_enabled}
-  */
-  readonly garbageCollectionEnabled?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#name KubernetesFluxConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#name KubernetesFluxConfiguration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#path KubernetesFluxConfiguration#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#optional KubernetesFluxConfiguration#optional}
+  */
+  readonly optional?: boolean | cdktf.IResolvable;
+}
+
+export function kubernetesFluxConfigurationKustomizationsPostBuildSubstituteFromToTerraform(struct?: KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFrom | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    kind: cdktf.stringToTerraform(struct!.kind),
+    name: cdktf.stringToTerraform(struct!.name),
+    optional: cdktf.booleanToTerraform(struct!.optional),
+  }
+}
+
+
+export function kubernetesFluxConfigurationKustomizationsPostBuildSubstituteFromToHclTerraform(struct?: KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFrom | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    kind: {
+      value: cdktf.stringToHclTerraform(struct!.kind),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    optional: {
+      value: cdktf.booleanToHclTerraform(struct!.optional),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFromOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFrom | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kind !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kind = this._kind;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._optional !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.optional = this._optional;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFrom | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._kind = undefined;
+      this._name = undefined;
+      this._optional = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._kind = value.kind;
+      this._name = value.name;
+      this._optional = value.optional;
+    }
+  }
+
+  // kind - computed: false, optional: false, required: true
+  private _kind?: string; 
+  public get kind() {
+    return this.getStringAttribute('kind');
+  }
+  public set kind(value: string) {
+    this._kind = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kindInput() {
+    return this._kind;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // optional - computed: false, optional: true, required: false
+  private _optional?: boolean | cdktf.IResolvable; 
+  public get optional() {
+    return this.getBooleanAttribute('optional');
+  }
+  public set optional(value: boolean | cdktf.IResolvable) {
+    this._optional = value;
+  }
+  public resetOptional() {
+    this._optional = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get optionalInput() {
+    return this._optional;
+  }
+}
+
+export class KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFromList extends cdktf.ComplexList {
+  public internalValue? : KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFrom[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFromOutputReference {
+    return new KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFromOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface KubernetesFluxConfigurationKustomizationsPostBuild {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#substitute KubernetesFluxConfiguration#substitute}
+  */
+  readonly substitute?: { [key: string]: string };
+  /**
+  * substitute_from block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#substitute_from KubernetesFluxConfiguration#substitute_from}
+  */
+  readonly substituteFrom?: KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFrom[] | cdktf.IResolvable;
+}
+
+export function kubernetesFluxConfigurationKustomizationsPostBuildToTerraform(struct?: KubernetesFluxConfigurationKustomizationsPostBuildOutputReference | KubernetesFluxConfigurationKustomizationsPostBuild): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    substitute: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.substitute),
+    substitute_from: cdktf.listMapper(kubernetesFluxConfigurationKustomizationsPostBuildSubstituteFromToTerraform, true)(struct!.substituteFrom),
+  }
+}
+
+
+export function kubernetesFluxConfigurationKustomizationsPostBuildToHclTerraform(struct?: KubernetesFluxConfigurationKustomizationsPostBuildOutputReference | KubernetesFluxConfigurationKustomizationsPostBuild): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    substitute: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.substitute),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    substitute_from: {
+      value: cdktf.listMapperHcl(kubernetesFluxConfigurationKustomizationsPostBuildSubstituteFromToHclTerraform, true)(struct!.substituteFrom),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFromList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class KubernetesFluxConfigurationKustomizationsPostBuildOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KubernetesFluxConfigurationKustomizationsPostBuild | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._substitute !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.substitute = this._substitute;
+    }
+    if (this._substituteFrom?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.substituteFrom = this._substituteFrom?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesFluxConfigurationKustomizationsPostBuild | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._substitute = undefined;
+      this._substituteFrom.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._substitute = value.substitute;
+      this._substituteFrom.internalValue = value.substituteFrom;
+    }
+  }
+
+  // substitute - computed: false, optional: true, required: false
+  private _substitute?: { [key: string]: string }; 
+  public get substitute() {
+    return this.getStringMapAttribute('substitute');
+  }
+  public set substitute(value: { [key: string]: string }) {
+    this._substitute = value;
+  }
+  public resetSubstitute() {
+    this._substitute = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get substituteInput() {
+    return this._substitute;
+  }
+
+  // substitute_from - computed: false, optional: true, required: false
+  private _substituteFrom = new KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFromList(this, "substitute_from", false);
+  public get substituteFrom() {
+    return this._substituteFrom;
+  }
+  public putSubstituteFrom(value: KubernetesFluxConfigurationKustomizationsPostBuildSubstituteFrom[] | cdktf.IResolvable) {
+    this._substituteFrom.internalValue = value;
+  }
+  public resetSubstituteFrom() {
+    this._substituteFrom.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get substituteFromInput() {
+    return this._substituteFrom.internalValue;
+  }
+}
+export interface KubernetesFluxConfigurationKustomizations {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#depends_on KubernetesFluxConfiguration#depends_on}
+  */
+  readonly dependsOn?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#garbage_collection_enabled KubernetesFluxConfiguration#garbage_collection_enabled}
+  */
+  readonly garbageCollectionEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#name KubernetesFluxConfiguration#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#path KubernetesFluxConfiguration#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#recreating_enabled KubernetesFluxConfiguration#recreating_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#recreating_enabled KubernetesFluxConfiguration#recreating_enabled}
   */
   readonly recreatingEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#retry_interval_in_seconds KubernetesFluxConfiguration#retry_interval_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#retry_interval_in_seconds KubernetesFluxConfiguration#retry_interval_in_seconds}
   */
   readonly retryIntervalInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#sync_interval_in_seconds KubernetesFluxConfiguration#sync_interval_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#sync_interval_in_seconds KubernetesFluxConfiguration#sync_interval_in_seconds}
   */
   readonly syncIntervalInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#timeout_in_seconds KubernetesFluxConfiguration#timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#timeout_in_seconds KubernetesFluxConfiguration#timeout_in_seconds}
   */
   readonly timeoutInSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#wait KubernetesFluxConfiguration#wait}
+  */
+  readonly wait?: boolean | cdktf.IResolvable;
+  /**
+  * post_build block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#post_build KubernetesFluxConfiguration#post_build}
+  */
+  readonly postBuild?: KubernetesFluxConfigurationKustomizationsPostBuild;
 }
 
 export function kubernetesFluxConfigurationKustomizationsToTerraform(struct?: KubernetesFluxConfigurationKustomizations | cdktf.IResolvable): any {
@@ -1473,6 +1773,8 @@ export function kubernetesFluxConfigurationKustomizationsToTerraform(struct?: Ku
     retry_interval_in_seconds: cdktf.numberToTerraform(struct!.retryIntervalInSeconds),
     sync_interval_in_seconds: cdktf.numberToTerraform(struct!.syncIntervalInSeconds),
     timeout_in_seconds: cdktf.numberToTerraform(struct!.timeoutInSeconds),
+    wait: cdktf.booleanToTerraform(struct!.wait),
+    post_build: kubernetesFluxConfigurationKustomizationsPostBuildToTerraform(struct!.postBuild),
   }
 }
 
@@ -1530,6 +1832,18 @@ export function kubernetesFluxConfigurationKustomizationsToHclTerraform(struct?:
       isBlock: false,
       type: "simple",
       storageClassType: "number",
+    },
+    wait: {
+      value: cdktf.booleanToHclTerraform(struct!.wait),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    post_build: {
+      value: kubernetesFluxConfigurationKustomizationsPostBuildToHclTerraform(struct!.postBuild),
+      isBlock: true,
+      type: "list",
+      storageClassType: "KubernetesFluxConfigurationKustomizationsPostBuildList",
     },
   };
 
@@ -1589,6 +1903,14 @@ export class KubernetesFluxConfigurationKustomizationsOutputReference extends cd
       hasAnyValues = true;
       internalValueResult.timeoutInSeconds = this._timeoutInSeconds;
     }
+    if (this._wait !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.wait = this._wait;
+    }
+    if (this._postBuild?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postBuild = this._postBuild?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1604,6 +1926,8 @@ export class KubernetesFluxConfigurationKustomizationsOutputReference extends cd
       this._retryIntervalInSeconds = undefined;
       this._syncIntervalInSeconds = undefined;
       this._timeoutInSeconds = undefined;
+      this._wait = undefined;
+      this._postBuild.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -1620,6 +1944,8 @@ export class KubernetesFluxConfigurationKustomizationsOutputReference extends cd
       this._retryIntervalInSeconds = value.retryIntervalInSeconds;
       this._syncIntervalInSeconds = value.syncIntervalInSeconds;
       this._timeoutInSeconds = value.timeoutInSeconds;
+      this._wait = value.wait;
+      this._postBuild.internalValue = value.postBuild;
     }
   }
 
@@ -1747,6 +2073,38 @@ export class KubernetesFluxConfigurationKustomizationsOutputReference extends cd
   public get timeoutInSecondsInput() {
     return this._timeoutInSeconds;
   }
+
+  // wait - computed: false, optional: true, required: false
+  private _wait?: boolean | cdktf.IResolvable; 
+  public get wait() {
+    return this.getBooleanAttribute('wait');
+  }
+  public set wait(value: boolean | cdktf.IResolvable) {
+    this._wait = value;
+  }
+  public resetWait() {
+    this._wait = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get waitInput() {
+    return this._wait;
+  }
+
+  // post_build - computed: false, optional: true, required: false
+  private _postBuild = new KubernetesFluxConfigurationKustomizationsPostBuildOutputReference(this, "post_build");
+  public get postBuild() {
+    return this._postBuild;
+  }
+  public putPostBuild(value: KubernetesFluxConfigurationKustomizationsPostBuild) {
+    this._postBuild.internalValue = value;
+  }
+  public resetPostBuild() {
+    this._postBuild.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postBuildInput() {
+    return this._postBuild.internalValue;
+  }
 }
 
 export class KubernetesFluxConfigurationKustomizationsList extends cdktf.ComplexList {
@@ -1770,19 +2128,19 @@ export class KubernetesFluxConfigurationKustomizationsList extends cdktf.Complex
 }
 export interface KubernetesFluxConfigurationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#create KubernetesFluxConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#create KubernetesFluxConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#delete KubernetesFluxConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#delete KubernetesFluxConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#read KubernetesFluxConfiguration#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#read KubernetesFluxConfiguration#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#update KubernetesFluxConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#update KubernetesFluxConfiguration#update}
   */
   readonly update?: string;
 }
@@ -1963,7 +2321,7 @@ export class KubernetesFluxConfigurationTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration azurerm_kubernetes_flux_configuration}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration azurerm_kubernetes_flux_configuration}
 */
 export class KubernetesFluxConfiguration extends cdktf.TerraformResource {
 
@@ -1979,7 +2337,7 @@ export class KubernetesFluxConfiguration extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a KubernetesFluxConfiguration resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the KubernetesFluxConfiguration to import
-  * @param importFromId The id of the existing KubernetesFluxConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing KubernetesFluxConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the KubernetesFluxConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1991,7 +2349,7 @@ export class KubernetesFluxConfiguration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/kubernetes_flux_configuration azurerm_kubernetes_flux_configuration} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kubernetes_flux_configuration azurerm_kubernetes_flux_configuration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2002,7 +2360,7 @@ export class KubernetesFluxConfiguration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_flux_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.14.0',
+        providerVersion: '4.15.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

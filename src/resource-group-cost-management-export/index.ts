@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,62 +8,66 @@ import * as cdktf from 'cdktf';
 
 export interface ResourceGroupCostManagementExportConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#active ResourceGroupCostManagementExport#active}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#active ResourceGroupCostManagementExport#active}
   */
   readonly active?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#id ResourceGroupCostManagementExport#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#file_format ResourceGroupCostManagementExport#file_format}
+  */
+  readonly fileFormat?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#id ResourceGroupCostManagementExport#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#name ResourceGroupCostManagementExport#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#name ResourceGroupCostManagementExport#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#recurrence_period_end_date ResourceGroupCostManagementExport#recurrence_period_end_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#recurrence_period_end_date ResourceGroupCostManagementExport#recurrence_period_end_date}
   */
   readonly recurrencePeriodEndDate: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#recurrence_period_start_date ResourceGroupCostManagementExport#recurrence_period_start_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#recurrence_period_start_date ResourceGroupCostManagementExport#recurrence_period_start_date}
   */
   readonly recurrencePeriodStartDate: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#recurrence_type ResourceGroupCostManagementExport#recurrence_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#recurrence_type ResourceGroupCostManagementExport#recurrence_type}
   */
   readonly recurrenceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#resource_group_id ResourceGroupCostManagementExport#resource_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#resource_group_id ResourceGroupCostManagementExport#resource_group_id}
   */
   readonly resourceGroupId: string;
   /**
   * export_data_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#export_data_options ResourceGroupCostManagementExport#export_data_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#export_data_options ResourceGroupCostManagementExport#export_data_options}
   */
   readonly exportDataOptions: ResourceGroupCostManagementExportExportDataOptions;
   /**
   * export_data_storage_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#export_data_storage_location ResourceGroupCostManagementExport#export_data_storage_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#export_data_storage_location ResourceGroupCostManagementExport#export_data_storage_location}
   */
   readonly exportDataStorageLocation: ResourceGroupCostManagementExportExportDataStorageLocation;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#timeouts ResourceGroupCostManagementExport#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#timeouts ResourceGroupCostManagementExport#timeouts}
   */
   readonly timeouts?: ResourceGroupCostManagementExportTimeouts;
 }
 export interface ResourceGroupCostManagementExportExportDataOptions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#time_frame ResourceGroupCostManagementExport#time_frame}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#time_frame ResourceGroupCostManagementExport#time_frame}
   */
   readonly timeFrame: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#type ResourceGroupCostManagementExport#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#type ResourceGroupCostManagementExport#type}
   */
   readonly type: string;
 }
@@ -175,11 +174,11 @@ export class ResourceGroupCostManagementExportExportDataOptionsOutputReference e
 }
 export interface ResourceGroupCostManagementExportExportDataStorageLocation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#container_id ResourceGroupCostManagementExport#container_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#container_id ResourceGroupCostManagementExport#container_id}
   */
   readonly containerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#root_folder_path ResourceGroupCostManagementExport#root_folder_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#root_folder_path ResourceGroupCostManagementExport#root_folder_path}
   */
   readonly rootFolderPath: string;
 }
@@ -286,19 +285,19 @@ export class ResourceGroupCostManagementExportExportDataStorageLocationOutputRef
 }
 export interface ResourceGroupCostManagementExportTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#create ResourceGroupCostManagementExport#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#create ResourceGroupCostManagementExport#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#delete ResourceGroupCostManagementExport#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#delete ResourceGroupCostManagementExport#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#read ResourceGroupCostManagementExport#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#read ResourceGroupCostManagementExport#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#update ResourceGroupCostManagementExport#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#update ResourceGroupCostManagementExport#update}
   */
   readonly update?: string;
 }
@@ -479,7 +478,7 @@ export class ResourceGroupCostManagementExportTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export azurerm_resource_group_cost_management_export}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export azurerm_resource_group_cost_management_export}
 */
 export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
 
@@ -495,7 +494,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ResourceGroupCostManagementExport resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ResourceGroupCostManagementExport to import
-  * @param importFromId The id of the existing ResourceGroupCostManagementExport that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ResourceGroupCostManagementExport that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ResourceGroupCostManagementExport to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -507,7 +506,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/resource_group_cost_management_export azurerm_resource_group_cost_management_export} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/resource_group_cost_management_export azurerm_resource_group_cost_management_export} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -518,7 +517,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_resource_group_cost_management_export',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.14.0',
+        providerVersion: '4.15.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -530,6 +529,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._active = config.active;
+    this._fileFormat = config.fileFormat;
     this._id = config.id;
     this._name = config.name;
     this._recurrencePeriodEndDate = config.recurrencePeriodEndDate;
@@ -559,6 +559,22 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get activeInput() {
     return this._active;
+  }
+
+  // file_format - computed: false, optional: true, required: false
+  private _fileFormat?: string; 
+  public get fileFormat() {
+    return this.getStringAttribute('file_format');
+  }
+  public set fileFormat(value: string) {
+    this._fileFormat = value;
+  }
+  public resetFileFormat() {
+    this._fileFormat = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileFormatInput() {
+    return this._fileFormat;
   }
 
   // id - computed: true, optional: true, required: false
@@ -691,6 +707,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       active: cdktf.booleanToTerraform(this._active),
+      file_format: cdktf.stringToTerraform(this._fileFormat),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       recurrence_period_end_date: cdktf.stringToTerraform(this._recurrencePeriodEndDate),
@@ -710,6 +727,12 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
+      },
+      file_format: {
+        value: cdktf.stringToHclTerraform(this._fileFormat),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
       },
       id: {
         value: cdktf.stringToHclTerraform(this._id),
