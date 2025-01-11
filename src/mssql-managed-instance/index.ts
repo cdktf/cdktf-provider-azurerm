@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,116 +13,329 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlManagedInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#administrator_login MssqlManagedInstance#administrator_login}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#administrator_login MssqlManagedInstance#administrator_login}
   */
-  readonly administratorLogin: string;
+  readonly administratorLogin?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#administrator_login_password MssqlManagedInstance#administrator_login_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#administrator_login_password MssqlManagedInstance#administrator_login_password}
   */
-  readonly administratorLoginPassword: string;
+  readonly administratorLoginPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#collation MssqlManagedInstance#collation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#collation MssqlManagedInstance#collation}
   */
   readonly collation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#dns_zone_partner_id MssqlManagedInstance#dns_zone_partner_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#dns_zone_partner_id MssqlManagedInstance#dns_zone_partner_id}
   */
   readonly dnsZonePartnerId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#id MssqlManagedInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#id MssqlManagedInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#license_type MssqlManagedInstance#license_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#license_type MssqlManagedInstance#license_type}
   */
   readonly licenseType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#location MssqlManagedInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#location MssqlManagedInstance#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#maintenance_configuration_name MssqlManagedInstance#maintenance_configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#maintenance_configuration_name MssqlManagedInstance#maintenance_configuration_name}
   */
   readonly maintenanceConfigurationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#minimum_tls_version MssqlManagedInstance#minimum_tls_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#minimum_tls_version MssqlManagedInstance#minimum_tls_version}
   */
   readonly minimumTlsVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#name MssqlManagedInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#name MssqlManagedInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#proxy_override MssqlManagedInstance#proxy_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#proxy_override MssqlManagedInstance#proxy_override}
   */
   readonly proxyOverride?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#public_data_endpoint_enabled MssqlManagedInstance#public_data_endpoint_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#public_data_endpoint_enabled MssqlManagedInstance#public_data_endpoint_enabled}
   */
   readonly publicDataEndpointEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#resource_group_name MssqlManagedInstance#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#resource_group_name MssqlManagedInstance#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#service_principal_type MssqlManagedInstance#service_principal_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#service_principal_type MssqlManagedInstance#service_principal_type}
   */
   readonly servicePrincipalType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#sku_name MssqlManagedInstance#sku_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#sku_name MssqlManagedInstance#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#storage_account_type MssqlManagedInstance#storage_account_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#storage_account_type MssqlManagedInstance#storage_account_type}
   */
   readonly storageAccountType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#storage_size_in_gb MssqlManagedInstance#storage_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#storage_size_in_gb MssqlManagedInstance#storage_size_in_gb}
   */
   readonly storageSizeInGb: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#subnet_id MssqlManagedInstance#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#subnet_id MssqlManagedInstance#subnet_id}
   */
   readonly subnetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#tags MssqlManagedInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#tags MssqlManagedInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#timezone_id MssqlManagedInstance#timezone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#timezone_id MssqlManagedInstance#timezone_id}
   */
   readonly timezoneId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#vcores MssqlManagedInstance#vcores}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#vcores MssqlManagedInstance#vcores}
   */
   readonly vcores: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#zone_redundant_enabled MssqlManagedInstance#zone_redundant_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#zone_redundant_enabled MssqlManagedInstance#zone_redundant_enabled}
   */
   readonly zoneRedundantEnabled?: boolean | cdktf.IResolvable;
   /**
+  * azure_active_directory_administrator block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#azure_active_directory_administrator MssqlManagedInstance#azure_active_directory_administrator}
+  */
+  readonly azureActiveDirectoryAdministrator?: MssqlManagedInstanceAzureActiveDirectoryAdministrator;
+  /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#identity MssqlManagedInstance#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#identity MssqlManagedInstance#identity}
   */
   readonly identity?: MssqlManagedInstanceIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#timeouts MssqlManagedInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#timeouts MssqlManagedInstance#timeouts}
   */
   readonly timeouts?: MssqlManagedInstanceTimeouts;
 }
+export interface MssqlManagedInstanceAzureActiveDirectoryAdministrator {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#azuread_authentication_only_enabled MssqlManagedInstance#azuread_authentication_only_enabled}
+  */
+  readonly azureadAuthenticationOnlyEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#login_username MssqlManagedInstance#login_username}
+  */
+  readonly loginUsername: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#object_id MssqlManagedInstance#object_id}
+  */
+  readonly objectId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#principal_type MssqlManagedInstance#principal_type}
+  */
+  readonly principalType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#tenant_id MssqlManagedInstance#tenant_id}
+  */
+  readonly tenantId?: string;
+}
+
+export function mssqlManagedInstanceAzureActiveDirectoryAdministratorToTerraform(struct?: MssqlManagedInstanceAzureActiveDirectoryAdministratorOutputReference | MssqlManagedInstanceAzureActiveDirectoryAdministrator): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    azuread_authentication_only_enabled: cdktf.booleanToTerraform(struct!.azureadAuthenticationOnlyEnabled),
+    login_username: cdktf.stringToTerraform(struct!.loginUsername),
+    object_id: cdktf.stringToTerraform(struct!.objectId),
+    principal_type: cdktf.stringToTerraform(struct!.principalType),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+  }
+}
+
+
+export function mssqlManagedInstanceAzureActiveDirectoryAdministratorToHclTerraform(struct?: MssqlManagedInstanceAzureActiveDirectoryAdministratorOutputReference | MssqlManagedInstanceAzureActiveDirectoryAdministrator): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    azuread_authentication_only_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.azureadAuthenticationOnlyEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    login_username: {
+      value: cdktf.stringToHclTerraform(struct!.loginUsername),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    object_id: {
+      value: cdktf.stringToHclTerraform(struct!.objectId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    principal_type: {
+      value: cdktf.stringToHclTerraform(struct!.principalType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tenant_id: {
+      value: cdktf.stringToHclTerraform(struct!.tenantId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MssqlManagedInstanceAzureActiveDirectoryAdministratorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MssqlManagedInstanceAzureActiveDirectoryAdministrator | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._azureadAuthenticationOnlyEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.azureadAuthenticationOnlyEnabled = this._azureadAuthenticationOnlyEnabled;
+    }
+    if (this._loginUsername !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loginUsername = this._loginUsername;
+    }
+    if (this._objectId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.objectId = this._objectId;
+    }
+    if (this._principalType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.principalType = this._principalType;
+    }
+    if (this._tenantId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tenantId = this._tenantId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlManagedInstanceAzureActiveDirectoryAdministrator | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._azureadAuthenticationOnlyEnabled = undefined;
+      this._loginUsername = undefined;
+      this._objectId = undefined;
+      this._principalType = undefined;
+      this._tenantId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._azureadAuthenticationOnlyEnabled = value.azureadAuthenticationOnlyEnabled;
+      this._loginUsername = value.loginUsername;
+      this._objectId = value.objectId;
+      this._principalType = value.principalType;
+      this._tenantId = value.tenantId;
+    }
+  }
+
+  // azuread_authentication_only_enabled - computed: false, optional: true, required: false
+  private _azureadAuthenticationOnlyEnabled?: boolean | cdktf.IResolvable; 
+  public get azureadAuthenticationOnlyEnabled() {
+    return this.getBooleanAttribute('azuread_authentication_only_enabled');
+  }
+  public set azureadAuthenticationOnlyEnabled(value: boolean | cdktf.IResolvable) {
+    this._azureadAuthenticationOnlyEnabled = value;
+  }
+  public resetAzureadAuthenticationOnlyEnabled() {
+    this._azureadAuthenticationOnlyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureadAuthenticationOnlyEnabledInput() {
+    return this._azureadAuthenticationOnlyEnabled;
+  }
+
+  // login_username - computed: false, optional: false, required: true
+  private _loginUsername?: string; 
+  public get loginUsername() {
+    return this.getStringAttribute('login_username');
+  }
+  public set loginUsername(value: string) {
+    this._loginUsername = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginUsernameInput() {
+    return this._loginUsername;
+  }
+
+  // object_id - computed: false, optional: false, required: true
+  private _objectId?: string; 
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+  public set objectId(value: string) {
+    this._objectId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectIdInput() {
+    return this._objectId;
+  }
+
+  // principal_type - computed: false, optional: false, required: true
+  private _principalType?: string; 
+  public get principalType() {
+    return this.getStringAttribute('principal_type');
+  }
+  public set principalType(value: string) {
+    this._principalType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get principalTypeInput() {
+    return this._principalType;
+  }
+
+  // tenant_id - computed: false, optional: true, required: false
+  private _tenantId?: string; 
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+  public set tenantId(value: string) {
+    this._tenantId = value;
+  }
+  public resetTenantId() {
+    this._tenantId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId;
+  }
+}
 export interface MssqlManagedInstanceIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#identity_ids MssqlManagedInstance#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#identity_ids MssqlManagedInstance#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#type MssqlManagedInstance#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#type MssqlManagedInstance#type}
   */
   readonly type: string;
 }
@@ -242,19 +455,19 @@ export class MssqlManagedInstanceIdentityOutputReference extends cdktf.ComplexOb
 }
 export interface MssqlManagedInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#create MssqlManagedInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#create MssqlManagedInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#delete MssqlManagedInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#delete MssqlManagedInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#read MssqlManagedInstance#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#read MssqlManagedInstance#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#update MssqlManagedInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#update MssqlManagedInstance#update}
   */
   readonly update?: string;
 }
@@ -435,7 +648,7 @@ export class MssqlManagedInstanceTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance azurerm_mssql_managed_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance azurerm_mssql_managed_instance}
 */
 export class MssqlManagedInstance extends cdktf.TerraformResource {
 
@@ -451,7 +664,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MssqlManagedInstance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MssqlManagedInstance to import
-  * @param importFromId The id of the existing MssqlManagedInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MssqlManagedInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MssqlManagedInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -463,7 +676,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.14.0/docs/resources/mssql_managed_instance azurerm_mssql_managed_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mssql_managed_instance azurerm_mssql_managed_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -474,7 +687,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_managed_instance',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.14.0',
+        providerVersion: '4.15.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -507,6 +720,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
     this._timezoneId = config.timezoneId;
     this._vcores = config.vcores;
     this._zoneRedundantEnabled = config.zoneRedundantEnabled;
+    this._azureActiveDirectoryAdministrator.internalValue = config.azureActiveDirectoryAdministrator;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -515,7 +729,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // administrator_login - computed: false, optional: false, required: true
+  // administrator_login - computed: false, optional: true, required: false
   private _administratorLogin?: string; 
   public get administratorLogin() {
     return this.getStringAttribute('administrator_login');
@@ -523,18 +737,24 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
   public set administratorLogin(value: string) {
     this._administratorLogin = value;
   }
+  public resetAdministratorLogin() {
+    this._administratorLogin = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginInput() {
     return this._administratorLogin;
   }
 
-  // administrator_login_password - computed: false, optional: false, required: true
+  // administrator_login_password - computed: false, optional: true, required: false
   private _administratorLoginPassword?: string; 
   public get administratorLoginPassword() {
     return this.getStringAttribute('administrator_login_password');
   }
   public set administratorLoginPassword(value: string) {
     this._administratorLoginPassword = value;
+  }
+  public resetAdministratorLoginPassword() {
+    this._administratorLoginPassword = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginPasswordInput() {
@@ -847,6 +1067,22 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
     return this._zoneRedundantEnabled;
   }
 
+  // azure_active_directory_administrator - computed: false, optional: true, required: false
+  private _azureActiveDirectoryAdministrator = new MssqlManagedInstanceAzureActiveDirectoryAdministratorOutputReference(this, "azure_active_directory_administrator");
+  public get azureActiveDirectoryAdministrator() {
+    return this._azureActiveDirectoryAdministrator;
+  }
+  public putAzureActiveDirectoryAdministrator(value: MssqlManagedInstanceAzureActiveDirectoryAdministrator) {
+    this._azureActiveDirectoryAdministrator.internalValue = value;
+  }
+  public resetAzureActiveDirectoryAdministrator() {
+    this._azureActiveDirectoryAdministrator.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureActiveDirectoryAdministratorInput() {
+    return this._azureActiveDirectoryAdministrator.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new MssqlManagedInstanceIdentityOutputReference(this, "identity");
   public get identity() {
@@ -907,6 +1143,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
       timezone_id: cdktf.stringToTerraform(this._timezoneId),
       vcores: cdktf.numberToTerraform(this._vcores),
       zone_redundant_enabled: cdktf.booleanToTerraform(this._zoneRedundantEnabled),
+      azure_active_directory_administrator: mssqlManagedInstanceAzureActiveDirectoryAdministratorToTerraform(this._azureActiveDirectoryAdministrator.internalValue),
       identity: mssqlManagedInstanceIdentityToTerraform(this._identity.internalValue),
       timeouts: mssqlManagedInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -1045,6 +1282,12 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
+      },
+      azure_active_directory_administrator: {
+        value: mssqlManagedInstanceAzureActiveDirectoryAdministratorToHclTerraform(this._azureActiveDirectoryAdministrator.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlManagedInstanceAzureActiveDirectoryAdministratorList",
       },
       identity: {
         value: mssqlManagedInstanceIdentityToHclTerraform(this._identity.internalValue),
