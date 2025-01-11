@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.NewWorkloadsSapSingleNodeVirtualInstance(scope Construct, id *string, config WorkloadsSapSingleNodeVirtualInstanceConfig) WorkloadsSapSingleNodeVirtualInstance
 ```
@@ -452,7 +452,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstance_IsConstruct(x interface{}) *bool
 ```
@@ -484,7 +484,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -498,7 +498,7 @@ workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstance_IsTe
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -512,7 +512,7 @@ workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstance_IsTe
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1027,7 +1027,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 &workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstanceConfig {
 	Connection: interface{},
@@ -1044,12 +1044,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenod
 	ResourceGroupName: *string,
 	SapFqdn: *string,
 	SapProduct: *string,
-	SingleServerConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfiguration,
+	SingleServerConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfiguration,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceIdentity,
 	ManagedResourceGroupName: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceTimeouts,
 }
 ```
 
@@ -1320,7 +1320,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 &workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstanceIdentity {
 	IdentityIds: *[]*string,
@@ -1366,16 +1366,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 &workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfiguration {
 	AppResourceGroupName: *string,
 	SubnetId: *string,
-	VirtualMachineConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfiguration,
+	VirtualMachineConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfiguration,
 	DatabaseType: *string,
 	DiskVolumeConfiguration: interface{},
 	SecondaryIpEnabled: interface{},
-	VirtualMachineResourceNames: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNames,
+	VirtualMachineResourceNames: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNames,
 }
 ```
 
@@ -1488,7 +1488,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationDiskVolumeConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 &workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationDiskVolumeConfiguration {
 	NumberOfDisks: *f64,
@@ -1562,11 +1562,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 &workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfiguration {
-	Image: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationImage,
-	OsProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationOsProfile,
+	Image: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationImage,
+	OsProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationOsProfile,
 	VirtualMachineSize: *string,
 }
 ```
@@ -1626,7 +1626,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 &workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationImage {
 	Offer: *string,
@@ -1700,7 +1700,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationOsProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 &workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationOsProfile {
 	AdminUsername: *string,
@@ -1760,7 +1760,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNames.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 &workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNames {
 	DataDisk: interface{},
@@ -1850,7 +1850,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNamesDataDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 &workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNamesDataDisk {
 	Names: *[]*string,
@@ -1896,7 +1896,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 &workloadssapsinglenodevirtualinstance.WorkloadsSapSingleNodeVirtualInstanceTimeouts {
 	Create: *string,
@@ -1972,7 +1972,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.NewWorkloadsSapSingleNodeVirtualInstanceIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkloadsSapSingleNodeVirtualInstanceIdentityOutputReference
 ```
@@ -2265,7 +2265,7 @@ func InternalValue() WorkloadsSapSingleNodeVirtualInstanceIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationDiskVolumeConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.NewWorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationDiskVolumeConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationDiskVolumeConfigurationList
 ```
@@ -2425,7 +2425,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationDiskVolumeConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.NewWorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationDiskVolumeConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationDiskVolumeConfigurationOutputReference
 ```
@@ -2780,7 +2780,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.NewWorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationOutputReference
 ```
@@ -3250,7 +3250,7 @@ func InternalValue() WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurat
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationImageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.NewWorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationImageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationImageOutputReference
 ```
@@ -3587,7 +3587,7 @@ func InternalValue() WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurat
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationOsProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.NewWorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationOsProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationOsProfileOutputReference
 ```
@@ -3902,7 +3902,7 @@ func InternalValue() WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurat
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.NewWorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineConfigurationOutputReference
 ```
@@ -4243,7 +4243,7 @@ func InternalValue() WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurat
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNamesDataDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.NewWorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNamesDataDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNamesDataDiskList
 ```
@@ -4403,7 +4403,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNamesDataDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.NewWorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNamesDataDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNamesDataDiskOutputReference
 ```
@@ -4714,7 +4714,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNamesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.NewWorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNamesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurationVirtualMachineResourceNamesOutputReference
 ```
@@ -5121,7 +5121,7 @@ func InternalValue() WorkloadsSapSingleNodeVirtualInstanceSingleServerConfigurat
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.workloadsSapSingleNodeVirtualInstance.WorkloadsSapSingleNodeVirtualInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/workloadssapsinglenodevirtualinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/workloadssapsinglenodevirtualinstance"
 
 workloadssapsinglenodevirtualinstance.NewWorkloadsSapSingleNodeVirtualInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WorkloadsSapSingleNodeVirtualInstanceTimeoutsOutputReference
 ```
