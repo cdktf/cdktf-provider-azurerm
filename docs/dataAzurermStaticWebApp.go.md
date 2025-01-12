@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebApp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 dataazurermstaticwebapp.NewDataAzurermStaticWebApp(scope Construct, id *string, config DataAzurermStaticWebAppConfig) DataAzurermStaticWebApp
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebApp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 dataazurermstaticwebapp.DataAzurermStaticWebApp_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebApp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 dataazurermstaticwebapp.DataAzurermStaticWebApp_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermstaticwebapp.DataAzurermStaticWebApp_IsTerraformElement(x interface{}
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebApp.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 dataazurermstaticwebapp.DataAzurermStaticWebApp_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermstaticwebapp.DataAzurermStaticWebApp_IsTerraformDataSource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebApp.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 dataazurermstaticwebapp.DataAzurermStaticWebApp_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -812,7 +812,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebAppBasicAuth.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 &dataazurermstaticwebapp.DataAzurermStaticWebAppBasicAuth {
 
@@ -825,7 +825,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstatic
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebAppConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 &dataazurermstaticwebapp.DataAzurermStaticWebAppConfig {
 	Connection: interface{},
@@ -838,7 +838,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstatic
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermStaticWebApp.DataAzurermStaticWebAppTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebAppTimeouts,
 }
 ```
 
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebAppIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 &dataazurermstaticwebapp.DataAzurermStaticWebAppIdentity {
 
@@ -1001,7 +1001,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstatic
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebAppTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 &dataazurermstaticwebapp.DataAzurermStaticWebAppTimeouts {
 	Read: *string,
@@ -1035,7 +1035,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebAppBasicAuthList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 dataazurermstaticwebapp.NewDataAzurermStaticWebAppBasicAuthList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermStaticWebAppBasicAuthList
 ```
@@ -1184,7 +1184,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebAppBasicAuthOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 dataazurermstaticwebapp.NewDataAzurermStaticWebAppBasicAuthOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermStaticWebAppBasicAuthOutputReference
 ```
@@ -1462,7 +1462,7 @@ func InternalValue() DataAzurermStaticWebAppBasicAuth
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebAppIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 dataazurermstaticwebapp.NewDataAzurermStaticWebAppIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermStaticWebAppIdentityList
 ```
@@ -1611,7 +1611,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebAppIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 dataazurermstaticwebapp.NewDataAzurermStaticWebAppIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermStaticWebAppIdentityOutputReference
 ```
@@ -1922,7 +1922,7 @@ func InternalValue() DataAzurermStaticWebAppIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStaticWebApp.DataAzurermStaticWebAppTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermstaticwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstaticwebapp"
 
 dataazurermstaticwebapp.NewDataAzurermStaticWebAppTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermStaticWebAppTimeoutsOutputReference
 ```

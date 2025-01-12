@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappBackupPolicy.DataAzurermNetappBackupPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappbackuppolicy"
 
 dataazurermnetappbackuppolicy.NewDataAzurermNetappBackupPolicy(scope Construct, id *string, config DataAzurermNetappBackupPolicyConfig) DataAzurermNetappBackupPolicy
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermNetappBackupPolicy.DataAzurermNetappBackupPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappbackuppolicy"
 
 dataazurermnetappbackuppolicy.DataAzurermNetappBackupPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermNetappBackupPolicy.DataAzurermNetappBackupPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappbackuppolicy"
 
 dataazurermnetappbackuppolicy.DataAzurermNetappBackupPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermnetappbackuppolicy.DataAzurermNetappBackupPolicy_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermNetappBackupPolicy.DataAzurermNetappBackupPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappbackuppolicy"
 
 dataazurermnetappbackuppolicy.DataAzurermNetappBackupPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermnetappbackuppolicy.DataAzurermNetappBackupPolicy_IsTerraformDataSourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermNetappBackupPolicy.DataAzurermNetappBackupPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappbackuppolicy"
 
 dataazurermnetappbackuppolicy.DataAzurermNetappBackupPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -746,7 +746,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetappBackupPolicy.DataAzurermNetappBackupPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappbackuppolicy"
 
 &dataazurermnetappbackuppolicy.DataAzurermNetappBackupPolicyConfig {
 	Connection: interface{},
@@ -760,7 +760,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetapp
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermNetappBackupPolicy.DataAzurermNetappBackupPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermNetappBackupPolicy.DataAzurermNetappBackupPolicyTimeouts,
 }
 ```
 
@@ -923,7 +923,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetappBackupPolicy.DataAzurermNetappBackupPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappbackuppolicy"
 
 &dataazurermnetappbackuppolicy.DataAzurermNetappBackupPolicyTimeouts {
 	Read: *string,
@@ -957,7 +957,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappBackupPolicy.DataAzurermNetappBackupPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermnetappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappbackuppolicy"
 
 dataazurermnetappbackuppolicy.NewDataAzurermNetappBackupPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermNetappBackupPolicyTimeoutsOutputReference
 ```
