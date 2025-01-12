@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandard.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandard(scope Construct, id *string, config LogicAppStandardConfig) LogicAppStandard
 ```
@@ -549,7 +549,7 @@ func ResetVirtualNetworkSubnetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandard.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.LogicAppStandard_IsConstruct(x interface{}) *bool
 ```
@@ -581,7 +581,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandard.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.LogicAppStandard_IsTerraformElement(x interface{}) *bool
 ```
@@ -595,7 +595,7 @@ logicappstandard.LogicAppStandard_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandard.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.LogicAppStandard_IsTerraformResource(x interface{}) *bool
 ```
@@ -609,7 +609,7 @@ logicappstandard.LogicAppStandard_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandard.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.LogicAppStandard_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1410,7 +1410,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 &logicappstandard.LogicAppStandardConfig {
 	Connection: interface{},
@@ -1434,12 +1434,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
 	Enabled: interface{},
 	HttpsOnly: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logicAppStandard.LogicAppStandardIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.logicAppStandard.LogicAppStandardIdentity,
 	PublicNetworkAccess: *string,
-	SiteConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logicAppStandard.LogicAppStandardSiteConfig,
+	SiteConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.logicAppStandard.LogicAppStandardSiteConfig,
 	StorageAccountShareName: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logicAppStandard.LogicAppStandardTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.logicAppStandard.LogicAppStandardTimeouts,
 	UseExtensionBundle: interface{},
 	Version: *string,
 	VirtualNetworkSubnetId: *string,
@@ -1845,7 +1845,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardConnectionString.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 &logicappstandard.LogicAppStandardConnectionString {
 	Name: *string,
@@ -1905,7 +1905,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 &logicappstandard.LogicAppStandardIdentity {
 	Type: *string,
@@ -1951,12 +1951,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 &logicappstandard.LogicAppStandardSiteConfig {
 	AlwaysOn: interface{},
 	AppScaleLimit: *f64,
-	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logicAppStandard.LogicAppStandardSiteConfigCors,
+	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.logicAppStandard.LogicAppStandardSiteConfigCors,
 	DotnetFrameworkVersion: *string,
 	ElasticInstanceMinimum: *f64,
 	FtpsState: *string,
@@ -2265,7 +2265,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigCors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 &logicappstandard.LogicAppStandardSiteConfigCors {
 	AllowedOrigins: *[]*string,
@@ -2311,7 +2311,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 &logicappstandard.LogicAppStandardSiteConfigIpRestriction {
 	Action: *string,
@@ -2427,7 +2427,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 &logicappstandard.LogicAppStandardSiteConfigIpRestrictionHeaders {
 	XAzureFdid: *[]*string,
@@ -2501,7 +2501,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigScmIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 &logicappstandard.LogicAppStandardSiteConfigScmIpRestriction {
 	Action: *string,
@@ -2617,7 +2617,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigScmIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 &logicappstandard.LogicAppStandardSiteConfigScmIpRestrictionHeaders {
 	XAzureFdid: *[]*string,
@@ -2691,7 +2691,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 &logicappstandard.LogicAppStandardSiteCredential {
 
@@ -2704,7 +2704,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 &logicappstandard.LogicAppStandardTimeouts {
 	Create: *string,
@@ -2780,7 +2780,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardConnectionStringList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardConnectionStringList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LogicAppStandardConnectionStringList
 ```
@@ -2940,7 +2940,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardConnectionStringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardConnectionStringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LogicAppStandardConnectionStringOutputReference
 ```
@@ -3273,7 +3273,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogicAppStandardIdentityOutputReference
 ```
@@ -3595,7 +3595,7 @@ func InternalValue() LogicAppStandardIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigCorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardSiteConfigCorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogicAppStandardSiteConfigCorsOutputReference
 ```
@@ -3895,7 +3895,7 @@ func InternalValue() LogicAppStandardSiteConfigCors
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardSiteConfigIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LogicAppStandardSiteConfigIpRestrictionHeadersList
 ```
@@ -4055,7 +4055,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardSiteConfigIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LogicAppStandardSiteConfigIpRestrictionHeadersOutputReference
 ```
@@ -4438,7 +4438,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardSiteConfigIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LogicAppStandardSiteConfigIpRestrictionList
 ```
@@ -4598,7 +4598,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardSiteConfigIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LogicAppStandardSiteConfigIpRestrictionOutputReference
 ```
@@ -5081,7 +5081,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardSiteConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogicAppStandardSiteConfigOutputReference
 ```
@@ -5989,7 +5989,7 @@ func InternalValue() LogicAppStandardSiteConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigScmIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardSiteConfigScmIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LogicAppStandardSiteConfigScmIpRestrictionHeadersList
 ```
@@ -6149,7 +6149,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigScmIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardSiteConfigScmIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LogicAppStandardSiteConfigScmIpRestrictionHeadersOutputReference
 ```
@@ -6532,7 +6532,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigScmIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardSiteConfigScmIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LogicAppStandardSiteConfigScmIpRestrictionList
 ```
@@ -6692,7 +6692,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteConfigScmIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardSiteConfigScmIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LogicAppStandardSiteConfigScmIpRestrictionOutputReference
 ```
@@ -7175,7 +7175,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteCredentialList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardSiteCredentialList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LogicAppStandardSiteCredentialList
 ```
@@ -7324,7 +7324,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardSiteCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardSiteCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LogicAppStandardSiteCredentialOutputReference
 ```
@@ -7613,7 +7613,7 @@ func InternalValue() LogicAppStandardSiteCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppStandard.LogicAppStandardTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappstandard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/logicappstandard"
 
 logicappstandard.NewLogicAppStandardTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogicAppStandardTimeoutsOutputReference
 ```
