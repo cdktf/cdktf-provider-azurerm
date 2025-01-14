@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPortalDashboard.DataAzurermPortalDashboard.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermportaldashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermportaldashboard"
 
 dataazurermportaldashboard.NewDataAzurermPortalDashboard(scope Construct, id *string, config DataAzurermPortalDashboardConfig) DataAzurermPortalDashboard
 ```
@@ -324,7 +324,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermPortalDashboard.DataAzurermPortalDashboard.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermportaldashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermportaldashboard"
 
 dataazurermportaldashboard.DataAzurermPortalDashboard_IsConstruct(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermPortalDashboard.DataAzurermPortalDashboard.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermportaldashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermportaldashboard"
 
 dataazurermportaldashboard.DataAzurermPortalDashboard_IsTerraformElement(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ dataazurermportaldashboard.DataAzurermPortalDashboard_IsTerraformElement(x inter
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermPortalDashboard.DataAzurermPortalDashboard.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermportaldashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermportaldashboard"
 
 dataazurermportaldashboard.DataAzurermPortalDashboard_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ dataazurermportaldashboard.DataAzurermPortalDashboard_IsTerraformDataSource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermPortalDashboard.DataAzurermPortalDashboard.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermportaldashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermportaldashboard"
 
 dataazurermportaldashboard.DataAzurermPortalDashboard_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -745,7 +745,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPortalDashboard.DataAzurermPortalDashboardConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermportaldashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermportaldashboard"
 
 &dataazurermportaldashboard.DataAzurermPortalDashboardConfig {
 	Connection: interface{},
@@ -760,7 +760,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermportal
 	DisplayName: *string,
 	Id: *string,
 	Name: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermPortalDashboard.DataAzurermPortalDashboardTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermPortalDashboard.DataAzurermPortalDashboardTimeouts,
 }
 ```
 
@@ -936,7 +936,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPortalDashboard.DataAzurermPortalDashboardTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermportaldashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermportaldashboard"
 
 &dataazurermportaldashboard.DataAzurermPortalDashboardTimeouts {
 	Read: *string,
@@ -970,7 +970,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPortalDashboard.DataAzurermPortalDashboardTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermportaldashboard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermportaldashboard"
 
 dataazurermportaldashboard.NewDataAzurermPortalDashboardTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermPortalDashboardTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerDeployment.NetworkManagerDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerdeployment"
 
 networkmanagerdeployment.NewNetworkManagerDeployment(scope Construct, id *string, config NetworkManagerDeploymentConfig) NetworkManagerDeployment
 ```
@@ -412,7 +412,7 @@ func ResetTriggers()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.networkManagerDeployment.NetworkManagerDeployment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerdeployment"
 
 networkmanagerdeployment.NetworkManagerDeployment_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.networkManagerDeployment.NetworkManagerDeployment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerdeployment"
 
 networkmanagerdeployment.NetworkManagerDeployment_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ networkmanagerdeployment.NetworkManagerDeployment_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.networkManagerDeployment.NetworkManagerDeployment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerdeployment"
 
 networkmanagerdeployment.NetworkManagerDeployment_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ networkmanagerdeployment.NetworkManagerDeployment_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.networkManagerDeployment.NetworkManagerDeployment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerdeployment"
 
 networkmanagerdeployment.NetworkManagerDeployment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -855,7 +855,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkManagerDeployment.NetworkManagerDeploymentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerdeployment"
 
 &networkmanagerdeployment.NetworkManagerDeploymentConfig {
 	Connection: interface{},
@@ -870,7 +870,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkmanagerdep
 	NetworkManagerId: *string,
 	ScopeAccess: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.networkManagerDeployment.NetworkManagerDeploymentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkManagerDeployment.NetworkManagerDeploymentTimeouts,
 	Triggers: *map[string]*string,
 }
 ```
@@ -1060,7 +1060,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkManagerDeployment.NetworkManagerDeploymentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerdeployment"
 
 &networkmanagerdeployment.NetworkManagerDeploymentTimeouts {
 	Create: *string,
@@ -1136,7 +1136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerDeployment.NetworkManagerDeploymentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/networkmanagerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerdeployment"
 
 networkmanagerdeployment.NewNetworkManagerDeploymentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkManagerDeploymentTimeoutsOutputReference
 ```
