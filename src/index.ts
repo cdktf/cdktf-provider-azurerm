@@ -205,6 +205,7 @@ export * as containerGroup from './container-group';
 export * as containerRegistry from './container-registry';
 export * as containerRegistryAgentPool from './container-registry-agent-pool';
 export * as containerRegistryCacheRule from './container-registry-cache-rule';
+export * as containerRegistryCredentialSet from './container-registry-credential-set';
 export * as containerRegistryScopeMap from './container-registry-scope-map';
 export * as containerRegistryTask from './container-registry-task';
 export * as containerRegistryTaskScheduleRunNow from './container-registry-task-schedule-run-now';
@@ -609,8 +610,10 @@ export * as mssqlDatabaseVulnerabilityAssessmentRuleBaseline from './mssql-datab
 export * as mssqlElasticpool from './mssql-elasticpool';
 export * as mssqlFailoverGroup from './mssql-failover-group';
 export * as mssqlFirewallRule from './mssql-firewall-rule';
+export * as mssqlJob from './mssql-job';
 export * as mssqlJobAgent from './mssql-job-agent';
 export * as mssqlJobCredential from './mssql-job-credential';
+export * as mssqlJobSchedule from './mssql-job-schedule';
 export * as mssqlManagedDatabase from './mssql-managed-database';
 export * as mssqlManagedInstance from './mssql-managed-instance';
 export * as mssqlManagedInstanceActiveDirectoryAdministrator from './mssql-managed-instance-active-directory-administrator';

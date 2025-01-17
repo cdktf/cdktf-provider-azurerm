@@ -205,6 +205,7 @@ Object.defineProperty(exports, 'containerGroup', { get: function () { return req
 Object.defineProperty(exports, 'containerRegistry', { get: function () { return require('./container-registry'); } });
 Object.defineProperty(exports, 'containerRegistryAgentPool', { get: function () { return require('./container-registry-agent-pool'); } });
 Object.defineProperty(exports, 'containerRegistryCacheRule', { get: function () { return require('./container-registry-cache-rule'); } });
+Object.defineProperty(exports, 'containerRegistryCredentialSet', { get: function () { return require('./container-registry-credential-set'); } });
 Object.defineProperty(exports, 'containerRegistryScopeMap', { get: function () { return require('./container-registry-scope-map'); } });
 Object.defineProperty(exports, 'containerRegistryTask', { get: function () { return require('./container-registry-task'); } });
 Object.defineProperty(exports, 'containerRegistryTaskScheduleRunNow', { get: function () { return require('./container-registry-task-schedule-run-now'); } });
@@ -609,8 +610,10 @@ Object.defineProperty(exports, 'mssqlDatabaseVulnerabilityAssessmentRuleBaseline
 Object.defineProperty(exports, 'mssqlElasticpool', { get: function () { return require('./mssql-elasticpool'); } });
 Object.defineProperty(exports, 'mssqlFailoverGroup', { get: function () { return require('./mssql-failover-group'); } });
 Object.defineProperty(exports, 'mssqlFirewallRule', { get: function () { return require('./mssql-firewall-rule'); } });
+Object.defineProperty(exports, 'mssqlJob', { get: function () { return require('./mssql-job'); } });
 Object.defineProperty(exports, 'mssqlJobAgent', { get: function () { return require('./mssql-job-agent'); } });
 Object.defineProperty(exports, 'mssqlJobCredential', { get: function () { return require('./mssql-job-credential'); } });
+Object.defineProperty(exports, 'mssqlJobSchedule', { get: function () { return require('./mssql-job-schedule'); } });
 Object.defineProperty(exports, 'mssqlManagedDatabase', { get: function () { return require('./mssql-managed-database'); } });
 Object.defineProperty(exports, 'mssqlManagedInstance', { get: function () { return require('./mssql-managed-instance'); } });
 Object.defineProperty(exports, 'mssqlManagedInstanceActiveDirectoryAdministrator', { get: function () { return require('./mssql-managed-instance-active-directory-administrator'); } });

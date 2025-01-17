@@ -4,7 +4,7 @@
 
 ### CostAnomalyAlert <a name="CostAnomalyAlert" id="@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert azurerm_cost_anomaly_alert}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert azurerm_cost_anomaly_alert}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.Initializer"></a>
 
@@ -76,6 +76,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.resetMessage">ResetMessage</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.resetNotificationEmail">ResetNotificationEmail</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.resetSubscriptionId">ResetSubscriptionId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
 
@@ -393,6 +394,12 @@ func ResetId()
 func ResetMessage()
 ```
 
+##### `ResetNotificationEmail` <a name="ResetNotificationEmail" id="@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.resetNotificationEmail"></a>
+
+```go
+func ResetNotificationEmail()
+```
+
 ##### `ResetSubscriptionId` <a name="ResetSubscriptionId" id="@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.resetSubscriptionId"></a>
 
 ```go
@@ -508,7 +515,7 @@ The construct id used in the generated config for the CostAnomalyAlert to import
 
 The id of the existing CostAnomalyAlert that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -545,6 +552,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.messageInput">MessageInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.notificationEmailInput">NotificationEmailInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.subscriptionIdInput">SubscriptionIdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.displayName">DisplayName</a></code> | <code>*string</code> | *No description.* |
@@ -553,6 +561,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.message">Message</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.name">Name</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.notificationEmail">NotificationEmail</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.subscriptionId">SubscriptionId</a></code> | <code>*string</code> | *No description.* |
 
 ---
@@ -769,6 +778,16 @@ func NameInput() *string
 
 ---
 
+##### `NotificationEmailInput`<sup>Optional</sup> <a name="NotificationEmailInput" id="@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.notificationEmailInput"></a>
+
+```go
+func NotificationEmailInput() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `SubscriptionIdInput`<sup>Optional</sup> <a name="SubscriptionIdInput" id="@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.subscriptionIdInput"></a>
 
 ```go
@@ -849,6 +868,16 @@ func Name() *string
 
 ---
 
+##### `NotificationEmail`<sup>Required</sup> <a name="NotificationEmail" id="@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.notificationEmail"></a>
+
+```go
+func NotificationEmail() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `SubscriptionId`<sup>Required</sup> <a name="SubscriptionId" id="@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlert.property.subscriptionId"></a>
 
 ```go
@@ -900,6 +929,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/costanomalyalert"
 	Name: *string,
 	Id: *string,
 	Message: *string,
+	NotificationEmail: *string,
 	SubscriptionId: *string,
 	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.costAnomalyAlert.CostAnomalyAlertTimeouts,
 }
@@ -916,13 +946,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/costanomalyalert"
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#display_name CostAnomalyAlert#display_name}. |
-| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.emailAddresses">EmailAddresses</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#email_addresses CostAnomalyAlert#email_addresses}. |
-| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.emailSubject">EmailSubject</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#email_subject CostAnomalyAlert#email_subject}. |
-| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#name CostAnomalyAlert#name}. |
-| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#id CostAnomalyAlert#id}. |
-| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.message">Message</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#message CostAnomalyAlert#message}. |
-| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.subscriptionId">SubscriptionId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#subscription_id CostAnomalyAlert#subscription_id}. |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#display_name CostAnomalyAlert#display_name}. |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.emailAddresses">EmailAddresses</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#email_addresses CostAnomalyAlert#email_addresses}. |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.emailSubject">EmailSubject</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#email_subject CostAnomalyAlert#email_subject}. |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#name CostAnomalyAlert#name}. |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#id CostAnomalyAlert#id}. |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.message">Message</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#message CostAnomalyAlert#message}. |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.notificationEmail">NotificationEmail</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#notification_email CostAnomalyAlert#notification_email}. |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.subscriptionId">SubscriptionId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#subscription_id CostAnomalyAlert#subscription_id}. |
 | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertTimeouts">CostAnomalyAlertTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1005,7 +1036,7 @@ DisplayName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#display_name CostAnomalyAlert#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#display_name CostAnomalyAlert#display_name}.
 
 ---
 
@@ -1017,7 +1048,7 @@ EmailAddresses *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#email_addresses CostAnomalyAlert#email_addresses}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#email_addresses CostAnomalyAlert#email_addresses}.
 
 ---
 
@@ -1029,7 +1060,7 @@ EmailSubject *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#email_subject CostAnomalyAlert#email_subject}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#email_subject CostAnomalyAlert#email_subject}.
 
 ---
 
@@ -1041,7 +1072,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#name CostAnomalyAlert#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#name CostAnomalyAlert#name}.
 
 ---
 
@@ -1053,7 +1084,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#id CostAnomalyAlert#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#id CostAnomalyAlert#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1068,7 +1099,19 @@ Message *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#message CostAnomalyAlert#message}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#message CostAnomalyAlert#message}.
+
+---
+
+##### `NotificationEmail`<sup>Optional</sup> <a name="NotificationEmail" id="@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertConfig.property.notificationEmail"></a>
+
+```go
+NotificationEmail *string
+```
+
+- *Type:* *string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#notification_email CostAnomalyAlert#notification_email}.
 
 ---
 
@@ -1080,7 +1123,7 @@ SubscriptionId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#subscription_id CostAnomalyAlert#subscription_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#subscription_id CostAnomalyAlert#subscription_id}.
 
 ---
 
@@ -1094,7 +1137,7 @@ Timeouts CostAnomalyAlertTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#timeouts CostAnomalyAlert#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#timeouts CostAnomalyAlert#timeouts}
 
 ---
 
@@ -1117,10 +1160,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/costanomalyalert"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#create CostAnomalyAlert#create}. |
-| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#delete CostAnomalyAlert#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#read CostAnomalyAlert#read}. |
-| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#update CostAnomalyAlert#update}. |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#create CostAnomalyAlert#create}. |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#delete CostAnomalyAlert#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#read CostAnomalyAlert#read}. |
+| <code><a href="#@cdktf/provider-azurerm.costAnomalyAlert.CostAnomalyAlertTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#update CostAnomalyAlert#update}. |
 
 ---
 
@@ -1132,7 +1175,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#create CostAnomalyAlert#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#create CostAnomalyAlert#create}.
 
 ---
 
@@ -1144,7 +1187,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#delete CostAnomalyAlert#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#delete CostAnomalyAlert#delete}.
 
 ---
 
@@ -1156,7 +1199,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#read CostAnomalyAlert#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#read CostAnomalyAlert#read}.
 
 ---
 
@@ -1168,7 +1211,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/cost_anomaly_alert#update CostAnomalyAlert#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/cost_anomaly_alert#update CostAnomalyAlert#update}.
 
 ---
 
