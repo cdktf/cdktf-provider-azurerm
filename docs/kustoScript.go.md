@@ -4,12 +4,12 @@
 
 ### KustoScript <a name="KustoScript" id="@cdktf/provider-azurerm.kustoScript.KustoScript"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script azurerm_kusto_script}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script azurerm_kusto_script}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoScript.KustoScript.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/kustoscript"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoscript"
 
 kustoscript.NewKustoScript(scope Construct, id *string, config KustoScriptConfig) KustoScript
 ```
@@ -440,7 +440,7 @@ func ResetUrl()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.kustoScript.KustoScript.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/kustoscript"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoscript"
 
 kustoscript.KustoScript_IsConstruct(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.kustoScript.KustoScript.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/kustoscript"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoscript"
 
 kustoscript.KustoScript_IsTerraformElement(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ kustoscript.KustoScript_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.kustoScript.KustoScript.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/kustoscript"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoscript"
 
 kustoscript.KustoScript_IsTerraformResource(x interface{}) *bool
 ```
@@ -500,7 +500,7 @@ kustoscript.KustoScript_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.kustoScript.KustoScript.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/kustoscript"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoscript"
 
 kustoscript.KustoScript_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -529,7 +529,7 @@ The construct id used in the generated config for the KustoScript to import.
 
 The id of the existing KustoScript that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -927,7 +927,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/kustoscript"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoscript"
 
 &kustoscript.KustoScriptConfig {
 	Connection: interface{},
@@ -944,7 +944,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/kustoscript"
 	Id: *string,
 	SasToken: *string,
 	ScriptContent: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.kustoScript.KustoScriptTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kustoScript.KustoScriptTimeouts,
 	Url: *string,
 }
 ```
@@ -960,15 +960,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/kustoscript"
 | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.databaseId">DatabaseId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#database_id KustoScript#database_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#name KustoScript#name}. |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.continueOnErrorsEnabled">ContinueOnErrorsEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#continue_on_errors_enabled KustoScript#continue_on_errors_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.forceAnUpdateWhenValueChanged">ForceAnUpdateWhenValueChanged</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#force_an_update_when_value_changed KustoScript#force_an_update_when_value_changed}. |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#id KustoScript#id}. |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.sasToken">SasToken</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#sas_token KustoScript#sas_token}. |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.scriptContent">ScriptContent</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#script_content KustoScript#script_content}. |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.databaseId">DatabaseId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#database_id KustoScript#database_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#name KustoScript#name}. |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.continueOnErrorsEnabled">ContinueOnErrorsEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#continue_on_errors_enabled KustoScript#continue_on_errors_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.forceAnUpdateWhenValueChanged">ForceAnUpdateWhenValueChanged</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#force_an_update_when_value_changed KustoScript#force_an_update_when_value_changed}. |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#id KustoScript#id}. |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.sasToken">SasToken</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#sas_token KustoScript#sas_token}. |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.scriptContent">ScriptContent</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#script_content KustoScript#script_content}. |
 | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts">KustoScriptTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.url">Url</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#url KustoScript#url}. |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptConfig.property.url">Url</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#url KustoScript#url}. |
 
 ---
 
@@ -1050,7 +1050,7 @@ DatabaseId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#database_id KustoScript#database_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#database_id KustoScript#database_id}.
 
 ---
 
@@ -1062,7 +1062,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#name KustoScript#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#name KustoScript#name}.
 
 ---
 
@@ -1074,7 +1074,7 @@ ContinueOnErrorsEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#continue_on_errors_enabled KustoScript#continue_on_errors_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#continue_on_errors_enabled KustoScript#continue_on_errors_enabled}.
 
 ---
 
@@ -1086,7 +1086,7 @@ ForceAnUpdateWhenValueChanged *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#force_an_update_when_value_changed KustoScript#force_an_update_when_value_changed}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#force_an_update_when_value_changed KustoScript#force_an_update_when_value_changed}.
 
 ---
 
@@ -1098,7 +1098,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#id KustoScript#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#id KustoScript#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1113,7 +1113,7 @@ SasToken *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#sas_token KustoScript#sas_token}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#sas_token KustoScript#sas_token}.
 
 ---
 
@@ -1125,7 +1125,7 @@ ScriptContent *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#script_content KustoScript#script_content}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#script_content KustoScript#script_content}.
 
 ---
 
@@ -1139,7 +1139,7 @@ Timeouts KustoScriptTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#timeouts KustoScript#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#timeouts KustoScript#timeouts}
 
 ---
 
@@ -1151,7 +1151,7 @@ Url *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#url KustoScript#url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#url KustoScript#url}.
 
 ---
 
@@ -1160,7 +1160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/kustoscript"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoscript"
 
 &kustoscript.KustoScriptTimeouts {
 	Create: *string,
@@ -1174,10 +1174,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/kustoscript"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#create KustoScript#create}. |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#delete KustoScript#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#read KustoScript#read}. |
-| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#update KustoScript#update}. |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#create KustoScript#create}. |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#delete KustoScript#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#read KustoScript#read}. |
+| <code><a href="#@cdktf/provider-azurerm.kustoScript.KustoScriptTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#update KustoScript#update}. |
 
 ---
 
@@ -1189,7 +1189,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#create KustoScript#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#create KustoScript#create}.
 
 ---
 
@@ -1201,7 +1201,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#delete KustoScript#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#delete KustoScript#delete}.
 
 ---
 
@@ -1213,7 +1213,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#read KustoScript#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#read KustoScript#read}.
 
 ---
 
@@ -1225,7 +1225,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/kusto_script#update KustoScript#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/kusto_script#update KustoScript#update}.
 
 ---
 
@@ -1236,7 +1236,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoScript.KustoScriptTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/kustoscript"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoscript"
 
 kustoscript.NewKustoScriptTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoScriptTimeoutsOutputReference
 ```

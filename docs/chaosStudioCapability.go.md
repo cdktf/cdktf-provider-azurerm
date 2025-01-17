@@ -4,12 +4,12 @@
 
 ### ChaosStudioCapability <a name="ChaosStudioCapability" id="@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapability"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability azurerm_chaos_studio_capability}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability azurerm_chaos_studio_capability}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapability.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/chaosstudiocapability"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/chaosstudiocapability"
 
 chaosstudiocapability.NewChaosStudioCapability(scope Construct, id *string, config ChaosStudioCapabilityConfig) ChaosStudioCapability
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapability.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/chaosstudiocapability"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/chaosstudiocapability"
 
 chaosstudiocapability.ChaosStudioCapability_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapability.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/chaosstudiocapability"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/chaosstudiocapability"
 
 chaosstudiocapability.ChaosStudioCapability_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ chaosstudiocapability.ChaosStudioCapability_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapability.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/chaosstudiocapability"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/chaosstudiocapability"
 
 chaosstudiocapability.ChaosStudioCapability_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ chaosstudiocapability.ChaosStudioCapability_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapability.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/chaosstudiocapability"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/chaosstudiocapability"
 
 chaosstudiocapability.ChaosStudioCapability_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -494,7 +494,7 @@ The construct id used in the generated config for the ChaosStudioCapability to i
 
 The id of the existing ChaosStudioCapability that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -793,7 +793,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/chaosstudiocapability"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/chaosstudiocapability"
 
 &chaosstudiocapability.ChaosStudioCapabilityConfig {
 	Connection: interface{},
@@ -806,7 +806,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/chaosstudiocapabi
 	CapabilityType: *string,
 	ChaosStudioTargetId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.chaosStudioCapability.ChaosStudioCapabilityTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.chaosStudioCapability.ChaosStudioCapabilityTimeouts,
 }
 ```
 
@@ -821,9 +821,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/chaosstudiocapabi
 | <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityConfig.property.capabilityType">CapabilityType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#capability_type ChaosStudioCapability#capability_type}. |
-| <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityConfig.property.chaosStudioTargetId">ChaosStudioTargetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#chaos_studio_target_id ChaosStudioCapability#chaos_studio_target_id}. |
-| <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#id ChaosStudioCapability#id}. |
+| <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityConfig.property.capabilityType">CapabilityType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#capability_type ChaosStudioCapability#capability_type}. |
+| <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityConfig.property.chaosStudioTargetId">ChaosStudioTargetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#chaos_studio_target_id ChaosStudioCapability#chaos_studio_target_id}. |
+| <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#id ChaosStudioCapability#id}. |
 | <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityTimeouts">ChaosStudioCapabilityTimeouts</a></code> | timeouts block. |
 
 ---
@@ -906,7 +906,7 @@ CapabilityType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#capability_type ChaosStudioCapability#capability_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#capability_type ChaosStudioCapability#capability_type}.
 
 ---
 
@@ -918,7 +918,7 @@ ChaosStudioTargetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#chaos_studio_target_id ChaosStudioCapability#chaos_studio_target_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#chaos_studio_target_id ChaosStudioCapability#chaos_studio_target_id}.
 
 ---
 
@@ -930,7 +930,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#id ChaosStudioCapability#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#id ChaosStudioCapability#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -947,7 +947,7 @@ Timeouts ChaosStudioCapabilityTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#timeouts ChaosStudioCapability#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#timeouts ChaosStudioCapability#timeouts}
 
 ---
 
@@ -956,7 +956,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/chaosstudiocapability"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/chaosstudiocapability"
 
 &chaosstudiocapability.ChaosStudioCapabilityTimeouts {
 	Create: *string,
@@ -969,9 +969,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/chaosstudiocapabi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#create ChaosStudioCapability#create}. |
-| <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#delete ChaosStudioCapability#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#read ChaosStudioCapability#read}. |
+| <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#create ChaosStudioCapability#create}. |
+| <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#delete ChaosStudioCapability#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#read ChaosStudioCapability#read}. |
 
 ---
 
@@ -983,7 +983,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#create ChaosStudioCapability#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#create ChaosStudioCapability#create}.
 
 ---
 
@@ -995,7 +995,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#delete ChaosStudioCapability#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#delete ChaosStudioCapability#delete}.
 
 ---
 
@@ -1007,7 +1007,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/chaos_studio_capability#read ChaosStudioCapability#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#read ChaosStudioCapability#read}.
 
 ---
 
@@ -1018,7 +1018,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.chaosStudioCapability.ChaosStudioCapabilityTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/chaosstudiocapability"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/chaosstudiocapability"
 
 chaosstudiocapability.NewChaosStudioCapabilityTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ChaosStudioCapabilityTimeoutsOutputReference
 ```

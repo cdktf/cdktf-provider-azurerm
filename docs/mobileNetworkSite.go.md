@@ -4,12 +4,12 @@
 
 ### MobileNetworkSite <a name="MobileNetworkSite" id="@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSite"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site azurerm_mobile_network_site}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site azurerm_mobile_network_site}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSite.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksite"
 
 mobilenetworksite.NewMobileNetworkSite(scope Construct, id *string, config MobileNetworkSiteConfig) MobileNetworkSite
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSite.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksite"
 
 mobilenetworksite.MobileNetworkSite_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSite.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksite"
 
 mobilenetworksite.MobileNetworkSite_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ mobilenetworksite.MobileNetworkSite_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSite.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksite"
 
 mobilenetworksite.MobileNetworkSite_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ mobilenetworksite.MobileNetworkSite_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSite.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksite"
 
 mobilenetworksite.MobileNetworkSite_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -501,7 +501,7 @@ The construct id used in the generated config for the MobileNetworkSite to impor
 
 The id of the existing MobileNetworkSite that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -844,7 +844,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksite"
 
 &mobilenetworksite.MobileNetworkSiteConfig {
 	Connection: interface{},
@@ -859,7 +859,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mobilenetworksite
 	Name: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.mobileNetworkSite.MobileNetworkSiteTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mobileNetworkSite.MobileNetworkSiteTimeouts,
 }
 ```
 
@@ -874,11 +874,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mobilenetworksite
 | <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#location MobileNetworkSite#location}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.mobileNetworkId">MobileNetworkId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#mobile_network_id MobileNetworkSite#mobile_network_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#name MobileNetworkSite#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#id MobileNetworkSite#id}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#tags MobileNetworkSite#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#location MobileNetworkSite#location}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.mobileNetworkId">MobileNetworkId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#mobile_network_id MobileNetworkSite#mobile_network_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#name MobileNetworkSite#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#id MobileNetworkSite#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#tags MobileNetworkSite#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteTimeouts">MobileNetworkSiteTimeouts</a></code> | timeouts block. |
 
 ---
@@ -961,7 +961,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#location MobileNetworkSite#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#location MobileNetworkSite#location}.
 
 ---
 
@@ -973,7 +973,7 @@ MobileNetworkId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#mobile_network_id MobileNetworkSite#mobile_network_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#mobile_network_id MobileNetworkSite#mobile_network_id}.
 
 ---
 
@@ -985,7 +985,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#name MobileNetworkSite#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#name MobileNetworkSite#name}.
 
 ---
 
@@ -997,7 +997,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#id MobileNetworkSite#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#id MobileNetworkSite#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1012,7 +1012,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#tags MobileNetworkSite#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#tags MobileNetworkSite#tags}.
 
 ---
 
@@ -1026,7 +1026,7 @@ Timeouts MobileNetworkSiteTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#timeouts MobileNetworkSite#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#timeouts MobileNetworkSite#timeouts}
 
 ---
 
@@ -1035,7 +1035,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksite"
 
 &mobilenetworksite.MobileNetworkSiteTimeouts {
 	Create: *string,
@@ -1049,10 +1049,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mobilenetworksite
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#create MobileNetworkSite#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#delete MobileNetworkSite#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#read MobileNetworkSite#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#update MobileNetworkSite#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#create MobileNetworkSite#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#delete MobileNetworkSite#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#read MobileNetworkSite#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#update MobileNetworkSite#update}. |
 
 ---
 
@@ -1064,7 +1064,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#create MobileNetworkSite#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#create MobileNetworkSite#create}.
 
 ---
 
@@ -1076,7 +1076,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#delete MobileNetworkSite#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#delete MobileNetworkSite#delete}.
 
 ---
 
@@ -1088,7 +1088,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#read MobileNetworkSite#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#read MobileNetworkSite#read}.
 
 ---
 
@@ -1100,7 +1100,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/mobile_network_site#update MobileNetworkSite#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/mobile_network_site#update MobileNetworkSite#update}.
 
 ---
 
@@ -1111,7 +1111,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkSite.MobileNetworkSiteTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksite"
 
 mobilenetworksite.NewMobileNetworkSiteTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MobileNetworkSiteTimeoutsOutputReference
 ```

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,64 +8,68 @@ import * as cdktf from 'cdktf';
 
 export interface DataProtectionBackupVaultConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#cross_region_restore_enabled DataProtectionBackupVault#cross_region_restore_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#cross_region_restore_enabled DataProtectionBackupVault#cross_region_restore_enabled}
   */
   readonly crossRegionRestoreEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#datastore_type DataProtectionBackupVault#datastore_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#datastore_type DataProtectionBackupVault#datastore_type}
   */
   readonly datastoreType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#id DataProtectionBackupVault#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#id DataProtectionBackupVault#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#location DataProtectionBackupVault#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#immutability DataProtectionBackupVault#immutability}
+  */
+  readonly immutability?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#location DataProtectionBackupVault#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#name DataProtectionBackupVault#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#name DataProtectionBackupVault#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#redundancy DataProtectionBackupVault#redundancy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#redundancy DataProtectionBackupVault#redundancy}
   */
   readonly redundancy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#resource_group_name DataProtectionBackupVault#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#resource_group_name DataProtectionBackupVault#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#retention_duration_in_days DataProtectionBackupVault#retention_duration_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#retention_duration_in_days DataProtectionBackupVault#retention_duration_in_days}
   */
   readonly retentionDurationInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#soft_delete DataProtectionBackupVault#soft_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#soft_delete DataProtectionBackupVault#soft_delete}
   */
   readonly softDelete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#tags DataProtectionBackupVault#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#tags DataProtectionBackupVault#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#identity DataProtectionBackupVault#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#identity DataProtectionBackupVault#identity}
   */
   readonly identity?: DataProtectionBackupVaultIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#timeouts DataProtectionBackupVault#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#timeouts DataProtectionBackupVault#timeouts}
   */
   readonly timeouts?: DataProtectionBackupVaultTimeouts;
 }
 export interface DataProtectionBackupVaultIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#type DataProtectionBackupVault#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#type DataProtectionBackupVault#type}
   */
   readonly type: string;
 }
@@ -161,19 +160,19 @@ export class DataProtectionBackupVaultIdentityOutputReference extends cdktf.Comp
 }
 export interface DataProtectionBackupVaultTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#create DataProtectionBackupVault#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#create DataProtectionBackupVault#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#delete DataProtectionBackupVault#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#delete DataProtectionBackupVault#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#read DataProtectionBackupVault#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#read DataProtectionBackupVault#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#update DataProtectionBackupVault#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#update DataProtectionBackupVault#update}
   */
   readonly update?: string;
 }
@@ -354,7 +353,7 @@ export class DataProtectionBackupVaultTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault azurerm_data_protection_backup_vault}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault azurerm_data_protection_backup_vault}
 */
 export class DataProtectionBackupVault extends cdktf.TerraformResource {
 
@@ -370,7 +369,7 @@ export class DataProtectionBackupVault extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataProtectionBackupVault resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataProtectionBackupVault to import
-  * @param importFromId The id of the existing DataProtectionBackupVault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataProtectionBackupVault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataProtectionBackupVault to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -382,7 +381,7 @@ export class DataProtectionBackupVault extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/data_protection_backup_vault azurerm_data_protection_backup_vault} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/data_protection_backup_vault azurerm_data_protection_backup_vault} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -393,7 +392,7 @@ export class DataProtectionBackupVault extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_protection_backup_vault',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.15.0',
+        providerVersion: '4.16.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -407,6 +406,7 @@ export class DataProtectionBackupVault extends cdktf.TerraformResource {
     this._crossRegionRestoreEnabled = config.crossRegionRestoreEnabled;
     this._datastoreType = config.datastoreType;
     this._id = config.id;
+    this._immutability = config.immutability;
     this._location = config.location;
     this._name = config.name;
     this._redundancy = config.redundancy;
@@ -465,6 +465,22 @@ export class DataProtectionBackupVault extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // immutability - computed: false, optional: true, required: false
+  private _immutability?: string; 
+  public get immutability() {
+    return this.getStringAttribute('immutability');
+  }
+  public set immutability(value: string) {
+    this._immutability = value;
+  }
+  public resetImmutability() {
+    this._immutability = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get immutabilityInput() {
+    return this._immutability;
   }
 
   // location - computed: false, optional: false, required: true
@@ -608,6 +624,7 @@ export class DataProtectionBackupVault extends cdktf.TerraformResource {
       cross_region_restore_enabled: cdktf.booleanToTerraform(this._crossRegionRestoreEnabled),
       datastore_type: cdktf.stringToTerraform(this._datastoreType),
       id: cdktf.stringToTerraform(this._id),
+      immutability: cdktf.stringToTerraform(this._immutability),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       redundancy: cdktf.stringToTerraform(this._redundancy),
@@ -636,6 +653,12 @@ export class DataProtectionBackupVault extends cdktf.TerraformResource {
       },
       id: {
         value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      immutability: {
+        value: cdktf.stringToHclTerraform(this._immutability),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

@@ -4,7 +4,7 @@
 
 ### DataAzurermDatabaseMigrationProject <a name="DataAzurermDatabaseMigrationProject" id="@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProject"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/database_migration_project azurerm_database_migration_project}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/database_migration_project azurerm_database_migration_project}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProject.Initializer"></a>
 
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermDatabaseMigrati
 
 The id of the existing DataAzurermDatabaseMigrationProject that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/database_migration_project#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/database_migration_project#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -740,10 +740,10 @@ const dataAzurermDatabaseMigrationProjectConfig: dataAzurermDatabaseMigrationPro
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/database_migration_project#name DataAzurermDatabaseMigrationProject#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/database_migration_project#resource_group_name DataAzurermDatabaseMigrationProject#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectConfig.property.serviceName">serviceName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/database_migration_project#service_name DataAzurermDatabaseMigrationProject#service_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/database_migration_project#id DataAzurermDatabaseMigrationProject#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/database_migration_project#name DataAzurermDatabaseMigrationProject#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/database_migration_project#resource_group_name DataAzurermDatabaseMigrationProject#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectConfig.property.serviceName">serviceName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/database_migration_project#service_name DataAzurermDatabaseMigrationProject#service_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/database_migration_project#id DataAzurermDatabaseMigrationProject#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectTimeouts">DataAzurermDatabaseMigrationProjectTimeouts</a></code> | timeouts block. |
 
 ---
@@ -826,7 +826,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/database_migration_project#name DataAzurermDatabaseMigrationProject#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/database_migration_project#name DataAzurermDatabaseMigrationProject#name}.
 
 ---
 
@@ -838,7 +838,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/database_migration_project#resource_group_name DataAzurermDatabaseMigrationProject#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/database_migration_project#resource_group_name DataAzurermDatabaseMigrationProject#resource_group_name}.
 
 ---
 
@@ -850,7 +850,7 @@ public readonly serviceName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/database_migration_project#service_name DataAzurermDatabaseMigrationProject#service_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/database_migration_project#service_name DataAzurermDatabaseMigrationProject#service_name}.
 
 ---
 
@@ -862,7 +862,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/database_migration_project#id DataAzurermDatabaseMigrationProject#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/database_migration_project#id DataAzurermDatabaseMigrationProject#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -879,7 +879,7 @@ public readonly timeouts: DataAzurermDatabaseMigrationProjectTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/database_migration_project#timeouts DataAzurermDatabaseMigrationProject#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/database_migration_project#timeouts DataAzurermDatabaseMigrationProject#timeouts}
 
 ---
 
@@ -897,7 +897,7 @@ const dataAzurermDatabaseMigrationProjectTimeouts: dataAzurermDatabaseMigrationP
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/database_migration_project#read DataAzurermDatabaseMigrationProject#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDatabaseMigrationProject.DataAzurermDatabaseMigrationProjectTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/database_migration_project#read DataAzurermDatabaseMigrationProject#read}. |
 
 ---
 
@@ -909,7 +909,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/database_migration_project#read DataAzurermDatabaseMigrationProject#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/database_migration_project#read DataAzurermDatabaseMigrationProject#read}.
 
 ---
 

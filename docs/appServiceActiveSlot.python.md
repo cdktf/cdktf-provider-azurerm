@@ -4,7 +4,7 @@
 
 ### AppServiceActiveSlot <a name="AppServiceActiveSlot" id="@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot azurerm_app_service_active_slot}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot azurerm_app_service_active_slot}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot.Initializer"></a>
 
@@ -40,10 +40,10 @@ appServiceActiveSlot.AppServiceActiveSlot(
 | <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot.Initializer.parameter.appServiceName">app_service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#app_service_name AppServiceActiveSlot#app_service_name}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot.Initializer.parameter.appServiceSlotName">app_service_slot_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#app_service_slot_name AppServiceActiveSlot#app_service_slot_name}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#resource_group_name AppServiceActiveSlot#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#id AppServiceActiveSlot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot.Initializer.parameter.appServiceName">app_service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#app_service_name AppServiceActiveSlot#app_service_name}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot.Initializer.parameter.appServiceSlotName">app_service_slot_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#app_service_slot_name AppServiceActiveSlot#app_service_slot_name}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#resource_group_name AppServiceActiveSlot#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#id AppServiceActiveSlot#id}. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlot.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotTimeouts">AppServiceActiveSlotTimeouts</a></code> | timeouts block. |
 
 ---
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#app_service_name AppServiceActiveSlot#app_service_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#app_service_name AppServiceActiveSlot#app_service_name}.
 
 ---
 
@@ -120,7 +120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#app_service_slot_name AppServiceActiveSlot#app_service_slot_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#app_service_slot_name AppServiceActiveSlot#app_service_slot_name}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#resource_group_name AppServiceActiveSlot#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#resource_group_name AppServiceActiveSlot#resource_group_name}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#id AppServiceActiveSlot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#id AppServiceActiveSlot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -149,7 +149,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#timeouts AppServiceActiveSlot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#timeouts AppServiceActiveSlot#timeouts}
 
 ---
 
@@ -526,7 +526,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#create AppServiceActiveSlot#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#create AppServiceActiveSlot#create}.
 
 ---
 
@@ -534,7 +534,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#delete AppServiceActiveSlot#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#delete AppServiceActiveSlot#delete}.
 
 ---
 
@@ -542,7 +542,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#read AppServiceActiveSlot#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#read AppServiceActiveSlot#read}.
 
 ---
 
@@ -550,7 +550,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#update AppServiceActiveSlot#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#update AppServiceActiveSlot#update}.
 
 ---
 
@@ -680,7 +680,7 @@ The construct id used in the generated config for the AppServiceActiveSlot to im
 
 The id of the existing AppServiceActiveSlot that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1019,10 +1019,10 @@ appServiceActiveSlot.AppServiceActiveSlotConfig(
 | <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotConfig.property.appServiceName">app_service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#app_service_name AppServiceActiveSlot#app_service_name}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotConfig.property.appServiceSlotName">app_service_slot_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#app_service_slot_name AppServiceActiveSlot#app_service_slot_name}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#resource_group_name AppServiceActiveSlot#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#id AppServiceActiveSlot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotConfig.property.appServiceName">app_service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#app_service_name AppServiceActiveSlot#app_service_name}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotConfig.property.appServiceSlotName">app_service_slot_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#app_service_slot_name AppServiceActiveSlot#app_service_slot_name}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#resource_group_name AppServiceActiveSlot#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#id AppServiceActiveSlot#id}. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotTimeouts">AppServiceActiveSlotTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1105,7 +1105,7 @@ app_service_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#app_service_name AppServiceActiveSlot#app_service_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#app_service_name AppServiceActiveSlot#app_service_name}.
 
 ---
 
@@ -1117,7 +1117,7 @@ app_service_slot_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#app_service_slot_name AppServiceActiveSlot#app_service_slot_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#app_service_slot_name AppServiceActiveSlot#app_service_slot_name}.
 
 ---
 
@@ -1129,7 +1129,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#resource_group_name AppServiceActiveSlot#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#resource_group_name AppServiceActiveSlot#resource_group_name}.
 
 ---
 
@@ -1141,7 +1141,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#id AppServiceActiveSlot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#id AppServiceActiveSlot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1158,7 +1158,7 @@ timeouts: AppServiceActiveSlotTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#timeouts AppServiceActiveSlot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#timeouts AppServiceActiveSlot#timeouts}
 
 ---
 
@@ -1181,10 +1181,10 @@ appServiceActiveSlot.AppServiceActiveSlotTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#create AppServiceActiveSlot#create}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#delete AppServiceActiveSlot#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#read AppServiceActiveSlot#read}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#update AppServiceActiveSlot#update}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#create AppServiceActiveSlot#create}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#delete AppServiceActiveSlot#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#read AppServiceActiveSlot#read}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceActiveSlot.AppServiceActiveSlotTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#update AppServiceActiveSlot#update}. |
 
 ---
 
@@ -1196,7 +1196,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#create AppServiceActiveSlot#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#create AppServiceActiveSlot#create}.
 
 ---
 
@@ -1208,7 +1208,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#delete AppServiceActiveSlot#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#delete AppServiceActiveSlot#delete}.
 
 ---
 
@@ -1220,7 +1220,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#read AppServiceActiveSlot#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#read AppServiceActiveSlot#read}.
 
 ---
 
@@ -1232,7 +1232,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/resources/app_service_active_slot#update AppServiceActiveSlot#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/app_service_active_slot#update AppServiceActiveSlot#update}.
 
 ---
 

@@ -4,12 +4,12 @@
 
 ### DataAzurermSentinelAlertRule <a name="DataAzurermSentinelAlertRule" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/sentinel_alert_rule azurerm_sentinel_alert_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/sentinel_alert_rule azurerm_sentinel_alert_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsentinelalertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertrule"
 
 dataazurermsentinelalertrule.NewDataAzurermSentinelAlertRule(scope Construct, id *string, config DataAzurermSentinelAlertRuleConfig) DataAzurermSentinelAlertRule
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsentinelalertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertrule"
 
 dataazurermsentinelalertrule.DataAzurermSentinelAlertRule_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsentinelalertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertrule"
 
 dataazurermsentinelalertrule.DataAzurermSentinelAlertRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermsentinelalertrule.DataAzurermSentinelAlertRule_IsTerraformElement(x i
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRule.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsentinelalertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertrule"
 
 dataazurermsentinelalertrule.DataAzurermSentinelAlertRule_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermsentinelalertrule.DataAzurermSentinelAlertRule_IsTerraformDataSource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsentinelalertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertrule"
 
 dataazurermsentinelalertrule.DataAzurermSentinelAlertRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermSentinelAlertRu
 
 The id of the existing DataAzurermSentinelAlertRule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/sentinel_alert_rule#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/sentinel_alert_rule#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -658,7 +658,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsentinelalertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertrule"
 
 &dataazurermsentinelalertrule.DataAzurermSentinelAlertRuleConfig {
 	Connection: interface{},
@@ -671,7 +671,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsentin
 	LogAnalyticsWorkspaceId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleTimeouts,
 }
 ```
 
@@ -686,9 +686,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsentin
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleConfig.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/sentinel_alert_rule#log_analytics_workspace_id DataAzurermSentinelAlertRule#log_analytics_workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/sentinel_alert_rule#name DataAzurermSentinelAlertRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/sentinel_alert_rule#id DataAzurermSentinelAlertRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleConfig.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/sentinel_alert_rule#log_analytics_workspace_id DataAzurermSentinelAlertRule#log_analytics_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/sentinel_alert_rule#name DataAzurermSentinelAlertRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/sentinel_alert_rule#id DataAzurermSentinelAlertRule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleTimeouts">DataAzurermSentinelAlertRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -771,7 +771,7 @@ LogAnalyticsWorkspaceId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/sentinel_alert_rule#log_analytics_workspace_id DataAzurermSentinelAlertRule#log_analytics_workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/sentinel_alert_rule#log_analytics_workspace_id DataAzurermSentinelAlertRule#log_analytics_workspace_id}.
 
 ---
 
@@ -783,7 +783,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/sentinel_alert_rule#name DataAzurermSentinelAlertRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/sentinel_alert_rule#name DataAzurermSentinelAlertRule#name}.
 
 ---
 
@@ -795,7 +795,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/sentinel_alert_rule#id DataAzurermSentinelAlertRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/sentinel_alert_rule#id DataAzurermSentinelAlertRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -812,7 +812,7 @@ Timeouts DataAzurermSentinelAlertRuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/sentinel_alert_rule#timeouts DataAzurermSentinelAlertRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/sentinel_alert_rule#timeouts DataAzurermSentinelAlertRule#timeouts}
 
 ---
 
@@ -821,7 +821,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsentinelalertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertrule"
 
 &dataazurermsentinelalertrule.DataAzurermSentinelAlertRuleTimeouts {
 	Read: *string,
@@ -832,7 +832,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsentin
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/sentinel_alert_rule#read DataAzurermSentinelAlertRule#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/sentinel_alert_rule#read DataAzurermSentinelAlertRule#read}. |
 
 ---
 
@@ -844,7 +844,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.15.0/docs/data-sources/sentinel_alert_rule#read DataAzurermSentinelAlertRule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/sentinel_alert_rule#read DataAzurermSentinelAlertRule#read}.
 
 ---
 
@@ -855,7 +855,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSentinelAlertRule.DataAzurermSentinelAlertRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermsentinelalertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsentinelalertrule"
 
 dataazurermsentinelalertrule.NewDataAzurermSentinelAlertRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermSentinelAlertRuleTimeoutsOutputReference
 ```
