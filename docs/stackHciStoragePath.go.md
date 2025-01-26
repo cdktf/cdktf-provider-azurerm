@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/stackhcistoragepath"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/stackhcistoragepath"
 
 stackhcistoragepath.NewStackHciStoragePath(scope Construct, id *string, config StackHciStoragePathConfig) StackHciStoragePath
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/stackhcistoragepath"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/stackhcistoragepath"
 
 stackhcistoragepath.StackHciStoragePath_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/stackhcistoragepath"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/stackhcistoragepath"
 
 stackhcistoragepath.StackHciStoragePath_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ stackhcistoragepath.StackHciStoragePath_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/stackhcistoragepath"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/stackhcistoragepath"
 
 stackhcistoragepath.StackHciStoragePath_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ stackhcistoragepath.StackHciStoragePath_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/stackhcistoragepath"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/stackhcistoragepath"
 
 stackhcistoragepath.StackHciStoragePath_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -877,7 +877,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/stackhcistoragepath"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/stackhcistoragepath"
 
 &stackhcistoragepath.StackHciStoragePathConfig {
 	Connection: interface{},
@@ -894,7 +894,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/stackhcistoragepa
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.stackHciStoragePath.StackHciStoragePathTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.stackHciStoragePath.StackHciStoragePathTimeouts,
 }
 ```
 
@@ -1096,7 +1096,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/stackhcistoragepath"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/stackhcistoragepath"
 
 &stackhcistoragepath.StackHciStoragePathTimeouts {
 	Create: *string,
@@ -1172,7 +1172,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/stackhcistoragepath"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/stackhcistoragepath"
 
 stackhcistoragepath.NewStackHciStoragePathTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StackHciStoragePathTimeoutsOutputReference
 ```
