@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_servers
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_servers
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermOracleDbServersConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_servers#cloud_exadata_infrastructure_name DataAzurermOracleDbServers#cloud_exadata_infrastructure_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_servers#cloud_exadata_infrastructure_name DataAzurermOracleDbServers#cloud_exadata_infrastructure_name}
   */
   readonly cloudExadataInfrastructureName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_servers#id DataAzurermOracleDbServers#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_servers#id DataAzurermOracleDbServers#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_servers#resource_group_name DataAzurermOracleDbServers#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_servers#resource_group_name DataAzurermOracleDbServers#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_servers#timeouts DataAzurermOracleDbServers#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_servers#timeouts DataAzurermOracleDbServers#timeouts}
   */
   readonly timeouts?: DataAzurermOracleDbServersTimeouts;
 }
@@ -196,7 +196,7 @@ export class DataAzurermOracleDbServersDbServersList extends cdktf.ComplexList {
 }
 export interface DataAzurermOracleDbServersTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_servers#read DataAzurermOracleDbServers#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_servers#read DataAzurermOracleDbServers#read}
   */
   readonly read?: string;
 }
@@ -290,7 +290,7 @@ export class DataAzurermOracleDbServersTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_servers azurerm_oracle_db_servers}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_servers azurerm_oracle_db_servers}
 */
 export class DataAzurermOracleDbServers extends cdktf.TerraformDataSource {
 
@@ -306,7 +306,7 @@ export class DataAzurermOracleDbServers extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermOracleDbServers resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermOracleDbServers to import
-  * @param importFromId The id of the existing DataAzurermOracleDbServers that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_servers#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermOracleDbServers that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_servers#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermOracleDbServers to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -318,7 +318,7 @@ export class DataAzurermOracleDbServers extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_servers azurerm_oracle_db_servers} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_servers azurerm_oracle_db_servers} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -329,7 +329,7 @@ export class DataAzurermOracleDbServers extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_oracle_db_servers',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.16.0',
+        providerVersion: '4.17.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/chaos_studio_capability
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,15 +13,15 @@ import * as cdktf from 'cdktf';
 
 export interface ChaosStudioCapabilityConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#capability_type ChaosStudioCapability#capability_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/chaos_studio_capability#capability_type ChaosStudioCapability#capability_type}
   */
   readonly capabilityType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#chaos_studio_target_id ChaosStudioCapability#chaos_studio_target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/chaos_studio_capability#chaos_studio_target_id ChaosStudioCapability#chaos_studio_target_id}
   */
   readonly chaosStudioTargetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#id ChaosStudioCapability#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/chaos_studio_capability#id ChaosStudioCapability#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -30,21 +30,21 @@ export interface ChaosStudioCapabilityConfig extends cdktf.TerraformMetaArgument
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#timeouts ChaosStudioCapability#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/chaos_studio_capability#timeouts ChaosStudioCapability#timeouts}
   */
   readonly timeouts?: ChaosStudioCapabilityTimeouts;
 }
 export interface ChaosStudioCapabilityTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#create ChaosStudioCapability#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/chaos_studio_capability#create ChaosStudioCapability#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#delete ChaosStudioCapability#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/chaos_studio_capability#delete ChaosStudioCapability#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#read ChaosStudioCapability#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/chaos_studio_capability#read ChaosStudioCapability#read}
   */
   readonly read?: string;
 }
@@ -196,7 +196,7 @@ export class ChaosStudioCapabilityTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability azurerm_chaos_studio_capability}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/chaos_studio_capability azurerm_chaos_studio_capability}
 */
 export class ChaosStudioCapability extends cdktf.TerraformResource {
 
@@ -212,7 +212,7 @@ export class ChaosStudioCapability extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ChaosStudioCapability resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ChaosStudioCapability to import
-  * @param importFromId The id of the existing ChaosStudioCapability that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ChaosStudioCapability that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/chaos_studio_capability#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ChaosStudioCapability to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -224,7 +224,7 @@ export class ChaosStudioCapability extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/chaos_studio_capability azurerm_chaos_studio_capability} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/chaos_studio_capability azurerm_chaos_studio_capability} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -235,7 +235,7 @@ export class ChaosStudioCapability extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_chaos_studio_capability',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.16.0',
+        providerVersion: '4.17.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
