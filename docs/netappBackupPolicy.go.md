@@ -4,12 +4,12 @@
 
 ### NetappBackupPolicy <a name="NetappBackupPolicy" id="@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy azurerm_netapp_backup_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy azurerm_netapp_backup_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappbackuppolicy"
 
 netappbackuppolicy.NewNetappBackupPolicy(scope Construct, id *string, config NetappBackupPolicyConfig) NetappBackupPolicy
 ```
@@ -440,7 +440,7 @@ func ResetWeeklyBackupsToKeep()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappbackuppolicy"
 
 netappbackuppolicy.NetappBackupPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappbackuppolicy"
 
 netappbackuppolicy.NetappBackupPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ netappbackuppolicy.NetappBackupPolicy_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappbackuppolicy"
 
 netappbackuppolicy.NetappBackupPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -500,7 +500,7 @@ netappbackuppolicy.NetappBackupPolicy_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappbackuppolicy"
 
 netappbackuppolicy.NetappBackupPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -529,7 +529,7 @@ The construct id used in the generated config for the NetappBackupPolicy to impo
 
 The id of the existing NetappBackupPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -971,7 +971,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappbackuppolicy"
 
 &netappbackuppolicy.NetappBackupPolicyConfig {
 	Connection: interface{},
@@ -990,7 +990,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappbackuppolic
 	Id: *string,
 	MonthlyBackupsToKeep: *f64,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.netappBackupPolicy.NetappBackupPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappBackupPolicy.NetappBackupPolicyTimeouts,
 	WeeklyBackupsToKeep: *f64,
 }
 ```
@@ -1006,17 +1006,17 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappbackuppolic
 | <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#account_name NetappBackupPolicy#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#location NetappBackupPolicy#location}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#name NetappBackupPolicy#name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#resource_group_name NetappBackupPolicy#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.dailyBackupsToKeep">DailyBackupsToKeep</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#daily_backups_to_keep NetappBackupPolicy#daily_backups_to_keep}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.enabled">Enabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#enabled NetappBackupPolicy#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#id NetappBackupPolicy#id}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.monthlyBackupsToKeep">MonthlyBackupsToKeep</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#monthly_backups_to_keep NetappBackupPolicy#monthly_backups_to_keep}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#tags NetappBackupPolicy#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#account_name NetappBackupPolicy#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#location NetappBackupPolicy#location}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#name NetappBackupPolicy#name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#resource_group_name NetappBackupPolicy#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.dailyBackupsToKeep">DailyBackupsToKeep</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#daily_backups_to_keep NetappBackupPolicy#daily_backups_to_keep}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.enabled">Enabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#enabled NetappBackupPolicy#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#id NetappBackupPolicy#id}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.monthlyBackupsToKeep">MonthlyBackupsToKeep</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#monthly_backups_to_keep NetappBackupPolicy#monthly_backups_to_keep}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#tags NetappBackupPolicy#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyTimeouts">NetappBackupPolicyTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.weeklyBackupsToKeep">WeeklyBackupsToKeep</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#weekly_backups_to_keep NetappBackupPolicy#weekly_backups_to_keep}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyConfig.property.weeklyBackupsToKeep">WeeklyBackupsToKeep</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#weekly_backups_to_keep NetappBackupPolicy#weekly_backups_to_keep}. |
 
 ---
 
@@ -1098,7 +1098,7 @@ AccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#account_name NetappBackupPolicy#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#account_name NetappBackupPolicy#account_name}.
 
 ---
 
@@ -1110,7 +1110,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#location NetappBackupPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#location NetappBackupPolicy#location}.
 
 ---
 
@@ -1122,7 +1122,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#name NetappBackupPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#name NetappBackupPolicy#name}.
 
 ---
 
@@ -1134,7 +1134,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#resource_group_name NetappBackupPolicy#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#resource_group_name NetappBackupPolicy#resource_group_name}.
 
 ---
 
@@ -1146,7 +1146,7 @@ DailyBackupsToKeep *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#daily_backups_to_keep NetappBackupPolicy#daily_backups_to_keep}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#daily_backups_to_keep NetappBackupPolicy#daily_backups_to_keep}.
 
 ---
 
@@ -1158,7 +1158,7 @@ Enabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#enabled NetappBackupPolicy#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#enabled NetappBackupPolicy#enabled}.
 
 ---
 
@@ -1170,7 +1170,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#id NetappBackupPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#id NetappBackupPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1185,7 +1185,7 @@ MonthlyBackupsToKeep *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#monthly_backups_to_keep NetappBackupPolicy#monthly_backups_to_keep}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#monthly_backups_to_keep NetappBackupPolicy#monthly_backups_to_keep}.
 
 ---
 
@@ -1197,7 +1197,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#tags NetappBackupPolicy#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#tags NetappBackupPolicy#tags}.
 
 ---
 
@@ -1211,7 +1211,7 @@ Timeouts NetappBackupPolicyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#timeouts NetappBackupPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#timeouts NetappBackupPolicy#timeouts}
 
 ---
 
@@ -1223,7 +1223,7 @@ WeeklyBackupsToKeep *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#weekly_backups_to_keep NetappBackupPolicy#weekly_backups_to_keep}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#weekly_backups_to_keep NetappBackupPolicy#weekly_backups_to_keep}.
 
 ---
 
@@ -1232,7 +1232,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappbackuppolicy"
 
 &netappbackuppolicy.NetappBackupPolicyTimeouts {
 	Create: *string,
@@ -1246,10 +1246,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappbackuppolic
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#create NetappBackupPolicy#create}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#delete NetappBackupPolicy#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#read NetappBackupPolicy#read}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#update NetappBackupPolicy#update}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#create NetappBackupPolicy#create}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#delete NetappBackupPolicy#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#read NetappBackupPolicy#read}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#update NetappBackupPolicy#update}. |
 
 ---
 
@@ -1261,7 +1261,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#create NetappBackupPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#create NetappBackupPolicy#create}.
 
 ---
 
@@ -1273,7 +1273,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#delete NetappBackupPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#delete NetappBackupPolicy#delete}.
 
 ---
 
@@ -1285,7 +1285,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#read NetappBackupPolicy#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#read NetappBackupPolicy#read}.
 
 ---
 
@@ -1297,7 +1297,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/resources/netapp_backup_policy#update NetappBackupPolicy#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/netapp_backup_policy#update NetappBackupPolicy#update}.
 
 ---
 
@@ -1308,7 +1308,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappBackupPolicy.NetappBackupPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappbackuppolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappbackuppolicy"
 
 netappbackuppolicy.NewNetappBackupPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappBackupPolicyTimeoutsOutputReference
 ```

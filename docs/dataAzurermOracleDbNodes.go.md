@@ -4,12 +4,12 @@
 
 ### DataAzurermOracleDbNodes <a name="DataAzurermOracleDbNodes" id="@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodes"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_nodes azurerm_oracle_db_nodes}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_nodes azurerm_oracle_db_nodes}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracledbnodes"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracledbnodes"
 
 dataazurermoracledbnodes.NewDataAzurermOracleDbNodes(scope Construct, id *string, config DataAzurermOracleDbNodesConfig) DataAzurermOracleDbNodes
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodes.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracledbnodes"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracledbnodes"
 
 dataazurermoracledbnodes.DataAzurermOracleDbNodes_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodes.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracledbnodes"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracledbnodes"
 
 dataazurermoracledbnodes.DataAzurermOracleDbNodes_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermoracledbnodes.DataAzurermOracleDbNodes_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodes.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracledbnodes"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracledbnodes"
 
 dataazurermoracledbnodes.DataAzurermOracleDbNodes_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermoracledbnodes.DataAzurermOracleDbNodes_IsTerraformDataSource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodes.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracledbnodes"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracledbnodes"
 
 dataazurermoracledbnodes.DataAzurermOracleDbNodes_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermOracleDbNodes t
 
 The id of the existing DataAzurermOracleDbNodes that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_nodes#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_nodes#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -647,7 +647,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracledbnodes"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracledbnodes"
 
 &dataazurermoracledbnodes.DataAzurermOracleDbNodesConfig {
 	Connection: interface{},
@@ -659,7 +659,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracle
 	Provisioners: *[]interface{},
 	CloudVmClusterId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesTimeouts,
 }
 ```
 
@@ -674,8 +674,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracle
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesConfig.property.cloudVmClusterId">CloudVmClusterId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_nodes#cloud_vm_cluster_id DataAzurermOracleDbNodes#cloud_vm_cluster_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_nodes#id DataAzurermOracleDbNodes#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesConfig.property.cloudVmClusterId">CloudVmClusterId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_nodes#cloud_vm_cluster_id DataAzurermOracleDbNodes#cloud_vm_cluster_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_nodes#id DataAzurermOracleDbNodes#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesTimeouts">DataAzurermOracleDbNodesTimeouts</a></code> | timeouts block. |
 
 ---
@@ -758,7 +758,7 @@ CloudVmClusterId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_nodes#cloud_vm_cluster_id DataAzurermOracleDbNodes#cloud_vm_cluster_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_nodes#cloud_vm_cluster_id DataAzurermOracleDbNodes#cloud_vm_cluster_id}.
 
 ---
 
@@ -770,7 +770,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_nodes#id DataAzurermOracleDbNodes#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_nodes#id DataAzurermOracleDbNodes#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -787,7 +787,7 @@ Timeouts DataAzurermOracleDbNodesTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_nodes#timeouts DataAzurermOracleDbNodes#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_nodes#timeouts DataAzurermOracleDbNodes#timeouts}
 
 ---
 
@@ -796,7 +796,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesDbNodes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracledbnodes"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracledbnodes"
 
 &dataazurermoracledbnodes.DataAzurermOracleDbNodesDbNodes {
 
@@ -809,7 +809,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracle
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracledbnodes"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracledbnodes"
 
 &dataazurermoracledbnodes.DataAzurermOracleDbNodesTimeouts {
 	Read: *string,
@@ -820,7 +820,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracle
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_nodes#read DataAzurermOracleDbNodes#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_nodes#read DataAzurermOracleDbNodes#read}. |
 
 ---
 
@@ -832,7 +832,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.16.0/docs/data-sources/oracle_db_nodes#read DataAzurermOracleDbNodes#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/oracle_db_nodes#read DataAzurermOracleDbNodes#read}.
 
 ---
 
@@ -843,7 +843,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesDbNodesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracledbnodes"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracledbnodes"
 
 dataazurermoracledbnodes.NewDataAzurermOracleDbNodesDbNodesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermOracleDbNodesDbNodesList
 ```
@@ -992,7 +992,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesDbNodesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracledbnodes"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracledbnodes"
 
 dataazurermoracledbnodes.NewDataAzurermOracleDbNodesDbNodesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermOracleDbNodesDbNodesOutputReference
 ```
@@ -1501,7 +1501,7 @@ func InternalValue() DataAzurermOracleDbNodesDbNodes
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleDbNodes.DataAzurermOracleDbNodesTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoracledbnodes"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracledbnodes"
 
 dataazurermoracledbnodes.NewDataAzurermOracleDbNodesTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermOracleDbNodesTimeoutsOutputReference
 ```
