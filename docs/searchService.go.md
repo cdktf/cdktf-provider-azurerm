@@ -4,7 +4,7 @@
 
 ### SearchService <a name="SearchService" id="@cdktf/provider-azurerm.searchService.SearchService"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service azurerm_search_service}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service azurerm_search_service}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.searchService.SearchService.Initializer"></a>
 
@@ -591,7 +591,7 @@ The construct id used in the generated config for the SearchService to import.
 
 The id of the existing SearchService that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1273,23 +1273,23 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/searchservice"
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#location SearchService#location}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#name SearchService#name}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#resource_group_name SearchService#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.sku">Sku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#sku SearchService#sku}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.allowedIps">AllowedIps</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#allowed_ips SearchService#allowed_ips}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.authenticationFailureMode">AuthenticationFailureMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#authentication_failure_mode SearchService#authentication_failure_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.customerManagedKeyEnforcementEnabled">CustomerManagedKeyEnforcementEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#customer_managed_key_enforcement_enabled SearchService#customer_managed_key_enforcement_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.hostingMode">HostingMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#hosting_mode SearchService#hosting_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#id SearchService#id}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#location SearchService#location}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#name SearchService#name}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#resource_group_name SearchService#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.sku">Sku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#sku SearchService#sku}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.allowedIps">AllowedIps</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#allowed_ips SearchService#allowed_ips}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.authenticationFailureMode">AuthenticationFailureMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#authentication_failure_mode SearchService#authentication_failure_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.customerManagedKeyEnforcementEnabled">CustomerManagedKeyEnforcementEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#customer_managed_key_enforcement_enabled SearchService#customer_managed_key_enforcement_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.hostingMode">HostingMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#hosting_mode SearchService#hosting_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#id SearchService#id}. |
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceIdentity">SearchServiceIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.localAuthenticationEnabled">LocalAuthenticationEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#local_authentication_enabled SearchService#local_authentication_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.networkRuleBypassOption">NetworkRuleBypassOption</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#network_rule_bypass_option SearchService#network_rule_bypass_option}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.partitionCount">PartitionCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#partition_count SearchService#partition_count}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#public_network_access_enabled SearchService#public_network_access_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.replicaCount">ReplicaCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#replica_count SearchService#replica_count}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.semanticSearchSku">SemanticSearchSku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#semantic_search_sku SearchService#semantic_search_sku}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#tags SearchService#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.localAuthenticationEnabled">LocalAuthenticationEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#local_authentication_enabled SearchService#local_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.networkRuleBypassOption">NetworkRuleBypassOption</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#network_rule_bypass_option SearchService#network_rule_bypass_option}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.partitionCount">PartitionCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#partition_count SearchService#partition_count}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#public_network_access_enabled SearchService#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.replicaCount">ReplicaCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#replica_count SearchService#replica_count}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.semanticSearchSku">SemanticSearchSku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#semantic_search_sku SearchService#semantic_search_sku}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#tags SearchService#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceTimeouts">SearchServiceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1372,7 +1372,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#location SearchService#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#location SearchService#location}.
 
 ---
 
@@ -1384,7 +1384,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#name SearchService#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#name SearchService#name}.
 
 ---
 
@@ -1396,7 +1396,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#resource_group_name SearchService#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#resource_group_name SearchService#resource_group_name}.
 
 ---
 
@@ -1408,7 +1408,7 @@ Sku *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#sku SearchService#sku}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#sku SearchService#sku}.
 
 ---
 
@@ -1420,7 +1420,7 @@ AllowedIps *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#allowed_ips SearchService#allowed_ips}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#allowed_ips SearchService#allowed_ips}.
 
 ---
 
@@ -1432,7 +1432,7 @@ AuthenticationFailureMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#authentication_failure_mode SearchService#authentication_failure_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#authentication_failure_mode SearchService#authentication_failure_mode}.
 
 ---
 
@@ -1444,7 +1444,7 @@ CustomerManagedKeyEnforcementEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#customer_managed_key_enforcement_enabled SearchService#customer_managed_key_enforcement_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#customer_managed_key_enforcement_enabled SearchService#customer_managed_key_enforcement_enabled}.
 
 ---
 
@@ -1456,7 +1456,7 @@ HostingMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#hosting_mode SearchService#hosting_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#hosting_mode SearchService#hosting_mode}.
 
 ---
 
@@ -1468,7 +1468,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#id SearchService#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#id SearchService#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1485,7 +1485,7 @@ Identity SearchServiceIdentity
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#identity SearchService#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#identity SearchService#identity}
 
 ---
 
@@ -1497,7 +1497,7 @@ LocalAuthenticationEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#local_authentication_enabled SearchService#local_authentication_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#local_authentication_enabled SearchService#local_authentication_enabled}.
 
 ---
 
@@ -1509,7 +1509,7 @@ NetworkRuleBypassOption *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#network_rule_bypass_option SearchService#network_rule_bypass_option}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#network_rule_bypass_option SearchService#network_rule_bypass_option}.
 
 ---
 
@@ -1521,7 +1521,7 @@ PartitionCount *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#partition_count SearchService#partition_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#partition_count SearchService#partition_count}.
 
 ---
 
@@ -1533,7 +1533,7 @@ PublicNetworkAccessEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#public_network_access_enabled SearchService#public_network_access_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#public_network_access_enabled SearchService#public_network_access_enabled}.
 
 ---
 
@@ -1545,7 +1545,7 @@ ReplicaCount *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#replica_count SearchService#replica_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#replica_count SearchService#replica_count}.
 
 ---
 
@@ -1557,7 +1557,7 @@ SemanticSearchSku *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#semantic_search_sku SearchService#semantic_search_sku}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#semantic_search_sku SearchService#semantic_search_sku}.
 
 ---
 
@@ -1569,7 +1569,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#tags SearchService#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#tags SearchService#tags}.
 
 ---
 
@@ -1583,7 +1583,7 @@ Timeouts SearchServiceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#timeouts SearchService#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#timeouts SearchService#timeouts}
 
 ---
 
@@ -1604,8 +1604,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/searchservice"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#type SearchService#type}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#identity_ids SearchService#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#type SearchService#type}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#identity_ids SearchService#identity_ids}. |
 
 ---
 
@@ -1617,7 +1617,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#type SearchService#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#type SearchService#type}.
 
 ---
 
@@ -1629,7 +1629,7 @@ IdentityIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#identity_ids SearchService#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#identity_ids SearchService#identity_ids}.
 
 ---
 
@@ -1665,10 +1665,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/searchservice"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#create SearchService#create}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#delete SearchService#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#read SearchService#read}. |
-| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#update SearchService#update}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#create SearchService#create}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#delete SearchService#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#read SearchService#read}. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#update SearchService#update}. |
 
 ---
 
@@ -1680,7 +1680,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#create SearchService#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#create SearchService#create}.
 
 ---
 
@@ -1692,7 +1692,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#delete SearchService#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#delete SearchService#delete}.
 
 ---
 
@@ -1704,7 +1704,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#read SearchService#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#read SearchService#read}.
 
 ---
 
@@ -1716,7 +1716,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/search_service#update SearchService#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/search_service#update SearchService#update}.
 
 ---
 

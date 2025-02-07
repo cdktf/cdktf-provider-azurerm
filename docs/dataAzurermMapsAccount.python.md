@@ -4,7 +4,7 @@
 
 ### DataAzurermMapsAccount <a name="DataAzurermMapsAccount" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account azurerm_maps_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account azurerm_maps_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer"></a>
 
@@ -40,10 +40,10 @@ dataAzurermMapsAccount.DataAzurermMapsAccount(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#name DataAzurermMapsAccount#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#resource_group_name DataAzurermMapsAccount#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#id DataAzurermMapsAccount#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#tags DataAzurermMapsAccount#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#name DataAzurermMapsAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#resource_group_name DataAzurermMapsAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#id DataAzurermMapsAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#tags DataAzurermMapsAccount#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccount.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#name DataAzurermMapsAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#name DataAzurermMapsAccount#name}.
 
 ---
 
@@ -120,7 +120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#resource_group_name DataAzurermMapsAccount#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#resource_group_name DataAzurermMapsAccount#resource_group_name}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#id DataAzurermMapsAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#id DataAzurermMapsAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -139,7 +139,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#tags DataAzurermMapsAccount#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#tags DataAzurermMapsAccount#tags}.
 
 ---
 
@@ -149,7 +149,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#timeouts DataAzurermMapsAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#timeouts DataAzurermMapsAccount#timeouts}
 
 ---
 
@@ -410,7 +410,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#read DataAzurermMapsAccount#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#read DataAzurermMapsAccount#read}.
 
 ---
 
@@ -546,7 +546,7 @@ The construct id used in the generated config for the DataAzurermMapsAccount to 
 
 The id of the existing DataAzurermMapsAccount that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -907,10 +907,10 @@ dataAzurermMapsAccount.DataAzurermMapsAccountConfig(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#name DataAzurermMapsAccount#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#resource_group_name DataAzurermMapsAccount#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#id DataAzurermMapsAccount#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#tags DataAzurermMapsAccount#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#name DataAzurermMapsAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#resource_group_name DataAzurermMapsAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#id DataAzurermMapsAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#tags DataAzurermMapsAccount#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts">DataAzurermMapsAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -993,7 +993,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#name DataAzurermMapsAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#name DataAzurermMapsAccount#name}.
 
 ---
 
@@ -1005,7 +1005,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#resource_group_name DataAzurermMapsAccount#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#resource_group_name DataAzurermMapsAccount#resource_group_name}.
 
 ---
 
@@ -1017,7 +1017,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#id DataAzurermMapsAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#id DataAzurermMapsAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1032,7 +1032,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#tags DataAzurermMapsAccount#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#tags DataAzurermMapsAccount#tags}.
 
 ---
 
@@ -1046,7 +1046,7 @@ timeouts: DataAzurermMapsAccountTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#timeouts DataAzurermMapsAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#timeouts DataAzurermMapsAccount#timeouts}
 
 ---
 
@@ -1066,7 +1066,7 @@ dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#read DataAzurermMapsAccount#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMapsAccount.DataAzurermMapsAccountTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#read DataAzurermMapsAccount#read}. |
 
 ---
 
@@ -1078,7 +1078,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/data-sources/maps_account#read DataAzurermMapsAccount#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/data-sources/maps_account#read DataAzurermMapsAccount#read}.
 
 ---
 

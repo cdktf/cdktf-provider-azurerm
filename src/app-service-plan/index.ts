@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,80 +13,80 @@ import * as cdktf from 'cdktf';
 
 export interface AppServicePlanConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#app_service_environment_id AppServicePlan#app_service_environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#app_service_environment_id AppServicePlan#app_service_environment_id}
   */
   readonly appServiceEnvironmentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#id AppServicePlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#id AppServicePlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#is_xenon AppServicePlan#is_xenon}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#is_xenon AppServicePlan#is_xenon}
   */
   readonly isXenon?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#kind AppServicePlan#kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#kind AppServicePlan#kind}
   */
   readonly kind?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#location AppServicePlan#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#location AppServicePlan#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#maximum_elastic_worker_count AppServicePlan#maximum_elastic_worker_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#maximum_elastic_worker_count AppServicePlan#maximum_elastic_worker_count}
   */
   readonly maximumElasticWorkerCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#name AppServicePlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#name AppServicePlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#per_site_scaling AppServicePlan#per_site_scaling}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#per_site_scaling AppServicePlan#per_site_scaling}
   */
   readonly perSiteScaling?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#reserved AppServicePlan#reserved}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#reserved AppServicePlan#reserved}
   */
   readonly reserved?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#resource_group_name AppServicePlan#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#resource_group_name AppServicePlan#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#tags AppServicePlan#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#tags AppServicePlan#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#zone_redundant AppServicePlan#zone_redundant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#zone_redundant AppServicePlan#zone_redundant}
   */
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * sku block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#sku AppServicePlan#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#sku AppServicePlan#sku}
   */
   readonly sku: AppServicePlanSku;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#timeouts AppServicePlan#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#timeouts AppServicePlan#timeouts}
   */
   readonly timeouts?: AppServicePlanTimeouts;
 }
 export interface AppServicePlanSku {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#capacity AppServicePlan#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#capacity AppServicePlan#capacity}
   */
   readonly capacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#size AppServicePlan#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#size AppServicePlan#size}
   */
   readonly size: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#tier AppServicePlan#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#tier AppServicePlan#tier}
   */
   readonly tier: string;
 }
@@ -222,19 +222,19 @@ export class AppServicePlanSkuOutputReference extends cdktf.ComplexObject {
 }
 export interface AppServicePlanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#create AppServicePlan#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#create AppServicePlan#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#delete AppServicePlan#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#delete AppServicePlan#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#read AppServicePlan#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#read AppServicePlan#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#update AppServicePlan#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#update AppServicePlan#update}
   */
   readonly update?: string;
 }
@@ -415,7 +415,7 @@ export class AppServicePlanTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan azurerm_app_service_plan}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan azurerm_app_service_plan}
 */
 export class AppServicePlan extends cdktf.TerraformResource {
 
@@ -431,7 +431,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AppServicePlan resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AppServicePlan to import
-  * @param importFromId The id of the existing AppServicePlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AppServicePlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AppServicePlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -443,7 +443,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/app_service_plan azurerm_app_service_plan} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/app_service_plan azurerm_app_service_plan} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -454,7 +454,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_service_plan',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.17.0',
+        providerVersion: '4.18.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

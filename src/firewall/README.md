@@ -1,3 +1,3 @@
 # `azurerm_firewall`
 
-Refer to the Terraform Registry for docs: [`azurerm_firewall`](https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/firewall).
+Refer to the Terraform Registry for docs: [`azurerm_firewall`](https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/firewall).
