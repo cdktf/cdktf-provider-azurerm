@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,90 +8,90 @@ import * as cdktf from 'cdktf';
 
 export interface ResourcePolicyAssignmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#description ResourcePolicyAssignment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#description ResourcePolicyAssignment#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#display_name ResourcePolicyAssignment#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#display_name ResourcePolicyAssignment#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#enforce ResourcePolicyAssignment#enforce}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#enforce ResourcePolicyAssignment#enforce}
   */
   readonly enforce?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#id ResourcePolicyAssignment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#id ResourcePolicyAssignment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#location ResourcePolicyAssignment#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#location ResourcePolicyAssignment#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#metadata ResourcePolicyAssignment#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#metadata ResourcePolicyAssignment#metadata}
   */
   readonly metadata?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#name ResourcePolicyAssignment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#name ResourcePolicyAssignment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#not_scopes ResourcePolicyAssignment#not_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#not_scopes ResourcePolicyAssignment#not_scopes}
   */
   readonly notScopes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#parameters ResourcePolicyAssignment#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#parameters ResourcePolicyAssignment#parameters}
   */
   readonly parameters?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#policy_definition_id ResourcePolicyAssignment#policy_definition_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#policy_definition_id ResourcePolicyAssignment#policy_definition_id}
   */
   readonly policyDefinitionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#resource_id ResourcePolicyAssignment#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#resource_id ResourcePolicyAssignment#resource_id}
   */
   readonly resourceId: string;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#identity ResourcePolicyAssignment#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#identity ResourcePolicyAssignment#identity}
   */
   readonly identity?: ResourcePolicyAssignmentIdentity;
   /**
   * non_compliance_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#non_compliance_message ResourcePolicyAssignment#non_compliance_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#non_compliance_message ResourcePolicyAssignment#non_compliance_message}
   */
   readonly nonComplianceMessage?: ResourcePolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable;
   /**
   * overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#overrides ResourcePolicyAssignment#overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#overrides ResourcePolicyAssignment#overrides}
   */
   readonly overrides?: ResourcePolicyAssignmentOverrides[] | cdktf.IResolvable;
   /**
   * resource_selectors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#resource_selectors ResourcePolicyAssignment#resource_selectors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#resource_selectors ResourcePolicyAssignment#resource_selectors}
   */
   readonly resourceSelectors?: ResourcePolicyAssignmentResourceSelectors[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#timeouts ResourcePolicyAssignment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#timeouts ResourcePolicyAssignment#timeouts}
   */
   readonly timeouts?: ResourcePolicyAssignmentTimeouts;
 }
 export interface ResourcePolicyAssignmentIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#identity_ids ResourcePolicyAssignment#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#identity_ids ResourcePolicyAssignment#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#type ResourcePolicyAssignment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#type ResourcePolicyAssignment#type}
   */
   readonly type: string;
 }
@@ -216,11 +211,11 @@ export class ResourcePolicyAssignmentIdentityOutputReference extends cdktf.Compl
 }
 export interface ResourcePolicyAssignmentNonComplianceMessage {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#content ResourcePolicyAssignment#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#content ResourcePolicyAssignment#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#policy_definition_reference_id ResourcePolicyAssignment#policy_definition_reference_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#policy_definition_reference_id ResourcePolicyAssignment#policy_definition_reference_id}
   */
   readonly policyDefinitionReferenceId?: string;
 }
@@ -362,11 +357,11 @@ export class ResourcePolicyAssignmentNonComplianceMessageList extends cdktf.Comp
 }
 export interface ResourcePolicyAssignmentOverridesSelectors {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#in ResourcePolicyAssignment#in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#in ResourcePolicyAssignment#in}
   */
   readonly in?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}
   */
   readonly notIn?: string[];
 }
@@ -516,13 +511,13 @@ export class ResourcePolicyAssignmentOverridesSelectorsList extends cdktf.Comple
 }
 export interface ResourcePolicyAssignmentOverrides {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#value ResourcePolicyAssignment#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#value ResourcePolicyAssignment#value}
   */
   readonly value: string;
   /**
   * selectors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#selectors ResourcePolicyAssignment#selectors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#selectors ResourcePolicyAssignment#selectors}
   */
   readonly selectors?: ResourcePolicyAssignmentOverridesSelectors[] | cdktf.IResolvable;
 }
@@ -664,15 +659,15 @@ export class ResourcePolicyAssignmentOverridesList extends cdktf.ComplexList {
 }
 export interface ResourcePolicyAssignmentResourceSelectorsSelectors {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#in ResourcePolicyAssignment#in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#in ResourcePolicyAssignment#in}
   */
   readonly in?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#kind ResourcePolicyAssignment#kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#kind ResourcePolicyAssignment#kind}
   */
   readonly kind: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#not_in ResourcePolicyAssignment#not_in}
   */
   readonly notIn?: string[];
 }
@@ -843,13 +838,13 @@ export class ResourcePolicyAssignmentResourceSelectorsSelectorsList extends cdkt
 }
 export interface ResourcePolicyAssignmentResourceSelectors {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#name ResourcePolicyAssignment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#name ResourcePolicyAssignment#name}
   */
   readonly name?: string;
   /**
   * selectors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#selectors ResourcePolicyAssignment#selectors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#selectors ResourcePolicyAssignment#selectors}
   */
   readonly selectors: ResourcePolicyAssignmentResourceSelectorsSelectors[] | cdktf.IResolvable;
 }
@@ -991,19 +986,19 @@ export class ResourcePolicyAssignmentResourceSelectorsList extends cdktf.Complex
 }
 export interface ResourcePolicyAssignmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#create ResourcePolicyAssignment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#create ResourcePolicyAssignment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#delete ResourcePolicyAssignment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#delete ResourcePolicyAssignment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#read ResourcePolicyAssignment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#read ResourcePolicyAssignment#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#update ResourcePolicyAssignment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#update ResourcePolicyAssignment#update}
   */
   readonly update?: string;
 }
@@ -1184,7 +1179,7 @@ export class ResourcePolicyAssignmentTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment azurerm_resource_policy_assignment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment azurerm_resource_policy_assignment}
 */
 export class ResourcePolicyAssignment extends cdktf.TerraformResource {
 
@@ -1200,7 +1195,7 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ResourcePolicyAssignment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ResourcePolicyAssignment to import
-  * @param importFromId The id of the existing ResourcePolicyAssignment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ResourcePolicyAssignment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ResourcePolicyAssignment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1212,7 +1207,7 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.17.0/docs/resources/resource_policy_assignment azurerm_resource_policy_assignment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/resource_policy_assignment azurerm_resource_policy_assignment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1223,7 +1218,7 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_resource_policy_assignment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.17.0',
+        providerVersion: '4.18.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
