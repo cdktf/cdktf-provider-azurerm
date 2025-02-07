@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.NewCosmosdbCassandraTable(scope Construct, id *string, config CosmosdbCassandraTableConfig) CosmosdbCassandraTable
 ```
@@ -459,7 +459,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTable.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.CosmosdbCassandraTable_IsConstruct(x interface{}) *bool
 ```
@@ -491,7 +491,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTable.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.CosmosdbCassandraTable_IsTerraformElement(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ cosmosdbcassandratable.CosmosdbCassandraTable_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTable.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.CosmosdbCassandraTable_IsTerraformResource(x interface{}) *bool
 ```
@@ -519,7 +519,7 @@ cosmosdbcassandratable.CosmosdbCassandraTable_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTable.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.CosmosdbCassandraTable_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -946,7 +946,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableAutoscaleSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 &cosmosdbcassandratable.CosmosdbCassandraTableAutoscaleSettings {
 	MaxThroughput: *f64,
@@ -978,7 +978,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 &cosmosdbcassandratable.CosmosdbCassandraTableConfig {
 	Connection: interface{},
@@ -990,13 +990,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratabl
 	Provisioners: *[]interface{},
 	CassandraKeyspaceId: *string,
 	Name: *string,
-	Schema: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableSchema,
+	Schema: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.cosmosdbCassandraTable.CosmosdbCassandraTableSchema,
 	AnalyticalStorageTtl: *f64,
-	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableAutoscaleSettings,
+	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.cosmosdbCassandraTable.CosmosdbCassandraTableAutoscaleSettings,
 	DefaultTtl: *f64,
 	Id: *string,
 	Throughput: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.cosmosdbCassandraTable.CosmosdbCassandraTableTimeouts,
 }
 ```
 
@@ -1215,7 +1215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableSchema.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 &cosmosdbcassandratable.CosmosdbCassandraTableSchema {
 	Column: interface{},
@@ -1281,7 +1281,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableSchemaClusterKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 &cosmosdbcassandratable.CosmosdbCassandraTableSchemaClusterKey {
 	Name: *string,
@@ -1327,7 +1327,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableSchemaColumn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 &cosmosdbcassandratable.CosmosdbCassandraTableSchemaColumn {
 	Name: *string,
@@ -1373,7 +1373,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableSchemaPartitionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 &cosmosdbcassandratable.CosmosdbCassandraTableSchemaPartitionKey {
 	Name: *string,
@@ -1405,7 +1405,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 &cosmosdbcassandratable.CosmosdbCassandraTableTimeouts {
 	Create: *string,
@@ -1481,7 +1481,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableAutoscaleSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.NewCosmosdbCassandraTableAutoscaleSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbCassandraTableAutoscaleSettingsOutputReference
 ```
@@ -1759,7 +1759,7 @@ func InternalValue() CosmosdbCassandraTableAutoscaleSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableSchemaClusterKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.NewCosmosdbCassandraTableSchemaClusterKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbCassandraTableSchemaClusterKeyList
 ```
@@ -1919,7 +1919,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableSchemaClusterKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.NewCosmosdbCassandraTableSchemaClusterKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbCassandraTableSchemaClusterKeyOutputReference
 ```
@@ -2230,7 +2230,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableSchemaColumnList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.NewCosmosdbCassandraTableSchemaColumnList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbCassandraTableSchemaColumnList
 ```
@@ -2390,7 +2390,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableSchemaColumnOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.NewCosmosdbCassandraTableSchemaColumnOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbCassandraTableSchemaColumnOutputReference
 ```
@@ -2701,7 +2701,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableSchemaOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.NewCosmosdbCassandraTableSchemaOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbCassandraTableSchemaOutputReference
 ```
@@ -3062,7 +3062,7 @@ func InternalValue() CosmosdbCassandraTableSchema
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableSchemaPartitionKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.NewCosmosdbCassandraTableSchemaPartitionKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbCassandraTableSchemaPartitionKeyList
 ```
@@ -3222,7 +3222,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableSchemaPartitionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.NewCosmosdbCassandraTableSchemaPartitionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbCassandraTableSchemaPartitionKeyOutputReference
 ```
@@ -3511,7 +3511,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbCassandraTable.CosmosdbCassandraTableTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbcassandratable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/cosmosdbcassandratable"
 
 cosmosdbcassandratable.NewCosmosdbCassandraTableTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbCassandraTableTimeoutsOutputReference
 ```

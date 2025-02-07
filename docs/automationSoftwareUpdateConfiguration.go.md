@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfiguration(scope Construct, id *string, config AutomationSoftwareUpdateConfigurationConfig) AutomationSoftwareUpdateConfiguration
 ```
@@ -539,7 +539,7 @@ func ResetWindows()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -571,7 +571,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -585,7 +585,7 @@ automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfiguration_IsTe
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -599,7 +599,7 @@ automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfiguration_IsTe
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfiguration.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfiguration_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1136,7 +1136,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 &automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfigurationConfig {
 	Connection: interface{},
@@ -1148,17 +1148,17 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupd
 	Provisioners: *[]interface{},
 	AutomationAccountId: *string,
 	Name: *string,
-	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationSchedule,
+	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationSchedule,
 	Duration: *string,
 	Id: *string,
-	Linux: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationLinux,
+	Linux: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationLinux,
 	NonAzureComputerNames: *[]*string,
-	PostTask: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationPostTask,
-	PreTask: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationPreTask,
-	Target: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTarget,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTimeouts,
+	PostTask: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationPostTask,
+	PreTask: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationPreTask,
+	Target: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTarget,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTimeouts,
 	VirtualMachineIds: *[]*string,
-	Windows: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationWindows,
+	Windows: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationWindows,
 }
 ```
 
@@ -1437,7 +1437,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationLinux.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 &automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfigurationLinux {
 	ClassificationsIncluded: *[]*string,
@@ -1511,7 +1511,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationPostTask.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 &automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfigurationPostTask {
 	Parameters: *map[string]*string,
@@ -1557,7 +1557,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationPreTask.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 &automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfigurationPreTask {
 	Parameters: *map[string]*string,
@@ -1603,7 +1603,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 &automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfigurationSchedule {
 	Frequency: *string,
@@ -1614,7 +1614,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupd
 	ExpiryTimeOffsetMinutes: *f64,
 	Interval: *f64,
 	IsEnabled: interface{},
-	MonthlyOccurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence,
+	MonthlyOccurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence,
 	NextRun: *string,
 	NextRunOffsetMinutes: *f64,
 	StartTime: *string,
@@ -1819,7 +1819,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 &automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence {
 	Day: *string,
@@ -1865,7 +1865,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTarget.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 &automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfigurationTarget {
 	AzureQuery: interface{},
@@ -1915,7 +1915,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTargetAzureQuery.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 &automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfigurationTargetAzureQuery {
 	Locations: *[]*string,
@@ -1991,7 +1991,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTargetAzureQueryTags.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 &automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfigurationTargetAzureQueryTags {
 	Tag: *string,
@@ -2037,7 +2037,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTargetNonAzureQuery.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 &automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfigurationTargetNonAzureQuery {
 	FunctionAlias: *string,
@@ -2083,7 +2083,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 &automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfigurationTimeouts {
 	Create: *string,
@@ -2157,7 +2157,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationWindows.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 &automationsoftwareupdateconfiguration.AutomationSoftwareUpdateConfigurationWindows {
 	ClassificationsIncluded: *[]*string,
@@ -2233,7 +2233,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationLinuxOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationLinuxOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationSoftwareUpdateConfigurationLinuxOutputReference
 ```
@@ -2591,7 +2591,7 @@ func InternalValue() AutomationSoftwareUpdateConfigurationLinux
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationPostTaskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationPostTaskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationSoftwareUpdateConfigurationPostTaskOutputReference
 ```
@@ -2898,7 +2898,7 @@ func InternalValue() AutomationSoftwareUpdateConfigurationPostTask
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationPreTaskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationPreTaskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationSoftwareUpdateConfigurationPreTaskOutputReference
 ```
@@ -3205,7 +3205,7 @@ func InternalValue() AutomationSoftwareUpdateConfigurationPreTask
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceOutputReference
 ```
@@ -3498,7 +3498,7 @@ func InternalValue() AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurre
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationSoftwareUpdateConfigurationScheduleOutputReference
 ```
@@ -4181,7 +4181,7 @@ func InternalValue() AutomationSoftwareUpdateConfigurationSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTargetAzureQueryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationTargetAzureQueryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AutomationSoftwareUpdateConfigurationTargetAzureQueryList
 ```
@@ -4341,7 +4341,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTargetAzureQueryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationTargetAzureQueryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AutomationSoftwareUpdateConfigurationTargetAzureQueryOutputReference
 ```
@@ -4737,7 +4737,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTargetAzureQueryTagsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationTargetAzureQueryTagsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AutomationSoftwareUpdateConfigurationTargetAzureQueryTagsList
 ```
@@ -4897,7 +4897,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTargetAzureQueryTagsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationTargetAzureQueryTagsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AutomationSoftwareUpdateConfigurationTargetAzureQueryTagsOutputReference
 ```
@@ -5208,7 +5208,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTargetNonAzureQueryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationTargetNonAzureQueryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AutomationSoftwareUpdateConfigurationTargetNonAzureQueryList
 ```
@@ -5368,7 +5368,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTargetNonAzureQueryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationTargetNonAzureQueryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AutomationSoftwareUpdateConfigurationTargetNonAzureQueryOutputReference
 ```
@@ -5693,7 +5693,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTargetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationTargetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationSoftwareUpdateConfigurationTargetOutputReference
 ```
@@ -6026,7 +6026,7 @@ func InternalValue() AutomationSoftwareUpdateConfigurationTarget
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationSoftwareUpdateConfigurationTimeoutsOutputReference
 ```
@@ -6391,7 +6391,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration.AutomationSoftwareUpdateConfigurationWindowsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationsoftwareupdateconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/automationsoftwareupdateconfiguration"
 
 automationsoftwareupdateconfiguration.NewAutomationSoftwareUpdateConfigurationWindowsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationSoftwareUpdateConfigurationWindowsOutputReference
 ```
