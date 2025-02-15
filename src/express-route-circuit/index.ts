@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,76 +13,80 @@ import * as cdktf from 'cdktf';
 
 export interface ExpressRouteCircuitConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#allow_classic_operations ExpressRouteCircuit#allow_classic_operations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#allow_classic_operations ExpressRouteCircuit#allow_classic_operations}
   */
   readonly allowClassicOperations?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#authorization_key ExpressRouteCircuit#authorization_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#authorization_key ExpressRouteCircuit#authorization_key}
   */
   readonly authorizationKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#bandwidth_in_gbps ExpressRouteCircuit#bandwidth_in_gbps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#bandwidth_in_gbps ExpressRouteCircuit#bandwidth_in_gbps}
   */
   readonly bandwidthInGbps?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#bandwidth_in_mbps ExpressRouteCircuit#bandwidth_in_mbps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#bandwidth_in_mbps ExpressRouteCircuit#bandwidth_in_mbps}
   */
   readonly bandwidthInMbps?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#express_route_port_id ExpressRouteCircuit#express_route_port_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#express_route_port_id ExpressRouteCircuit#express_route_port_id}
   */
   readonly expressRoutePortId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#id ExpressRouteCircuit#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#id ExpressRouteCircuit#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#location ExpressRouteCircuit#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#location ExpressRouteCircuit#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#name ExpressRouteCircuit#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#name ExpressRouteCircuit#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#peering_location ExpressRouteCircuit#peering_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#peering_location ExpressRouteCircuit#peering_location}
   */
   readonly peeringLocation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#resource_group_name ExpressRouteCircuit#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#rate_limiting_enabled ExpressRouteCircuit#rate_limiting_enabled}
+  */
+  readonly rateLimitingEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#resource_group_name ExpressRouteCircuit#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#service_provider_name ExpressRouteCircuit#service_provider_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#service_provider_name ExpressRouteCircuit#service_provider_name}
   */
   readonly serviceProviderName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#tags ExpressRouteCircuit#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#tags ExpressRouteCircuit#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * sku block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#sku ExpressRouteCircuit#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#sku ExpressRouteCircuit#sku}
   */
   readonly sku: ExpressRouteCircuitSku;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#timeouts ExpressRouteCircuit#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#timeouts ExpressRouteCircuit#timeouts}
   */
   readonly timeouts?: ExpressRouteCircuitTimeouts;
 }
 export interface ExpressRouteCircuitSku {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#family ExpressRouteCircuit#family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#family ExpressRouteCircuit#family}
   */
   readonly family: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#tier ExpressRouteCircuit#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#tier ExpressRouteCircuit#tier}
   */
   readonly tier: string;
 }
@@ -189,19 +193,19 @@ export class ExpressRouteCircuitSkuOutputReference extends cdktf.ComplexObject {
 }
 export interface ExpressRouteCircuitTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#create ExpressRouteCircuit#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#create ExpressRouteCircuit#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#delete ExpressRouteCircuit#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#delete ExpressRouteCircuit#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#read ExpressRouteCircuit#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#read ExpressRouteCircuit#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#update ExpressRouteCircuit#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#update ExpressRouteCircuit#update}
   */
   readonly update?: string;
 }
@@ -382,7 +386,7 @@ export class ExpressRouteCircuitTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit azurerm_express_route_circuit}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit azurerm_express_route_circuit}
 */
 export class ExpressRouteCircuit extends cdktf.TerraformResource {
 
@@ -398,7 +402,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ExpressRouteCircuit resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ExpressRouteCircuit to import
-  * @param importFromId The id of the existing ExpressRouteCircuit that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ExpressRouteCircuit that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ExpressRouteCircuit to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -410,7 +414,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/express_route_circuit azurerm_express_route_circuit} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/express_route_circuit azurerm_express_route_circuit} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -421,7 +425,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_express_route_circuit',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.18.0',
+        providerVersion: '4.19.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -441,6 +445,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._peeringLocation = config.peeringLocation;
+    this._rateLimitingEnabled = config.rateLimitingEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._serviceProviderName = config.serviceProviderName;
     this._tags = config.tags;
@@ -590,6 +595,22 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
     return this._peeringLocation;
   }
 
+  // rate_limiting_enabled - computed: false, optional: true, required: false
+  private _rateLimitingEnabled?: boolean | cdktf.IResolvable; 
+  public get rateLimitingEnabled() {
+    return this.getBooleanAttribute('rate_limiting_enabled');
+  }
+  public set rateLimitingEnabled(value: boolean | cdktf.IResolvable) {
+    this._rateLimitingEnabled = value;
+  }
+  public resetRateLimitingEnabled() {
+    this._rateLimitingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rateLimitingEnabledInput() {
+    return this._rateLimitingEnabled;
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -689,6 +710,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       peering_location: cdktf.stringToTerraform(this._peeringLocation),
+      rate_limiting_enabled: cdktf.booleanToTerraform(this._rateLimitingEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_provider_name: cdktf.stringToTerraform(this._serviceProviderName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
@@ -752,6 +774,12 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      rate_limiting_enabled: {
+        value: cdktf.booleanToHclTerraform(this._rateLimitingEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       resource_group_name: {
         value: cdktf.stringToHclTerraform(this._resourceGroupName),
