@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,84 +8,84 @@ import * as cdktf from 'cdktf';
 
 export interface GalleryApplicationVersionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#config_file GalleryApplicationVersion#config_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#config_file GalleryApplicationVersion#config_file}
   */
   readonly configFile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#enable_health_check GalleryApplicationVersion#enable_health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#enable_health_check GalleryApplicationVersion#enable_health_check}
   */
   readonly enableHealthCheck?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#end_of_life_date GalleryApplicationVersion#end_of_life_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#end_of_life_date GalleryApplicationVersion#end_of_life_date}
   */
   readonly endOfLifeDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#exclude_from_latest GalleryApplicationVersion#exclude_from_latest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#exclude_from_latest GalleryApplicationVersion#exclude_from_latest}
   */
   readonly excludeFromLatest?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#gallery_application_id GalleryApplicationVersion#gallery_application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#gallery_application_id GalleryApplicationVersion#gallery_application_id}
   */
   readonly galleryApplicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#id GalleryApplicationVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#id GalleryApplicationVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#location GalleryApplicationVersion#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#location GalleryApplicationVersion#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#name GalleryApplicationVersion#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#name GalleryApplicationVersion#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#package_file GalleryApplicationVersion#package_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#package_file GalleryApplicationVersion#package_file}
   */
   readonly packageFile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#tags GalleryApplicationVersion#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#tags GalleryApplicationVersion#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * manage_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#manage_action GalleryApplicationVersion#manage_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#manage_action GalleryApplicationVersion#manage_action}
   */
   readonly manageAction: GalleryApplicationVersionManageAction;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#source GalleryApplicationVersion#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#source GalleryApplicationVersion#source}
   */
   readonly source: GalleryApplicationVersionSource;
   /**
   * target_region block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#target_region GalleryApplicationVersion#target_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#target_region GalleryApplicationVersion#target_region}
   */
   readonly targetRegion: GalleryApplicationVersionTargetRegion[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#timeouts GalleryApplicationVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#timeouts GalleryApplicationVersion#timeouts}
   */
   readonly timeouts?: GalleryApplicationVersionTimeouts;
 }
 export interface GalleryApplicationVersionManageAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#install GalleryApplicationVersion#install}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#install GalleryApplicationVersion#install}
   */
   readonly install: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#remove GalleryApplicationVersion#remove}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#remove GalleryApplicationVersion#remove}
   */
   readonly remove: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#update GalleryApplicationVersion#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#update GalleryApplicationVersion#update}
   */
   readonly update?: string;
 }
@@ -226,11 +221,11 @@ export class GalleryApplicationVersionManageActionOutputReference extends cdktf.
 }
 export interface GalleryApplicationVersionSource {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#default_configuration_link GalleryApplicationVersion#default_configuration_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#default_configuration_link GalleryApplicationVersion#default_configuration_link}
   */
   readonly defaultConfigurationLink?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#media_link GalleryApplicationVersion#media_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#media_link GalleryApplicationVersion#media_link}
   */
   readonly mediaLink: string;
 }
@@ -340,19 +335,19 @@ export class GalleryApplicationVersionSourceOutputReference extends cdktf.Comple
 }
 export interface GalleryApplicationVersionTargetRegion {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#exclude_from_latest GalleryApplicationVersion#exclude_from_latest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#exclude_from_latest GalleryApplicationVersion#exclude_from_latest}
   */
   readonly excludeFromLatest?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#name GalleryApplicationVersion#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#name GalleryApplicationVersion#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#regional_replica_count GalleryApplicationVersion#regional_replica_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#regional_replica_count GalleryApplicationVersion#regional_replica_count}
   */
   readonly regionalReplicaCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#storage_account_type GalleryApplicationVersion#storage_account_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#storage_account_type GalleryApplicationVersion#storage_account_type}
   */
   readonly storageAccountType?: string;
 }
@@ -549,19 +544,19 @@ export class GalleryApplicationVersionTargetRegionList extends cdktf.ComplexList
 }
 export interface GalleryApplicationVersionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#create GalleryApplicationVersion#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#create GalleryApplicationVersion#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#delete GalleryApplicationVersion#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#delete GalleryApplicationVersion#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#read GalleryApplicationVersion#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#read GalleryApplicationVersion#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#update GalleryApplicationVersion#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#update GalleryApplicationVersion#update}
   */
   readonly update?: string;
 }
@@ -742,7 +737,7 @@ export class GalleryApplicationVersionTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version azurerm_gallery_application_version}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version azurerm_gallery_application_version}
 */
 export class GalleryApplicationVersion extends cdktf.TerraformResource {
 
@@ -758,7 +753,7 @@ export class GalleryApplicationVersion extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a GalleryApplicationVersion resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the GalleryApplicationVersion to import
-  * @param importFromId The id of the existing GalleryApplicationVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing GalleryApplicationVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the GalleryApplicationVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -770,7 +765,7 @@ export class GalleryApplicationVersion extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/gallery_application_version azurerm_gallery_application_version} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/gallery_application_version azurerm_gallery_application_version} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -781,7 +776,7 @@ export class GalleryApplicationVersion extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_gallery_application_version',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.18.0',
+        providerVersion: '4.19.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

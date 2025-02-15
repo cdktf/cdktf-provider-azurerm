@@ -4,12 +4,12 @@
 
 ### BotConnection <a name="BotConnection" id="@cdktf/provider-azurerm.botConnection.BotConnection"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection azurerm_bot_connection}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection azurerm_bot_connection}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botConnection.BotConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botconnection"
 
 botconnection.NewBotConnection(scope Construct, id *string, config BotConnectionConfig) BotConnection
 ```
@@ -419,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.botConnection.BotConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botconnection"
 
 botconnection.BotConnection_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.botConnection.BotConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botconnection"
 
 botconnection.BotConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ botconnection.BotConnection_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.botConnection.BotConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botconnection"
 
 botconnection.BotConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ botconnection.BotConnection_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.botConnection.BotConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botconnection"
 
 botconnection.BotConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -508,7 +508,7 @@ The construct id used in the generated config for the BotConnection to import.
 
 The id of the existing BotConnection that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -950,7 +950,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botConnection.BotConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botconnection"
 
 &botconnection.BotConnectionConfig {
 	Connection: interface{},
@@ -970,7 +970,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/botconnection"
 	Id: *string,
 	Parameters: *map[string]*string,
 	Scopes: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.botConnection.BotConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.botConnection.BotConnectionTimeouts,
 }
 ```
 
@@ -985,16 +985,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/botconnection"
 | <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.botName">BotName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#bot_name BotConnection#bot_name}. |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.clientId">ClientId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#client_id BotConnection#client_id}. |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.clientSecret">ClientSecret</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#client_secret BotConnection#client_secret}. |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#location BotConnection#location}. |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#name BotConnection#name}. |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#resource_group_name BotConnection#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.serviceProviderName">ServiceProviderName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#service_provider_name BotConnection#service_provider_name}. |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#id BotConnection#id}. |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.parameters">Parameters</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#parameters BotConnection#parameters}. |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.scopes">Scopes</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#scopes BotConnection#scopes}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.botName">BotName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#bot_name BotConnection#bot_name}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.clientId">ClientId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#client_id BotConnection#client_id}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.clientSecret">ClientSecret</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#client_secret BotConnection#client_secret}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#location BotConnection#location}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#name BotConnection#name}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#resource_group_name BotConnection#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.serviceProviderName">ServiceProviderName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#service_provider_name BotConnection#service_provider_name}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#id BotConnection#id}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.parameters">Parameters</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#parameters BotConnection#parameters}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.scopes">Scopes</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#scopes BotConnection#scopes}. |
 | <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionTimeouts">BotConnectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1077,7 +1077,7 @@ BotName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#bot_name BotConnection#bot_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#bot_name BotConnection#bot_name}.
 
 ---
 
@@ -1089,7 +1089,7 @@ ClientId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#client_id BotConnection#client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#client_id BotConnection#client_id}.
 
 ---
 
@@ -1101,7 +1101,7 @@ ClientSecret *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#client_secret BotConnection#client_secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#client_secret BotConnection#client_secret}.
 
 ---
 
@@ -1113,7 +1113,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#location BotConnection#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#location BotConnection#location}.
 
 ---
 
@@ -1125,7 +1125,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#name BotConnection#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#name BotConnection#name}.
 
 ---
 
@@ -1137,7 +1137,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#resource_group_name BotConnection#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#resource_group_name BotConnection#resource_group_name}.
 
 ---
 
@@ -1149,7 +1149,7 @@ ServiceProviderName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#service_provider_name BotConnection#service_provider_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#service_provider_name BotConnection#service_provider_name}.
 
 ---
 
@@ -1161,7 +1161,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#id BotConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#id BotConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1176,7 +1176,7 @@ Parameters *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#parameters BotConnection#parameters}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#parameters BotConnection#parameters}.
 
 ---
 
@@ -1188,7 +1188,7 @@ Scopes *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#scopes BotConnection#scopes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#scopes BotConnection#scopes}.
 
 ---
 
@@ -1202,7 +1202,7 @@ Timeouts BotConnectionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#timeouts BotConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#timeouts BotConnection#timeouts}
 
 ---
 
@@ -1211,7 +1211,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botConnection.BotConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botconnection"
 
 &botconnection.BotConnectionTimeouts {
 	Create: *string,
@@ -1225,10 +1225,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/botconnection"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#create BotConnection#create}. |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#delete BotConnection#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#read BotConnection#read}. |
-| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#update BotConnection#update}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#create BotConnection#create}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#delete BotConnection#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#read BotConnection#read}. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnectionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#update BotConnection#update}. |
 
 ---
 
@@ -1240,7 +1240,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#create BotConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#create BotConnection#create}.
 
 ---
 
@@ -1252,7 +1252,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#delete BotConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#delete BotConnection#delete}.
 
 ---
 
@@ -1264,7 +1264,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#read BotConnection#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#read BotConnection#read}.
 
 ---
 
@@ -1276,7 +1276,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.18.0/docs/resources/bot_connection#update BotConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/bot_connection#update BotConnection#update}.
 
 ---
 
@@ -1287,7 +1287,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botConnection.BotConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botconnection"
 
 botconnection.NewBotConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BotConnectionTimeoutsOutputReference
 ```
