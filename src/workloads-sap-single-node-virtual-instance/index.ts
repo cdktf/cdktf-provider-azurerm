@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/workloads_sap_single_node_virtual_instance
 // generated from terraform resource schema
 

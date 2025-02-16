@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/sentinel_alert_rule_anomaly_duplicate
 // generated from terraform resource schema
 

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/app_service_virtual_network_swift_connection
 // generated from terraform resource schema
 

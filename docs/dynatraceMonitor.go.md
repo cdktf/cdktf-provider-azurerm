@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 dynatracemonitor.NewDynatraceMonitor(scope Construct, id *string, config DynatraceMonitorConfig) DynatraceMonitor
 ```
@@ -458,7 +458,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitor.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 dynatracemonitor.DynatraceMonitor_IsConstruct(x interface{}) *bool
 ```
@@ -490,7 +490,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitor.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 dynatracemonitor.DynatraceMonitor_IsTerraformElement(x interface{}) *bool
 ```
@@ -504,7 +504,7 @@ dynatracemonitor.DynatraceMonitor_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitor.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 dynatracemonitor.DynatraceMonitor_IsTerraformResource(x interface{}) *bool
 ```
@@ -518,7 +518,7 @@ dynatracemonitor.DynatraceMonitor_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitor.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 dynatracemonitor.DynatraceMonitor_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -989,7 +989,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 &dynatracemonitor.DynatraceMonitorConfig {
 	Connection: interface{},
@@ -999,17 +999,17 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dynatraceMonitor.DynatraceMonitorIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dynatraceMonitor.DynatraceMonitorIdentity,
 	Location: *string,
 	MarketplaceSubscription: *string,
 	Name: *string,
-	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dynatraceMonitor.DynatraceMonitorPlan,
+	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dynatraceMonitor.DynatraceMonitorPlan,
 	ResourceGroupName: *string,
-	User: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dynatraceMonitor.DynatraceMonitorUser,
+	User: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dynatraceMonitor.DynatraceMonitorUser,
 	Id: *string,
 	MonitoringEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dynatraceMonitor.DynatraceMonitorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dynatraceMonitor.DynatraceMonitorTimeouts,
 }
 ```
 
@@ -1256,7 +1256,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitorIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 &dynatracemonitor.DynatraceMonitorIdentity {
 	Type: *string,
@@ -1288,7 +1288,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitorPlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 &dynatracemonitor.DynatraceMonitorPlan {
 	Plan: *string,
@@ -1348,7 +1348,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 &dynatracemonitor.DynatraceMonitorTimeouts {
 	Create: *string,
@@ -1422,7 +1422,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitorUser.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 &dynatracemonitor.DynatraceMonitorUser {
 	Country: *string,
@@ -1512,7 +1512,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitorIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 dynatracemonitor.NewDynatraceMonitorIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DynatraceMonitorIdentityOutputReference
 ```
@@ -1805,7 +1805,7 @@ func InternalValue() DynatraceMonitorIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitorPlanOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 dynatracemonitor.NewDynatraceMonitorPlanOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DynatraceMonitorPlanOutputReference
 ```
@@ -2145,7 +2145,7 @@ func InternalValue() DynatraceMonitorPlan
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 dynatracemonitor.NewDynatraceMonitorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DynatraceMonitorTimeoutsOutputReference
 ```
@@ -2510,7 +2510,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dynatraceMonitor.DynatraceMonitorUserOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracemonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracemonitor"
 
 dynatracemonitor.NewDynatraceMonitorUserOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DynatraceMonitorUserOutputReference
 ```
