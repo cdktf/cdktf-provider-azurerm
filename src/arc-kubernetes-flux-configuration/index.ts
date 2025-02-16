@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/arc_kubernetes_flux_configuration
 // generated from terraform resource schema
 

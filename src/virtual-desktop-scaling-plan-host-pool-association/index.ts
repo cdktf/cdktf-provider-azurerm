@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/virtual_desktop_scaling_plan_host_pool_association
 // generated from terraform resource schema
 
