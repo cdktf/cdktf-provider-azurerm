@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,23 +10,23 @@ export interface FunctionAppFunctionConfig extends cdktf.TerraformMetaArguments 
   /**
   * The config for this Function in JSON format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#config_json FunctionAppFunction#config_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#config_json FunctionAppFunction#config_json}
   */
   readonly configJson: string;
   /**
   * Should this function be enabled. Defaults to `true`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#enabled FunctionAppFunction#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#enabled FunctionAppFunction#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * The ID of the Function App in which this function should reside.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#function_app_id FunctionAppFunction#function_app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#function_app_id FunctionAppFunction#function_app_id}
   */
   readonly functionAppId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#id FunctionAppFunction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#id FunctionAppFunction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,31 +35,31 @@ export interface FunctionAppFunctionConfig extends cdktf.TerraformMetaArguments 
   /**
   * The language the Function is written in.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#language FunctionAppFunction#language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#language FunctionAppFunction#language}
   */
   readonly language?: string;
   /**
   * The name of the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#name FunctionAppFunction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#name FunctionAppFunction#name}
   */
   readonly name: string;
   /**
   * The test data for the function.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#test_data FunctionAppFunction#test_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#test_data FunctionAppFunction#test_data}
   */
   readonly testData?: string;
   /**
   * file block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#file FunctionAppFunction#file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#file FunctionAppFunction#file}
   */
   readonly file?: FunctionAppFunctionFile[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#timeouts FunctionAppFunction#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#timeouts FunctionAppFunction#timeouts}
   */
   readonly timeouts?: FunctionAppFunctionTimeouts;
 }
@@ -72,13 +67,13 @@ export interface FunctionAppFunctionFile {
   /**
   * The content of the file.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#content FunctionAppFunction#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#content FunctionAppFunction#content}
   */
   readonly content: string;
   /**
   * The filename of the file to be uploaded.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#name FunctionAppFunction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#name FunctionAppFunction#name}
   */
   readonly name: string;
 }
@@ -217,19 +212,19 @@ export class FunctionAppFunctionFileList extends cdktf.ComplexList {
 }
 export interface FunctionAppFunctionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#create FunctionAppFunction#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#create FunctionAppFunction#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#delete FunctionAppFunction#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#delete FunctionAppFunction#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#read FunctionAppFunction#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#read FunctionAppFunction#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#update FunctionAppFunction#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#update FunctionAppFunction#update}
   */
   readonly update?: string;
 }
@@ -410,7 +405,7 @@ export class FunctionAppFunctionTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function azurerm_function_app_function}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function azurerm_function_app_function}
 */
 export class FunctionAppFunction extends cdktf.TerraformResource {
 
@@ -426,7 +421,7 @@ export class FunctionAppFunction extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FunctionAppFunction resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FunctionAppFunction to import
-  * @param importFromId The id of the existing FunctionAppFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FunctionAppFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FunctionAppFunction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -438,7 +433,7 @@ export class FunctionAppFunction extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.19.0/docs/resources/function_app_function azurerm_function_app_function} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/function_app_function azurerm_function_app_function} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -449,7 +444,7 @@ export class FunctionAppFunction extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_function_app_function',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.19.0',
+        providerVersion: '4.20.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
