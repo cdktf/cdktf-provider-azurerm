@@ -308,6 +308,7 @@ export * as dataProtectionBackupPolicyMysqlFlexibleServer from './data-protectio
 export * as dataProtectionBackupPolicyPostgresql from './data-protection-backup-policy-postgresql';
 export * as dataProtectionBackupPolicyPostgresqlFlexibleServer from './data-protection-backup-policy-postgresql-flexible-server';
 export * as dataProtectionBackupVault from './data-protection-backup-vault';
+export * as dataProtectionBackupVaultCustomerManagedKey from './data-protection-backup-vault-customer-managed-key';
 export * as dataProtectionResourceGuard from './data-protection-resource-guard';
 export * as dataShare from './data-share';
 export * as dataShareAccount from './data-share-account';
@@ -1196,6 +1197,7 @@ export * as dataAzurermDnsSoaRecord from './data-azurerm-dns-soa-record';
 export * as dataAzurermDnsSrvRecord from './data-azurerm-dns-srv-record';
 export * as dataAzurermDnsTxtRecord from './data-azurerm-dns-txt-record';
 export * as dataAzurermDnsZone from './data-azurerm-dns-zone';
+export * as dataAzurermDynatraceMonitor from './data-azurerm-dynatrace-monitor';
 export * as dataAzurermElasticCloudElasticsearch from './data-azurerm-elastic-cloud-elasticsearch';
 export * as dataAzurermElasticSan from './data-azurerm-elastic-san';
 export * as dataAzurermElasticSanVolumeGroup from './data-azurerm-elastic-san-volume-group';

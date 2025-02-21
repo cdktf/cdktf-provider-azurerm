@@ -308,6 +308,7 @@ Object.defineProperty(exports, 'dataProtectionBackupPolicyMysqlFlexibleServer', 
 Object.defineProperty(exports, 'dataProtectionBackupPolicyPostgresql', { get: function () { return require('./data-protection-backup-policy-postgresql'); } });
 Object.defineProperty(exports, 'dataProtectionBackupPolicyPostgresqlFlexibleServer', { get: function () { return require('./data-protection-backup-policy-postgresql-flexible-server'); } });
 Object.defineProperty(exports, 'dataProtectionBackupVault', { get: function () { return require('./data-protection-backup-vault'); } });
+Object.defineProperty(exports, 'dataProtectionBackupVaultCustomerManagedKey', { get: function () { return require('./data-protection-backup-vault-customer-managed-key'); } });
 Object.defineProperty(exports, 'dataProtectionResourceGuard', { get: function () { return require('./data-protection-resource-guard'); } });
 Object.defineProperty(exports, 'dataShare', { get: function () { return require('./data-share'); } });
 Object.defineProperty(exports, 'dataShareAccount', { get: function () { return require('./data-share-account'); } });
@@ -1196,6 +1197,7 @@ Object.defineProperty(exports, 'dataAzurermDnsSoaRecord', { get: function () { r
 Object.defineProperty(exports, 'dataAzurermDnsSrvRecord', { get: function () { return require('./data-azurerm-dns-srv-record'); } });
 Object.defineProperty(exports, 'dataAzurermDnsTxtRecord', { get: function () { return require('./data-azurerm-dns-txt-record'); } });
 Object.defineProperty(exports, 'dataAzurermDnsZone', { get: function () { return require('./data-azurerm-dns-zone'); } });
+Object.defineProperty(exports, 'dataAzurermDynatraceMonitor', { get: function () { return require('./data-azurerm-dynatrace-monitor'); } });
 Object.defineProperty(exports, 'dataAzurermElasticCloudElasticsearch', { get: function () { return require('./data-azurerm-elastic-cloud-elasticsearch'); } });
 Object.defineProperty(exports, 'dataAzurermElasticSan', { get: function () { return require('./data-azurerm-elastic-san'); } });
 Object.defineProperty(exports, 'dataAzurermElasticSanVolumeGroup', { get: function () { return require('./data-azurerm-elastic-san-volume-group'); } });
