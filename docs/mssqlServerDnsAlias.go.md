@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserverdnsalias"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserverdnsalias"
 
 mssqlserverdnsalias.NewMssqlServerDnsAlias(scope Construct, id *string, config MssqlServerDnsAliasConfig) MssqlServerDnsAlias
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserverdnsalias"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserverdnsalias"
 
 mssqlserverdnsalias.MssqlServerDnsAlias_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserverdnsalias"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserverdnsalias"
 
 mssqlserverdnsalias.MssqlServerDnsAlias_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ mssqlserverdnsalias.MssqlServerDnsAlias_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserverdnsalias"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserverdnsalias"
 
 mssqlserverdnsalias.MssqlServerDnsAlias_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ mssqlserverdnsalias.MssqlServerDnsAlias_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserverdnsalias"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserverdnsalias"
 
 mssqlserverdnsalias.MssqlServerDnsAlias_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -793,7 +793,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserverdnsalias"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserverdnsalias"
 
 &mssqlserverdnsalias.MssqlServerDnsAliasConfig {
 	Connection: interface{},
@@ -806,7 +806,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserverdnsalias"
 	MssqlServerId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts,
 }
 ```
 
@@ -956,7 +956,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserverdnsalias"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserverdnsalias"
 
 &mssqlserverdnsalias.MssqlServerDnsAliasTimeouts {
 	Create: *string,
@@ -1018,7 +1018,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserverdnsalias"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserverdnsalias"
 
 mssqlserverdnsalias.NewMssqlServerDnsAliasTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlServerDnsAliasTimeoutsOutputReference
 ```

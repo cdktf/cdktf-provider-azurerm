@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermElasticSanVolumeSnapshot.DataAzurermElasticSanVolumeSnapshot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermelasticsanvolumesnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermelasticsanvolumesnapshot"
 
 dataazurermelasticsanvolumesnapshot.NewDataAzurermElasticSanVolumeSnapshot(scope Construct, id *string, config DataAzurermElasticSanVolumeSnapshotConfig) DataAzurermElasticSanVolumeSnapshot
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermElasticSanVolumeSnapshot.DataAzurermElasticSanVolumeSnapshot.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermelasticsanvolumesnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermelasticsanvolumesnapshot"
 
 dataazurermelasticsanvolumesnapshot.DataAzurermElasticSanVolumeSnapshot_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermElasticSanVolumeSnapshot.DataAzurermElasticSanVolumeSnapshot.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermelasticsanvolumesnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermelasticsanvolumesnapshot"
 
 dataazurermelasticsanvolumesnapshot.DataAzurermElasticSanVolumeSnapshot_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermelasticsanvolumesnapshot.DataAzurermElasticSanVolumeSnapshot_IsTerraf
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermElasticSanVolumeSnapshot.DataAzurermElasticSanVolumeSnapshot.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermelasticsanvolumesnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermelasticsanvolumesnapshot"
 
 dataazurermelasticsanvolumesnapshot.DataAzurermElasticSanVolumeSnapshot_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermelasticsanvolumesnapshot.DataAzurermElasticSanVolumeSnapshot_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermElasticSanVolumeSnapshot.DataAzurermElasticSanVolumeSnapshot.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermelasticsanvolumesnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermelasticsanvolumesnapshot"
 
 dataazurermelasticsanvolumesnapshot.DataAzurermElasticSanVolumeSnapshot_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -691,7 +691,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermElasticSanVolumeSnapshot.DataAzurermElasticSanVolumeSnapshotConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermelasticsanvolumesnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermelasticsanvolumesnapshot"
 
 &dataazurermelasticsanvolumesnapshot.DataAzurermElasticSanVolumeSnapshotConfig {
 	Connection: interface{},
@@ -704,7 +704,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermelasticsan
 	Name: *string,
 	VolumeGroupId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermElasticSanVolumeSnapshot.DataAzurermElasticSanVolumeSnapshotTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermElasticSanVolumeSnapshot.DataAzurermElasticSanVolumeSnapshotTimeouts,
 }
 ```
 
@@ -854,7 +854,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermElasticSanVolumeSnapshot.DataAzurermElasticSanVolumeSnapshotTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermelasticsanvolumesnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermelasticsanvolumesnapshot"
 
 &dataazurermelasticsanvolumesnapshot.DataAzurermElasticSanVolumeSnapshotTimeouts {
 	Read: *string,
@@ -888,7 +888,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermElasticSanVolumeSnapshot.DataAzurermElasticSanVolumeSnapshotTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermelasticsanvolumesnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermelasticsanvolumesnapshot"
 
 dataazurermelasticsanvolumesnapshot.NewDataAzurermElasticSanVolumeSnapshotTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermElasticSanVolumeSnapshotTimeoutsOutputReference
 ```
