@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,64 +8,64 @@ import * as cdktf from 'cdktf';
 
 export interface ExtendedCustomLocationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#cluster_extension_ids ExtendedCustomLocation#cluster_extension_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#cluster_extension_ids ExtendedCustomLocation#cluster_extension_ids}
   */
   readonly clusterExtensionIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#display_name ExtendedCustomLocation#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#display_name ExtendedCustomLocation#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#host_resource_id ExtendedCustomLocation#host_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#host_resource_id ExtendedCustomLocation#host_resource_id}
   */
   readonly hostResourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#host_type ExtendedCustomLocation#host_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#host_type ExtendedCustomLocation#host_type}
   */
   readonly hostType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#id ExtendedCustomLocation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#id ExtendedCustomLocation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#location ExtendedCustomLocation#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#location ExtendedCustomLocation#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#name ExtendedCustomLocation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#name ExtendedCustomLocation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#namespace ExtendedCustomLocation#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#namespace ExtendedCustomLocation#namespace}
   */
   readonly namespace: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#resource_group_name ExtendedCustomLocation#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#resource_group_name ExtendedCustomLocation#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#authentication ExtendedCustomLocation#authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#authentication ExtendedCustomLocation#authentication}
   */
   readonly authentication?: ExtendedCustomLocationAuthentication;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#timeouts ExtendedCustomLocation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#timeouts ExtendedCustomLocation#timeouts}
   */
   readonly timeouts?: ExtendedCustomLocationTimeouts;
 }
 export interface ExtendedCustomLocationAuthentication {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#type ExtendedCustomLocation#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#type ExtendedCustomLocation#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#value ExtendedCustomLocation#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#value ExtendedCustomLocation#value}
   */
   readonly value: string;
 }
@@ -180,19 +175,19 @@ export class ExtendedCustomLocationAuthenticationOutputReference extends cdktf.C
 }
 export interface ExtendedCustomLocationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#create ExtendedCustomLocation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#create ExtendedCustomLocation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#delete ExtendedCustomLocation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#delete ExtendedCustomLocation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#read ExtendedCustomLocation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#read ExtendedCustomLocation#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#update ExtendedCustomLocation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#update ExtendedCustomLocation#update}
   */
   readonly update?: string;
 }
@@ -373,7 +368,7 @@ export class ExtendedCustomLocationTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location azurerm_extended_custom_location}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location azurerm_extended_custom_location}
 */
 export class ExtendedCustomLocation extends cdktf.TerraformResource {
 
@@ -389,7 +384,7 @@ export class ExtendedCustomLocation extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ExtendedCustomLocation resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ExtendedCustomLocation to import
-  * @param importFromId The id of the existing ExtendedCustomLocation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ExtendedCustomLocation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ExtendedCustomLocation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -401,7 +396,7 @@ export class ExtendedCustomLocation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/extended_custom_location azurerm_extended_custom_location} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/extended_custom_location azurerm_extended_custom_location} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -412,7 +407,7 @@ export class ExtendedCustomLocation extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_extended_custom_location',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

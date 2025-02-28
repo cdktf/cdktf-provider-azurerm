@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,11 +8,11 @@ import * as cdktf from 'cdktf';
 
 export interface ContainerRegistryTokenPasswordConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password#container_registry_token_id ContainerRegistryTokenPassword#container_registry_token_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password#container_registry_token_id ContainerRegistryTokenPassword#container_registry_token_id}
   */
   readonly containerRegistryTokenId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password#id ContainerRegistryTokenPassword#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password#id ContainerRegistryTokenPassword#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -26,25 +21,25 @@ export interface ContainerRegistryTokenPasswordConfig extends cdktf.TerraformMet
   /**
   * password1 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password#password1 ContainerRegistryTokenPassword#password1}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password#password1 ContainerRegistryTokenPassword#password1}
   */
   readonly password1: ContainerRegistryTokenPasswordPassword1;
   /**
   * password2 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password#password2 ContainerRegistryTokenPassword#password2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password#password2 ContainerRegistryTokenPassword#password2}
   */
   readonly password2?: ContainerRegistryTokenPasswordPassword2;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password#timeouts ContainerRegistryTokenPassword#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password#timeouts ContainerRegistryTokenPassword#timeouts}
   */
   readonly timeouts?: ContainerRegistryTokenPasswordTimeouts;
 }
 export interface ContainerRegistryTokenPasswordPassword1 {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password#expiry ContainerRegistryTokenPassword#expiry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password#expiry ContainerRegistryTokenPassword#expiry}
   */
   readonly expiry?: string;
 }
@@ -133,7 +128,7 @@ export class ContainerRegistryTokenPasswordPassword1OutputReference extends cdkt
 }
 export interface ContainerRegistryTokenPasswordPassword2 {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password#expiry ContainerRegistryTokenPassword#expiry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password#expiry ContainerRegistryTokenPassword#expiry}
   */
   readonly expiry?: string;
 }
@@ -222,19 +217,19 @@ export class ContainerRegistryTokenPasswordPassword2OutputReference extends cdkt
 }
 export interface ContainerRegistryTokenPasswordTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password#create ContainerRegistryTokenPassword#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password#create ContainerRegistryTokenPassword#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password#delete ContainerRegistryTokenPassword#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password#delete ContainerRegistryTokenPassword#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password#read ContainerRegistryTokenPassword#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password#read ContainerRegistryTokenPassword#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password#update ContainerRegistryTokenPassword#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password#update ContainerRegistryTokenPassword#update}
   */
   readonly update?: string;
 }
@@ -415,7 +410,7 @@ export class ContainerRegistryTokenPasswordTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password azurerm_container_registry_token_password}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password azurerm_container_registry_token_password}
 */
 export class ContainerRegistryTokenPassword extends cdktf.TerraformResource {
 
@@ -431,7 +426,7 @@ export class ContainerRegistryTokenPassword extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ContainerRegistryTokenPassword resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerRegistryTokenPassword to import
-  * @param importFromId The id of the existing ContainerRegistryTokenPassword that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerRegistryTokenPassword that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerRegistryTokenPassword to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -443,7 +438,7 @@ export class ContainerRegistryTokenPassword extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.20.0/docs/resources/container_registry_token_password azurerm_container_registry_token_password} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/container_registry_token_password azurerm_container_registry_token_password} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -454,7 +449,7 @@ export class ContainerRegistryTokenPassword extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_registry_token_password',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
