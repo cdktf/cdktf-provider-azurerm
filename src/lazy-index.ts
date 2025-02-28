@@ -413,6 +413,7 @@ Object.defineProperty(exports, 'frontdoorRulesEngine', { get: function () { retu
 Object.defineProperty(exports, 'functionApp', { get: function () { return require('./function-app'); } });
 Object.defineProperty(exports, 'functionAppActiveSlot', { get: function () { return require('./function-app-active-slot'); } });
 Object.defineProperty(exports, 'functionAppConnection', { get: function () { return require('./function-app-connection'); } });
+Object.defineProperty(exports, 'functionAppFlexConsumption', { get: function () { return require('./function-app-flex-consumption'); } });
 Object.defineProperty(exports, 'functionAppFunction', { get: function () { return require('./function-app-function'); } });
 Object.defineProperty(exports, 'functionAppHybridConnection', { get: function () { return require('./function-app-hybrid-connection'); } });
 Object.defineProperty(exports, 'functionAppSlot', { get: function () { return require('./function-app-slot'); } });
@@ -679,6 +680,7 @@ Object.defineProperty(exports, 'networkManagerScopeConnection', { get: function 
 Object.defineProperty(exports, 'networkManagerSecurityAdminConfiguration', { get: function () { return require('./network-manager-security-admin-configuration'); } });
 Object.defineProperty(exports, 'networkManagerStaticMember', { get: function () { return require('./network-manager-static-member'); } });
 Object.defineProperty(exports, 'networkManagerSubscriptionConnection', { get: function () { return require('./network-manager-subscription-connection'); } });
+Object.defineProperty(exports, 'networkManagerVerifierWorkspace', { get: function () { return require('./network-manager-verifier-workspace'); } });
 Object.defineProperty(exports, 'networkPacketCapture', { get: function () { return require('./network-packet-capture'); } });
 Object.defineProperty(exports, 'networkProfile', { get: function () { return require('./network-profile'); } });
 Object.defineProperty(exports, 'networkSecurityGroup', { get: function () { return require('./network-security-group'); } });
