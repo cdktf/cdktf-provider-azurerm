@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,44 +8,44 @@ import * as cdktf from 'cdktf';
 
 export interface CosmosdbMongoDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database#account_name CosmosdbMongoDatabase#account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database#account_name CosmosdbMongoDatabase#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database#id CosmosdbMongoDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database#id CosmosdbMongoDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database#name CosmosdbMongoDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database#name CosmosdbMongoDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database#resource_group_name CosmosdbMongoDatabase#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database#resource_group_name CosmosdbMongoDatabase#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database#throughput CosmosdbMongoDatabase#throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database#throughput CosmosdbMongoDatabase#throughput}
   */
   readonly throughput?: number;
   /**
   * autoscale_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database#autoscale_settings CosmosdbMongoDatabase#autoscale_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database#autoscale_settings CosmosdbMongoDatabase#autoscale_settings}
   */
   readonly autoscaleSettings?: CosmosdbMongoDatabaseAutoscaleSettings;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database#timeouts CosmosdbMongoDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database#timeouts CosmosdbMongoDatabase#timeouts}
   */
   readonly timeouts?: CosmosdbMongoDatabaseTimeouts;
 }
 export interface CosmosdbMongoDatabaseAutoscaleSettings {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database#max_throughput CosmosdbMongoDatabase#max_throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database#max_throughput CosmosdbMongoDatabase#max_throughput}
   */
   readonly maxThroughput?: number;
 }
@@ -134,19 +129,19 @@ export class CosmosdbMongoDatabaseAutoscaleSettingsOutputReference extends cdktf
 }
 export interface CosmosdbMongoDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database#create CosmosdbMongoDatabase#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database#create CosmosdbMongoDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database#delete CosmosdbMongoDatabase#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database#delete CosmosdbMongoDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database#read CosmosdbMongoDatabase#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database#read CosmosdbMongoDatabase#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database#update CosmosdbMongoDatabase#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database#update CosmosdbMongoDatabase#update}
   */
   readonly update?: string;
 }
@@ -327,7 +322,7 @@ export class CosmosdbMongoDatabaseTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database azurerm_cosmosdb_mongo_database}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database azurerm_cosmosdb_mongo_database}
 */
 export class CosmosdbMongoDatabase extends cdktf.TerraformResource {
 
@@ -343,7 +338,7 @@ export class CosmosdbMongoDatabase extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CosmosdbMongoDatabase resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CosmosdbMongoDatabase to import
-  * @param importFromId The id of the existing CosmosdbMongoDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CosmosdbMongoDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CosmosdbMongoDatabase to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -355,7 +350,7 @@ export class CosmosdbMongoDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/cosmosdb_mongo_database azurerm_cosmosdb_mongo_database} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cosmosdb_mongo_database azurerm_cosmosdb_mongo_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -366,7 +361,7 @@ export class CosmosdbMongoDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cosmosdb_mongo_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.21.0',
+        providerVersion: '4.21.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

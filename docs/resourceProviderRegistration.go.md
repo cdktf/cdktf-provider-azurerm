@@ -4,12 +4,12 @@
 
 ### ResourceProviderRegistration <a name="ResourceProviderRegistration" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistration"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration azurerm_resource_provider_registration}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration azurerm_resource_provider_registration}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
 
 resourceproviderregistration.NewResourceProviderRegistration(scope Construct, id *string, config ResourceProviderRegistrationConfig) ResourceProviderRegistration
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
 
 resourceproviderregistration.ResourceProviderRegistration_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
 
 resourceproviderregistration.ResourceProviderRegistration_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ resourceproviderregistration.ResourceProviderRegistration_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
 
 resourceproviderregistration.ResourceProviderRegistration_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ resourceproviderregistration.ResourceProviderRegistration_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistration.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
 
 resourceproviderregistration.ResourceProviderRegistration_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -514,7 +514,7 @@ The construct id used in the generated config for the ResourceProviderRegistrati
 
 The id of the existing ResourceProviderRegistration that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -802,7 +802,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
 
 &resourceproviderregistration.ResourceProviderRegistrationConfig {
 	Connection: interface{},
@@ -815,7 +815,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderr
 	Name: *string,
 	Feature: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.resourceProviderRegistration.ResourceProviderRegistrationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeouts,
 }
 ```
 
@@ -830,9 +830,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderr
 | <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#name ResourceProviderRegistration#name}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#name ResourceProviderRegistration#name}. |
 | <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationConfig.property.feature">Feature</a></code> | <code>interface{}</code> | feature block. |
-| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#id ResourceProviderRegistration#id}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#id ResourceProviderRegistration#id}. |
 | <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeouts">ResourceProviderRegistrationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -915,7 +915,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#name ResourceProviderRegistration#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#name ResourceProviderRegistration#name}.
 
 ---
 
@@ -929,7 +929,7 @@ Feature interface{}
 
 feature block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#feature ResourceProviderRegistration#feature}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#feature ResourceProviderRegistration#feature}
 
 ---
 
@@ -941,7 +941,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#id ResourceProviderRegistration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#id ResourceProviderRegistration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -958,7 +958,7 @@ Timeouts ResourceProviderRegistrationTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#timeouts ResourceProviderRegistration#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#timeouts ResourceProviderRegistration#timeouts}
 
 ---
 
@@ -967,7 +967,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationFeature.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
 
 &resourceproviderregistration.ResourceProviderRegistrationFeature {
 	Name: *string,
@@ -979,8 +979,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderr
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationFeature.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#name ResourceProviderRegistration#name}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationFeature.property.registered">Registered</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#registered ResourceProviderRegistration#registered}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationFeature.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#name ResourceProviderRegistration#name}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationFeature.property.registered">Registered</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#registered ResourceProviderRegistration#registered}. |
 
 ---
 
@@ -992,7 +992,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#name ResourceProviderRegistration#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#name ResourceProviderRegistration#name}.
 
 ---
 
@@ -1004,7 +1004,7 @@ Registered interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#registered ResourceProviderRegistration#registered}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#registered ResourceProviderRegistration#registered}.
 
 ---
 
@@ -1013,7 +1013,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
 
 &resourceproviderregistration.ResourceProviderRegistrationTimeouts {
 	Create: *string,
@@ -1027,10 +1027,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderr
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#create ResourceProviderRegistration#create}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#delete ResourceProviderRegistration#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#read ResourceProviderRegistration#read}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#update ResourceProviderRegistration#update}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#create ResourceProviderRegistration#create}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#delete ResourceProviderRegistration#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#read ResourceProviderRegistration#read}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#update ResourceProviderRegistration#update}. |
 
 ---
 
@@ -1042,7 +1042,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#create ResourceProviderRegistration#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#create ResourceProviderRegistration#create}.
 
 ---
 
@@ -1054,7 +1054,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#delete ResourceProviderRegistration#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#delete ResourceProviderRegistration#delete}.
 
 ---
 
@@ -1066,7 +1066,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#read ResourceProviderRegistration#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#read ResourceProviderRegistration#read}.
 
 ---
 
@@ -1078,7 +1078,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/resources/resource_provider_registration#update ResourceProviderRegistration#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/resource_provider_registration#update ResourceProviderRegistration#update}.
 
 ---
 
@@ -1089,7 +1089,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationFeatureList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
 
 resourceproviderregistration.NewResourceProviderRegistrationFeatureList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ResourceProviderRegistrationFeatureList
 ```
@@ -1249,7 +1249,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationFeatureOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
 
 resourceproviderregistration.NewResourceProviderRegistrationFeatureOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ResourceProviderRegistrationFeatureOutputReference
 ```
@@ -1560,7 +1560,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
 
 resourceproviderregistration.NewResourceProviderRegistrationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ResourceProviderRegistrationTimeoutsOutputReference
 ```

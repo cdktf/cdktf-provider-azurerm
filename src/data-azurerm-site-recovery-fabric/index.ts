@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/data-sources/site_recovery_fabric
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/data-sources/site_recovery_fabric
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,34 +8,34 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSiteRecoveryFabricConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/data-sources/site_recovery_fabric#id DataAzurermSiteRecoveryFabric#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/data-sources/site_recovery_fabric#id DataAzurermSiteRecoveryFabric#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/data-sources/site_recovery_fabric#name DataAzurermSiteRecoveryFabric#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/data-sources/site_recovery_fabric#name DataAzurermSiteRecoveryFabric#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/data-sources/site_recovery_fabric#recovery_vault_name DataAzurermSiteRecoveryFabric#recovery_vault_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/data-sources/site_recovery_fabric#recovery_vault_name DataAzurermSiteRecoveryFabric#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/data-sources/site_recovery_fabric#resource_group_name DataAzurermSiteRecoveryFabric#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/data-sources/site_recovery_fabric#resource_group_name DataAzurermSiteRecoveryFabric#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/data-sources/site_recovery_fabric#timeouts DataAzurermSiteRecoveryFabric#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/data-sources/site_recovery_fabric#timeouts DataAzurermSiteRecoveryFabric#timeouts}
   */
   readonly timeouts?: DataAzurermSiteRecoveryFabricTimeouts;
 }
 export interface DataAzurermSiteRecoveryFabricTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/data-sources/site_recovery_fabric#read DataAzurermSiteRecoveryFabric#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/data-sources/site_recovery_fabric#read DataAzurermSiteRecoveryFabric#read}
   */
   readonly read?: string;
 }
@@ -134,7 +129,7 @@ export class DataAzurermSiteRecoveryFabricTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/data-sources/site_recovery_fabric azurerm_site_recovery_fabric}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/data-sources/site_recovery_fabric azurerm_site_recovery_fabric}
 */
 export class DataAzurermSiteRecoveryFabric extends cdktf.TerraformDataSource {
 
@@ -150,7 +145,7 @@ export class DataAzurermSiteRecoveryFabric extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermSiteRecoveryFabric resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermSiteRecoveryFabric to import
-  * @param importFromId The id of the existing DataAzurermSiteRecoveryFabric that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/data-sources/site_recovery_fabric#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermSiteRecoveryFabric that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/data-sources/site_recovery_fabric#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermSiteRecoveryFabric to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -162,7 +157,7 @@ export class DataAzurermSiteRecoveryFabric extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.0/docs/data-sources/site_recovery_fabric azurerm_site_recovery_fabric} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/data-sources/site_recovery_fabric azurerm_site_recovery_fabric} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -173,7 +168,7 @@ export class DataAzurermSiteRecoveryFabric extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_site_recovery_fabric',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.21.0',
+        providerVersion: '4.21.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
