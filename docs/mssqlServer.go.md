@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlServer.MssqlServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserver"
 
 mssqlserver.NewMssqlServer(scope Construct, id *string, config MssqlServerConfig) MssqlServer
 ```
@@ -522,7 +522,7 @@ func ResetTransparentDataEncryptionKeyVaultKeyId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mssqlServer.MssqlServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserver"
 
 mssqlserver.MssqlServer_IsConstruct(x interface{}) *bool
 ```
@@ -554,7 +554,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mssqlServer.MssqlServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserver"
 
 mssqlserver.MssqlServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -568,7 +568,7 @@ mssqlserver.MssqlServer_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mssqlServer.MssqlServer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserver"
 
 mssqlserver.MssqlServer_IsTerraformResource(x interface{}) *bool
 ```
@@ -582,7 +582,7 @@ mssqlserver.MssqlServer_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mssqlServer.MssqlServer.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserver"
 
 mssqlserver.MssqlServer_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1251,7 +1251,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlServer.MssqlServerAzureadAdministrator.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserver"
 
 &mssqlserver.MssqlServerAzureadAdministrator {
 	LoginUsername: *string,
@@ -1325,7 +1325,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserver"
 
 &mssqlserver.MssqlServerConfig {
 	Connection: interface{},
@@ -1343,16 +1343,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserver"
 	AdministratorLoginPassword: *string,
 	AdministratorLoginPasswordWo: *string,
 	AdministratorLoginPasswordWoVersion: *f64,
-	AzureadAdministrator: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.mssqlServer.MssqlServerAzureadAdministrator,
+	AzureadAdministrator: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlServer.MssqlServerAzureadAdministrator,
 	ConnectionPolicy: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.mssqlServer.MssqlServerIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlServer.MssqlServerIdentity,
 	MinimumTlsVersion: *string,
 	OutboundNetworkRestrictionEnabled: interface{},
 	PrimaryUserAssignedIdentityId: *string,
 	PublicNetworkAccessEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.mssqlServer.MssqlServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlServer.MssqlServerTimeouts,
 	TransparentDataEncryptionKeyVaultKeyId: *string,
 }
 ```
@@ -1702,7 +1702,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlServer.MssqlServerIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserver"
 
 &mssqlserver.MssqlServerIdentity {
 	Type: *string,
@@ -1748,7 +1748,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlServer.MssqlServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserver"
 
 &mssqlserver.MssqlServerTimeouts {
 	Create: *string,
@@ -1824,7 +1824,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlServer.MssqlServerAzureadAdministratorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserver"
 
 mssqlserver.NewMssqlServerAzureadAdministratorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlServerAzureadAdministratorOutputReference
 ```
@@ -2175,7 +2175,7 @@ func InternalValue() MssqlServerAzureadAdministrator
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlServer.MssqlServerIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserver"
 
 mssqlserver.NewMssqlServerIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlServerIdentityOutputReference
 ```
@@ -2497,7 +2497,7 @@ func InternalValue() MssqlServerIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlServer.MssqlServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlserver"
 
 mssqlserver.NewMssqlServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlServerTimeoutsOutputReference
 ```
