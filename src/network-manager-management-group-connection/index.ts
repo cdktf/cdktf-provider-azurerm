@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkManagerManagementGroupConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection#description NetworkManagerManagementGroupConnection#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection#description NetworkManagerManagementGroupConnection#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection#id NetworkManagerManagementGroupConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection#id NetworkManagerManagementGroupConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection#management_group_id NetworkManagerManagementGroupConnection#management_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection#management_group_id NetworkManagerManagementGroupConnection#management_group_id}
   */
   readonly managementGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection#name NetworkManagerManagementGroupConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection#name NetworkManagerManagementGroupConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection#network_manager_id NetworkManagerManagementGroupConnection#network_manager_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection#network_manager_id NetworkManagerManagementGroupConnection#network_manager_id}
   */
   readonly networkManagerId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection#timeouts NetworkManagerManagementGroupConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection#timeouts NetworkManagerManagementGroupConnection#timeouts}
   */
   readonly timeouts?: NetworkManagerManagementGroupConnectionTimeouts;
 }
 export interface NetworkManagerManagementGroupConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection#create NetworkManagerManagementGroupConnection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection#create NetworkManagerManagementGroupConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection#delete NetworkManagerManagementGroupConnection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection#delete NetworkManagerManagementGroupConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection#read NetworkManagerManagementGroupConnection#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection#read NetworkManagerManagementGroupConnection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection#update NetworkManagerManagementGroupConnection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection#update NetworkManagerManagementGroupConnection#update}
   */
   readonly update?: string;
 }
@@ -237,7 +237,7 @@ export class NetworkManagerManagementGroupConnectionTimeoutsOutputReference exte
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection azurerm_network_manager_management_group_connection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection azurerm_network_manager_management_group_connection}
 */
 export class NetworkManagerManagementGroupConnection extends cdktf.TerraformResource {
 
@@ -253,7 +253,7 @@ export class NetworkManagerManagementGroupConnection extends cdktf.TerraformReso
   * Generates CDKTF code for importing a NetworkManagerManagementGroupConnection resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkManagerManagementGroupConnection to import
-  * @param importFromId The id of the existing NetworkManagerManagementGroupConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkManagerManagementGroupConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkManagerManagementGroupConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -265,7 +265,7 @@ export class NetworkManagerManagementGroupConnection extends cdktf.TerraformReso
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/network_manager_management_group_connection azurerm_network_manager_management_group_connection} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/network_manager_management_group_connection azurerm_network_manager_management_group_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -276,7 +276,7 @@ export class NetworkManagerManagementGroupConnection extends cdktf.TerraformReso
       terraformResourceType: 'azurerm_network_manager_management_group_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.21.1',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

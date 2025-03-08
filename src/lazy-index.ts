@@ -397,6 +397,7 @@ Object.defineProperty(exports, 'expressRouteGateway', { get: function () { retur
 Object.defineProperty(exports, 'expressRoutePort', { get: function () { return require('./express-route-port'); } });
 Object.defineProperty(exports, 'expressRoutePortAuthorization', { get: function () { return require('./express-route-port-authorization'); } });
 Object.defineProperty(exports, 'extendedCustomLocation', { get: function () { return require('./extended-custom-location'); } });
+Object.defineProperty(exports, 'extendedLocationCustomLocation', { get: function () { return require('./extended-location-custom-location'); } });
 Object.defineProperty(exports, 'fabricCapacity', { get: function () { return require('./fabric-capacity'); } });
 Object.defineProperty(exports, 'federatedIdentityCredential', { get: function () { return require('./federated-identity-credential'); } });
 Object.defineProperty(exports, 'firewall', { get: function () { return require('./firewall'); } });
@@ -1013,6 +1014,7 @@ Object.defineProperty(exports, 'synapseWorkspaceVulnerabilityAssessment', { get:
 Object.defineProperty(exports, 'systemCenterVirtualMachineManagerAvailabilitySet', { get: function () { return require('./system-center-virtual-machine-manager-availability-set'); } });
 Object.defineProperty(exports, 'systemCenterVirtualMachineManagerCloud', { get: function () { return require('./system-center-virtual-machine-manager-cloud'); } });
 Object.defineProperty(exports, 'systemCenterVirtualMachineManagerServer', { get: function () { return require('./system-center-virtual-machine-manager-server'); } });
+Object.defineProperty(exports, 'systemCenterVirtualMachineManagerVirtualMachineInstance', { get: function () { return require('./system-center-virtual-machine-manager-virtual-machine-instance'); } });
 Object.defineProperty(exports, 'systemCenterVirtualMachineManagerVirtualMachineTemplate', { get: function () { return require('./system-center-virtual-machine-manager-virtual-machine-template'); } });
 Object.defineProperty(exports, 'systemCenterVirtualMachineManagerVirtualNetwork', { get: function () { return require('./system-center-virtual-machine-manager-virtual-network'); } });
 Object.defineProperty(exports, 'tenantTemplateDeployment', { get: function () { return require('./tenant-template-deployment'); } });
@@ -1217,6 +1219,7 @@ Object.defineProperty(exports, 'dataAzurermEventhubNamespaceAuthorizationRule', 
 Object.defineProperty(exports, 'dataAzurermEventhubSas', { get: function () { return require('./data-azurerm-eventhub-sas'); } });
 Object.defineProperty(exports, 'dataAzurermExpressRouteCircuit', { get: function () { return require('./data-azurerm-express-route-circuit'); } });
 Object.defineProperty(exports, 'dataAzurermExpressRouteCircuitPeering', { get: function () { return require('./data-azurerm-express-route-circuit-peering'); } });
+Object.defineProperty(exports, 'dataAzurermExtendedLocationCustomLocation', { get: function () { return require('./data-azurerm-extended-location-custom-location'); } });
 Object.defineProperty(exports, 'dataAzurermExtendedLocations', { get: function () { return require('./data-azurerm-extended-locations'); } });
 Object.defineProperty(exports, 'dataAzurermFirewall', { get: function () { return require('./data-azurerm-firewall'); } });
 Object.defineProperty(exports, 'dataAzurermFirewallPolicy', { get: function () { return require('./data-azurerm-firewall-policy'); } });

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,90 +13,90 @@ import * as cdktf from 'cdktf';
 
 export interface CostManagementScheduledActionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#day_of_month CostManagementScheduledAction#day_of_month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#day_of_month CostManagementScheduledAction#day_of_month}
   */
   readonly dayOfMonth?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#days_of_week CostManagementScheduledAction#days_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#days_of_week CostManagementScheduledAction#days_of_week}
   */
   readonly daysOfWeek?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#display_name CostManagementScheduledAction#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#display_name CostManagementScheduledAction#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#email_address_sender CostManagementScheduledAction#email_address_sender}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#email_address_sender CostManagementScheduledAction#email_address_sender}
   */
   readonly emailAddressSender: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#email_addresses CostManagementScheduledAction#email_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#email_addresses CostManagementScheduledAction#email_addresses}
   */
   readonly emailAddresses: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#email_subject CostManagementScheduledAction#email_subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#email_subject CostManagementScheduledAction#email_subject}
   */
   readonly emailSubject: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#end_date CostManagementScheduledAction#end_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#end_date CostManagementScheduledAction#end_date}
   */
   readonly endDate: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#frequency CostManagementScheduledAction#frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#frequency CostManagementScheduledAction#frequency}
   */
   readonly frequency: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#hour_of_day CostManagementScheduledAction#hour_of_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#hour_of_day CostManagementScheduledAction#hour_of_day}
   */
   readonly hourOfDay?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#id CostManagementScheduledAction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#id CostManagementScheduledAction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#message CostManagementScheduledAction#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#message CostManagementScheduledAction#message}
   */
   readonly message?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#name CostManagementScheduledAction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#name CostManagementScheduledAction#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#start_date CostManagementScheduledAction#start_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#start_date CostManagementScheduledAction#start_date}
   */
   readonly startDate: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#view_id CostManagementScheduledAction#view_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#view_id CostManagementScheduledAction#view_id}
   */
   readonly viewId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#weeks_of_month CostManagementScheduledAction#weeks_of_month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#weeks_of_month CostManagementScheduledAction#weeks_of_month}
   */
   readonly weeksOfMonth?: string[];
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#timeouts CostManagementScheduledAction#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#timeouts CostManagementScheduledAction#timeouts}
   */
   readonly timeouts?: CostManagementScheduledActionTimeouts;
 }
 export interface CostManagementScheduledActionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#create CostManagementScheduledAction#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#create CostManagementScheduledAction#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#delete CostManagementScheduledAction#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#delete CostManagementScheduledAction#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#read CostManagementScheduledAction#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#read CostManagementScheduledAction#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#update CostManagementScheduledAction#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#update CostManagementScheduledAction#update}
   */
   readonly update?: string;
 }
@@ -277,7 +277,7 @@ export class CostManagementScheduledActionTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action azurerm_cost_management_scheduled_action}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action azurerm_cost_management_scheduled_action}
 */
 export class CostManagementScheduledAction extends cdktf.TerraformResource {
 
@@ -293,7 +293,7 @@ export class CostManagementScheduledAction extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CostManagementScheduledAction resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CostManagementScheduledAction to import
-  * @param importFromId The id of the existing CostManagementScheduledAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CostManagementScheduledAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CostManagementScheduledAction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -305,7 +305,7 @@ export class CostManagementScheduledAction extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.21.1/docs/resources/cost_management_scheduled_action azurerm_cost_management_scheduled_action} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/cost_management_scheduled_action azurerm_cost_management_scheduled_action} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -316,7 +316,7 @@ export class CostManagementScheduledAction extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cost_management_scheduled_action',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.21.1',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

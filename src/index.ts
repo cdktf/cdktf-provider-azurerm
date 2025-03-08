@@ -397,6 +397,7 @@ export * as expressRouteGateway from './express-route-gateway';
 export * as expressRoutePort from './express-route-port';
 export * as expressRoutePortAuthorization from './express-route-port-authorization';
 export * as extendedCustomLocation from './extended-custom-location';
+export * as extendedLocationCustomLocation from './extended-location-custom-location';
 export * as fabricCapacity from './fabric-capacity';
 export * as federatedIdentityCredential from './federated-identity-credential';
 export * as firewall from './firewall';
@@ -1013,6 +1014,7 @@ export * as synapseWorkspaceVulnerabilityAssessment from './synapse-workspace-vu
 export * as systemCenterVirtualMachineManagerAvailabilitySet from './system-center-virtual-machine-manager-availability-set';
 export * as systemCenterVirtualMachineManagerCloud from './system-center-virtual-machine-manager-cloud';
 export * as systemCenterVirtualMachineManagerServer from './system-center-virtual-machine-manager-server';
+export * as systemCenterVirtualMachineManagerVirtualMachineInstance from './system-center-virtual-machine-manager-virtual-machine-instance';
 export * as systemCenterVirtualMachineManagerVirtualMachineTemplate from './system-center-virtual-machine-manager-virtual-machine-template';
 export * as systemCenterVirtualMachineManagerVirtualNetwork from './system-center-virtual-machine-manager-virtual-network';
 export * as tenantTemplateDeployment from './tenant-template-deployment';
@@ -1217,6 +1219,7 @@ export * as dataAzurermEventhubNamespaceAuthorizationRule from './data-azurerm-e
 export * as dataAzurermEventhubSas from './data-azurerm-eventhub-sas';
 export * as dataAzurermExpressRouteCircuit from './data-azurerm-express-route-circuit';
 export * as dataAzurermExpressRouteCircuitPeering from './data-azurerm-express-route-circuit-peering';
+export * as dataAzurermExtendedLocationCustomLocation from './data-azurerm-extended-location-custom-location';
 export * as dataAzurermExtendedLocations from './data-azurerm-extended-locations';
 export * as dataAzurermFirewall from './data-azurerm-firewall';
 export * as dataAzurermFirewallPolicy from './data-azurerm-firewall-policy';
