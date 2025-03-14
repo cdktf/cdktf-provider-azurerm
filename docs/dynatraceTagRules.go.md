@@ -4,12 +4,12 @@
 
 ### DynatraceTagRules <a name="DynatraceTagRules" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRules"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules azurerm_dynatrace_tag_rules}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules azurerm_dynatrace_tag_rules}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 dynatracetagrules.NewDynatraceTagRules(scope Construct, id *string, config DynatraceTagRulesConfig) DynatraceTagRules
 ```
@@ -445,7 +445,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRules.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 dynatracetagrules.DynatraceTagRules_IsConstruct(x interface{}) *bool
 ```
@@ -477,7 +477,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRules.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 dynatracetagrules.DynatraceTagRules_IsTerraformElement(x interface{}) *bool
 ```
@@ -491,7 +491,7 @@ dynatracetagrules.DynatraceTagRules_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRules.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 dynatracetagrules.DynatraceTagRules_IsTerraformResource(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ dynatracetagrules.DynatraceTagRules_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRules.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 dynatracetagrules.DynatraceTagRules_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -534,7 +534,7 @@ The construct id used in the generated config for the DynatraceTagRules to impor
 
 The id of the existing DynatraceTagRules that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -866,7 +866,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 &dynatracetagrules.DynatraceTagRulesConfig {
 	Connection: interface{},
@@ -879,9 +879,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules
 	MonitorId: *string,
 	Name: *string,
 	Id: *string,
-	LogRule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dynatraceTagRules.DynatraceTagRulesLogRule,
-	MetricRule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dynatraceTagRules.DynatraceTagRulesMetricRule,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dynatraceTagRules.DynatraceTagRulesTimeouts,
+	LogRule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dynatraceTagRules.DynatraceTagRulesLogRule,
+	MetricRule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dynatraceTagRules.DynatraceTagRulesMetricRule,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dynatraceTagRules.DynatraceTagRulesTimeouts,
 }
 ```
 
@@ -896,9 +896,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules
 | <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesConfig.property.monitorId">MonitorId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#monitor_id DynatraceTagRules#monitor_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#id DynatraceTagRules#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesConfig.property.monitorId">MonitorId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#monitor_id DynatraceTagRules#monitor_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#id DynatraceTagRules#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesConfig.property.logRule">LogRule</a></code> | <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRule">DynatraceTagRulesLogRule</a></code> | log_rule block. |
 | <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesConfig.property.metricRule">MetricRule</a></code> | <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesMetricRule">DynatraceTagRulesMetricRule</a></code> | metric_rule block. |
 | <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesTimeouts">DynatraceTagRulesTimeouts</a></code> | timeouts block. |
@@ -983,7 +983,7 @@ MonitorId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#monitor_id DynatraceTagRules#monitor_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#monitor_id DynatraceTagRules#monitor_id}.
 
 ---
 
@@ -995,7 +995,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}.
 
 ---
 
@@ -1007,7 +1007,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#id DynatraceTagRules#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#id DynatraceTagRules#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1024,7 +1024,7 @@ LogRule DynatraceTagRulesLogRule
 
 log_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#log_rule DynatraceTagRules#log_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#log_rule DynatraceTagRules#log_rule}
 
 ---
 
@@ -1038,7 +1038,7 @@ MetricRule DynatraceTagRulesMetricRule
 
 metric_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#metric_rule DynatraceTagRules#metric_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#metric_rule DynatraceTagRules#metric_rule}
 
 ---
 
@@ -1052,7 +1052,7 @@ Timeouts DynatraceTagRulesTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#timeouts DynatraceTagRules#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#timeouts DynatraceTagRules#timeouts}
 
 ---
 
@@ -1061,7 +1061,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 &dynatracetagrules.DynatraceTagRulesLogRule {
 	FilteringTag: interface{},
@@ -1076,9 +1076,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRule.property.filteringTag">FilteringTag</a></code> | <code>interface{}</code> | filtering_tag block. |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRule.property.sendActivityLogsEnabled">SendActivityLogsEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#send_activity_logs_enabled DynatraceTagRules#send_activity_logs_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRule.property.sendAzureActiveDirectoryLogsEnabled">SendAzureActiveDirectoryLogsEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#send_azure_active_directory_logs_enabled DynatraceTagRules#send_azure_active_directory_logs_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRule.property.sendSubscriptionLogsEnabled">SendSubscriptionLogsEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#send_subscription_logs_enabled DynatraceTagRules#send_subscription_logs_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRule.property.sendActivityLogsEnabled">SendActivityLogsEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#send_activity_logs_enabled DynatraceTagRules#send_activity_logs_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRule.property.sendAzureActiveDirectoryLogsEnabled">SendAzureActiveDirectoryLogsEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#send_azure_active_directory_logs_enabled DynatraceTagRules#send_azure_active_directory_logs_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRule.property.sendSubscriptionLogsEnabled">SendSubscriptionLogsEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#send_subscription_logs_enabled DynatraceTagRules#send_subscription_logs_enabled}. |
 
 ---
 
@@ -1092,7 +1092,7 @@ FilteringTag interface{}
 
 filtering_tag block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#filtering_tag DynatraceTagRules#filtering_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#filtering_tag DynatraceTagRules#filtering_tag}
 
 ---
 
@@ -1104,7 +1104,7 @@ SendActivityLogsEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#send_activity_logs_enabled DynatraceTagRules#send_activity_logs_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#send_activity_logs_enabled DynatraceTagRules#send_activity_logs_enabled}.
 
 ---
 
@@ -1116,7 +1116,7 @@ SendAzureActiveDirectoryLogsEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#send_azure_active_directory_logs_enabled DynatraceTagRules#send_azure_active_directory_logs_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#send_azure_active_directory_logs_enabled DynatraceTagRules#send_azure_active_directory_logs_enabled}.
 
 ---
 
@@ -1128,7 +1128,7 @@ SendSubscriptionLogsEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#send_subscription_logs_enabled DynatraceTagRules#send_subscription_logs_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#send_subscription_logs_enabled DynatraceTagRules#send_subscription_logs_enabled}.
 
 ---
 
@@ -1137,7 +1137,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRuleFilteringTag.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 &dynatracetagrules.DynatraceTagRulesLogRuleFilteringTag {
 	Action: *string,
@@ -1150,9 +1150,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRuleFilteringTag.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#action DynatraceTagRules#action}. |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRuleFilteringTag.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRuleFilteringTag.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#value DynatraceTagRules#value}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRuleFilteringTag.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#action DynatraceTagRules#action}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRuleFilteringTag.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRuleFilteringTag.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#value DynatraceTagRules#value}. |
 
 ---
 
@@ -1164,7 +1164,7 @@ Action *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#action DynatraceTagRules#action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#action DynatraceTagRules#action}.
 
 ---
 
@@ -1176,7 +1176,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}.
 
 ---
 
@@ -1188,7 +1188,7 @@ Value *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#value DynatraceTagRules#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#value DynatraceTagRules#value}.
 
 ---
 
@@ -1197,7 +1197,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesMetricRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 &dynatracetagrules.DynatraceTagRulesMetricRule {
 	FilteringTag: interface{},
@@ -1222,7 +1222,7 @@ FilteringTag interface{}
 
 filtering_tag block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#filtering_tag DynatraceTagRules#filtering_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#filtering_tag DynatraceTagRules#filtering_tag}
 
 ---
 
@@ -1231,7 +1231,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesMetricRuleFilteringTag.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 &dynatracetagrules.DynatraceTagRulesMetricRuleFilteringTag {
 	Action: *string,
@@ -1244,9 +1244,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesMetricRuleFilteringTag.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#action DynatraceTagRules#action}. |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesMetricRuleFilteringTag.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesMetricRuleFilteringTag.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#value DynatraceTagRules#value}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesMetricRuleFilteringTag.property.action">Action</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#action DynatraceTagRules#action}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesMetricRuleFilteringTag.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesMetricRuleFilteringTag.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#value DynatraceTagRules#value}. |
 
 ---
 
@@ -1258,7 +1258,7 @@ Action *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#action DynatraceTagRules#action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#action DynatraceTagRules#action}.
 
 ---
 
@@ -1270,7 +1270,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}.
 
 ---
 
@@ -1282,7 +1282,7 @@ Value *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#value DynatraceTagRules#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#value DynatraceTagRules#value}.
 
 ---
 
@@ -1291,7 +1291,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 &dynatracetagrules.DynatraceTagRulesTimeouts {
 	Create: *string,
@@ -1304,9 +1304,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#create DynatraceTagRules#create}. |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#delete DynatraceTagRules#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#read DynatraceTagRules#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#create DynatraceTagRules#create}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#delete DynatraceTagRules#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#read DynatraceTagRules#read}. |
 
 ---
 
@@ -1318,7 +1318,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#create DynatraceTagRules#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#create DynatraceTagRules#create}.
 
 ---
 
@@ -1330,7 +1330,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#delete DynatraceTagRules#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#delete DynatraceTagRules#delete}.
 
 ---
 
@@ -1342,7 +1342,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/dynatrace_tag_rules#read DynatraceTagRules#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dynatrace_tag_rules#read DynatraceTagRules#read}.
 
 ---
 
@@ -1353,7 +1353,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRuleFilteringTagList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 dynatracetagrules.NewDynatraceTagRulesLogRuleFilteringTagList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DynatraceTagRulesLogRuleFilteringTagList
 ```
@@ -1513,7 +1513,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRuleFilteringTagOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 dynatracetagrules.NewDynatraceTagRulesLogRuleFilteringTagOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DynatraceTagRulesLogRuleFilteringTagOutputReference
 ```
@@ -1846,7 +1846,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesLogRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 dynatracetagrules.NewDynatraceTagRulesLogRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DynatraceTagRulesLogRuleOutputReference
 ```
@@ -2217,7 +2217,7 @@ func InternalValue() DynatraceTagRulesLogRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesMetricRuleFilteringTagList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 dynatracetagrules.NewDynatraceTagRulesMetricRuleFilteringTagList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DynatraceTagRulesMetricRuleFilteringTagList
 ```
@@ -2377,7 +2377,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesMetricRuleFilteringTagOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 dynatracetagrules.NewDynatraceTagRulesMetricRuleFilteringTagOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DynatraceTagRulesMetricRuleFilteringTagOutputReference
 ```
@@ -2710,7 +2710,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesMetricRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 dynatracetagrules.NewDynatraceTagRulesMetricRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DynatraceTagRulesMetricRuleOutputReference
 ```
@@ -2994,7 +2994,7 @@ func InternalValue() DynatraceTagRulesMetricRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dynatraceTagRules.DynatraceTagRulesTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dynatracetagrules"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dynatracetagrules"
 
 dynatracetagrules.NewDynatraceTagRulesTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DynatraceTagRulesTimeoutsOutputReference
 ```

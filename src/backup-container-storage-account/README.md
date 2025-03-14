@@ -1,3 +1,3 @@
 # `azurerm_backup_container_storage_account`
 
-Refer to the Terraform Registry for docs: [`azurerm_backup_container_storage_account`](https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/backup_container_storage_account).
+Refer to the Terraform Registry for docs: [`azurerm_backup_container_storage_account`](https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/backup_container_storage_account).

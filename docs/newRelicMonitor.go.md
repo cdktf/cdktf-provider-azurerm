@@ -4,12 +4,12 @@
 
 ### NewRelicMonitor <a name="NewRelicMonitor" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitor"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor azurerm_new_relic_monitor}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor azurerm_new_relic_monitor}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 newrelicmonitor.NewNewRelicMonitor(scope Construct, id *string, config NewRelicMonitorConfig) NewRelicMonitor
 ```
@@ -493,7 +493,7 @@ func ResetUserId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitor.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 newrelicmonitor.NewRelicMonitor_IsConstruct(x interface{}) *bool
 ```
@@ -525,7 +525,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitor.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 newrelicmonitor.NewRelicMonitor_IsTerraformElement(x interface{}) *bool
 ```
@@ -539,7 +539,7 @@ newrelicmonitor.NewRelicMonitor_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitor.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 newrelicmonitor.NewRelicMonitor_IsTerraformResource(x interface{}) *bool
 ```
@@ -553,7 +553,7 @@ newrelicmonitor.NewRelicMonitor_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitor.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 newrelicmonitor.NewRelicMonitor_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -582,7 +582,7 @@ The construct id used in the generated config for the NewRelicMonitor to import.
 
 The id of the existing NewRelicMonitor that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1090,7 +1090,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 &newrelicmonitor.NewRelicMonitorConfig {
 	Connection: interface{},
@@ -1102,17 +1102,17 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
 	Provisioners: *[]interface{},
 	Location: *string,
 	Name: *string,
-	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.newRelicMonitor.NewRelicMonitorPlan,
+	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.newRelicMonitor.NewRelicMonitorPlan,
 	ResourceGroupName: *string,
-	User: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.newRelicMonitor.NewRelicMonitorUser,
+	User: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.newRelicMonitor.NewRelicMonitorUser,
 	AccountCreationSource: *string,
 	AccountId: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.newRelicMonitor.NewRelicMonitorIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.newRelicMonitor.NewRelicMonitorIdentity,
 	IngestionKey: *string,
 	OrganizationId: *string,
 	OrgCreationSource: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.newRelicMonitor.NewRelicMonitorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.newRelicMonitor.NewRelicMonitorTimeouts,
 	UserId: *string,
 }
 ```
@@ -1128,20 +1128,20 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
 | <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#location NewRelicMonitor#location}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#name NewRelicMonitor#name}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#location NewRelicMonitor#location}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#name NewRelicMonitor#name}. |
 | <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.plan">Plan</a></code> | <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorPlan">NewRelicMonitorPlan</a></code> | plan block. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#resource_group_name NewRelicMonitor#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#resource_group_name NewRelicMonitor#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.user">User</a></code> | <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorUser">NewRelicMonitorUser</a></code> | user block. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.accountCreationSource">AccountCreationSource</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#account_creation_source NewRelicMonitor#account_creation_source}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.accountId">AccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#account_id NewRelicMonitor#account_id}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#id NewRelicMonitor#id}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.accountCreationSource">AccountCreationSource</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#account_creation_source NewRelicMonitor#account_creation_source}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.accountId">AccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#account_id NewRelicMonitor#account_id}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#id NewRelicMonitor#id}. |
 | <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorIdentity">NewRelicMonitorIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.ingestionKey">IngestionKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#ingestion_key NewRelicMonitor#ingestion_key}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.organizationId">OrganizationId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#organization_id NewRelicMonitor#organization_id}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.orgCreationSource">OrgCreationSource</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#org_creation_source NewRelicMonitor#org_creation_source}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.ingestionKey">IngestionKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#ingestion_key NewRelicMonitor#ingestion_key}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.organizationId">OrganizationId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#organization_id NewRelicMonitor#organization_id}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.orgCreationSource">OrgCreationSource</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#org_creation_source NewRelicMonitor#org_creation_source}. |
 | <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorTimeouts">NewRelicMonitorTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.userId">UserId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#user_id NewRelicMonitor#user_id}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorConfig.property.userId">UserId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#user_id NewRelicMonitor#user_id}. |
 
 ---
 
@@ -1223,7 +1223,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#location NewRelicMonitor#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#location NewRelicMonitor#location}.
 
 ---
 
@@ -1235,7 +1235,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#name NewRelicMonitor#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#name NewRelicMonitor#name}.
 
 ---
 
@@ -1249,7 +1249,7 @@ Plan NewRelicMonitorPlan
 
 plan block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#plan NewRelicMonitor#plan}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#plan NewRelicMonitor#plan}
 
 ---
 
@@ -1261,7 +1261,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#resource_group_name NewRelicMonitor#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#resource_group_name NewRelicMonitor#resource_group_name}.
 
 ---
 
@@ -1275,7 +1275,7 @@ User NewRelicMonitorUser
 
 user block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#user NewRelicMonitor#user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#user NewRelicMonitor#user}
 
 ---
 
@@ -1287,7 +1287,7 @@ AccountCreationSource *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#account_creation_source NewRelicMonitor#account_creation_source}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#account_creation_source NewRelicMonitor#account_creation_source}.
 
 ---
 
@@ -1299,7 +1299,7 @@ AccountId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#account_id NewRelicMonitor#account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#account_id NewRelicMonitor#account_id}.
 
 ---
 
@@ -1311,7 +1311,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#id NewRelicMonitor#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#id NewRelicMonitor#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1328,7 +1328,7 @@ Identity NewRelicMonitorIdentity
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#identity NewRelicMonitor#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#identity NewRelicMonitor#identity}
 
 ---
 
@@ -1340,7 +1340,7 @@ IngestionKey *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#ingestion_key NewRelicMonitor#ingestion_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#ingestion_key NewRelicMonitor#ingestion_key}.
 
 ---
 
@@ -1352,7 +1352,7 @@ OrganizationId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#organization_id NewRelicMonitor#organization_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#organization_id NewRelicMonitor#organization_id}.
 
 ---
 
@@ -1364,7 +1364,7 @@ OrgCreationSource *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#org_creation_source NewRelicMonitor#org_creation_source}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#org_creation_source NewRelicMonitor#org_creation_source}.
 
 ---
 
@@ -1378,7 +1378,7 @@ Timeouts NewRelicMonitorTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#timeouts NewRelicMonitor#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#timeouts NewRelicMonitor#timeouts}
 
 ---
 
@@ -1390,7 +1390,7 @@ UserId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#user_id NewRelicMonitor#user_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#user_id NewRelicMonitor#user_id}.
 
 ---
 
@@ -1399,7 +1399,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 &newrelicmonitor.NewRelicMonitorIdentity {
 	Type: *string,
@@ -1410,7 +1410,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#type NewRelicMonitor#type}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#type NewRelicMonitor#type}. |
 
 ---
 
@@ -1422,7 +1422,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#type NewRelicMonitor#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#type NewRelicMonitor#type}.
 
 ---
 
@@ -1431,7 +1431,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorPlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 &newrelicmonitor.NewRelicMonitorPlan {
 	EffectiveDate: *string,
@@ -1445,10 +1445,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorPlan.property.effectiveDate">EffectiveDate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#effective_date NewRelicMonitor#effective_date}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorPlan.property.billingCycle">BillingCycle</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#billing_cycle NewRelicMonitor#billing_cycle}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorPlan.property.planId">PlanId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#plan_id NewRelicMonitor#plan_id}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorPlan.property.usageType">UsageType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#usage_type NewRelicMonitor#usage_type}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorPlan.property.effectiveDate">EffectiveDate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#effective_date NewRelicMonitor#effective_date}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorPlan.property.billingCycle">BillingCycle</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#billing_cycle NewRelicMonitor#billing_cycle}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorPlan.property.planId">PlanId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#plan_id NewRelicMonitor#plan_id}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorPlan.property.usageType">UsageType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#usage_type NewRelicMonitor#usage_type}. |
 
 ---
 
@@ -1460,7 +1460,7 @@ EffectiveDate *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#effective_date NewRelicMonitor#effective_date}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#effective_date NewRelicMonitor#effective_date}.
 
 ---
 
@@ -1472,7 +1472,7 @@ BillingCycle *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#billing_cycle NewRelicMonitor#billing_cycle}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#billing_cycle NewRelicMonitor#billing_cycle}.
 
 ---
 
@@ -1484,7 +1484,7 @@ PlanId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#plan_id NewRelicMonitor#plan_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#plan_id NewRelicMonitor#plan_id}.
 
 ---
 
@@ -1496,7 +1496,7 @@ UsageType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#usage_type NewRelicMonitor#usage_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#usage_type NewRelicMonitor#usage_type}.
 
 ---
 
@@ -1505,7 +1505,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 &newrelicmonitor.NewRelicMonitorTimeouts {
 	Create: *string,
@@ -1518,9 +1518,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#create NewRelicMonitor#create}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#delete NewRelicMonitor#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#read NewRelicMonitor#read}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#create NewRelicMonitor#create}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#delete NewRelicMonitor#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#read NewRelicMonitor#read}. |
 
 ---
 
@@ -1532,7 +1532,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#create NewRelicMonitor#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#create NewRelicMonitor#create}.
 
 ---
 
@@ -1544,7 +1544,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#delete NewRelicMonitor#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#delete NewRelicMonitor#delete}.
 
 ---
 
@@ -1556,7 +1556,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#read NewRelicMonitor#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#read NewRelicMonitor#read}.
 
 ---
 
@@ -1565,7 +1565,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorUser.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 &newrelicmonitor.NewRelicMonitorUser {
 	Email: *string,
@@ -1579,10 +1579,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorUser.property.email">Email</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#email NewRelicMonitor#email}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorUser.property.firstName">FirstName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#first_name NewRelicMonitor#first_name}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorUser.property.lastName">LastName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#last_name NewRelicMonitor#last_name}. |
-| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorUser.property.phoneNumber">PhoneNumber</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#phone_number NewRelicMonitor#phone_number}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorUser.property.email">Email</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#email NewRelicMonitor#email}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorUser.property.firstName">FirstName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#first_name NewRelicMonitor#first_name}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorUser.property.lastName">LastName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#last_name NewRelicMonitor#last_name}. |
+| <code><a href="#@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorUser.property.phoneNumber">PhoneNumber</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#phone_number NewRelicMonitor#phone_number}. |
 
 ---
 
@@ -1594,7 +1594,7 @@ Email *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#email NewRelicMonitor#email}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#email NewRelicMonitor#email}.
 
 ---
 
@@ -1606,7 +1606,7 @@ FirstName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#first_name NewRelicMonitor#first_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#first_name NewRelicMonitor#first_name}.
 
 ---
 
@@ -1618,7 +1618,7 @@ LastName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#last_name NewRelicMonitor#last_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#last_name NewRelicMonitor#last_name}.
 
 ---
 
@@ -1630,7 +1630,7 @@ PhoneNumber *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/new_relic_monitor#phone_number NewRelicMonitor#phone_number}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/new_relic_monitor#phone_number NewRelicMonitor#phone_number}.
 
 ---
 
@@ -1641,7 +1641,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 newrelicmonitor.NewNewRelicMonitorIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NewRelicMonitorIdentityOutputReference
 ```
@@ -1934,7 +1934,7 @@ func InternalValue() NewRelicMonitorIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorPlanOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 newrelicmonitor.NewNewRelicMonitorPlanOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NewRelicMonitorPlanOutputReference
 ```
@@ -2292,7 +2292,7 @@ func InternalValue() NewRelicMonitorPlan
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 newrelicmonitor.NewNewRelicMonitorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NewRelicMonitorTimeoutsOutputReference
 ```
@@ -2628,7 +2628,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.newRelicMonitor.NewRelicMonitorUserOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/newrelicmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/newrelicmonitor"
 
 newrelicmonitor.NewNewRelicMonitorUserOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NewRelicMonitorUserOutputReference
 ```

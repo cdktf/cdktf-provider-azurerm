@@ -1046,6 +1046,7 @@ The following submodules are available:
 - [networkManagerAdminRuleCollection](./networkManagerAdminRuleCollection.csharp.md)
 - [networkManagerConnectivityConfiguration](./networkManagerConnectivityConfiguration.csharp.md)
 - [networkManagerDeployment](./networkManagerDeployment.csharp.md)
+- [networkManagerIpamPool](./networkManagerIpamPool.csharp.md)
 - [networkManagerManagementGroupConnection](./networkManagerManagementGroupConnection.csharp.md)
 - [networkManagerNetworkGroup](./networkManagerNetworkGroup.csharp.md)
 - [networkManagerScopeConnection](./networkManagerScopeConnection.csharp.md)
