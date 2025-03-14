@@ -1046,6 +1046,7 @@ The following submodules are available:
 - [networkManagerAdminRuleCollection](./networkManagerAdminRuleCollection.typescript.md)
 - [networkManagerConnectivityConfiguration](./networkManagerConnectivityConfiguration.typescript.md)
 - [networkManagerDeployment](./networkManagerDeployment.typescript.md)
+- [networkManagerIpamPool](./networkManagerIpamPool.typescript.md)
 - [networkManagerManagementGroupConnection](./networkManagerManagementGroupConnection.typescript.md)
 - [networkManagerNetworkGroup](./networkManagerNetworkGroup.typescript.md)
 - [networkManagerScopeConnection](./networkManagerScopeConnection.typescript.md)

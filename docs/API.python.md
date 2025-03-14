@@ -1046,6 +1046,7 @@ The following submodules are available:
 - [networkManagerAdminRuleCollection](./networkManagerAdminRuleCollection.python.md)
 - [networkManagerConnectivityConfiguration](./networkManagerConnectivityConfiguration.python.md)
 - [networkManagerDeployment](./networkManagerDeployment.python.md)
+- [networkManagerIpamPool](./networkManagerIpamPool.python.md)
 - [networkManagerManagementGroupConnection](./networkManagerManagementGroupConnection.python.md)
 - [networkManagerNetworkGroup](./networkManagerNetworkGroup.python.md)
 - [networkManagerScopeConnection](./networkManagerScopeConnection.python.md)

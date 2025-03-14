@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,58 +13,58 @@ import * as cdktf from 'cdktf';
 
 export interface AppServiceHybridConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection#app_service_name AppServiceHybridConnection#app_service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection#app_service_name AppServiceHybridConnection#app_service_name}
   */
   readonly appServiceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection#hostname AppServiceHybridConnection#hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection#hostname AppServiceHybridConnection#hostname}
   */
   readonly hostname: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection#id AppServiceHybridConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection#id AppServiceHybridConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection#port AppServiceHybridConnection#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection#port AppServiceHybridConnection#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection#relay_id AppServiceHybridConnection#relay_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection#relay_id AppServiceHybridConnection#relay_id}
   */
   readonly relayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection#resource_group_name AppServiceHybridConnection#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection#resource_group_name AppServiceHybridConnection#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection#send_key_name AppServiceHybridConnection#send_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection#send_key_name AppServiceHybridConnection#send_key_name}
   */
   readonly sendKeyName?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection#timeouts AppServiceHybridConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection#timeouts AppServiceHybridConnection#timeouts}
   */
   readonly timeouts?: AppServiceHybridConnectionTimeouts;
 }
 export interface AppServiceHybridConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection#create AppServiceHybridConnection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection#create AppServiceHybridConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection#delete AppServiceHybridConnection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection#delete AppServiceHybridConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection#read AppServiceHybridConnection#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection#read AppServiceHybridConnection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection#update AppServiceHybridConnection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection#update AppServiceHybridConnection#update}
   */
   readonly update?: string;
 }
@@ -245,7 +245,7 @@ export class AppServiceHybridConnectionTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection azurerm_app_service_hybrid_connection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection azurerm_app_service_hybrid_connection}
 */
 export class AppServiceHybridConnection extends cdktf.TerraformResource {
 
@@ -261,7 +261,7 @@ export class AppServiceHybridConnection extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AppServiceHybridConnection resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AppServiceHybridConnection to import
-  * @param importFromId The id of the existing AppServiceHybridConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AppServiceHybridConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AppServiceHybridConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -273,7 +273,7 @@ export class AppServiceHybridConnection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.22.0/docs/resources/app_service_hybrid_connection azurerm_app_service_hybrid_connection} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/app_service_hybrid_connection azurerm_app_service_hybrid_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -284,7 +284,7 @@ export class AppServiceHybridConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_service_hybrid_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.22.0',
+        providerVersion: '4.23.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

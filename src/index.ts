@@ -675,6 +675,7 @@ export * as networkManagerAdminRule from './network-manager-admin-rule';
 export * as networkManagerAdminRuleCollection from './network-manager-admin-rule-collection';
 export * as networkManagerConnectivityConfiguration from './network-manager-connectivity-configuration';
 export * as networkManagerDeployment from './network-manager-deployment';
+export * as networkManagerIpamPool from './network-manager-ipam-pool';
 export * as networkManagerManagementGroupConnection from './network-manager-management-group-connection';
 export * as networkManagerNetworkGroup from './network-manager-network-group';
 export * as networkManagerScopeConnection from './network-manager-scope-connection';

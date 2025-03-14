@@ -1046,6 +1046,7 @@ The following submodules are available:
 - [networkManagerAdminRuleCollection](./networkManagerAdminRuleCollection.java.md)
 - [networkManagerConnectivityConfiguration](./networkManagerConnectivityConfiguration.java.md)
 - [networkManagerDeployment](./networkManagerDeployment.java.md)
+- [networkManagerIpamPool](./networkManagerIpamPool.java.md)
 - [networkManagerManagementGroupConnection](./networkManagerManagementGroupConnection.java.md)
 - [networkManagerNetworkGroup](./networkManagerNetworkGroup.java.md)
 - [networkManagerScopeConnection](./networkManagerScopeConnection.java.md)

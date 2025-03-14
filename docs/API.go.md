@@ -1046,6 +1046,7 @@ The following submodules are available:
 - [networkManagerAdminRuleCollection](./networkManagerAdminRuleCollection.go.md)
 - [networkManagerConnectivityConfiguration](./networkManagerConnectivityConfiguration.go.md)
 - [networkManagerDeployment](./networkManagerDeployment.go.md)
+- [networkManagerIpamPool](./networkManagerIpamPool.go.md)
 - [networkManagerManagementGroupConnection](./networkManagerManagementGroupConnection.go.md)
 - [networkManagerNetworkGroup](./networkManagerNetworkGroup.go.md)
 - [networkManagerScopeConnection](./networkManagerScopeConnection.go.md)

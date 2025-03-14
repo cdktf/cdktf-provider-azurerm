@@ -675,6 +675,7 @@ Object.defineProperty(exports, 'networkManagerAdminRule', { get: function () { r
 Object.defineProperty(exports, 'networkManagerAdminRuleCollection', { get: function () { return require('./network-manager-admin-rule-collection'); } });
 Object.defineProperty(exports, 'networkManagerConnectivityConfiguration', { get: function () { return require('./network-manager-connectivity-configuration'); } });
 Object.defineProperty(exports, 'networkManagerDeployment', { get: function () { return require('./network-manager-deployment'); } });
+Object.defineProperty(exports, 'networkManagerIpamPool', { get: function () { return require('./network-manager-ipam-pool'); } });
 Object.defineProperty(exports, 'networkManagerManagementGroupConnection', { get: function () { return require('./network-manager-management-group-connection'); } });
 Object.defineProperty(exports, 'networkManagerNetworkGroup', { get: function () { return require('./network-manager-network-group'); } });
 Object.defineProperty(exports, 'networkManagerScopeConnection', { get: function () { return require('./network-manager-scope-connection'); } });
