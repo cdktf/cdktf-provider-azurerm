@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_test_global_vm_shutdown_schedule
 // generated from terraform resource schema
 
