@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJob(scope Construct, id *string, config ContainerAppJobConfig) ContainerAppJob
 ```
@@ -559,7 +559,7 @@ func ResetWorkloadProfileName()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.ContainerAppJob_IsConstruct(x interface{}) *bool
 ```
@@ -591,7 +591,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.ContainerAppJob_IsTerraformElement(x interface{}) *bool
 ```
@@ -605,7 +605,7 @@ containerappjob.ContainerAppJob_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.ContainerAppJob_IsTerraformResource(x interface{}) *bool
 ```
@@ -619,7 +619,7 @@ containerappjob.ContainerAppJob_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJob.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.ContainerAppJob_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1244,7 +1244,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobConfig {
 	Connection: interface{},
@@ -1259,17 +1259,17 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
 	Name: *string,
 	ReplicaTimeoutInSeconds: *f64,
 	ResourceGroupName: *string,
-	Template: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.containerAppJob.ContainerAppJobTemplate,
-	EventTriggerConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.containerAppJob.ContainerAppJobEventTriggerConfig,
+	Template: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerAppJob.ContainerAppJobTemplate,
+	EventTriggerConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerAppJob.ContainerAppJobEventTriggerConfig,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.containerAppJob.ContainerAppJobIdentity,
-	ManualTriggerConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.containerAppJob.ContainerAppJobManualTriggerConfig,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerAppJob.ContainerAppJobIdentity,
+	ManualTriggerConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerAppJob.ContainerAppJobManualTriggerConfig,
 	Registry: interface{},
 	ReplicaRetryLimit: *f64,
-	ScheduleTriggerConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.containerAppJob.ContainerAppJobScheduleTriggerConfig,
+	ScheduleTriggerConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerAppJob.ContainerAppJobScheduleTriggerConfig,
 	Secret: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.containerAppJob.ContainerAppJobTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerAppJob.ContainerAppJobTimeouts,
 	WorkloadProfileName: *string,
 }
 ```
@@ -1603,7 +1603,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobEventTriggerConfig {
 	Parallelism: *f64,
@@ -1665,7 +1665,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScale.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobEventTriggerConfigScale {
 	MaxExecutions: *f64,
@@ -1741,7 +1741,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobEventTriggerConfigScaleRules {
 	CustomRuleType: *string,
@@ -1817,7 +1817,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRulesAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobEventTriggerConfigScaleRulesAuthentication {
 	SecretName: *string,
@@ -1863,7 +1863,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobIdentity {
 	Type: *string,
@@ -1909,7 +1909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobManualTriggerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobManualTriggerConfig {
 	Parallelism: *f64,
@@ -1955,7 +1955,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobRegistry {
 	Server: *string,
@@ -2037,7 +2037,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobScheduleTriggerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobScheduleTriggerConfig {
 	CronExpression: *string,
@@ -2097,7 +2097,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobSecret {
 	Name: *string,
@@ -2179,7 +2179,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplate {
 	Container: interface{},
@@ -2245,7 +2245,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplateContainer {
 	Cpu: *f64,
@@ -2445,7 +2445,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerEnv.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplateContainerEnv {
 	Name: *string,
@@ -2511,7 +2511,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerLivenessProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplateContainerLivenessProbe {
 	Port: *f64,
@@ -2681,7 +2681,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerLivenessProbeHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplateContainerLivenessProbeHeader {
 	Name: *string,
@@ -2731,7 +2731,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerReadinessProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplateContainerReadinessProbe {
 	Port: *f64,
@@ -2917,7 +2917,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerReadinessProbeHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplateContainerReadinessProbeHeader {
 	Name: *string,
@@ -2967,7 +2967,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerStartupProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplateContainerStartupProbe {
 	Port: *f64,
@@ -3137,7 +3137,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerStartupProbeHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplateContainerStartupProbeHeader {
 	Name: *string,
@@ -3187,7 +3187,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerVolumeMounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplateContainerVolumeMounts {
 	Name: *string,
@@ -3253,7 +3253,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateInitContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplateInitContainer {
 	Image: *string,
@@ -3405,7 +3405,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateInitContainerEnv.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplateInitContainerEnv {
 	Name: *string,
@@ -3471,7 +3471,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateInitContainerVolumeMounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplateInitContainerVolumeMounts {
 	Name: *string,
@@ -3537,7 +3537,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTemplateVolume {
 	Name: *string,
@@ -3619,7 +3619,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 &containerappjob.ContainerAppJobTimeouts {
 	Create: *string,
@@ -3695,7 +3695,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobEventTriggerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppJobEventTriggerConfigOutputReference
 ```
@@ -4044,7 +4044,7 @@ func InternalValue() ContainerAppJobEventTriggerConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobEventTriggerConfigScaleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobEventTriggerConfigScaleList
 ```
@@ -4204,7 +4204,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobEventTriggerConfigScaleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobEventTriggerConfigScaleOutputReference
 ```
@@ -4600,7 +4600,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRulesAuthenticationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobEventTriggerConfigScaleRulesAuthenticationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobEventTriggerConfigScaleRulesAuthenticationList
 ```
@@ -4760,7 +4760,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRulesAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobEventTriggerConfigScaleRulesAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobEventTriggerConfigScaleRulesAuthenticationOutputReference
 ```
@@ -5071,7 +5071,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobEventTriggerConfigScaleRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobEventTriggerConfigScaleRulesList
 ```
@@ -5231,7 +5231,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobEventTriggerConfigScaleRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobEventTriggerConfigScaleRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobEventTriggerConfigScaleRulesOutputReference
 ```
@@ -5606,7 +5606,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppJobIdentityOutputReference
 ```
@@ -5928,7 +5928,7 @@ func InternalValue() ContainerAppJobIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobManualTriggerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobManualTriggerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppJobManualTriggerConfigOutputReference
 ```
@@ -6235,7 +6235,7 @@ func InternalValue() ContainerAppJobManualTriggerConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobRegistryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobRegistryList
 ```
@@ -6395,7 +6395,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobRegistryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobRegistryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobRegistryOutputReference
 ```
@@ -6771,7 +6771,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobScheduleTriggerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobScheduleTriggerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppJobScheduleTriggerConfigOutputReference
 ```
@@ -7100,7 +7100,7 @@ func InternalValue() ContainerAppJobScheduleTriggerConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobSecretList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobSecretList
 ```
@@ -7260,7 +7260,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobSecretOutputReference
 ```
@@ -7636,7 +7636,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerEnvList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerEnvList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobTemplateContainerEnvList
 ```
@@ -7796,7 +7796,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerEnvOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerEnvOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobTemplateContainerEnvOutputReference
 ```
@@ -8143,7 +8143,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobTemplateContainerList
 ```
@@ -8303,7 +8303,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerLivenessProbeHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerLivenessProbeHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobTemplateContainerLivenessProbeHeaderList
 ```
@@ -8463,7 +8463,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerLivenessProbeHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerLivenessProbeHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobTemplateContainerLivenessProbeHeaderOutputReference
 ```
@@ -8774,7 +8774,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerLivenessProbeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerLivenessProbeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobTemplateContainerLivenessProbeList
 ```
@@ -8934,7 +8934,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerLivenessProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerLivenessProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobTemplateContainerLivenessProbeOutputReference
 ```
@@ -9472,7 +9472,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobTemplateContainerOutputReference
 ```
@@ -10106,7 +10106,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerReadinessProbeHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerReadinessProbeHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobTemplateContainerReadinessProbeHeaderList
 ```
@@ -10266,7 +10266,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerReadinessProbeHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerReadinessProbeHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobTemplateContainerReadinessProbeHeaderOutputReference
 ```
@@ -10577,7 +10577,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerReadinessProbeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerReadinessProbeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobTemplateContainerReadinessProbeList
 ```
@@ -10737,7 +10737,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerReadinessProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerReadinessProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobTemplateContainerReadinessProbeOutputReference
 ```
@@ -11293,7 +11293,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerStartupProbeHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerStartupProbeHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobTemplateContainerStartupProbeHeaderList
 ```
@@ -11453,7 +11453,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerStartupProbeHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerStartupProbeHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobTemplateContainerStartupProbeHeaderOutputReference
 ```
@@ -11764,7 +11764,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerStartupProbeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerStartupProbeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobTemplateContainerStartupProbeList
 ```
@@ -11924,7 +11924,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerStartupProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerStartupProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobTemplateContainerStartupProbeOutputReference
 ```
@@ -12462,7 +12462,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerVolumeMountsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerVolumeMountsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobTemplateContainerVolumeMountsList
 ```
@@ -12622,7 +12622,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateContainerVolumeMountsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateContainerVolumeMountsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobTemplateContainerVolumeMountsOutputReference
 ```
@@ -12962,7 +12962,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateInitContainerEnvList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateInitContainerEnvList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobTemplateInitContainerEnvList
 ```
@@ -13122,7 +13122,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateInitContainerEnvOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateInitContainerEnvOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobTemplateInitContainerEnvOutputReference
 ```
@@ -13469,7 +13469,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateInitContainerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateInitContainerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobTemplateInitContainerList
 ```
@@ -13629,7 +13629,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateInitContainerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateInitContainerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobTemplateInitContainerOutputReference
 ```
@@ -14151,7 +14151,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateInitContainerVolumeMountsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateInitContainerVolumeMountsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobTemplateInitContainerVolumeMountsList
 ```
@@ -14311,7 +14311,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateInitContainerVolumeMountsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateInitContainerVolumeMountsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobTemplateInitContainerVolumeMountsOutputReference
 ```
@@ -14651,7 +14651,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppJobTemplateOutputReference
 ```
@@ -15019,7 +15019,7 @@ func InternalValue() ContainerAppJobTemplate
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateVolumeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateVolumeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppJobTemplateVolumeList
 ```
@@ -15179,7 +15179,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTemplateVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTemplateVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppJobTemplateVolumeOutputReference
 ```
@@ -15555,7 +15555,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppJob.ContainerAppJobTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/containerappjob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappjob"
 
 containerappjob.NewContainerAppJobTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppJobTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.extendedLocationCustomLocation.ExtendedLocationCustomLocation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/extendedlocationcustomlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/extendedlocationcustomlocation"
 
 extendedlocationcustomlocation.NewExtendedLocationCustomLocation(scope Construct, id *string, config ExtendedLocationCustomLocationConfig) ExtendedLocationCustomLocation
 ```
@@ -439,7 +439,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.extendedLocationCustomLocation.ExtendedLocationCustomLocation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/extendedlocationcustomlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/extendedlocationcustomlocation"
 
 extendedlocationcustomlocation.ExtendedLocationCustomLocation_IsConstruct(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.extendedLocationCustomLocation.ExtendedLocationCustomLocation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/extendedlocationcustomlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/extendedlocationcustomlocation"
 
 extendedlocationcustomlocation.ExtendedLocationCustomLocation_IsTerraformElement(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ extendedlocationcustomlocation.ExtendedLocationCustomLocation_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.extendedLocationCustomLocation.ExtendedLocationCustomLocation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/extendedlocationcustomlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/extendedlocationcustomlocation"
 
 extendedlocationcustomlocation.ExtendedLocationCustomLocation_IsTerraformResource(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ extendedlocationcustomlocation.ExtendedLocationCustomLocation_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.extendedLocationCustomLocation.ExtendedLocationCustomLocation.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/extendedlocationcustomlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/extendedlocationcustomlocation"
 
 extendedlocationcustomlocation.ExtendedLocationCustomLocation_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -970,7 +970,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.extendedLocationCustomLocation.ExtendedLocationCustomLocationAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/extendedlocationcustomlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/extendedlocationcustomlocation"
 
 &extendedlocationcustomlocation.ExtendedLocationCustomLocationAuthentication {
 	Value: *string,
@@ -1016,7 +1016,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.extendedLocationCustomLocation.ExtendedLocationCustomLocationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/extendedlocationcustomlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/extendedlocationcustomlocation"
 
 &extendedlocationcustomlocation.ExtendedLocationCustomLocationConfig {
 	Connection: interface{},
@@ -1032,11 +1032,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/extendedlocationc
 	Name: *string,
 	Namespace: *string,
 	ResourceGroupName: *string,
-	Authentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.extendedLocationCustomLocation.ExtendedLocationCustomLocationAuthentication,
+	Authentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.extendedLocationCustomLocation.ExtendedLocationCustomLocationAuthentication,
 	DisplayName: *string,
 	HostType: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.extendedLocationCustomLocation.ExtendedLocationCustomLocationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.extendedLocationCustomLocation.ExtendedLocationCustomLocationTimeouts,
 }
 ```
 
@@ -1279,7 +1279,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.extendedLocationCustomLocation.ExtendedLocationCustomLocationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/extendedlocationcustomlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/extendedlocationcustomlocation"
 
 &extendedlocationcustomlocation.ExtendedLocationCustomLocationTimeouts {
 	Create: *string,
@@ -1355,7 +1355,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.extendedLocationCustomLocation.ExtendedLocationCustomLocationAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/extendedlocationcustomlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/extendedlocationcustomlocation"
 
 extendedlocationcustomlocation.NewExtendedLocationCustomLocationAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExtendedLocationCustomLocationAuthenticationOutputReference
 ```
@@ -1655,7 +1655,7 @@ func InternalValue() ExtendedLocationCustomLocationAuthentication
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.extendedLocationCustomLocation.ExtendedLocationCustomLocationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/extendedlocationcustomlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/extendedlocationcustomlocation"
 
 extendedlocationcustomlocation.NewExtendedLocationCustomLocationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExtendedLocationCustomLocationTimeoutsOutputReference
 ```
