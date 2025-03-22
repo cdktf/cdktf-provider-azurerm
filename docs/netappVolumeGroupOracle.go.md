@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracle.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 netappvolumegrouporacle.NewNetappVolumeGroupOracle(scope Construct, id *string, config NetappVolumeGroupOracleConfig) NetappVolumeGroupOracle
 ```
@@ -418,7 +418,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracle.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 netappvolumegrouporacle.NetappVolumeGroupOracle_IsConstruct(x interface{}) *bool
 ```
@@ -450,7 +450,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracle.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 netappvolumegrouporacle.NetappVolumeGroupOracle_IsTerraformElement(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ netappvolumegrouporacle.NetappVolumeGroupOracle_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracle.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 netappvolumegrouporacle.NetappVolumeGroupOracle_IsTerraformResource(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ netappvolumegrouporacle.NetappVolumeGroupOracle_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracle.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 netappvolumegrouporacle.NetappVolumeGroupOracle_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -905,7 +905,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 &netappvolumegrouporacle.NetappVolumeGroupOracleConfig {
 	Connection: interface{},
@@ -923,7 +923,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporac
 	ResourceGroupName: *string,
 	Volume: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.netappVolumeGroupOracle.NetappVolumeGroupOracleTimeouts,
 }
 ```
 
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 &netappvolumegrouporacle.NetappVolumeGroupOracleTimeouts {
 	Create: *string,
@@ -1214,7 +1214,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracleVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 &netappvolumegrouporacle.NetappVolumeGroupOracleVolume {
 	CapacityPoolId: *string,
@@ -1229,7 +1229,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporac
 	ThroughputInMibps: *f64,
 	VolumePath: *string,
 	VolumeSpecName: *string,
-	DataProtectionSnapshotPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracleVolumeDataProtectionSnapshotPolicy,
+	DataProtectionSnapshotPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.netappVolumeGroupOracle.NetappVolumeGroupOracleVolumeDataProtectionSnapshotPolicy,
 	EncryptionKeySource: *string,
 	KeyVaultPrivateEndpointId: *string,
 	NetworkFeatures: *string,
@@ -1502,7 +1502,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracleVolumeDataProtectionSnapshotPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 &netappvolumegrouporacle.NetappVolumeGroupOracleVolumeDataProtectionSnapshotPolicy {
 	SnapshotPolicyId: *string,
@@ -1534,7 +1534,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracleVolumeExportPolicyRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 &netappvolumegrouporacle.NetappVolumeGroupOracleVolumeExportPolicyRule {
 	AllowedClients: *string,
@@ -1652,7 +1652,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 netappvolumegrouporacle.NewNetappVolumeGroupOracleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappVolumeGroupOracleTimeoutsOutputReference
 ```
@@ -2017,7 +2017,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracleVolumeDataProtectionSnapshotPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 netappvolumegrouporacle.NewNetappVolumeGroupOracleVolumeDataProtectionSnapshotPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappVolumeGroupOracleVolumeDataProtectionSnapshotPolicyOutputReference
 ```
@@ -2288,7 +2288,7 @@ func InternalValue() NetappVolumeGroupOracleVolumeDataProtectionSnapshotPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracleVolumeExportPolicyRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 netappvolumegrouporacle.NewNetappVolumeGroupOracleVolumeExportPolicyRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetappVolumeGroupOracleVolumeExportPolicyRuleList
 ```
@@ -2448,7 +2448,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracleVolumeExportPolicyRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 netappvolumegrouporacle.NewNetappVolumeGroupOracleVolumeExportPolicyRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetappVolumeGroupOracleVolumeExportPolicyRuleOutputReference
 ```
@@ -2890,7 +2890,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracleVolumeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 netappvolumegrouporacle.NewNetappVolumeGroupOracleVolumeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetappVolumeGroupOracleVolumeList
 ```
@@ -3050,7 +3050,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupOracle.NetappVolumeGroupOracleVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappvolumegrouporacle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegrouporacle"
 
 netappvolumegrouporacle.NewNetappVolumeGroupOracleVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetappVolumeGroupOracleVolumeOutputReference
 ```

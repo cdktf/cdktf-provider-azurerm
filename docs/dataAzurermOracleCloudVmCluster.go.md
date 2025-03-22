@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 dataazurermoraclecloudvmcluster.NewDataAzurermOracleCloudVmCluster(scope Construct, id *string, config DataAzurermOracleCloudVmClusterConfig) DataAzurermOracleCloudVmCluster
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 dataazurermoraclecloudvmcluster.DataAzurermOracleCloudVmCluster_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 dataazurermoraclecloudvmcluster.DataAzurermOracleCloudVmCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermoraclecloudvmcluster.DataAzurermOracleCloudVmCluster_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmCluster.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 dataazurermoraclecloudvmcluster.DataAzurermOracleCloudVmCluster_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermoraclecloudvmcluster.DataAzurermOracleCloudVmCluster_IsTerraformDataS
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 dataazurermoraclecloudvmcluster.DataAzurermOracleCloudVmCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1197,7 +1197,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 &dataazurermoraclecloudvmcluster.DataAzurermOracleCloudVmClusterConfig {
 	Connection: interface{},
@@ -1210,7 +1210,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleclou
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterTimeouts,
 }
 ```
 
@@ -1360,7 +1360,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterDataCollectionOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 &dataazurermoraclecloudvmcluster.DataAzurermOracleCloudVmClusterDataCollectionOptions {
 
@@ -1373,7 +1373,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleclou
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterIormConfigCache.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 &dataazurermoraclecloudvmcluster.DataAzurermOracleCloudVmClusterIormConfigCache {
 
@@ -1386,7 +1386,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleclou
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterIormConfigCacheDbPlans.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 &dataazurermoraclecloudvmcluster.DataAzurermOracleCloudVmClusterIormConfigCacheDbPlans {
 
@@ -1399,7 +1399,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleclou
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 &dataazurermoraclecloudvmcluster.DataAzurermOracleCloudVmClusterTimeouts {
 	Read: *string,
@@ -1433,7 +1433,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterDataCollectionOptionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 dataazurermoraclecloudvmcluster.NewDataAzurermOracleCloudVmClusterDataCollectionOptionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermOracleCloudVmClusterDataCollectionOptionsList
 ```
@@ -1582,7 +1582,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterDataCollectionOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 dataazurermoraclecloudvmcluster.NewDataAzurermOracleCloudVmClusterDataCollectionOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermOracleCloudVmClusterDataCollectionOptionsOutputReference
 ```
@@ -1882,7 +1882,7 @@ func InternalValue() DataAzurermOracleCloudVmClusterDataCollectionOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterIormConfigCacheDbPlansList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 dataazurermoraclecloudvmcluster.NewDataAzurermOracleCloudVmClusterIormConfigCacheDbPlansList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermOracleCloudVmClusterIormConfigCacheDbPlansList
 ```
@@ -2031,7 +2031,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterIormConfigCacheDbPlansOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 dataazurermoraclecloudvmcluster.NewDataAzurermOracleCloudVmClusterIormConfigCacheDbPlansOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermOracleCloudVmClusterIormConfigCacheDbPlansOutputReference
 ```
@@ -2331,7 +2331,7 @@ func InternalValue() DataAzurermOracleCloudVmClusterIormConfigCacheDbPlans
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterIormConfigCacheList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 dataazurermoraclecloudvmcluster.NewDataAzurermOracleCloudVmClusterIormConfigCacheList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermOracleCloudVmClusterIormConfigCacheList
 ```
@@ -2480,7 +2480,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterIormConfigCacheOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 dataazurermoraclecloudvmcluster.NewDataAzurermOracleCloudVmClusterIormConfigCacheOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermOracleCloudVmClusterIormConfigCacheOutputReference
 ```
@@ -2791,7 +2791,7 @@ func InternalValue() DataAzurermOracleCloudVmClusterIormConfigCache
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleCloudVmCluster.DataAzurermOracleCloudVmClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoraclecloudvmcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermoraclecloudvmcluster"
 
 dataazurermoraclecloudvmcluster.NewDataAzurermOracleCloudVmClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermOracleCloudVmClusterTimeoutsOutputReference
 ```

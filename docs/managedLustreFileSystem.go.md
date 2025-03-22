@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystem.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 managedlustrefilesystem.NewManagedLustreFileSystem(scope Construct, id *string, config ManagedLustreFileSystemConfig) ManagedLustreFileSystem
 ```
@@ -485,7 +485,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystem.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 managedlustrefilesystem.ManagedLustreFileSystem_IsConstruct(x interface{}) *bool
 ```
@@ -517,7 +517,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystem.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 managedlustrefilesystem.ManagedLustreFileSystem_IsTerraformElement(x interface{}) *bool
 ```
@@ -531,7 +531,7 @@ managedlustrefilesystem.ManagedLustreFileSystem_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystem.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 managedlustrefilesystem.ManagedLustreFileSystem_IsTerraformResource(x interface{}) *bool
 ```
@@ -545,7 +545,7 @@ managedlustrefilesystem.ManagedLustreFileSystem_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystem.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 managedlustrefilesystem.ManagedLustreFileSystem_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1093,7 +1093,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystemConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 &managedlustrefilesystem.ManagedLustreFileSystemConfig {
 	Connection: interface{},
@@ -1104,19 +1104,19 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesyst
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Location: *string,
-	MaintenanceWindow: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.managedLustreFileSystem.ManagedLustreFileSystemMaintenanceWindow,
+	MaintenanceWindow: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.managedLustreFileSystem.ManagedLustreFileSystemMaintenanceWindow,
 	Name: *string,
 	ResourceGroupName: *string,
 	SkuName: *string,
 	StorageCapacityInTb: *f64,
 	SubnetId: *string,
 	Zones: *[]*string,
-	EncryptionKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.managedLustreFileSystem.ManagedLustreFileSystemEncryptionKey,
-	HsmSetting: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.managedLustreFileSystem.ManagedLustreFileSystemHsmSetting,
+	EncryptionKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.managedLustreFileSystem.ManagedLustreFileSystemEncryptionKey,
+	HsmSetting: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.managedLustreFileSystem.ManagedLustreFileSystemHsmSetting,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.managedLustreFileSystem.ManagedLustreFileSystemIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.managedLustreFileSystem.ManagedLustreFileSystemIdentity,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.managedLustreFileSystem.ManagedLustreFileSystemTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.managedLustreFileSystem.ManagedLustreFileSystemTimeouts,
 }
 ```
 
@@ -1404,7 +1404,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystemEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 &managedlustrefilesystem.ManagedLustreFileSystemEncryptionKey {
 	KeyUrl: *string,
@@ -1450,7 +1450,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystemHsmSetting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 &managedlustrefilesystem.ManagedLustreFileSystemHsmSetting {
 	ContainerId: *string,
@@ -1510,7 +1510,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystemIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 &managedlustrefilesystem.ManagedLustreFileSystemIdentity {
 	IdentityIds: *[]*string,
@@ -1556,7 +1556,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystemMaintenanceWindow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 &managedlustrefilesystem.ManagedLustreFileSystemMaintenanceWindow {
 	DayOfWeek: *string,
@@ -1602,7 +1602,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystemTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 &managedlustrefilesystem.ManagedLustreFileSystemTimeouts {
 	Create: *string,
@@ -1678,7 +1678,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystemEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 managedlustrefilesystem.NewManagedLustreFileSystemEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ManagedLustreFileSystemEncryptionKeyOutputReference
 ```
@@ -1971,7 +1971,7 @@ func InternalValue() ManagedLustreFileSystemEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystemHsmSettingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 managedlustrefilesystem.NewManagedLustreFileSystemHsmSettingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ManagedLustreFileSystemHsmSettingOutputReference
 ```
@@ -2293,7 +2293,7 @@ func InternalValue() ManagedLustreFileSystemHsmSetting
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystemIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 managedlustrefilesystem.NewManagedLustreFileSystemIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ManagedLustreFileSystemIdentityOutputReference
 ```
@@ -2586,7 +2586,7 @@ func InternalValue() ManagedLustreFileSystemIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystemMaintenanceWindowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 managedlustrefilesystem.NewManagedLustreFileSystemMaintenanceWindowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ManagedLustreFileSystemMaintenanceWindowOutputReference
 ```
@@ -2879,7 +2879,7 @@ func InternalValue() ManagedLustreFileSystemMaintenanceWindow
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managedLustreFileSystem.ManagedLustreFileSystemTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/managedlustrefilesystem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/managedlustrefilesystem"
 
 managedlustrefilesystem.NewManagedLustreFileSystemTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ManagedLustreFileSystemTimeoutsOutputReference
 ```

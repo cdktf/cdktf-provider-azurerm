@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dedicatedHostGroup.DedicatedHostGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dedicatedhostgroup"
 
 dedicatedhostgroup.NewDedicatedHostGroup(scope Construct, id *string, config DedicatedHostGroupConfig) DedicatedHostGroup
 ```
@@ -426,7 +426,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dedicatedHostGroup.DedicatedHostGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dedicatedhostgroup"
 
 dedicatedhostgroup.DedicatedHostGroup_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dedicatedHostGroup.DedicatedHostGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dedicatedhostgroup"
 
 dedicatedhostgroup.DedicatedHostGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ dedicatedhostgroup.DedicatedHostGroup_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dedicatedHostGroup.DedicatedHostGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dedicatedhostgroup"
 
 dedicatedhostgroup.DedicatedHostGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ dedicatedhostgroup.DedicatedHostGroup_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dedicatedHostGroup.DedicatedHostGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dedicatedhostgroup"
 
 dedicatedhostgroup.DedicatedHostGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -913,7 +913,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dedicatedHostGroup.DedicatedHostGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dedicatedhostgroup"
 
 &dedicatedhostgroup.DedicatedHostGroupConfig {
 	Connection: interface{},
@@ -930,7 +930,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhostgroup"
 	AutomaticPlacementEnabled: interface{},
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dedicatedHostGroup.DedicatedHostGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dedicatedHostGroup.DedicatedHostGroupTimeouts,
 	Zone: *string,
 }
 ```
@@ -1146,7 +1146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dedicatedHostGroup.DedicatedHostGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dedicatedhostgroup"
 
 &dedicatedhostgroup.DedicatedHostGroupTimeouts {
 	Create: *string,
@@ -1222,7 +1222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dedicatedHostGroup.DedicatedHostGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dedicatedhostgroup"
 
 dedicatedhostgroup.NewDedicatedHostGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DedicatedHostGroupTimeoutsOutputReference
 ```

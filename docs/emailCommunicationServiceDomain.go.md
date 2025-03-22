@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomain.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomain(scope Construct, id *string, config EmailCommunicationServiceDomainConfig) EmailCommunicationServiceDomain
 ```
@@ -419,7 +419,7 @@ func ResetUserEngagementTrackingEnabled()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomain.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.EmailCommunicationServiceDomain_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomain.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.EmailCommunicationServiceDomain_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ emailcommunicationservicedomain.EmailCommunicationServiceDomain_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomain.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.EmailCommunicationServiceDomain_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ emailcommunicationservicedomain.EmailCommunicationServiceDomain_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomain.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.EmailCommunicationServiceDomain_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -895,7 +895,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 &emailcommunicationservicedomain.EmailCommunicationServiceDomainConfig {
 	Connection: interface{},
@@ -910,7 +910,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationser
 	Name: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.emailCommunicationServiceDomain.EmailCommunicationServiceDomainTimeouts,
 	UserEngagementTrackingEnabled: interface{},
 }
 ```
@@ -1100,7 +1100,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 &emailcommunicationservicedomain.EmailCommunicationServiceDomainTimeouts {
 	Create: *string,
@@ -1174,7 +1174,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecords.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 &emailcommunicationservicedomain.EmailCommunicationServiceDomainVerificationRecords {
 
@@ -1187,7 +1187,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsDkim.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 &emailcommunicationservicedomain.EmailCommunicationServiceDomainVerificationRecordsDkim {
 
@@ -1200,7 +1200,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsDkim2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 &emailcommunicationservicedomain.EmailCommunicationServiceDomainVerificationRecordsDkim2 {
 
@@ -1213,7 +1213,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsDmarc.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 &emailcommunicationservicedomain.EmailCommunicationServiceDomainVerificationRecordsDmarc {
 
@@ -1226,7 +1226,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsDomain.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 &emailcommunicationservicedomain.EmailCommunicationServiceDomainVerificationRecordsDomain {
 
@@ -1239,7 +1239,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsSpf.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 &emailcommunicationservicedomain.EmailCommunicationServiceDomainVerificationRecordsSpf {
 
@@ -1254,7 +1254,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationser
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomainTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EmailCommunicationServiceDomainTimeoutsOutputReference
 ```
@@ -1619,7 +1619,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsDkim2List.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomainVerificationRecordsDkim2List(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EmailCommunicationServiceDomainVerificationRecordsDkim2List
 ```
@@ -1768,7 +1768,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsDkim2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomainVerificationRecordsDkim2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EmailCommunicationServiceDomainVerificationRecordsDkim2OutputReference
 ```
@@ -2079,7 +2079,7 @@ func InternalValue() EmailCommunicationServiceDomainVerificationRecordsDkim2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsDkimList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomainVerificationRecordsDkimList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EmailCommunicationServiceDomainVerificationRecordsDkimList
 ```
@@ -2228,7 +2228,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsDkimOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomainVerificationRecordsDkimOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EmailCommunicationServiceDomainVerificationRecordsDkimOutputReference
 ```
@@ -2539,7 +2539,7 @@ func InternalValue() EmailCommunicationServiceDomainVerificationRecordsDkim
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsDmarcList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomainVerificationRecordsDmarcList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EmailCommunicationServiceDomainVerificationRecordsDmarcList
 ```
@@ -2688,7 +2688,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsDmarcOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomainVerificationRecordsDmarcOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EmailCommunicationServiceDomainVerificationRecordsDmarcOutputReference
 ```
@@ -2999,7 +2999,7 @@ func InternalValue() EmailCommunicationServiceDomainVerificationRecordsDmarc
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsDomainList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomainVerificationRecordsDomainList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EmailCommunicationServiceDomainVerificationRecordsDomainList
 ```
@@ -3148,7 +3148,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsDomainOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomainVerificationRecordsDomainOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EmailCommunicationServiceDomainVerificationRecordsDomainOutputReference
 ```
@@ -3459,7 +3459,7 @@ func InternalValue() EmailCommunicationServiceDomainVerificationRecordsDomain
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomainVerificationRecordsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EmailCommunicationServiceDomainVerificationRecordsList
 ```
@@ -3608,7 +3608,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomainVerificationRecordsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EmailCommunicationServiceDomainVerificationRecordsOutputReference
 ```
@@ -3930,7 +3930,7 @@ func InternalValue() EmailCommunicationServiceDomainVerificationRecords
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsSpfList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomainVerificationRecordsSpfList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EmailCommunicationServiceDomainVerificationRecordsSpfList
 ```
@@ -4079,7 +4079,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.emailCommunicationServiceDomain.EmailCommunicationServiceDomainVerificationRecordsSpfOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/emailcommunicationservicedomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/emailcommunicationservicedomain"
 
 emailcommunicationservicedomain.NewEmailCommunicationServiceDomainVerificationRecordsSpfOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EmailCommunicationServiceDomainVerificationRecordsSpfOutputReference
 ```
