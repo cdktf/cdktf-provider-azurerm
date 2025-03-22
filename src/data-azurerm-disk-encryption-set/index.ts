@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/data-sources/disk_encryption_set
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/disk_encryption_set
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDiskEncryptionSetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/data-sources/disk_encryption_set#id DataAzurermDiskEncryptionSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/disk_encryption_set#id DataAzurermDiskEncryptionSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/data-sources/disk_encryption_set#name DataAzurermDiskEncryptionSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/disk_encryption_set#name DataAzurermDiskEncryptionSet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/data-sources/disk_encryption_set#resource_group_name DataAzurermDiskEncryptionSet#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/disk_encryption_set#resource_group_name DataAzurermDiskEncryptionSet#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/data-sources/disk_encryption_set#timeouts DataAzurermDiskEncryptionSet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/disk_encryption_set#timeouts DataAzurermDiskEncryptionSet#timeouts}
   */
   readonly timeouts?: DataAzurermDiskEncryptionSetTimeouts;
 }
@@ -126,7 +121,7 @@ export class DataAzurermDiskEncryptionSetIdentityList extends cdktf.ComplexList 
 }
 export interface DataAzurermDiskEncryptionSetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/data-sources/disk_encryption_set#read DataAzurermDiskEncryptionSet#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/disk_encryption_set#read DataAzurermDiskEncryptionSet#read}
   */
   readonly read?: string;
 }
@@ -220,7 +215,7 @@ export class DataAzurermDiskEncryptionSetTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/data-sources/disk_encryption_set azurerm_disk_encryption_set}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/disk_encryption_set azurerm_disk_encryption_set}
 */
 export class DataAzurermDiskEncryptionSet extends cdktf.TerraformDataSource {
 
@@ -236,7 +231,7 @@ export class DataAzurermDiskEncryptionSet extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermDiskEncryptionSet resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermDiskEncryptionSet to import
-  * @param importFromId The id of the existing DataAzurermDiskEncryptionSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/data-sources/disk_encryption_set#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermDiskEncryptionSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/disk_encryption_set#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermDiskEncryptionSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -248,7 +243,7 @@ export class DataAzurermDiskEncryptionSet extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/data-sources/disk_encryption_set azurerm_disk_encryption_set} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/disk_encryption_set azurerm_disk_encryption_set} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -259,7 +254,7 @@ export class DataAzurermDiskEncryptionSet extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_disk_encryption_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.23.0',
+        providerVersion: '4.24.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
