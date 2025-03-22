@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,66 +13,66 @@ import * as cdktf from 'cdktf';
 
 export interface SubscriptionCostManagementExportConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#active SubscriptionCostManagementExport#active}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#active SubscriptionCostManagementExport#active}
   */
   readonly active?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#file_format SubscriptionCostManagementExport#file_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#file_format SubscriptionCostManagementExport#file_format}
   */
   readonly fileFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#id SubscriptionCostManagementExport#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#id SubscriptionCostManagementExport#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#name SubscriptionCostManagementExport#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#name SubscriptionCostManagementExport#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#recurrence_period_end_date SubscriptionCostManagementExport#recurrence_period_end_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#recurrence_period_end_date SubscriptionCostManagementExport#recurrence_period_end_date}
   */
   readonly recurrencePeriodEndDate: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#recurrence_period_start_date SubscriptionCostManagementExport#recurrence_period_start_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#recurrence_period_start_date SubscriptionCostManagementExport#recurrence_period_start_date}
   */
   readonly recurrencePeriodStartDate: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#recurrence_type SubscriptionCostManagementExport#recurrence_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#recurrence_type SubscriptionCostManagementExport#recurrence_type}
   */
   readonly recurrenceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#subscription_id SubscriptionCostManagementExport#subscription_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#subscription_id SubscriptionCostManagementExport#subscription_id}
   */
   readonly subscriptionId: string;
   /**
   * export_data_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#export_data_options SubscriptionCostManagementExport#export_data_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#export_data_options SubscriptionCostManagementExport#export_data_options}
   */
   readonly exportDataOptions: SubscriptionCostManagementExportExportDataOptions;
   /**
   * export_data_storage_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#export_data_storage_location SubscriptionCostManagementExport#export_data_storage_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#export_data_storage_location SubscriptionCostManagementExport#export_data_storage_location}
   */
   readonly exportDataStorageLocation: SubscriptionCostManagementExportExportDataStorageLocation;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#timeouts SubscriptionCostManagementExport#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#timeouts SubscriptionCostManagementExport#timeouts}
   */
   readonly timeouts?: SubscriptionCostManagementExportTimeouts;
 }
 export interface SubscriptionCostManagementExportExportDataOptions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#time_frame SubscriptionCostManagementExport#time_frame}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#time_frame SubscriptionCostManagementExport#time_frame}
   */
   readonly timeFrame: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#type SubscriptionCostManagementExport#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#type SubscriptionCostManagementExport#type}
   */
   readonly type: string;
 }
@@ -179,11 +179,11 @@ export class SubscriptionCostManagementExportExportDataOptionsOutputReference ex
 }
 export interface SubscriptionCostManagementExportExportDataStorageLocation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#container_id SubscriptionCostManagementExport#container_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#container_id SubscriptionCostManagementExport#container_id}
   */
   readonly containerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#root_folder_path SubscriptionCostManagementExport#root_folder_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#root_folder_path SubscriptionCostManagementExport#root_folder_path}
   */
   readonly rootFolderPath: string;
 }
@@ -290,19 +290,19 @@ export class SubscriptionCostManagementExportExportDataStorageLocationOutputRefe
 }
 export interface SubscriptionCostManagementExportTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#create SubscriptionCostManagementExport#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#create SubscriptionCostManagementExport#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#delete SubscriptionCostManagementExport#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#delete SubscriptionCostManagementExport#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#read SubscriptionCostManagementExport#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#read SubscriptionCostManagementExport#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#update SubscriptionCostManagementExport#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#update SubscriptionCostManagementExport#update}
   */
   readonly update?: string;
 }
@@ -483,7 +483,7 @@ export class SubscriptionCostManagementExportTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export azurerm_subscription_cost_management_export}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export azurerm_subscription_cost_management_export}
 */
 export class SubscriptionCostManagementExport extends cdktf.TerraformResource {
 
@@ -499,7 +499,7 @@ export class SubscriptionCostManagementExport extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SubscriptionCostManagementExport resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SubscriptionCostManagementExport to import
-  * @param importFromId The id of the existing SubscriptionCostManagementExport that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SubscriptionCostManagementExport that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SubscriptionCostManagementExport to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -511,7 +511,7 @@ export class SubscriptionCostManagementExport extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/subscription_cost_management_export azurerm_subscription_cost_management_export} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/subscription_cost_management_export azurerm_subscription_cost_management_export} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -522,7 +522,7 @@ export class SubscriptionCostManagementExport extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_subscription_cost_management_export',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.23.0',
+        providerVersion: '4.24.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
