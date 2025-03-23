@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,100 +8,100 @@ import * as cdktf from 'cdktf';
 
 export interface AiFoundryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#application_insights_id AiFoundry#application_insights_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#application_insights_id AiFoundry#application_insights_id}
   */
   readonly applicationInsightsId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#container_registry_id AiFoundry#container_registry_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#container_registry_id AiFoundry#container_registry_id}
   */
   readonly containerRegistryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#description AiFoundry#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#description AiFoundry#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#friendly_name AiFoundry#friendly_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#friendly_name AiFoundry#friendly_name}
   */
   readonly friendlyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#high_business_impact_enabled AiFoundry#high_business_impact_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#high_business_impact_enabled AiFoundry#high_business_impact_enabled}
   */
   readonly highBusinessImpactEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#id AiFoundry#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#id AiFoundry#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#key_vault_id AiFoundry#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#key_vault_id AiFoundry#key_vault_id}
   */
   readonly keyVaultId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#location AiFoundry#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#location AiFoundry#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#name AiFoundry#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#name AiFoundry#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#primary_user_assigned_identity AiFoundry#primary_user_assigned_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#primary_user_assigned_identity AiFoundry#primary_user_assigned_identity}
   */
   readonly primaryUserAssignedIdentity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#public_network_access AiFoundry#public_network_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#public_network_access AiFoundry#public_network_access}
   */
   readonly publicNetworkAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#resource_group_name AiFoundry#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#resource_group_name AiFoundry#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#storage_account_id AiFoundry#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#storage_account_id AiFoundry#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#tags AiFoundry#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#tags AiFoundry#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#encryption AiFoundry#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#encryption AiFoundry#encryption}
   */
   readonly encryption?: AiFoundryEncryption;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#identity AiFoundry#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#identity AiFoundry#identity}
   */
   readonly identity: AiFoundryIdentity;
   /**
   * managed_network block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#managed_network AiFoundry#managed_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#managed_network AiFoundry#managed_network}
   */
   readonly managedNetwork?: AiFoundryManagedNetwork;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#timeouts AiFoundry#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#timeouts AiFoundry#timeouts}
   */
   readonly timeouts?: AiFoundryTimeouts;
 }
 export interface AiFoundryEncryption {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#key_id AiFoundry#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#key_id AiFoundry#key_id}
   */
   readonly keyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#key_vault_id AiFoundry#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#key_vault_id AiFoundry#key_vault_id}
   */
   readonly keyVaultId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#user_assigned_identity_id AiFoundry#user_assigned_identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#user_assigned_identity_id AiFoundry#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId?: string;
 }
@@ -242,11 +237,11 @@ export class AiFoundryEncryptionOutputReference extends cdktf.ComplexObject {
 }
 export interface AiFoundryIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#identity_ids AiFoundry#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#identity_ids AiFoundry#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#type AiFoundry#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#type AiFoundry#type}
   */
   readonly type: string;
 }
@@ -366,7 +361,7 @@ export class AiFoundryIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface AiFoundryManagedNetwork {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#isolation_mode AiFoundry#isolation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#isolation_mode AiFoundry#isolation_mode}
   */
   readonly isolationMode?: string;
 }
@@ -450,19 +445,19 @@ export class AiFoundryManagedNetworkOutputReference extends cdktf.ComplexObject 
 }
 export interface AiFoundryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#create AiFoundry#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#create AiFoundry#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#delete AiFoundry#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#delete AiFoundry#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#read AiFoundry#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#read AiFoundry#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#update AiFoundry#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#update AiFoundry#update}
   */
   readonly update?: string;
 }
@@ -643,7 +638,7 @@ export class AiFoundryTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry azurerm_ai_foundry}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry azurerm_ai_foundry}
 */
 export class AiFoundry extends cdktf.TerraformResource {
 
@@ -659,7 +654,7 @@ export class AiFoundry extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AiFoundry resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AiFoundry to import
-  * @param importFromId The id of the existing AiFoundry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AiFoundry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AiFoundry to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -671,7 +666,7 @@ export class AiFoundry extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/ai_foundry azurerm_ai_foundry} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/ai_foundry azurerm_ai_foundry} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -682,7 +677,7 @@ export class AiFoundry extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_ai_foundry',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.23.0',
+        providerVersion: '4.24.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

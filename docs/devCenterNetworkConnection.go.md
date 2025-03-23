@@ -4,12 +4,12 @@
 
 ### DevCenterNetworkConnection <a name="DevCenterNetworkConnection" id="@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnection"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection azurerm_dev_center_network_connection}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection azurerm_dev_center_network_connection}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/devcenternetworkconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenternetworkconnection"
 
 devcenternetworkconnection.NewDevCenterNetworkConnection(scope Construct, id *string, config DevCenterNetworkConnectionConfig) DevCenterNetworkConnection
 ```
@@ -440,7 +440,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/devcenternetworkconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenternetworkconnection"
 
 devcenternetworkconnection.DevCenterNetworkConnection_IsConstruct(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/devcenternetworkconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenternetworkconnection"
 
 devcenternetworkconnection.DevCenterNetworkConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ devcenternetworkconnection.DevCenterNetworkConnection_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/devcenternetworkconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenternetworkconnection"
 
 devcenternetworkconnection.DevCenterNetworkConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -500,7 +500,7 @@ devcenternetworkconnection.DevCenterNetworkConnection_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/devcenternetworkconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenternetworkconnection"
 
 devcenternetworkconnection.DevCenterNetworkConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -529,7 +529,7 @@ The construct id used in the generated config for the DevCenterNetworkConnection
 
 The id of the existing DevCenterNetworkConnection that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -993,7 +993,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/devcenternetworkconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenternetworkconnection"
 
 &devcenternetworkconnection.DevCenterNetworkConnectionConfig {
 	Connection: interface{},
@@ -1014,7 +1014,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/devcenternetworkc
 	Id: *string,
 	OrganizationUnit: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.devCenterNetworkConnection.DevCenterNetworkConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionTimeouts,
 }
 ```
 
@@ -1029,17 +1029,17 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/devcenternetworkc
 | <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.domainJoinType">DomainJoinType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#domain_join_type DevCenterNetworkConnection#domain_join_type}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#location DevCenterNetworkConnection#location}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#name DevCenterNetworkConnection#name}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#resource_group_name DevCenterNetworkConnection#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.subnetId">SubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#subnet_id DevCenterNetworkConnection#subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.domainName">DomainName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#domain_name DevCenterNetworkConnection#domain_name}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.domainPassword">DomainPassword</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#domain_password DevCenterNetworkConnection#domain_password}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.domainUsername">DomainUsername</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#domain_username DevCenterNetworkConnection#domain_username}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#id DevCenterNetworkConnection#id}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.organizationUnit">OrganizationUnit</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#organization_unit DevCenterNetworkConnection#organization_unit}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#tags DevCenterNetworkConnection#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.domainJoinType">DomainJoinType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#domain_join_type DevCenterNetworkConnection#domain_join_type}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#location DevCenterNetworkConnection#location}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#name DevCenterNetworkConnection#name}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#resource_group_name DevCenterNetworkConnection#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.subnetId">SubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#subnet_id DevCenterNetworkConnection#subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.domainName">DomainName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#domain_name DevCenterNetworkConnection#domain_name}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.domainPassword">DomainPassword</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#domain_password DevCenterNetworkConnection#domain_password}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.domainUsername">DomainUsername</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#domain_username DevCenterNetworkConnection#domain_username}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#id DevCenterNetworkConnection#id}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.organizationUnit">OrganizationUnit</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#organization_unit DevCenterNetworkConnection#organization_unit}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#tags DevCenterNetworkConnection#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionTimeouts">DevCenterNetworkConnectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1122,7 +1122,7 @@ DomainJoinType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#domain_join_type DevCenterNetworkConnection#domain_join_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#domain_join_type DevCenterNetworkConnection#domain_join_type}.
 
 ---
 
@@ -1134,7 +1134,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#location DevCenterNetworkConnection#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#location DevCenterNetworkConnection#location}.
 
 ---
 
@@ -1146,7 +1146,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#name DevCenterNetworkConnection#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#name DevCenterNetworkConnection#name}.
 
 ---
 
@@ -1158,7 +1158,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#resource_group_name DevCenterNetworkConnection#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#resource_group_name DevCenterNetworkConnection#resource_group_name}.
 
 ---
 
@@ -1170,7 +1170,7 @@ SubnetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#subnet_id DevCenterNetworkConnection#subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#subnet_id DevCenterNetworkConnection#subnet_id}.
 
 ---
 
@@ -1182,7 +1182,7 @@ DomainName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#domain_name DevCenterNetworkConnection#domain_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#domain_name DevCenterNetworkConnection#domain_name}.
 
 ---
 
@@ -1194,7 +1194,7 @@ DomainPassword *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#domain_password DevCenterNetworkConnection#domain_password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#domain_password DevCenterNetworkConnection#domain_password}.
 
 ---
 
@@ -1206,7 +1206,7 @@ DomainUsername *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#domain_username DevCenterNetworkConnection#domain_username}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#domain_username DevCenterNetworkConnection#domain_username}.
 
 ---
 
@@ -1218,7 +1218,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#id DevCenterNetworkConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#id DevCenterNetworkConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1233,7 +1233,7 @@ OrganizationUnit *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#organization_unit DevCenterNetworkConnection#organization_unit}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#organization_unit DevCenterNetworkConnection#organization_unit}.
 
 ---
 
@@ -1245,7 +1245,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#tags DevCenterNetworkConnection#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#tags DevCenterNetworkConnection#tags}.
 
 ---
 
@@ -1259,7 +1259,7 @@ Timeouts DevCenterNetworkConnectionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#timeouts DevCenterNetworkConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#timeouts DevCenterNetworkConnection#timeouts}
 
 ---
 
@@ -1268,7 +1268,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/devcenternetworkconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenternetworkconnection"
 
 &devcenternetworkconnection.DevCenterNetworkConnectionTimeouts {
 	Create: *string,
@@ -1282,10 +1282,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/devcenternetworkc
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#create DevCenterNetworkConnection#create}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#delete DevCenterNetworkConnection#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#read DevCenterNetworkConnection#read}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#update DevCenterNetworkConnection#update}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#create DevCenterNetworkConnection#create}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#delete DevCenterNetworkConnection#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#read DevCenterNetworkConnection#read}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#update DevCenterNetworkConnection#update}. |
 
 ---
 
@@ -1297,7 +1297,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#create DevCenterNetworkConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#create DevCenterNetworkConnection#create}.
 
 ---
 
@@ -1309,7 +1309,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#delete DevCenterNetworkConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#delete DevCenterNetworkConnection#delete}.
 
 ---
 
@@ -1321,7 +1321,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#read DevCenterNetworkConnection#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#read DevCenterNetworkConnection#read}.
 
 ---
 
@@ -1333,7 +1333,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/dev_center_network_connection#update DevCenterNetworkConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/dev_center_network_connection#update DevCenterNetworkConnection#update}.
 
 ---
 
@@ -1344,7 +1344,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devCenterNetworkConnection.DevCenterNetworkConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/devcenternetworkconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devcenternetworkconnection"
 
 devcenternetworkconnection.NewDevCenterNetworkConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevCenterNetworkConnectionTimeoutsOutputReference
 ```

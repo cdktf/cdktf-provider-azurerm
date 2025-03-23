@@ -4,12 +4,12 @@
 
 ### DataProtectionBackupVaultCustomerManagedKey <a name="DataProtectionBackupVaultCustomerManagedKey" id="@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKey"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key azurerm_data_protection_backup_vault_customer_managed_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key azurerm_data_protection_backup_vault_customer_managed_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataprotectionbackupvaultcustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupvaultcustomermanagedkey"
 
 dataprotectionbackupvaultcustomermanagedkey.NewDataProtectionBackupVaultCustomerManagedKey(scope Construct, id *string, config DataProtectionBackupVaultCustomerManagedKeyConfig) DataProtectionBackupVaultCustomerManagedKey
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataprotectionbackupvaultcustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupvaultcustomermanagedkey"
 
 dataprotectionbackupvaultcustomermanagedkey.DataProtectionBackupVaultCustomerManagedKey_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataprotectionbackupvaultcustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupvaultcustomermanagedkey"
 
 dataprotectionbackupvaultcustomermanagedkey.DataProtectionBackupVaultCustomerManagedKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ dataprotectionbackupvaultcustomermanagedkey.DataProtectionBackupVaultCustomerMan
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKey.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataprotectionbackupvaultcustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupvaultcustomermanagedkey"
 
 dataprotectionbackupvaultcustomermanagedkey.DataProtectionBackupVaultCustomerManagedKey_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ dataprotectionbackupvaultcustomermanagedkey.DataProtectionBackupVaultCustomerMan
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKey.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataprotectionbackupvaultcustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupvaultcustomermanagedkey"
 
 dataprotectionbackupvaultcustomermanagedkey.DataProtectionBackupVaultCustomerManagedKey_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -494,7 +494,7 @@ The construct id used in the generated config for the DataProtectionBackupVaultC
 
 The id of the existing DataProtectionBackupVaultCustomerManagedKey that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -782,7 +782,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataprotectionbackupvaultcustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupvaultcustomermanagedkey"
 
 &dataprotectionbackupvaultcustomermanagedkey.DataProtectionBackupVaultCustomerManagedKeyConfig {
 	Connection: interface{},
@@ -795,7 +795,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataprotectionbac
 	DataProtectionBackupVaultId: *string,
 	KeyVaultKeyId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyTimeouts,
 }
 ```
 
@@ -810,9 +810,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataprotectionbac
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyConfig.property.dataProtectionBackupVaultId">DataProtectionBackupVaultId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#data_protection_backup_vault_id DataProtectionBackupVaultCustomerManagedKey#data_protection_backup_vault_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyConfig.property.keyVaultKeyId">KeyVaultKeyId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#key_vault_key_id DataProtectionBackupVaultCustomerManagedKey#key_vault_key_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#id DataProtectionBackupVaultCustomerManagedKey#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyConfig.property.dataProtectionBackupVaultId">DataProtectionBackupVaultId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#data_protection_backup_vault_id DataProtectionBackupVaultCustomerManagedKey#data_protection_backup_vault_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyConfig.property.keyVaultKeyId">KeyVaultKeyId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#key_vault_key_id DataProtectionBackupVaultCustomerManagedKey#key_vault_key_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#id DataProtectionBackupVaultCustomerManagedKey#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyTimeouts">DataProtectionBackupVaultCustomerManagedKeyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -895,7 +895,7 @@ DataProtectionBackupVaultId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#data_protection_backup_vault_id DataProtectionBackupVaultCustomerManagedKey#data_protection_backup_vault_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#data_protection_backup_vault_id DataProtectionBackupVaultCustomerManagedKey#data_protection_backup_vault_id}.
 
 ---
 
@@ -907,7 +907,7 @@ KeyVaultKeyId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#key_vault_key_id DataProtectionBackupVaultCustomerManagedKey#key_vault_key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#key_vault_key_id DataProtectionBackupVaultCustomerManagedKey#key_vault_key_id}.
 
 ---
 
@@ -919,7 +919,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#id DataProtectionBackupVaultCustomerManagedKey#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#id DataProtectionBackupVaultCustomerManagedKey#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -936,7 +936,7 @@ Timeouts DataProtectionBackupVaultCustomerManagedKeyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#timeouts DataProtectionBackupVaultCustomerManagedKey#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#timeouts DataProtectionBackupVaultCustomerManagedKey#timeouts}
 
 ---
 
@@ -945,7 +945,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataprotectionbackupvaultcustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupvaultcustomermanagedkey"
 
 &dataprotectionbackupvaultcustomermanagedkey.DataProtectionBackupVaultCustomerManagedKeyTimeouts {
 	Create: *string,
@@ -959,10 +959,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataprotectionbac
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#create DataProtectionBackupVaultCustomerManagedKey#create}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#delete DataProtectionBackupVaultCustomerManagedKey#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#read DataProtectionBackupVaultCustomerManagedKey#read}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#update DataProtectionBackupVaultCustomerManagedKey#update}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#create DataProtectionBackupVaultCustomerManagedKey#create}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#delete DataProtectionBackupVaultCustomerManagedKey#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#read DataProtectionBackupVaultCustomerManagedKey#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#update DataProtectionBackupVaultCustomerManagedKey#update}. |
 
 ---
 
@@ -974,7 +974,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#create DataProtectionBackupVaultCustomerManagedKey#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#create DataProtectionBackupVaultCustomerManagedKey#create}.
 
 ---
 
@@ -986,7 +986,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#delete DataProtectionBackupVaultCustomerManagedKey#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#delete DataProtectionBackupVaultCustomerManagedKey#delete}.
 
 ---
 
@@ -998,7 +998,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#read DataProtectionBackupVaultCustomerManagedKey#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#read DataProtectionBackupVaultCustomerManagedKey#read}.
 
 ---
 
@@ -1010,7 +1010,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/data_protection_backup_vault_customer_managed_key#update DataProtectionBackupVaultCustomerManagedKey#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/data_protection_backup_vault_customer_managed_key#update DataProtectionBackupVaultCustomerManagedKey#update}.
 
 ---
 
@@ -1021,7 +1021,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupVaultCustomerManagedKey.DataProtectionBackupVaultCustomerManagedKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataprotectionbackupvaultcustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackupvaultcustomermanagedkey"
 
 dataprotectionbackupvaultcustomermanagedkey.NewDataProtectionBackupVaultCustomerManagedKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataProtectionBackupVaultCustomerManagedKeyTimeoutsOutputReference
 ```
