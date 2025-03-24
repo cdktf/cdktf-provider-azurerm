@@ -849,6 +849,7 @@ Object.defineProperty(exports, 'serviceFabricManagedCluster', { get: function ()
 Object.defineProperty(exports, 'servicePlan', { get: function () { return require('./service-plan'); } });
 Object.defineProperty(exports, 'servicebusNamespace', { get: function () { return require('./servicebus-namespace'); } });
 Object.defineProperty(exports, 'servicebusNamespaceAuthorizationRule', { get: function () { return require('./servicebus-namespace-authorization-rule'); } });
+Object.defineProperty(exports, 'servicebusNamespaceCustomerManagedKey', { get: function () { return require('./servicebus-namespace-customer-managed-key'); } });
 Object.defineProperty(exports, 'servicebusNamespaceDisasterRecoveryConfig', { get: function () { return require('./servicebus-namespace-disaster-recovery-config'); } });
 Object.defineProperty(exports, 'servicebusQueue', { get: function () { return require('./servicebus-queue'); } });
 Object.defineProperty(exports, 'servicebusQueueAuthorizationRule', { get: function () { return require('./servicebus-queue-authorization-rule'); } });
@@ -961,6 +962,7 @@ Object.defineProperty(exports, 'streamAnalyticsFunctionJavascriptUda', { get: fu
 Object.defineProperty(exports, 'streamAnalyticsFunctionJavascriptUdf', { get: function () { return require('./stream-analytics-function-javascript-udf'); } });
 Object.defineProperty(exports, 'streamAnalyticsJob', { get: function () { return require('./stream-analytics-job'); } });
 Object.defineProperty(exports, 'streamAnalyticsJobSchedule', { get: function () { return require('./stream-analytics-job-schedule'); } });
+Object.defineProperty(exports, 'streamAnalyticsJobStorageAccount', { get: function () { return require('./stream-analytics-job-storage-account'); } });
 Object.defineProperty(exports, 'streamAnalyticsManagedPrivateEndpoint', { get: function () { return require('./stream-analytics-managed-private-endpoint'); } });
 Object.defineProperty(exports, 'streamAnalyticsOutputBlob', { get: function () { return require('./stream-analytics-output-blob'); } });
 Object.defineProperty(exports, 'streamAnalyticsOutputCosmosdb', { get: function () { return require('./stream-analytics-output-cosmosdb'); } });
@@ -1084,6 +1086,7 @@ Object.defineProperty(exports, 'webPubsubCustomDomain', { get: function () { ret
 Object.defineProperty(exports, 'webPubsubHub', { get: function () { return require('./web-pubsub-hub'); } });
 Object.defineProperty(exports, 'webPubsubNetworkAcl', { get: function () { return require('./web-pubsub-network-acl'); } });
 Object.defineProperty(exports, 'webPubsubSharedPrivateLinkResource', { get: function () { return require('./web-pubsub-shared-private-link-resource'); } });
+Object.defineProperty(exports, 'webPubsubSocketio', { get: function () { return require('./web-pubsub-socketio'); } });
 Object.defineProperty(exports, 'windowsFunctionApp', { get: function () { return require('./windows-function-app'); } });
 Object.defineProperty(exports, 'windowsFunctionAppSlot', { get: function () { return require('./windows-function-app-slot'); } });
 Object.defineProperty(exports, 'windowsVirtualMachine', { get: function () { return require('./windows-virtual-machine'); } });
