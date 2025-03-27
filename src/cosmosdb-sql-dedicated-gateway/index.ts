@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/cosmosdb_sql_dedicated_gateway
 // generated from terraform resource schema
 
