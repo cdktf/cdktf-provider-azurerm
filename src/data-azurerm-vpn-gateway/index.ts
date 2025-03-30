@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/vpn_gateway
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/vpn_gateway
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermVpnGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/vpn_gateway#id DataAzurermVpnGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/vpn_gateway#id DataAzurermVpnGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/vpn_gateway#name DataAzurermVpnGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/vpn_gateway#name DataAzurermVpnGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/vpn_gateway#resource_group_name DataAzurermVpnGateway#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/vpn_gateway#resource_group_name DataAzurermVpnGateway#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/vpn_gateway#timeouts DataAzurermVpnGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/vpn_gateway#timeouts DataAzurermVpnGateway#timeouts}
   */
   readonly timeouts?: DataAzurermVpnGatewayTimeouts;
 }
@@ -313,7 +308,7 @@ export class DataAzurermVpnGatewayBgpSettingsList extends cdktf.ComplexList {
 }
 export interface DataAzurermVpnGatewayTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/vpn_gateway#read DataAzurermVpnGateway#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/vpn_gateway#read DataAzurermVpnGateway#read}
   */
   readonly read?: string;
 }
@@ -407,7 +402,7 @@ export class DataAzurermVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/vpn_gateway azurerm_vpn_gateway}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/vpn_gateway azurerm_vpn_gateway}
 */
 export class DataAzurermVpnGateway extends cdktf.TerraformDataSource {
 
@@ -423,7 +418,7 @@ export class DataAzurermVpnGateway extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermVpnGateway resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermVpnGateway to import
-  * @param importFromId The id of the existing DataAzurermVpnGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/vpn_gateway#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermVpnGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/vpn_gateway#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermVpnGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -435,7 +430,7 @@ export class DataAzurermVpnGateway extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/vpn_gateway azurerm_vpn_gateway} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/vpn_gateway azurerm_vpn_gateway} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -446,7 +441,7 @@ export class DataAzurermVpnGateway extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_vpn_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.24.0',
+        providerVersion: '4.25.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

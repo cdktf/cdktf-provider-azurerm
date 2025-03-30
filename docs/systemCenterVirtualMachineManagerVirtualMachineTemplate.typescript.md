@@ -4,7 +4,7 @@
 
 ### SystemCenterVirtualMachineManagerVirtualMachineTemplate <a name="SystemCenterVirtualMachineManagerVirtualMachineTemplate" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template azurerm_system_center_virtual_machine_manager_virtual_machine_template}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template azurerm_system_center_virtual_machine_manager_virtual_machine_template}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplate.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the SystemCenterVirtualMachine
 
 The id of the existing SystemCenterVirtualMachineManagerVirtualMachineTemplate that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -893,13 +893,13 @@ const systemCenterVirtualMachineManagerVirtualMachineTemplateConfig: systemCente
 | <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.customLocationId">customLocationId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#custom_location_id SystemCenterVirtualMachineManagerVirtualMachineTemplate#custom_location_id}. |
-| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#location SystemCenterVirtualMachineManagerVirtualMachineTemplate#location}. |
-| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#name SystemCenterVirtualMachineManagerVirtualMachineTemplate#name}. |
-| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#resource_group_name SystemCenterVirtualMachineManagerVirtualMachineTemplate#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.systemCenterVirtualMachineManagerServerInventoryItemId">systemCenterVirtualMachineManagerServerInventoryItemId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#system_center_virtual_machine_manager_server_inventory_item_id SystemCenterVirtualMachineManagerVirtualMachineTemplate#system_center_virtual_machine_manager_server_inventory_item_id}. |
-| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#id SystemCenterVirtualMachineManagerVirtualMachineTemplate#id}. |
-| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#tags SystemCenterVirtualMachineManagerVirtualMachineTemplate#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.customLocationId">customLocationId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#custom_location_id SystemCenterVirtualMachineManagerVirtualMachineTemplate#custom_location_id}. |
+| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#location SystemCenterVirtualMachineManagerVirtualMachineTemplate#location}. |
+| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#name SystemCenterVirtualMachineManagerVirtualMachineTemplate#name}. |
+| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#resource_group_name SystemCenterVirtualMachineManagerVirtualMachineTemplate#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.systemCenterVirtualMachineManagerServerInventoryItemId">systemCenterVirtualMachineManagerServerInventoryItemId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#system_center_virtual_machine_manager_server_inventory_item_id SystemCenterVirtualMachineManagerVirtualMachineTemplate#system_center_virtual_machine_manager_server_inventory_item_id}. |
+| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#id SystemCenterVirtualMachineManagerVirtualMachineTemplate#id}. |
+| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#tags SystemCenterVirtualMachineManagerVirtualMachineTemplate#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts">SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts</a></code> | timeouts block. |
 
 ---
@@ -982,7 +982,7 @@ public readonly customLocationId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#custom_location_id SystemCenterVirtualMachineManagerVirtualMachineTemplate#custom_location_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#custom_location_id SystemCenterVirtualMachineManagerVirtualMachineTemplate#custom_location_id}.
 
 ---
 
@@ -994,7 +994,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#location SystemCenterVirtualMachineManagerVirtualMachineTemplate#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#location SystemCenterVirtualMachineManagerVirtualMachineTemplate#location}.
 
 ---
 
@@ -1006,7 +1006,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#name SystemCenterVirtualMachineManagerVirtualMachineTemplate#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#name SystemCenterVirtualMachineManagerVirtualMachineTemplate#name}.
 
 ---
 
@@ -1018,7 +1018,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#resource_group_name SystemCenterVirtualMachineManagerVirtualMachineTemplate#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#resource_group_name SystemCenterVirtualMachineManagerVirtualMachineTemplate#resource_group_name}.
 
 ---
 
@@ -1030,7 +1030,7 @@ public readonly systemCenterVirtualMachineManagerServerInventoryItemId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#system_center_virtual_machine_manager_server_inventory_item_id SystemCenterVirtualMachineManagerVirtualMachineTemplate#system_center_virtual_machine_manager_server_inventory_item_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#system_center_virtual_machine_manager_server_inventory_item_id SystemCenterVirtualMachineManagerVirtualMachineTemplate#system_center_virtual_machine_manager_server_inventory_item_id}.
 
 ---
 
@@ -1042,7 +1042,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#id SystemCenterVirtualMachineManagerVirtualMachineTemplate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#id SystemCenterVirtualMachineManagerVirtualMachineTemplate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1057,7 +1057,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#tags SystemCenterVirtualMachineManagerVirtualMachineTemplate#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#tags SystemCenterVirtualMachineManagerVirtualMachineTemplate#tags}.
 
 ---
 
@@ -1071,7 +1071,7 @@ public readonly timeouts: SystemCenterVirtualMachineManagerVirtualMachineTemplat
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#timeouts SystemCenterVirtualMachineManagerVirtualMachineTemplate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#timeouts SystemCenterVirtualMachineManagerVirtualMachineTemplate#timeouts}
 
 ---
 
@@ -1089,10 +1089,10 @@ const systemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts: systemCen
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#create SystemCenterVirtualMachineManagerVirtualMachineTemplate#create}. |
-| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#delete SystemCenterVirtualMachineManagerVirtualMachineTemplate#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#read SystemCenterVirtualMachineManagerVirtualMachineTemplate#read}. |
-| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#update SystemCenterVirtualMachineManagerVirtualMachineTemplate#update}. |
+| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#create SystemCenterVirtualMachineManagerVirtualMachineTemplate#create}. |
+| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#delete SystemCenterVirtualMachineManagerVirtualMachineTemplate#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#read SystemCenterVirtualMachineManagerVirtualMachineTemplate#read}. |
+| <code><a href="#@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineTemplate.SystemCenterVirtualMachineManagerVirtualMachineTemplateTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#update SystemCenterVirtualMachineManagerVirtualMachineTemplate#update}. |
 
 ---
 
@@ -1104,7 +1104,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#create SystemCenterVirtualMachineManagerVirtualMachineTemplate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#create SystemCenterVirtualMachineManagerVirtualMachineTemplate#create}.
 
 ---
 
@@ -1116,7 +1116,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#delete SystemCenterVirtualMachineManagerVirtualMachineTemplate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#delete SystemCenterVirtualMachineManagerVirtualMachineTemplate#delete}.
 
 ---
 
@@ -1128,7 +1128,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#read SystemCenterVirtualMachineManagerVirtualMachineTemplate#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#read SystemCenterVirtualMachineManagerVirtualMachineTemplate#read}.
 
 ---
 
@@ -1140,7 +1140,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#update SystemCenterVirtualMachineManagerVirtualMachineTemplate#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_template#update SystemCenterVirtualMachineManagerVirtualMachineTemplate#update}.
 
 ---
 
