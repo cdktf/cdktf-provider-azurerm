@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/key_vault_managed_hardware_security_module_key_rotation_policy
 // generated from terraform resource schema
 

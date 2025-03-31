@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 systemcentervirtualmachinemanagervirtualmachineinstance.NewSystemCenterVirtualMachineManagerVirtualMachineInstance(scope Construct, id *string, config SystemCenterVirtualMachineManagerVirtualMachineInstanceConfig) SystemCenterVirtualMachineManagerVirtualMachineInstance
 ```
@@ -505,7 +505,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 systemcentervirtualmachinemanagervirtualmachineinstance.SystemCenterVirtualMachineManagerVirtualMachineInstance_IsConstruct(x interface{}) *bool
 ```
@@ -537,7 +537,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 systemcentervirtualmachinemanagervirtualmachineinstance.SystemCenterVirtualMachineManagerVirtualMachineInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -551,7 +551,7 @@ systemcentervirtualmachinemanagervirtualmachineinstance.SystemCenterVirtualMachi
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 systemcentervirtualmachinemanagervirtualmachineinstance.SystemCenterVirtualMachineManagerVirtualMachineInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -565,7 +565,7 @@ systemcentervirtualmachinemanagervirtualmachineinstance.SystemCenterVirtualMachi
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 systemcentervirtualmachinemanagervirtualmachineinstance.SystemCenterVirtualMachineManagerVirtualMachineInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1014,7 +1014,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 &systemcentervirtualmachinemanagervirtualmachineinstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceConfig {
 	Connection: interface{},
@@ -1025,15 +1025,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualma
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	CustomLocationId: *string,
-	Infrastructure: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceInfrastructure,
+	Infrastructure: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceInfrastructure,
 	ScopedResourceId: *string,
-	Hardware: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceHardware,
+	Hardware: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceHardware,
 	Id: *string,
 	NetworkInterface: interface{},
-	OperatingSystem: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceOperatingSystem,
+	OperatingSystem: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceOperatingSystem,
 	StorageDisk: interface{},
 	SystemCenterVirtualMachineManagerAvailabilitySetIds: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceTimeouts,
 }
 ```
 
@@ -1271,7 +1271,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceHardware.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 &systemcentervirtualmachinemanagervirtualmachineinstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceHardware {
 	CpuCount: *f64,
@@ -1359,7 +1359,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceInfrastructure.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 &systemcentervirtualmachinemanagervirtualmachineinstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceInfrastructure {
 	CheckpointType: *string,
@@ -1447,7 +1447,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceNetworkInterface.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 &systemcentervirtualmachinemanagervirtualmachineinstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceNetworkInterface {
 	Name: *string,
@@ -1535,7 +1535,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceOperatingSystem.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 &systemcentervirtualmachinemanagervirtualmachineinstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceOperatingSystem {
 	ComputerName: *string,
@@ -1581,7 +1581,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceStorageDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 &systemcentervirtualmachinemanagervirtualmachineinstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceStorageDisk {
 	Bus: *f64,
@@ -1711,7 +1711,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 &systemcentervirtualmachinemanagervirtualmachineinstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceTimeouts {
 	Create: *string,
@@ -1787,7 +1787,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceHardwareOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 systemcentervirtualmachinemanagervirtualmachineinstance.NewSystemCenterVirtualMachineManagerVirtualMachineInstanceHardwareOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SystemCenterVirtualMachineManagerVirtualMachineInstanceHardwareOutputReference
 ```
@@ -2181,7 +2181,7 @@ func InternalValue() SystemCenterVirtualMachineManagerVirtualMachineInstanceHard
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceInfrastructureOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 systemcentervirtualmachinemanagervirtualmachineinstance.NewSystemCenterVirtualMachineManagerVirtualMachineInstanceInfrastructureOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SystemCenterVirtualMachineManagerVirtualMachineInstanceInfrastructureOutputReference
 ```
@@ -2575,7 +2575,7 @@ func InternalValue() SystemCenterVirtualMachineManagerVirtualMachineInstanceInfr
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceNetworkInterfaceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 systemcentervirtualmachinemanagervirtualmachineinstance.NewSystemCenterVirtualMachineManagerVirtualMachineInstanceNetworkInterfaceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SystemCenterVirtualMachineManagerVirtualMachineInstanceNetworkInterfaceList
 ```
@@ -2735,7 +2735,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceNetworkInterfaceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 systemcentervirtualmachinemanagervirtualmachineinstance.NewSystemCenterVirtualMachineManagerVirtualMachineInstanceNetworkInterfaceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SystemCenterVirtualMachineManagerVirtualMachineInstanceNetworkInterfaceOutputReference
 ```
@@ -3140,7 +3140,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceOperatingSystemOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 systemcentervirtualmachinemanagervirtualmachineinstance.NewSystemCenterVirtualMachineManagerVirtualMachineInstanceOperatingSystemOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SystemCenterVirtualMachineManagerVirtualMachineInstanceOperatingSystemOutputReference
 ```
@@ -3440,7 +3440,7 @@ func InternalValue() SystemCenterVirtualMachineManagerVirtualMachineInstanceOper
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceStorageDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 systemcentervirtualmachinemanagervirtualmachineinstance.NewSystemCenterVirtualMachineManagerVirtualMachineInstanceStorageDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SystemCenterVirtualMachineManagerVirtualMachineInstanceStorageDiskList
 ```
@@ -3600,7 +3600,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceStorageDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 systemcentervirtualmachinemanagervirtualmachineinstance.NewSystemCenterVirtualMachineManagerVirtualMachineInstanceStorageDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SystemCenterVirtualMachineManagerVirtualMachineInstanceStorageDiskOutputReference
 ```
@@ -4099,7 +4099,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.systemCenterVirtualMachineManagerVirtualMachineInstance.SystemCenterVirtualMachineManagerVirtualMachineInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/systemcentervirtualmachinemanagervirtualmachineinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/systemcentervirtualmachinemanagervirtualmachineinstance"
 
 systemcentervirtualmachinemanagervirtualmachineinstance.NewSystemCenterVirtualMachineManagerVirtualMachineInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SystemCenterVirtualMachineManagerVirtualMachineInstanceTimeoutsOutputReference
 ```
