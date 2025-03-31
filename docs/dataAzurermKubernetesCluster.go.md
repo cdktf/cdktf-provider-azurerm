@@ -4,12 +4,12 @@
 
 ### DataAzurermKubernetesCluster <a name="DataAzurermKubernetesCluster" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/kubernetes_cluster azurerm_kubernetes_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/kubernetes_cluster azurerm_kubernetes_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesCluster(scope Construct, id *string, config DataAzurermKubernetesClusterConfig) DataAzurermKubernetesCluster
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.DataAzurermKubernetesCluster_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.DataAzurermKubernetesCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermkubernetescluster.DataAzurermKubernetesCluster_IsTerraformElement(x i
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesCluster.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.DataAzurermKubernetesCluster_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermkubernetescluster.DataAzurermKubernetesCluster_IsTerraformDataSource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.DataAzurermKubernetesCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermKubernetesClust
 
 The id of the existing DataAzurermKubernetesCluster that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/kubernetes_cluster#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/kubernetes_cluster#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1087,7 +1087,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterAciConnectorLinux.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterAciConnectorLinux {
 
@@ -1100,7 +1100,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterAgentPoolProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterAgentPoolProfile {
 
@@ -1113,7 +1113,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettings {
 
@@ -1126,7 +1126,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControl {
 
@@ -1139,7 +1139,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterConfig {
 	Connection: interface{},
@@ -1152,7 +1152,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterTimeouts,
 }
 ```
 
@@ -1167,9 +1167,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/kubernetes_cluster#name DataAzurermKubernetesCluster#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/kubernetes_cluster#resource_group_name DataAzurermKubernetesCluster#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/kubernetes_cluster#id DataAzurermKubernetesCluster#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/kubernetes_cluster#name DataAzurermKubernetesCluster#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/kubernetes_cluster#resource_group_name DataAzurermKubernetesCluster#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/kubernetes_cluster#id DataAzurermKubernetesCluster#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterTimeouts">DataAzurermKubernetesClusterTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1252,7 +1252,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/kubernetes_cluster#name DataAzurermKubernetesCluster#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/kubernetes_cluster#name DataAzurermKubernetesCluster#name}.
 
 ---
 
@@ -1264,7 +1264,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/kubernetes_cluster#resource_group_name DataAzurermKubernetesCluster#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/kubernetes_cluster#resource_group_name DataAzurermKubernetesCluster#resource_group_name}.
 
 ---
 
@@ -1276,7 +1276,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/kubernetes_cluster#id DataAzurermKubernetesCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/kubernetes_cluster#id DataAzurermKubernetesCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1293,7 +1293,7 @@ Timeouts DataAzurermKubernetesClusterTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/kubernetes_cluster#timeouts DataAzurermKubernetesCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/kubernetes_cluster#timeouts DataAzurermKubernetesCluster#timeouts}
 
 ---
 
@@ -1302,7 +1302,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterIdentity {
 
@@ -1315,7 +1315,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterIngressApplicationGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterIngressApplicationGateway {
 
@@ -1328,7 +1328,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity {
 
@@ -1341,7 +1341,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKeyManagementService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterKeyManagementService {
 
@@ -1354,7 +1354,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKeyVaultSecretsProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterKeyVaultSecretsProvider {
 
@@ -1367,7 +1367,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentity {
 
@@ -1380,7 +1380,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKubeAdminConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterKubeAdminConfig {
 
@@ -1393,7 +1393,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKubeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterKubeConfig {
 
@@ -1406,7 +1406,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKubeletIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterKubeletIdentity {
 
@@ -1419,7 +1419,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterLinuxProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterLinuxProfile {
 
@@ -1432,7 +1432,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterLinuxProfileSshKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterLinuxProfileSshKey {
 
@@ -1445,7 +1445,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterMicrosoftDefender.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterMicrosoftDefender {
 
@@ -1458,7 +1458,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterNetworkProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterNetworkProfile {
 
@@ -1471,7 +1471,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterOmsAgent.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterOmsAgent {
 
@@ -1484,7 +1484,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterOmsAgentOmsAgentIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterOmsAgentOmsAgentIdentity {
 
@@ -1497,7 +1497,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterServiceMeshProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterServiceMeshProfile {
 
@@ -1510,7 +1510,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterServiceMeshProfileCertificateAuthority.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterServiceMeshProfileCertificateAuthority {
 
@@ -1523,7 +1523,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterServicePrincipal.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterServicePrincipal {
 
@@ -1536,7 +1536,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterStorageProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterStorageProfile {
 
@@ -1549,7 +1549,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterTimeouts {
 	Read: *string,
@@ -1560,7 +1560,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/kubernetes_cluster#read DataAzurermKubernetesCluster#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/kubernetes_cluster#read DataAzurermKubernetesCluster#read}. |
 
 ---
 
@@ -1572,7 +1572,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/kubernetes_cluster#read DataAzurermKubernetesCluster#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/kubernetes_cluster#read DataAzurermKubernetesCluster#read}.
 
 ---
 
@@ -1581,7 +1581,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterWindowsProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 &dataazurermkubernetescluster.DataAzurermKubernetesClusterWindowsProfile {
 
@@ -1596,7 +1596,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubern
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterAciConnectorLinuxList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterAciConnectorLinuxList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterAciConnectorLinuxList
 ```
@@ -1745,7 +1745,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterAciConnectorLinuxOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterAciConnectorLinuxOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterAciConnectorLinuxOutputReference
 ```
@@ -2023,7 +2023,7 @@ func InternalValue() DataAzurermKubernetesClusterAciConnectorLinux
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterAgentPoolProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterAgentPoolProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterAgentPoolProfileList
 ```
@@ -2172,7 +2172,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterAgentPoolProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterAgentPoolProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterAgentPoolProfileOutputReference
 ```
@@ -2648,7 +2648,7 @@ func InternalValue() DataAzurermKubernetesClusterAgentPoolProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterAgentPoolProfileUpgradeSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettingsList
 ```
@@ -2797,7 +2797,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterAgentPoolProfileUpgradeSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettingsOutputReference
 ```
@@ -3097,7 +3097,7 @@ func InternalValue() DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControlList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControlList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControlList
 ```
@@ -3246,7 +3246,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference
 ```
@@ -3546,7 +3546,7 @@ func InternalValue() DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAc
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterIdentityList
 ```
@@ -3695,7 +3695,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterIdentityOutputReference
 ```
@@ -4006,7 +4006,7 @@ func InternalValue() DataAzurermKubernetesClusterIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityList
 ```
@@ -4155,7 +4155,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference
 ```
@@ -4455,7 +4455,7 @@ func InternalValue() DataAzurermKubernetesClusterIngressApplicationGatewayIngres
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterIngressApplicationGatewayList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterIngressApplicationGatewayList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterIngressApplicationGatewayList
 ```
@@ -4604,7 +4604,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterIngressApplicationGatewayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterIngressApplicationGatewayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterIngressApplicationGatewayOutputReference
 ```
@@ -4937,7 +4937,7 @@ func InternalValue() DataAzurermKubernetesClusterIngressApplicationGateway
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKeyManagementServiceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterKeyManagementServiceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterKeyManagementServiceList
 ```
@@ -5086,7 +5086,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKeyManagementServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterKeyManagementServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterKeyManagementServiceOutputReference
 ```
@@ -5375,7 +5375,7 @@ func InternalValue() DataAzurermKubernetesClusterKeyManagementService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKeyVaultSecretsProviderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterKeyVaultSecretsProviderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterKeyVaultSecretsProviderList
 ```
@@ -5524,7 +5524,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKeyVaultSecretsProviderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterKeyVaultSecretsProviderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterKeyVaultSecretsProviderOutputReference
 ```
@@ -5824,7 +5824,7 @@ func InternalValue() DataAzurermKubernetesClusterKeyVaultSecretsProvider
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentityList
 ```
@@ -5973,7 +5973,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentityOutputReference
 ```
@@ -6273,7 +6273,7 @@ func InternalValue() DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretId
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKubeAdminConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterKubeAdminConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterKubeAdminConfigList
 ```
@@ -6422,7 +6422,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKubeAdminConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterKubeAdminConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterKubeAdminConfigOutputReference
 ```
@@ -6755,7 +6755,7 @@ func InternalValue() DataAzurermKubernetesClusterKubeAdminConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKubeConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterKubeConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterKubeConfigList
 ```
@@ -6904,7 +6904,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKubeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterKubeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterKubeConfigOutputReference
 ```
@@ -7237,7 +7237,7 @@ func InternalValue() DataAzurermKubernetesClusterKubeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKubeletIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterKubeletIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterKubeletIdentityList
 ```
@@ -7386,7 +7386,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterKubeletIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterKubeletIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterKubeletIdentityOutputReference
 ```
@@ -7686,7 +7686,7 @@ func InternalValue() DataAzurermKubernetesClusterKubeletIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterLinuxProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterLinuxProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterLinuxProfileList
 ```
@@ -7835,7 +7835,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterLinuxProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterLinuxProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterLinuxProfileOutputReference
 ```
@@ -8124,7 +8124,7 @@ func InternalValue() DataAzurermKubernetesClusterLinuxProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterLinuxProfileSshKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterLinuxProfileSshKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterLinuxProfileSshKeyList
 ```
@@ -8273,7 +8273,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterLinuxProfileSshKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterLinuxProfileSshKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterLinuxProfileSshKeyOutputReference
 ```
@@ -8551,7 +8551,7 @@ func InternalValue() DataAzurermKubernetesClusterLinuxProfileSshKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterMicrosoftDefenderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterMicrosoftDefenderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterMicrosoftDefenderList
 ```
@@ -8700,7 +8700,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterMicrosoftDefenderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterMicrosoftDefenderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterMicrosoftDefenderOutputReference
 ```
@@ -8978,7 +8978,7 @@ func InternalValue() DataAzurermKubernetesClusterMicrosoftDefender
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterNetworkProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterNetworkProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterNetworkProfileList
 ```
@@ -9127,7 +9127,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterNetworkProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterNetworkProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterNetworkProfileOutputReference
 ```
@@ -9471,7 +9471,7 @@ func InternalValue() DataAzurermKubernetesClusterNetworkProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterOmsAgentList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterOmsAgentList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterOmsAgentList
 ```
@@ -9620,7 +9620,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterOmsAgentOmsAgentIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterOmsAgentOmsAgentIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterOmsAgentOmsAgentIdentityList
 ```
@@ -9769,7 +9769,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterOmsAgentOmsAgentIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterOmsAgentOmsAgentIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterOmsAgentOmsAgentIdentityOutputReference
 ```
@@ -10069,7 +10069,7 @@ func InternalValue() DataAzurermKubernetesClusterOmsAgentOmsAgentIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterOmsAgentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterOmsAgentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterOmsAgentOutputReference
 ```
@@ -10369,7 +10369,7 @@ func InternalValue() DataAzurermKubernetesClusterOmsAgent
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterServiceMeshProfileCertificateAuthorityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterServiceMeshProfileCertificateAuthorityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterServiceMeshProfileCertificateAuthorityList
 ```
@@ -10518,7 +10518,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterServiceMeshProfileCertificateAuthorityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterServiceMeshProfileCertificateAuthorityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterServiceMeshProfileCertificateAuthorityOutputReference
 ```
@@ -10840,7 +10840,7 @@ func InternalValue() DataAzurermKubernetesClusterServiceMeshProfileCertificateAu
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterServiceMeshProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterServiceMeshProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterServiceMeshProfileList
 ```
@@ -10989,7 +10989,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterServiceMeshProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterServiceMeshProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterServiceMeshProfileOutputReference
 ```
@@ -11311,7 +11311,7 @@ func InternalValue() DataAzurermKubernetesClusterServiceMeshProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterServicePrincipalList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterServicePrincipalList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterServicePrincipalList
 ```
@@ -11460,7 +11460,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterServicePrincipalOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterServicePrincipalOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterServicePrincipalOutputReference
 ```
@@ -11738,7 +11738,7 @@ func InternalValue() DataAzurermKubernetesClusterServicePrincipal
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterStorageProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterStorageProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterStorageProfileList
 ```
@@ -11887,7 +11887,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterStorageProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterStorageProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterStorageProfileOutputReference
 ```
@@ -12198,7 +12198,7 @@ func InternalValue() DataAzurermKubernetesClusterStorageProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermKubernetesClusterTimeoutsOutputReference
 ```
@@ -12476,7 +12476,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterWindowsProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterWindowsProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKubernetesClusterWindowsProfileList
 ```
@@ -12625,7 +12625,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKubernetesCluster.DataAzurermKubernetesClusterWindowsProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermkubernetescluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkubernetescluster"
 
 dataazurermkubernetescluster.NewDataAzurermKubernetesClusterWindowsProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKubernetesClusterWindowsProfileOutputReference
 ```
