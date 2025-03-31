@@ -1,3 +1,3 @@
 # `azurerm_monitor_scheduled_query_rules_alert_v2`
 
-Refer to the Terraform Registry for docs: [`azurerm_monitor_scheduled_query_rules_alert_v2`](https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/monitor_scheduled_query_rules_alert_v2).
+Refer to the Terraform Registry for docs: [`azurerm_monitor_scheduled_query_rules_alert_v2`](https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/monitor_scheduled_query_rules_alert_v2).
