@@ -534,6 +534,7 @@ The following submodules are available:
 - [dataAzurermResourceGroup](./dataAzurermResourceGroup.go.md)
 - [dataAzurermResourceGroupTemplateDeployment](./dataAzurermResourceGroupTemplateDeployment.go.md)
 - [dataAzurermResources](./dataAzurermResources.go.md)
+- [dataAzurermRoleAssignments](./dataAzurermRoleAssignments.go.md)
 - [dataAzurermRoleDefinition](./dataAzurermRoleDefinition.go.md)
 - [dataAzurermRoleManagementPolicy](./dataAzurermRoleManagementPolicy.go.md)
 - [dataAzurermRouteFilter](./dataAzurermRouteFilter.go.md)

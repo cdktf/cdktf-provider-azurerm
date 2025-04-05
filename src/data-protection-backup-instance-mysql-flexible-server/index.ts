@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +13,54 @@ import * as cdktf from 'cdktf';
 
 export interface DataProtectionBackupInstanceMysqlFlexibleServerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#backup_policy_id DataProtectionBackupInstanceMysqlFlexibleServer#backup_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#backup_policy_id DataProtectionBackupInstanceMysqlFlexibleServer#backup_policy_id}
   */
   readonly backupPolicyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#id DataProtectionBackupInstanceMysqlFlexibleServer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#id DataProtectionBackupInstanceMysqlFlexibleServer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#location DataProtectionBackupInstanceMysqlFlexibleServer#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#location DataProtectionBackupInstanceMysqlFlexibleServer#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#name DataProtectionBackupInstanceMysqlFlexibleServer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#name DataProtectionBackupInstanceMysqlFlexibleServer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#server_id DataProtectionBackupInstanceMysqlFlexibleServer#server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#server_id DataProtectionBackupInstanceMysqlFlexibleServer#server_id}
   */
   readonly serverId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#vault_id DataProtectionBackupInstanceMysqlFlexibleServer#vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#vault_id DataProtectionBackupInstanceMysqlFlexibleServer#vault_id}
   */
   readonly vaultId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#timeouts DataProtectionBackupInstanceMysqlFlexibleServer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#timeouts DataProtectionBackupInstanceMysqlFlexibleServer#timeouts}
   */
   readonly timeouts?: DataProtectionBackupInstanceMysqlFlexibleServerTimeouts;
 }
 export interface DataProtectionBackupInstanceMysqlFlexibleServerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#create DataProtectionBackupInstanceMysqlFlexibleServer#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#create DataProtectionBackupInstanceMysqlFlexibleServer#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#delete DataProtectionBackupInstanceMysqlFlexibleServer#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#delete DataProtectionBackupInstanceMysqlFlexibleServer#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#read DataProtectionBackupInstanceMysqlFlexibleServer#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#read DataProtectionBackupInstanceMysqlFlexibleServer#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#update DataProtectionBackupInstanceMysqlFlexibleServer#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#update DataProtectionBackupInstanceMysqlFlexibleServer#update}
   */
   readonly update?: string;
 }
@@ -241,7 +241,7 @@ export class DataProtectionBackupInstanceMysqlFlexibleServerTimeoutsOutputRefere
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server azurerm_data_protection_backup_instance_mysql_flexible_server}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server azurerm_data_protection_backup_instance_mysql_flexible_server}
 */
 export class DataProtectionBackupInstanceMysqlFlexibleServer extends cdktf.TerraformResource {
 
@@ -257,7 +257,7 @@ export class DataProtectionBackupInstanceMysqlFlexibleServer extends cdktf.Terra
   * Generates CDKTF code for importing a DataProtectionBackupInstanceMysqlFlexibleServer resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataProtectionBackupInstanceMysqlFlexibleServer to import
-  * @param importFromId The id of the existing DataProtectionBackupInstanceMysqlFlexibleServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataProtectionBackupInstanceMysqlFlexibleServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataProtectionBackupInstanceMysqlFlexibleServer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -269,7 +269,7 @@ export class DataProtectionBackupInstanceMysqlFlexibleServer extends cdktf.Terra
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_protection_backup_instance_mysql_flexible_server azurerm_data_protection_backup_instance_mysql_flexible_server} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_protection_backup_instance_mysql_flexible_server azurerm_data_protection_backup_instance_mysql_flexible_server} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -280,7 +280,7 @@ export class DataProtectionBackupInstanceMysqlFlexibleServer extends cdktf.Terra
       terraformResourceType: 'azurerm_data_protection_backup_instance_mysql_flexible_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.25.0',
+        providerVersion: '4.26.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/postgresql_configuration
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/postgresql_configuration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +13,46 @@ import * as cdktf from 'cdktf';
 
 export interface PostgresqlConfigurationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/postgresql_configuration#id PostgresqlConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/postgresql_configuration#id PostgresqlConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/postgresql_configuration#name PostgresqlConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/postgresql_configuration#name PostgresqlConfiguration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/postgresql_configuration#resource_group_name PostgresqlConfiguration#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/postgresql_configuration#resource_group_name PostgresqlConfiguration#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/postgresql_configuration#server_name PostgresqlConfiguration#server_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/postgresql_configuration#server_name PostgresqlConfiguration#server_name}
   */
   readonly serverName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/postgresql_configuration#value PostgresqlConfiguration#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/postgresql_configuration#value PostgresqlConfiguration#value}
   */
   readonly value: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/postgresql_configuration#timeouts PostgresqlConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/postgresql_configuration#timeouts PostgresqlConfiguration#timeouts}
   */
   readonly timeouts?: PostgresqlConfigurationTimeouts;
 }
 export interface PostgresqlConfigurationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/postgresql_configuration#create PostgresqlConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/postgresql_configuration#create PostgresqlConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/postgresql_configuration#delete PostgresqlConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/postgresql_configuration#delete PostgresqlConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/postgresql_configuration#read PostgresqlConfiguration#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/postgresql_configuration#read PostgresqlConfiguration#read}
   */
   readonly read?: string;
 }
@@ -204,7 +204,7 @@ export class PostgresqlConfigurationTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/postgresql_configuration azurerm_postgresql_configuration}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/postgresql_configuration azurerm_postgresql_configuration}
 */
 export class PostgresqlConfiguration extends cdktf.TerraformResource {
 
@@ -220,7 +220,7 @@ export class PostgresqlConfiguration extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a PostgresqlConfiguration resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the PostgresqlConfiguration to import
-  * @param importFromId The id of the existing PostgresqlConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/postgresql_configuration#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing PostgresqlConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/postgresql_configuration#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the PostgresqlConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -232,7 +232,7 @@ export class PostgresqlConfiguration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/postgresql_configuration azurerm_postgresql_configuration} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/postgresql_configuration azurerm_postgresql_configuration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -243,7 +243,7 @@ export class PostgresqlConfiguration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_postgresql_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.25.0',
+        providerVersion: '4.26.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

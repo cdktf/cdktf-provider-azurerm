@@ -4,7 +4,7 @@
 
 ### DataAzurermStorageSync <a name="DataAzurermStorageSync" id="@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync azurerm_storage_sync}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync azurerm_storage_sync}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.Initializer"></a>
 
@@ -39,9 +39,9 @@ dataAzurermStorageSync.DataAzurermStorageSync(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#name DataAzurermStorageSync#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#resource_group_name DataAzurermStorageSync#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#id DataAzurermStorageSync#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#name DataAzurermStorageSync#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#resource_group_name DataAzurermStorageSync#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#id DataAzurermStorageSync#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSync.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncTimeouts">DataAzurermStorageSyncTimeouts</a></code> | timeouts block. |
 
 ---
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#name DataAzurermStorageSync#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#name DataAzurermStorageSync#name}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#resource_group_name DataAzurermStorageSync#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#resource_group_name DataAzurermStorageSync#resource_group_name}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#id DataAzurermStorageSync#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#id DataAzurermStorageSync#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -139,7 +139,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#timeouts DataAzurermStorageSync#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#timeouts DataAzurermStorageSync#timeouts}
 
 ---
 
@@ -399,7 +399,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#read DataAzurermStorageSync#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#read DataAzurermStorageSync#read}.
 
 ---
 
@@ -529,7 +529,7 @@ The construct id used in the generated config for the DataAzurermStorageSync to 
 
 The id of the existing DataAzurermStorageSync that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -856,9 +856,9 @@ dataAzurermStorageSync.DataAzurermStorageSyncConfig(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#name DataAzurermStorageSync#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#resource_group_name DataAzurermStorageSync#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#id DataAzurermStorageSync#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#name DataAzurermStorageSync#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#resource_group_name DataAzurermStorageSync#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#id DataAzurermStorageSync#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncTimeouts">DataAzurermStorageSyncTimeouts</a></code> | timeouts block. |
 
 ---
@@ -941,7 +941,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#name DataAzurermStorageSync#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#name DataAzurermStorageSync#name}.
 
 ---
 
@@ -953,7 +953,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#resource_group_name DataAzurermStorageSync#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#resource_group_name DataAzurermStorageSync#resource_group_name}.
 
 ---
 
@@ -965,7 +965,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#id DataAzurermStorageSync#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#id DataAzurermStorageSync#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -982,7 +982,7 @@ timeouts: DataAzurermStorageSyncTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#timeouts DataAzurermStorageSync#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#timeouts DataAzurermStorageSync#timeouts}
 
 ---
 
@@ -1002,7 +1002,7 @@ dataAzurermStorageSync.DataAzurermStorageSyncTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#read DataAzurermStorageSync#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSync.DataAzurermStorageSyncTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#read DataAzurermStorageSync#read}. |
 
 ---
 
@@ -1014,7 +1014,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/storage_sync#read DataAzurermStorageSync#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/storage_sync#read DataAzurermStorageSync#read}.
 
 ---
 

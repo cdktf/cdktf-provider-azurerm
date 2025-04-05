@@ -534,6 +534,7 @@ The following submodules are available:
 - [dataAzurermResourceGroup](./dataAzurermResourceGroup.typescript.md)
 - [dataAzurermResourceGroupTemplateDeployment](./dataAzurermResourceGroupTemplateDeployment.typescript.md)
 - [dataAzurermResources](./dataAzurermResources.typescript.md)
+- [dataAzurermRoleAssignments](./dataAzurermRoleAssignments.typescript.md)
 - [dataAzurermRoleDefinition](./dataAzurermRoleDefinition.typescript.md)
 - [dataAzurermRoleManagementPolicy](./dataAzurermRoleManagementPolicy.typescript.md)
 - [dataAzurermRouteFilter](./dataAzurermRouteFilter.typescript.md)

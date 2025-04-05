@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/elastic_san_volume_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/elastic_san_volume_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermElasticSanVolumeGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/elastic_san_volume_group#elastic_san_id DataAzurermElasticSanVolumeGroup#elastic_san_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/elastic_san_volume_group#elastic_san_id DataAzurermElasticSanVolumeGroup#elastic_san_id}
   */
   readonly elasticSanId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/elastic_san_volume_group#id DataAzurermElasticSanVolumeGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/elastic_san_volume_group#id DataAzurermElasticSanVolumeGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/elastic_san_volume_group#name DataAzurermElasticSanVolumeGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/elastic_san_volume_group#name DataAzurermElasticSanVolumeGroup#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/elastic_san_volume_group#timeouts DataAzurermElasticSanVolumeGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/elastic_san_volume_group#timeouts DataAzurermElasticSanVolumeGroup#timeouts}
   */
   readonly timeouts?: DataAzurermElasticSanVolumeGroupTimeouts;
 }
@@ -301,7 +301,7 @@ export class DataAzurermElasticSanVolumeGroupNetworkRuleList extends cdktf.Compl
 }
 export interface DataAzurermElasticSanVolumeGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/elastic_san_volume_group#read DataAzurermElasticSanVolumeGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/elastic_san_volume_group#read DataAzurermElasticSanVolumeGroup#read}
   */
   readonly read?: string;
 }
@@ -395,7 +395,7 @@ export class DataAzurermElasticSanVolumeGroupTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/elastic_san_volume_group azurerm_elastic_san_volume_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/elastic_san_volume_group azurerm_elastic_san_volume_group}
 */
 export class DataAzurermElasticSanVolumeGroup extends cdktf.TerraformDataSource {
 
@@ -411,7 +411,7 @@ export class DataAzurermElasticSanVolumeGroup extends cdktf.TerraformDataSource 
   * Generates CDKTF code for importing a DataAzurermElasticSanVolumeGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermElasticSanVolumeGroup to import
-  * @param importFromId The id of the existing DataAzurermElasticSanVolumeGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/elastic_san_volume_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermElasticSanVolumeGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/elastic_san_volume_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermElasticSanVolumeGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -423,7 +423,7 @@ export class DataAzurermElasticSanVolumeGroup extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/elastic_san_volume_group azurerm_elastic_san_volume_group} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/elastic_san_volume_group azurerm_elastic_san_volume_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -434,7 +434,7 @@ export class DataAzurermElasticSanVolumeGroup extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_elastic_san_volume_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.25.0',
+        providerVersion: '4.26.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

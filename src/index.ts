@@ -1384,6 +1384,7 @@ export * as dataAzurermRedisEnterpriseDatabase from './data-azurerm-redis-enterp
 export * as dataAzurermResourceGroup from './data-azurerm-resource-group';
 export * as dataAzurermResourceGroupTemplateDeployment from './data-azurerm-resource-group-template-deployment';
 export * as dataAzurermResources from './data-azurerm-resources';
+export * as dataAzurermRoleAssignments from './data-azurerm-role-assignments';
 export * as dataAzurermRoleDefinition from './data-azurerm-role-definition';
 export * as dataAzurermRoleManagementPolicy from './data-azurerm-role-management-policy';
 export * as dataAzurermRouteFilter from './data-azurerm-route-filter';

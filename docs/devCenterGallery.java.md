@@ -4,7 +4,7 @@
 
 ### DevCenterGallery <a name="DevCenterGallery" id="@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery azurerm_dev_center_gallery}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery azurerm_dev_center_gallery}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer"></a>
 
@@ -42,10 +42,10 @@ DevCenterGallery.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer.parameter.devCenterId">devCenterId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#dev_center_id DevCenterGallery#dev_center_id}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#name DevCenterGallery#name}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer.parameter.sharedGalleryId">sharedGalleryId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#shared_gallery_id DevCenterGallery#shared_gallery_id}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#id DevCenterGallery#id}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer.parameter.devCenterId">devCenterId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#dev_center_id DevCenterGallery#dev_center_id}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#name DevCenterGallery#name}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer.parameter.sharedGalleryId">sharedGalleryId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#shared_gallery_id DevCenterGallery#shared_gallery_id}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#id DevCenterGallery#id}. |
 | <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGallery.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryTimeouts">DevCenterGalleryTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#dev_center_id DevCenterGallery#dev_center_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#dev_center_id DevCenterGallery#dev_center_id}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#name DevCenterGallery#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#name DevCenterGallery#name}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#shared_gallery_id DevCenterGallery#shared_gallery_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#shared_gallery_id DevCenterGallery#shared_gallery_id}.
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#id DevCenterGallery#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#id DevCenterGallery#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -151,7 +151,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#timeouts DevCenterGallery#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#timeouts DevCenterGallery#timeouts}
 
 ---
 
@@ -605,7 +605,7 @@ The construct id used in the generated config for the DevCenterGallery to import
 
 The id of the existing DevCenterGallery that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -948,10 +948,10 @@ DevCenterGalleryConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryConfig.property.devCenterId">devCenterId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#dev_center_id DevCenterGallery#dev_center_id}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#name DevCenterGallery#name}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryConfig.property.sharedGalleryId">sharedGalleryId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#shared_gallery_id DevCenterGallery#shared_gallery_id}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#id DevCenterGallery#id}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryConfig.property.devCenterId">devCenterId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#dev_center_id DevCenterGallery#dev_center_id}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#name DevCenterGallery#name}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryConfig.property.sharedGalleryId">sharedGalleryId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#shared_gallery_id DevCenterGallery#shared_gallery_id}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#id DevCenterGallery#id}. |
 | <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryTimeouts">DevCenterGalleryTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1034,7 +1034,7 @@ public java.lang.String getDevCenterId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#dev_center_id DevCenterGallery#dev_center_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#dev_center_id DevCenterGallery#dev_center_id}.
 
 ---
 
@@ -1046,7 +1046,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#name DevCenterGallery#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#name DevCenterGallery#name}.
 
 ---
 
@@ -1058,7 +1058,7 @@ public java.lang.String getSharedGalleryId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#shared_gallery_id DevCenterGallery#shared_gallery_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#shared_gallery_id DevCenterGallery#shared_gallery_id}.
 
 ---
 
@@ -1070,7 +1070,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#id DevCenterGallery#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#id DevCenterGallery#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1087,7 +1087,7 @@ public DevCenterGalleryTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#timeouts DevCenterGallery#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#timeouts DevCenterGallery#timeouts}
 
 ---
 
@@ -1109,9 +1109,9 @@ DevCenterGalleryTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#create DevCenterGallery#create}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#delete DevCenterGallery#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#read DevCenterGallery#read}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#create DevCenterGallery#create}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#delete DevCenterGallery#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenterGallery.DevCenterGalleryTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#read DevCenterGallery#read}. |
 
 ---
 
@@ -1123,7 +1123,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#create DevCenterGallery#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#create DevCenterGallery#create}.
 
 ---
 
@@ -1135,7 +1135,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#delete DevCenterGallery#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#delete DevCenterGallery#delete}.
 
 ---
 
@@ -1147,7 +1147,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/dev_center_gallery#read DevCenterGallery#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/dev_center_gallery#read DevCenterGallery#read}.
 
 ---
 

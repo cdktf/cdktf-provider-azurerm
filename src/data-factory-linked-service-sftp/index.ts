@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,90 +13,485 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryLinkedServiceSftpConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#additional_properties DataFactoryLinkedServiceSftp#additional_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#additional_properties DataFactoryLinkedServiceSftp#additional_properties}
   */
   readonly additionalProperties?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#annotations DataFactoryLinkedServiceSftp#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#annotations DataFactoryLinkedServiceSftp#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#authentication_type DataFactoryLinkedServiceSftp#authentication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#authentication_type DataFactoryLinkedServiceSftp#authentication_type}
   */
   readonly authenticationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#data_factory_id DataFactoryLinkedServiceSftp#data_factory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#data_factory_id DataFactoryLinkedServiceSftp#data_factory_id}
   */
   readonly dataFactoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#description DataFactoryLinkedServiceSftp#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#description DataFactoryLinkedServiceSftp#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#host DataFactoryLinkedServiceSftp#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#host DataFactoryLinkedServiceSftp#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#host_key_fingerprint DataFactoryLinkedServiceSftp#host_key_fingerprint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#host_key_fingerprint DataFactoryLinkedServiceSftp#host_key_fingerprint}
   */
   readonly hostKeyFingerprint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#id DataFactoryLinkedServiceSftp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#id DataFactoryLinkedServiceSftp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#integration_runtime_name DataFactoryLinkedServiceSftp#integration_runtime_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#integration_runtime_name DataFactoryLinkedServiceSftp#integration_runtime_name}
   */
   readonly integrationRuntimeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#name DataFactoryLinkedServiceSftp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#name DataFactoryLinkedServiceSftp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#parameters DataFactoryLinkedServiceSftp#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#parameters DataFactoryLinkedServiceSftp#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#password DataFactoryLinkedServiceSftp#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#password DataFactoryLinkedServiceSftp#password}
   */
-  readonly password: string;
+  readonly password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#port DataFactoryLinkedServiceSftp#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#port DataFactoryLinkedServiceSftp#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#skip_host_key_validation DataFactoryLinkedServiceSftp#skip_host_key_validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#private_key_content_base64 DataFactoryLinkedServiceSftp#private_key_content_base64}
+  */
+  readonly privateKeyContentBase64?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#private_key_passphrase DataFactoryLinkedServiceSftp#private_key_passphrase}
+  */
+  readonly privateKeyPassphrase?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#private_key_path DataFactoryLinkedServiceSftp#private_key_path}
+  */
+  readonly privateKeyPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#skip_host_key_validation DataFactoryLinkedServiceSftp#skip_host_key_validation}
   */
   readonly skipHostKeyValidation?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#username DataFactoryLinkedServiceSftp#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#username DataFactoryLinkedServiceSftp#username}
   */
   readonly username: string;
   /**
+  * key_vault_password block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#key_vault_password DataFactoryLinkedServiceSftp#key_vault_password}
+  */
+  readonly keyVaultPassword?: DataFactoryLinkedServiceSftpKeyVaultPassword[] | cdktf.IResolvable;
+  /**
+  * key_vault_private_key_content_base64 block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#key_vault_private_key_content_base64 DataFactoryLinkedServiceSftp#key_vault_private_key_content_base64}
+  */
+  readonly keyVaultPrivateKeyContentBase64?: DataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64;
+  /**
+  * key_vault_private_key_passphrase block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#key_vault_private_key_passphrase DataFactoryLinkedServiceSftp#key_vault_private_key_passphrase}
+  */
+  readonly keyVaultPrivateKeyPassphrase?: DataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphrase;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#timeouts DataFactoryLinkedServiceSftp#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#timeouts DataFactoryLinkedServiceSftp#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceSftpTimeouts;
 }
+export interface DataFactoryLinkedServiceSftpKeyVaultPassword {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#linked_service_name DataFactoryLinkedServiceSftp#linked_service_name}
+  */
+  readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#secret_name DataFactoryLinkedServiceSftp#secret_name}
+  */
+  readonly secretName: string;
+}
+
+export function dataFactoryLinkedServiceSftpKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceSftpKeyVaultPassword | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+  }
+}
+
+
+export function dataFactoryLinkedServiceSftpKeyVaultPasswordToHclTerraform(struct?: DataFactoryLinkedServiceSftpKeyVaultPassword | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    linked_service_name: {
+      value: cdktf.stringToHclTerraform(struct!.linkedServiceName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    secret_name: {
+      value: cdktf.stringToHclTerraform(struct!.secretName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DataFactoryLinkedServiceSftpKeyVaultPasswordOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataFactoryLinkedServiceSftpKeyVaultPassword | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._linkedServiceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.linkedServiceName = this._linkedServiceName;
+    }
+    if (this._secretName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceSftpKeyVaultPassword | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._linkedServiceName = undefined;
+      this._secretName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._linkedServiceName = value.linkedServiceName;
+      this._secretName = value.secretName;
+    }
+  }
+
+  // linked_service_name - computed: false, optional: false, required: true
+  private _linkedServiceName?: string; 
+  public get linkedServiceName() {
+    return this.getStringAttribute('linked_service_name');
+  }
+  public set linkedServiceName(value: string) {
+    this._linkedServiceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedServiceNameInput() {
+    return this._linkedServiceName;
+  }
+
+  // secret_name - computed: false, optional: false, required: true
+  private _secretName?: string; 
+  public get secretName() {
+    return this.getStringAttribute('secret_name');
+  }
+  public set secretName(value: string) {
+    this._secretName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretNameInput() {
+    return this._secretName;
+  }
+}
+
+export class DataFactoryLinkedServiceSftpKeyVaultPasswordList extends cdktf.ComplexList {
+  public internalValue? : DataFactoryLinkedServiceSftpKeyVaultPassword[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataFactoryLinkedServiceSftpKeyVaultPasswordOutputReference {
+    return new DataFactoryLinkedServiceSftpKeyVaultPasswordOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64 {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#linked_service_name DataFactoryLinkedServiceSftp#linked_service_name}
+  */
+  readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#secret_name DataFactoryLinkedServiceSftp#secret_name}
+  */
+  readonly secretName: string;
+}
+
+export function dataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64ToTerraform(struct?: DataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64OutputReference | DataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+  }
+}
+
+
+export function dataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64ToHclTerraform(struct?: DataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64OutputReference | DataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    linked_service_name: {
+      value: cdktf.stringToHclTerraform(struct!.linkedServiceName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    secret_name: {
+      value: cdktf.stringToHclTerraform(struct!.secretName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64 | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._linkedServiceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.linkedServiceName = this._linkedServiceName;
+    }
+    if (this._secretName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64 | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._linkedServiceName = undefined;
+      this._secretName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._linkedServiceName = value.linkedServiceName;
+      this._secretName = value.secretName;
+    }
+  }
+
+  // linked_service_name - computed: false, optional: false, required: true
+  private _linkedServiceName?: string; 
+  public get linkedServiceName() {
+    return this.getStringAttribute('linked_service_name');
+  }
+  public set linkedServiceName(value: string) {
+    this._linkedServiceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedServiceNameInput() {
+    return this._linkedServiceName;
+  }
+
+  // secret_name - computed: false, optional: false, required: true
+  private _secretName?: string; 
+  public get secretName() {
+    return this.getStringAttribute('secret_name');
+  }
+  public set secretName(value: string) {
+    this._secretName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretNameInput() {
+    return this._secretName;
+  }
+}
+export interface DataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphrase {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#linked_service_name DataFactoryLinkedServiceSftp#linked_service_name}
+  */
+  readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#secret_name DataFactoryLinkedServiceSftp#secret_name}
+  */
+  readonly secretName: string;
+}
+
+export function dataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphraseToTerraform(struct?: DataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphraseOutputReference | DataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphrase): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+  }
+}
+
+
+export function dataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphraseToHclTerraform(struct?: DataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphraseOutputReference | DataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphrase): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    linked_service_name: {
+      value: cdktf.stringToHclTerraform(struct!.linkedServiceName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    secret_name: {
+      value: cdktf.stringToHclTerraform(struct!.secretName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphraseOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphrase | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._linkedServiceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.linkedServiceName = this._linkedServiceName;
+    }
+    if (this._secretName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphrase | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._linkedServiceName = undefined;
+      this._secretName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._linkedServiceName = value.linkedServiceName;
+      this._secretName = value.secretName;
+    }
+  }
+
+  // linked_service_name - computed: false, optional: false, required: true
+  private _linkedServiceName?: string; 
+  public get linkedServiceName() {
+    return this.getStringAttribute('linked_service_name');
+  }
+  public set linkedServiceName(value: string) {
+    this._linkedServiceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedServiceNameInput() {
+    return this._linkedServiceName;
+  }
+
+  // secret_name - computed: false, optional: false, required: true
+  private _secretName?: string; 
+  public get secretName() {
+    return this.getStringAttribute('secret_name');
+  }
+  public set secretName(value: string) {
+    this._secretName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretNameInput() {
+    return this._secretName;
+  }
+}
 export interface DataFactoryLinkedServiceSftpTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#create DataFactoryLinkedServiceSftp#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#create DataFactoryLinkedServiceSftp#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#delete DataFactoryLinkedServiceSftp#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#delete DataFactoryLinkedServiceSftp#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#read DataFactoryLinkedServiceSftp#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#read DataFactoryLinkedServiceSftp#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#update DataFactoryLinkedServiceSftp#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#update DataFactoryLinkedServiceSftp#update}
   */
   readonly update?: string;
 }
@@ -277,7 +672,7 @@ export class DataFactoryLinkedServiceSftpTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp azurerm_data_factory_linked_service_sftp}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp azurerm_data_factory_linked_service_sftp}
 */
 export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
 
@@ -293,7 +688,7 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataFactoryLinkedServiceSftp resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataFactoryLinkedServiceSftp to import
-  * @param importFromId The id of the existing DataFactoryLinkedServiceSftp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataFactoryLinkedServiceSftp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataFactoryLinkedServiceSftp to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -305,7 +700,7 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/data_factory_linked_service_sftp azurerm_data_factory_linked_service_sftp} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/data_factory_linked_service_sftp azurerm_data_factory_linked_service_sftp} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -316,7 +711,7 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_linked_service_sftp',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.25.0',
+        providerVersion: '4.26.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -340,8 +735,14 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
     this._parameters = config.parameters;
     this._password = config.password;
     this._port = config.port;
+    this._privateKeyContentBase64 = config.privateKeyContentBase64;
+    this._privateKeyPassphrase = config.privateKeyPassphrase;
+    this._privateKeyPath = config.privateKeyPath;
     this._skipHostKeyValidation = config.skipHostKeyValidation;
     this._username = config.username;
+    this._keyVaultPassword.internalValue = config.keyVaultPassword;
+    this._keyVaultPrivateKeyContentBase64.internalValue = config.keyVaultPrivateKeyContentBase64;
+    this._keyVaultPrivateKeyPassphrase.internalValue = config.keyVaultPrivateKeyPassphrase;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -513,13 +914,16 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
     return this._parameters;
   }
 
-  // password - computed: false, optional: false, required: true
+  // password - computed: false, optional: true, required: false
   private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
   public set password(value: string) {
     this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
@@ -537,6 +941,54 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get portInput() {
     return this._port;
+  }
+
+  // private_key_content_base64 - computed: false, optional: true, required: false
+  private _privateKeyContentBase64?: string; 
+  public get privateKeyContentBase64() {
+    return this.getStringAttribute('private_key_content_base64');
+  }
+  public set privateKeyContentBase64(value: string) {
+    this._privateKeyContentBase64 = value;
+  }
+  public resetPrivateKeyContentBase64() {
+    this._privateKeyContentBase64 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateKeyContentBase64Input() {
+    return this._privateKeyContentBase64;
+  }
+
+  // private_key_passphrase - computed: false, optional: true, required: false
+  private _privateKeyPassphrase?: string; 
+  public get privateKeyPassphrase() {
+    return this.getStringAttribute('private_key_passphrase');
+  }
+  public set privateKeyPassphrase(value: string) {
+    this._privateKeyPassphrase = value;
+  }
+  public resetPrivateKeyPassphrase() {
+    this._privateKeyPassphrase = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateKeyPassphraseInput() {
+    return this._privateKeyPassphrase;
+  }
+
+  // private_key_path - computed: false, optional: true, required: false
+  private _privateKeyPath?: string; 
+  public get privateKeyPath() {
+    return this.getStringAttribute('private_key_path');
+  }
+  public set privateKeyPath(value: string) {
+    this._privateKeyPath = value;
+  }
+  public resetPrivateKeyPath() {
+    this._privateKeyPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateKeyPathInput() {
+    return this._privateKeyPath;
   }
 
   // skip_host_key_validation - computed: false, optional: true, required: false
@@ -566,6 +1018,54 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
     return this._username;
+  }
+
+  // key_vault_password - computed: false, optional: true, required: false
+  private _keyVaultPassword = new DataFactoryLinkedServiceSftpKeyVaultPasswordList(this, "key_vault_password", false);
+  public get keyVaultPassword() {
+    return this._keyVaultPassword;
+  }
+  public putKeyVaultPassword(value: DataFactoryLinkedServiceSftpKeyVaultPassword[] | cdktf.IResolvable) {
+    this._keyVaultPassword.internalValue = value;
+  }
+  public resetKeyVaultPassword() {
+    this._keyVaultPassword.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultPasswordInput() {
+    return this._keyVaultPassword.internalValue;
+  }
+
+  // key_vault_private_key_content_base64 - computed: false, optional: true, required: false
+  private _keyVaultPrivateKeyContentBase64 = new DataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64OutputReference(this, "key_vault_private_key_content_base64");
+  public get keyVaultPrivateKeyContentBase64() {
+    return this._keyVaultPrivateKeyContentBase64;
+  }
+  public putKeyVaultPrivateKeyContentBase64(value: DataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64) {
+    this._keyVaultPrivateKeyContentBase64.internalValue = value;
+  }
+  public resetKeyVaultPrivateKeyContentBase64() {
+    this._keyVaultPrivateKeyContentBase64.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultPrivateKeyContentBase64Input() {
+    return this._keyVaultPrivateKeyContentBase64.internalValue;
+  }
+
+  // key_vault_private_key_passphrase - computed: false, optional: true, required: false
+  private _keyVaultPrivateKeyPassphrase = new DataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphraseOutputReference(this, "key_vault_private_key_passphrase");
+  public get keyVaultPrivateKeyPassphrase() {
+    return this._keyVaultPrivateKeyPassphrase;
+  }
+  public putKeyVaultPrivateKeyPassphrase(value: DataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphrase) {
+    this._keyVaultPrivateKeyPassphrase.internalValue = value;
+  }
+  public resetKeyVaultPrivateKeyPassphrase() {
+    this._keyVaultPrivateKeyPassphrase.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultPrivateKeyPassphraseInput() {
+    return this._keyVaultPrivateKeyPassphrase.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -603,8 +1103,14 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       password: cdktf.stringToTerraform(this._password),
       port: cdktf.numberToTerraform(this._port),
+      private_key_content_base64: cdktf.stringToTerraform(this._privateKeyContentBase64),
+      private_key_passphrase: cdktf.stringToTerraform(this._privateKeyPassphrase),
+      private_key_path: cdktf.stringToTerraform(this._privateKeyPath),
       skip_host_key_validation: cdktf.booleanToTerraform(this._skipHostKeyValidation),
       username: cdktf.stringToTerraform(this._username),
+      key_vault_password: cdktf.listMapper(dataFactoryLinkedServiceSftpKeyVaultPasswordToTerraform, true)(this._keyVaultPassword.internalValue),
+      key_vault_private_key_content_base64: dataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64ToTerraform(this._keyVaultPrivateKeyContentBase64.internalValue),
+      key_vault_private_key_passphrase: dataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphraseToTerraform(this._keyVaultPrivateKeyPassphrase.internalValue),
       timeouts: dataFactoryLinkedServiceSftpTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -689,6 +1195,24 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "number",
       },
+      private_key_content_base64: {
+        value: cdktf.stringToHclTerraform(this._privateKeyContentBase64),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      private_key_passphrase: {
+        value: cdktf.stringToHclTerraform(this._privateKeyPassphrase),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      private_key_path: {
+        value: cdktf.stringToHclTerraform(this._privateKeyPath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       skip_host_key_validation: {
         value: cdktf.booleanToHclTerraform(this._skipHostKeyValidation),
         isBlock: false,
@@ -700,6 +1224,24 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      key_vault_password: {
+        value: cdktf.listMapperHcl(dataFactoryLinkedServiceSftpKeyVaultPasswordToHclTerraform, true)(this._keyVaultPassword.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryLinkedServiceSftpKeyVaultPasswordList",
+      },
+      key_vault_private_key_content_base64: {
+        value: dataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64ToHclTerraform(this._keyVaultPrivateKeyContentBase64.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryLinkedServiceSftpKeyVaultPrivateKeyContentBase64List",
+      },
+      key_vault_private_key_passphrase: {
+        value: dataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphraseToHclTerraform(this._keyVaultPrivateKeyPassphrase.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryLinkedServiceSftpKeyVaultPrivateKeyPassphraseList",
       },
       timeouts: {
         value: dataFactoryLinkedServiceSftpTimeoutsToHclTerraform(this._timeouts.internalValue),

@@ -1384,6 +1384,7 @@ Object.defineProperty(exports, 'dataAzurermRedisEnterpriseDatabase', { get: func
 Object.defineProperty(exports, 'dataAzurermResourceGroup', { get: function () { return require('./data-azurerm-resource-group'); } });
 Object.defineProperty(exports, 'dataAzurermResourceGroupTemplateDeployment', { get: function () { return require('./data-azurerm-resource-group-template-deployment'); } });
 Object.defineProperty(exports, 'dataAzurermResources', { get: function () { return require('./data-azurerm-resources'); } });
+Object.defineProperty(exports, 'dataAzurermRoleAssignments', { get: function () { return require('./data-azurerm-role-assignments'); } });
 Object.defineProperty(exports, 'dataAzurermRoleDefinition', { get: function () { return require('./data-azurerm-role-definition'); } });
 Object.defineProperty(exports, 'dataAzurermRoleManagementPolicy', { get: function () { return require('./data-azurerm-role-management-policy'); } });
 Object.defineProperty(exports, 'dataAzurermRouteFilter', { get: function () { return require('./data-azurerm-route-filter'); } });

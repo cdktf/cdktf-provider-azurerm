@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,36 +13,36 @@ import * as cdktf from 'cdktf';
 
 export interface DataboxEdgeDeviceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device#timeouts DataboxEdgeDevice#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device#timeouts DataboxEdgeDevice#timeouts}
   */
   readonly timeouts?: DataboxEdgeDeviceTimeouts;
 }
@@ -173,19 +173,19 @@ export class DataboxEdgeDeviceDevicePropertiesList extends cdktf.ComplexList {
 }
 export interface DataboxEdgeDeviceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device#create DataboxEdgeDevice#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device#create DataboxEdgeDevice#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device#delete DataboxEdgeDevice#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device#delete DataboxEdgeDevice#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device#read DataboxEdgeDevice#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device#read DataboxEdgeDevice#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device#update DataboxEdgeDevice#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device#update DataboxEdgeDevice#update}
   */
   readonly update?: string;
 }
@@ -366,7 +366,7 @@ export class DataboxEdgeDeviceTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device azurerm_databox_edge_device}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device azurerm_databox_edge_device}
 */
 export class DataboxEdgeDevice extends cdktf.TerraformResource {
 
@@ -382,7 +382,7 @@ export class DataboxEdgeDevice extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataboxEdgeDevice resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataboxEdgeDevice to import
-  * @param importFromId The id of the existing DataboxEdgeDevice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataboxEdgeDevice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataboxEdgeDevice to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -394,7 +394,7 @@ export class DataboxEdgeDevice extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/databox_edge_device azurerm_databox_edge_device} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/databox_edge_device azurerm_databox_edge_device} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -405,7 +405,7 @@ export class DataboxEdgeDevice extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_databox_edge_device',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.25.0',
+        providerVersion: '4.26.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

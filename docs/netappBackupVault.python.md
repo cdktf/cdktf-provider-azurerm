@@ -4,7 +4,7 @@
 
 ### NetappBackupVault <a name="NetappBackupVault" id="@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault azurerm_netapp_backup_vault}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault azurerm_netapp_backup_vault}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer"></a>
 
@@ -42,12 +42,12 @@ netappBackupVault.NetappBackupVault(
 | <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.accountName">account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#account_name NetappBackupVault#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#location NetappBackupVault#location}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#name NetappBackupVault#name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#resource_group_name NetappBackupVault#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#id NetappBackupVault#id}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#tags NetappBackupVault#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.accountName">account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#account_name NetappBackupVault#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#location NetappBackupVault#location}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#name NetappBackupVault#name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#resource_group_name NetappBackupVault#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#id NetappBackupVault#id}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#tags NetappBackupVault#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVault.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a></code> | timeouts block. |
 
 ---
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#account_name NetappBackupVault#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#account_name NetappBackupVault#account_name}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#location NetappBackupVault#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#location NetappBackupVault#location}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#name NetappBackupVault#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#name NetappBackupVault#name}.
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#resource_group_name NetappBackupVault#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#resource_group_name NetappBackupVault#resource_group_name}.
 
 ---
 
@@ -148,7 +148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#id NetappBackupVault#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#id NetappBackupVault#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -159,7 +159,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#tags NetappBackupVault#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#tags NetappBackupVault#tags}.
 
 ---
 
@@ -169,7 +169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#timeouts NetappBackupVault#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#timeouts NetappBackupVault#timeouts}
 
 ---
 
@@ -547,7 +547,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#create NetappBackupVault#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#create NetappBackupVault#create}.
 
 ---
 
@@ -555,7 +555,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#delete NetappBackupVault#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#delete NetappBackupVault#delete}.
 
 ---
 
@@ -563,7 +563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#read NetappBackupVault#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#read NetappBackupVault#read}.
 
 ---
 
@@ -571,7 +571,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#update NetappBackupVault#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#update NetappBackupVault#update}.
 
 ---
 
@@ -707,7 +707,7 @@ The construct id used in the generated config for the NetappBackupVault to impor
 
 The id of the existing NetappBackupVault that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1092,12 +1092,12 @@ netappBackupVault.NetappBackupVaultConfig(
 | <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.accountName">account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#account_name NetappBackupVault#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#location NetappBackupVault#location}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#name NetappBackupVault#name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#resource_group_name NetappBackupVault#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#id NetappBackupVault#id}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#tags NetappBackupVault#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.accountName">account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#account_name NetappBackupVault#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#location NetappBackupVault#location}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#name NetappBackupVault#name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#resource_group_name NetappBackupVault#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#id NetappBackupVault#id}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#tags NetappBackupVault#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultTimeouts">NetappBackupVaultTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1180,7 +1180,7 @@ account_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#account_name NetappBackupVault#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#account_name NetappBackupVault#account_name}.
 
 ---
 
@@ -1192,7 +1192,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#location NetappBackupVault#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#location NetappBackupVault#location}.
 
 ---
 
@@ -1204,7 +1204,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#name NetappBackupVault#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#name NetappBackupVault#name}.
 
 ---
 
@@ -1216,7 +1216,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#resource_group_name NetappBackupVault#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#resource_group_name NetappBackupVault#resource_group_name}.
 
 ---
 
@@ -1228,7 +1228,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#id NetappBackupVault#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#id NetappBackupVault#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1243,7 +1243,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#tags NetappBackupVault#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#tags NetappBackupVault#tags}.
 
 ---
 
@@ -1257,7 +1257,7 @@ timeouts: NetappBackupVaultTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#timeouts NetappBackupVault#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#timeouts NetappBackupVault#timeouts}
 
 ---
 
@@ -1280,10 +1280,10 @@ netappBackupVault.NetappBackupVaultTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#create NetappBackupVault#create}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#delete NetappBackupVault#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#read NetappBackupVault#read}. |
-| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#update NetappBackupVault#update}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#create NetappBackupVault#create}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#delete NetappBackupVault#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#read NetappBackupVault#read}. |
+| <code><a href="#@cdktf/provider-azurerm.netappBackupVault.NetappBackupVaultTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#update NetappBackupVault#update}. |
 
 ---
 
@@ -1295,7 +1295,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#create NetappBackupVault#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#create NetappBackupVault#create}.
 
 ---
 
@@ -1307,7 +1307,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#delete NetappBackupVault#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#delete NetappBackupVault#delete}.
 
 ---
 
@@ -1319,7 +1319,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#read NetappBackupVault#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#read NetappBackupVault#read}.
 
 ---
 
@@ -1331,7 +1331,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/netapp_backup_vault#update NetappBackupVault#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_vault#update NetappBackupVault#update}.
 
 ---
 
