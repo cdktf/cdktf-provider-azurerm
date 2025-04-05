@@ -4,7 +4,7 @@
 
 ### DataAzurermMssqlServer <a name="DataAzurermMssqlServer" id="@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server azurerm_mssql_server}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server azurerm_mssql_server}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.Initializer"></a>
 
@@ -39,9 +39,9 @@ dataAzurermMssqlServer.DataAzurermMssqlServer(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#name DataAzurermMssqlServer#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#resource_group_name DataAzurermMssqlServer#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#id DataAzurermMssqlServer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#name DataAzurermMssqlServer#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#resource_group_name DataAzurermMssqlServer#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#id DataAzurermMssqlServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerTimeouts">DataAzurermMssqlServerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#name DataAzurermMssqlServer#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#name DataAzurermMssqlServer#name}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#resource_group_name DataAzurermMssqlServer#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#resource_group_name DataAzurermMssqlServer#resource_group_name}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#id DataAzurermMssqlServer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#id DataAzurermMssqlServer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -139,7 +139,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#timeouts DataAzurermMssqlServer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#timeouts DataAzurermMssqlServer#timeouts}
 
 ---
 
@@ -399,7 +399,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#read DataAzurermMssqlServer#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#read DataAzurermMssqlServer#read}.
 
 ---
 
@@ -529,7 +529,7 @@ The construct id used in the generated config for the DataAzurermMssqlServer to 
 
 The id of the existing DataAzurermMssqlServer that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -558,6 +558,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.property.administratorLogin">administrator_login</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.property.expressVulnerabilityAssessmentEnabled">express_vulnerability_assessment_enabled</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.property.fullyQualifiedDomainName">fully_qualified_domain_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerIdentityList">DataAzurermMssqlServerIdentityList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.property.location">location</a></code> | <code>str</code> | *No description.* |
@@ -705,6 +706,16 @@ administrator_login: str
 ```
 
 - *Type:* str
+
+---
+
+##### `express_vulnerability_assessment_enabled`<sup>Required</sup> <a name="express_vulnerability_assessment_enabled" id="@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServer.property.expressVulnerabilityAssessmentEnabled"></a>
+
+```python
+express_vulnerability_assessment_enabled: IResolvable
+```
+
+- *Type:* cdktf.IResolvable
 
 ---
 
@@ -911,9 +922,9 @@ dataAzurermMssqlServer.DataAzurermMssqlServerConfig(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#name DataAzurermMssqlServer#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#resource_group_name DataAzurermMssqlServer#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#id DataAzurermMssqlServer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#name DataAzurermMssqlServer#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#resource_group_name DataAzurermMssqlServer#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#id DataAzurermMssqlServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerTimeouts">DataAzurermMssqlServerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -996,7 +1007,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#name DataAzurermMssqlServer#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#name DataAzurermMssqlServer#name}.
 
 ---
 
@@ -1008,7 +1019,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#resource_group_name DataAzurermMssqlServer#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#resource_group_name DataAzurermMssqlServer#resource_group_name}.
 
 ---
 
@@ -1020,7 +1031,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#id DataAzurermMssqlServer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#id DataAzurermMssqlServer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1037,7 +1048,7 @@ timeouts: DataAzurermMssqlServerTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#timeouts DataAzurermMssqlServer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#timeouts DataAzurermMssqlServer#timeouts}
 
 ---
 
@@ -1068,7 +1079,7 @@ dataAzurermMssqlServer.DataAzurermMssqlServerTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#read DataAzurermMssqlServer#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMssqlServer.DataAzurermMssqlServerTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#read DataAzurermMssqlServer#read}. |
 
 ---
 
@@ -1080,7 +1091,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/mssql_server#read DataAzurermMssqlServer#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/mssql_server#read DataAzurermMssqlServer#read}.
 
 ---
 

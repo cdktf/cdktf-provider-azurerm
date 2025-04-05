@@ -534,6 +534,7 @@ The following submodules are available:
 - [dataAzurermResourceGroup](./dataAzurermResourceGroup.python.md)
 - [dataAzurermResourceGroupTemplateDeployment](./dataAzurermResourceGroupTemplateDeployment.python.md)
 - [dataAzurermResources](./dataAzurermResources.python.md)
+- [dataAzurermRoleAssignments](./dataAzurermRoleAssignments.python.md)
 - [dataAzurermRoleDefinition](./dataAzurermRoleDefinition.python.md)
 - [dataAzurermRoleManagementPolicy](./dataAzurermRoleManagementPolicy.python.md)
 - [dataAzurermRouteFilter](./dataAzurermRouteFilter.python.md)

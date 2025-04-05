@@ -4,7 +4,7 @@
 
 ### DataAzurermLoadTest <a name="DataAzurermLoadTest" id="@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTest"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/load_test azurerm_load_test}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/load_test azurerm_load_test}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTest.Initializer"></a>
 
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermLoadTest to imp
 
 The id of the existing DataAzurermLoadTest that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/load_test#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/load_test#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -752,9 +752,9 @@ new DataAzurermLoadTestConfig {
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTestConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTestConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTestConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTestConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/load_test#name DataAzurermLoadTest#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTestConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/load_test#resource_group_name DataAzurermLoadTest#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTestConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/load_test#id DataAzurermLoadTest#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTestConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/load_test#name DataAzurermLoadTest#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTestConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/load_test#resource_group_name DataAzurermLoadTest#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTestConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/load_test#id DataAzurermLoadTest#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTestConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTestTimeouts">DataAzurermLoadTestTimeouts</a></code> | timeouts block. |
 
 ---
@@ -837,7 +837,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/load_test#name DataAzurermLoadTest#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/load_test#name DataAzurermLoadTest#name}.
 
 ---
 
@@ -849,7 +849,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/load_test#resource_group_name DataAzurermLoadTest#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/load_test#resource_group_name DataAzurermLoadTest#resource_group_name}.
 
 ---
 
@@ -861,7 +861,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/load_test#id DataAzurermLoadTest#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/load_test#id DataAzurermLoadTest#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -878,7 +878,7 @@ public DataAzurermLoadTestTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/load_test#timeouts DataAzurermLoadTest#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/load_test#timeouts DataAzurermLoadTest#timeouts}
 
 ---
 
@@ -937,7 +937,7 @@ new DataAzurermLoadTestTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTestTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/load_test#read DataAzurermLoadTest#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLoadTest.DataAzurermLoadTestTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/load_test#read DataAzurermLoadTest#read}. |
 
 ---
 
@@ -949,7 +949,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/data-sources/load_test#read DataAzurermLoadTest#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/load_test#read DataAzurermLoadTest#read}.
 
 ---
 

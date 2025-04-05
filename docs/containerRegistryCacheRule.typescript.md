@@ -4,7 +4,7 @@
 
 ### ContainerRegistryCacheRule <a name="ContainerRegistryCacheRule" id="@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule azurerm_container_registry_cache_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule azurerm_container_registry_cache_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRule.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the ContainerRegistryCacheRule
 
 The id of the existing ContainerRegistryCacheRule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -871,12 +871,12 @@ const containerRegistryCacheRuleConfig: containerRegistryCacheRule.ContainerRegi
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleConfig.property.containerRegistryId">containerRegistryId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#container_registry_id ContainerRegistryCacheRule#container_registry_id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleConfig.property.containerRegistryId">containerRegistryId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#container_registry_id ContainerRegistryCacheRule#container_registry_id}. |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleConfig.property.name">name</a></code> | <code>string</code> | The name of the cache rule. |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleConfig.property.sourceRepo">sourceRepo</a></code> | <code>string</code> | The full source repository path such as 'docker.io/library/ubuntu'. |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleConfig.property.targetRepo">targetRepo</a></code> | <code>string</code> | The target repository namespace such as 'ubuntu'. |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleConfig.property.credentialSetId">credentialSetId</a></code> | <code>string</code> | The ARM resource ID of the credential store which is associated with the cache rule. |
-| <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#id ContainerRegistryCacheRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#id ContainerRegistryCacheRule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleTimeouts">ContainerRegistryCacheRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -959,7 +959,7 @@ public readonly containerRegistryId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#container_registry_id ContainerRegistryCacheRule#container_registry_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#container_registry_id ContainerRegistryCacheRule#container_registry_id}.
 
 ---
 
@@ -973,7 +973,7 @@ public readonly name: string;
 
 The name of the cache rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#name ContainerRegistryCacheRule#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#name ContainerRegistryCacheRule#name}
 
 ---
 
@@ -987,7 +987,7 @@ public readonly sourceRepo: string;
 
 The full source repository path such as 'docker.io/library/ubuntu'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#source_repo ContainerRegistryCacheRule#source_repo}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#source_repo ContainerRegistryCacheRule#source_repo}
 
 ---
 
@@ -1001,7 +1001,7 @@ public readonly targetRepo: string;
 
 The target repository namespace such as 'ubuntu'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#target_repo ContainerRegistryCacheRule#target_repo}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#target_repo ContainerRegistryCacheRule#target_repo}
 
 ---
 
@@ -1015,7 +1015,7 @@ public readonly credentialSetId: string;
 
 The ARM resource ID of the credential store which is associated with the cache rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#credential_set_id ContainerRegistryCacheRule#credential_set_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#credential_set_id ContainerRegistryCacheRule#credential_set_id}
 
 ---
 
@@ -1027,7 +1027,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#id ContainerRegistryCacheRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#id ContainerRegistryCacheRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1044,7 +1044,7 @@ public readonly timeouts: ContainerRegistryCacheRuleTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#timeouts ContainerRegistryCacheRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#timeouts ContainerRegistryCacheRule#timeouts}
 
 ---
 
@@ -1062,10 +1062,10 @@ const containerRegistryCacheRuleTimeouts: containerRegistryCacheRule.ContainerRe
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#create ContainerRegistryCacheRule#create}. |
-| <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#delete ContainerRegistryCacheRule#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#read ContainerRegistryCacheRule#read}. |
-| <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#update ContainerRegistryCacheRule#update}. |
+| <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#create ContainerRegistryCacheRule#create}. |
+| <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#delete ContainerRegistryCacheRule#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#read ContainerRegistryCacheRule#read}. |
+| <code><a href="#@cdktf/provider-azurerm.containerRegistryCacheRule.ContainerRegistryCacheRuleTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#update ContainerRegistryCacheRule#update}. |
 
 ---
 
@@ -1077,7 +1077,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#create ContainerRegistryCacheRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#create ContainerRegistryCacheRule#create}.
 
 ---
 
@@ -1089,7 +1089,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#delete ContainerRegistryCacheRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#delete ContainerRegistryCacheRule#delete}.
 
 ---
 
@@ -1101,7 +1101,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#read ContainerRegistryCacheRule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#read ContainerRegistryCacheRule#read}.
 
 ---
 
@@ -1113,7 +1113,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/container_registry_cache_rule#update ContainerRegistryCacheRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/container_registry_cache_rule#update ContainerRegistryCacheRule#update}.
 
 ---
 

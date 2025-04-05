@@ -4,7 +4,7 @@
 
 ### MssqlServer <a name="MssqlServer" id="@cdktf/provider-azurerm.mssqlServer.MssqlServer"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server azurerm_mssql_server}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server azurerm_mssql_server}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlServer.MssqlServer.Initializer"></a>
 
@@ -82,6 +82,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.resetAdministratorLoginPasswordWoVersion">ResetAdministratorLoginPasswordWoVersion</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.resetAzureadAdministrator">ResetAzureadAdministrator</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.resetConnectionPolicy">ResetConnectionPolicy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.resetExpressVulnerabilityAssessmentEnabled">ResetExpressVulnerabilityAssessmentEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.resetIdentity">ResetIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.resetMinimumTlsVersion">ResetMinimumTlsVersion</a></code> | *No description.* |
@@ -454,6 +455,12 @@ private void ResetAzureadAdministrator()
 private void ResetConnectionPolicy()
 ```
 
+##### `ResetExpressVulnerabilityAssessmentEnabled` <a name="ResetExpressVulnerabilityAssessmentEnabled" id="@cdktf/provider-azurerm.mssqlServer.MssqlServer.resetExpressVulnerabilityAssessmentEnabled"></a>
+
+```csharp
+private void ResetExpressVulnerabilityAssessmentEnabled()
+```
+
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-azurerm.mssqlServer.MssqlServer.resetId"></a>
 
 ```csharp
@@ -611,7 +618,7 @@ The construct id used in the generated config for the MssqlServer to import.
 
 The id of the existing MssqlServer that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -652,6 +659,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.administratorLoginPasswordWoVersionInput">AdministratorLoginPasswordWoVersionInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.azureadAdministratorInput">AzureadAdministratorInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerAzureadAdministrator">MssqlServerAzureadAdministrator</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.connectionPolicyInput">ConnectionPolicyInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.expressVulnerabilityAssessmentEnabledInput">ExpressVulnerabilityAssessmentEnabledInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.identityInput">IdentityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerIdentity">MssqlServerIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.locationInput">LocationInput</a></code> | <code>string</code> | *No description.* |
@@ -670,6 +678,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.administratorLoginPasswordWo">AdministratorLoginPasswordWo</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.administratorLoginPasswordWoVersion">AdministratorLoginPasswordWoVersion</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.connectionPolicy">ConnectionPolicy</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.expressVulnerabilityAssessmentEnabled">ExpressVulnerabilityAssessmentEnabled</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.location">Location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.minimumTlsVersion">MinimumTlsVersion</a></code> | <code>string</code> | *No description.* |
@@ -936,6 +945,16 @@ public string ConnectionPolicyInput { get; }
 
 ---
 
+##### `ExpressVulnerabilityAssessmentEnabledInput`<sup>Optional</sup> <a name="ExpressVulnerabilityAssessmentEnabledInput" id="@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.expressVulnerabilityAssessmentEnabledInput"></a>
+
+```csharp
+public object ExpressVulnerabilityAssessmentEnabledInput { get; }
+```
+
+- *Type:* object
+
+---
+
 ##### `IdentityInput`<sup>Optional</sup> <a name="IdentityInput" id="@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.identityInput"></a>
 
 ```csharp
@@ -1116,6 +1135,16 @@ public string ConnectionPolicy { get; }
 
 ---
 
+##### `ExpressVulnerabilityAssessmentEnabled`<sup>Required</sup> <a name="ExpressVulnerabilityAssessmentEnabled" id="@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.expressVulnerabilityAssessmentEnabled"></a>
+
+```csharp
+public object ExpressVulnerabilityAssessmentEnabled { get; }
+```
+
+- *Type:* object
+
+---
+
 ##### `Id`<sup>Required</sup> <a name="Id" id="@cdktf/provider-azurerm.mssqlServer.MssqlServer.property.id"></a>
 
 ```csharp
@@ -1265,10 +1294,10 @@ new MssqlServerAzureadAdministrator {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerAzureadAdministrator.property.loginUsername">LoginUsername</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#login_username MssqlServer#login_username}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerAzureadAdministrator.property.objectId">ObjectId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#object_id MssqlServer#object_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerAzureadAdministrator.property.azureadAuthenticationOnly">AzureadAuthenticationOnly</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#azuread_authentication_only MssqlServer#azuread_authentication_only}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerAzureadAdministrator.property.tenantId">TenantId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#tenant_id MssqlServer#tenant_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerAzureadAdministrator.property.loginUsername">LoginUsername</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#login_username MssqlServer#login_username}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerAzureadAdministrator.property.objectId">ObjectId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#object_id MssqlServer#object_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerAzureadAdministrator.property.azureadAuthenticationOnly">AzureadAuthenticationOnly</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#azuread_authentication_only MssqlServer#azuread_authentication_only}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerAzureadAdministrator.property.tenantId">TenantId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#tenant_id MssqlServer#tenant_id}. |
 
 ---
 
@@ -1280,7 +1309,7 @@ public string LoginUsername { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#login_username MssqlServer#login_username}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#login_username MssqlServer#login_username}.
 
 ---
 
@@ -1292,7 +1321,7 @@ public string ObjectId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#object_id MssqlServer#object_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#object_id MssqlServer#object_id}.
 
 ---
 
@@ -1304,7 +1333,7 @@ public object AzureadAuthenticationOnly { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#azuread_authentication_only MssqlServer#azuread_authentication_only}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#azuread_authentication_only MssqlServer#azuread_authentication_only}.
 
 ---
 
@@ -1316,7 +1345,7 @@ public string TenantId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#tenant_id MssqlServer#tenant_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#tenant_id MssqlServer#tenant_id}.
 
 ---
 
@@ -1345,6 +1374,7 @@ new MssqlServerConfig {
     double AdministratorLoginPasswordWoVersion = null,
     MssqlServerAzureadAdministrator AzureadAdministrator = null,
     string ConnectionPolicy = null,
+    object ExpressVulnerabilityAssessmentEnabled = null,
     string Id = null,
     MssqlServerIdentity Identity = null,
     string MinimumTlsVersion = null,
@@ -1368,25 +1398,26 @@ new MssqlServerConfig {
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#location MssqlServer#location}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#name MssqlServer#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#resource_group_name MssqlServer#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.version">Version</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#version MssqlServer#version}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.administratorLogin">AdministratorLogin</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#administrator_login MssqlServer#administrator_login}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.administratorLoginPassword">AdministratorLoginPassword</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#administrator_login_password MssqlServer#administrator_login_password}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.administratorLoginPasswordWo">AdministratorLoginPasswordWo</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#administrator_login_password_wo MssqlServer#administrator_login_password_wo}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.administratorLoginPasswordWoVersion">AdministratorLoginPasswordWoVersion</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#administrator_login_password_wo_version MssqlServer#administrator_login_password_wo_version}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#location MssqlServer#location}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#name MssqlServer#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#resource_group_name MssqlServer#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.version">Version</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#version MssqlServer#version}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.administratorLogin">AdministratorLogin</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#administrator_login MssqlServer#administrator_login}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.administratorLoginPassword">AdministratorLoginPassword</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#administrator_login_password MssqlServer#administrator_login_password}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.administratorLoginPasswordWo">AdministratorLoginPasswordWo</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#administrator_login_password_wo MssqlServer#administrator_login_password_wo}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.administratorLoginPasswordWoVersion">AdministratorLoginPasswordWoVersion</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#administrator_login_password_wo_version MssqlServer#administrator_login_password_wo_version}. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.azureadAdministrator">AzureadAdministrator</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerAzureadAdministrator">MssqlServerAzureadAdministrator</a></code> | azuread_administrator block. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.connectionPolicy">ConnectionPolicy</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#connection_policy MssqlServer#connection_policy}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#id MssqlServer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.connectionPolicy">ConnectionPolicy</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#connection_policy MssqlServer#connection_policy}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.expressVulnerabilityAssessmentEnabled">ExpressVulnerabilityAssessmentEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#express_vulnerability_assessment_enabled MssqlServer#express_vulnerability_assessment_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#id MssqlServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerIdentity">MssqlServerIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.minimumTlsVersion">MinimumTlsVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#minimum_tls_version MssqlServer#minimum_tls_version}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.outboundNetworkRestrictionEnabled">OutboundNetworkRestrictionEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#outbound_network_restriction_enabled MssqlServer#outbound_network_restriction_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.primaryUserAssignedIdentityId">PrimaryUserAssignedIdentityId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#primary_user_assigned_identity_id MssqlServer#primary_user_assigned_identity_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#public_network_access_enabled MssqlServer#public_network_access_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#tags MssqlServer#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.minimumTlsVersion">MinimumTlsVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#minimum_tls_version MssqlServer#minimum_tls_version}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.outboundNetworkRestrictionEnabled">OutboundNetworkRestrictionEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#outbound_network_restriction_enabled MssqlServer#outbound_network_restriction_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.primaryUserAssignedIdentityId">PrimaryUserAssignedIdentityId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#primary_user_assigned_identity_id MssqlServer#primary_user_assigned_identity_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#public_network_access_enabled MssqlServer#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#tags MssqlServer#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerTimeouts">MssqlServerTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.transparentDataEncryptionKeyVaultKeyId">TransparentDataEncryptionKeyVaultKeyId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#transparent_data_encryption_key_vault_key_id MssqlServer#transparent_data_encryption_key_vault_key_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.transparentDataEncryptionKeyVaultKeyId">TransparentDataEncryptionKeyVaultKeyId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#transparent_data_encryption_key_vault_key_id MssqlServer#transparent_data_encryption_key_vault_key_id}. |
 
 ---
 
@@ -1468,7 +1499,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#location MssqlServer#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#location MssqlServer#location}.
 
 ---
 
@@ -1480,7 +1511,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#name MssqlServer#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#name MssqlServer#name}.
 
 ---
 
@@ -1492,7 +1523,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#resource_group_name MssqlServer#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#resource_group_name MssqlServer#resource_group_name}.
 
 ---
 
@@ -1504,7 +1535,7 @@ public string Version { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#version MssqlServer#version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#version MssqlServer#version}.
 
 ---
 
@@ -1516,7 +1547,7 @@ public string AdministratorLogin { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#administrator_login MssqlServer#administrator_login}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#administrator_login MssqlServer#administrator_login}.
 
 ---
 
@@ -1528,7 +1559,7 @@ public string AdministratorLoginPassword { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#administrator_login_password MssqlServer#administrator_login_password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#administrator_login_password MssqlServer#administrator_login_password}.
 
 ---
 
@@ -1540,7 +1571,7 @@ public string AdministratorLoginPasswordWo { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#administrator_login_password_wo MssqlServer#administrator_login_password_wo}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#administrator_login_password_wo MssqlServer#administrator_login_password_wo}.
 
 ---
 
@@ -1552,7 +1583,7 @@ public double AdministratorLoginPasswordWoVersion { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#administrator_login_password_wo_version MssqlServer#administrator_login_password_wo_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#administrator_login_password_wo_version MssqlServer#administrator_login_password_wo_version}.
 
 ---
 
@@ -1566,7 +1597,7 @@ public MssqlServerAzureadAdministrator AzureadAdministrator { get; set; }
 
 azuread_administrator block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#azuread_administrator MssqlServer#azuread_administrator}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#azuread_administrator MssqlServer#azuread_administrator}
 
 ---
 
@@ -1578,7 +1609,19 @@ public string ConnectionPolicy { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#connection_policy MssqlServer#connection_policy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#connection_policy MssqlServer#connection_policy}.
+
+---
+
+##### `ExpressVulnerabilityAssessmentEnabled`<sup>Optional</sup> <a name="ExpressVulnerabilityAssessmentEnabled" id="@cdktf/provider-azurerm.mssqlServer.MssqlServerConfig.property.expressVulnerabilityAssessmentEnabled"></a>
+
+```csharp
+public object ExpressVulnerabilityAssessmentEnabled { get; set; }
+```
+
+- *Type:* object
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#express_vulnerability_assessment_enabled MssqlServer#express_vulnerability_assessment_enabled}.
 
 ---
 
@@ -1590,7 +1633,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#id MssqlServer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#id MssqlServer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1607,7 +1650,7 @@ public MssqlServerIdentity Identity { get; set; }
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#identity MssqlServer#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#identity MssqlServer#identity}
 
 ---
 
@@ -1619,7 +1662,7 @@ public string MinimumTlsVersion { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#minimum_tls_version MssqlServer#minimum_tls_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#minimum_tls_version MssqlServer#minimum_tls_version}.
 
 ---
 
@@ -1631,7 +1674,7 @@ public object OutboundNetworkRestrictionEnabled { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#outbound_network_restriction_enabled MssqlServer#outbound_network_restriction_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#outbound_network_restriction_enabled MssqlServer#outbound_network_restriction_enabled}.
 
 ---
 
@@ -1643,7 +1686,7 @@ public string PrimaryUserAssignedIdentityId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#primary_user_assigned_identity_id MssqlServer#primary_user_assigned_identity_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#primary_user_assigned_identity_id MssqlServer#primary_user_assigned_identity_id}.
 
 ---
 
@@ -1655,7 +1698,7 @@ public object PublicNetworkAccessEnabled { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#public_network_access_enabled MssqlServer#public_network_access_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#public_network_access_enabled MssqlServer#public_network_access_enabled}.
 
 ---
 
@@ -1667,7 +1710,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#tags MssqlServer#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#tags MssqlServer#tags}.
 
 ---
 
@@ -1681,7 +1724,7 @@ public MssqlServerTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#timeouts MssqlServer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#timeouts MssqlServer#timeouts}
 
 ---
 
@@ -1693,7 +1736,7 @@ public string TransparentDataEncryptionKeyVaultKeyId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#transparent_data_encryption_key_vault_key_id MssqlServer#transparent_data_encryption_key_vault_key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#transparent_data_encryption_key_vault_key_id MssqlServer#transparent_data_encryption_key_vault_key_id}.
 
 ---
 
@@ -1714,8 +1757,8 @@ new MssqlServerIdentity {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerIdentity.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#type MssqlServer#type}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerIdentity.property.identityIds">IdentityIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#identity_ids MssqlServer#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerIdentity.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#type MssqlServer#type}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerIdentity.property.identityIds">IdentityIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#identity_ids MssqlServer#identity_ids}. |
 
 ---
 
@@ -1727,7 +1770,7 @@ public string Type { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#type MssqlServer#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#type MssqlServer#type}.
 
 ---
 
@@ -1739,7 +1782,7 @@ public string[] IdentityIds { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#identity_ids MssqlServer#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#identity_ids MssqlServer#identity_ids}.
 
 ---
 
@@ -1762,10 +1805,10 @@ new MssqlServerTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#create MssqlServer#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#delete MssqlServer#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#read MssqlServer#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#update MssqlServer#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#create MssqlServer#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#delete MssqlServer#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#read MssqlServer#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServer.MssqlServerTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#update MssqlServer#update}. |
 
 ---
 
@@ -1777,7 +1820,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#create MssqlServer#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#create MssqlServer#create}.
 
 ---
 
@@ -1789,7 +1832,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#delete MssqlServer#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#delete MssqlServer#delete}.
 
 ---
 
@@ -1801,7 +1844,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#read MssqlServer#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#read MssqlServer#read}.
 
 ---
 
@@ -1813,7 +1856,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.25.0/docs/resources/mssql_server#update MssqlServer#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/mssql_server#update MssqlServer#update}.
 
 ---
 
