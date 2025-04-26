@@ -1,3 +1,3 @@
 # `azurerm_virtual_desktop_scaling_plan_host_pool_association`
 
-Refer to the Terraform Registry for docs: [`azurerm_virtual_desktop_scaling_plan_host_pool_association`](https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/virtual_desktop_scaling_plan_host_pool_association).
+Refer to the Terraform Registry for docs: [`azurerm_virtual_desktop_scaling_plan_host_pool_association`](https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/virtual_desktop_scaling_plan_host_pool_association).

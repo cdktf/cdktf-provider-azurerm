@@ -1,3 +1,3 @@
 # `azurerm_backup_policy_vm_workload`
 
-Refer to the Terraform Registry for docs: [`azurerm_backup_policy_vm_workload`](https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/backup_policy_vm_workload).
+Refer to the Terraform Registry for docs: [`azurerm_backup_policy_vm_workload`](https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/backup_policy_vm_workload).

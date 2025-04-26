@@ -1,3 +1,3 @@
 # `azurerm_federated_identity_credential`
 
-Refer to the Terraform Registry for docs: [`azurerm_federated_identity_credential`](https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/federated_identity_credential).
+Refer to the Terraform Registry for docs: [`azurerm_federated_identity_credential`](https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/federated_identity_credential).
