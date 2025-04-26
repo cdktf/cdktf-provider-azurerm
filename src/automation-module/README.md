@@ -1,3 +1,3 @@
 # `azurerm_automation_module`
 
-Refer to the Terraform Registry for docs: [`azurerm_automation_module`](https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/automation_module).
+Refer to the Terraform Registry for docs: [`azurerm_automation_module`](https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/automation_module).

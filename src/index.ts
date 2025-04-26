@@ -376,6 +376,7 @@ export * as eventgridDomain from './eventgrid-domain';
 export * as eventgridDomainTopic from './eventgrid-domain-topic';
 export * as eventgridEventSubscription from './eventgrid-event-subscription';
 export * as eventgridNamespace from './eventgrid-namespace';
+export * as eventgridPartnerConfiguration from './eventgrid-partner-configuration';
 export * as eventgridSystemTopic from './eventgrid-system-topic';
 export * as eventgridSystemTopicEventSubscription from './eventgrid-system-topic-event-subscription';
 export * as eventgridTopic from './eventgrid-topic';

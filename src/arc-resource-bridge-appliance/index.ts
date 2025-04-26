@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,56 +13,56 @@ import * as cdktf from 'cdktf';
 
 export interface ArcResourceBridgeApplianceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#distro ArcResourceBridgeAppliance#distro}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#distro ArcResourceBridgeAppliance#distro}
   */
   readonly distro: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#id ArcResourceBridgeAppliance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#id ArcResourceBridgeAppliance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#infrastructure_provider ArcResourceBridgeAppliance#infrastructure_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#infrastructure_provider ArcResourceBridgeAppliance#infrastructure_provider}
   */
   readonly infrastructureProvider: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#location ArcResourceBridgeAppliance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#location ArcResourceBridgeAppliance#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#name ArcResourceBridgeAppliance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#name ArcResourceBridgeAppliance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#public_key_base64 ArcResourceBridgeAppliance#public_key_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#public_key_base64 ArcResourceBridgeAppliance#public_key_base64}
   */
   readonly publicKeyBase64?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#resource_group_name ArcResourceBridgeAppliance#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#resource_group_name ArcResourceBridgeAppliance#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#tags ArcResourceBridgeAppliance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#tags ArcResourceBridgeAppliance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#identity ArcResourceBridgeAppliance#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#identity ArcResourceBridgeAppliance#identity}
   */
   readonly identity: ArcResourceBridgeApplianceIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#timeouts ArcResourceBridgeAppliance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#timeouts ArcResourceBridgeAppliance#timeouts}
   */
   readonly timeouts?: ArcResourceBridgeApplianceTimeouts;
 }
 export interface ArcResourceBridgeApplianceIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#type ArcResourceBridgeAppliance#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#type ArcResourceBridgeAppliance#type}
   */
   readonly type: string;
 }
@@ -153,19 +153,19 @@ export class ArcResourceBridgeApplianceIdentityOutputReference extends cdktf.Com
 }
 export interface ArcResourceBridgeApplianceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#create ArcResourceBridgeAppliance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#create ArcResourceBridgeAppliance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#delete ArcResourceBridgeAppliance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#delete ArcResourceBridgeAppliance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#read ArcResourceBridgeAppliance#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#read ArcResourceBridgeAppliance#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#update ArcResourceBridgeAppliance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#update ArcResourceBridgeAppliance#update}
   */
   readonly update?: string;
 }
@@ -346,7 +346,7 @@ export class ArcResourceBridgeApplianceTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance azurerm_arc_resource_bridge_appliance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance azurerm_arc_resource_bridge_appliance}
 */
 export class ArcResourceBridgeAppliance extends cdktf.TerraformResource {
 
@@ -362,7 +362,7 @@ export class ArcResourceBridgeAppliance extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ArcResourceBridgeAppliance resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ArcResourceBridgeAppliance to import
-  * @param importFromId The id of the existing ArcResourceBridgeAppliance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ArcResourceBridgeAppliance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ArcResourceBridgeAppliance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -374,7 +374,7 @@ export class ArcResourceBridgeAppliance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/arc_resource_bridge_appliance azurerm_arc_resource_bridge_appliance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/arc_resource_bridge_appliance azurerm_arc_resource_bridge_appliance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -385,7 +385,7 @@ export class ArcResourceBridgeAppliance extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_arc_resource_bridge_appliance',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.26.0',
+        providerVersion: '4.27.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

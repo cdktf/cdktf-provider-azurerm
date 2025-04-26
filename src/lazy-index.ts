@@ -376,6 +376,7 @@ Object.defineProperty(exports, 'eventgridDomain', { get: function () { return re
 Object.defineProperty(exports, 'eventgridDomainTopic', { get: function () { return require('./eventgrid-domain-topic'); } });
 Object.defineProperty(exports, 'eventgridEventSubscription', { get: function () { return require('./eventgrid-event-subscription'); } });
 Object.defineProperty(exports, 'eventgridNamespace', { get: function () { return require('./eventgrid-namespace'); } });
+Object.defineProperty(exports, 'eventgridPartnerConfiguration', { get: function () { return require('./eventgrid-partner-configuration'); } });
 Object.defineProperty(exports, 'eventgridSystemTopic', { get: function () { return require('./eventgrid-system-topic'); } });
 Object.defineProperty(exports, 'eventgridSystemTopicEventSubscription', { get: function () { return require('./eventgrid-system-topic-event-subscription'); } });
 Object.defineProperty(exports, 'eventgridTopic', { get: function () { return require('./eventgrid-topic'); } });

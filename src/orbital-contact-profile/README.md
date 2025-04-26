@@ -1,3 +1,3 @@
 # `azurerm_orbital_contact_profile`
 
-Refer to the Terraform Registry for docs: [`azurerm_orbital_contact_profile`](https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/orbital_contact_profile).
+Refer to the Terraform Registry for docs: [`azurerm_orbital_contact_profile`](https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/orbital_contact_profile).

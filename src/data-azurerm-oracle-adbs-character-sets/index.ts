@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/oracle_adbs_character_sets
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/oracle_adbs_character_sets
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,20 +13,20 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermOracleAdbsCharacterSetsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/oracle_adbs_character_sets#id DataAzurermOracleAdbsCharacterSets#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/oracle_adbs_character_sets#id DataAzurermOracleAdbsCharacterSets#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/oracle_adbs_character_sets#location DataAzurermOracleAdbsCharacterSets#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/oracle_adbs_character_sets#location DataAzurermOracleAdbsCharacterSets#location}
   */
   readonly location: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/oracle_adbs_character_sets#timeouts DataAzurermOracleAdbsCharacterSets#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/oracle_adbs_character_sets#timeouts DataAzurermOracleAdbsCharacterSets#timeouts}
   */
   readonly timeouts?: DataAzurermOracleAdbsCharacterSetsTimeouts;
 }
@@ -107,7 +107,7 @@ export class DataAzurermOracleAdbsCharacterSetsCharacterSetsList extends cdktf.C
 }
 export interface DataAzurermOracleAdbsCharacterSetsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/oracle_adbs_character_sets#read DataAzurermOracleAdbsCharacterSets#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/oracle_adbs_character_sets#read DataAzurermOracleAdbsCharacterSets#read}
   */
   readonly read?: string;
 }
@@ -201,7 +201,7 @@ export class DataAzurermOracleAdbsCharacterSetsTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/oracle_adbs_character_sets azurerm_oracle_adbs_character_sets}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/oracle_adbs_character_sets azurerm_oracle_adbs_character_sets}
 */
 export class DataAzurermOracleAdbsCharacterSets extends cdktf.TerraformDataSource {
 
@@ -217,7 +217,7 @@ export class DataAzurermOracleAdbsCharacterSets extends cdktf.TerraformDataSourc
   * Generates CDKTF code for importing a DataAzurermOracleAdbsCharacterSets resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermOracleAdbsCharacterSets to import
-  * @param importFromId The id of the existing DataAzurermOracleAdbsCharacterSets that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/oracle_adbs_character_sets#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermOracleAdbsCharacterSets that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/oracle_adbs_character_sets#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermOracleAdbsCharacterSets to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -229,7 +229,7 @@ export class DataAzurermOracleAdbsCharacterSets extends cdktf.TerraformDataSourc
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/data-sources/oracle_adbs_character_sets azurerm_oracle_adbs_character_sets} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/oracle_adbs_character_sets azurerm_oracle_adbs_character_sets} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -240,7 +240,7 @@ export class DataAzurermOracleAdbsCharacterSets extends cdktf.TerraformDataSourc
       terraformResourceType: 'azurerm_oracle_adbs_character_sets',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.26.0',
+        providerVersion: '4.27.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

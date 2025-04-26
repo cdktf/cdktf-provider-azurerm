@@ -4,7 +4,7 @@
 
 ### RoleManagementPolicy <a name="RoleManagementPolicy" id="@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy azurerm_role_management_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy azurerm_role_management_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicy.Initializer"></a>
 
@@ -48,7 +48,7 @@ roleManagementPolicy.RoleManagementPolicy(
 | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicy.Initializer.parameter.activationRules">activation_rules</a></code> | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyActivationRules">RoleManagementPolicyActivationRules</a></code> | activation_rules block. |
 | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicy.Initializer.parameter.activeAssignmentRules">active_assignment_rules</a></code> | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyActiveAssignmentRules">RoleManagementPolicyActiveAssignmentRules</a></code> | active_assignment_rules block. |
 | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicy.Initializer.parameter.eligibleAssignmentRules">eligible_assignment_rules</a></code> | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyEligibleAssignmentRules">RoleManagementPolicyEligibleAssignmentRules</a></code> | eligible_assignment_rules block. |
-| <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#id RoleManagementPolicy#id}. |
+| <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#id RoleManagementPolicy#id}. |
 | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicy.Initializer.parameter.notificationRules">notification_rules</a></code> | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyNotificationRules">RoleManagementPolicyNotificationRules</a></code> | notification_rules block. |
 | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicy.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyTimeouts">RoleManagementPolicyTimeouts</a></code> | timeouts block. |
 
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 ID of the Azure Role to which this policy is assigned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#role_definition_id RoleManagementPolicy#role_definition_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#role_definition_id RoleManagementPolicy#role_definition_id}
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The scope of the role to which this policy will apply.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#scope RoleManagementPolicy#scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#scope RoleManagementPolicy#scope}
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 activation_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#activation_rules RoleManagementPolicy#activation_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#activation_rules RoleManagementPolicy#activation_rules}
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 active_assignment_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#active_assignment_rules RoleManagementPolicy#active_assignment_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#active_assignment_rules RoleManagementPolicy#active_assignment_rules}
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 eligible_assignment_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#eligible_assignment_rules RoleManagementPolicy#eligible_assignment_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#eligible_assignment_rules RoleManagementPolicy#eligible_assignment_rules}
 
 ---
 
@@ -168,7 +168,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#id RoleManagementPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#id RoleManagementPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -181,7 +181,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 notification_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_rules RoleManagementPolicy#notification_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_rules RoleManagementPolicy#notification_rules}
 
 ---
 
@@ -191,7 +191,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#timeouts RoleManagementPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#timeouts RoleManagementPolicy#timeouts}
 
 ---
 
@@ -581,7 +581,7 @@ def put_activation_rules(
 
 approval_stage block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#approval_stage RoleManagementPolicy#approval_stage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#approval_stage RoleManagementPolicy#approval_stage}
 
 ---
 
@@ -591,7 +591,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The time after which the an activation can be valid for.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#maximum_duration RoleManagementPolicy#maximum_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#maximum_duration RoleManagementPolicy#maximum_duration}
 
 ---
 
@@ -601,7 +601,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Whether an approval is required for activation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_approval RoleManagementPolicy#require_approval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_approval RoleManagementPolicy#require_approval}
 
 ---
 
@@ -611,7 +611,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Whether a conditional access context is required during activation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#required_conditional_access_authentication_context RoleManagementPolicy#required_conditional_access_authentication_context}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#required_conditional_access_authentication_context RoleManagementPolicy#required_conditional_access_authentication_context}
 
 ---
 
@@ -621,7 +621,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Whether a justification is required during activation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_justification RoleManagementPolicy#require_justification}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_justification RoleManagementPolicy#require_justification}
 
 ---
 
@@ -631,7 +631,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Whether multi-factor authentication is required during activation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_multifactor_authentication RoleManagementPolicy#require_multifactor_authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_multifactor_authentication RoleManagementPolicy#require_multifactor_authentication}
 
 ---
 
@@ -641,7 +641,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Whether ticket information is required during activation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_ticket_info RoleManagementPolicy#require_ticket_info}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_ticket_info RoleManagementPolicy#require_ticket_info}
 
 ---
 
@@ -663,7 +663,7 @@ def put_active_assignment_rules(
 
 Must the assignment have an expiry date.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#expiration_required RoleManagementPolicy#expiration_required}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#expiration_required RoleManagementPolicy#expiration_required}
 
 ---
 
@@ -673,7 +673,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The duration after which assignments expire.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#expire_after RoleManagementPolicy#expire_after}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#expire_after RoleManagementPolicy#expire_after}
 
 ---
 
@@ -683,7 +683,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Whether a justification is required to make an assignment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_justification RoleManagementPolicy#require_justification}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_justification RoleManagementPolicy#require_justification}
 
 ---
 
@@ -693,7 +693,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Whether multi-factor authentication is required to make an assignment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_multifactor_authentication RoleManagementPolicy#require_multifactor_authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_multifactor_authentication RoleManagementPolicy#require_multifactor_authentication}
 
 ---
 
@@ -703,7 +703,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Whether ticket information is required to make an assignment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_ticket_info RoleManagementPolicy#require_ticket_info}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_ticket_info RoleManagementPolicy#require_ticket_info}
 
 ---
 
@@ -722,7 +722,7 @@ def put_eligible_assignment_rules(
 
 Must the assignment have an expiry date.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#expiration_required RoleManagementPolicy#expiration_required}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#expiration_required RoleManagementPolicy#expiration_required}
 
 ---
 
@@ -732,7 +732,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The duration after which assignments expire.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#expire_after RoleManagementPolicy#expire_after}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#expire_after RoleManagementPolicy#expire_after}
 
 ---
 
@@ -752,7 +752,7 @@ def put_notification_rules(
 
 active_assignments block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#active_assignments RoleManagementPolicy#active_assignments}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#active_assignments RoleManagementPolicy#active_assignments}
 
 ---
 
@@ -762,7 +762,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 eligible_activations block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#eligible_activations RoleManagementPolicy#eligible_activations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#eligible_activations RoleManagementPolicy#eligible_activations}
 
 ---
 
@@ -772,7 +772,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 eligible_assignments block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#eligible_assignments RoleManagementPolicy#eligible_assignments}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#eligible_assignments RoleManagementPolicy#eligible_assignments}
 
 ---
 
@@ -791,7 +791,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#create RoleManagementPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#create RoleManagementPolicy#create}.
 
 ---
 
@@ -799,7 +799,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#delete RoleManagementPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#delete RoleManagementPolicy#delete}.
 
 ---
 
@@ -807,7 +807,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#read RoleManagementPolicy#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#read RoleManagementPolicy#read}.
 
 ---
 
@@ -815,7 +815,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#update RoleManagementPolicy#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#update RoleManagementPolicy#update}.
 
 ---
 
@@ -969,7 +969,7 @@ The construct id used in the generated config for the RoleManagementPolicy to im
 
 The id of the existing RoleManagementPolicy that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1404,7 +1404,7 @@ approval_stage: RoleManagementPolicyActivationRulesApprovalStage
 
 approval_stage block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#approval_stage RoleManagementPolicy#approval_stage}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#approval_stage RoleManagementPolicy#approval_stage}
 
 ---
 
@@ -1418,7 +1418,7 @@ maximum_duration: str
 
 The time after which the an activation can be valid for.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#maximum_duration RoleManagementPolicy#maximum_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#maximum_duration RoleManagementPolicy#maximum_duration}
 
 ---
 
@@ -1432,7 +1432,7 @@ require_approval: typing.Union[bool, IResolvable]
 
 Whether an approval is required for activation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_approval RoleManagementPolicy#require_approval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_approval RoleManagementPolicy#require_approval}
 
 ---
 
@@ -1446,7 +1446,7 @@ required_conditional_access_authentication_context: str
 
 Whether a conditional access context is required during activation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#required_conditional_access_authentication_context RoleManagementPolicy#required_conditional_access_authentication_context}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#required_conditional_access_authentication_context RoleManagementPolicy#required_conditional_access_authentication_context}
 
 ---
 
@@ -1460,7 +1460,7 @@ require_justification: typing.Union[bool, IResolvable]
 
 Whether a justification is required during activation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_justification RoleManagementPolicy#require_justification}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_justification RoleManagementPolicy#require_justification}
 
 ---
 
@@ -1474,7 +1474,7 @@ require_multifactor_authentication: typing.Union[bool, IResolvable]
 
 Whether multi-factor authentication is required during activation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_multifactor_authentication RoleManagementPolicy#require_multifactor_authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_multifactor_authentication RoleManagementPolicy#require_multifactor_authentication}
 
 ---
 
@@ -1488,7 +1488,7 @@ require_ticket_info: typing.Union[bool, IResolvable]
 
 Whether ticket information is required during activation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_ticket_info RoleManagementPolicy#require_ticket_info}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_ticket_info RoleManagementPolicy#require_ticket_info}
 
 ---
 
@@ -1522,7 +1522,7 @@ primary_approver: typing.Union[IResolvable, typing.List[RoleManagementPolicyActi
 
 primary_approver block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#primary_approver RoleManagementPolicy#primary_approver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#primary_approver RoleManagementPolicy#primary_approver}
 
 ---
 
@@ -1558,7 +1558,7 @@ object_id: str
 
 The ID of the object to act as an approver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#object_id RoleManagementPolicy#object_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#object_id RoleManagementPolicy#object_id}
 
 ---
 
@@ -1572,7 +1572,7 @@ type: str
 
 The type of object acting as an approver.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#type RoleManagementPolicy#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#type RoleManagementPolicy#type}
 
 ---
 
@@ -1614,7 +1614,7 @@ expiration_required: typing.Union[bool, IResolvable]
 
 Must the assignment have an expiry date.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#expiration_required RoleManagementPolicy#expiration_required}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#expiration_required RoleManagementPolicy#expiration_required}
 
 ---
 
@@ -1628,7 +1628,7 @@ expire_after: str
 
 The duration after which assignments expire.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#expire_after RoleManagementPolicy#expire_after}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#expire_after RoleManagementPolicy#expire_after}
 
 ---
 
@@ -1642,7 +1642,7 @@ require_justification: typing.Union[bool, IResolvable]
 
 Whether a justification is required to make an assignment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_justification RoleManagementPolicy#require_justification}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_justification RoleManagementPolicy#require_justification}
 
 ---
 
@@ -1656,7 +1656,7 @@ require_multifactor_authentication: typing.Union[bool, IResolvable]
 
 Whether multi-factor authentication is required to make an assignment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_multifactor_authentication RoleManagementPolicy#require_multifactor_authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_multifactor_authentication RoleManagementPolicy#require_multifactor_authentication}
 
 ---
 
@@ -1670,7 +1670,7 @@ require_ticket_info: typing.Union[bool, IResolvable]
 
 Whether ticket information is required to make an assignment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#require_ticket_info RoleManagementPolicy#require_ticket_info}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#require_ticket_info RoleManagementPolicy#require_ticket_info}
 
 ---
 
@@ -1716,7 +1716,7 @@ roleManagementPolicy.RoleManagementPolicyConfig(
 | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyConfig.property.activationRules">activation_rules</a></code> | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyActivationRules">RoleManagementPolicyActivationRules</a></code> | activation_rules block. |
 | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyConfig.property.activeAssignmentRules">active_assignment_rules</a></code> | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyActiveAssignmentRules">RoleManagementPolicyActiveAssignmentRules</a></code> | active_assignment_rules block. |
 | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyConfig.property.eligibleAssignmentRules">eligible_assignment_rules</a></code> | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyEligibleAssignmentRules">RoleManagementPolicyEligibleAssignmentRules</a></code> | eligible_assignment_rules block. |
-| <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#id RoleManagementPolicy#id}. |
+| <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#id RoleManagementPolicy#id}. |
 | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyConfig.property.notificationRules">notification_rules</a></code> | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyNotificationRules">RoleManagementPolicyNotificationRules</a></code> | notification_rules block. |
 | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyTimeouts">RoleManagementPolicyTimeouts</a></code> | timeouts block. |
 
@@ -1802,7 +1802,7 @@ role_definition_id: str
 
 ID of the Azure Role to which this policy is assigned.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#role_definition_id RoleManagementPolicy#role_definition_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#role_definition_id RoleManagementPolicy#role_definition_id}
 
 ---
 
@@ -1816,7 +1816,7 @@ scope: str
 
 The scope of the role to which this policy will apply.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#scope RoleManagementPolicy#scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#scope RoleManagementPolicy#scope}
 
 ---
 
@@ -1830,7 +1830,7 @@ activation_rules: RoleManagementPolicyActivationRules
 
 activation_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#activation_rules RoleManagementPolicy#activation_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#activation_rules RoleManagementPolicy#activation_rules}
 
 ---
 
@@ -1844,7 +1844,7 @@ active_assignment_rules: RoleManagementPolicyActiveAssignmentRules
 
 active_assignment_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#active_assignment_rules RoleManagementPolicy#active_assignment_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#active_assignment_rules RoleManagementPolicy#active_assignment_rules}
 
 ---
 
@@ -1858,7 +1858,7 @@ eligible_assignment_rules: RoleManagementPolicyEligibleAssignmentRules
 
 eligible_assignment_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#eligible_assignment_rules RoleManagementPolicy#eligible_assignment_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#eligible_assignment_rules RoleManagementPolicy#eligible_assignment_rules}
 
 ---
 
@@ -1870,7 +1870,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#id RoleManagementPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#id RoleManagementPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1887,7 +1887,7 @@ notification_rules: RoleManagementPolicyNotificationRules
 
 notification_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_rules RoleManagementPolicy#notification_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_rules RoleManagementPolicy#notification_rules}
 
 ---
 
@@ -1901,7 +1901,7 @@ timeouts: RoleManagementPolicyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#timeouts RoleManagementPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#timeouts RoleManagementPolicy#timeouts}
 
 ---
 
@@ -1937,7 +1937,7 @@ expiration_required: typing.Union[bool, IResolvable]
 
 Must the assignment have an expiry date.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#expiration_required RoleManagementPolicy#expiration_required}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#expiration_required RoleManagementPolicy#expiration_required}
 
 ---
 
@@ -1951,7 +1951,7 @@ expire_after: str
 
 The duration after which assignments expire.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#expire_after RoleManagementPolicy#expire_after}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#expire_after RoleManagementPolicy#expire_after}
 
 ---
 
@@ -1989,7 +1989,7 @@ active_assignments: RoleManagementPolicyNotificationRulesActiveAssignments
 
 active_assignments block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#active_assignments RoleManagementPolicy#active_assignments}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#active_assignments RoleManagementPolicy#active_assignments}
 
 ---
 
@@ -2003,7 +2003,7 @@ eligible_activations: RoleManagementPolicyNotificationRulesEligibleActivations
 
 eligible_activations block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#eligible_activations RoleManagementPolicy#eligible_activations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#eligible_activations RoleManagementPolicy#eligible_activations}
 
 ---
 
@@ -2017,7 +2017,7 @@ eligible_assignments: RoleManagementPolicyNotificationRulesEligibleAssignments
 
 eligible_assignments block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#eligible_assignments RoleManagementPolicy#eligible_assignments}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#eligible_assignments RoleManagementPolicy#eligible_assignments}
 
 ---
 
@@ -2055,7 +2055,7 @@ admin_notifications: RoleManagementPolicyNotificationRulesActiveAssignmentsAdmin
 
 admin_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#admin_notifications RoleManagementPolicy#admin_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#admin_notifications RoleManagementPolicy#admin_notifications}
 
 ---
 
@@ -2069,7 +2069,7 @@ approver_notifications: RoleManagementPolicyNotificationRulesActiveAssignmentsAp
 
 approver_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#approver_notifications RoleManagementPolicy#approver_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#approver_notifications RoleManagementPolicy#approver_notifications}
 
 ---
 
@@ -2083,7 +2083,7 @@ assignee_notifications: RoleManagementPolicyNotificationRulesActiveAssignmentsAs
 
 assignee_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#assignee_notifications RoleManagementPolicy#assignee_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#assignee_notifications RoleManagementPolicy#assignee_notifications}
 
 ---
 
@@ -2121,7 +2121,7 @@ default_recipients: typing.Union[bool, IResolvable]
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -2135,7 +2135,7 @@ notification_level: str
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -2149,7 +2149,7 @@ additional_recipients: typing.List[str]
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -2187,7 +2187,7 @@ default_recipients: typing.Union[bool, IResolvable]
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -2201,7 +2201,7 @@ notification_level: str
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -2215,7 +2215,7 @@ additional_recipients: typing.List[str]
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -2253,7 +2253,7 @@ default_recipients: typing.Union[bool, IResolvable]
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -2267,7 +2267,7 @@ notification_level: str
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -2281,7 +2281,7 @@ additional_recipients: typing.List[str]
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -2319,7 +2319,7 @@ admin_notifications: RoleManagementPolicyNotificationRulesEligibleActivationsAdm
 
 admin_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#admin_notifications RoleManagementPolicy#admin_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#admin_notifications RoleManagementPolicy#admin_notifications}
 
 ---
 
@@ -2333,7 +2333,7 @@ approver_notifications: RoleManagementPolicyNotificationRulesEligibleActivations
 
 approver_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#approver_notifications RoleManagementPolicy#approver_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#approver_notifications RoleManagementPolicy#approver_notifications}
 
 ---
 
@@ -2347,7 +2347,7 @@ assignee_notifications: RoleManagementPolicyNotificationRulesEligibleActivations
 
 assignee_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#assignee_notifications RoleManagementPolicy#assignee_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#assignee_notifications RoleManagementPolicy#assignee_notifications}
 
 ---
 
@@ -2385,7 +2385,7 @@ default_recipients: typing.Union[bool, IResolvable]
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -2399,7 +2399,7 @@ notification_level: str
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -2413,7 +2413,7 @@ additional_recipients: typing.List[str]
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -2451,7 +2451,7 @@ default_recipients: typing.Union[bool, IResolvable]
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -2465,7 +2465,7 @@ notification_level: str
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -2479,7 +2479,7 @@ additional_recipients: typing.List[str]
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -2517,7 +2517,7 @@ default_recipients: typing.Union[bool, IResolvable]
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -2531,7 +2531,7 @@ notification_level: str
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -2545,7 +2545,7 @@ additional_recipients: typing.List[str]
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -2583,7 +2583,7 @@ admin_notifications: RoleManagementPolicyNotificationRulesEligibleAssignmentsAdm
 
 admin_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#admin_notifications RoleManagementPolicy#admin_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#admin_notifications RoleManagementPolicy#admin_notifications}
 
 ---
 
@@ -2597,7 +2597,7 @@ approver_notifications: RoleManagementPolicyNotificationRulesEligibleAssignments
 
 approver_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#approver_notifications RoleManagementPolicy#approver_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#approver_notifications RoleManagementPolicy#approver_notifications}
 
 ---
 
@@ -2611,7 +2611,7 @@ assignee_notifications: RoleManagementPolicyNotificationRulesEligibleAssignments
 
 assignee_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#assignee_notifications RoleManagementPolicy#assignee_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#assignee_notifications RoleManagementPolicy#assignee_notifications}
 
 ---
 
@@ -2649,7 +2649,7 @@ default_recipients: typing.Union[bool, IResolvable]
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -2663,7 +2663,7 @@ notification_level: str
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -2677,7 +2677,7 @@ additional_recipients: typing.List[str]
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -2715,7 +2715,7 @@ default_recipients: typing.Union[bool, IResolvable]
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -2729,7 +2729,7 @@ notification_level: str
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -2743,7 +2743,7 @@ additional_recipients: typing.List[str]
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -2781,7 +2781,7 @@ default_recipients: typing.Union[bool, IResolvable]
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -2795,7 +2795,7 @@ notification_level: str
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -2809,7 +2809,7 @@ additional_recipients: typing.List[str]
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -2832,10 +2832,10 @@ roleManagementPolicy.RoleManagementPolicyTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#create RoleManagementPolicy#create}. |
-| <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#delete RoleManagementPolicy#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#read RoleManagementPolicy#read}. |
-| <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#update RoleManagementPolicy#update}. |
+| <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#create RoleManagementPolicy#create}. |
+| <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#delete RoleManagementPolicy#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#read RoleManagementPolicy#read}. |
+| <code><a href="#@cdktf/provider-azurerm.roleManagementPolicy.RoleManagementPolicyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#update RoleManagementPolicy#update}. |
 
 ---
 
@@ -2847,7 +2847,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#create RoleManagementPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#create RoleManagementPolicy#create}.
 
 ---
 
@@ -2859,7 +2859,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#delete RoleManagementPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#delete RoleManagementPolicy#delete}.
 
 ---
 
@@ -2871,7 +2871,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#read RoleManagementPolicy#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#read RoleManagementPolicy#read}.
 
 ---
 
@@ -2883,7 +2883,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#update RoleManagementPolicy#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#update RoleManagementPolicy#update}.
 
 ---
 
@@ -3958,7 +3958,7 @@ def put_approval_stage(
 
 primary_approver block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#primary_approver RoleManagementPolicy#primary_approver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#primary_approver RoleManagementPolicy#primary_approver}
 
 ---
 
@@ -6246,7 +6246,7 @@ def put_admin_notifications(
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -6256,7 +6256,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -6266,7 +6266,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -6286,7 +6286,7 @@ def put_approver_notifications(
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -6296,7 +6296,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -6306,7 +6306,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -6326,7 +6326,7 @@ def put_assignee_notifications(
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -6336,7 +6336,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -6346,7 +6346,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -7771,7 +7771,7 @@ def put_admin_notifications(
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -7781,7 +7781,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -7791,7 +7791,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -7811,7 +7811,7 @@ def put_approver_notifications(
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -7821,7 +7821,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -7831,7 +7831,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -7851,7 +7851,7 @@ def put_assignee_notifications(
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -7861,7 +7861,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -7871,7 +7871,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -9296,7 +9296,7 @@ def put_admin_notifications(
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -9306,7 +9306,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -9316,7 +9316,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -9336,7 +9336,7 @@ def put_approver_notifications(
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -9346,7 +9346,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -9356,7 +9356,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -9376,7 +9376,7 @@ def put_assignee_notifications(
 
 Whether the default recipients are notified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#default_recipients RoleManagementPolicy#default_recipients}
 
 ---
 
@@ -9386,7 +9386,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 What level of notifications are sent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#notification_level RoleManagementPolicy#notification_level}
 
 ---
 
@@ -9396,7 +9396,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The additional recipients to notify.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#additional_recipients RoleManagementPolicy#additional_recipients}
 
 ---
 
@@ -9780,7 +9780,7 @@ def put_active_assignments(
 
 admin_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#admin_notifications RoleManagementPolicy#admin_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#admin_notifications RoleManagementPolicy#admin_notifications}
 
 ---
 
@@ -9790,7 +9790,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 approver_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#approver_notifications RoleManagementPolicy#approver_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#approver_notifications RoleManagementPolicy#approver_notifications}
 
 ---
 
@@ -9800,7 +9800,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 assignee_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#assignee_notifications RoleManagementPolicy#assignee_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#assignee_notifications RoleManagementPolicy#assignee_notifications}
 
 ---
 
@@ -9820,7 +9820,7 @@ def put_eligible_activations(
 
 admin_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#admin_notifications RoleManagementPolicy#admin_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#admin_notifications RoleManagementPolicy#admin_notifications}
 
 ---
 
@@ -9830,7 +9830,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 approver_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#approver_notifications RoleManagementPolicy#approver_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#approver_notifications RoleManagementPolicy#approver_notifications}
 
 ---
 
@@ -9840,7 +9840,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 assignee_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#assignee_notifications RoleManagementPolicy#assignee_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#assignee_notifications RoleManagementPolicy#assignee_notifications}
 
 ---
 
@@ -9860,7 +9860,7 @@ def put_eligible_assignments(
 
 admin_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#admin_notifications RoleManagementPolicy#admin_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#admin_notifications RoleManagementPolicy#admin_notifications}
 
 ---
 
@@ -9870,7 +9870,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 approver_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#approver_notifications RoleManagementPolicy#approver_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#approver_notifications RoleManagementPolicy#approver_notifications}
 
 ---
 
@@ -9880,7 +9880,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 assignee_notifications block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/role_management_policy#assignee_notifications RoleManagementPolicy#assignee_notifications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/role_management_policy#assignee_notifications RoleManagementPolicy#assignee_notifications}
 
 ---
 

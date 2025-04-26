@@ -1,3 +1,3 @@
 # `azurerm_netapp_backup_policy`
 
-Refer to the Terraform Registry for docs: [`azurerm_netapp_backup_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/netapp_backup_policy).
+Refer to the Terraform Registry for docs: [`azurerm_netapp_backup_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/netapp_backup_policy).

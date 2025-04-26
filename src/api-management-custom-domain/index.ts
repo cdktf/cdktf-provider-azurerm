@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,11 +13,11 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementCustomDomainConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#api_management_id ApiManagementCustomDomain#api_management_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#api_management_id ApiManagementCustomDomain#api_management_id}
   */
   readonly apiManagementId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#id ApiManagementCustomDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#id ApiManagementCustomDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -26,63 +26,67 @@ export interface ApiManagementCustomDomainConfig extends cdktf.TerraformMetaArgu
   /**
   * developer_portal block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#developer_portal ApiManagementCustomDomain#developer_portal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#developer_portal ApiManagementCustomDomain#developer_portal}
   */
   readonly developerPortal?: ApiManagementCustomDomainDeveloperPortal[] | cdktf.IResolvable;
   /**
   * gateway block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#gateway ApiManagementCustomDomain#gateway}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#gateway ApiManagementCustomDomain#gateway}
   */
   readonly gateway?: ApiManagementCustomDomainGateway[] | cdktf.IResolvable;
   /**
   * management block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#management ApiManagementCustomDomain#management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#management ApiManagementCustomDomain#management}
   */
   readonly management?: ApiManagementCustomDomainManagement[] | cdktf.IResolvable;
   /**
   * portal block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#portal ApiManagementCustomDomain#portal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#portal ApiManagementCustomDomain#portal}
   */
   readonly portal?: ApiManagementCustomDomainPortal[] | cdktf.IResolvable;
   /**
   * scm block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#scm ApiManagementCustomDomain#scm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#scm ApiManagementCustomDomain#scm}
   */
   readonly scm?: ApiManagementCustomDomainScm[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#timeouts ApiManagementCustomDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#timeouts ApiManagementCustomDomain#timeouts}
   */
   readonly timeouts?: ApiManagementCustomDomainTimeouts;
 }
 export interface ApiManagementCustomDomainDeveloperPortal {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#certificate_password ApiManagementCustomDomain#certificate_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#certificate_password ApiManagementCustomDomain#certificate_password}
   */
   readonly certificatePassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#host_name ApiManagementCustomDomain#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#host_name ApiManagementCustomDomain#host_name}
   */
   readonly hostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#key_vault_id ApiManagementCustomDomain#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#key_vault_certificate_id ApiManagementCustomDomain#key_vault_certificate_id}
+  */
+  readonly keyVaultCertificateId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#key_vault_id ApiManagementCustomDomain#key_vault_id}
   */
   readonly keyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
   */
   readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
   */
   readonly sslKeyvaultIdentityClientId?: string;
 }
@@ -96,6 +100,7 @@ export function apiManagementCustomDomainDeveloperPortalToTerraform(struct?: Api
     certificate: cdktf.stringToTerraform(struct!.certificate),
     certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
     host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_certificate_id: cdktf.stringToTerraform(struct!.keyVaultCertificateId),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
     ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
@@ -123,6 +128,12 @@ export function apiManagementCustomDomainDeveloperPortalToHclTerraform(struct?: 
     },
     host_name: {
       value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_certificate_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultCertificateId),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -183,6 +194,10 @@ export class ApiManagementCustomDomainDeveloperPortalOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.hostName = this._hostName;
     }
+    if (this._keyVaultCertificateId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultCertificateId = this._keyVaultCertificateId;
+    }
     if (this._keyVaultId !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyVaultId = this._keyVaultId;
@@ -205,6 +220,7 @@ export class ApiManagementCustomDomainDeveloperPortalOutputReference extends cdk
       this._certificate = undefined;
       this._certificatePassword = undefined;
       this._hostName = undefined;
+      this._keyVaultCertificateId = undefined;
       this._keyVaultId = undefined;
       this._negotiateClientCertificate = undefined;
       this._sslKeyvaultIdentityClientId = undefined;
@@ -219,6 +235,7 @@ export class ApiManagementCustomDomainDeveloperPortalOutputReference extends cdk
       this._certificate = value.certificate;
       this._certificatePassword = value.certificatePassword;
       this._hostName = value.hostName;
+      this._keyVaultCertificateId = value.keyVaultCertificateId;
       this._keyVaultId = value.keyVaultId;
       this._negotiateClientCertificate = value.negotiateClientCertificate;
       this._sslKeyvaultIdentityClientId = value.sslKeyvaultIdentityClientId;
@@ -285,7 +302,23 @@ export class ApiManagementCustomDomainDeveloperPortalOutputReference extends cdk
     return this._hostName;
   }
 
-  // key_vault_id - computed: false, optional: true, required: false
+  // key_vault_certificate_id - computed: true, optional: true, required: false
+  private _keyVaultCertificateId?: string; 
+  public get keyVaultCertificateId() {
+    return this.getStringAttribute('key_vault_certificate_id');
+  }
+  public set keyVaultCertificateId(value: string) {
+    this._keyVaultCertificateId = value;
+  }
+  public resetKeyVaultCertificateId() {
+    this._keyVaultCertificateId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultCertificateIdInput() {
+    return this._keyVaultCertificateId;
+  }
+
+  // key_vault_id - computed: true, optional: true, required: false
   private _keyVaultId?: string; 
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
@@ -365,31 +398,35 @@ export class ApiManagementCustomDomainDeveloperPortalList extends cdktf.ComplexL
 }
 export interface ApiManagementCustomDomainGateway {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#certificate_password ApiManagementCustomDomain#certificate_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#certificate_password ApiManagementCustomDomain#certificate_password}
   */
   readonly certificatePassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#default_ssl_binding ApiManagementCustomDomain#default_ssl_binding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#default_ssl_binding ApiManagementCustomDomain#default_ssl_binding}
   */
   readonly defaultSslBinding?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#host_name ApiManagementCustomDomain#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#host_name ApiManagementCustomDomain#host_name}
   */
   readonly hostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#key_vault_id ApiManagementCustomDomain#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#key_vault_certificate_id ApiManagementCustomDomain#key_vault_certificate_id}
+  */
+  readonly keyVaultCertificateId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#key_vault_id ApiManagementCustomDomain#key_vault_id}
   */
   readonly keyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
   */
   readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
   */
   readonly sslKeyvaultIdentityClientId?: string;
 }
@@ -404,6 +441,7 @@ export function apiManagementCustomDomainGatewayToTerraform(struct?: ApiManageme
     certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
     default_ssl_binding: cdktf.booleanToTerraform(struct!.defaultSslBinding),
     host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_certificate_id: cdktf.stringToTerraform(struct!.keyVaultCertificateId),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
     ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
@@ -437,6 +475,12 @@ export function apiManagementCustomDomainGatewayToHclTerraform(struct?: ApiManag
     },
     host_name: {
       value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_certificate_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultCertificateId),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -501,6 +545,10 @@ export class ApiManagementCustomDomainGatewayOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.hostName = this._hostName;
     }
+    if (this._keyVaultCertificateId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultCertificateId = this._keyVaultCertificateId;
+    }
     if (this._keyVaultId !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyVaultId = this._keyVaultId;
@@ -524,6 +572,7 @@ export class ApiManagementCustomDomainGatewayOutputReference extends cdktf.Compl
       this._certificatePassword = undefined;
       this._defaultSslBinding = undefined;
       this._hostName = undefined;
+      this._keyVaultCertificateId = undefined;
       this._keyVaultId = undefined;
       this._negotiateClientCertificate = undefined;
       this._sslKeyvaultIdentityClientId = undefined;
@@ -539,6 +588,7 @@ export class ApiManagementCustomDomainGatewayOutputReference extends cdktf.Compl
       this._certificatePassword = value.certificatePassword;
       this._defaultSslBinding = value.defaultSslBinding;
       this._hostName = value.hostName;
+      this._keyVaultCertificateId = value.keyVaultCertificateId;
       this._keyVaultId = value.keyVaultId;
       this._negotiateClientCertificate = value.negotiateClientCertificate;
       this._sslKeyvaultIdentityClientId = value.sslKeyvaultIdentityClientId;
@@ -621,7 +671,23 @@ export class ApiManagementCustomDomainGatewayOutputReference extends cdktf.Compl
     return this._hostName;
   }
 
-  // key_vault_id - computed: false, optional: true, required: false
+  // key_vault_certificate_id - computed: true, optional: true, required: false
+  private _keyVaultCertificateId?: string; 
+  public get keyVaultCertificateId() {
+    return this.getStringAttribute('key_vault_certificate_id');
+  }
+  public set keyVaultCertificateId(value: string) {
+    this._keyVaultCertificateId = value;
+  }
+  public resetKeyVaultCertificateId() {
+    this._keyVaultCertificateId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultCertificateIdInput() {
+    return this._keyVaultCertificateId;
+  }
+
+  // key_vault_id - computed: true, optional: true, required: false
   private _keyVaultId?: string; 
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
@@ -701,27 +767,31 @@ export class ApiManagementCustomDomainGatewayList extends cdktf.ComplexList {
 }
 export interface ApiManagementCustomDomainManagement {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#certificate_password ApiManagementCustomDomain#certificate_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#certificate_password ApiManagementCustomDomain#certificate_password}
   */
   readonly certificatePassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#host_name ApiManagementCustomDomain#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#host_name ApiManagementCustomDomain#host_name}
   */
   readonly hostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#key_vault_id ApiManagementCustomDomain#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#key_vault_certificate_id ApiManagementCustomDomain#key_vault_certificate_id}
+  */
+  readonly keyVaultCertificateId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#key_vault_id ApiManagementCustomDomain#key_vault_id}
   */
   readonly keyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
   */
   readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
   */
   readonly sslKeyvaultIdentityClientId?: string;
 }
@@ -735,6 +805,7 @@ export function apiManagementCustomDomainManagementToTerraform(struct?: ApiManag
     certificate: cdktf.stringToTerraform(struct!.certificate),
     certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
     host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_certificate_id: cdktf.stringToTerraform(struct!.keyVaultCertificateId),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
     ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
@@ -762,6 +833,12 @@ export function apiManagementCustomDomainManagementToHclTerraform(struct?: ApiMa
     },
     host_name: {
       value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_certificate_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultCertificateId),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -822,6 +899,10 @@ export class ApiManagementCustomDomainManagementOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.hostName = this._hostName;
     }
+    if (this._keyVaultCertificateId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultCertificateId = this._keyVaultCertificateId;
+    }
     if (this._keyVaultId !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyVaultId = this._keyVaultId;
@@ -844,6 +925,7 @@ export class ApiManagementCustomDomainManagementOutputReference extends cdktf.Co
       this._certificate = undefined;
       this._certificatePassword = undefined;
       this._hostName = undefined;
+      this._keyVaultCertificateId = undefined;
       this._keyVaultId = undefined;
       this._negotiateClientCertificate = undefined;
       this._sslKeyvaultIdentityClientId = undefined;
@@ -858,6 +940,7 @@ export class ApiManagementCustomDomainManagementOutputReference extends cdktf.Co
       this._certificate = value.certificate;
       this._certificatePassword = value.certificatePassword;
       this._hostName = value.hostName;
+      this._keyVaultCertificateId = value.keyVaultCertificateId;
       this._keyVaultId = value.keyVaultId;
       this._negotiateClientCertificate = value.negotiateClientCertificate;
       this._sslKeyvaultIdentityClientId = value.sslKeyvaultIdentityClientId;
@@ -924,7 +1007,23 @@ export class ApiManagementCustomDomainManagementOutputReference extends cdktf.Co
     return this._hostName;
   }
 
-  // key_vault_id - computed: false, optional: true, required: false
+  // key_vault_certificate_id - computed: true, optional: true, required: false
+  private _keyVaultCertificateId?: string; 
+  public get keyVaultCertificateId() {
+    return this.getStringAttribute('key_vault_certificate_id');
+  }
+  public set keyVaultCertificateId(value: string) {
+    this._keyVaultCertificateId = value;
+  }
+  public resetKeyVaultCertificateId() {
+    this._keyVaultCertificateId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultCertificateIdInput() {
+    return this._keyVaultCertificateId;
+  }
+
+  // key_vault_id - computed: true, optional: true, required: false
   private _keyVaultId?: string; 
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
@@ -1004,27 +1103,31 @@ export class ApiManagementCustomDomainManagementList extends cdktf.ComplexList {
 }
 export interface ApiManagementCustomDomainPortal {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#certificate_password ApiManagementCustomDomain#certificate_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#certificate_password ApiManagementCustomDomain#certificate_password}
   */
   readonly certificatePassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#host_name ApiManagementCustomDomain#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#host_name ApiManagementCustomDomain#host_name}
   */
   readonly hostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#key_vault_id ApiManagementCustomDomain#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#key_vault_certificate_id ApiManagementCustomDomain#key_vault_certificate_id}
+  */
+  readonly keyVaultCertificateId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#key_vault_id ApiManagementCustomDomain#key_vault_id}
   */
   readonly keyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
   */
   readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
   */
   readonly sslKeyvaultIdentityClientId?: string;
 }
@@ -1038,6 +1141,7 @@ export function apiManagementCustomDomainPortalToTerraform(struct?: ApiManagemen
     certificate: cdktf.stringToTerraform(struct!.certificate),
     certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
     host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_certificate_id: cdktf.stringToTerraform(struct!.keyVaultCertificateId),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
     ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
@@ -1065,6 +1169,12 @@ export function apiManagementCustomDomainPortalToHclTerraform(struct?: ApiManage
     },
     host_name: {
       value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_certificate_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultCertificateId),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -1125,6 +1235,10 @@ export class ApiManagementCustomDomainPortalOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.hostName = this._hostName;
     }
+    if (this._keyVaultCertificateId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultCertificateId = this._keyVaultCertificateId;
+    }
     if (this._keyVaultId !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyVaultId = this._keyVaultId;
@@ -1147,6 +1261,7 @@ export class ApiManagementCustomDomainPortalOutputReference extends cdktf.Comple
       this._certificate = undefined;
       this._certificatePassword = undefined;
       this._hostName = undefined;
+      this._keyVaultCertificateId = undefined;
       this._keyVaultId = undefined;
       this._negotiateClientCertificate = undefined;
       this._sslKeyvaultIdentityClientId = undefined;
@@ -1161,6 +1276,7 @@ export class ApiManagementCustomDomainPortalOutputReference extends cdktf.Comple
       this._certificate = value.certificate;
       this._certificatePassword = value.certificatePassword;
       this._hostName = value.hostName;
+      this._keyVaultCertificateId = value.keyVaultCertificateId;
       this._keyVaultId = value.keyVaultId;
       this._negotiateClientCertificate = value.negotiateClientCertificate;
       this._sslKeyvaultIdentityClientId = value.sslKeyvaultIdentityClientId;
@@ -1227,7 +1343,23 @@ export class ApiManagementCustomDomainPortalOutputReference extends cdktf.Comple
     return this._hostName;
   }
 
-  // key_vault_id - computed: false, optional: true, required: false
+  // key_vault_certificate_id - computed: true, optional: true, required: false
+  private _keyVaultCertificateId?: string; 
+  public get keyVaultCertificateId() {
+    return this.getStringAttribute('key_vault_certificate_id');
+  }
+  public set keyVaultCertificateId(value: string) {
+    this._keyVaultCertificateId = value;
+  }
+  public resetKeyVaultCertificateId() {
+    this._keyVaultCertificateId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultCertificateIdInput() {
+    return this._keyVaultCertificateId;
+  }
+
+  // key_vault_id - computed: true, optional: true, required: false
   private _keyVaultId?: string; 
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
@@ -1307,27 +1439,31 @@ export class ApiManagementCustomDomainPortalList extends cdktf.ComplexList {
 }
 export interface ApiManagementCustomDomainScm {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#certificate_password ApiManagementCustomDomain#certificate_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#certificate_password ApiManagementCustomDomain#certificate_password}
   */
   readonly certificatePassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#host_name ApiManagementCustomDomain#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#host_name ApiManagementCustomDomain#host_name}
   */
   readonly hostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#key_vault_id ApiManagementCustomDomain#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#key_vault_certificate_id ApiManagementCustomDomain#key_vault_certificate_id}
+  */
+  readonly keyVaultCertificateId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#key_vault_id ApiManagementCustomDomain#key_vault_id}
   */
   readonly keyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
   */
   readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
   */
   readonly sslKeyvaultIdentityClientId?: string;
 }
@@ -1341,6 +1477,7 @@ export function apiManagementCustomDomainScmToTerraform(struct?: ApiManagementCu
     certificate: cdktf.stringToTerraform(struct!.certificate),
     certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
     host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_certificate_id: cdktf.stringToTerraform(struct!.keyVaultCertificateId),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
     ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
@@ -1368,6 +1505,12 @@ export function apiManagementCustomDomainScmToHclTerraform(struct?: ApiManagemen
     },
     host_name: {
       value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_certificate_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultCertificateId),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -1428,6 +1571,10 @@ export class ApiManagementCustomDomainScmOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.hostName = this._hostName;
     }
+    if (this._keyVaultCertificateId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultCertificateId = this._keyVaultCertificateId;
+    }
     if (this._keyVaultId !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyVaultId = this._keyVaultId;
@@ -1450,6 +1597,7 @@ export class ApiManagementCustomDomainScmOutputReference extends cdktf.ComplexOb
       this._certificate = undefined;
       this._certificatePassword = undefined;
       this._hostName = undefined;
+      this._keyVaultCertificateId = undefined;
       this._keyVaultId = undefined;
       this._negotiateClientCertificate = undefined;
       this._sslKeyvaultIdentityClientId = undefined;
@@ -1464,6 +1612,7 @@ export class ApiManagementCustomDomainScmOutputReference extends cdktf.ComplexOb
       this._certificate = value.certificate;
       this._certificatePassword = value.certificatePassword;
       this._hostName = value.hostName;
+      this._keyVaultCertificateId = value.keyVaultCertificateId;
       this._keyVaultId = value.keyVaultId;
       this._negotiateClientCertificate = value.negotiateClientCertificate;
       this._sslKeyvaultIdentityClientId = value.sslKeyvaultIdentityClientId;
@@ -1530,7 +1679,23 @@ export class ApiManagementCustomDomainScmOutputReference extends cdktf.ComplexOb
     return this._hostName;
   }
 
-  // key_vault_id - computed: false, optional: true, required: false
+  // key_vault_certificate_id - computed: true, optional: true, required: false
+  private _keyVaultCertificateId?: string; 
+  public get keyVaultCertificateId() {
+    return this.getStringAttribute('key_vault_certificate_id');
+  }
+  public set keyVaultCertificateId(value: string) {
+    this._keyVaultCertificateId = value;
+  }
+  public resetKeyVaultCertificateId() {
+    this._keyVaultCertificateId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultCertificateIdInput() {
+    return this._keyVaultCertificateId;
+  }
+
+  // key_vault_id - computed: true, optional: true, required: false
   private _keyVaultId?: string; 
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
@@ -1610,19 +1775,19 @@ export class ApiManagementCustomDomainScmList extends cdktf.ComplexList {
 }
 export interface ApiManagementCustomDomainTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#create ApiManagementCustomDomain#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#create ApiManagementCustomDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#delete ApiManagementCustomDomain#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#delete ApiManagementCustomDomain#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#read ApiManagementCustomDomain#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#read ApiManagementCustomDomain#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#update ApiManagementCustomDomain#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#update ApiManagementCustomDomain#update}
   */
   readonly update?: string;
 }
@@ -1803,7 +1968,7 @@ export class ApiManagementCustomDomainTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain azurerm_api_management_custom_domain}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain azurerm_api_management_custom_domain}
 */
 export class ApiManagementCustomDomain extends cdktf.TerraformResource {
 
@@ -1819,7 +1984,7 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApiManagementCustomDomain resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApiManagementCustomDomain to import
-  * @param importFromId The id of the existing ApiManagementCustomDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApiManagementCustomDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApiManagementCustomDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1831,7 +1996,7 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.26.0/docs/resources/api_management_custom_domain azurerm_api_management_custom_domain} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/api_management_custom_domain azurerm_api_management_custom_domain} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1842,7 +2007,7 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_custom_domain',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.26.0',
+        providerVersion: '4.27.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
