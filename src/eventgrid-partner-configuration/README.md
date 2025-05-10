@@ -1,3 +1,3 @@
 # `azurerm_eventgrid_partner_configuration`
 
-Refer to the Terraform Registry for docs: [`azurerm_eventgrid_partner_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/eventgrid_partner_configuration).
+Refer to the Terraform Registry for docs: [`azurerm_eventgrid_partner_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/eventgrid_partner_configuration).

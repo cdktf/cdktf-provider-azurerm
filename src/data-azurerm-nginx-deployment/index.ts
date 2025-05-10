@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/nginx_deployment
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/data-sources/nginx_deployment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermNginxDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/nginx_deployment#id DataAzurermNginxDeployment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/data-sources/nginx_deployment#id DataAzurermNginxDeployment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/nginx_deployment#name DataAzurermNginxDeployment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/data-sources/nginx_deployment#name DataAzurermNginxDeployment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/nginx_deployment#resource_group_name DataAzurermNginxDeployment#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/data-sources/nginx_deployment#resource_group_name DataAzurermNginxDeployment#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/nginx_deployment#timeouts DataAzurermNginxDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/data-sources/nginx_deployment#timeouts DataAzurermNginxDeployment#timeouts}
   */
   readonly timeouts?: DataAzurermNginxDeploymentTimeouts;
 }
@@ -524,9 +519,504 @@ export class DataAzurermNginxDeploymentNetworkInterfaceList extends cdktf.Comple
     return new DataAzurermNginxDeploymentNetworkInterfaceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataAzurermNginxDeploymentWebApplicationFirewallStatusAttackSignaturesPackage {
+}
+
+export function dataAzurermNginxDeploymentWebApplicationFirewallStatusAttackSignaturesPackageToTerraform(struct?: DataAzurermNginxDeploymentWebApplicationFirewallStatusAttackSignaturesPackage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataAzurermNginxDeploymentWebApplicationFirewallStatusAttackSignaturesPackageToHclTerraform(struct?: DataAzurermNginxDeploymentWebApplicationFirewallStatusAttackSignaturesPackage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataAzurermNginxDeploymentWebApplicationFirewallStatusAttackSignaturesPackageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNginxDeploymentWebApplicationFirewallStatusAttackSignaturesPackage | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNginxDeploymentWebApplicationFirewallStatusAttackSignaturesPackage | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // revision_datetime - computed: true, optional: false, required: false
+  public get revisionDatetime() {
+    return this.getStringAttribute('revision_datetime');
+  }
+
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+}
+
+export class DataAzurermNginxDeploymentWebApplicationFirewallStatusAttackSignaturesPackageList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNginxDeploymentWebApplicationFirewallStatusAttackSignaturesPackageOutputReference {
+    return new DataAzurermNginxDeploymentWebApplicationFirewallStatusAttackSignaturesPackageOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermNginxDeploymentWebApplicationFirewallStatusBotSignaturesPackage {
+}
+
+export function dataAzurermNginxDeploymentWebApplicationFirewallStatusBotSignaturesPackageToTerraform(struct?: DataAzurermNginxDeploymentWebApplicationFirewallStatusBotSignaturesPackage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataAzurermNginxDeploymentWebApplicationFirewallStatusBotSignaturesPackageToHclTerraform(struct?: DataAzurermNginxDeploymentWebApplicationFirewallStatusBotSignaturesPackage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataAzurermNginxDeploymentWebApplicationFirewallStatusBotSignaturesPackageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNginxDeploymentWebApplicationFirewallStatusBotSignaturesPackage | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNginxDeploymentWebApplicationFirewallStatusBotSignaturesPackage | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // revision_datetime - computed: true, optional: false, required: false
+  public get revisionDatetime() {
+    return this.getStringAttribute('revision_datetime');
+  }
+
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+}
+
+export class DataAzurermNginxDeploymentWebApplicationFirewallStatusBotSignaturesPackageList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNginxDeploymentWebApplicationFirewallStatusBotSignaturesPackageOutputReference {
+    return new DataAzurermNginxDeploymentWebApplicationFirewallStatusBotSignaturesPackageOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermNginxDeploymentWebApplicationFirewallStatusComponentVersions {
+}
+
+export function dataAzurermNginxDeploymentWebApplicationFirewallStatusComponentVersionsToTerraform(struct?: DataAzurermNginxDeploymentWebApplicationFirewallStatusComponentVersions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataAzurermNginxDeploymentWebApplicationFirewallStatusComponentVersionsToHclTerraform(struct?: DataAzurermNginxDeploymentWebApplicationFirewallStatusComponentVersions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataAzurermNginxDeploymentWebApplicationFirewallStatusComponentVersionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNginxDeploymentWebApplicationFirewallStatusComponentVersions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNginxDeploymentWebApplicationFirewallStatusComponentVersions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // waf_engine_version - computed: true, optional: false, required: false
+  public get wafEngineVersion() {
+    return this.getStringAttribute('waf_engine_version');
+  }
+
+  // waf_nginx_version - computed: true, optional: false, required: false
+  public get wafNginxVersion() {
+    return this.getStringAttribute('waf_nginx_version');
+  }
+}
+
+export class DataAzurermNginxDeploymentWebApplicationFirewallStatusComponentVersionsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNginxDeploymentWebApplicationFirewallStatusComponentVersionsOutputReference {
+    return new DataAzurermNginxDeploymentWebApplicationFirewallStatusComponentVersionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermNginxDeploymentWebApplicationFirewallStatusThreatCampaignsPackage {
+}
+
+export function dataAzurermNginxDeploymentWebApplicationFirewallStatusThreatCampaignsPackageToTerraform(struct?: DataAzurermNginxDeploymentWebApplicationFirewallStatusThreatCampaignsPackage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataAzurermNginxDeploymentWebApplicationFirewallStatusThreatCampaignsPackageToHclTerraform(struct?: DataAzurermNginxDeploymentWebApplicationFirewallStatusThreatCampaignsPackage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataAzurermNginxDeploymentWebApplicationFirewallStatusThreatCampaignsPackageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNginxDeploymentWebApplicationFirewallStatusThreatCampaignsPackage | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNginxDeploymentWebApplicationFirewallStatusThreatCampaignsPackage | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // revision_datetime - computed: true, optional: false, required: false
+  public get revisionDatetime() {
+    return this.getStringAttribute('revision_datetime');
+  }
+
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+}
+
+export class DataAzurermNginxDeploymentWebApplicationFirewallStatusThreatCampaignsPackageList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNginxDeploymentWebApplicationFirewallStatusThreatCampaignsPackageOutputReference {
+    return new DataAzurermNginxDeploymentWebApplicationFirewallStatusThreatCampaignsPackageOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermNginxDeploymentWebApplicationFirewallStatus {
+}
+
+export function dataAzurermNginxDeploymentWebApplicationFirewallStatusToTerraform(struct?: DataAzurermNginxDeploymentWebApplicationFirewallStatus): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataAzurermNginxDeploymentWebApplicationFirewallStatusToHclTerraform(struct?: DataAzurermNginxDeploymentWebApplicationFirewallStatus): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataAzurermNginxDeploymentWebApplicationFirewallStatusOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNginxDeploymentWebApplicationFirewallStatus | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNginxDeploymentWebApplicationFirewallStatus | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // attack_signatures_package - computed: true, optional: false, required: false
+  private _attackSignaturesPackage = new DataAzurermNginxDeploymentWebApplicationFirewallStatusAttackSignaturesPackageList(this, "attack_signatures_package", false);
+  public get attackSignaturesPackage() {
+    return this._attackSignaturesPackage;
+  }
+
+  // bot_signatures_package - computed: true, optional: false, required: false
+  private _botSignaturesPackage = new DataAzurermNginxDeploymentWebApplicationFirewallStatusBotSignaturesPackageList(this, "bot_signatures_package", false);
+  public get botSignaturesPackage() {
+    return this._botSignaturesPackage;
+  }
+
+  // component_versions - computed: true, optional: false, required: false
+  private _componentVersions = new DataAzurermNginxDeploymentWebApplicationFirewallStatusComponentVersionsList(this, "component_versions", false);
+  public get componentVersions() {
+    return this._componentVersions;
+  }
+
+  // threat_campaigns_package - computed: true, optional: false, required: false
+  private _threatCampaignsPackage = new DataAzurermNginxDeploymentWebApplicationFirewallStatusThreatCampaignsPackageList(this, "threat_campaigns_package", false);
+  public get threatCampaignsPackage() {
+    return this._threatCampaignsPackage;
+  }
+}
+
+export class DataAzurermNginxDeploymentWebApplicationFirewallStatusList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNginxDeploymentWebApplicationFirewallStatusOutputReference {
+    return new DataAzurermNginxDeploymentWebApplicationFirewallStatusOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermNginxDeploymentWebApplicationFirewall {
+}
+
+export function dataAzurermNginxDeploymentWebApplicationFirewallToTerraform(struct?: DataAzurermNginxDeploymentWebApplicationFirewall): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataAzurermNginxDeploymentWebApplicationFirewallToHclTerraform(struct?: DataAzurermNginxDeploymentWebApplicationFirewall): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataAzurermNginxDeploymentWebApplicationFirewallOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNginxDeploymentWebApplicationFirewall | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNginxDeploymentWebApplicationFirewall | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // activation_state_enabled - computed: true, optional: false, required: false
+  public get activationStateEnabled() {
+    return this.getBooleanAttribute('activation_state_enabled');
+  }
+
+  // status - computed: true, optional: false, required: false
+  private _status = new DataAzurermNginxDeploymentWebApplicationFirewallStatusList(this, "status", false);
+  public get status() {
+    return this._status;
+  }
+}
+
+export class DataAzurermNginxDeploymentWebApplicationFirewallList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNginxDeploymentWebApplicationFirewallOutputReference {
+    return new DataAzurermNginxDeploymentWebApplicationFirewallOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermNginxDeploymentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/nginx_deployment#read DataAzurermNginxDeployment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/data-sources/nginx_deployment#read DataAzurermNginxDeployment#read}
   */
   readonly read?: string;
 }
@@ -620,7 +1110,7 @@ export class DataAzurermNginxDeploymentTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/nginx_deployment azurerm_nginx_deployment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/data-sources/nginx_deployment azurerm_nginx_deployment}
 */
 export class DataAzurermNginxDeployment extends cdktf.TerraformDataSource {
 
@@ -636,7 +1126,7 @@ export class DataAzurermNginxDeployment extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermNginxDeployment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermNginxDeployment to import
-  * @param importFromId The id of the existing DataAzurermNginxDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/nginx_deployment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermNginxDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/data-sources/nginx_deployment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermNginxDeployment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -648,7 +1138,7 @@ export class DataAzurermNginxDeployment extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/data-sources/nginx_deployment azurerm_nginx_deployment} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/data-sources/nginx_deployment azurerm_nginx_deployment} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -659,7 +1149,7 @@ export class DataAzurermNginxDeployment extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_nginx_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.27.0',
+        providerVersion: '4.28.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -812,6 +1302,12 @@ export class DataAzurermNginxDeployment extends cdktf.TerraformDataSource {
   private _tags = new cdktf.StringMap(this, "tags");
   public get tags() {
     return this._tags;
+  }
+
+  // web_application_firewall - computed: true, optional: false, required: false
+  private _webApplicationFirewall = new DataAzurermNginxDeploymentWebApplicationFirewallList(this, "web_application_firewall", false);
+  public get webApplicationFirewall() {
+    return this._webApplicationFirewall;
   }
 
   // timeouts - computed: false, optional: true, required: false

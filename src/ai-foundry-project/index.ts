@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,60 +8,64 @@ import * as cdktf from 'cdktf';
 
 export interface AiFoundryProjectConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#ai_services_hub_id AiFoundryProject#ai_services_hub_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#ai_services_hub_id AiFoundryProject#ai_services_hub_id}
   */
   readonly aiServicesHubId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#description AiFoundryProject#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#description AiFoundryProject#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#friendly_name AiFoundryProject#friendly_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#friendly_name AiFoundryProject#friendly_name}
   */
   readonly friendlyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#high_business_impact_enabled AiFoundryProject#high_business_impact_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#high_business_impact_enabled AiFoundryProject#high_business_impact_enabled}
   */
   readonly highBusinessImpactEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#id AiFoundryProject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#id AiFoundryProject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#location AiFoundryProject#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#location AiFoundryProject#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#name AiFoundryProject#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#name AiFoundryProject#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#tags AiFoundryProject#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#primary_user_assigned_identity AiFoundryProject#primary_user_assigned_identity}
+  */
+  readonly primaryUserAssignedIdentity?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#tags AiFoundryProject#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#identity AiFoundryProject#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#identity AiFoundryProject#identity}
   */
   readonly identity?: AiFoundryProjectIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#timeouts AiFoundryProject#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#timeouts AiFoundryProject#timeouts}
   */
   readonly timeouts?: AiFoundryProjectTimeouts;
 }
 export interface AiFoundryProjectIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#identity_ids AiFoundryProject#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#identity_ids AiFoundryProject#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#type AiFoundryProject#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#type AiFoundryProject#type}
   */
   readonly type: string;
 }
@@ -186,19 +185,19 @@ export class AiFoundryProjectIdentityOutputReference extends cdktf.ComplexObject
 }
 export interface AiFoundryProjectTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#create AiFoundryProject#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#create AiFoundryProject#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#delete AiFoundryProject#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#delete AiFoundryProject#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#read AiFoundryProject#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#read AiFoundryProject#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#update AiFoundryProject#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#update AiFoundryProject#update}
   */
   readonly update?: string;
 }
@@ -379,7 +378,7 @@ export class AiFoundryProjectTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project azurerm_ai_foundry_project}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project azurerm_ai_foundry_project}
 */
 export class AiFoundryProject extends cdktf.TerraformResource {
 
@@ -395,7 +394,7 @@ export class AiFoundryProject extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AiFoundryProject resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AiFoundryProject to import
-  * @param importFromId The id of the existing AiFoundryProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AiFoundryProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AiFoundryProject to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -407,7 +406,7 @@ export class AiFoundryProject extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ai_foundry_project azurerm_ai_foundry_project} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ai_foundry_project azurerm_ai_foundry_project} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -418,7 +417,7 @@ export class AiFoundryProject extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_ai_foundry_project',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.27.0',
+        providerVersion: '4.28.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -436,6 +435,7 @@ export class AiFoundryProject extends cdktf.TerraformResource {
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
+    this._primaryUserAssignedIdentity = config.primaryUserAssignedIdentity;
     this._tags = config.tags;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
@@ -548,6 +548,22 @@ export class AiFoundryProject extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // primary_user_assigned_identity - computed: false, optional: true, required: false
+  private _primaryUserAssignedIdentity?: string; 
+  public get primaryUserAssignedIdentity() {
+    return this.getStringAttribute('primary_user_assigned_identity');
+  }
+  public set primaryUserAssignedIdentity(value: string) {
+    this._primaryUserAssignedIdentity = value;
+  }
+  public resetPrimaryUserAssignedIdentity() {
+    this._primaryUserAssignedIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryUserAssignedIdentityInput() {
+    return this._primaryUserAssignedIdentity;
+  }
+
   // project_id - computed: true, optional: false, required: false
   public get projectId() {
     return this.getStringAttribute('project_id');
@@ -614,6 +630,7 @@ export class AiFoundryProject extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      primary_user_assigned_identity: cdktf.stringToTerraform(this._primaryUserAssignedIdentity),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: aiFoundryProjectIdentityToTerraform(this._identity.internalValue),
       timeouts: aiFoundryProjectTimeoutsToTerraform(this._timeouts.internalValue),
@@ -660,6 +677,12 @@ export class AiFoundryProject extends cdktf.TerraformResource {
       },
       name: {
         value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      primary_user_assigned_identity: {
+        value: cdktf.stringToHclTerraform(this._primaryUserAssignedIdentity),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

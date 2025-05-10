@@ -1,3 +1,3 @@
 # `azurerm_cosmosdb_cassandra_keyspace`
 
-Refer to the Terraform Registry for docs: [`azurerm_cosmosdb_cassandra_keyspace`](https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cosmosdb_cassandra_keyspace).
+Refer to the Terraform Registry for docs: [`azurerm_cosmosdb_cassandra_keyspace`](https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cosmosdb_cassandra_keyspace).

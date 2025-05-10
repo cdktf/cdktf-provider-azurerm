@@ -1,3 +1,3 @@
 # `azurerm_cdn_frontdoor_security_policy`
 
-Refer to the Terraform Registry for docs: [`azurerm_cdn_frontdoor_security_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cdn_frontdoor_security_policy).
+Refer to the Terraform Registry for docs: [`azurerm_cdn_frontdoor_security_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cdn_frontdoor_security_policy).
