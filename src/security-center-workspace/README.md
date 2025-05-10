@@ -1,3 +1,3 @@
 # `azurerm_security_center_workspace`
 
-Refer to the Terraform Registry for docs: [`azurerm_security_center_workspace`](https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/security_center_workspace).
+Refer to the Terraform Registry for docs: [`azurerm_security_center_workspace`](https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/security_center_workspace).

@@ -692,6 +692,7 @@ Object.defineProperty(exports, 'networkWatcher', { get: function () { return req
 Object.defineProperty(exports, 'networkWatcherFlowLog', { get: function () { return require('./network-watcher-flow-log'); } });
 Object.defineProperty(exports, 'newRelicMonitor', { get: function () { return require('./new-relic-monitor'); } });
 Object.defineProperty(exports, 'newRelicTagRule', { get: function () { return require('./new-relic-tag-rule'); } });
+Object.defineProperty(exports, 'nginxApiKey', { get: function () { return require('./nginx-api-key'); } });
 Object.defineProperty(exports, 'nginxCertificate', { get: function () { return require('./nginx-certificate'); } });
 Object.defineProperty(exports, 'nginxConfiguration', { get: function () { return require('./nginx-configuration'); } });
 Object.defineProperty(exports, 'nginxDeployment', { get: function () { return require('./nginx-deployment'); } });
@@ -1330,6 +1331,7 @@ Object.defineProperty(exports, 'dataAzurermNetworkManagerNetworkGroup', { get: f
 Object.defineProperty(exports, 'dataAzurermNetworkSecurityGroup', { get: function () { return require('./data-azurerm-network-security-group'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkServiceTags', { get: function () { return require('./data-azurerm-network-service-tags'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkWatcher', { get: function () { return require('./data-azurerm-network-watcher'); } });
+Object.defineProperty(exports, 'dataAzurermNginxApiKey', { get: function () { return require('./data-azurerm-nginx-api-key'); } });
 Object.defineProperty(exports, 'dataAzurermNginxCertificate', { get: function () { return require('./data-azurerm-nginx-certificate'); } });
 Object.defineProperty(exports, 'dataAzurermNginxConfiguration', { get: function () { return require('./data-azurerm-nginx-configuration'); } });
 Object.defineProperty(exports, 'dataAzurermNginxDeployment', { get: function () { return require('./data-azurerm-nginx-deployment'); } });

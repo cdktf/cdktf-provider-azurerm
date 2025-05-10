@@ -1,3 +1,3 @@
 # `azurerm_data_protection_backup_vault`
 
-Refer to the Terraform Registry for docs: [`azurerm_data_protection_backup_vault`](https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/data_protection_backup_vault).
+Refer to the Terraform Registry for docs: [`azurerm_data_protection_backup_vault`](https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/data_protection_backup_vault).

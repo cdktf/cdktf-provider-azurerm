@@ -4,7 +4,7 @@
 
 ### MssqlJob <a name="MssqlJob" id="@cdktf/provider-azurerm.mssqlJob.MssqlJob"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job azurerm_mssql_job}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job azurerm_mssql_job}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlJob.MssqlJob.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the MssqlJob to import.
 
 The id of the existing MssqlJob that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -840,10 +840,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqljob"
 | <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobConfig.property.jobAgentId">JobAgentId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#job_agent_id MssqlJob#job_agent_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#name MssqlJob#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#description MssqlJob#description}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#id MssqlJob#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobConfig.property.jobAgentId">JobAgentId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#job_agent_id MssqlJob#job_agent_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#name MssqlJob#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#description MssqlJob#description}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#id MssqlJob#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobTimeouts">MssqlJobTimeouts</a></code> | timeouts block. |
 
 ---
@@ -926,7 +926,7 @@ JobAgentId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#job_agent_id MssqlJob#job_agent_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#job_agent_id MssqlJob#job_agent_id}.
 
 ---
 
@@ -938,7 +938,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#name MssqlJob#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#name MssqlJob#name}.
 
 ---
 
@@ -950,7 +950,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#description MssqlJob#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#description MssqlJob#description}.
 
 ---
 
@@ -962,7 +962,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#id MssqlJob#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#id MssqlJob#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -979,7 +979,7 @@ Timeouts MssqlJobTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#timeouts MssqlJob#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#timeouts MssqlJob#timeouts}
 
 ---
 
@@ -1002,10 +1002,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/mssqljob"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#create MssqlJob#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#delete MssqlJob#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#read MssqlJob#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#update MssqlJob#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#create MssqlJob#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#delete MssqlJob#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#read MssqlJob#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlJob.MssqlJobTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#update MssqlJob#update}. |
 
 ---
 
@@ -1017,7 +1017,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#create MssqlJob#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#create MssqlJob#create}.
 
 ---
 
@@ -1029,7 +1029,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#delete MssqlJob#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#delete MssqlJob#delete}.
 
 ---
 
@@ -1041,7 +1041,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#read MssqlJob#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#read MssqlJob#read}.
 
 ---
 
@@ -1053,7 +1053,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/mssql_job#update MssqlJob#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job#update MssqlJob#update}.
 
 ---
 

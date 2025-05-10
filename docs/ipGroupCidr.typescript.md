@@ -4,7 +4,7 @@
 
 ### IpGroupCidr <a name="IpGroupCidr" id="@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr azurerm_ip_group_cidr}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr azurerm_ip_group_cidr}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the IpGroupCidr to import.
 
 The id of the existing IpGroupCidr that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -798,9 +798,9 @@ const ipGroupCidrConfig: ipGroupCidr.IpGroupCidrConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrConfig.property.cidr">cidr</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#cidr IpGroupCidr#cidr}. |
-| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrConfig.property.ipGroupId">ipGroupId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#ip_group_id IpGroupCidr#ip_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#id IpGroupCidr#id}. |
+| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrConfig.property.cidr">cidr</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#cidr IpGroupCidr#cidr}. |
+| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrConfig.property.ipGroupId">ipGroupId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#ip_group_id IpGroupCidr#ip_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#id IpGroupCidr#id}. |
 | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts">IpGroupCidrTimeouts</a></code> | timeouts block. |
 
 ---
@@ -883,7 +883,7 @@ public readonly cidr: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#cidr IpGroupCidr#cidr}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#cidr IpGroupCidr#cidr}.
 
 ---
 
@@ -895,7 +895,7 @@ public readonly ipGroupId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#ip_group_id IpGroupCidr#ip_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#ip_group_id IpGroupCidr#ip_group_id}.
 
 ---
 
@@ -907,7 +907,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#id IpGroupCidr#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#id IpGroupCidr#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -924,7 +924,7 @@ public readonly timeouts: IpGroupCidrTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#timeouts IpGroupCidr#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#timeouts IpGroupCidr#timeouts}
 
 ---
 
@@ -942,9 +942,9 @@ const ipGroupCidrTimeouts: ipGroupCidr.IpGroupCidrTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#create IpGroupCidr#create}. |
-| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#delete IpGroupCidr#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#read IpGroupCidr#read}. |
+| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#create IpGroupCidr#create}. |
+| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#delete IpGroupCidr#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#read IpGroupCidr#read}. |
 
 ---
 
@@ -956,7 +956,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#create IpGroupCidr#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#create IpGroupCidr#create}.
 
 ---
 
@@ -968,7 +968,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#delete IpGroupCidr#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#delete IpGroupCidr#delete}.
 
 ---
 
@@ -980,7 +980,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/ip_group_cidr#read IpGroupCidr#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/ip_group_cidr#read IpGroupCidr#read}.
 
 ---
 

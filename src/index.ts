@@ -692,6 +692,7 @@ export * as networkWatcher from './network-watcher';
 export * as networkWatcherFlowLog from './network-watcher-flow-log';
 export * as newRelicMonitor from './new-relic-monitor';
 export * as newRelicTagRule from './new-relic-tag-rule';
+export * as nginxApiKey from './nginx-api-key';
 export * as nginxCertificate from './nginx-certificate';
 export * as nginxConfiguration from './nginx-configuration';
 export * as nginxDeployment from './nginx-deployment';
@@ -1330,6 +1331,7 @@ export * as dataAzurermNetworkManagerNetworkGroup from './data-azurerm-network-m
 export * as dataAzurermNetworkSecurityGroup from './data-azurerm-network-security-group';
 export * as dataAzurermNetworkServiceTags from './data-azurerm-network-service-tags';
 export * as dataAzurermNetworkWatcher from './data-azurerm-network-watcher';
+export * as dataAzurermNginxApiKey from './data-azurerm-nginx-api-key';
 export * as dataAzurermNginxCertificate from './data-azurerm-nginx-certificate';
 export * as dataAzurermNginxConfiguration from './data-azurerm-nginx-configuration';
 export * as dataAzurermNginxDeployment from './data-azurerm-nginx-deployment';
