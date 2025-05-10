@@ -4,7 +4,7 @@
 
 ### CognitiveAccountRaiBlocklist <a name="CognitiveAccountRaiBlocklist" id="@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklist"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist azurerm_cognitive_account_rai_blocklist}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist azurerm_cognitive_account_rai_blocklist}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklist.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the CognitiveAccountRaiBlockli
 
 The id of the existing CognitiveAccountRaiBlocklist that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -827,10 +827,10 @@ const cognitiveAccountRaiBlocklistConfig: cognitiveAccountRaiBlocklist.Cognitive
 | <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistConfig.property.cognitiveAccountId">cognitiveAccountId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#cognitive_account_id CognitiveAccountRaiBlocklist#cognitive_account_id}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#name CognitiveAccountRaiBlocklist#name}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#description CognitiveAccountRaiBlocklist#description}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#id CognitiveAccountRaiBlocklist#id}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistConfig.property.cognitiveAccountId">cognitiveAccountId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#cognitive_account_id CognitiveAccountRaiBlocklist#cognitive_account_id}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#name CognitiveAccountRaiBlocklist#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#description CognitiveAccountRaiBlocklist#description}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#id CognitiveAccountRaiBlocklist#id}. |
 | <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistTimeouts">CognitiveAccountRaiBlocklistTimeouts</a></code> | timeouts block. |
 
 ---
@@ -913,7 +913,7 @@ public readonly cognitiveAccountId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#cognitive_account_id CognitiveAccountRaiBlocklist#cognitive_account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#cognitive_account_id CognitiveAccountRaiBlocklist#cognitive_account_id}.
 
 ---
 
@@ -925,7 +925,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#name CognitiveAccountRaiBlocklist#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#name CognitiveAccountRaiBlocklist#name}.
 
 ---
 
@@ -937,7 +937,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#description CognitiveAccountRaiBlocklist#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#description CognitiveAccountRaiBlocklist#description}.
 
 ---
 
@@ -949,7 +949,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#id CognitiveAccountRaiBlocklist#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#id CognitiveAccountRaiBlocklist#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -966,7 +966,7 @@ public readonly timeouts: CognitiveAccountRaiBlocklistTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#timeouts CognitiveAccountRaiBlocklist#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#timeouts CognitiveAccountRaiBlocklist#timeouts}
 
 ---
 
@@ -984,10 +984,10 @@ const cognitiveAccountRaiBlocklistTimeouts: cognitiveAccountRaiBlocklist.Cogniti
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#create CognitiveAccountRaiBlocklist#create}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#delete CognitiveAccountRaiBlocklist#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#read CognitiveAccountRaiBlocklist#read}. |
-| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#update CognitiveAccountRaiBlocklist#update}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#create CognitiveAccountRaiBlocklist#create}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#delete CognitiveAccountRaiBlocklist#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#read CognitiveAccountRaiBlocklist#read}. |
+| <code><a href="#@cdktf/provider-azurerm.cognitiveAccountRaiBlocklist.CognitiveAccountRaiBlocklistTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#update CognitiveAccountRaiBlocklist#update}. |
 
 ---
 
@@ -999,7 +999,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#create CognitiveAccountRaiBlocklist#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#create CognitiveAccountRaiBlocklist#create}.
 
 ---
 
@@ -1011,7 +1011,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#delete CognitiveAccountRaiBlocklist#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#delete CognitiveAccountRaiBlocklist#delete}.
 
 ---
 
@@ -1023,7 +1023,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#read CognitiveAccountRaiBlocklist#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#read CognitiveAccountRaiBlocklist#read}.
 
 ---
 
@@ -1035,7 +1035,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.27.0/docs/resources/cognitive_account_rai_blocklist#update CognitiveAccountRaiBlocklist#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/cognitive_account_rai_blocklist#update CognitiveAccountRaiBlocklist#update}.
 
 ---
 
