@@ -1394,6 +1394,7 @@ The following submodules are available:
 - [systemCenterVirtualMachineManagerCloud](./systemCenterVirtualMachineManagerCloud.csharp.md)
 - [systemCenterVirtualMachineManagerServer](./systemCenterVirtualMachineManagerServer.csharp.md)
 - [systemCenterVirtualMachineManagerVirtualMachineInstance](./systemCenterVirtualMachineManagerVirtualMachineInstance.csharp.md)
+- [systemCenterVirtualMachineManagerVirtualMachineInstanceGuestAgent](./systemCenterVirtualMachineManagerVirtualMachineInstanceGuestAgent.csharp.md)
 - [systemCenterVirtualMachineManagerVirtualMachineTemplate](./systemCenterVirtualMachineManagerVirtualMachineTemplate.csharp.md)
 - [systemCenterVirtualMachineManagerVirtualNetwork](./systemCenterVirtualMachineManagerVirtualNetwork.csharp.md)
 - [tenantTemplateDeployment](./tenantTemplateDeployment.csharp.md)

@@ -1394,6 +1394,7 @@ The following submodules are available:
 - [systemCenterVirtualMachineManagerCloud](./systemCenterVirtualMachineManagerCloud.python.md)
 - [systemCenterVirtualMachineManagerServer](./systemCenterVirtualMachineManagerServer.python.md)
 - [systemCenterVirtualMachineManagerVirtualMachineInstance](./systemCenterVirtualMachineManagerVirtualMachineInstance.python.md)
+- [systemCenterVirtualMachineManagerVirtualMachineInstanceGuestAgent](./systemCenterVirtualMachineManagerVirtualMachineInstanceGuestAgent.python.md)
 - [systemCenterVirtualMachineManagerVirtualMachineTemplate](./systemCenterVirtualMachineManagerVirtualMachineTemplate.python.md)
 - [systemCenterVirtualMachineManagerVirtualNetwork](./systemCenterVirtualMachineManagerVirtualNetwork.python.md)
 - [tenantTemplateDeployment](./tenantTemplateDeployment.python.md)

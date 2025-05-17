@@ -1394,6 +1394,7 @@ The following submodules are available:
 - [systemCenterVirtualMachineManagerCloud](./systemCenterVirtualMachineManagerCloud.typescript.md)
 - [systemCenterVirtualMachineManagerServer](./systemCenterVirtualMachineManagerServer.typescript.md)
 - [systemCenterVirtualMachineManagerVirtualMachineInstance](./systemCenterVirtualMachineManagerVirtualMachineInstance.typescript.md)
+- [systemCenterVirtualMachineManagerVirtualMachineInstanceGuestAgent](./systemCenterVirtualMachineManagerVirtualMachineInstanceGuestAgent.typescript.md)
 - [systemCenterVirtualMachineManagerVirtualMachineTemplate](./systemCenterVirtualMachineManagerVirtualMachineTemplate.typescript.md)
 - [systemCenterVirtualMachineManagerVirtualNetwork](./systemCenterVirtualMachineManagerVirtualNetwork.typescript.md)
 - [tenantTemplateDeployment](./tenantTemplateDeployment.typescript.md)

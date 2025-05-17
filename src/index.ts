@@ -1020,6 +1020,7 @@ export * as systemCenterVirtualMachineManagerAvailabilitySet from './system-cent
 export * as systemCenterVirtualMachineManagerCloud from './system-center-virtual-machine-manager-cloud';
 export * as systemCenterVirtualMachineManagerServer from './system-center-virtual-machine-manager-server';
 export * as systemCenterVirtualMachineManagerVirtualMachineInstance from './system-center-virtual-machine-manager-virtual-machine-instance';
+export * as systemCenterVirtualMachineManagerVirtualMachineInstanceGuestAgent from './system-center-virtual-machine-manager-virtual-machine-instance-guest-agent';
 export * as systemCenterVirtualMachineManagerVirtualMachineTemplate from './system-center-virtual-machine-manager-virtual-machine-template';
 export * as systemCenterVirtualMachineManagerVirtualNetwork from './system-center-virtual-machine-manager-virtual-network';
 export * as tenantTemplateDeployment from './tenant-template-deployment';

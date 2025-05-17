@@ -1394,6 +1394,7 @@ The following submodules are available:
 - [systemCenterVirtualMachineManagerCloud](./systemCenterVirtualMachineManagerCloud.java.md)
 - [systemCenterVirtualMachineManagerServer](./systemCenterVirtualMachineManagerServer.java.md)
 - [systemCenterVirtualMachineManagerVirtualMachineInstance](./systemCenterVirtualMachineManagerVirtualMachineInstance.java.md)
+- [systemCenterVirtualMachineManagerVirtualMachineInstanceGuestAgent](./systemCenterVirtualMachineManagerVirtualMachineInstanceGuestAgent.java.md)
 - [systemCenterVirtualMachineManagerVirtualMachineTemplate](./systemCenterVirtualMachineManagerVirtualMachineTemplate.java.md)
 - [systemCenterVirtualMachineManagerVirtualNetwork](./systemCenterVirtualMachineManagerVirtualNetwork.java.md)
 - [tenantTemplateDeployment](./tenantTemplateDeployment.java.md)

@@ -1020,6 +1020,7 @@ Object.defineProperty(exports, 'systemCenterVirtualMachineManagerAvailabilitySet
 Object.defineProperty(exports, 'systemCenterVirtualMachineManagerCloud', { get: function () { return require('./system-center-virtual-machine-manager-cloud'); } });
 Object.defineProperty(exports, 'systemCenterVirtualMachineManagerServer', { get: function () { return require('./system-center-virtual-machine-manager-server'); } });
 Object.defineProperty(exports, 'systemCenterVirtualMachineManagerVirtualMachineInstance', { get: function () { return require('./system-center-virtual-machine-manager-virtual-machine-instance'); } });
+Object.defineProperty(exports, 'systemCenterVirtualMachineManagerVirtualMachineInstanceGuestAgent', { get: function () { return require('./system-center-virtual-machine-manager-virtual-machine-instance-guest-agent'); } });
 Object.defineProperty(exports, 'systemCenterVirtualMachineManagerVirtualMachineTemplate', { get: function () { return require('./system-center-virtual-machine-manager-virtual-machine-template'); } });
 Object.defineProperty(exports, 'systemCenterVirtualMachineManagerVirtualNetwork', { get: function () { return require('./system-center-virtual-machine-manager-virtual-network'); } });
 Object.defineProperty(exports, 'tenantTemplateDeployment', { get: function () { return require('./tenant-template-deployment'); } });
