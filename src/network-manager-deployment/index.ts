@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +8,54 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkManagerDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment#configuration_ids NetworkManagerDeployment#configuration_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment#configuration_ids NetworkManagerDeployment#configuration_ids}
   */
   readonly configurationIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment#id NetworkManagerDeployment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment#id NetworkManagerDeployment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment#location NetworkManagerDeployment#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment#location NetworkManagerDeployment#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment#network_manager_id NetworkManagerDeployment#network_manager_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment#network_manager_id NetworkManagerDeployment#network_manager_id}
   */
   readonly networkManagerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment#scope_access NetworkManagerDeployment#scope_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment#scope_access NetworkManagerDeployment#scope_access}
   */
   readonly scopeAccess: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment#triggers NetworkManagerDeployment#triggers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment#triggers NetworkManagerDeployment#triggers}
   */
   readonly triggers?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment#timeouts NetworkManagerDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment#timeouts NetworkManagerDeployment#timeouts}
   */
   readonly timeouts?: NetworkManagerDeploymentTimeouts;
 }
 export interface NetworkManagerDeploymentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment#create NetworkManagerDeployment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment#create NetworkManagerDeployment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment#delete NetworkManagerDeployment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment#delete NetworkManagerDeployment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment#read NetworkManagerDeployment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment#read NetworkManagerDeployment#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment#update NetworkManagerDeployment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment#update NetworkManagerDeployment#update}
   */
   readonly update?: string;
 }
@@ -241,7 +236,7 @@ export class NetworkManagerDeploymentTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment azurerm_network_manager_deployment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment azurerm_network_manager_deployment}
 */
 export class NetworkManagerDeployment extends cdktf.TerraformResource {
 
@@ -257,7 +252,7 @@ export class NetworkManagerDeployment extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkManagerDeployment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkManagerDeployment to import
-  * @param importFromId The id of the existing NetworkManagerDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkManagerDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkManagerDeployment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -269,7 +264,7 @@ export class NetworkManagerDeployment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/network_manager_deployment azurerm_network_manager_deployment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/network_manager_deployment azurerm_network_manager_deployment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -280,7 +275,7 @@ export class NetworkManagerDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_manager_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

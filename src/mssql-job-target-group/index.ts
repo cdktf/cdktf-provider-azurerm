@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,52 +8,52 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlJobTargetGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#id MssqlJobTargetGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#id MssqlJobTargetGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#job_agent_id MssqlJobTargetGroup#job_agent_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#job_agent_id MssqlJobTargetGroup#job_agent_id}
   */
   readonly jobAgentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#name MssqlJobTargetGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#name MssqlJobTargetGroup#name}
   */
   readonly name: string;
   /**
   * job_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#job_target MssqlJobTargetGroup#job_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#job_target MssqlJobTargetGroup#job_target}
   */
   readonly jobTarget?: MssqlJobTargetGroupJobTarget[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#timeouts MssqlJobTargetGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#timeouts MssqlJobTargetGroup#timeouts}
   */
   readonly timeouts?: MssqlJobTargetGroupTimeouts;
 }
 export interface MssqlJobTargetGroupJobTarget {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#database_name MssqlJobTargetGroup#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#database_name MssqlJobTargetGroup#database_name}
   */
   readonly databaseName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#elastic_pool_name MssqlJobTargetGroup#elastic_pool_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#elastic_pool_name MssqlJobTargetGroup#elastic_pool_name}
   */
   readonly elasticPoolName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#job_credential_id MssqlJobTargetGroup#job_credential_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#job_credential_id MssqlJobTargetGroup#job_credential_id}
   */
   readonly jobCredentialId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#membership_type MssqlJobTargetGroup#membership_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#membership_type MssqlJobTargetGroup#membership_type}
   */
   readonly membershipType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#server_name MssqlJobTargetGroup#server_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#server_name MssqlJobTargetGroup#server_name}
   */
   readonly serverName: string;
 }
@@ -292,19 +287,19 @@ export class MssqlJobTargetGroupJobTargetList extends cdktf.ComplexList {
 }
 export interface MssqlJobTargetGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#create MssqlJobTargetGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#create MssqlJobTargetGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#delete MssqlJobTargetGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#delete MssqlJobTargetGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#read MssqlJobTargetGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#read MssqlJobTargetGroup#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#update MssqlJobTargetGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#update MssqlJobTargetGroup#update}
   */
   readonly update?: string;
 }
@@ -485,7 +480,7 @@ export class MssqlJobTargetGroupTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group azurerm_mssql_job_target_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group azurerm_mssql_job_target_group}
 */
 export class MssqlJobTargetGroup extends cdktf.TerraformResource {
 
@@ -501,7 +496,7 @@ export class MssqlJobTargetGroup extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MssqlJobTargetGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MssqlJobTargetGroup to import
-  * @param importFromId The id of the existing MssqlJobTargetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MssqlJobTargetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MssqlJobTargetGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -513,7 +508,7 @@ export class MssqlJobTargetGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/mssql_job_target_group azurerm_mssql_job_target_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/mssql_job_target_group azurerm_mssql_job_target_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -524,7 +519,7 @@ export class MssqlJobTargetGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_job_target_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

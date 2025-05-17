@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,88 +8,88 @@ import * as cdktf from 'cdktf';
 
 export interface AutomanageConfigurationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#automation_account_enabled AutomanageConfiguration#automation_account_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#automation_account_enabled AutomanageConfiguration#automation_account_enabled}
   */
   readonly automationAccountEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#boot_diagnostics_enabled AutomanageConfiguration#boot_diagnostics_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#boot_diagnostics_enabled AutomanageConfiguration#boot_diagnostics_enabled}
   */
   readonly bootDiagnosticsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#defender_for_cloud_enabled AutomanageConfiguration#defender_for_cloud_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#defender_for_cloud_enabled AutomanageConfiguration#defender_for_cloud_enabled}
   */
   readonly defenderForCloudEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#guest_configuration_enabled AutomanageConfiguration#guest_configuration_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#guest_configuration_enabled AutomanageConfiguration#guest_configuration_enabled}
   */
   readonly guestConfigurationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#id AutomanageConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#id AutomanageConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#location AutomanageConfiguration#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#location AutomanageConfiguration#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#log_analytics_enabled AutomanageConfiguration#log_analytics_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#log_analytics_enabled AutomanageConfiguration#log_analytics_enabled}
   */
   readonly logAnalyticsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#name AutomanageConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#name AutomanageConfiguration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#resource_group_name AutomanageConfiguration#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#resource_group_name AutomanageConfiguration#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#status_change_alert_enabled AutomanageConfiguration#status_change_alert_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#status_change_alert_enabled AutomanageConfiguration#status_change_alert_enabled}
   */
   readonly statusChangeAlertEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#tags AutomanageConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#tags AutomanageConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * antimalware block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#antimalware AutomanageConfiguration#antimalware}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#antimalware AutomanageConfiguration#antimalware}
   */
   readonly antimalware?: AutomanageConfigurationAntimalware;
   /**
   * azure_security_baseline block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#azure_security_baseline AutomanageConfiguration#azure_security_baseline}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#azure_security_baseline AutomanageConfiguration#azure_security_baseline}
   */
   readonly azureSecurityBaseline?: AutomanageConfigurationAzureSecurityBaseline;
   /**
   * backup block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#backup AutomanageConfiguration#backup}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#backup AutomanageConfiguration#backup}
   */
   readonly backup?: AutomanageConfigurationBackup;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#timeouts AutomanageConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#timeouts AutomanageConfiguration#timeouts}
   */
   readonly timeouts?: AutomanageConfigurationTimeouts;
 }
 export interface AutomanageConfigurationAntimalwareExclusions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#extensions AutomanageConfiguration#extensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#extensions AutomanageConfiguration#extensions}
   */
   readonly extensions?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#paths AutomanageConfiguration#paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#paths AutomanageConfiguration#paths}
   */
   readonly paths?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#processes AutomanageConfiguration#processes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#processes AutomanageConfiguration#processes}
   */
   readonly processes?: string;
 }
@@ -236,29 +231,29 @@ export class AutomanageConfigurationAntimalwareExclusionsOutputReference extends
 }
 export interface AutomanageConfigurationAntimalware {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#real_time_protection_enabled AutomanageConfiguration#real_time_protection_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#real_time_protection_enabled AutomanageConfiguration#real_time_protection_enabled}
   */
   readonly realTimeProtectionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#scheduled_scan_day AutomanageConfiguration#scheduled_scan_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#scheduled_scan_day AutomanageConfiguration#scheduled_scan_day}
   */
   readonly scheduledScanDay?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#scheduled_scan_enabled AutomanageConfiguration#scheduled_scan_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#scheduled_scan_enabled AutomanageConfiguration#scheduled_scan_enabled}
   */
   readonly scheduledScanEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#scheduled_scan_time_in_minutes AutomanageConfiguration#scheduled_scan_time_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#scheduled_scan_time_in_minutes AutomanageConfiguration#scheduled_scan_time_in_minutes}
   */
   readonly scheduledScanTimeInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#scheduled_scan_type AutomanageConfiguration#scheduled_scan_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#scheduled_scan_type AutomanageConfiguration#scheduled_scan_type}
   */
   readonly scheduledScanType?: string;
   /**
   * exclusions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#exclusions AutomanageConfiguration#exclusions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#exclusions AutomanageConfiguration#exclusions}
   */
   readonly exclusions?: AutomanageConfigurationAntimalwareExclusions;
 }
@@ -487,7 +482,7 @@ export class AutomanageConfigurationAntimalwareOutputReference extends cdktf.Com
 }
 export interface AutomanageConfigurationAzureSecurityBaseline {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#assignment_type AutomanageConfiguration#assignment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#assignment_type AutomanageConfiguration#assignment_type}
   */
   readonly assignmentType?: string;
 }
@@ -571,11 +566,11 @@ export class AutomanageConfigurationAzureSecurityBaselineOutputReference extends
 }
 export interface AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#count AutomanageConfiguration#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#count AutomanageConfiguration#count}
   */
   readonly count?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#duration_type AutomanageConfiguration#duration_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#duration_type AutomanageConfiguration#duration_type}
   */
   readonly durationType?: string;
 }
@@ -688,13 +683,13 @@ export class AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionD
 }
 export interface AutomanageConfigurationBackupRetentionPolicyDailySchedule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#retention_times AutomanageConfiguration#retention_times}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#retention_times AutomanageConfiguration#retention_times}
   */
   readonly retentionTimes?: string[];
   /**
   * retention_duration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#retention_duration AutomanageConfiguration#retention_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#retention_duration AutomanageConfiguration#retention_duration}
   */
   readonly retentionDuration?: AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration;
 }
@@ -807,11 +802,11 @@ export class AutomanageConfigurationBackupRetentionPolicyDailyScheduleOutputRefe
 }
 export interface AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#count AutomanageConfiguration#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#count AutomanageConfiguration#count}
   */
   readonly count?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#duration_type AutomanageConfiguration#duration_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#duration_type AutomanageConfiguration#duration_type}
   */
   readonly durationType?: string;
 }
@@ -924,13 +919,13 @@ export class AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetention
 }
 export interface AutomanageConfigurationBackupRetentionPolicyWeeklySchedule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#retention_times AutomanageConfiguration#retention_times}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#retention_times AutomanageConfiguration#retention_times}
   */
   readonly retentionTimes?: string[];
   /**
   * retention_duration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#retention_duration AutomanageConfiguration#retention_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#retention_duration AutomanageConfiguration#retention_duration}
   */
   readonly retentionDuration?: AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration;
 }
@@ -1043,19 +1038,19 @@ export class AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleOutputRef
 }
 export interface AutomanageConfigurationBackupRetentionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#retention_policy_type AutomanageConfiguration#retention_policy_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#retention_policy_type AutomanageConfiguration#retention_policy_type}
   */
   readonly retentionPolicyType?: string;
   /**
   * daily_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#daily_schedule AutomanageConfiguration#daily_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#daily_schedule AutomanageConfiguration#daily_schedule}
   */
   readonly dailySchedule?: AutomanageConfigurationBackupRetentionPolicyDailySchedule;
   /**
   * weekly_schedule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#weekly_schedule AutomanageConfiguration#weekly_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#weekly_schedule AutomanageConfiguration#weekly_schedule}
   */
   readonly weeklySchedule?: AutomanageConfigurationBackupRetentionPolicyWeeklySchedule;
 }
@@ -1197,19 +1192,19 @@ export class AutomanageConfigurationBackupRetentionPolicyOutputReference extends
 }
 export interface AutomanageConfigurationBackupSchedulePolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#schedule_policy_type AutomanageConfiguration#schedule_policy_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#schedule_policy_type AutomanageConfiguration#schedule_policy_type}
   */
   readonly schedulePolicyType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#schedule_run_days AutomanageConfiguration#schedule_run_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#schedule_run_days AutomanageConfiguration#schedule_run_days}
   */
   readonly scheduleRunDays?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#schedule_run_frequency AutomanageConfiguration#schedule_run_frequency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#schedule_run_frequency AutomanageConfiguration#schedule_run_frequency}
   */
   readonly scheduleRunFrequency?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#schedule_run_times AutomanageConfiguration#schedule_run_times}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#schedule_run_times AutomanageConfiguration#schedule_run_times}
   */
   readonly scheduleRunTimes?: string[];
 }
@@ -1380,27 +1375,27 @@ export class AutomanageConfigurationBackupSchedulePolicyOutputReference extends 
 }
 export interface AutomanageConfigurationBackup {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#instant_rp_retention_range_in_days AutomanageConfiguration#instant_rp_retention_range_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#instant_rp_retention_range_in_days AutomanageConfiguration#instant_rp_retention_range_in_days}
   */
   readonly instantRpRetentionRangeInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#policy_name AutomanageConfiguration#policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#policy_name AutomanageConfiguration#policy_name}
   */
   readonly policyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#time_zone AutomanageConfiguration#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#time_zone AutomanageConfiguration#time_zone}
   */
   readonly timeZone?: string;
   /**
   * retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#retention_policy AutomanageConfiguration#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#retention_policy AutomanageConfiguration#retention_policy}
   */
   readonly retentionPolicy?: AutomanageConfigurationBackupRetentionPolicy;
   /**
   * schedule_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#schedule_policy AutomanageConfiguration#schedule_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#schedule_policy AutomanageConfiguration#schedule_policy}
   */
   readonly schedulePolicy?: AutomanageConfigurationBackupSchedulePolicy;
 }
@@ -1600,19 +1595,19 @@ export class AutomanageConfigurationBackupOutputReference extends cdktf.ComplexO
 }
 export interface AutomanageConfigurationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#create AutomanageConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#create AutomanageConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#delete AutomanageConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#delete AutomanageConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#read AutomanageConfiguration#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#read AutomanageConfiguration#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#update AutomanageConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#update AutomanageConfiguration#update}
   */
   readonly update?: string;
 }
@@ -1793,7 +1788,7 @@ export class AutomanageConfigurationTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration azurerm_automanage_configuration}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration azurerm_automanage_configuration}
 */
 export class AutomanageConfiguration extends cdktf.TerraformResource {
 
@@ -1809,7 +1804,7 @@ export class AutomanageConfiguration extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AutomanageConfiguration resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AutomanageConfiguration to import
-  * @param importFromId The id of the existing AutomanageConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AutomanageConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AutomanageConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1821,7 +1816,7 @@ export class AutomanageConfiguration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/automanage_configuration azurerm_automanage_configuration} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/automanage_configuration azurerm_automanage_configuration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1832,7 +1827,7 @@ export class AutomanageConfiguration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automanage_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

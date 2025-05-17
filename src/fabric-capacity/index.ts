@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,52 +8,52 @@ import * as cdktf from 'cdktf';
 
 export interface FabricCapacityConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#administration_members FabricCapacity#administration_members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#administration_members FabricCapacity#administration_members}
   */
   readonly administrationMembers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#id FabricCapacity#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#id FabricCapacity#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#location FabricCapacity#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#location FabricCapacity#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#name FabricCapacity#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#name FabricCapacity#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#resource_group_name FabricCapacity#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#resource_group_name FabricCapacity#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#tags FabricCapacity#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#tags FabricCapacity#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * sku block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#sku FabricCapacity#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#sku FabricCapacity#sku}
   */
   readonly sku: FabricCapacitySku;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#timeouts FabricCapacity#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#timeouts FabricCapacity#timeouts}
   */
   readonly timeouts?: FabricCapacityTimeouts;
 }
 export interface FabricCapacitySku {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#name FabricCapacity#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#name FabricCapacity#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#tier FabricCapacity#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#tier FabricCapacity#tier}
   */
   readonly tier: string;
 }
@@ -165,19 +160,19 @@ export class FabricCapacitySkuOutputReference extends cdktf.ComplexObject {
 }
 export interface FabricCapacityTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#create FabricCapacity#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#create FabricCapacity#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#delete FabricCapacity#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#delete FabricCapacity#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#read FabricCapacity#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#read FabricCapacity#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#update FabricCapacity#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#update FabricCapacity#update}
   */
   readonly update?: string;
 }
@@ -358,7 +353,7 @@ export class FabricCapacityTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity azurerm_fabric_capacity}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity azurerm_fabric_capacity}
 */
 export class FabricCapacity extends cdktf.TerraformResource {
 
@@ -374,7 +369,7 @@ export class FabricCapacity extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FabricCapacity resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FabricCapacity to import
-  * @param importFromId The id of the existing FabricCapacity that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FabricCapacity that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FabricCapacity to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -386,7 +381,7 @@ export class FabricCapacity extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/fabric_capacity azurerm_fabric_capacity} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/fabric_capacity azurerm_fabric_capacity} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -397,7 +392,7 @@ export class FabricCapacity extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_fabric_capacity',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,62 +8,62 @@ import * as cdktf from 'cdktf';
 
 export interface DevCenterProjectEnvironmentTypeConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#creator_role_assignment_roles DevCenterProjectEnvironmentType#creator_role_assignment_roles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#creator_role_assignment_roles DevCenterProjectEnvironmentType#creator_role_assignment_roles}
   */
   readonly creatorRoleAssignmentRoles?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#deployment_target_id DevCenterProjectEnvironmentType#deployment_target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#deployment_target_id DevCenterProjectEnvironmentType#deployment_target_id}
   */
   readonly deploymentTargetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#dev_center_project_id DevCenterProjectEnvironmentType#dev_center_project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#dev_center_project_id DevCenterProjectEnvironmentType#dev_center_project_id}
   */
   readonly devCenterProjectId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#id DevCenterProjectEnvironmentType#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#id DevCenterProjectEnvironmentType#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#location DevCenterProjectEnvironmentType#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#location DevCenterProjectEnvironmentType#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#name DevCenterProjectEnvironmentType#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#name DevCenterProjectEnvironmentType#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#tags DevCenterProjectEnvironmentType#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#tags DevCenterProjectEnvironmentType#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#identity DevCenterProjectEnvironmentType#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#identity DevCenterProjectEnvironmentType#identity}
   */
   readonly identity: DevCenterProjectEnvironmentTypeIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#timeouts DevCenterProjectEnvironmentType#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#timeouts DevCenterProjectEnvironmentType#timeouts}
   */
   readonly timeouts?: DevCenterProjectEnvironmentTypeTimeouts;
   /**
   * user_role_assignment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#user_role_assignment DevCenterProjectEnvironmentType#user_role_assignment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#user_role_assignment DevCenterProjectEnvironmentType#user_role_assignment}
   */
   readonly userRoleAssignment?: DevCenterProjectEnvironmentTypeUserRoleAssignment[] | cdktf.IResolvable;
 }
 export interface DevCenterProjectEnvironmentTypeIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#identity_ids DevCenterProjectEnvironmentType#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#identity_ids DevCenterProjectEnvironmentType#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#type DevCenterProjectEnvironmentType#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#type DevCenterProjectEnvironmentType#type}
   */
   readonly type: string;
 }
@@ -188,19 +183,19 @@ export class DevCenterProjectEnvironmentTypeIdentityOutputReference extends cdkt
 }
 export interface DevCenterProjectEnvironmentTypeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#create DevCenterProjectEnvironmentType#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#create DevCenterProjectEnvironmentType#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#delete DevCenterProjectEnvironmentType#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#delete DevCenterProjectEnvironmentType#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#read DevCenterProjectEnvironmentType#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#read DevCenterProjectEnvironmentType#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#update DevCenterProjectEnvironmentType#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#update DevCenterProjectEnvironmentType#update}
   */
   readonly update?: string;
 }
@@ -381,11 +376,11 @@ export class DevCenterProjectEnvironmentTypeTimeoutsOutputReference extends cdkt
 }
 export interface DevCenterProjectEnvironmentTypeUserRoleAssignment {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#roles DevCenterProjectEnvironmentType#roles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#roles DevCenterProjectEnvironmentType#roles}
   */
   readonly roles: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#user_id DevCenterProjectEnvironmentType#user_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#user_id DevCenterProjectEnvironmentType#user_id}
   */
   readonly userId: string;
 }
@@ -524,7 +519,7 @@ export class DevCenterProjectEnvironmentTypeUserRoleAssignmentList extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type azurerm_dev_center_project_environment_type}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type azurerm_dev_center_project_environment_type}
 */
 export class DevCenterProjectEnvironmentType extends cdktf.TerraformResource {
 
@@ -540,7 +535,7 @@ export class DevCenterProjectEnvironmentType extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DevCenterProjectEnvironmentType resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DevCenterProjectEnvironmentType to import
-  * @param importFromId The id of the existing DevCenterProjectEnvironmentType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DevCenterProjectEnvironmentType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DevCenterProjectEnvironmentType to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -552,7 +547,7 @@ export class DevCenterProjectEnvironmentType extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/dev_center_project_environment_type azurerm_dev_center_project_environment_type} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/dev_center_project_environment_type azurerm_dev_center_project_environment_type} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -563,7 +558,7 @@ export class DevCenterProjectEnvironmentType extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dev_center_project_environment_type',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

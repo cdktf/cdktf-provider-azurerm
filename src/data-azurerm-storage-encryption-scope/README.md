@@ -1,3 +1,3 @@
 # `data_azurerm_storage_encryption_scope`
 
-Refer to the Terraform Registry for docs: [`data_azurerm_storage_encryption_scope`](https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/data-sources/storage_encryption_scope).
+Refer to the Terraform Registry for docs: [`data_azurerm_storage_encryption_scope`](https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/data-sources/storage_encryption_scope).

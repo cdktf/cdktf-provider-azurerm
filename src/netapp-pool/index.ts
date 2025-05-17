@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,70 +8,74 @@ import * as cdktf from 'cdktf';
 
 export interface NetappPoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#account_name NetappPool#account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#account_name NetappPool#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#encryption_type NetappPool#encryption_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#cool_access_enabled NetappPool#cool_access_enabled}
+  */
+  readonly coolAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#encryption_type NetappPool#encryption_type}
   */
   readonly encryptionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#id NetappPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#id NetappPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#location NetappPool#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#location NetappPool#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#name NetappPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#name NetappPool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#qos_type NetappPool#qos_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#qos_type NetappPool#qos_type}
   */
   readonly qosType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#resource_group_name NetappPool#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#resource_group_name NetappPool#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#service_level NetappPool#service_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#service_level NetappPool#service_level}
   */
   readonly serviceLevel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#size_in_tb NetappPool#size_in_tb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#size_in_tb NetappPool#size_in_tb}
   */
   readonly sizeInTb: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#tags NetappPool#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#tags NetappPool#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#timeouts NetappPool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#timeouts NetappPool#timeouts}
   */
   readonly timeouts?: NetappPoolTimeouts;
 }
 export interface NetappPoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#create NetappPool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#create NetappPool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#delete NetappPool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#delete NetappPool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#read NetappPool#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#read NetappPool#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#update NetappPool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#update NetappPool#update}
   */
   readonly update?: string;
 }
@@ -257,7 +256,7 @@ export class NetappPoolTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool azurerm_netapp_pool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool azurerm_netapp_pool}
 */
 export class NetappPool extends cdktf.TerraformResource {
 
@@ -273,7 +272,7 @@ export class NetappPool extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetappPool resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetappPool to import
-  * @param importFromId The id of the existing NetappPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetappPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetappPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -285,7 +284,7 @@ export class NetappPool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/netapp_pool azurerm_netapp_pool} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/netapp_pool azurerm_netapp_pool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -296,7 +295,7 @@ export class NetappPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_netapp_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -308,6 +307,7 @@ export class NetappPool extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._accountName = config.accountName;
+    this._coolAccessEnabled = config.coolAccessEnabled;
     this._encryptionType = config.encryptionType;
     this._id = config.id;
     this._location = config.location;
@@ -335,6 +335,22 @@ export class NetappPool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get accountNameInput() {
     return this._accountName;
+  }
+
+  // cool_access_enabled - computed: false, optional: true, required: false
+  private _coolAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get coolAccessEnabled() {
+    return this.getBooleanAttribute('cool_access_enabled');
+  }
+  public set coolAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._coolAccessEnabled = value;
+  }
+  public resetCoolAccessEnabled() {
+    this._coolAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get coolAccessEnabledInput() {
+    return this._coolAccessEnabled;
   }
 
   // encryption_type - computed: false, optional: true, required: false
@@ -489,6 +505,7 @@ export class NetappPool extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       account_name: cdktf.stringToTerraform(this._accountName),
+      cool_access_enabled: cdktf.booleanToTerraform(this._coolAccessEnabled),
       encryption_type: cdktf.stringToTerraform(this._encryptionType),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
@@ -509,6 +526,12 @@ export class NetappPool extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      cool_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._coolAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       encryption_type: {
         value: cdktf.stringToHclTerraform(this._encryptionType),
