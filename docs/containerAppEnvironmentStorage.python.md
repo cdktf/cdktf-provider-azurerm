@@ -4,7 +4,7 @@
 
 ### ContainerAppEnvironmentStorage <a name="ContainerAppEnvironmentStorage" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage azurerm_container_app_environment_storage}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage azurerm_container_app_environment_storage}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer"></a>
 
@@ -21,13 +21,14 @@ containerAppEnvironmentStorage.ContainerAppEnvironmentStorage(
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
   provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
-  access_key: str,
   access_mode: str,
-  account_name: str,
   container_app_environment_id: str,
   name: str,
   share_name: str,
+  access_key: str = None,
+  account_name: str = None,
   id: str = None,
+  nfs_server_url: str = None,
   timeouts: ContainerAppEnvironmentStorageTimeouts = None
 )
 ```
@@ -43,13 +44,14 @@ containerAppEnvironmentStorage.ContainerAppEnvironmentStorage(
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.accessKey">access_key</a></code> | <code>str</code> | The Storage Account Access Key. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.accessMode">access_mode</a></code> | <code>str</code> | The access mode to connect this storage to the Container App. Possible values include `ReadOnly` and `ReadWrite`. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.accountName">account_name</a></code> | <code>str</code> | The Azure Storage Account in which the Share to be used is located. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.containerAppEnvironmentId">container_app_environment_id</a></code> | <code>str</code> | The ID of the Container App Environment to which this storage belongs. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.name">name</a></code> | <code>str</code> | The name for this Storage. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.shareName">share_name</a></code> | <code>str</code> | The name of the Azure Storage Share to use. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#id ContainerAppEnvironmentStorage#id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.accessKey">access_key</a></code> | <code>str</code> | The Storage Account Access Key. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.accountName">account_name</a></code> | <code>str</code> | The Azure Storage Account in which the Share to be used is located. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#id ContainerAppEnvironmentStorage#id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.nfsServerUrl">nfs_server_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#nfs_server_url ContainerAppEnvironmentStorage#nfs_server_url}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageTimeouts">ContainerAppEnvironmentStorageTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,33 +116,13 @@ Must be unique amongst siblings in the same scope
 
 ---
 
-##### `access_key`<sup>Required</sup> <a name="access_key" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.accessKey"></a>
-
-- *Type:* str
-
-The Storage Account Access Key.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#access_key ContainerAppEnvironmentStorage#access_key}
-
----
-
 ##### `access_mode`<sup>Required</sup> <a name="access_mode" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.accessMode"></a>
 
 - *Type:* str
 
 The access mode to connect this storage to the Container App. Possible values include `ReadOnly` and `ReadWrite`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#access_mode ContainerAppEnvironmentStorage#access_mode}
-
----
-
-##### `account_name`<sup>Required</sup> <a name="account_name" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.accountName"></a>
-
-- *Type:* str
-
-The Azure Storage Account in which the Share to be used is located.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#account_name ContainerAppEnvironmentStorage#account_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#access_mode ContainerAppEnvironmentStorage#access_mode}
 
 ---
 
@@ -150,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The ID of the Container App Environment to which this storage belongs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#container_app_environment_id ContainerAppEnvironmentStorage#container_app_environment_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#container_app_environment_id ContainerAppEnvironmentStorage#container_app_environment_id}
 
 ---
 
@@ -160,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name for this Storage.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#name ContainerAppEnvironmentStorage#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#name ContainerAppEnvironmentStorage#name}
 
 ---
 
@@ -170,7 +152,27 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name of the Azure Storage Share to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#share_name ContainerAppEnvironmentStorage#share_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#share_name ContainerAppEnvironmentStorage#share_name}
+
+---
+
+##### `access_key`<sup>Optional</sup> <a name="access_key" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.accessKey"></a>
+
+- *Type:* str
+
+The Storage Account Access Key.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#access_key ContainerAppEnvironmentStorage#access_key}
+
+---
+
+##### `account_name`<sup>Optional</sup> <a name="account_name" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.accountName"></a>
+
+- *Type:* str
+
+The Azure Storage Account in which the Share to be used is located.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#account_name ContainerAppEnvironmentStorage#account_name}
 
 ---
 
@@ -178,10 +180,18 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#id ContainerAppEnvironmentStorage#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#id ContainerAppEnvironmentStorage#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `nfs_server_url`<sup>Optional</sup> <a name="nfs_server_url" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.Initializer.parameter.nfsServerUrl"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#nfs_server_url ContainerAppEnvironmentStorage#nfs_server_url}.
 
 ---
 
@@ -191,7 +201,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#timeouts ContainerAppEnvironmentStorage#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#timeouts ContainerAppEnvironmentStorage#timeouts}
 
 ---
 
@@ -223,7 +233,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.moveTo">move_to</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.putTimeouts">put_timeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.resetAccessKey">reset_access_key</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.resetAccountName">reset_account_name</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.resetId">reset_id</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.resetNfsServerUrl">reset_nfs_server_url</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.resetTimeouts">reset_timeouts</a></code> | *No description.* |
 
 ---
@@ -568,7 +581,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#create ContainerAppEnvironmentStorage#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#create ContainerAppEnvironmentStorage#create}.
 
 ---
 
@@ -576,7 +589,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#delete ContainerAppEnvironmentStorage#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#delete ContainerAppEnvironmentStorage#delete}.
 
 ---
 
@@ -584,7 +597,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#read ContainerAppEnvironmentStorage#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#read ContainerAppEnvironmentStorage#read}.
 
 ---
 
@@ -592,14 +605,32 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#update ContainerAppEnvironmentStorage#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#update ContainerAppEnvironmentStorage#update}.
 
 ---
+
+##### `reset_access_key` <a name="reset_access_key" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.resetAccessKey"></a>
+
+```python
+def reset_access_key() -> None
+```
+
+##### `reset_account_name` <a name="reset_account_name" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.resetAccountName"></a>
+
+```python
+def reset_account_name() -> None
+```
 
 ##### `reset_id` <a name="reset_id" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.resetId"></a>
 
 ```python
 def reset_id() -> None
+```
+
+##### `reset_nfs_server_url` <a name="reset_nfs_server_url" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.resetNfsServerUrl"></a>
+
+```python
+def reset_nfs_server_url() -> None
 ```
 
 ##### `reset_timeouts` <a name="reset_timeouts" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.resetTimeouts"></a>
@@ -722,7 +753,7 @@ The construct id used in the generated config for the ContainerAppEnvironmentSto
 
 The id of the existing ContainerAppEnvironmentStorage that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -759,6 +790,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.containerAppEnvironmentIdInput">container_app_environment_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.nfsServerUrlInput">nfs_server_url_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.shareNameInput">share_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageTimeouts">ContainerAppEnvironmentStorageTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.accessKey">access_key</a></code> | <code>str</code> | *No description.* |
@@ -767,6 +799,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.containerAppEnvironmentId">container_app_environment_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.name">name</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.nfsServerUrl">nfs_server_url</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.shareName">share_name</a></code> | <code>str</code> | *No description.* |
 
 ---
@@ -983,6 +1016,16 @@ name_input: str
 
 ---
 
+##### `nfs_server_url_input`<sup>Optional</sup> <a name="nfs_server_url_input" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.nfsServerUrlInput"></a>
+
+```python
+nfs_server_url_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `share_name_input`<sup>Optional</sup> <a name="share_name_input" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.shareNameInput"></a>
 
 ```python
@@ -1063,6 +1106,16 @@ name: str
 
 ---
 
+##### `nfs_server_url`<sup>Required</sup> <a name="nfs_server_url" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.nfsServerUrl"></a>
+
+```python
+nfs_server_url: str
+```
+
+- *Type:* str
+
+---
+
 ##### `share_name`<sup>Required</sup> <a name="share_name" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorage.property.shareName"></a>
 
 ```python
@@ -1108,13 +1161,14 @@ containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig(
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
   provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
-  access_key: str,
   access_mode: str,
-  account_name: str,
   container_app_environment_id: str,
   name: str,
   share_name: str,
+  access_key: str = None,
+  account_name: str = None,
   id: str = None,
+  nfs_server_url: str = None,
   timeouts: ContainerAppEnvironmentStorageTimeouts = None
 )
 ```
@@ -1130,13 +1184,14 @@ containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig(
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.accessKey">access_key</a></code> | <code>str</code> | The Storage Account Access Key. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.accessMode">access_mode</a></code> | <code>str</code> | The access mode to connect this storage to the Container App. Possible values include `ReadOnly` and `ReadWrite`. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.accountName">account_name</a></code> | <code>str</code> | The Azure Storage Account in which the Share to be used is located. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.containerAppEnvironmentId">container_app_environment_id</a></code> | <code>str</code> | The ID of the Container App Environment to which this storage belongs. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.name">name</a></code> | <code>str</code> | The name for this Storage. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.shareName">share_name</a></code> | <code>str</code> | The name of the Azure Storage Share to use. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#id ContainerAppEnvironmentStorage#id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.accessKey">access_key</a></code> | <code>str</code> | The Storage Account Access Key. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.accountName">account_name</a></code> | <code>str</code> | The Azure Storage Account in which the Share to be used is located. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#id ContainerAppEnvironmentStorage#id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.nfsServerUrl">nfs_server_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#nfs_server_url ContainerAppEnvironmentStorage#nfs_server_url}. |
 | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageTimeouts">ContainerAppEnvironmentStorageTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1211,20 +1266,6 @@ provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, Re
 
 ---
 
-##### `access_key`<sup>Required</sup> <a name="access_key" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.accessKey"></a>
-
-```python
-access_key: str
-```
-
-- *Type:* str
-
-The Storage Account Access Key.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#access_key ContainerAppEnvironmentStorage#access_key}
-
----
-
 ##### `access_mode`<sup>Required</sup> <a name="access_mode" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.accessMode"></a>
 
 ```python
@@ -1235,21 +1276,7 @@ access_mode: str
 
 The access mode to connect this storage to the Container App. Possible values include `ReadOnly` and `ReadWrite`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#access_mode ContainerAppEnvironmentStorage#access_mode}
-
----
-
-##### `account_name`<sup>Required</sup> <a name="account_name" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.accountName"></a>
-
-```python
-account_name: str
-```
-
-- *Type:* str
-
-The Azure Storage Account in which the Share to be used is located.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#account_name ContainerAppEnvironmentStorage#account_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#access_mode ContainerAppEnvironmentStorage#access_mode}
 
 ---
 
@@ -1263,7 +1290,7 @@ container_app_environment_id: str
 
 The ID of the Container App Environment to which this storage belongs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#container_app_environment_id ContainerAppEnvironmentStorage#container_app_environment_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#container_app_environment_id ContainerAppEnvironmentStorage#container_app_environment_id}
 
 ---
 
@@ -1277,7 +1304,7 @@ name: str
 
 The name for this Storage.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#name ContainerAppEnvironmentStorage#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#name ContainerAppEnvironmentStorage#name}
 
 ---
 
@@ -1291,7 +1318,35 @@ share_name: str
 
 The name of the Azure Storage Share to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#share_name ContainerAppEnvironmentStorage#share_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#share_name ContainerAppEnvironmentStorage#share_name}
+
+---
+
+##### `access_key`<sup>Optional</sup> <a name="access_key" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.accessKey"></a>
+
+```python
+access_key: str
+```
+
+- *Type:* str
+
+The Storage Account Access Key.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#access_key ContainerAppEnvironmentStorage#access_key}
+
+---
+
+##### `account_name`<sup>Optional</sup> <a name="account_name" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.accountName"></a>
+
+```python
+account_name: str
+```
+
+- *Type:* str
+
+The Azure Storage Account in which the Share to be used is located.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#account_name ContainerAppEnvironmentStorage#account_name}
 
 ---
 
@@ -1303,10 +1358,22 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#id ContainerAppEnvironmentStorage#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#id ContainerAppEnvironmentStorage#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `nfs_server_url`<sup>Optional</sup> <a name="nfs_server_url" id="@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageConfig.property.nfsServerUrl"></a>
+
+```python
+nfs_server_url: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#nfs_server_url ContainerAppEnvironmentStorage#nfs_server_url}.
 
 ---
 
@@ -1320,7 +1387,7 @@ timeouts: ContainerAppEnvironmentStorageTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#timeouts ContainerAppEnvironmentStorage#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#timeouts ContainerAppEnvironmentStorage#timeouts}
 
 ---
 
@@ -1343,10 +1410,10 @@ containerAppEnvironmentStorage.ContainerAppEnvironmentStorageTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#create ContainerAppEnvironmentStorage#create}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#delete ContainerAppEnvironmentStorage#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#read ContainerAppEnvironmentStorage#read}. |
-| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#update ContainerAppEnvironmentStorage#update}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#create ContainerAppEnvironmentStorage#create}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#delete ContainerAppEnvironmentStorage#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#read ContainerAppEnvironmentStorage#read}. |
+| <code><a href="#@cdktf/provider-azurerm.containerAppEnvironmentStorage.ContainerAppEnvironmentStorageTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#update ContainerAppEnvironmentStorage#update}. |
 
 ---
 
@@ -1358,7 +1425,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#create ContainerAppEnvironmentStorage#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#create ContainerAppEnvironmentStorage#create}.
 
 ---
 
@@ -1370,7 +1437,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#delete ContainerAppEnvironmentStorage#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#delete ContainerAppEnvironmentStorage#delete}.
 
 ---
 
@@ -1382,7 +1449,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#read ContainerAppEnvironmentStorage#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#read ContainerAppEnvironmentStorage#read}.
 
 ---
 
@@ -1394,7 +1461,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.28.0/docs/resources/container_app_environment_storage#update ContainerAppEnvironmentStorage#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/container_app_environment_storage#update ContainerAppEnvironmentStorage#update}.
 
 ---
 

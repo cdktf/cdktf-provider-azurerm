@@ -1394,6 +1394,7 @@ The following submodules are available:
 - [systemCenterVirtualMachineManagerCloud](./systemCenterVirtualMachineManagerCloud.go.md)
 - [systemCenterVirtualMachineManagerServer](./systemCenterVirtualMachineManagerServer.go.md)
 - [systemCenterVirtualMachineManagerVirtualMachineInstance](./systemCenterVirtualMachineManagerVirtualMachineInstance.go.md)
+- [systemCenterVirtualMachineManagerVirtualMachineInstanceGuestAgent](./systemCenterVirtualMachineManagerVirtualMachineInstanceGuestAgent.go.md)
 - [systemCenterVirtualMachineManagerVirtualMachineTemplate](./systemCenterVirtualMachineManagerVirtualMachineTemplate.go.md)
 - [systemCenterVirtualMachineManagerVirtualNetwork](./systemCenterVirtualMachineManagerVirtualNetwork.go.md)
 - [tenantTemplateDeployment](./tenantTemplateDeployment.go.md)
