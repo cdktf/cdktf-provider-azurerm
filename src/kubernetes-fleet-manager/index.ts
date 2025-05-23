@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,44 +8,44 @@ import * as cdktf from 'cdktf';
 
 export interface KubernetesFleetManagerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager#id KubernetesFleetManager#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager#id KubernetesFleetManager#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager#location KubernetesFleetManager#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager#location KubernetesFleetManager#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager#name KubernetesFleetManager#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager#name KubernetesFleetManager#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager#resource_group_name KubernetesFleetManager#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager#resource_group_name KubernetesFleetManager#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager#tags KubernetesFleetManager#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager#tags KubernetesFleetManager#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * hub_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager#hub_profile KubernetesFleetManager#hub_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager#hub_profile KubernetesFleetManager#hub_profile}
   */
   readonly hubProfile?: KubernetesFleetManagerHubProfile;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager#timeouts KubernetesFleetManager#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager#timeouts KubernetesFleetManager#timeouts}
   */
   readonly timeouts?: KubernetesFleetManagerTimeouts;
 }
 export interface KubernetesFleetManagerHubProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager#dns_prefix KubernetesFleetManager#dns_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager#dns_prefix KubernetesFleetManager#dns_prefix}
   */
   readonly dnsPrefix: string;
 }
@@ -141,19 +136,19 @@ export class KubernetesFleetManagerHubProfileOutputReference extends cdktf.Compl
 }
 export interface KubernetesFleetManagerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager#create KubernetesFleetManager#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager#create KubernetesFleetManager#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager#delete KubernetesFleetManager#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager#delete KubernetesFleetManager#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager#read KubernetesFleetManager#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager#read KubernetesFleetManager#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager#update KubernetesFleetManager#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager#update KubernetesFleetManager#update}
   */
   readonly update?: string;
 }
@@ -334,7 +329,7 @@ export class KubernetesFleetManagerTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager azurerm_kubernetes_fleet_manager}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager azurerm_kubernetes_fleet_manager}
 */
 export class KubernetesFleetManager extends cdktf.TerraformResource {
 
@@ -350,7 +345,7 @@ export class KubernetesFleetManager extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a KubernetesFleetManager resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the KubernetesFleetManager to import
-  * @param importFromId The id of the existing KubernetesFleetManager that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing KubernetesFleetManager that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the KubernetesFleetManager to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -362,7 +357,7 @@ export class KubernetesFleetManager extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/kubernetes_fleet_manager azurerm_kubernetes_fleet_manager} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/kubernetes_fleet_manager azurerm_kubernetes_fleet_manager} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -373,7 +368,7 @@ export class KubernetesFleetManager extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_fleet_manager',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.29.0',
+        providerVersion: '4.30.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
