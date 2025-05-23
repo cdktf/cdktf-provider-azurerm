@@ -4,7 +4,7 @@
 
 ### SentinelDataConnectorOffice365Project <a name="SentinelDataConnectorOffice365Project" id="@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project azurerm_sentinel_data_connector_office_365_project}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project azurerm_sentinel_data_connector_office_365_project}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project.Initializer"></a>
 
@@ -42,10 +42,10 @@ SentinelDataConnectorOffice365Project.Builder.create(Construct scope, java.lang.
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project.Initializer.parameter.logAnalyticsWorkspaceId">logAnalyticsWorkspaceId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#log_analytics_workspace_id SentinelDataConnectorOffice365Project#log_analytics_workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#name SentinelDataConnectorOffice365Project#name}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#id SentinelDataConnectorOffice365Project#id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project.Initializer.parameter.tenantId">tenantId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#tenant_id SentinelDataConnectorOffice365Project#tenant_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project.Initializer.parameter.logAnalyticsWorkspaceId">logAnalyticsWorkspaceId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#log_analytics_workspace_id SentinelDataConnectorOffice365Project#log_analytics_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#name SentinelDataConnectorOffice365Project#name}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#id SentinelDataConnectorOffice365Project#id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project.Initializer.parameter.tenantId">tenantId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#tenant_id SentinelDataConnectorOffice365Project#tenant_id}. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365Project.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectTimeouts">SentinelDataConnectorOffice365ProjectTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#log_analytics_workspace_id SentinelDataConnectorOffice365Project#log_analytics_workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#log_analytics_workspace_id SentinelDataConnectorOffice365Project#log_analytics_workspace_id}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#name SentinelDataConnectorOffice365Project#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#name SentinelDataConnectorOffice365Project#name}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#id SentinelDataConnectorOffice365Project#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#id SentinelDataConnectorOffice365Project#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -141,7 +141,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#tenant_id SentinelDataConnectorOffice365Project#tenant_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#tenant_id SentinelDataConnectorOffice365Project#tenant_id}.
 
 ---
 
@@ -151,7 +151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#timeouts SentinelDataConnectorOffice365Project#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#timeouts SentinelDataConnectorOffice365Project#timeouts}
 
 ---
 
@@ -612,7 +612,7 @@ The construct id used in the generated config for the SentinelDataConnectorOffic
 
 The id of the existing SentinelDataConnectorOffice365Project that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -955,10 +955,10 @@ SentinelDataConnectorOffice365ProjectConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectConfig.property.logAnalyticsWorkspaceId">logAnalyticsWorkspaceId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#log_analytics_workspace_id SentinelDataConnectorOffice365Project#log_analytics_workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#name SentinelDataConnectorOffice365Project#name}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#id SentinelDataConnectorOffice365Project#id}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectConfig.property.tenantId">tenantId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#tenant_id SentinelDataConnectorOffice365Project#tenant_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectConfig.property.logAnalyticsWorkspaceId">logAnalyticsWorkspaceId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#log_analytics_workspace_id SentinelDataConnectorOffice365Project#log_analytics_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#name SentinelDataConnectorOffice365Project#name}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#id SentinelDataConnectorOffice365Project#id}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectConfig.property.tenantId">tenantId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#tenant_id SentinelDataConnectorOffice365Project#tenant_id}. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectTimeouts">SentinelDataConnectorOffice365ProjectTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1041,7 +1041,7 @@ public java.lang.String getLogAnalyticsWorkspaceId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#log_analytics_workspace_id SentinelDataConnectorOffice365Project#log_analytics_workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#log_analytics_workspace_id SentinelDataConnectorOffice365Project#log_analytics_workspace_id}.
 
 ---
 
@@ -1053,7 +1053,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#name SentinelDataConnectorOffice365Project#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#name SentinelDataConnectorOffice365Project#name}.
 
 ---
 
@@ -1065,7 +1065,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#id SentinelDataConnectorOffice365Project#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#id SentinelDataConnectorOffice365Project#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1080,7 +1080,7 @@ public java.lang.String getTenantId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#tenant_id SentinelDataConnectorOffice365Project#tenant_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#tenant_id SentinelDataConnectorOffice365Project#tenant_id}.
 
 ---
 
@@ -1094,7 +1094,7 @@ public SentinelDataConnectorOffice365ProjectTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#timeouts SentinelDataConnectorOffice365Project#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#timeouts SentinelDataConnectorOffice365Project#timeouts}
 
 ---
 
@@ -1116,9 +1116,9 @@ SentinelDataConnectorOffice365ProjectTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#create SentinelDataConnectorOffice365Project#create}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#delete SentinelDataConnectorOffice365Project#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#read SentinelDataConnectorOffice365Project#read}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#create SentinelDataConnectorOffice365Project#create}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#delete SentinelDataConnectorOffice365Project#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelDataConnectorOffice365Project.SentinelDataConnectorOffice365ProjectTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#read SentinelDataConnectorOffice365Project#read}. |
 
 ---
 
@@ -1130,7 +1130,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#create SentinelDataConnectorOffice365Project#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#create SentinelDataConnectorOffice365Project#create}.
 
 ---
 
@@ -1142,7 +1142,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#delete SentinelDataConnectorOffice365Project#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#delete SentinelDataConnectorOffice365Project#delete}.
 
 ---
 
@@ -1154,7 +1154,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs/resources/sentinel_data_connector_office_365_project#read SentinelDataConnectorOffice365Project#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/sentinel_data_connector_office_365_project#read SentinelDataConnectorOffice365Project#read}.
 
 ---
 
