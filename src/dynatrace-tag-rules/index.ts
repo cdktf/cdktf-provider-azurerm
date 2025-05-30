@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +8,50 @@ import * as cdktf from 'cdktf';
 
 export interface DynatraceTagRulesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#id DynatraceTagRules#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#id DynatraceTagRules#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#monitor_id DynatraceTagRules#monitor_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#monitor_id DynatraceTagRules#monitor_id}
   */
   readonly monitorId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}
   */
   readonly name: string;
   /**
   * log_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#log_rule DynatraceTagRules#log_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#log_rule DynatraceTagRules#log_rule}
   */
   readonly logRule?: DynatraceTagRulesLogRule;
   /**
   * metric_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#metric_rule DynatraceTagRules#metric_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#metric_rule DynatraceTagRules#metric_rule}
   */
   readonly metricRule?: DynatraceTagRulesMetricRule;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#timeouts DynatraceTagRules#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#timeouts DynatraceTagRules#timeouts}
   */
   readonly timeouts?: DynatraceTagRulesTimeouts;
 }
 export interface DynatraceTagRulesLogRuleFilteringTag {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#action DynatraceTagRules#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#action DynatraceTagRules#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#value DynatraceTagRules#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#value DynatraceTagRules#value}
   */
   readonly value: string;
 }
@@ -221,21 +216,21 @@ export class DynatraceTagRulesLogRuleFilteringTagList extends cdktf.ComplexList 
 }
 export interface DynatraceTagRulesLogRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#send_activity_logs_enabled DynatraceTagRules#send_activity_logs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#send_activity_logs_enabled DynatraceTagRules#send_activity_logs_enabled}
   */
   readonly sendActivityLogsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#send_azure_active_directory_logs_enabled DynatraceTagRules#send_azure_active_directory_logs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#send_azure_active_directory_logs_enabled DynatraceTagRules#send_azure_active_directory_logs_enabled}
   */
   readonly sendAzureActiveDirectoryLogsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#send_subscription_logs_enabled DynatraceTagRules#send_subscription_logs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#send_subscription_logs_enabled DynatraceTagRules#send_subscription_logs_enabled}
   */
   readonly sendSubscriptionLogsEnabled?: boolean | cdktf.IResolvable;
   /**
   * filtering_tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#filtering_tag DynatraceTagRules#filtering_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#filtering_tag DynatraceTagRules#filtering_tag}
   */
   readonly filteringTag: DynatraceTagRulesLogRuleFilteringTag[] | cdktf.IResolvable;
 }
@@ -403,15 +398,15 @@ export class DynatraceTagRulesLogRuleOutputReference extends cdktf.ComplexObject
 }
 export interface DynatraceTagRulesMetricRuleFilteringTag {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#action DynatraceTagRules#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#action DynatraceTagRules#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#name DynatraceTagRules#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#value DynatraceTagRules#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#value DynatraceTagRules#value}
   */
   readonly value: string;
 }
@@ -576,9 +571,13 @@ export class DynatraceTagRulesMetricRuleFilteringTagList extends cdktf.ComplexLi
 }
 export interface DynatraceTagRulesMetricRule {
   /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#sending_metrics_enabled DynatraceTagRules#sending_metrics_enabled}
+  */
+  readonly sendingMetricsEnabled?: boolean | cdktf.IResolvable;
+  /**
   * filtering_tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#filtering_tag DynatraceTagRules#filtering_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#filtering_tag DynatraceTagRules#filtering_tag}
   */
   readonly filteringTag: DynatraceTagRulesMetricRuleFilteringTag[] | cdktf.IResolvable;
 }
@@ -589,6 +588,7 @@ export function dynatraceTagRulesMetricRuleToTerraform(struct?: DynatraceTagRule
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    sending_metrics_enabled: cdktf.booleanToTerraform(struct!.sendingMetricsEnabled),
     filtering_tag: cdktf.listMapper(dynatraceTagRulesMetricRuleFilteringTagToTerraform, true)(struct!.filteringTag),
   }
 }
@@ -600,6 +600,12 @@ export function dynatraceTagRulesMetricRuleToHclTerraform(struct?: DynatraceTagR
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   const attrs = {
+    sending_metrics_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.sendingMetricsEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
     filtering_tag: {
       value: cdktf.listMapperHcl(dynatraceTagRulesMetricRuleFilteringTagToHclTerraform, true)(struct!.filteringTag),
       isBlock: true,
@@ -626,6 +632,10 @@ export class DynatraceTagRulesMetricRuleOutputReference extends cdktf.ComplexObj
   public get internalValue(): DynatraceTagRulesMetricRule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._sendingMetricsEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sendingMetricsEnabled = this._sendingMetricsEnabled;
+    }
     if (this._filteringTag?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.filteringTag = this._filteringTag?.internalValue;
@@ -636,12 +646,30 @@ export class DynatraceTagRulesMetricRuleOutputReference extends cdktf.ComplexObj
   public set internalValue(value: DynatraceTagRulesMetricRule | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._sendingMetricsEnabled = undefined;
       this._filteringTag.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._sendingMetricsEnabled = value.sendingMetricsEnabled;
       this._filteringTag.internalValue = value.filteringTag;
     }
+  }
+
+  // sending_metrics_enabled - computed: false, optional: true, required: false
+  private _sendingMetricsEnabled?: boolean | cdktf.IResolvable; 
+  public get sendingMetricsEnabled() {
+    return this.getBooleanAttribute('sending_metrics_enabled');
+  }
+  public set sendingMetricsEnabled(value: boolean | cdktf.IResolvable) {
+    this._sendingMetricsEnabled = value;
+  }
+  public resetSendingMetricsEnabled() {
+    this._sendingMetricsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sendingMetricsEnabledInput() {
+    return this._sendingMetricsEnabled;
   }
 
   // filtering_tag - computed: false, optional: false, required: true
@@ -659,19 +687,19 @@ export class DynatraceTagRulesMetricRuleOutputReference extends cdktf.ComplexObj
 }
 export interface DynatraceTagRulesTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#create DynatraceTagRules#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#create DynatraceTagRules#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#delete DynatraceTagRules#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#delete DynatraceTagRules#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#read DynatraceTagRules#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#read DynatraceTagRules#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#update DynatraceTagRules#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#update DynatraceTagRules#update}
   */
   readonly update?: string;
 }
@@ -852,7 +880,7 @@ export class DynatraceTagRulesTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules azurerm_dynatrace_tag_rules}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules azurerm_dynatrace_tag_rules}
 */
 export class DynatraceTagRules extends cdktf.TerraformResource {
 
@@ -868,7 +896,7 @@ export class DynatraceTagRules extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DynatraceTagRules resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DynatraceTagRules to import
-  * @param importFromId The id of the existing DynatraceTagRules that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DynatraceTagRules that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DynatraceTagRules to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -880,7 +908,7 @@ export class DynatraceTagRules extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/dynatrace_tag_rules azurerm_dynatrace_tag_rules} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/dynatrace_tag_rules azurerm_dynatrace_tag_rules} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -891,7 +919,7 @@ export class DynatraceTagRules extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dynatrace_tag_rules',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.30.0',
+        providerVersion: '4.31.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

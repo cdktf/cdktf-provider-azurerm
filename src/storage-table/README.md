@@ -1,3 +1,3 @@
 # `azurerm_storage_table`
 
-Refer to the Terraform Registry for docs: [`azurerm_storage_table`](https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/storage_table).
+Refer to the Terraform Registry for docs: [`azurerm_storage_table`](https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/storage_table).

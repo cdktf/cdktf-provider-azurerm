@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,52 +8,52 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlJobAgentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#database_id MssqlJobAgent#database_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#database_id MssqlJobAgent#database_id}
   */
   readonly databaseId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#id MssqlJobAgent#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#id MssqlJobAgent#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#location MssqlJobAgent#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#location MssqlJobAgent#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#name MssqlJobAgent#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#name MssqlJobAgent#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#sku MssqlJobAgent#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#sku MssqlJobAgent#sku}
   */
   readonly sku?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#tags MssqlJobAgent#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#tags MssqlJobAgent#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#identity MssqlJobAgent#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#identity MssqlJobAgent#identity}
   */
   readonly identity?: MssqlJobAgentIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#timeouts MssqlJobAgent#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#timeouts MssqlJobAgent#timeouts}
   */
   readonly timeouts?: MssqlJobAgentTimeouts;
 }
 export interface MssqlJobAgentIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#identity_ids MssqlJobAgent#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#identity_ids MssqlJobAgent#identity_ids}
   */
   readonly identityIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#type MssqlJobAgent#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#type MssqlJobAgent#type}
   */
   readonly type: string;
 }
@@ -165,19 +160,19 @@ export class MssqlJobAgentIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface MssqlJobAgentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#create MssqlJobAgent#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#create MssqlJobAgent#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#delete MssqlJobAgent#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#delete MssqlJobAgent#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#read MssqlJobAgent#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#read MssqlJobAgent#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#update MssqlJobAgent#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#update MssqlJobAgent#update}
   */
   readonly update?: string;
 }
@@ -358,7 +353,7 @@ export class MssqlJobAgentTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent azurerm_mssql_job_agent}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent azurerm_mssql_job_agent}
 */
 export class MssqlJobAgent extends cdktf.TerraformResource {
 
@@ -374,7 +369,7 @@ export class MssqlJobAgent extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MssqlJobAgent resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MssqlJobAgent to import
-  * @param importFromId The id of the existing MssqlJobAgent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MssqlJobAgent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MssqlJobAgent to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -386,7 +381,7 @@ export class MssqlJobAgent extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.30.0/docs/resources/mssql_job_agent azurerm_mssql_job_agent} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/mssql_job_agent azurerm_mssql_job_agent} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -397,7 +392,7 @@ export class MssqlJobAgent extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_job_agent',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.30.0',
+        providerVersion: '4.31.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
