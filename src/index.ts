@@ -679,6 +679,7 @@ export * as networkManagerDeployment from './network-manager-deployment';
 export * as networkManagerIpamPool from './network-manager-ipam-pool';
 export * as networkManagerManagementGroupConnection from './network-manager-management-group-connection';
 export * as networkManagerNetworkGroup from './network-manager-network-group';
+export * as networkManagerRoutingConfiguration from './network-manager-routing-configuration';
 export * as networkManagerScopeConnection from './network-manager-scope-connection';
 export * as networkManagerSecurityAdminConfiguration from './network-manager-security-admin-configuration';
 export * as networkManagerStaticMember from './network-manager-static-member';
@@ -1192,6 +1193,7 @@ export * as dataAzurermDatabricksWorkspace from './data-azurerm-databricks-works
 export * as dataAzurermDatabricksWorkspacePrivateEndpointConnection from './data-azurerm-databricks-workspace-private-endpoint-connection';
 export * as dataAzurermDedicatedHost from './data-azurerm-dedicated-host';
 export * as dataAzurermDedicatedHostGroup from './data-azurerm-dedicated-host-group';
+export * as dataAzurermDevCenter from './data-azurerm-dev-center';
 export * as dataAzurermDevTestLab from './data-azurerm-dev-test-lab';
 export * as dataAzurermDevTestVirtualNetwork from './data-azurerm-dev-test-virtual-network';
 export * as dataAzurermDigitalTwinsInstance from './data-azurerm-digital-twins-instance';
