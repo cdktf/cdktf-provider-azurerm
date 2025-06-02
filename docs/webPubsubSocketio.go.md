@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.webPubsubSocketio.WebPubsubSocketio.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/webpubsubsocketio"
 
 webpubsubsocketio.NewWebPubsubSocketio(scope Construct, id *string, config WebPubsubSocketioConfig) WebPubsubSocketio
 ```
@@ -508,7 +508,7 @@ func ResetTlsClientCertEnabled()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.webPubsubSocketio.WebPubsubSocketio.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/webpubsubsocketio"
 
 webpubsubsocketio.WebPubsubSocketio_IsConstruct(x interface{}) *bool
 ```
@@ -540,7 +540,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.webPubsubSocketio.WebPubsubSocketio.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/webpubsubsocketio"
 
 webpubsubsocketio.WebPubsubSocketio_IsTerraformElement(x interface{}) *bool
 ```
@@ -554,7 +554,7 @@ webpubsubsocketio.WebPubsubSocketio_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.webPubsubSocketio.WebPubsubSocketio.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/webpubsubsocketio"
 
 webpubsubsocketio.WebPubsubSocketio_IsTerraformResource(x interface{}) *bool
 ```
@@ -568,7 +568,7 @@ webpubsubsocketio.WebPubsubSocketio_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.webPubsubSocketio.WebPubsubSocketio.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/webpubsubsocketio"
 
 webpubsubsocketio.WebPubsubSocketio_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1259,7 +1259,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.webPubsubSocketio.WebPubsubSocketioConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/webpubsubsocketio"
 
 &webpubsubsocketio.WebPubsubSocketioConfig {
 	Connection: interface{},
@@ -1272,10 +1272,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.webPubsubSocketio.WebPubsubSocketioSku,
+	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.webPubsubSocketio.WebPubsubSocketioSku,
 	AadAuthEnabled: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.webPubsubSocketio.WebPubsubSocketioIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.webPubsubSocketio.WebPubsubSocketioIdentity,
 	LiveTraceConnectivityLogsEnabled: interface{},
 	LiveTraceEnabled: interface{},
 	LiveTraceHttpRequestLogsEnabled: interface{},
@@ -1284,7 +1284,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio
 	PublicNetworkAccess: *string,
 	ServiceMode: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.webPubsubSocketio.WebPubsubSocketioTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.webPubsubSocketio.WebPubsubSocketioTimeouts,
 	TlsClientCertEnabled: interface{},
 }
 ```
@@ -1608,7 +1608,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.webPubsubSocketio.WebPubsubSocketioIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/webpubsubsocketio"
 
 &webpubsubsocketio.WebPubsubSocketioIdentity {
 	Type: *string,
@@ -1654,7 +1654,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.webPubsubSocketio.WebPubsubSocketioSku.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/webpubsubsocketio"
 
 &webpubsubsocketio.WebPubsubSocketioSku {
 	Name: *string,
@@ -1700,7 +1700,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.webPubsubSocketio.WebPubsubSocketioTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/webpubsubsocketio"
 
 &webpubsubsocketio.WebPubsubSocketioTimeouts {
 	Create: *string,
@@ -1776,7 +1776,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.webPubsubSocketio.WebPubsubSocketioIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/webpubsubsocketio"
 
 webpubsubsocketio.NewWebPubsubSocketioIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WebPubsubSocketioIdentityOutputReference
 ```
@@ -2098,7 +2098,7 @@ func InternalValue() WebPubsubSocketioIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.webPubsubSocketio.WebPubsubSocketioSkuOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/webpubsubsocketio"
 
 webpubsubsocketio.NewWebPubsubSocketioSkuOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WebPubsubSocketioSkuOutputReference
 ```
@@ -2398,7 +2398,7 @@ func InternalValue() WebPubsubSocketioSku
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.webPubsubSocketio.WebPubsubSocketioTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/webpubsubsocketio"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/webpubsubsocketio"
 
 webpubsubsocketio.NewWebPubsubSocketioTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WebPubsubSocketioTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomain.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.NewApiManagementCustomDomain(scope Construct, id *string, config ApiManagementCustomDomainConfig) ApiManagementCustomDomain
 ```
@@ -505,7 +505,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomain.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.ApiManagementCustomDomain_IsConstruct(x interface{}) *bool
 ```
@@ -537,7 +537,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomain.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.ApiManagementCustomDomain_IsTerraformElement(x interface{}) *bool
 ```
@@ -551,7 +551,7 @@ apimanagementcustomdomain.ApiManagementCustomDomain_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomain.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.ApiManagementCustomDomain_IsTerraformResource(x interface{}) *bool
 ```
@@ -565,7 +565,7 @@ apimanagementcustomdomain.ApiManagementCustomDomain_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomain.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.ApiManagementCustomDomain_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -970,7 +970,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 &apimanagementcustomdomain.ApiManagementCustomDomainConfig {
 	Connection: interface{},
@@ -987,7 +987,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcust
 	Management: interface{},
 	Portal: interface{},
 	Scm: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.apiManagementCustomDomain.ApiManagementCustomDomainTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.apiManagementCustomDomain.ApiManagementCustomDomainTimeouts,
 }
 ```
 
@@ -1199,7 +1199,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainDeveloperPortal.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 &apimanagementcustomdomain.ApiManagementCustomDomainDeveloperPortal {
 	HostName: *string,
@@ -1315,7 +1315,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 &apimanagementcustomdomain.ApiManagementCustomDomainGateway {
 	HostName: *string,
@@ -1445,7 +1445,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainManagement.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 &apimanagementcustomdomain.ApiManagementCustomDomainManagement {
 	HostName: *string,
@@ -1561,7 +1561,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainPortal.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 &apimanagementcustomdomain.ApiManagementCustomDomainPortal {
 	HostName: *string,
@@ -1677,7 +1677,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainScm.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 &apimanagementcustomdomain.ApiManagementCustomDomainScm {
 	HostName: *string,
@@ -1793,7 +1793,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 &apimanagementcustomdomain.ApiManagementCustomDomainTimeouts {
 	Create: *string,
@@ -1869,7 +1869,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainDeveloperPortalList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.NewApiManagementCustomDomainDeveloperPortalList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementCustomDomainDeveloperPortalList
 ```
@@ -2029,7 +2029,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainDeveloperPortalOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.NewApiManagementCustomDomainDeveloperPortalOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementCustomDomainDeveloperPortalOutputReference
 ```
@@ -2547,7 +2547,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainGatewayList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.NewApiManagementCustomDomainGatewayList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementCustomDomainGatewayList
 ```
@@ -2707,7 +2707,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainGatewayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.NewApiManagementCustomDomainGatewayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementCustomDomainGatewayOutputReference
 ```
@@ -3254,7 +3254,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainManagementList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.NewApiManagementCustomDomainManagementList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementCustomDomainManagementList
 ```
@@ -3414,7 +3414,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainManagementOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.NewApiManagementCustomDomainManagementOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementCustomDomainManagementOutputReference
 ```
@@ -3932,7 +3932,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainPortalList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.NewApiManagementCustomDomainPortalList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementCustomDomainPortalList
 ```
@@ -4092,7 +4092,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainPortalOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.NewApiManagementCustomDomainPortalOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementCustomDomainPortalOutputReference
 ```
@@ -4610,7 +4610,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainScmList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.NewApiManagementCustomDomainScmList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementCustomDomainScmList
 ```
@@ -4770,7 +4770,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainScmOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.NewApiManagementCustomDomainScmOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementCustomDomainScmOutputReference
 ```
@@ -5288,7 +5288,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCustomDomain.ApiManagementCustomDomainTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/apimanagementcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementcustomdomain"
 
 apimanagementcustomdomain.NewApiManagementCustomDomainTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementCustomDomainTimeoutsOutputReference
 ```

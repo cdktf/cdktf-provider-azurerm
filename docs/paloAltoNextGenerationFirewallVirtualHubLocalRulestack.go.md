@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestack.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 paloaltonextgenerationfirewallvirtualhublocalrulestack.NewPaloAltoNextGenerationFirewallVirtualHubLocalRulestack(scope Construct, id *string, config PaloAltoNextGenerationFirewallVirtualHubLocalRulestackConfig) PaloAltoNextGenerationFirewallVirtualHubLocalRulestack
 ```
@@ -479,7 +479,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestack.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 paloaltonextgenerationfirewallvirtualhublocalrulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestack_IsConstruct(x interface{}) *bool
 ```
@@ -511,7 +511,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestack.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 paloaltonextgenerationfirewallvirtualhublocalrulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestack_IsTerraformElement(x interface{}) *bool
 ```
@@ -525,7 +525,7 @@ paloaltonextgenerationfirewallvirtualhublocalrulestack.PaloAltoNextGenerationFir
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestack.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 paloaltonextgenerationfirewallvirtualhublocalrulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestack_IsTerraformResource(x interface{}) *bool
 ```
@@ -539,7 +539,7 @@ paloaltonextgenerationfirewallvirtualhublocalrulestack.PaloAltoNextGenerationFir
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestack.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 paloaltonextgenerationfirewallvirtualhublocalrulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestack_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1010,7 +1010,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 &paloaltonextgenerationfirewallvirtualhublocalrulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackConfig {
 	Connection: interface{},
@@ -1021,16 +1021,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgener
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	NetworkProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackNetworkProfile,
+	NetworkProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackNetworkProfile,
 	ResourceGroupName: *string,
 	RulestackId: *string,
 	DestinationNat: interface{},
-	DnsSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDnsSettings,
+	DnsSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDnsSettings,
 	Id: *string,
 	MarketplaceOfferId: *string,
 	PlanId: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackTimeouts,
 }
 ```
 
@@ -1277,13 +1277,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNat.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 &paloaltonextgenerationfirewallvirtualhublocalrulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNat {
 	Name: *string,
 	Protocol: *string,
-	BackendConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatBackendConfig,
-	FrontendConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatFrontendConfig,
+	BackendConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatBackendConfig,
+	FrontendConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatFrontendConfig,
 }
 ```
 
@@ -1355,7 +1355,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatBackendConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 &paloaltonextgenerationfirewallvirtualhublocalrulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatBackendConfig {
 	Port: *f64,
@@ -1401,7 +1401,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatFrontendConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 &paloaltonextgenerationfirewallvirtualhublocalrulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatFrontendConfig {
 	Port: *f64,
@@ -1447,7 +1447,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDnsSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 &paloaltonextgenerationfirewallvirtualhublocalrulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDnsSettings {
 	DnsServers: *[]*string,
@@ -1493,7 +1493,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackNetworkProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 &paloaltonextgenerationfirewallvirtualhublocalrulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackNetworkProfile {
 	NetworkVirtualApplianceId: *string,
@@ -1581,7 +1581,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 &paloaltonextgenerationfirewallvirtualhublocalrulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackTimeouts {
 	Create: *string,
@@ -1657,7 +1657,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatBackendConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 paloaltonextgenerationfirewallvirtualhublocalrulestack.NewPaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatBackendConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatBackendConfigOutputReference
 ```
@@ -1950,7 +1950,7 @@ func InternalValue() PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDesti
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatFrontendConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 paloaltonextgenerationfirewallvirtualhublocalrulestack.NewPaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatFrontendConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatFrontendConfigOutputReference
 ```
@@ -2243,7 +2243,7 @@ func InternalValue() PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDesti
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 paloaltonextgenerationfirewallvirtualhublocalrulestack.NewPaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatList
 ```
@@ -2403,7 +2403,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 paloaltonextgenerationfirewallvirtualhublocalrulestack.NewPaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDestinationNatOutputReference
 ```
@@ -2798,7 +2798,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDnsSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 paloaltonextgenerationfirewallvirtualhublocalrulestack.NewPaloAltoNextGenerationFirewallVirtualHubLocalRulestackDnsSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDnsSettingsOutputReference
 ```
@@ -3116,7 +3116,7 @@ func InternalValue() PaloAltoNextGenerationFirewallVirtualHubLocalRulestackDnsSe
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackNetworkProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 paloaltonextgenerationfirewallvirtualhublocalrulestack.NewPaloAltoNextGenerationFirewallVirtualHubLocalRulestackNetworkProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PaloAltoNextGenerationFirewallVirtualHubLocalRulestackNetworkProfileOutputReference
 ```
@@ -3544,7 +3544,7 @@ func InternalValue() PaloAltoNextGenerationFirewallVirtualHubLocalRulestackNetwo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubLocalRulestack.PaloAltoNextGenerationFirewallVirtualHubLocalRulestackTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/paloaltonextgenerationfirewallvirtualhublocalrulestack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/paloaltonextgenerationfirewallvirtualhublocalrulestack"
 
 paloaltonextgenerationfirewallvirtualhublocalrulestack.NewPaloAltoNextGenerationFirewallVirtualHubLocalRulestackTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PaloAltoNextGenerationFirewallVirtualHubLocalRulestackTimeoutsOutputReference
 ```

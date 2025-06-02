@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 dataazurermvirtualhubconnection.NewDataAzurermVirtualHubConnection(scope Construct, id *string, config DataAzurermVirtualHubConnectionConfig) DataAzurermVirtualHubConnection
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 dataazurermvirtualhubconnection.DataAzurermVirtualHubConnection_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 dataazurermvirtualhubconnection.DataAzurermVirtualHubConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermvirtualhubconnection.DataAzurermVirtualHubConnection_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnection.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 dataazurermvirtualhubconnection.DataAzurermVirtualHubConnection_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermvirtualhubconnection.DataAzurermVirtualHubConnection_IsTerraformDataS
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 dataazurermvirtualhubconnection.DataAzurermVirtualHubConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -724,7 +724,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 &dataazurermvirtualhubconnection.DataAzurermVirtualHubConnectionConfig {
 	Connection: interface{},
@@ -738,7 +738,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtua
 	ResourceGroupName: *string,
 	VirtualHubName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionTimeouts,
 }
 ```
 
@@ -901,7 +901,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionRouting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 &dataazurermvirtualhubconnection.DataAzurermVirtualHubConnectionRouting {
 
@@ -914,7 +914,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtua
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionRoutingPropagatedRouteTable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 &dataazurermvirtualhubconnection.DataAzurermVirtualHubConnectionRoutingPropagatedRouteTable {
 
@@ -927,7 +927,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtua
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionRoutingStaticVnetRoute.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 &dataazurermvirtualhubconnection.DataAzurermVirtualHubConnectionRoutingStaticVnetRoute {
 
@@ -940,7 +940,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtua
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 &dataazurermvirtualhubconnection.DataAzurermVirtualHubConnectionTimeouts {
 	Read: *string,
@@ -974,7 +974,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionRoutingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 dataazurermvirtualhubconnection.NewDataAzurermVirtualHubConnectionRoutingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermVirtualHubConnectionRoutingList
 ```
@@ -1123,7 +1123,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionRoutingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 dataazurermvirtualhubconnection.NewDataAzurermVirtualHubConnectionRoutingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermVirtualHubConnectionRoutingOutputReference
 ```
@@ -1467,7 +1467,7 @@ func InternalValue() DataAzurermVirtualHubConnectionRouting
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionRoutingPropagatedRouteTableList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 dataazurermvirtualhubconnection.NewDataAzurermVirtualHubConnectionRoutingPropagatedRouteTableList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermVirtualHubConnectionRoutingPropagatedRouteTableList
 ```
@@ -1616,7 +1616,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionRoutingPropagatedRouteTableOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 dataazurermvirtualhubconnection.NewDataAzurermVirtualHubConnectionRoutingPropagatedRouteTableOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermVirtualHubConnectionRoutingPropagatedRouteTableOutputReference
 ```
@@ -1905,7 +1905,7 @@ func InternalValue() DataAzurermVirtualHubConnectionRoutingPropagatedRouteTable
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionRoutingStaticVnetRouteList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 dataazurermvirtualhubconnection.NewDataAzurermVirtualHubConnectionRoutingStaticVnetRouteList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermVirtualHubConnectionRoutingStaticVnetRouteList
 ```
@@ -2054,7 +2054,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionRoutingStaticVnetRouteOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 dataazurermvirtualhubconnection.NewDataAzurermVirtualHubConnectionRoutingStaticVnetRouteOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermVirtualHubConnectionRoutingStaticVnetRouteOutputReference
 ```
@@ -2354,7 +2354,7 @@ func InternalValue() DataAzurermVirtualHubConnectionRoutingStaticVnetRoute
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualHubConnection.DataAzurermVirtualHubConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermvirtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermvirtualhubconnection"
 
 dataazurermvirtualhubconnection.NewDataAzurermVirtualHubConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermVirtualHubConnectionTimeoutsOutputReference
 ```

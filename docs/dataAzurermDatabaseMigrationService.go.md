@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDatabaseMigrationService.DataAzurermDatabaseMigrationService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdatabasemigrationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdatabasemigrationservice"
 
 dataazurermdatabasemigrationservice.NewDataAzurermDatabaseMigrationService(scope Construct, id *string, config DataAzurermDatabaseMigrationServiceConfig) DataAzurermDatabaseMigrationService
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDatabaseMigrationService.DataAzurermDatabaseMigrationService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdatabasemigrationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdatabasemigrationservice"
 
 dataazurermdatabasemigrationservice.DataAzurermDatabaseMigrationService_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDatabaseMigrationService.DataAzurermDatabaseMigrationService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdatabasemigrationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdatabasemigrationservice"
 
 dataazurermdatabasemigrationservice.DataAzurermDatabaseMigrationService_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermdatabasemigrationservice.DataAzurermDatabaseMigrationService_IsTerraf
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDatabaseMigrationService.DataAzurermDatabaseMigrationService.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdatabasemigrationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdatabasemigrationservice"
 
 dataazurermdatabasemigrationservice.DataAzurermDatabaseMigrationService_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermdatabasemigrationservice.DataAzurermDatabaseMigrationService_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermDatabaseMigrationService.DataAzurermDatabaseMigrationService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdatabasemigrationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdatabasemigrationservice"
 
 dataazurermdatabasemigrationservice.DataAzurermDatabaseMigrationService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -702,7 +702,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDatabaseMigrationService.DataAzurermDatabaseMigrationServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdatabasemigrationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdatabasemigrationservice"
 
 &dataazurermdatabasemigrationservice.DataAzurermDatabaseMigrationServiceConfig {
 	Connection: interface{},
@@ -715,7 +715,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdataba
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermDatabaseMigrationService.DataAzurermDatabaseMigrationServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.dataAzurermDatabaseMigrationService.DataAzurermDatabaseMigrationServiceTimeouts,
 }
 ```
 
@@ -865,7 +865,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDatabaseMigrationService.DataAzurermDatabaseMigrationServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdatabasemigrationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdatabasemigrationservice"
 
 &dataazurermdatabasemigrationservice.DataAzurermDatabaseMigrationServiceTimeouts {
 	Read: *string,
@@ -899,7 +899,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDatabaseMigrationService.DataAzurermDatabaseMigrationServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdatabasemigrationservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdatabasemigrationservice"
 
 dataazurermdatabasemigrationservice.NewDataAzurermDatabaseMigrationServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDatabaseMigrationServiceTimeoutsOutputReference
 ```

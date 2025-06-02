@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.servicebusNamespaceCustomerManagedKey.ServicebusNamespaceCustomerManagedKeyA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/servicebusnamespacecustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/servicebusnamespacecustomermanagedkey"
 
 servicebusnamespacecustomermanagedkey.NewServicebusNamespaceCustomerManagedKeyA(scope Construct, id *string, config ServicebusNamespaceCustomerManagedKeyAConfig) ServicebusNamespaceCustomerManagedKeyA
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.servicebusNamespaceCustomerManagedKey.ServicebusNamespaceCustomerManagedKeyA.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/servicebusnamespacecustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/servicebusnamespacecustomermanagedkey"
 
 servicebusnamespacecustomermanagedkey.ServicebusNamespaceCustomerManagedKeyA_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.servicebusNamespaceCustomerManagedKey.ServicebusNamespaceCustomerManagedKeyA.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/servicebusnamespacecustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/servicebusnamespacecustomermanagedkey"
 
 servicebusnamespacecustomermanagedkey.ServicebusNamespaceCustomerManagedKeyA_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ servicebusnamespacecustomermanagedkey.ServicebusNamespaceCustomerManagedKeyA_IsT
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.servicebusNamespaceCustomerManagedKey.ServicebusNamespaceCustomerManagedKeyA.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/servicebusnamespacecustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/servicebusnamespacecustomermanagedkey"
 
 servicebusnamespacecustomermanagedkey.ServicebusNamespaceCustomerManagedKeyA_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ servicebusnamespacecustomermanagedkey.ServicebusNamespaceCustomerManagedKeyA_IsT
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.servicebusNamespaceCustomerManagedKey.ServicebusNamespaceCustomerManagedKeyA.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/servicebusnamespacecustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/servicebusnamespacecustomermanagedkey"
 
 servicebusnamespacecustomermanagedkey.ServicebusNamespaceCustomerManagedKeyA_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -811,7 +811,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.servicebusNamespaceCustomerManagedKey.ServicebusNamespaceCustomerManagedKeyAConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/servicebusnamespacecustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/servicebusnamespacecustomermanagedkey"
 
 &servicebusnamespacecustomermanagedkey.ServicebusNamespaceCustomerManagedKeyAConfig {
 	Connection: interface{},
@@ -825,7 +825,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/servicebusnamespa
 	NamespaceId: *string,
 	Id: *string,
 	InfrastructureEncryptionEnabled: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.servicebusNamespaceCustomerManagedKey.ServicebusNamespaceCustomerManagedKeyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.servicebusNamespaceCustomerManagedKey.ServicebusNamespaceCustomerManagedKeyTimeouts,
 }
 ```
 
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.servicebusNamespaceCustomerManagedKey.ServicebusNamespaceCustomerManagedKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/servicebusnamespacecustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/servicebusnamespacecustomermanagedkey"
 
 &servicebusnamespacecustomermanagedkey.ServicebusNamespaceCustomerManagedKeyTimeouts {
 	Create: *string,
@@ -1064,7 +1064,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.servicebusNamespaceCustomerManagedKey.ServicebusNamespaceCustomerManagedKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/servicebusnamespacecustomermanagedkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/servicebusnamespacecustomermanagedkey"
 
 servicebusnamespacecustomermanagedkey.NewServicebusNamespaceCustomerManagedKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServicebusNamespaceCustomerManagedKeyTimeoutsOutputReference
 ```
