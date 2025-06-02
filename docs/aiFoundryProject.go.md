@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.aiFoundryProject.AiFoundryProject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/aifoundryproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/aifoundryproject"
 
 aifoundryproject.NewAiFoundryProject(scope Construct, id *string, config AiFoundryProjectConfig) AiFoundryProject
 ```
@@ -460,7 +460,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.aiFoundryProject.AiFoundryProject.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/aifoundryproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/aifoundryproject"
 
 aifoundryproject.AiFoundryProject_IsConstruct(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.aiFoundryProject.AiFoundryProject.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/aifoundryproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/aifoundryproject"
 
 aifoundryproject.AiFoundryProject_IsTerraformElement(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ aifoundryproject.AiFoundryProject_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.aiFoundryProject.AiFoundryProject.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/aifoundryproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/aifoundryproject"
 
 aifoundryproject.AiFoundryProject_IsTerraformResource(x interface{}) *bool
 ```
@@ -520,7 +520,7 @@ aifoundryproject.AiFoundryProject_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.aiFoundryProject.AiFoundryProject.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/aifoundryproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/aifoundryproject"
 
 aifoundryproject.AiFoundryProject_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1002,7 +1002,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.aiFoundryProject.AiFoundryProjectConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/aifoundryproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/aifoundryproject"
 
 &aifoundryproject.AiFoundryProjectConfig {
 	Connection: interface{},
@@ -1019,10 +1019,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/aifoundryproject"
 	FriendlyName: *string,
 	HighBusinessImpactEnabled: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.aiFoundryProject.AiFoundryProjectIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.aiFoundryProject.AiFoundryProjectIdentity,
 	PrimaryUserAssignedIdentity: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.aiFoundryProject.AiFoundryProjectTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.aiFoundryProject.AiFoundryProjectTimeouts,
 }
 ```
 
@@ -1265,7 +1265,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.aiFoundryProject.AiFoundryProjectIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/aifoundryproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/aifoundryproject"
 
 &aifoundryproject.AiFoundryProjectIdentity {
 	Type: *string,
@@ -1311,7 +1311,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.aiFoundryProject.AiFoundryProjectTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/aifoundryproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/aifoundryproject"
 
 &aifoundryproject.AiFoundryProjectTimeouts {
 	Create: *string,
@@ -1387,7 +1387,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.aiFoundryProject.AiFoundryProjectIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/aifoundryproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/aifoundryproject"
 
 aifoundryproject.NewAiFoundryProjectIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AiFoundryProjectIdentityOutputReference
 ```
@@ -1709,7 +1709,7 @@ func InternalValue() AiFoundryProjectIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.aiFoundryProject.AiFoundryProjectTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/aifoundryproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/aifoundryproject"
 
 aifoundryproject.NewAiFoundryProjectTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AiFoundryProjectTimeoutsOutputReference
 ```

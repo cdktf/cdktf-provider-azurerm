@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHana.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 netappvolumegroupsaphana.NewNetappVolumeGroupSapHana(scope Construct, id *string, config NetappVolumeGroupSapHanaConfig) NetappVolumeGroupSapHana
 ```
@@ -418,7 +418,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHana.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 netappvolumegroupsaphana.NetappVolumeGroupSapHana_IsConstruct(x interface{}) *bool
 ```
@@ -450,7 +450,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHana.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 netappvolumegroupsaphana.NetappVolumeGroupSapHana_IsTerraformElement(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ netappvolumegroupsaphana.NetappVolumeGroupSapHana_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHana.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 netappvolumegroupsaphana.NetappVolumeGroupSapHana_IsTerraformResource(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ netappvolumegroupsaphana.NetappVolumeGroupSapHana_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHana.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 netappvolumegroupsaphana.NetappVolumeGroupSapHana_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -905,7 +905,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 &netappvolumegroupsaphana.NetappVolumeGroupSapHanaConfig {
 	Connection: interface{},
@@ -923,7 +923,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroup
 	ResourceGroupName: *string,
 	Volume: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaTimeouts,
 }
 ```
 
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 &netappvolumegroupsaphana.NetappVolumeGroupSapHanaTimeouts {
 	Create: *string,
@@ -1214,7 +1214,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 &netappvolumegroupsaphana.NetappVolumeGroupSapHanaVolume {
 	CapacityPoolId: *string,
@@ -1229,8 +1229,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroup
 	ThroughputInMibps: *f64,
 	VolumePath: *string,
 	VolumeSpecName: *string,
-	DataProtectionReplication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolumeDataProtectionReplication,
-	DataProtectionSnapshotPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolumeDataProtectionSnapshotPolicy,
+	DataProtectionReplication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolumeDataProtectionReplication,
+	DataProtectionSnapshotPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolumeDataProtectionSnapshotPolicy,
 	ProximityPlacementGroupId: *string,
 	Tags: *map[string]*string,
 }
@@ -1462,7 +1462,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolumeDataProtectionReplication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 &netappvolumegroupsaphana.NetappVolumeGroupSapHanaVolumeDataProtectionReplication {
 	RemoteVolumeLocation: *string,
@@ -1536,7 +1536,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolumeDataProtectionSnapshotPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 &netappvolumegroupsaphana.NetappVolumeGroupSapHanaVolumeDataProtectionSnapshotPolicy {
 	SnapshotPolicyId: *string,
@@ -1568,7 +1568,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolumeExportPolicyRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 &netappvolumegroupsaphana.NetappVolumeGroupSapHanaVolumeExportPolicyRule {
 	AllowedClients: *string,
@@ -1686,7 +1686,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 netappvolumegroupsaphana.NewNetappVolumeGroupSapHanaTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappVolumeGroupSapHanaTimeoutsOutputReference
 ```
@@ -2051,7 +2051,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolumeDataProtectionReplicationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 netappvolumegroupsaphana.NewNetappVolumeGroupSapHanaVolumeDataProtectionReplicationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappVolumeGroupSapHanaVolumeDataProtectionReplicationOutputReference
 ```
@@ -2395,7 +2395,7 @@ func InternalValue() NetappVolumeGroupSapHanaVolumeDataProtectionReplication
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolumeDataProtectionSnapshotPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 netappvolumegroupsaphana.NewNetappVolumeGroupSapHanaVolumeDataProtectionSnapshotPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappVolumeGroupSapHanaVolumeDataProtectionSnapshotPolicyOutputReference
 ```
@@ -2666,7 +2666,7 @@ func InternalValue() NetappVolumeGroupSapHanaVolumeDataProtectionSnapshotPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolumeExportPolicyRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 netappvolumegroupsaphana.NewNetappVolumeGroupSapHanaVolumeExportPolicyRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetappVolumeGroupSapHanaVolumeExportPolicyRuleList
 ```
@@ -2826,7 +2826,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolumeExportPolicyRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 netappvolumegroupsaphana.NewNetappVolumeGroupSapHanaVolumeExportPolicyRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetappVolumeGroupSapHanaVolumeExportPolicyRuleOutputReference
 ```
@@ -3268,7 +3268,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolumeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 netappvolumegroupsaphana.NewNetappVolumeGroupSapHanaVolumeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetappVolumeGroupSapHanaVolumeList
 ```
@@ -3428,7 +3428,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappVolumeGroupSapHana.NetappVolumeGroupSapHanaVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/netappvolumegroupsaphana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappvolumegroupsaphana"
 
 netappvolumegroupsaphana.NewNetappVolumeGroupSapHanaVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetappVolumeGroupSapHanaVolumeOutputReference
 ```

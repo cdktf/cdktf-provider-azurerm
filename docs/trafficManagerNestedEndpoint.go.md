@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 trafficmanagernestedendpoint.NewTrafficManagerNestedEndpoint(scope Construct, id *string, config TrafficManagerNestedEndpointConfig) TrafficManagerNestedEndpoint
 ```
@@ -494,7 +494,7 @@ func ResetWeight()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpoint.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 trafficmanagernestedendpoint.TrafficManagerNestedEndpoint_IsConstruct(x interface{}) *bool
 ```
@@ -526,7 +526,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpoint.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 trafficmanagernestedendpoint.TrafficManagerNestedEndpoint_IsTerraformElement(x interface{}) *bool
 ```
@@ -540,7 +540,7 @@ trafficmanagernestedendpoint.TrafficManagerNestedEndpoint_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpoint.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 trafficmanagernestedendpoint.TrafficManagerNestedEndpoint_IsTerraformResource(x interface{}) *bool
 ```
@@ -554,7 +554,7 @@ trafficmanagernestedendpoint.TrafficManagerNestedEndpoint_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpoint.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 trafficmanagernestedendpoint.TrafficManagerNestedEndpoint_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1113,7 +1113,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpointConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 &trafficmanagernestedendpoint.TrafficManagerNestedEndpointConfig {
 	Connection: interface{},
@@ -1136,7 +1136,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernes
 	MinimumRequiredChildEndpointsIpv6: *f64,
 	Priority: *f64,
 	Subnet: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.trafficManagerNestedEndpoint.TrafficManagerNestedEndpointTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.trafficManagerNestedEndpoint.TrafficManagerNestedEndpointTimeouts,
 	Weight: *f64,
 }
 ```
@@ -1434,7 +1434,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpointCustomHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 &trafficmanagernestedendpoint.TrafficManagerNestedEndpointCustomHeader {
 	Name: *string,
@@ -1480,7 +1480,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpointSubnet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 &trafficmanagernestedendpoint.TrafficManagerNestedEndpointSubnet {
 	First: *string,
@@ -1540,7 +1540,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpointTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 &trafficmanagernestedendpoint.TrafficManagerNestedEndpointTimeouts {
 	Create: *string,
@@ -1616,7 +1616,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpointCustomHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 trafficmanagernestedendpoint.NewTrafficManagerNestedEndpointCustomHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) TrafficManagerNestedEndpointCustomHeaderList
 ```
@@ -1776,7 +1776,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpointCustomHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 trafficmanagernestedendpoint.NewTrafficManagerNestedEndpointCustomHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) TrafficManagerNestedEndpointCustomHeaderOutputReference
 ```
@@ -2087,7 +2087,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpointSubnetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 trafficmanagernestedendpoint.NewTrafficManagerNestedEndpointSubnetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) TrafficManagerNestedEndpointSubnetList
 ```
@@ -2247,7 +2247,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpointSubnetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 trafficmanagernestedendpoint.NewTrafficManagerNestedEndpointSubnetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) TrafficManagerNestedEndpointSubnetOutputReference
 ```
@@ -2594,7 +2594,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.trafficManagerNestedEndpoint.TrafficManagerNestedEndpointTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/trafficmanagernestedendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/trafficmanagernestedendpoint"
 
 trafficmanagernestedendpoint.NewTrafficManagerNestedEndpointTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) TrafficManagerNestedEndpointTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBlueprintPublishedVersion.DataAzurermBlueprintPublishedVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermblueprintpublishedversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermblueprintpublishedversion"
 
 dataazurermblueprintpublishedversion.NewDataAzurermBlueprintPublishedVersion(scope Construct, id *string, config DataAzurermBlueprintPublishedVersionConfig) DataAzurermBlueprintPublishedVersion
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermBlueprintPublishedVersion.DataAzurermBlueprintPublishedVersion.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermblueprintpublishedversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermblueprintpublishedversion"
 
 dataazurermblueprintpublishedversion.DataAzurermBlueprintPublishedVersion_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermBlueprintPublishedVersion.DataAzurermBlueprintPublishedVersion.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermblueprintpublishedversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermblueprintpublishedversion"
 
 dataazurermblueprintpublishedversion.DataAzurermBlueprintPublishedVersion_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermblueprintpublishedversion.DataAzurermBlueprintPublishedVersion_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermBlueprintPublishedVersion.DataAzurermBlueprintPublishedVersion.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermblueprintpublishedversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermblueprintpublishedversion"
 
 dataazurermblueprintpublishedversion.DataAzurermBlueprintPublishedVersion_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermblueprintpublishedversion.DataAzurermBlueprintPublishedVersion_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermBlueprintPublishedVersion.DataAzurermBlueprintPublishedVersion.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermblueprintpublishedversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermblueprintpublishedversion"
 
 dataazurermblueprintpublishedversion.DataAzurermBlueprintPublishedVersion_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -746,7 +746,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBlueprintPublishedVersion.DataAzurermBlueprintPublishedVersionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermblueprintpublishedversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermblueprintpublishedversion"
 
 &dataazurermblueprintpublishedversion.DataAzurermBlueprintPublishedVersionConfig {
 	Connection: interface{},
@@ -760,7 +760,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermbluepr
 	ScopeId: *string,
 	Version: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermBlueprintPublishedVersion.DataAzurermBlueprintPublishedVersionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.dataAzurermBlueprintPublishedVersion.DataAzurermBlueprintPublishedVersionTimeouts,
 }
 ```
 
@@ -923,7 +923,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBlueprintPublishedVersion.DataAzurermBlueprintPublishedVersionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermblueprintpublishedversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermblueprintpublishedversion"
 
 &dataazurermblueprintpublishedversion.DataAzurermBlueprintPublishedVersionTimeouts {
 	Read: *string,
@@ -957,7 +957,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBlueprintPublishedVersion.DataAzurermBlueprintPublishedVersionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermblueprintpublishedversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermblueprintpublishedversion"
 
 dataazurermblueprintpublishedversion.NewDataAzurermBlueprintPublishedVersionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermBlueprintPublishedVersionTimeoutsOutputReference
 ```

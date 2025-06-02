@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsCaaRecord.DataAzurermDnsCaaRecord.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdnscaarecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdnscaarecord"
 
 dataazurermdnscaarecord.NewDataAzurermDnsCaaRecord(scope Construct, id *string, config DataAzurermDnsCaaRecordConfig) DataAzurermDnsCaaRecord
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDnsCaaRecord.DataAzurermDnsCaaRecord.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdnscaarecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdnscaarecord"
 
 dataazurermdnscaarecord.DataAzurermDnsCaaRecord_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDnsCaaRecord.DataAzurermDnsCaaRecord.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdnscaarecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdnscaarecord"
 
 dataazurermdnscaarecord.DataAzurermDnsCaaRecord_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermdnscaarecord.DataAzurermDnsCaaRecord_IsTerraformElement(x interface{}
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDnsCaaRecord.DataAzurermDnsCaaRecord.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdnscaarecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdnscaarecord"
 
 dataazurermdnscaarecord.DataAzurermDnsCaaRecord_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermdnscaarecord.DataAzurermDnsCaaRecord_IsTerraformDataSource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermDnsCaaRecord.DataAzurermDnsCaaRecord.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdnscaarecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdnscaarecord"
 
 dataazurermdnscaarecord.DataAzurermDnsCaaRecord_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -724,7 +724,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDnsCaaRecord.DataAzurermDnsCaaRecordConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdnscaarecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdnscaarecord"
 
 &dataazurermdnscaarecord.DataAzurermDnsCaaRecordConfig {
 	Connection: interface{},
@@ -738,7 +738,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdnscaa
 	ResourceGroupName: *string,
 	ZoneName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermDnsCaaRecord.DataAzurermDnsCaaRecordTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.dataAzurermDnsCaaRecord.DataAzurermDnsCaaRecordTimeouts,
 }
 ```
 
@@ -901,7 +901,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDnsCaaRecord.DataAzurermDnsCaaRecordRecord.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdnscaarecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdnscaarecord"
 
 &dataazurermdnscaarecord.DataAzurermDnsCaaRecordRecord {
 
@@ -914,7 +914,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdnscaa
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDnsCaaRecord.DataAzurermDnsCaaRecordTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdnscaarecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdnscaarecord"
 
 &dataazurermdnscaarecord.DataAzurermDnsCaaRecordTimeouts {
 	Read: *string,
@@ -948,7 +948,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsCaaRecord.DataAzurermDnsCaaRecordRecordList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdnscaarecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdnscaarecord"
 
 dataazurermdnscaarecord.NewDataAzurermDnsCaaRecordRecordList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermDnsCaaRecordRecordList
 ```
@@ -1097,7 +1097,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsCaaRecord.DataAzurermDnsCaaRecordRecordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdnscaarecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdnscaarecord"
 
 dataazurermdnscaarecord.NewDataAzurermDnsCaaRecordRecordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermDnsCaaRecordRecordOutputReference
 ```
@@ -1397,7 +1397,7 @@ func InternalValue() DataAzurermDnsCaaRecordRecord
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsCaaRecord.DataAzurermDnsCaaRecordTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermdnscaarecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermdnscaarecord"
 
 dataazurermdnscaarecord.NewDataAzurermDnsCaaRecordTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDnsCaaRecordTimeoutsOutputReference
 ```

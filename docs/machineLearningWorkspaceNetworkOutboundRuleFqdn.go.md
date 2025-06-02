@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleFqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/machinelearningworkspacenetworkoutboundrulefqdn"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/machinelearningworkspacenetworkoutboundrulefqdn"
 
 machinelearningworkspacenetworkoutboundrulefqdn.NewMachineLearningWorkspaceNetworkOutboundRuleFqdn(scope Construct, id *string, config MachineLearningWorkspaceNetworkOutboundRuleFqdnConfig) MachineLearningWorkspaceNetworkOutboundRuleFqdn
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleFqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdn.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/machinelearningworkspacenetworkoutboundrulefqdn"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/machinelearningworkspacenetworkoutboundrulefqdn"
 
 machinelearningworkspacenetworkoutboundrulefqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdn_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleFqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdn.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/machinelearningworkspacenetworkoutboundrulefqdn"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/machinelearningworkspacenetworkoutboundrulefqdn"
 
 machinelearningworkspacenetworkoutboundrulefqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdn_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ machinelearningworkspacenetworkoutboundrulefqdn.MachineLearningWorkspaceNetworkO
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleFqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdn.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/machinelearningworkspacenetworkoutboundrulefqdn"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/machinelearningworkspacenetworkoutboundrulefqdn"
 
 machinelearningworkspacenetworkoutboundrulefqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdn_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ machinelearningworkspacenetworkoutboundrulefqdn.MachineLearningWorkspaceNetworkO
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleFqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdn.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/machinelearningworkspacenetworkoutboundrulefqdn"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/machinelearningworkspacenetworkoutboundrulefqdn"
 
 machinelearningworkspacenetworkoutboundrulefqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdn_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -804,7 +804,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleFqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdnConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/machinelearningworkspacenetworkoutboundrulefqdn"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/machinelearningworkspacenetworkoutboundrulefqdn"
 
 &machinelearningworkspacenetworkoutboundrulefqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdnConfig {
 	Connection: interface{},
@@ -818,7 +818,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/machinelearningwo
 	Name: *string,
 	WorkspaceId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.machineLearningWorkspaceNetworkOutboundRuleFqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdnTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.machineLearningWorkspaceNetworkOutboundRuleFqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdnTimeouts,
 }
 ```
 
@@ -981,7 +981,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleFqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdnTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/machinelearningworkspacenetworkoutboundrulefqdn"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/machinelearningworkspacenetworkoutboundrulefqdn"
 
 &machinelearningworkspacenetworkoutboundrulefqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdnTimeouts {
 	Create: *string,
@@ -1057,7 +1057,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleFqdn.MachineLearningWorkspaceNetworkOutboundRuleFqdnTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/machinelearningworkspacenetworkoutboundrulefqdn"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/machinelearningworkspacenetworkoutboundrulefqdn"
 
 machinelearningworkspacenetworkoutboundrulefqdn.NewMachineLearningWorkspaceNetworkOutboundRuleFqdnTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MachineLearningWorkspaceNetworkOutboundRuleFqdnTimeoutsOutputReference
 ```

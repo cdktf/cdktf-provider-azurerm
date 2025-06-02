@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/frontdoorcustomhttpsconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/frontdoorcustomhttpsconfiguration"
 
 frontdoorcustomhttpsconfiguration.NewFrontdoorCustomHttpsConfiguration(scope Construct, id *string, config FrontdoorCustomHttpsConfigurationConfig) FrontdoorCustomHttpsConfiguration
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/frontdoorcustomhttpsconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/frontdoorcustomhttpsconfiguration"
 
 frontdoorcustomhttpsconfiguration.FrontdoorCustomHttpsConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/frontdoorcustomhttpsconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/frontdoorcustomhttpsconfiguration"
 
 frontdoorcustomhttpsconfiguration.FrontdoorCustomHttpsConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ frontdoorcustomhttpsconfiguration.FrontdoorCustomHttpsConfiguration_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/frontdoorcustomhttpsconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/frontdoorcustomhttpsconfiguration"
 
 frontdoorcustomhttpsconfiguration.FrontdoorCustomHttpsConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ frontdoorcustomhttpsconfiguration.FrontdoorCustomHttpsConfiguration_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfiguration.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/frontdoorcustomhttpsconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/frontdoorcustomhttpsconfiguration"
 
 frontdoorcustomhttpsconfiguration.FrontdoorCustomHttpsConfiguration_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -824,7 +824,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/frontdoorcustomhttpsconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/frontdoorcustomhttpsconfiguration"
 
 &frontdoorcustomhttpsconfiguration.FrontdoorCustomHttpsConfigurationConfig {
 	Connection: interface{},
@@ -836,9 +836,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/frontdoorcustomht
 	Provisioners: *[]interface{},
 	CustomHttpsProvisioningEnabled: interface{},
 	FrontendEndpointId: *string,
-	CustomHttpsConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration,
+	CustomHttpsConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfigurationTimeouts,
 }
 ```
 
@@ -1003,7 +1003,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/frontdoorcustomhttpsconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/frontdoorcustomhttpsconfiguration"
 
 &frontdoorcustomhttpsconfiguration.FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration {
 	AzureKeyVaultCertificateSecretName: *string,
@@ -1077,7 +1077,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/frontdoorcustomhttpsconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/frontdoorcustomhttpsconfiguration"
 
 &frontdoorcustomhttpsconfiguration.FrontdoorCustomHttpsConfigurationTimeouts {
 	Create: *string,
@@ -1153,7 +1153,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/frontdoorcustomhttpsconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/frontdoorcustomhttpsconfiguration"
 
 frontdoorcustomhttpsconfiguration.NewFrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputReference
 ```
@@ -1551,7 +1551,7 @@ func InternalValue() FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.frontdoorCustomHttpsConfiguration.FrontdoorCustomHttpsConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/frontdoorcustomhttpsconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/frontdoorcustomhttpsconfiguration"
 
 frontdoorcustomhttpsconfiguration.NewFrontdoorCustomHttpsConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FrontdoorCustomHttpsConfigurationTimeoutsOutputReference
 ```

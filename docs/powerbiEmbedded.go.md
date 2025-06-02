@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.powerbiEmbedded.PowerbiEmbedded.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/powerbiembedded"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/powerbiembedded"
 
 powerbiembedded.NewPowerbiEmbedded(scope Construct, id *string, config PowerbiEmbeddedConfig) PowerbiEmbedded
 ```
@@ -419,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.powerbiEmbedded.PowerbiEmbedded.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/powerbiembedded"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/powerbiembedded"
 
 powerbiembedded.PowerbiEmbedded_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.powerbiEmbedded.PowerbiEmbedded.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/powerbiembedded"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/powerbiembedded"
 
 powerbiembedded.PowerbiEmbedded_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ powerbiembedded.PowerbiEmbedded_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.powerbiEmbedded.PowerbiEmbedded.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/powerbiembedded"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/powerbiembedded"
 
 powerbiembedded.PowerbiEmbedded_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ powerbiembedded.PowerbiEmbedded_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.powerbiEmbedded.PowerbiEmbedded.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/powerbiembedded"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/powerbiembedded"
 
 powerbiembedded.PowerbiEmbedded_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -906,7 +906,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.powerbiEmbedded.PowerbiEmbeddedConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/powerbiembedded"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/powerbiembedded"
 
 &powerbiembedded.PowerbiEmbeddedConfig {
 	Connection: interface{},
@@ -924,7 +924,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/powerbiembedded"
 	Id: *string,
 	Mode: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.powerbiEmbedded.PowerbiEmbeddedTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.powerbiEmbedded.PowerbiEmbeddedTimeouts,
 }
 ```
 
@@ -1139,7 +1139,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.powerbiEmbedded.PowerbiEmbeddedTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/powerbiembedded"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/powerbiembedded"
 
 &powerbiembedded.PowerbiEmbeddedTimeouts {
 	Create: *string,
@@ -1215,7 +1215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.powerbiEmbedded.PowerbiEmbeddedTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/powerbiembedded"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/powerbiembedded"
 
 powerbiembedded.NewPowerbiEmbeddedTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PowerbiEmbeddedTimeoutsOutputReference
 ```

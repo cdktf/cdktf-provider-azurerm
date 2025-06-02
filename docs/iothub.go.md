@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.Iothub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothub(scope Construct, id *string, config IothubConfig) Iothub
 ```
@@ -620,7 +620,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iothub.Iothub.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.Iothub_IsConstruct(x interface{}) *bool
 ```
@@ -652,7 +652,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iothub.Iothub.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.Iothub_IsTerraformElement(x interface{}) *bool
 ```
@@ -666,7 +666,7 @@ iothub.Iothub_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iothub.Iothub.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.Iothub_IsTerraformResource(x interface{}) *bool
 ```
@@ -680,7 +680,7 @@ iothub.Iothub_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.iothub.Iothub.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.Iothub_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1437,7 +1437,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubCloudToDevice.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubCloudToDevice {
 	DefaultTtl: *string,
@@ -1499,7 +1499,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedback.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubCloudToDeviceFeedback {
 	LockDuration: *string,
@@ -1559,7 +1559,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubConfig {
 	Connection: interface{},
@@ -1572,23 +1572,23 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.iothub.IothubSku,
-	CloudToDevice: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.iothub.IothubCloudToDevice,
+	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.iothub.IothubSku,
+	CloudToDevice: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.iothub.IothubCloudToDevice,
 	Endpoint: interface{},
 	Enrichment: interface{},
 	EventHubPartitionCount: *f64,
 	EventHubRetentionInDays: *f64,
-	FallbackRoute: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.iothub.IothubFallbackRoute,
-	FileUpload: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.iothub.IothubFileUpload,
+	FallbackRoute: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.iothub.IothubFallbackRoute,
+	FileUpload: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.iothub.IothubFileUpload,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.iothub.IothubIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.iothub.IothubIdentity,
 	LocalAuthenticationEnabled: interface{},
 	MinTlsVersion: *string,
 	NetworkRuleSet: interface{},
 	PublicNetworkAccessEnabled: interface{},
 	Route: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.iothub.IothubTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.iothub.IothubTimeouts,
 }
 ```
 
@@ -1958,7 +1958,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubEndpoint {
 	AuthenticationType: *string,
@@ -2158,7 +2158,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubEnrichment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubEnrichment {
 	EndpointNames: *[]*string,
@@ -2218,7 +2218,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubFallbackRoute.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubFallbackRoute {
 	Condition: *string,
@@ -2292,7 +2292,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubFileUpload.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubFileUpload {
 	ConnectionString: *string,
@@ -2436,7 +2436,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubIdentity {
 	Type: *string,
@@ -2482,7 +2482,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubNetworkRuleSet {
 	ApplyToBuiltinEventhubEndpoint: interface{},
@@ -2544,7 +2544,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubNetworkRuleSetIpRule {
 	IpMask: *string,
@@ -2604,7 +2604,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubRoute.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubRoute {
 	Condition: *string,
@@ -2692,7 +2692,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubSharedAccessPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubSharedAccessPolicy {
 
@@ -2705,7 +2705,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubSku.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubSku {
 	Capacity: *f64,
@@ -2751,7 +2751,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothub.IothubTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 &iothub.IothubTimeouts {
 	Create: *string,
@@ -2827,7 +2827,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubCloudToDeviceFeedbackList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IothubCloudToDeviceFeedbackList
 ```
@@ -2987,7 +2987,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubCloudToDeviceFeedbackOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IothubCloudToDeviceFeedbackOutputReference
 ```
@@ -3341,7 +3341,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubCloudToDeviceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubCloudToDeviceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubCloudToDeviceOutputReference
 ```
@@ -3690,7 +3690,7 @@ func InternalValue() IothubCloudToDevice
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubEndpointList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubEndpointList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IothubEndpointList
 ```
@@ -3850,7 +3850,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubEndpointOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubEndpointOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IothubEndpointOutputReference
 ```
@@ -4494,7 +4494,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubEnrichmentList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubEnrichmentList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IothubEnrichmentList
 ```
@@ -4654,7 +4654,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubEnrichmentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubEnrichmentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IothubEnrichmentOutputReference
 ```
@@ -5008,7 +5008,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubFallbackRouteOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubFallbackRouteOutputReference
 ```
@@ -5373,7 +5373,7 @@ func InternalValue() IothubFallbackRoute
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubFileUploadOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubFileUploadOutputReference
 ```
@@ -5869,7 +5869,7 @@ func InternalValue() IothubFileUpload
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubIdentityOutputReference
 ```
@@ -6191,7 +6191,7 @@ func InternalValue() IothubIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubNetworkRuleSetIpRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IothubNetworkRuleSetIpRuleList
 ```
@@ -6351,7 +6351,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubNetworkRuleSetIpRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IothubNetworkRuleSetIpRuleOutputReference
 ```
@@ -6691,7 +6691,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubNetworkRuleSetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IothubNetworkRuleSetList
 ```
@@ -6851,7 +6851,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubNetworkRuleSetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IothubNetworkRuleSetOutputReference
 ```
@@ -7218,7 +7218,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubRouteList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubRouteList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IothubRouteList
 ```
@@ -7378,7 +7378,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubRouteOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IothubRouteOutputReference
 ```
@@ -7790,7 +7790,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubSharedAccessPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubSharedAccessPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IothubSharedAccessPolicyList
 ```
@@ -7939,7 +7939,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubSharedAccessPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubSharedAccessPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IothubSharedAccessPolicyOutputReference
 ```
@@ -8250,7 +8250,7 @@ func InternalValue() IothubSharedAccessPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubSkuOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubSkuOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubSkuOutputReference
 ```
@@ -8543,7 +8543,7 @@ func InternalValue() IothubSku
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothub.IothubTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/iothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothub"
 
 iothub.NewIothubTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubTimeoutsOutputReference
 ```

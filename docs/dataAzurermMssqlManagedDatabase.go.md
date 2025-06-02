@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 dataazurermmssqlmanageddatabase.NewDataAzurermMssqlManagedDatabase(scope Construct, id *string, config DataAzurermMssqlManagedDatabaseConfig) DataAzurermMssqlManagedDatabase
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 dataazurermmssqlmanageddatabase.DataAzurermMssqlManagedDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 dataazurermmssqlmanageddatabase.DataAzurermMssqlManagedDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermmssqlmanageddatabase.DataAzurermMssqlManagedDatabase_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabase.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 dataazurermmssqlmanageddatabase.DataAzurermMssqlManagedDatabase_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermmssqlmanageddatabase.DataAzurermMssqlManagedDatabase_IsTerraformDataS
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabase.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 dataazurermmssqlmanageddatabase.DataAzurermMssqlManagedDatabase_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -713,7 +713,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 &dataazurermmssqlmanageddatabase.DataAzurermMssqlManagedDatabaseConfig {
 	Connection: interface{},
@@ -726,7 +726,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlm
 	ManagedInstanceId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabaseTimeouts,
 }
 ```
 
@@ -876,7 +876,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabaseLongTermRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 &dataazurermmssqlmanageddatabase.DataAzurermMssqlManagedDatabaseLongTermRetentionPolicy {
 
@@ -889,7 +889,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlm
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabasePointInTimeRestore.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 &dataazurermmssqlmanageddatabase.DataAzurermMssqlManagedDatabasePointInTimeRestore {
 
@@ -902,7 +902,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlm
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 &dataazurermmssqlmanageddatabase.DataAzurermMssqlManagedDatabaseTimeouts {
 	Read: *string,
@@ -936,7 +936,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabaseLongTermRetentionPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 dataazurermmssqlmanageddatabase.NewDataAzurermMssqlManagedDatabaseLongTermRetentionPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMssqlManagedDatabaseLongTermRetentionPolicyList
 ```
@@ -1085,7 +1085,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabaseLongTermRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 dataazurermmssqlmanageddatabase.NewDataAzurermMssqlManagedDatabaseLongTermRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMssqlManagedDatabaseLongTermRetentionPolicyOutputReference
 ```
@@ -1407,7 +1407,7 @@ func InternalValue() DataAzurermMssqlManagedDatabaseLongTermRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabasePointInTimeRestoreList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 dataazurermmssqlmanageddatabase.NewDataAzurermMssqlManagedDatabasePointInTimeRestoreList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMssqlManagedDatabasePointInTimeRestoreList
 ```
@@ -1556,7 +1556,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabasePointInTimeRestoreOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 dataazurermmssqlmanageddatabase.NewDataAzurermMssqlManagedDatabasePointInTimeRestoreOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMssqlManagedDatabasePointInTimeRestoreOutputReference
 ```
@@ -1845,7 +1845,7 @@ func InternalValue() DataAzurermMssqlManagedDatabasePointInTimeRestore
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedDatabase.DataAzurermMssqlManagedDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v13/dataazurermmssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermmssqlmanageddatabase"
 
 dataazurermmssqlmanageddatabase.NewDataAzurermMssqlManagedDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMssqlManagedDatabaseTimeoutsOutputReference
 ```
