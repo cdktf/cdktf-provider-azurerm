@@ -4,7 +4,7 @@
 
 ### NetworkManagerRoutingConfiguration <a name="NetworkManagerRoutingConfiguration" id="@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfiguration"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration azurerm_network_manager_routing_configuration}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration azurerm_network_manager_routing_configuration}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfiguration.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the NetworkManagerRoutingConfi
 
 The id of the existing NetworkManagerRoutingConfiguration that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -840,10 +840,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerrou
 | <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#name NetworkManagerRoutingConfiguration#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationConfig.property.networkManagerId">NetworkManagerId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#network_manager_id NetworkManagerRoutingConfiguration#network_manager_id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#description NetworkManagerRoutingConfiguration#description}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#id NetworkManagerRoutingConfiguration#id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#name NetworkManagerRoutingConfiguration#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationConfig.property.networkManagerId">NetworkManagerId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#network_manager_id NetworkManagerRoutingConfiguration#network_manager_id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#description NetworkManagerRoutingConfiguration#description}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#id NetworkManagerRoutingConfiguration#id}. |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationTimeouts">NetworkManagerRoutingConfigurationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -926,7 +926,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#name NetworkManagerRoutingConfiguration#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#name NetworkManagerRoutingConfiguration#name}.
 
 ---
 
@@ -938,7 +938,7 @@ NetworkManagerId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#network_manager_id NetworkManagerRoutingConfiguration#network_manager_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#network_manager_id NetworkManagerRoutingConfiguration#network_manager_id}.
 
 ---
 
@@ -950,7 +950,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#description NetworkManagerRoutingConfiguration#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#description NetworkManagerRoutingConfiguration#description}.
 
 ---
 
@@ -962,7 +962,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#id NetworkManagerRoutingConfiguration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#id NetworkManagerRoutingConfiguration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -979,7 +979,7 @@ Timeouts NetworkManagerRoutingConfigurationTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#timeouts NetworkManagerRoutingConfiguration#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#timeouts NetworkManagerRoutingConfiguration#timeouts}
 
 ---
 
@@ -1002,10 +1002,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerrou
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#create NetworkManagerRoutingConfiguration#create}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#delete NetworkManagerRoutingConfiguration#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#read NetworkManagerRoutingConfiguration#read}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#update NetworkManagerRoutingConfiguration#update}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#create NetworkManagerRoutingConfiguration#create}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#delete NetworkManagerRoutingConfiguration#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#read NetworkManagerRoutingConfiguration#read}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerRoutingConfiguration.NetworkManagerRoutingConfigurationTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#update NetworkManagerRoutingConfiguration#update}. |
 
 ---
 
@@ -1017,7 +1017,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#create NetworkManagerRoutingConfiguration#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#create NetworkManagerRoutingConfiguration#create}.
 
 ---
 
@@ -1029,7 +1029,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#delete NetworkManagerRoutingConfiguration#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#delete NetworkManagerRoutingConfiguration#delete}.
 
 ---
 
@@ -1041,7 +1041,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#read NetworkManagerRoutingConfiguration#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#read NetworkManagerRoutingConfiguration#read}.
 
 ---
 
@@ -1053,7 +1053,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/network_manager_routing_configuration#update NetworkManagerRoutingConfiguration#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/network_manager_routing_configuration#update NetworkManagerRoutingConfiguration#update}.
 
 ---
 

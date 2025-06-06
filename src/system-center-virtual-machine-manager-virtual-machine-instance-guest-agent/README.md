@@ -1,3 +1,3 @@
 # `azurerm_system_center_virtual_machine_manager_virtual_machine_instance_guest_agent`
 
-Refer to the Terraform Registry for docs: [`azurerm_system_center_virtual_machine_manager_virtual_machine_instance_guest_agent`](https://registry.terraform.io/providers/hashicorp/azurerm/4.31.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_instance_guest_agent).
+Refer to the Terraform Registry for docs: [`azurerm_system_center_virtual_machine_manager_virtual_machine_instance_guest_agent`](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/system_center_virtual_machine_manager_virtual_machine_instance_guest_agent).

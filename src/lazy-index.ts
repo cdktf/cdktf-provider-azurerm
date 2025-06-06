@@ -763,6 +763,7 @@ Object.defineProperty(exports, 'proximityPlacementGroup', { get: function () { r
 Object.defineProperty(exports, 'publicIp', { get: function () { return require('./public-ip'); } });
 Object.defineProperty(exports, 'publicIpPrefix', { get: function () { return require('./public-ip-prefix'); } });
 Object.defineProperty(exports, 'purviewAccount', { get: function () { return require('./purview-account'); } });
+Object.defineProperty(exports, 'qumuloFileSystem', { get: function () { return require('./qumulo-file-system'); } });
 Object.defineProperty(exports, 'recoveryServicesVault', { get: function () { return require('./recovery-services-vault'); } });
 Object.defineProperty(exports, 'recoveryServicesVaultResourceGuardAssociation', { get: function () { return require('./recovery-services-vault-resource-guard-association'); } });
 Object.defineProperty(exports, 'redhatOpenshiftCluster', { get: function () { return require('./redhat-openshift-cluster'); } });
@@ -1194,6 +1195,8 @@ Object.defineProperty(exports, 'dataAzurermDatabricksWorkspacePrivateEndpointCon
 Object.defineProperty(exports, 'dataAzurermDedicatedHost', { get: function () { return require('./data-azurerm-dedicated-host'); } });
 Object.defineProperty(exports, 'dataAzurermDedicatedHostGroup', { get: function () { return require('./data-azurerm-dedicated-host-group'); } });
 Object.defineProperty(exports, 'dataAzurermDevCenter', { get: function () { return require('./data-azurerm-dev-center'); } });
+Object.defineProperty(exports, 'dataAzurermDevCenterProject', { get: function () { return require('./data-azurerm-dev-center-project'); } });
+Object.defineProperty(exports, 'dataAzurermDevCenterProjectEnvironmentType', { get: function () { return require('./data-azurerm-dev-center-project-environment-type'); } });
 Object.defineProperty(exports, 'dataAzurermDevTestLab', { get: function () { return require('./data-azurerm-dev-test-lab'); } });
 Object.defineProperty(exports, 'dataAzurermDevTestVirtualNetwork', { get: function () { return require('./data-azurerm-dev-test-virtual-network'); } });
 Object.defineProperty(exports, 'dataAzurermDigitalTwinsInstance', { get: function () { return require('./data-azurerm-digital-twins-instance'); } });
