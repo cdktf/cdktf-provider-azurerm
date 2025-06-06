@@ -763,6 +763,7 @@ export * as proximityPlacementGroup from './proximity-placement-group';
 export * as publicIp from './public-ip';
 export * as publicIpPrefix from './public-ip-prefix';
 export * as purviewAccount from './purview-account';
+export * as qumuloFileSystem from './qumulo-file-system';
 export * as recoveryServicesVault from './recovery-services-vault';
 export * as recoveryServicesVaultResourceGuardAssociation from './recovery-services-vault-resource-guard-association';
 export * as redhatOpenshiftCluster from './redhat-openshift-cluster';
@@ -1194,6 +1195,8 @@ export * as dataAzurermDatabricksWorkspacePrivateEndpointConnection from './data
 export * as dataAzurermDedicatedHost from './data-azurerm-dedicated-host';
 export * as dataAzurermDedicatedHostGroup from './data-azurerm-dedicated-host-group';
 export * as dataAzurermDevCenter from './data-azurerm-dev-center';
+export * as dataAzurermDevCenterProject from './data-azurerm-dev-center-project';
+export * as dataAzurermDevCenterProjectEnvironmentType from './data-azurerm-dev-center-project-environment-type';
 export * as dataAzurermDevTestLab from './data-azurerm-dev-test-lab';
 export * as dataAzurermDevTestVirtualNetwork from './data-azurerm-dev-test-virtual-network';
 export * as dataAzurermDigitalTwinsInstance from './data-azurerm-digital-twins-instance';
