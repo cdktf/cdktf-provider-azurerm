@@ -1,3 +1,3 @@
 # `azurerm_api_management_api_schema`
 
-Refer to the Terraform Registry for docs: [`azurerm_api_management_api_schema`](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/api_management_api_schema).
+Refer to the Terraform Registry for docs: [`azurerm_api_management_api_schema`](https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/api_management_api_schema).
