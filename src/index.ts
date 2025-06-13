@@ -1195,6 +1195,11 @@ export * as dataAzurermDatabricksWorkspacePrivateEndpointConnection from './data
 export * as dataAzurermDedicatedHost from './data-azurerm-dedicated-host';
 export * as dataAzurermDedicatedHostGroup from './data-azurerm-dedicated-host-group';
 export * as dataAzurermDevCenter from './data-azurerm-dev-center';
+export * as dataAzurermDevCenterAttachedNetwork from './data-azurerm-dev-center-attached-network';
+export * as dataAzurermDevCenterCatalog from './data-azurerm-dev-center-catalog';
+export * as dataAzurermDevCenterDevBoxDefinition from './data-azurerm-dev-center-dev-box-definition';
+export * as dataAzurermDevCenterGallery from './data-azurerm-dev-center-gallery';
+export * as dataAzurermDevCenterNetworkConnection from './data-azurerm-dev-center-network-connection';
 export * as dataAzurermDevCenterProject from './data-azurerm-dev-center-project';
 export * as dataAzurermDevCenterProjectEnvironmentType from './data-azurerm-dev-center-project-environment-type';
 export * as dataAzurermDevTestLab from './data-azurerm-dev-test-lab';

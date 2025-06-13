@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,92 +13,92 @@ import * as cdktf from 'cdktf';
 
 export interface OracleExadataInfrastructureConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#compute_count OracleExadataInfrastructure#compute_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#compute_count OracleExadataInfrastructure#compute_count}
   */
   readonly computeCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#customer_contacts OracleExadataInfrastructure#customer_contacts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#customer_contacts OracleExadataInfrastructure#customer_contacts}
   */
   readonly customerContacts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#display_name OracleExadataInfrastructure#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#display_name OracleExadataInfrastructure#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#id OracleExadataInfrastructure#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#id OracleExadataInfrastructure#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#location OracleExadataInfrastructure#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#location OracleExadataInfrastructure#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#name OracleExadataInfrastructure#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#name OracleExadataInfrastructure#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#resource_group_name OracleExadataInfrastructure#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#resource_group_name OracleExadataInfrastructure#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#shape OracleExadataInfrastructure#shape}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#shape OracleExadataInfrastructure#shape}
   */
   readonly shape: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#storage_count OracleExadataInfrastructure#storage_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#storage_count OracleExadataInfrastructure#storage_count}
   */
   readonly storageCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#tags OracleExadataInfrastructure#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#tags OracleExadataInfrastructure#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#zones OracleExadataInfrastructure#zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#zones OracleExadataInfrastructure#zones}
   */
   readonly zones: string[];
   /**
   * maintenance_window block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#maintenance_window OracleExadataInfrastructure#maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#maintenance_window OracleExadataInfrastructure#maintenance_window}
   */
   readonly maintenanceWindow?: OracleExadataInfrastructureMaintenanceWindow[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#timeouts OracleExadataInfrastructure#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#timeouts OracleExadataInfrastructure#timeouts}
   */
   readonly timeouts?: OracleExadataInfrastructureTimeouts;
 }
 export interface OracleExadataInfrastructureMaintenanceWindow {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#days_of_week OracleExadataInfrastructure#days_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#days_of_week OracleExadataInfrastructure#days_of_week}
   */
   readonly daysOfWeek?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#hours_of_day OracleExadataInfrastructure#hours_of_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#hours_of_day OracleExadataInfrastructure#hours_of_day}
   */
   readonly hoursOfDay?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#lead_time_in_weeks OracleExadataInfrastructure#lead_time_in_weeks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#lead_time_in_weeks OracleExadataInfrastructure#lead_time_in_weeks}
   */
   readonly leadTimeInWeeks?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#months OracleExadataInfrastructure#months}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#months OracleExadataInfrastructure#months}
   */
   readonly months?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#patching_mode OracleExadataInfrastructure#patching_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#patching_mode OracleExadataInfrastructure#patching_mode}
   */
   readonly patchingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#preference OracleExadataInfrastructure#preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#preference OracleExadataInfrastructure#preference}
   */
   readonly preference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#weeks_of_month OracleExadataInfrastructure#weeks_of_month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#weeks_of_month OracleExadataInfrastructure#weeks_of_month}
   */
   readonly weeksOfMonth?: number[];
 }
@@ -388,19 +388,19 @@ export class OracleExadataInfrastructureMaintenanceWindowList extends cdktf.Comp
 }
 export interface OracleExadataInfrastructureTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#create OracleExadataInfrastructure#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#create OracleExadataInfrastructure#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#delete OracleExadataInfrastructure#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#delete OracleExadataInfrastructure#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#read OracleExadataInfrastructure#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#read OracleExadataInfrastructure#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#update OracleExadataInfrastructure#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#update OracleExadataInfrastructure#update}
   */
   readonly update?: string;
 }
@@ -581,7 +581,7 @@ export class OracleExadataInfrastructureTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure azurerm_oracle_exadata_infrastructure}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure azurerm_oracle_exadata_infrastructure}
 */
 export class OracleExadataInfrastructure extends cdktf.TerraformResource {
 
@@ -597,7 +597,7 @@ export class OracleExadataInfrastructure extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a OracleExadataInfrastructure resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the OracleExadataInfrastructure to import
-  * @param importFromId The id of the existing OracleExadataInfrastructure that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing OracleExadataInfrastructure that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the OracleExadataInfrastructure to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -609,7 +609,7 @@ export class OracleExadataInfrastructure extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/oracle_exadata_infrastructure azurerm_oracle_exadata_infrastructure} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/oracle_exadata_infrastructure azurerm_oracle_exadata_infrastructure} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -620,7 +620,7 @@ export class OracleExadataInfrastructure extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_oracle_exadata_infrastructure',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.32.0',
+        providerVersion: '4.33.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1195,6 +1195,11 @@ Object.defineProperty(exports, 'dataAzurermDatabricksWorkspacePrivateEndpointCon
 Object.defineProperty(exports, 'dataAzurermDedicatedHost', { get: function () { return require('./data-azurerm-dedicated-host'); } });
 Object.defineProperty(exports, 'dataAzurermDedicatedHostGroup', { get: function () { return require('./data-azurerm-dedicated-host-group'); } });
 Object.defineProperty(exports, 'dataAzurermDevCenter', { get: function () { return require('./data-azurerm-dev-center'); } });
+Object.defineProperty(exports, 'dataAzurermDevCenterAttachedNetwork', { get: function () { return require('./data-azurerm-dev-center-attached-network'); } });
+Object.defineProperty(exports, 'dataAzurermDevCenterCatalog', { get: function () { return require('./data-azurerm-dev-center-catalog'); } });
+Object.defineProperty(exports, 'dataAzurermDevCenterDevBoxDefinition', { get: function () { return require('./data-azurerm-dev-center-dev-box-definition'); } });
+Object.defineProperty(exports, 'dataAzurermDevCenterGallery', { get: function () { return require('./data-azurerm-dev-center-gallery'); } });
+Object.defineProperty(exports, 'dataAzurermDevCenterNetworkConnection', { get: function () { return require('./data-azurerm-dev-center-network-connection'); } });
 Object.defineProperty(exports, 'dataAzurermDevCenterProject', { get: function () { return require('./data-azurerm-dev-center-project'); } });
 Object.defineProperty(exports, 'dataAzurermDevCenterProjectEnvironmentType', { get: function () { return require('./data-azurerm-dev-center-project-environment-type'); } });
 Object.defineProperty(exports, 'dataAzurermDevTestLab', { get: function () { return require('./data-azurerm-dev-test-lab'); } });

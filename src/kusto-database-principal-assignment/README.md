@@ -1,3 +1,3 @@
 # `azurerm_kusto_database_principal_assignment`
 
-Refer to the Terraform Registry for docs: [`azurerm_kusto_database_principal_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/4.32.0/docs/resources/kusto_database_principal_assignment).
+Refer to the Terraform Registry for docs: [`azurerm_kusto_database_principal_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_database_principal_assignment).
