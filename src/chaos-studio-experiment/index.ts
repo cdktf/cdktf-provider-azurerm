@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,56 +13,56 @@ import * as cdktf from 'cdktf';
 
 export interface ChaosStudioExperimentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#id ChaosStudioExperiment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#id ChaosStudioExperiment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#location ChaosStudioExperiment#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#location ChaosStudioExperiment#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#name ChaosStudioExperiment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#name ChaosStudioExperiment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#resource_group_name ChaosStudioExperiment#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#resource_group_name ChaosStudioExperiment#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#identity ChaosStudioExperiment#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#identity ChaosStudioExperiment#identity}
   */
   readonly identity?: ChaosStudioExperimentIdentity;
   /**
   * selectors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#selectors ChaosStudioExperiment#selectors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#selectors ChaosStudioExperiment#selectors}
   */
   readonly selectors: ChaosStudioExperimentSelectors[] | cdktf.IResolvable;
   /**
   * steps block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#steps ChaosStudioExperiment#steps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#steps ChaosStudioExperiment#steps}
   */
   readonly steps: ChaosStudioExperimentSteps[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#timeouts ChaosStudioExperiment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#timeouts ChaosStudioExperiment#timeouts}
   */
   readonly timeouts?: ChaosStudioExperimentTimeouts;
 }
 export interface ChaosStudioExperimentIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#identity_ids ChaosStudioExperiment#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#identity_ids ChaosStudioExperiment#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#type ChaosStudioExperiment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#type ChaosStudioExperiment#type}
   */
   readonly type: string;
 }
@@ -182,11 +182,11 @@ export class ChaosStudioExperimentIdentityOutputReference extends cdktf.ComplexO
 }
 export interface ChaosStudioExperimentSelectors {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#chaos_studio_target_ids ChaosStudioExperiment#chaos_studio_target_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#chaos_studio_target_ids ChaosStudioExperiment#chaos_studio_target_ids}
   */
   readonly chaosStudioTargetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#name ChaosStudioExperiment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#name ChaosStudioExperiment#name}
   */
   readonly name: string;
 }
@@ -325,23 +325,23 @@ export class ChaosStudioExperimentSelectorsList extends cdktf.ComplexList {
 }
 export interface ChaosStudioExperimentStepsBranchActions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#action_type ChaosStudioExperiment#action_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#action_type ChaosStudioExperiment#action_type}
   */
   readonly actionType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#duration ChaosStudioExperiment#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#duration ChaosStudioExperiment#duration}
   */
   readonly duration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#parameters ChaosStudioExperiment#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#parameters ChaosStudioExperiment#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#selector_name ChaosStudioExperiment#selector_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#selector_name ChaosStudioExperiment#selector_name}
   */
   readonly selectorName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#urn ChaosStudioExperiment#urn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#urn ChaosStudioExperiment#urn}
   */
   readonly urn?: string;
 }
@@ -570,13 +570,13 @@ export class ChaosStudioExperimentStepsBranchActionsList extends cdktf.ComplexLi
 }
 export interface ChaosStudioExperimentStepsBranch {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#name ChaosStudioExperiment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#name ChaosStudioExperiment#name}
   */
   readonly name: string;
   /**
   * actions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#actions ChaosStudioExperiment#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#actions ChaosStudioExperiment#actions}
   */
   readonly actions: ChaosStudioExperimentStepsBranchActions[] | cdktf.IResolvable;
 }
@@ -715,13 +715,13 @@ export class ChaosStudioExperimentStepsBranchList extends cdktf.ComplexList {
 }
 export interface ChaosStudioExperimentSteps {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#name ChaosStudioExperiment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#name ChaosStudioExperiment#name}
   */
   readonly name: string;
   /**
   * branch block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#branch ChaosStudioExperiment#branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#branch ChaosStudioExperiment#branch}
   */
   readonly branch: ChaosStudioExperimentStepsBranch[] | cdktf.IResolvable;
 }
@@ -860,19 +860,19 @@ export class ChaosStudioExperimentStepsList extends cdktf.ComplexList {
 }
 export interface ChaosStudioExperimentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#create ChaosStudioExperiment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#create ChaosStudioExperiment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#delete ChaosStudioExperiment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#delete ChaosStudioExperiment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#read ChaosStudioExperiment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#read ChaosStudioExperiment#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#update ChaosStudioExperiment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#update ChaosStudioExperiment#update}
   */
   readonly update?: string;
 }
@@ -1053,7 +1053,7 @@ export class ChaosStudioExperimentTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment azurerm_chaos_studio_experiment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment azurerm_chaos_studio_experiment}
 */
 export class ChaosStudioExperiment extends cdktf.TerraformResource {
 
@@ -1069,7 +1069,7 @@ export class ChaosStudioExperiment extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ChaosStudioExperiment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ChaosStudioExperiment to import
-  * @param importFromId The id of the existing ChaosStudioExperiment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ChaosStudioExperiment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ChaosStudioExperiment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1081,7 +1081,7 @@ export class ChaosStudioExperiment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/chaos_studio_experiment azurerm_chaos_studio_experiment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/chaos_studio_experiment azurerm_chaos_studio_experiment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1092,7 +1092,7 @@ export class ChaosStudioExperiment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_chaos_studio_experiment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.33.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +13,58 @@ import * as cdktf from 'cdktf';
 
 export interface KustoClusterCustomerManagedKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key#cluster_id KustoClusterCustomerManagedKey#cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key#cluster_id KustoClusterCustomerManagedKey#cluster_id}
   */
   readonly clusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key#id KustoClusterCustomerManagedKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key#id KustoClusterCustomerManagedKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key#key_name KustoClusterCustomerManagedKey#key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key#key_name KustoClusterCustomerManagedKey#key_name}
   */
-  readonly keyName: string;
+  readonly keyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key#key_vault_id KustoClusterCustomerManagedKey#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key#key_vault_id KustoClusterCustomerManagedKey#key_vault_id}
   */
-  readonly keyVaultId: string;
+  readonly keyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key#key_version KustoClusterCustomerManagedKey#key_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key#key_version KustoClusterCustomerManagedKey#key_version}
   */
   readonly keyVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key#user_identity KustoClusterCustomerManagedKey#user_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key#managed_hsm_key_id KustoClusterCustomerManagedKey#managed_hsm_key_id}
+  */
+  readonly managedHsmKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key#user_identity KustoClusterCustomerManagedKey#user_identity}
   */
   readonly userIdentity?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key#timeouts KustoClusterCustomerManagedKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key#timeouts KustoClusterCustomerManagedKey#timeouts}
   */
   readonly timeouts?: KustoClusterCustomerManagedKeyTimeouts;
 }
 export interface KustoClusterCustomerManagedKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key#create KustoClusterCustomerManagedKey#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key#create KustoClusterCustomerManagedKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key#delete KustoClusterCustomerManagedKey#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key#delete KustoClusterCustomerManagedKey#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key#read KustoClusterCustomerManagedKey#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key#read KustoClusterCustomerManagedKey#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key#update KustoClusterCustomerManagedKey#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key#update KustoClusterCustomerManagedKey#update}
   */
   readonly update?: string;
 }
@@ -241,7 +245,7 @@ export class KustoClusterCustomerManagedKeyTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key azurerm_kusto_cluster_customer_managed_key}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key azurerm_kusto_cluster_customer_managed_key}
 */
 export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
 
@@ -257,7 +261,7 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a KustoClusterCustomerManagedKey resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the KustoClusterCustomerManagedKey to import
-  * @param importFromId The id of the existing KustoClusterCustomerManagedKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing KustoClusterCustomerManagedKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the KustoClusterCustomerManagedKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -269,7 +273,7 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.33.0/docs/resources/kusto_cluster_customer_managed_key azurerm_kusto_cluster_customer_managed_key} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kusto_cluster_customer_managed_key azurerm_kusto_cluster_customer_managed_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -280,7 +284,7 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kusto_cluster_customer_managed_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.33.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -296,6 +300,7 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
     this._keyName = config.keyName;
     this._keyVaultId = config.keyVaultId;
     this._keyVersion = config.keyVersion;
+    this._managedHsmKeyId = config.managedHsmKeyId;
     this._userIdentity = config.userIdentity;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -333,7 +338,7 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
     return this._id;
   }
 
-  // key_name - computed: false, optional: false, required: true
+  // key_name - computed: false, optional: true, required: false
   private _keyName?: string; 
   public get keyName() {
     return this.getStringAttribute('key_name');
@@ -341,18 +346,24 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
   public set keyName(value: string) {
     this._keyName = value;
   }
+  public resetKeyName() {
+    this._keyName = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get keyNameInput() {
     return this._keyName;
   }
 
-  // key_vault_id - computed: false, optional: false, required: true
+  // key_vault_id - computed: false, optional: true, required: false
   private _keyVaultId?: string; 
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
   }
   public set keyVaultId(value: string) {
     this._keyVaultId = value;
+  }
+  public resetKeyVaultId() {
+    this._keyVaultId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get keyVaultIdInput() {
@@ -373,6 +384,22 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get keyVersionInput() {
     return this._keyVersion;
+  }
+
+  // managed_hsm_key_id - computed: false, optional: true, required: false
+  private _managedHsmKeyId?: string; 
+  public get managedHsmKeyId() {
+    return this.getStringAttribute('managed_hsm_key_id');
+  }
+  public set managedHsmKeyId(value: string) {
+    this._managedHsmKeyId = value;
+  }
+  public resetManagedHsmKeyId() {
+    this._managedHsmKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedHsmKeyIdInput() {
+    return this._managedHsmKeyId;
   }
 
   // user_identity - computed: false, optional: true, required: false
@@ -418,6 +445,7 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
       key_name: cdktf.stringToTerraform(this._keyName),
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
       key_version: cdktf.stringToTerraform(this._keyVersion),
+      managed_hsm_key_id: cdktf.stringToTerraform(this._managedHsmKeyId),
       user_identity: cdktf.stringToTerraform(this._userIdentity),
       timeouts: kustoClusterCustomerManagedKeyTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -451,6 +479,12 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
       },
       key_version: {
         value: cdktf.stringToHclTerraform(this._keyVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      managed_hsm_key_id: {
+        value: cdktf.stringToHclTerraform(this._managedHsmKeyId),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

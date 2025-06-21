@@ -1198,10 +1198,12 @@ Object.defineProperty(exports, 'dataAzurermDevCenter', { get: function () { retu
 Object.defineProperty(exports, 'dataAzurermDevCenterAttachedNetwork', { get: function () { return require('./data-azurerm-dev-center-attached-network'); } });
 Object.defineProperty(exports, 'dataAzurermDevCenterCatalog', { get: function () { return require('./data-azurerm-dev-center-catalog'); } });
 Object.defineProperty(exports, 'dataAzurermDevCenterDevBoxDefinition', { get: function () { return require('./data-azurerm-dev-center-dev-box-definition'); } });
+Object.defineProperty(exports, 'dataAzurermDevCenterEnvironmentType', { get: function () { return require('./data-azurerm-dev-center-environment-type'); } });
 Object.defineProperty(exports, 'dataAzurermDevCenterGallery', { get: function () { return require('./data-azurerm-dev-center-gallery'); } });
 Object.defineProperty(exports, 'dataAzurermDevCenterNetworkConnection', { get: function () { return require('./data-azurerm-dev-center-network-connection'); } });
 Object.defineProperty(exports, 'dataAzurermDevCenterProject', { get: function () { return require('./data-azurerm-dev-center-project'); } });
 Object.defineProperty(exports, 'dataAzurermDevCenterProjectEnvironmentType', { get: function () { return require('./data-azurerm-dev-center-project-environment-type'); } });
+Object.defineProperty(exports, 'dataAzurermDevCenterProjectPool', { get: function () { return require('./data-azurerm-dev-center-project-pool'); } });
 Object.defineProperty(exports, 'dataAzurermDevTestLab', { get: function () { return require('./data-azurerm-dev-test-lab'); } });
 Object.defineProperty(exports, 'dataAzurermDevTestVirtualNetwork', { get: function () { return require('./data-azurerm-dev-test-virtual-network'); } });
 Object.defineProperty(exports, 'dataAzurermDigitalTwinsInstance', { get: function () { return require('./data-azurerm-digital-twins-instance'); } });
