@@ -372,6 +372,7 @@ Object.defineProperty(exports, 'elasticSanVolume', { get: function () { return r
 Object.defineProperty(exports, 'elasticSanVolumeGroup', { get: function () { return require('./elastic-san-volume-group'); } });
 Object.defineProperty(exports, 'emailCommunicationService', { get: function () { return require('./email-communication-service'); } });
 Object.defineProperty(exports, 'emailCommunicationServiceDomain', { get: function () { return require('./email-communication-service-domain'); } });
+Object.defineProperty(exports, 'emailCommunicationServiceDomainSenderUsername', { get: function () { return require('./email-communication-service-domain-sender-username'); } });
 Object.defineProperty(exports, 'eventgridDomain', { get: function () { return require('./eventgrid-domain'); } });
 Object.defineProperty(exports, 'eventgridDomainTopic', { get: function () { return require('./eventgrid-domain-topic'); } });
 Object.defineProperty(exports, 'eventgridEventSubscription', { get: function () { return require('./eventgrid-event-subscription'); } });
@@ -573,6 +574,7 @@ Object.defineProperty(exports, 'managementGroup', { get: function () { return re
 Object.defineProperty(exports, 'managementGroupPolicyAssignment', { get: function () { return require('./management-group-policy-assignment'); } });
 Object.defineProperty(exports, 'managementGroupPolicyExemption', { get: function () { return require('./management-group-policy-exemption'); } });
 Object.defineProperty(exports, 'managementGroupPolicyRemediation', { get: function () { return require('./management-group-policy-remediation'); } });
+Object.defineProperty(exports, 'managementGroupPolicySetDefinition', { get: function () { return require('./management-group-policy-set-definition'); } });
 Object.defineProperty(exports, 'managementGroupSubscriptionAssociation', { get: function () { return require('./management-group-subscription-association'); } });
 Object.defineProperty(exports, 'managementGroupTemplateDeployment', { get: function () { return require('./management-group-template-deployment'); } });
 Object.defineProperty(exports, 'managementLock', { get: function () { return require('./management-lock'); } });

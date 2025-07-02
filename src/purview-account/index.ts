@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface PurviewAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#id PurviewAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#id PurviewAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#location PurviewAccount#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#location PurviewAccount#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#managed_resource_group_name PurviewAccount#managed_resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#managed_event_hub_enabled PurviewAccount#managed_event_hub_enabled}
+  */
+  readonly managedEventHubEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#managed_resource_group_name PurviewAccount#managed_resource_group_name}
   */
   readonly managedResourceGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#name PurviewAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#name PurviewAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#public_network_enabled PurviewAccount#public_network_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#public_network_enabled PurviewAccount#public_network_enabled}
   */
   readonly publicNetworkEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#resource_group_name PurviewAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#resource_group_name PurviewAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#tags PurviewAccount#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#tags PurviewAccount#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#identity PurviewAccount#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#identity PurviewAccount#identity}
   */
   readonly identity: PurviewAccountIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#timeouts PurviewAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#timeouts PurviewAccount#timeouts}
   */
   readonly timeouts?: PurviewAccountTimeouts;
 }
@@ -143,11 +147,11 @@ export class PurviewAccountManagedResourcesList extends cdktf.ComplexList {
 }
 export interface PurviewAccountIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#identity_ids PurviewAccount#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#identity_ids PurviewAccount#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#type PurviewAccount#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#type PurviewAccount#type}
   */
   readonly type: string;
 }
@@ -267,19 +271,19 @@ export class PurviewAccountIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface PurviewAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#create PurviewAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#create PurviewAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#delete PurviewAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#delete PurviewAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#read PurviewAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#read PurviewAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#update PurviewAccount#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#update PurviewAccount#update}
   */
   readonly update?: string;
 }
@@ -460,7 +464,7 @@ export class PurviewAccountTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account azurerm_purview_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account azurerm_purview_account}
 */
 export class PurviewAccount extends cdktf.TerraformResource {
 
@@ -476,7 +480,7 @@ export class PurviewAccount extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a PurviewAccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the PurviewAccount to import
-  * @param importFromId The id of the existing PurviewAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing PurviewAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the PurviewAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -488,7 +492,7 @@ export class PurviewAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/purview_account azurerm_purview_account} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/purview_account azurerm_purview_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -499,7 +503,7 @@ export class PurviewAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_purview_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.34.0',
+        providerVersion: '4.35.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -512,6 +516,7 @@ export class PurviewAccount extends cdktf.TerraformResource {
     });
     this._id = config.id;
     this._location = config.location;
+    this._managedEventHubEnabled = config.managedEventHubEnabled;
     this._managedResourceGroupName = config.managedResourceGroupName;
     this._name = config.name;
     this._publicNetworkEnabled = config.publicNetworkEnabled;
@@ -533,6 +538,11 @@ export class PurviewAccount extends cdktf.TerraformResource {
   // atlas_kafka_endpoint_secondary_connection_string - computed: true, optional: false, required: false
   public get atlasKafkaEndpointSecondaryConnectionString() {
     return this.getStringAttribute('atlas_kafka_endpoint_secondary_connection_string');
+  }
+
+  // aws_external_id - computed: true, optional: false, required: false
+  public get awsExternalId() {
+    return this.getStringAttribute('aws_external_id');
   }
 
   // catalog_endpoint - computed: true, optional: false, required: false
@@ -572,6 +582,22 @@ export class PurviewAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // managed_event_hub_enabled - computed: false, optional: true, required: false
+  private _managedEventHubEnabled?: boolean | cdktf.IResolvable; 
+  public get managedEventHubEnabled() {
+    return this.getBooleanAttribute('managed_event_hub_enabled');
+  }
+  public set managedEventHubEnabled(value: boolean | cdktf.IResolvable) {
+    this._managedEventHubEnabled = value;
+  }
+  public resetManagedEventHubEnabled() {
+    this._managedEventHubEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedEventHubEnabledInput() {
+    return this._managedEventHubEnabled;
   }
 
   // managed_resource_group_name - computed: true, optional: true, required: false
@@ -696,6 +722,7 @@ export class PurviewAccount extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
+      managed_event_hub_enabled: cdktf.booleanToTerraform(this._managedEventHubEnabled),
       managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
       name: cdktf.stringToTerraform(this._name),
       public_network_enabled: cdktf.booleanToTerraform(this._publicNetworkEnabled),
@@ -719,6 +746,12 @@ export class PurviewAccount extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      managed_event_hub_enabled: {
+        value: cdktf.booleanToHclTerraform(this._managedEventHubEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       managed_resource_group_name: {
         value: cdktf.stringToHclTerraform(this._managedResourceGroupName),
