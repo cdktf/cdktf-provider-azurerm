@@ -4,7 +4,7 @@
 
 ### NetworkManagerStaticMember <a name="NetworkManagerStaticMember" id="@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member azurerm_network_manager_static_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member azurerm_network_manager_static_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember.Initializer"></a>
 
@@ -40,10 +40,10 @@ networkManagerStaticMember.NetworkManagerStaticMember(
 | <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#name NetworkManagerStaticMember#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember.Initializer.parameter.networkGroupId">network_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#network_group_id NetworkManagerStaticMember#network_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember.Initializer.parameter.targetVirtualNetworkId">target_virtual_network_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#target_virtual_network_id NetworkManagerStaticMember#target_virtual_network_id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#id NetworkManagerStaticMember#id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#name NetworkManagerStaticMember#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember.Initializer.parameter.networkGroupId">network_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#network_group_id NetworkManagerStaticMember#network_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember.Initializer.parameter.targetVirtualNetworkId">target_virtual_network_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#target_virtual_network_id NetworkManagerStaticMember#target_virtual_network_id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#id NetworkManagerStaticMember#id}. |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMember.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberTimeouts">NetworkManagerStaticMemberTimeouts</a></code> | timeouts block. |
 
 ---
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#name NetworkManagerStaticMember#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#name NetworkManagerStaticMember#name}.
 
 ---
 
@@ -120,7 +120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#network_group_id NetworkManagerStaticMember#network_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#network_group_id NetworkManagerStaticMember#network_group_id}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#target_virtual_network_id NetworkManagerStaticMember#target_virtual_network_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#target_virtual_network_id NetworkManagerStaticMember#target_virtual_network_id}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#id NetworkManagerStaticMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#id NetworkManagerStaticMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -149,7 +149,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#timeouts NetworkManagerStaticMember#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#timeouts NetworkManagerStaticMember#timeouts}
 
 ---
 
@@ -525,7 +525,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#create NetworkManagerStaticMember#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#create NetworkManagerStaticMember#create}.
 
 ---
 
@@ -533,7 +533,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#delete NetworkManagerStaticMember#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#delete NetworkManagerStaticMember#delete}.
 
 ---
 
@@ -541,7 +541,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#read NetworkManagerStaticMember#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#read NetworkManagerStaticMember#read}.
 
 ---
 
@@ -671,7 +671,7 @@ The construct id used in the generated config for the NetworkManagerStaticMember
 
 The id of the existing NetworkManagerStaticMember that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1021,10 +1021,10 @@ networkManagerStaticMember.NetworkManagerStaticMemberConfig(
 | <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#name NetworkManagerStaticMember#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberConfig.property.networkGroupId">network_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#network_group_id NetworkManagerStaticMember#network_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberConfig.property.targetVirtualNetworkId">target_virtual_network_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#target_virtual_network_id NetworkManagerStaticMember#target_virtual_network_id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#id NetworkManagerStaticMember#id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#name NetworkManagerStaticMember#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberConfig.property.networkGroupId">network_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#network_group_id NetworkManagerStaticMember#network_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberConfig.property.targetVirtualNetworkId">target_virtual_network_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#target_virtual_network_id NetworkManagerStaticMember#target_virtual_network_id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#id NetworkManagerStaticMember#id}. |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberTimeouts">NetworkManagerStaticMemberTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1107,7 +1107,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#name NetworkManagerStaticMember#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#name NetworkManagerStaticMember#name}.
 
 ---
 
@@ -1119,7 +1119,7 @@ network_group_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#network_group_id NetworkManagerStaticMember#network_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#network_group_id NetworkManagerStaticMember#network_group_id}.
 
 ---
 
@@ -1131,7 +1131,7 @@ target_virtual_network_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#target_virtual_network_id NetworkManagerStaticMember#target_virtual_network_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#target_virtual_network_id NetworkManagerStaticMember#target_virtual_network_id}.
 
 ---
 
@@ -1143,7 +1143,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#id NetworkManagerStaticMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#id NetworkManagerStaticMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1160,7 +1160,7 @@ timeouts: NetworkManagerStaticMemberTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#timeouts NetworkManagerStaticMember#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#timeouts NetworkManagerStaticMember#timeouts}
 
 ---
 
@@ -1182,9 +1182,9 @@ networkManagerStaticMember.NetworkManagerStaticMemberTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#create NetworkManagerStaticMember#create}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#delete NetworkManagerStaticMember#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#read NetworkManagerStaticMember#read}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#create NetworkManagerStaticMember#create}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#delete NetworkManagerStaticMember#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerStaticMember.NetworkManagerStaticMemberTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#read NetworkManagerStaticMember#read}. |
 
 ---
 
@@ -1196,7 +1196,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#create NetworkManagerStaticMember#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#create NetworkManagerStaticMember#create}.
 
 ---
 
@@ -1208,7 +1208,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#delete NetworkManagerStaticMember#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#delete NetworkManagerStaticMember#delete}.
 
 ---
 
@@ -1220,7 +1220,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/network_manager_static_member#read NetworkManagerStaticMember#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_static_member#read NetworkManagerStaticMember#read}.
 
 ---
 
