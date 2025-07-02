@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,78 +13,78 @@ import * as cdktf from 'cdktf';
 
 export interface DevTestScheduleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#id DevTestSchedule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#id DevTestSchedule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#lab_name DevTestSchedule#lab_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#lab_name DevTestSchedule#lab_name}
   */
   readonly labName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#location DevTestSchedule#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#location DevTestSchedule#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#name DevTestSchedule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#name DevTestSchedule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#resource_group_name DevTestSchedule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#resource_group_name DevTestSchedule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#status DevTestSchedule#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#status DevTestSchedule#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#tags DevTestSchedule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#tags DevTestSchedule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#task_type DevTestSchedule#task_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#task_type DevTestSchedule#task_type}
   */
   readonly taskType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#time_zone_id DevTestSchedule#time_zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#time_zone_id DevTestSchedule#time_zone_id}
   */
   readonly timeZoneId: string;
   /**
   * daily_recurrence block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#daily_recurrence DevTestSchedule#daily_recurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#daily_recurrence DevTestSchedule#daily_recurrence}
   */
   readonly dailyRecurrence?: DevTestScheduleDailyRecurrence;
   /**
   * hourly_recurrence block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#hourly_recurrence DevTestSchedule#hourly_recurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#hourly_recurrence DevTestSchedule#hourly_recurrence}
   */
   readonly hourlyRecurrence?: DevTestScheduleHourlyRecurrence;
   /**
   * notification_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#notification_settings DevTestSchedule#notification_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#notification_settings DevTestSchedule#notification_settings}
   */
   readonly notificationSettings: DevTestScheduleNotificationSettings;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#timeouts DevTestSchedule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#timeouts DevTestSchedule#timeouts}
   */
   readonly timeouts?: DevTestScheduleTimeouts;
   /**
   * weekly_recurrence block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#weekly_recurrence DevTestSchedule#weekly_recurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#weekly_recurrence DevTestSchedule#weekly_recurrence}
   */
   readonly weeklyRecurrence?: DevTestScheduleWeeklyRecurrence;
 }
 export interface DevTestScheduleDailyRecurrence {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#time DevTestSchedule#time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#time DevTestSchedule#time}
   */
   readonly time: string;
 }
@@ -165,7 +165,7 @@ export class DevTestScheduleDailyRecurrenceOutputReference extends cdktf.Complex
 }
 export interface DevTestScheduleHourlyRecurrence {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#minute DevTestSchedule#minute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#minute DevTestSchedule#minute}
   */
   readonly minute: number;
 }
@@ -246,15 +246,15 @@ export class DevTestScheduleHourlyRecurrenceOutputReference extends cdktf.Comple
 }
 export interface DevTestScheduleNotificationSettings {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#status DevTestSchedule#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#status DevTestSchedule#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#time_in_minutes DevTestSchedule#time_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#time_in_minutes DevTestSchedule#time_in_minutes}
   */
   readonly timeInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#webhook_url DevTestSchedule#webhook_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#webhook_url DevTestSchedule#webhook_url}
   */
   readonly webhookUrl?: string;
 }
@@ -396,19 +396,19 @@ export class DevTestScheduleNotificationSettingsOutputReference extends cdktf.Co
 }
 export interface DevTestScheduleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#create DevTestSchedule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#create DevTestSchedule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#delete DevTestSchedule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#delete DevTestSchedule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#read DevTestSchedule#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#read DevTestSchedule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#update DevTestSchedule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#update DevTestSchedule#update}
   */
   readonly update?: string;
 }
@@ -589,11 +589,11 @@ export class DevTestScheduleTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 export interface DevTestScheduleWeeklyRecurrence {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#time DevTestSchedule#time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#time DevTestSchedule#time}
   */
   readonly time: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#week_days DevTestSchedule#week_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#week_days DevTestSchedule#week_days}
   */
   readonly weekDays?: string[];
 }
@@ -703,7 +703,7 @@ export class DevTestScheduleWeeklyRecurrenceOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule azurerm_dev_test_schedule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule azurerm_dev_test_schedule}
 */
 export class DevTestSchedule extends cdktf.TerraformResource {
 
@@ -719,7 +719,7 @@ export class DevTestSchedule extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DevTestSchedule resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DevTestSchedule to import
-  * @param importFromId The id of the existing DevTestSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DevTestSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DevTestSchedule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -731,7 +731,7 @@ export class DevTestSchedule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/dev_test_schedule azurerm_dev_test_schedule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/dev_test_schedule azurerm_dev_test_schedule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -742,7 +742,7 @@ export class DevTestSchedule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dev_test_schedule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.34.0',
+        providerVersion: '4.35.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

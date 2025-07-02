@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +13,46 @@ import * as cdktf from 'cdktf';
 
 export interface KubernetesFleetUpdateRunConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#fleet_update_strategy_id KubernetesFleetUpdateRun#fleet_update_strategy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#fleet_update_strategy_id KubernetesFleetUpdateRun#fleet_update_strategy_id}
   */
   readonly fleetUpdateStrategyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#id KubernetesFleetUpdateRun#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#id KubernetesFleetUpdateRun#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#kubernetes_fleet_manager_id KubernetesFleetUpdateRun#kubernetes_fleet_manager_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#kubernetes_fleet_manager_id KubernetesFleetUpdateRun#kubernetes_fleet_manager_id}
   */
   readonly kubernetesFleetManagerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#name KubernetesFleetUpdateRun#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#name KubernetesFleetUpdateRun#name}
   */
   readonly name: string;
   /**
   * managed_cluster_update block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#managed_cluster_update KubernetesFleetUpdateRun#managed_cluster_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#managed_cluster_update KubernetesFleetUpdateRun#managed_cluster_update}
   */
   readonly managedClusterUpdate: KubernetesFleetUpdateRunManagedClusterUpdate;
   /**
   * stage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#stage KubernetesFleetUpdateRun#stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#stage KubernetesFleetUpdateRun#stage}
   */
   readonly stage?: KubernetesFleetUpdateRunStage[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#timeouts KubernetesFleetUpdateRun#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#timeouts KubernetesFleetUpdateRun#timeouts}
   */
   readonly timeouts?: KubernetesFleetUpdateRunTimeouts;
 }
 export interface KubernetesFleetUpdateRunManagedClusterUpdateNodeImageSelection {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#type KubernetesFleetUpdateRun#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#type KubernetesFleetUpdateRun#type}
   */
   readonly type: string;
 }
@@ -133,11 +133,11 @@ export class KubernetesFleetUpdateRunManagedClusterUpdateNodeImageSelectionOutpu
 }
 export interface KubernetesFleetUpdateRunManagedClusterUpdateUpgrade {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#kubernetes_version KubernetesFleetUpdateRun#kubernetes_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#kubernetes_version KubernetesFleetUpdateRun#kubernetes_version}
   */
   readonly kubernetesVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#type KubernetesFleetUpdateRun#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#type KubernetesFleetUpdateRun#type}
   */
   readonly type: string;
 }
@@ -249,13 +249,13 @@ export interface KubernetesFleetUpdateRunManagedClusterUpdate {
   /**
   * node_image_selection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#node_image_selection KubernetesFleetUpdateRun#node_image_selection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#node_image_selection KubernetesFleetUpdateRun#node_image_selection}
   */
   readonly nodeImageSelection?: KubernetesFleetUpdateRunManagedClusterUpdateNodeImageSelection;
   /**
   * upgrade block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#upgrade KubernetesFleetUpdateRun#upgrade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#upgrade KubernetesFleetUpdateRun#upgrade}
   */
   readonly upgrade: KubernetesFleetUpdateRunManagedClusterUpdateUpgrade;
 }
@@ -365,7 +365,7 @@ export class KubernetesFleetUpdateRunManagedClusterUpdateOutputReference extends
 }
 export interface KubernetesFleetUpdateRunStageGroup {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#name KubernetesFleetUpdateRun#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#name KubernetesFleetUpdateRun#name}
   */
   readonly name: string;
 }
@@ -478,17 +478,17 @@ export class KubernetesFleetUpdateRunStageGroupList extends cdktf.ComplexList {
 }
 export interface KubernetesFleetUpdateRunStage {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#after_stage_wait_in_seconds KubernetesFleetUpdateRun#after_stage_wait_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#after_stage_wait_in_seconds KubernetesFleetUpdateRun#after_stage_wait_in_seconds}
   */
   readonly afterStageWaitInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#name KubernetesFleetUpdateRun#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#name KubernetesFleetUpdateRun#name}
   */
   readonly name: string;
   /**
   * group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#group KubernetesFleetUpdateRun#group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#group KubernetesFleetUpdateRun#group}
   */
   readonly group: KubernetesFleetUpdateRunStageGroup[] | cdktf.IResolvable;
 }
@@ -656,19 +656,19 @@ export class KubernetesFleetUpdateRunStageList extends cdktf.ComplexList {
 }
 export interface KubernetesFleetUpdateRunTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#create KubernetesFleetUpdateRun#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#create KubernetesFleetUpdateRun#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#delete KubernetesFleetUpdateRun#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#delete KubernetesFleetUpdateRun#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#read KubernetesFleetUpdateRun#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#read KubernetesFleetUpdateRun#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#update KubernetesFleetUpdateRun#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#update KubernetesFleetUpdateRun#update}
   */
   readonly update?: string;
 }
@@ -849,7 +849,7 @@ export class KubernetesFleetUpdateRunTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run azurerm_kubernetes_fleet_update_run}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run azurerm_kubernetes_fleet_update_run}
 */
 export class KubernetesFleetUpdateRun extends cdktf.TerraformResource {
 
@@ -865,7 +865,7 @@ export class KubernetesFleetUpdateRun extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a KubernetesFleetUpdateRun resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the KubernetesFleetUpdateRun to import
-  * @param importFromId The id of the existing KubernetesFleetUpdateRun that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing KubernetesFleetUpdateRun that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the KubernetesFleetUpdateRun to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -877,7 +877,7 @@ export class KubernetesFleetUpdateRun extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/resources/kubernetes_fleet_update_run azurerm_kubernetes_fleet_update_run} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/kubernetes_fleet_update_run azurerm_kubernetes_fleet_update_run} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -888,7 +888,7 @@ export class KubernetesFleetUpdateRun extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_fleet_update_run',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.34.0',
+        providerVersion: '4.35.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

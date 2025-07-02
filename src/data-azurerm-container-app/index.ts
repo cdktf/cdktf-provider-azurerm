@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/data-sources/container_app
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/container_app
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermContainerAppConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/data-sources/container_app#id DataAzurermContainerApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/container_app#id DataAzurermContainerApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/data-sources/container_app#name DataAzurermContainerApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/container_app#name DataAzurermContainerApp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/data-sources/container_app#resource_group_name DataAzurermContainerApp#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/container_app#resource_group_name DataAzurermContainerApp#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/data-sources/container_app#timeouts DataAzurermContainerApp#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/container_app#timeouts DataAzurermContainerApp#timeouts}
   */
   readonly timeouts?: DataAzurermContainerAppTimeouts;
 }
@@ -207,6 +207,106 @@ export class DataAzurermContainerAppIdentityList extends cdktf.ComplexList {
   */
   public get(index: number): DataAzurermContainerAppIdentityOutputReference {
     return new DataAzurermContainerAppIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermContainerAppIngressCors {
+}
+
+export function dataAzurermContainerAppIngressCorsToTerraform(struct?: DataAzurermContainerAppIngressCors): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataAzurermContainerAppIngressCorsToHclTerraform(struct?: DataAzurermContainerAppIngressCors): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataAzurermContainerAppIngressCorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermContainerAppIngressCors | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermContainerAppIngressCors | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // allow_credentials_enabled - computed: true, optional: false, required: false
+  public get allowCredentialsEnabled() {
+    return this.getBooleanAttribute('allow_credentials_enabled');
+  }
+
+  // allowed_headers - computed: true, optional: false, required: false
+  public get allowedHeaders() {
+    return this.getListAttribute('allowed_headers');
+  }
+
+  // allowed_methods - computed: true, optional: false, required: false
+  public get allowedMethods() {
+    return this.getListAttribute('allowed_methods');
+  }
+
+  // allowed_origins - computed: true, optional: false, required: false
+  public get allowedOrigins() {
+    return this.getListAttribute('allowed_origins');
+  }
+
+  // exposed_headers - computed: true, optional: false, required: false
+  public get exposedHeaders() {
+    return this.getListAttribute('exposed_headers');
+  }
+
+  // max_age_in_seconds - computed: true, optional: false, required: false
+  public get maxAgeInSeconds() {
+    return this.getNumberAttribute('max_age_in_seconds');
+  }
+}
+
+export class DataAzurermContainerAppIngressCorsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermContainerAppIngressCorsOutputReference {
+    return new DataAzurermContainerAppIngressCorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermContainerAppIngressCustomDomain {
@@ -533,6 +633,12 @@ export class DataAzurermContainerAppIngressOutputReference extends cdktf.Complex
   // client_certificate_mode - computed: true, optional: false, required: false
   public get clientCertificateMode() {
     return this.getStringAttribute('client_certificate_mode');
+  }
+
+  // cors - computed: true, optional: false, required: false
+  private _cors = new DataAzurermContainerAppIngressCorsList(this, "cors", false);
+  public get cors() {
+    return this._cors;
   }
 
   // custom_domain - computed: true, optional: false, required: false
@@ -2871,7 +2977,7 @@ export class DataAzurermContainerAppTemplateList extends cdktf.ComplexList {
 }
 export interface DataAzurermContainerAppTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/data-sources/container_app#read DataAzurermContainerApp#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/container_app#read DataAzurermContainerApp#read}
   */
   readonly read?: string;
 }
@@ -2965,7 +3071,7 @@ export class DataAzurermContainerAppTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/data-sources/container_app azurerm_container_app}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/container_app azurerm_container_app}
 */
 export class DataAzurermContainerApp extends cdktf.TerraformDataSource {
 
@@ -2981,7 +3087,7 @@ export class DataAzurermContainerApp extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermContainerApp resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermContainerApp to import
-  * @param importFromId The id of the existing DataAzurermContainerApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/data-sources/container_app#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermContainerApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/container_app#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermContainerApp to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2993,7 +3099,7 @@ export class DataAzurermContainerApp extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.34.0/docs/data-sources/container_app azurerm_container_app} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/container_app azurerm_container_app} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3004,7 +3110,7 @@ export class DataAzurermContainerApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_container_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.34.0',
+        providerVersion: '4.35.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
