@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/dev_center_catalog
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/dev_center_catalog
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDevCenterCatalogConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/dev_center_catalog#dev_center_id DataAzurermDevCenterCatalog#dev_center_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/dev_center_catalog#dev_center_id DataAzurermDevCenterCatalog#dev_center_id}
   */
   readonly devCenterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/dev_center_catalog#id DataAzurermDevCenterCatalog#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/dev_center_catalog#id DataAzurermDevCenterCatalog#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/dev_center_catalog#name DataAzurermDevCenterCatalog#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/dev_center_catalog#name DataAzurermDevCenterCatalog#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/dev_center_catalog#timeouts DataAzurermDevCenterCatalog#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/dev_center_catalog#timeouts DataAzurermDevCenterCatalog#timeouts}
   */
   readonly timeouts?: DataAzurermDevCenterCatalogTimeouts;
 }
@@ -216,7 +216,7 @@ export class DataAzurermDevCenterCatalogCatalogGithubList extends cdktf.ComplexL
 }
 export interface DataAzurermDevCenterCatalogTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/dev_center_catalog#read DataAzurermDevCenterCatalog#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/dev_center_catalog#read DataAzurermDevCenterCatalog#read}
   */
   readonly read?: string;
 }
@@ -310,7 +310,7 @@ export class DataAzurermDevCenterCatalogTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/dev_center_catalog azurerm_dev_center_catalog}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/dev_center_catalog azurerm_dev_center_catalog}
 */
 export class DataAzurermDevCenterCatalog extends cdktf.TerraformDataSource {
 
@@ -326,7 +326,7 @@ export class DataAzurermDevCenterCatalog extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermDevCenterCatalog resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermDevCenterCatalog to import
-  * @param importFromId The id of the existing DataAzurermDevCenterCatalog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/dev_center_catalog#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermDevCenterCatalog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/dev_center_catalog#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermDevCenterCatalog to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -338,7 +338,7 @@ export class DataAzurermDevCenterCatalog extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/dev_center_catalog azurerm_dev_center_catalog} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/dev_center_catalog azurerm_dev_center_catalog} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -349,7 +349,7 @@ export class DataAzurermDevCenterCatalog extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_dev_center_catalog',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

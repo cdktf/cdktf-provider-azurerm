@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,66 +13,66 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkManagerIpamPoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#address_prefixes NetworkManagerIpamPool#address_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#address_prefixes NetworkManagerIpamPool#address_prefixes}
   */
   readonly addressPrefixes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#description NetworkManagerIpamPool#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#description NetworkManagerIpamPool#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#display_name NetworkManagerIpamPool#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#display_name NetworkManagerIpamPool#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#id NetworkManagerIpamPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#id NetworkManagerIpamPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#location NetworkManagerIpamPool#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#location NetworkManagerIpamPool#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#name NetworkManagerIpamPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#name NetworkManagerIpamPool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#network_manager_id NetworkManagerIpamPool#network_manager_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#network_manager_id NetworkManagerIpamPool#network_manager_id}
   */
   readonly networkManagerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#parent_pool_name NetworkManagerIpamPool#parent_pool_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#parent_pool_name NetworkManagerIpamPool#parent_pool_name}
   */
   readonly parentPoolName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#tags NetworkManagerIpamPool#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#tags NetworkManagerIpamPool#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#timeouts NetworkManagerIpamPool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#timeouts NetworkManagerIpamPool#timeouts}
   */
   readonly timeouts?: NetworkManagerIpamPoolTimeouts;
 }
 export interface NetworkManagerIpamPoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#create NetworkManagerIpamPool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#create NetworkManagerIpamPool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#delete NetworkManagerIpamPool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#delete NetworkManagerIpamPool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#read NetworkManagerIpamPool#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#read NetworkManagerIpamPool#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#update NetworkManagerIpamPool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#update NetworkManagerIpamPool#update}
   */
   readonly update?: string;
 }
@@ -253,7 +253,7 @@ export class NetworkManagerIpamPoolTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool azurerm_network_manager_ipam_pool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool azurerm_network_manager_ipam_pool}
 */
 export class NetworkManagerIpamPool extends cdktf.TerraformResource {
 
@@ -269,7 +269,7 @@ export class NetworkManagerIpamPool extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkManagerIpamPool resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkManagerIpamPool to import
-  * @param importFromId The id of the existing NetworkManagerIpamPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkManagerIpamPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkManagerIpamPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -281,7 +281,7 @@ export class NetworkManagerIpamPool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/network_manager_ipam_pool azurerm_network_manager_ipam_pool} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/network_manager_ipam_pool azurerm_network_manager_ipam_pool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -292,7 +292,7 @@ export class NetworkManagerIpamPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_manager_ipam_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,72 +13,72 @@ import * as cdktf from 'cdktf';
 
 export interface AutomationSourceControlConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#automatic_sync AutomationSourceControl#automatic_sync}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#automatic_sync AutomationSourceControl#automatic_sync}
   */
   readonly automaticSync?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#automation_account_id AutomationSourceControl#automation_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#automation_account_id AutomationSourceControl#automation_account_id}
   */
   readonly automationAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#branch AutomationSourceControl#branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#branch AutomationSourceControl#branch}
   */
   readonly branch?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#description AutomationSourceControl#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#description AutomationSourceControl#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#folder_path AutomationSourceControl#folder_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#folder_path AutomationSourceControl#folder_path}
   */
   readonly folderPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#id AutomationSourceControl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#id AutomationSourceControl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#name AutomationSourceControl#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#name AutomationSourceControl#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#publish_runbook_enabled AutomationSourceControl#publish_runbook_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#publish_runbook_enabled AutomationSourceControl#publish_runbook_enabled}
   */
   readonly publishRunbookEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#repository_url AutomationSourceControl#repository_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#repository_url AutomationSourceControl#repository_url}
   */
   readonly repositoryUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#source_control_type AutomationSourceControl#source_control_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#source_control_type AutomationSourceControl#source_control_type}
   */
   readonly sourceControlType: string;
   /**
   * security block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#security AutomationSourceControl#security}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#security AutomationSourceControl#security}
   */
   readonly security: AutomationSourceControlSecurity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#timeouts AutomationSourceControl#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#timeouts AutomationSourceControl#timeouts}
   */
   readonly timeouts?: AutomationSourceControlTimeouts;
 }
 export interface AutomationSourceControlSecurity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#refresh_token AutomationSourceControl#refresh_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#refresh_token AutomationSourceControl#refresh_token}
   */
   readonly refreshToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#token AutomationSourceControl#token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#token AutomationSourceControl#token}
   */
   readonly token: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#token_type AutomationSourceControl#token_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#token_type AutomationSourceControl#token_type}
   */
   readonly tokenType: string;
 }
@@ -214,19 +214,19 @@ export class AutomationSourceControlSecurityOutputReference extends cdktf.Comple
 }
 export interface AutomationSourceControlTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#create AutomationSourceControl#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#create AutomationSourceControl#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#delete AutomationSourceControl#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#delete AutomationSourceControl#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#read AutomationSourceControl#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#read AutomationSourceControl#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#update AutomationSourceControl#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#update AutomationSourceControl#update}
   */
   readonly update?: string;
 }
@@ -407,7 +407,7 @@ export class AutomationSourceControlTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control azurerm_automation_source_control}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control azurerm_automation_source_control}
 */
 export class AutomationSourceControl extends cdktf.TerraformResource {
 
@@ -423,7 +423,7 @@ export class AutomationSourceControl extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AutomationSourceControl resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AutomationSourceControl to import
-  * @param importFromId The id of the existing AutomationSourceControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AutomationSourceControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AutomationSourceControl to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -435,7 +435,7 @@ export class AutomationSourceControl extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/automation_source_control azurerm_automation_source_control} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/automation_source_control azurerm_automation_source_control} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -446,7 +446,7 @@ export class AutomationSourceControl extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automation_source_control',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

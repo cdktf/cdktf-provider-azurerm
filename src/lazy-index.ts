@@ -62,6 +62,7 @@ Object.defineProperty(exports, 'apiManagementRedisCache', { get: function () { r
 Object.defineProperty(exports, 'apiManagementSubscription', { get: function () { return require('./api-management-subscription'); } });
 Object.defineProperty(exports, 'apiManagementTag', { get: function () { return require('./api-management-tag'); } });
 Object.defineProperty(exports, 'apiManagementUser', { get: function () { return require('./api-management-user'); } });
+Object.defineProperty(exports, 'apiManagementWorkspace', { get: function () { return require('./api-management-workspace'); } });
 Object.defineProperty(exports, 'appConfiguration', { get: function () { return require('./app-configuration'); } });
 Object.defineProperty(exports, 'appConfigurationFeature', { get: function () { return require('./app-configuration-feature'); } });
 Object.defineProperty(exports, 'appConfigurationKey', { get: function () { return require('./app-configuration-key'); } });
@@ -687,6 +688,7 @@ Object.defineProperty(exports, 'networkManagerSecurityAdminConfiguration', { get
 Object.defineProperty(exports, 'networkManagerStaticMember', { get: function () { return require('./network-manager-static-member'); } });
 Object.defineProperty(exports, 'networkManagerSubscriptionConnection', { get: function () { return require('./network-manager-subscription-connection'); } });
 Object.defineProperty(exports, 'networkManagerVerifierWorkspace', { get: function () { return require('./network-manager-verifier-workspace'); } });
+Object.defineProperty(exports, 'networkManagerVerifierWorkspaceReachabilityAnalysisIntent', { get: function () { return require('./network-manager-verifier-workspace-reachability-analysis-intent'); } });
 Object.defineProperty(exports, 'networkPacketCapture', { get: function () { return require('./network-packet-capture'); } });
 Object.defineProperty(exports, 'networkProfile', { get: function () { return require('./network-profile'); } });
 Object.defineProperty(exports, 'networkSecurityGroup', { get: function () { return require('./network-security-group'); } });
