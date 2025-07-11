@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/oracle_exadata_infrastructure
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/oracle_exadata_infrastructure
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermOracleExadataInfrastructureConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/oracle_exadata_infrastructure#id DataAzurermOracleExadataInfrastructure#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/oracle_exadata_infrastructure#id DataAzurermOracleExadataInfrastructure#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/oracle_exadata_infrastructure#name DataAzurermOracleExadataInfrastructure#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/oracle_exadata_infrastructure#name DataAzurermOracleExadataInfrastructure#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/oracle_exadata_infrastructure#resource_group_name DataAzurermOracleExadataInfrastructure#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/oracle_exadata_infrastructure#resource_group_name DataAzurermOracleExadataInfrastructure#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/oracle_exadata_infrastructure#timeouts DataAzurermOracleExadataInfrastructure#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/oracle_exadata_infrastructure#timeouts DataAzurermOracleExadataInfrastructure#timeouts}
   */
   readonly timeouts?: DataAzurermOracleExadataInfrastructureTimeouts;
 }
@@ -246,7 +246,7 @@ export class DataAzurermOracleExadataInfrastructureMaintenanceWindowList extends
 }
 export interface DataAzurermOracleExadataInfrastructureTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/oracle_exadata_infrastructure#read DataAzurermOracleExadataInfrastructure#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/oracle_exadata_infrastructure#read DataAzurermOracleExadataInfrastructure#read}
   */
   readonly read?: string;
 }
@@ -340,7 +340,7 @@ export class DataAzurermOracleExadataInfrastructureTimeoutsOutputReference exten
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/oracle_exadata_infrastructure azurerm_oracle_exadata_infrastructure}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/oracle_exadata_infrastructure azurerm_oracle_exadata_infrastructure}
 */
 export class DataAzurermOracleExadataInfrastructure extends cdktf.TerraformDataSource {
 
@@ -356,7 +356,7 @@ export class DataAzurermOracleExadataInfrastructure extends cdktf.TerraformDataS
   * Generates CDKTF code for importing a DataAzurermOracleExadataInfrastructure resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermOracleExadataInfrastructure to import
-  * @param importFromId The id of the existing DataAzurermOracleExadataInfrastructure that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/oracle_exadata_infrastructure#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermOracleExadataInfrastructure that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/oracle_exadata_infrastructure#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermOracleExadataInfrastructure to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -368,7 +368,7 @@ export class DataAzurermOracleExadataInfrastructure extends cdktf.TerraformDataS
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/data-sources/oracle_exadata_infrastructure azurerm_oracle_exadata_infrastructure} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/data-sources/oracle_exadata_infrastructure azurerm_oracle_exadata_infrastructure} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -379,7 +379,7 @@ export class DataAzurermOracleExadataInfrastructure extends cdktf.TerraformDataS
       terraformResourceType: 'azurerm_oracle_exadata_infrastructure',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -420,6 +420,11 @@ export class DataAzurermOracleExadataInfrastructure extends cdktf.TerraformDataS
     return this.getNumberAttribute('compute_count');
   }
 
+  // compute_model - computed: true, optional: false, required: false
+  public get computeModel() {
+    return this.getStringAttribute('compute_model');
+  }
+
   // cpu_count - computed: true, optional: false, required: false
   public get cpuCount() {
     return this.getNumberAttribute('cpu_count');
@@ -433,6 +438,11 @@ export class DataAzurermOracleExadataInfrastructure extends cdktf.TerraformDataS
   // data_storage_size_in_tbs - computed: true, optional: false, required: false
   public get dataStorageSizeInTbs() {
     return this.getNumberAttribute('data_storage_size_in_tbs');
+  }
+
+  // database_server_type - computed: true, optional: false, required: false
+  public get databaseServerType() {
+    return this.getStringAttribute('database_server_type');
   }
 
   // db_node_storage_size_in_gbs - computed: true, optional: false, required: false
@@ -582,6 +592,11 @@ export class DataAzurermOracleExadataInfrastructure extends cdktf.TerraformDataS
   // storage_count - computed: true, optional: false, required: false
   public get storageCount() {
     return this.getNumberAttribute('storage_count');
+  }
+
+  // storage_server_type - computed: true, optional: false, required: false
+  public get storageServerType() {
+    return this.getStringAttribute('storage_server_type');
   }
 
   // storage_server_version - computed: true, optional: false, required: false

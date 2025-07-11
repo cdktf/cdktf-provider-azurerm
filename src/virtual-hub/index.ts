@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,68 +13,72 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualHubConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#address_prefix VirtualHub#address_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#address_prefix VirtualHub#address_prefix}
   */
   readonly addressPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#hub_routing_preference VirtualHub#hub_routing_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#branch_to_branch_traffic_enabled VirtualHub#branch_to_branch_traffic_enabled}
+  */
+  readonly branchToBranchTrafficEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#hub_routing_preference VirtualHub#hub_routing_preference}
   */
   readonly hubRoutingPreference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#id VirtualHub#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#id VirtualHub#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#location VirtualHub#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#location VirtualHub#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#name VirtualHub#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#name VirtualHub#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#resource_group_name VirtualHub#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#resource_group_name VirtualHub#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#sku VirtualHub#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#sku VirtualHub#sku}
   */
   readonly sku?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#tags VirtualHub#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#tags VirtualHub#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#virtual_router_auto_scale_min_capacity VirtualHub#virtual_router_auto_scale_min_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#virtual_router_auto_scale_min_capacity VirtualHub#virtual_router_auto_scale_min_capacity}
   */
   readonly virtualRouterAutoScaleMinCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#virtual_wan_id VirtualHub#virtual_wan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#virtual_wan_id VirtualHub#virtual_wan_id}
   */
   readonly virtualWanId?: string;
   /**
   * route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#route VirtualHub#route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#route VirtualHub#route}
   */
   readonly route?: VirtualHubRoute[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#timeouts VirtualHub#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#timeouts VirtualHub#timeouts}
   */
   readonly timeouts?: VirtualHubTimeouts;
 }
 export interface VirtualHubRoute {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#address_prefixes VirtualHub#address_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#address_prefixes VirtualHub#address_prefixes}
   */
   readonly addressPrefixes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#next_hop_ip_address VirtualHub#next_hop_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#next_hop_ip_address VirtualHub#next_hop_ip_address}
   */
   readonly nextHopIpAddress: string;
 }
@@ -213,19 +217,19 @@ export class VirtualHubRouteList extends cdktf.ComplexList {
 }
 export interface VirtualHubTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#create VirtualHub#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#create VirtualHub#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#delete VirtualHub#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#delete VirtualHub#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#read VirtualHub#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#read VirtualHub#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#update VirtualHub#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#update VirtualHub#update}
   */
   readonly update?: string;
 }
@@ -406,7 +410,7 @@ export class VirtualHubTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub azurerm_virtual_hub}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub azurerm_virtual_hub}
 */
 export class VirtualHub extends cdktf.TerraformResource {
 
@@ -422,7 +426,7 @@ export class VirtualHub extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a VirtualHub resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the VirtualHub to import
-  * @param importFromId The id of the existing VirtualHub that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing VirtualHub that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the VirtualHub to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -434,7 +438,7 @@ export class VirtualHub extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.35.0/docs/resources/virtual_hub azurerm_virtual_hub} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/virtual_hub azurerm_virtual_hub} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -445,7 +449,7 @@ export class VirtualHub extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_hub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -457,6 +461,7 @@ export class VirtualHub extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._addressPrefix = config.addressPrefix;
+    this._branchToBranchTrafficEnabled = config.branchToBranchTrafficEnabled;
     this._hubRoutingPreference = config.hubRoutingPreference;
     this._id = config.id;
     this._location = config.location;
@@ -488,6 +493,22 @@ export class VirtualHub extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get addressPrefixInput() {
     return this._addressPrefix;
+  }
+
+  // branch_to_branch_traffic_enabled - computed: false, optional: true, required: false
+  private _branchToBranchTrafficEnabled?: boolean | cdktf.IResolvable; 
+  public get branchToBranchTrafficEnabled() {
+    return this.getBooleanAttribute('branch_to_branch_traffic_enabled');
+  }
+  public set branchToBranchTrafficEnabled(value: boolean | cdktf.IResolvable) {
+    this._branchToBranchTrafficEnabled = value;
+  }
+  public resetBranchToBranchTrafficEnabled() {
+    this._branchToBranchTrafficEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get branchToBranchTrafficEnabledInput() {
+    return this._branchToBranchTrafficEnabled;
   }
 
   // default_route_table_id - computed: true, optional: false, required: false
@@ -679,6 +700,7 @@ export class VirtualHub extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       address_prefix: cdktf.stringToTerraform(this._addressPrefix),
+      branch_to_branch_traffic_enabled: cdktf.booleanToTerraform(this._branchToBranchTrafficEnabled),
       hub_routing_preference: cdktf.stringToTerraform(this._hubRoutingPreference),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
@@ -700,6 +722,12 @@ export class VirtualHub extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      branch_to_branch_traffic_enabled: {
+        value: cdktf.booleanToHclTerraform(this._branchToBranchTrafficEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       hub_routing_preference: {
         value: cdktf.stringToHclTerraform(this._hubRoutingPreference),

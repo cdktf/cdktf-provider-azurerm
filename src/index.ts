@@ -62,6 +62,7 @@ export * as apiManagementRedisCache from './api-management-redis-cache';
 export * as apiManagementSubscription from './api-management-subscription';
 export * as apiManagementTag from './api-management-tag';
 export * as apiManagementUser from './api-management-user';
+export * as apiManagementWorkspace from './api-management-workspace';
 export * as appConfiguration from './app-configuration';
 export * as appConfigurationFeature from './app-configuration-feature';
 export * as appConfigurationKey from './app-configuration-key';
@@ -687,6 +688,7 @@ export * as networkManagerSecurityAdminConfiguration from './network-manager-sec
 export * as networkManagerStaticMember from './network-manager-static-member';
 export * as networkManagerSubscriptionConnection from './network-manager-subscription-connection';
 export * as networkManagerVerifierWorkspace from './network-manager-verifier-workspace';
+export * as networkManagerVerifierWorkspaceReachabilityAnalysisIntent from './network-manager-verifier-workspace-reachability-analysis-intent';
 export * as networkPacketCapture from './network-packet-capture';
 export * as networkProfile from './network-profile';
 export * as networkSecurityGroup from './network-security-group';
