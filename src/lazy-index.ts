@@ -1344,6 +1344,7 @@ Object.defineProperty(exports, 'dataAzurermNetworkDdosProtectionPlan', { get: fu
 Object.defineProperty(exports, 'dataAzurermNetworkInterface', { get: function () { return require('./data-azurerm-network-interface'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkManager', { get: function () { return require('./data-azurerm-network-manager'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkManagerConnectivityConfiguration', { get: function () { return require('./data-azurerm-network-manager-connectivity-configuration'); } });
+Object.defineProperty(exports, 'dataAzurermNetworkManagerIpamPool', { get: function () { return require('./data-azurerm-network-manager-ipam-pool'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkManagerNetworkGroup', { get: function () { return require('./data-azurerm-network-manager-network-group'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkSecurityGroup', { get: function () { return require('./data-azurerm-network-security-group'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkServiceTags', { get: function () { return require('./data-azurerm-network-service-tags'); } });
