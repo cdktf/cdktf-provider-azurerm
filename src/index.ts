@@ -1344,6 +1344,7 @@ export * as dataAzurermNetworkDdosProtectionPlan from './data-azurerm-network-dd
 export * as dataAzurermNetworkInterface from './data-azurerm-network-interface';
 export * as dataAzurermNetworkManager from './data-azurerm-network-manager';
 export * as dataAzurermNetworkManagerConnectivityConfiguration from './data-azurerm-network-manager-connectivity-configuration';
+export * as dataAzurermNetworkManagerIpamPool from './data-azurerm-network-manager-ipam-pool';
 export * as dataAzurermNetworkManagerNetworkGroup from './data-azurerm-network-manager-network-group';
 export * as dataAzurermNetworkSecurityGroup from './data-azurerm-network-security-group';
 export * as dataAzurermNetworkServiceTags from './data-azurerm-network-service-tags';

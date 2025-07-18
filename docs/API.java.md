@@ -486,6 +486,7 @@ The following submodules are available:
 - [dataAzurermNetworkInterface](./dataAzurermNetworkInterface.java.md)
 - [dataAzurermNetworkManager](./dataAzurermNetworkManager.java.md)
 - [dataAzurermNetworkManagerConnectivityConfiguration](./dataAzurermNetworkManagerConnectivityConfiguration.java.md)
+- [dataAzurermNetworkManagerIpamPool](./dataAzurermNetworkManagerIpamPool.java.md)
 - [dataAzurermNetworkManagerNetworkGroup](./dataAzurermNetworkManagerNetworkGroup.java.md)
 - [dataAzurermNetworkSecurityGroup](./dataAzurermNetworkSecurityGroup.java.md)
 - [dataAzurermNetworkServiceTags](./dataAzurermNetworkServiceTags.java.md)
