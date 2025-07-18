@@ -486,6 +486,7 @@ The following submodules are available:
 - [dataAzurermNetworkInterface](./dataAzurermNetworkInterface.csharp.md)
 - [dataAzurermNetworkManager](./dataAzurermNetworkManager.csharp.md)
 - [dataAzurermNetworkManagerConnectivityConfiguration](./dataAzurermNetworkManagerConnectivityConfiguration.csharp.md)
+- [dataAzurermNetworkManagerIpamPool](./dataAzurermNetworkManagerIpamPool.csharp.md)
 - [dataAzurermNetworkManagerNetworkGroup](./dataAzurermNetworkManagerNetworkGroup.csharp.md)
 - [dataAzurermNetworkSecurityGroup](./dataAzurermNetworkSecurityGroup.csharp.md)
 - [dataAzurermNetworkServiceTags](./dataAzurermNetworkServiceTags.csharp.md)

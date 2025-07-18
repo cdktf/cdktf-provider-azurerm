@@ -4,7 +4,7 @@
 
 ### Eventhub <a name="Eventhub" id="@cdktf/provider-azurerm.eventhub.Eventhub"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub azurerm_eventhub}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub azurerm_eventhub}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhub.Eventhub.Initializer"></a>
 
@@ -74,12 +74,15 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.putCaptureDescription">PutCaptureDescription</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.putRetentionDescription">PutRetentionDescription</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.resetCaptureDescription">ResetCaptureDescription</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.resetId">ResetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.resetMessageRetention">ResetMessageRetention</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.resetNamespaceId">ResetNamespaceId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.resetNamespaceName">ResetNamespaceName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.resetResourceGroupName">ResetResourceGroupName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.resetRetentionDescription">ResetRetentionDescription</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.resetStatus">ResetStatus</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
 
@@ -385,6 +388,18 @@ func PutCaptureDescription(value EventhubCaptureDescription)
 
 ---
 
+##### `PutRetentionDescription` <a name="PutRetentionDescription" id="@cdktf/provider-azurerm.eventhub.Eventhub.putRetentionDescription"></a>
+
+```go
+func PutRetentionDescription(value EventhubRetentionDescription)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.eventhub.Eventhub.putRetentionDescription.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription">EventhubRetentionDescription</a>
+
+---
+
 ##### `PutTimeouts` <a name="PutTimeouts" id="@cdktf/provider-azurerm.eventhub.Eventhub.putTimeouts"></a>
 
 ```go
@@ -409,6 +424,12 @@ func ResetCaptureDescription()
 func ResetId()
 ```
 
+##### `ResetMessageRetention` <a name="ResetMessageRetention" id="@cdktf/provider-azurerm.eventhub.Eventhub.resetMessageRetention"></a>
+
+```go
+func ResetMessageRetention()
+```
+
 ##### `ResetNamespaceId` <a name="ResetNamespaceId" id="@cdktf/provider-azurerm.eventhub.Eventhub.resetNamespaceId"></a>
 
 ```go
@@ -425,6 +446,12 @@ func ResetNamespaceName()
 
 ```go
 func ResetResourceGroupName()
+```
+
+##### `ResetRetentionDescription` <a name="ResetRetentionDescription" id="@cdktf/provider-azurerm.eventhub.Eventhub.resetRetentionDescription"></a>
+
+```go
+func ResetRetentionDescription()
 ```
 
 ##### `ResetStatus` <a name="ResetStatus" id="@cdktf/provider-azurerm.eventhub.Eventhub.resetStatus"></a>
@@ -542,7 +569,7 @@ The construct id used in the generated config for the Eventhub to import.
 
 The id of the existing Eventhub that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -574,6 +601,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.captureDescription">CaptureDescription</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescriptionOutputReference">EventhubCaptureDescriptionOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.partitionIds">PartitionIds</a></code> | <code>*[]*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.retentionDescription">RetentionDescription</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference">EventhubRetentionDescriptionOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubTimeoutsOutputReference">EventhubTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.captureDescriptionInput">CaptureDescriptionInput</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription">EventhubCaptureDescription</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
@@ -583,6 +611,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.namespaceNameInput">NamespaceNameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.partitionCountInput">PartitionCountInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.resourceGroupNameInput">ResourceGroupNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.retentionDescriptionInput">RetentionDescriptionInput</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription">EventhubRetentionDescription</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.statusInput">StatusInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.Eventhub.property.id">Id</a></code> | <code>*string</code> | *No description.* |
@@ -758,6 +787,16 @@ func PartitionIds() *[]*string
 
 ---
 
+##### `RetentionDescription`<sup>Required</sup> <a name="RetentionDescription" id="@cdktf/provider-azurerm.eventhub.Eventhub.property.retentionDescription"></a>
+
+```go
+func RetentionDescription() EventhubRetentionDescriptionOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference">EventhubRetentionDescriptionOutputReference</a>
+
+---
+
 ##### `Timeouts`<sup>Required</sup> <a name="Timeouts" id="@cdktf/provider-azurerm.eventhub.Eventhub.property.timeouts"></a>
 
 ```go
@@ -845,6 +884,16 @@ func ResourceGroupNameInput() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `RetentionDescriptionInput`<sup>Optional</sup> <a name="RetentionDescriptionInput" id="@cdktf/provider-azurerm.eventhub.Eventhub.property.retentionDescriptionInput"></a>
+
+```go
+func RetentionDescriptionInput() EventhubRetentionDescription
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription">EventhubRetentionDescription</a>
 
 ---
 
@@ -990,11 +1039,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/eventhub"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription.property.destination">Destination</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescriptionDestination">EventhubCaptureDescriptionDestination</a></code> | destination block. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription.property.enabled">Enabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#enabled Eventhub#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription.property.encoding">Encoding</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#encoding Eventhub#encoding}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription.property.intervalInSeconds">IntervalInSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#interval_in_seconds Eventhub#interval_in_seconds}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription.property.sizeLimitInBytes">SizeLimitInBytes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#size_limit_in_bytes Eventhub#size_limit_in_bytes}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription.property.skipEmptyArchives">SkipEmptyArchives</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#skip_empty_archives Eventhub#skip_empty_archives}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription.property.enabled">Enabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#enabled Eventhub#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription.property.encoding">Encoding</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#encoding Eventhub#encoding}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription.property.intervalInSeconds">IntervalInSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#interval_in_seconds Eventhub#interval_in_seconds}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription.property.sizeLimitInBytes">SizeLimitInBytes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#size_limit_in_bytes Eventhub#size_limit_in_bytes}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription.property.skipEmptyArchives">SkipEmptyArchives</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#skip_empty_archives Eventhub#skip_empty_archives}. |
 
 ---
 
@@ -1008,7 +1057,7 @@ Destination EventhubCaptureDescriptionDestination
 
 destination block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#destination Eventhub#destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#destination Eventhub#destination}
 
 ---
 
@@ -1020,7 +1069,7 @@ Enabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#enabled Eventhub#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#enabled Eventhub#enabled}.
 
 ---
 
@@ -1032,7 +1081,7 @@ Encoding *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#encoding Eventhub#encoding}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#encoding Eventhub#encoding}.
 
 ---
 
@@ -1044,7 +1093,7 @@ IntervalInSeconds *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#interval_in_seconds Eventhub#interval_in_seconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#interval_in_seconds Eventhub#interval_in_seconds}.
 
 ---
 
@@ -1056,7 +1105,7 @@ SizeLimitInBytes *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#size_limit_in_bytes Eventhub#size_limit_in_bytes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#size_limit_in_bytes Eventhub#size_limit_in_bytes}.
 
 ---
 
@@ -1068,7 +1117,7 @@ SkipEmptyArchives interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#skip_empty_archives Eventhub#skip_empty_archives}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#skip_empty_archives Eventhub#skip_empty_archives}.
 
 ---
 
@@ -1091,10 +1140,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/eventhub"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescriptionDestination.property.archiveNameFormat">ArchiveNameFormat</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#archive_name_format Eventhub#archive_name_format}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescriptionDestination.property.blobContainerName">BlobContainerName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#blob_container_name Eventhub#blob_container_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescriptionDestination.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#name Eventhub#name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescriptionDestination.property.storageAccountId">StorageAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#storage_account_id Eventhub#storage_account_id}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescriptionDestination.property.archiveNameFormat">ArchiveNameFormat</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#archive_name_format Eventhub#archive_name_format}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescriptionDestination.property.blobContainerName">BlobContainerName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#blob_container_name Eventhub#blob_container_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescriptionDestination.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#name Eventhub#name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescriptionDestination.property.storageAccountId">StorageAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#storage_account_id Eventhub#storage_account_id}. |
 
 ---
 
@@ -1106,7 +1155,7 @@ ArchiveNameFormat *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#archive_name_format Eventhub#archive_name_format}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#archive_name_format Eventhub#archive_name_format}.
 
 ---
 
@@ -1118,7 +1167,7 @@ BlobContainerName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#blob_container_name Eventhub#blob_container_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#blob_container_name Eventhub#blob_container_name}.
 
 ---
 
@@ -1130,7 +1179,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#name Eventhub#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#name Eventhub#name}.
 
 ---
 
@@ -1142,7 +1191,7 @@ StorageAccountId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#storage_account_id Eventhub#storage_account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#storage_account_id Eventhub#storage_account_id}.
 
 ---
 
@@ -1161,14 +1210,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/eventhub"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	MessageRetention: *f64,
 	Name: *string,
 	PartitionCount: *f64,
 	CaptureDescription: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.eventhub.EventhubCaptureDescription,
 	Id: *string,
+	MessageRetention: *f64,
 	NamespaceId: *string,
 	NamespaceName: *string,
 	ResourceGroupName: *string,
+	RetentionDescription: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.eventhub.EventhubRetentionDescription,
 	Status: *string,
 	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.eventhub.EventhubTimeouts,
 }
@@ -1185,15 +1235,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/eventhub"
 | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.messageRetention">MessageRetention</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#message_retention Eventhub#message_retention}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#name Eventhub#name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.partitionCount">PartitionCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#partition_count Eventhub#partition_count}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#name Eventhub#name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.partitionCount">PartitionCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#partition_count Eventhub#partition_count}. |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.captureDescription">CaptureDescription</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription">EventhubCaptureDescription</a></code> | capture_description block. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#id Eventhub#id}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.namespaceId">NamespaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#namespace_id Eventhub#namespace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.namespaceName">NamespaceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#namespace_name Eventhub#namespace_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#resource_group_name Eventhub#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.status">Status</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#status Eventhub#status}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#id Eventhub#id}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.messageRetention">MessageRetention</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#message_retention Eventhub#message_retention}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.namespaceId">NamespaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#namespace_id Eventhub#namespace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.namespaceName">NamespaceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#namespace_name Eventhub#namespace_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#resource_group_name Eventhub#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.retentionDescription">RetentionDescription</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription">EventhubRetentionDescription</a></code> | retention_description block. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.status">Status</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#status Eventhub#status}. |
 | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubTimeouts">EventhubTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1268,18 +1319,6 @@ Provisioners *[]interface{}
 
 ---
 
-##### `MessageRetention`<sup>Required</sup> <a name="MessageRetention" id="@cdktf/provider-azurerm.eventhub.EventhubConfig.property.messageRetention"></a>
-
-```go
-MessageRetention *f64
-```
-
-- *Type:* *f64
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#message_retention Eventhub#message_retention}.
-
----
-
 ##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-azurerm.eventhub.EventhubConfig.property.name"></a>
 
 ```go
@@ -1288,7 +1327,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#name Eventhub#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#name Eventhub#name}.
 
 ---
 
@@ -1300,7 +1339,7 @@ PartitionCount *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#partition_count Eventhub#partition_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#partition_count Eventhub#partition_count}.
 
 ---
 
@@ -1314,7 +1353,7 @@ CaptureDescription EventhubCaptureDescription
 
 capture_description block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#capture_description Eventhub#capture_description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#capture_description Eventhub#capture_description}
 
 ---
 
@@ -1326,10 +1365,22 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#id Eventhub#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#id Eventhub#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `MessageRetention`<sup>Optional</sup> <a name="MessageRetention" id="@cdktf/provider-azurerm.eventhub.EventhubConfig.property.messageRetention"></a>
+
+```go
+MessageRetention *f64
+```
+
+- *Type:* *f64
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#message_retention Eventhub#message_retention}.
 
 ---
 
@@ -1341,7 +1392,7 @@ NamespaceId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#namespace_id Eventhub#namespace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#namespace_id Eventhub#namespace_id}.
 
 ---
 
@@ -1353,7 +1404,7 @@ NamespaceName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#namespace_name Eventhub#namespace_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#namespace_name Eventhub#namespace_name}.
 
 ---
 
@@ -1365,7 +1416,21 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#resource_group_name Eventhub#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#resource_group_name Eventhub#resource_group_name}.
+
+---
+
+##### `RetentionDescription`<sup>Optional</sup> <a name="RetentionDescription" id="@cdktf/provider-azurerm.eventhub.EventhubConfig.property.retentionDescription"></a>
+
+```go
+RetentionDescription EventhubRetentionDescription
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription">EventhubRetentionDescription</a>
+
+retention_description block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#retention_description Eventhub#retention_description}
 
 ---
 
@@ -1377,7 +1442,7 @@ Status *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#status Eventhub#status}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#status Eventhub#status}.
 
 ---
 
@@ -1391,7 +1456,67 @@ Timeouts EventhubTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#timeouts Eventhub#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#timeouts Eventhub#timeouts}
+
+---
+
+### EventhubRetentionDescription <a name="EventhubRetentionDescription" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/eventhub"
+
+&eventhub.EventhubRetentionDescription {
+	CleanupPolicy: *string,
+	RetentionTimeInHours: *f64,
+	TombstoneRetentionTimeInHours: *f64,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription.property.cleanupPolicy">CleanupPolicy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#cleanup_policy Eventhub#cleanup_policy}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription.property.retentionTimeInHours">RetentionTimeInHours</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#retention_time_in_hours Eventhub#retention_time_in_hours}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription.property.tombstoneRetentionTimeInHours">TombstoneRetentionTimeInHours</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#tombstone_retention_time_in_hours Eventhub#tombstone_retention_time_in_hours}. |
+
+---
+
+##### `CleanupPolicy`<sup>Required</sup> <a name="CleanupPolicy" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription.property.cleanupPolicy"></a>
+
+```go
+CleanupPolicy *string
+```
+
+- *Type:* *string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#cleanup_policy Eventhub#cleanup_policy}.
+
+---
+
+##### `RetentionTimeInHours`<sup>Optional</sup> <a name="RetentionTimeInHours" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription.property.retentionTimeInHours"></a>
+
+```go
+RetentionTimeInHours *f64
+```
+
+- *Type:* *f64
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#retention_time_in_hours Eventhub#retention_time_in_hours}.
+
+---
+
+##### `TombstoneRetentionTimeInHours`<sup>Optional</sup> <a name="TombstoneRetentionTimeInHours" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription.property.tombstoneRetentionTimeInHours"></a>
+
+```go
+TombstoneRetentionTimeInHours *f64
+```
+
+- *Type:* *f64
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#tombstone_retention_time_in_hours Eventhub#tombstone_retention_time_in_hours}.
 
 ---
 
@@ -1414,10 +1539,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/eventhub"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#create Eventhub#create}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#delete Eventhub#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#read Eventhub#read}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#update Eventhub#update}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#create Eventhub#create}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#delete Eventhub#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#read Eventhub#read}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#update Eventhub#update}. |
 
 ---
 
@@ -1429,7 +1554,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#create Eventhub#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#create Eventhub#create}.
 
 ---
 
@@ -1441,7 +1566,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#delete Eventhub#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#delete Eventhub#delete}.
 
 ---
 
@@ -1453,7 +1578,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#read Eventhub#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#read Eventhub#read}.
 
 ---
 
@@ -1465,7 +1590,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.36.0/docs/resources/eventhub#update Eventhub#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/eventhub#update Eventhub#update}.
 
 ---
 
@@ -2219,6 +2344,335 @@ func InternalValue() EventhubCaptureDescription
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription">EventhubCaptureDescription</a>
+
+---
+
+
+### EventhubRetentionDescriptionOutputReference <a name="EventhubRetentionDescriptionOutputReference" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/eventhub"
+
+eventhub.NewEventhubRetentionDescriptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventhubRetentionDescriptionOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.resetRetentionTimeInHours">ResetRetentionTimeInHours</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.resetTombstoneRetentionTimeInHours">ResetTombstoneRetentionTimeInHours</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetRetentionTimeInHours` <a name="ResetRetentionTimeInHours" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.resetRetentionTimeInHours"></a>
+
+```go
+func ResetRetentionTimeInHours()
+```
+
+##### `ResetTombstoneRetentionTimeInHours` <a name="ResetTombstoneRetentionTimeInHours" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.resetTombstoneRetentionTimeInHours"></a>
+
+```go
+func ResetTombstoneRetentionTimeInHours()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.cleanupPolicyInput">CleanupPolicyInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.retentionTimeInHoursInput">RetentionTimeInHoursInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.tombstoneRetentionTimeInHoursInput">TombstoneRetentionTimeInHoursInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.cleanupPolicy">CleanupPolicy</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.retentionTimeInHours">RetentionTimeInHours</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.tombstoneRetentionTimeInHours">TombstoneRetentionTimeInHours</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription">EventhubRetentionDescription</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `CleanupPolicyInput`<sup>Optional</sup> <a name="CleanupPolicyInput" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.cleanupPolicyInput"></a>
+
+```go
+func CleanupPolicyInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `RetentionTimeInHoursInput`<sup>Optional</sup> <a name="RetentionTimeInHoursInput" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.retentionTimeInHoursInput"></a>
+
+```go
+func RetentionTimeInHoursInput() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `TombstoneRetentionTimeInHoursInput`<sup>Optional</sup> <a name="TombstoneRetentionTimeInHoursInput" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.tombstoneRetentionTimeInHoursInput"></a>
+
+```go
+func TombstoneRetentionTimeInHoursInput() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `CleanupPolicy`<sup>Required</sup> <a name="CleanupPolicy" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.cleanupPolicy"></a>
+
+```go
+func CleanupPolicy() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `RetentionTimeInHours`<sup>Required</sup> <a name="RetentionTimeInHours" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.retentionTimeInHours"></a>
+
+```go
+func RetentionTimeInHours() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `TombstoneRetentionTimeInHours`<sup>Required</sup> <a name="TombstoneRetentionTimeInHours" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.tombstoneRetentionTimeInHours"></a>
+
+```go
+func TombstoneRetentionTimeInHours() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.eventhub.EventhubRetentionDescriptionOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() EventhubRetentionDescription
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.eventhub.EventhubRetentionDescription">EventhubRetentionDescription</a>
 
 ---
 

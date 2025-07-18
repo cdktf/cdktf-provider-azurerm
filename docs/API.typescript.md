@@ -486,6 +486,7 @@ The following submodules are available:
 - [dataAzurermNetworkInterface](./dataAzurermNetworkInterface.typescript.md)
 - [dataAzurermNetworkManager](./dataAzurermNetworkManager.typescript.md)
 - [dataAzurermNetworkManagerConnectivityConfiguration](./dataAzurermNetworkManagerConnectivityConfiguration.typescript.md)
+- [dataAzurermNetworkManagerIpamPool](./dataAzurermNetworkManagerIpamPool.typescript.md)
 - [dataAzurermNetworkManagerNetworkGroup](./dataAzurermNetworkManagerNetworkGroup.typescript.md)
 - [dataAzurermNetworkSecurityGroup](./dataAzurermNetworkSecurityGroup.typescript.md)
 - [dataAzurermNetworkServiceTags](./dataAzurermNetworkServiceTags.typescript.md)

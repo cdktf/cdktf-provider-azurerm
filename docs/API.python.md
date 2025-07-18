@@ -486,6 +486,7 @@ The following submodules are available:
 - [dataAzurermNetworkInterface](./dataAzurermNetworkInterface.python.md)
 - [dataAzurermNetworkManager](./dataAzurermNetworkManager.python.md)
 - [dataAzurermNetworkManagerConnectivityConfiguration](./dataAzurermNetworkManagerConnectivityConfiguration.python.md)
+- [dataAzurermNetworkManagerIpamPool](./dataAzurermNetworkManagerIpamPool.python.md)
 - [dataAzurermNetworkManagerNetworkGroup](./dataAzurermNetworkManagerNetworkGroup.python.md)
 - [dataAzurermNetworkSecurityGroup](./dataAzurermNetworkSecurityGroup.python.md)
 - [dataAzurermNetworkServiceTags](./dataAzurermNetworkServiceTags.python.md)
