@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,82 +13,88 @@ import * as cdktf from 'cdktf';
 
 export interface ManagedLustreFileSystemConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#id ManagedLustreFileSystem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#id ManagedLustreFileSystem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#location ManagedLustreFileSystem#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#location ManagedLustreFileSystem#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#name ManagedLustreFileSystem#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#name ManagedLustreFileSystem#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#resource_group_name ManagedLustreFileSystem#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#resource_group_name ManagedLustreFileSystem#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#sku_name ManagedLustreFileSystem#sku_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#sku_name ManagedLustreFileSystem#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#storage_capacity_in_tb ManagedLustreFileSystem#storage_capacity_in_tb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#storage_capacity_in_tb ManagedLustreFileSystem#storage_capacity_in_tb}
   */
   readonly storageCapacityInTb: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#subnet_id ManagedLustreFileSystem#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#subnet_id ManagedLustreFileSystem#subnet_id}
   */
   readonly subnetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#tags ManagedLustreFileSystem#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#tags ManagedLustreFileSystem#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#zones ManagedLustreFileSystem#zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#zones ManagedLustreFileSystem#zones}
   */
   readonly zones: string[];
   /**
   * encryption_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#encryption_key ManagedLustreFileSystem#encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#encryption_key ManagedLustreFileSystem#encryption_key}
   */
   readonly encryptionKey?: ManagedLustreFileSystemEncryptionKey;
   /**
   * hsm_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#hsm_setting ManagedLustreFileSystem#hsm_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#hsm_setting ManagedLustreFileSystem#hsm_setting}
   */
   readonly hsmSetting?: ManagedLustreFileSystemHsmSetting;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#identity ManagedLustreFileSystem#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#identity ManagedLustreFileSystem#identity}
   */
   readonly identity?: ManagedLustreFileSystemIdentity;
   /**
   * maintenance_window block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#maintenance_window ManagedLustreFileSystem#maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#maintenance_window ManagedLustreFileSystem#maintenance_window}
   */
   readonly maintenanceWindow: ManagedLustreFileSystemMaintenanceWindow;
   /**
+  * root_squash block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#root_squash ManagedLustreFileSystem#root_squash}
+  */
+  readonly rootSquash?: ManagedLustreFileSystemRootSquash;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#timeouts ManagedLustreFileSystem#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#timeouts ManagedLustreFileSystem#timeouts}
   */
   readonly timeouts?: ManagedLustreFileSystemTimeouts;
 }
 export interface ManagedLustreFileSystemEncryptionKey {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#key_url ManagedLustreFileSystem#key_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#key_url ManagedLustreFileSystem#key_url}
   */
   readonly keyUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#source_vault_id ManagedLustreFileSystem#source_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#source_vault_id ManagedLustreFileSystem#source_vault_id}
   */
   readonly sourceVaultId: string;
 }
@@ -195,15 +201,15 @@ export class ManagedLustreFileSystemEncryptionKeyOutputReference extends cdktf.C
 }
 export interface ManagedLustreFileSystemHsmSetting {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#container_id ManagedLustreFileSystem#container_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#container_id ManagedLustreFileSystem#container_id}
   */
   readonly containerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#import_prefix ManagedLustreFileSystem#import_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#import_prefix ManagedLustreFileSystem#import_prefix}
   */
   readonly importPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#logging_container_id ManagedLustreFileSystem#logging_container_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#logging_container_id ManagedLustreFileSystem#logging_container_id}
   */
   readonly loggingContainerId: string;
 }
@@ -339,11 +345,11 @@ export class ManagedLustreFileSystemHsmSettingOutputReference extends cdktf.Comp
 }
 export interface ManagedLustreFileSystemIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#identity_ids ManagedLustreFileSystem#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#identity_ids ManagedLustreFileSystem#identity_ids}
   */
   readonly identityIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#type ManagedLustreFileSystem#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#type ManagedLustreFileSystem#type}
   */
   readonly type: string;
 }
@@ -450,11 +456,11 @@ export class ManagedLustreFileSystemIdentityOutputReference extends cdktf.Comple
 }
 export interface ManagedLustreFileSystemMaintenanceWindow {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#day_of_week ManagedLustreFileSystem#day_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#day_of_week ManagedLustreFileSystem#day_of_week}
   */
   readonly dayOfWeek: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#time_of_day_in_utc ManagedLustreFileSystem#time_of_day_in_utc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#time_of_day_in_utc ManagedLustreFileSystem#time_of_day_in_utc}
   */
   readonly timeOfDayInUtc: string;
 }
@@ -559,21 +565,198 @@ export class ManagedLustreFileSystemMaintenanceWindowOutputReference extends cdk
     return this._timeOfDayInUtc;
   }
 }
+export interface ManagedLustreFileSystemRootSquash {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#mode ManagedLustreFileSystem#mode}
+  */
+  readonly mode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#no_squash_nids ManagedLustreFileSystem#no_squash_nids}
+  */
+  readonly noSquashNids: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#squash_gid ManagedLustreFileSystem#squash_gid}
+  */
+  readonly squashGid?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#squash_uid ManagedLustreFileSystem#squash_uid}
+  */
+  readonly squashUid?: number;
+}
+
+export function managedLustreFileSystemRootSquashToTerraform(struct?: ManagedLustreFileSystemRootSquashOutputReference | ManagedLustreFileSystemRootSquash): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    no_squash_nids: cdktf.stringToTerraform(struct!.noSquashNids),
+    squash_gid: cdktf.numberToTerraform(struct!.squashGid),
+    squash_uid: cdktf.numberToTerraform(struct!.squashUid),
+  }
+}
+
+
+export function managedLustreFileSystemRootSquashToHclTerraform(struct?: ManagedLustreFileSystemRootSquashOutputReference | ManagedLustreFileSystemRootSquash): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    no_squash_nids: {
+      value: cdktf.stringToHclTerraform(struct!.noSquashNids),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    squash_gid: {
+      value: cdktf.numberToHclTerraform(struct!.squashGid),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    squash_uid: {
+      value: cdktf.numberToHclTerraform(struct!.squashUid),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ManagedLustreFileSystemRootSquashOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ManagedLustreFileSystemRootSquash | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._noSquashNids !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.noSquashNids = this._noSquashNids;
+    }
+    if (this._squashGid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.squashGid = this._squashGid;
+    }
+    if (this._squashUid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.squashUid = this._squashUid;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ManagedLustreFileSystemRootSquash | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._mode = undefined;
+      this._noSquashNids = undefined;
+      this._squashGid = undefined;
+      this._squashUid = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._mode = value.mode;
+      this._noSquashNids = value.noSquashNids;
+      this._squashGid = value.squashGid;
+      this._squashUid = value.squashUid;
+    }
+  }
+
+  // mode - computed: false, optional: false, required: true
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // no_squash_nids - computed: false, optional: false, required: true
+  private _noSquashNids?: string; 
+  public get noSquashNids() {
+    return this.getStringAttribute('no_squash_nids');
+  }
+  public set noSquashNids(value: string) {
+    this._noSquashNids = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get noSquashNidsInput() {
+    return this._noSquashNids;
+  }
+
+  // squash_gid - computed: false, optional: true, required: false
+  private _squashGid?: number; 
+  public get squashGid() {
+    return this.getNumberAttribute('squash_gid');
+  }
+  public set squashGid(value: number) {
+    this._squashGid = value;
+  }
+  public resetSquashGid() {
+    this._squashGid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get squashGidInput() {
+    return this._squashGid;
+  }
+
+  // squash_uid - computed: false, optional: true, required: false
+  private _squashUid?: number; 
+  public get squashUid() {
+    return this.getNumberAttribute('squash_uid');
+  }
+  public set squashUid(value: number) {
+    this._squashUid = value;
+  }
+  public resetSquashUid() {
+    this._squashUid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get squashUidInput() {
+    return this._squashUid;
+  }
+}
 export interface ManagedLustreFileSystemTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#create ManagedLustreFileSystem#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#create ManagedLustreFileSystem#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#delete ManagedLustreFileSystem#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#delete ManagedLustreFileSystem#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#read ManagedLustreFileSystem#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#read ManagedLustreFileSystem#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#update ManagedLustreFileSystem#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#update ManagedLustreFileSystem#update}
   */
   readonly update?: string;
 }
@@ -754,7 +937,7 @@ export class ManagedLustreFileSystemTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system azurerm_managed_lustre_file_system}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system azurerm_managed_lustre_file_system}
 */
 export class ManagedLustreFileSystem extends cdktf.TerraformResource {
 
@@ -770,7 +953,7 @@ export class ManagedLustreFileSystem extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ManagedLustreFileSystem resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ManagedLustreFileSystem to import
-  * @param importFromId The id of the existing ManagedLustreFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ManagedLustreFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ManagedLustreFileSystem to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -782,7 +965,7 @@ export class ManagedLustreFileSystem extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/managed_lustre_file_system azurerm_managed_lustre_file_system} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/managed_lustre_file_system azurerm_managed_lustre_file_system} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -793,7 +976,7 @@ export class ManagedLustreFileSystem extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_managed_lustre_file_system',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.37.0',
+        providerVersion: '4.38.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -817,6 +1000,7 @@ export class ManagedLustreFileSystem extends cdktf.TerraformResource {
     this._hsmSetting.internalValue = config.hsmSetting;
     this._identity.internalValue = config.identity;
     this._maintenanceWindow.internalValue = config.maintenanceWindow;
+    this._rootSquash.internalValue = config.rootSquash;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1013,6 +1197,22 @@ export class ManagedLustreFileSystem extends cdktf.TerraformResource {
     return this._maintenanceWindow.internalValue;
   }
 
+  // root_squash - computed: false, optional: true, required: false
+  private _rootSquash = new ManagedLustreFileSystemRootSquashOutputReference(this, "root_squash");
+  public get rootSquash() {
+    return this._rootSquash;
+  }
+  public putRootSquash(value: ManagedLustreFileSystemRootSquash) {
+    this._rootSquash.internalValue = value;
+  }
+  public resetRootSquash() {
+    this._rootSquash.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rootSquashInput() {
+    return this._rootSquash.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ManagedLustreFileSystemTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -1048,6 +1248,7 @@ export class ManagedLustreFileSystem extends cdktf.TerraformResource {
       hsm_setting: managedLustreFileSystemHsmSettingToTerraform(this._hsmSetting.internalValue),
       identity: managedLustreFileSystemIdentityToTerraform(this._identity.internalValue),
       maintenance_window: managedLustreFileSystemMaintenanceWindowToTerraform(this._maintenanceWindow.internalValue),
+      root_squash: managedLustreFileSystemRootSquashToTerraform(this._rootSquash.internalValue),
       timeouts: managedLustreFileSystemTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -1131,6 +1332,12 @@ export class ManagedLustreFileSystem extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "ManagedLustreFileSystemMaintenanceWindowList",
+      },
+      root_squash: {
+        value: managedLustreFileSystemRootSquashToHclTerraform(this._rootSquash.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ManagedLustreFileSystemRootSquashList",
       },
       timeouts: {
         value: managedLustreFileSystemTimeoutsToHclTerraform(this._timeouts.internalValue),

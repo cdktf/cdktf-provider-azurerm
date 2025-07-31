@@ -96,6 +96,7 @@ Object.defineProperty(exports, 'applicationInsightsWorkbook', { get: function ()
 Object.defineProperty(exports, 'applicationInsightsWorkbookTemplate', { get: function () { return require('./application-insights-workbook-template'); } });
 Object.defineProperty(exports, 'applicationLoadBalancer', { get: function () { return require('./application-load-balancer'); } });
 Object.defineProperty(exports, 'applicationLoadBalancerFrontend', { get: function () { return require('./application-load-balancer-frontend'); } });
+Object.defineProperty(exports, 'applicationLoadBalancerSecurityPolicy', { get: function () { return require('./application-load-balancer-security-policy'); } });
 Object.defineProperty(exports, 'applicationLoadBalancerSubnetAssociation', { get: function () { return require('./application-load-balancer-subnet-association'); } });
 Object.defineProperty(exports, 'applicationSecurityGroup', { get: function () { return require('./application-security-group'); } });
 Object.defineProperty(exports, 'arcKubernetesCluster', { get: function () { return require('./arc-kubernetes-cluster'); } });
@@ -379,6 +380,7 @@ Object.defineProperty(exports, 'eventgridDomainTopic', { get: function () { retu
 Object.defineProperty(exports, 'eventgridEventSubscription', { get: function () { return require('./eventgrid-event-subscription'); } });
 Object.defineProperty(exports, 'eventgridNamespace', { get: function () { return require('./eventgrid-namespace'); } });
 Object.defineProperty(exports, 'eventgridPartnerConfiguration', { get: function () { return require('./eventgrid-partner-configuration'); } });
+Object.defineProperty(exports, 'eventgridPartnerRegistration', { get: function () { return require('./eventgrid-partner-registration'); } });
 Object.defineProperty(exports, 'eventgridSystemTopic', { get: function () { return require('./eventgrid-system-topic'); } });
 Object.defineProperty(exports, 'eventgridSystemTopicEventSubscription', { get: function () { return require('./eventgrid-system-topic-event-subscription'); } });
 Object.defineProperty(exports, 'eventgridTopic', { get: function () { return require('./eventgrid-topic'); } });
@@ -631,6 +633,7 @@ Object.defineProperty(exports, 'mssqlManagedInstance', { get: function () { retu
 Object.defineProperty(exports, 'mssqlManagedInstanceActiveDirectoryAdministrator', { get: function () { return require('./mssql-managed-instance-active-directory-administrator'); } });
 Object.defineProperty(exports, 'mssqlManagedInstanceFailoverGroup', { get: function () { return require('./mssql-managed-instance-failover-group'); } });
 Object.defineProperty(exports, 'mssqlManagedInstanceSecurityAlertPolicy', { get: function () { return require('./mssql-managed-instance-security-alert-policy'); } });
+Object.defineProperty(exports, 'mssqlManagedInstanceStartStopSchedule', { get: function () { return require('./mssql-managed-instance-start-stop-schedule'); } });
 Object.defineProperty(exports, 'mssqlManagedInstanceTransparentDataEncryption', { get: function () { return require('./mssql-managed-instance-transparent-data-encryption'); } });
 Object.defineProperty(exports, 'mssqlManagedInstanceVulnerabilityAssessment', { get: function () { return require('./mssql-managed-instance-vulnerability-assessment'); } });
 Object.defineProperty(exports, 'mssqlOutboundFirewallRule', { get: function () { return require('./mssql-outbound-firewall-rule'); } });
@@ -1108,6 +1111,7 @@ Object.defineProperty(exports, 'workloadsSapThreeTierVirtualInstance', { get: fu
 Object.defineProperty(exports, 'dataAzurermAadb2CDirectory', { get: function () { return require('./data-azurerm-aadb2c-directory'); } });
 Object.defineProperty(exports, 'dataAzurermActiveDirectoryDomainService', { get: function () { return require('./data-azurerm-active-directory-domain-service'); } });
 Object.defineProperty(exports, 'dataAzurermAdvisorRecommendations', { get: function () { return require('./data-azurerm-advisor-recommendations'); } });
+Object.defineProperty(exports, 'dataAzurermApiConnection', { get: function () { return require('./data-azurerm-api-connection'); } });
 Object.defineProperty(exports, 'dataAzurermApiManagement', { get: function () { return require('./data-azurerm-api-management'); } });
 Object.defineProperty(exports, 'dataAzurermApiManagementApi', { get: function () { return require('./data-azurerm-api-management-api'); } });
 Object.defineProperty(exports, 'dataAzurermApiManagementApiVersionSet', { get: function () { return require('./data-azurerm-api-management-api-version-set'); } });
@@ -1231,6 +1235,7 @@ Object.defineProperty(exports, 'dataAzurermElasticSanVolumeGroup', { get: functi
 Object.defineProperty(exports, 'dataAzurermElasticSanVolumeSnapshot', { get: function () { return require('./data-azurerm-elastic-san-volume-snapshot'); } });
 Object.defineProperty(exports, 'dataAzurermEventgridDomain', { get: function () { return require('./data-azurerm-eventgrid-domain'); } });
 Object.defineProperty(exports, 'dataAzurermEventgridDomainTopic', { get: function () { return require('./data-azurerm-eventgrid-domain-topic'); } });
+Object.defineProperty(exports, 'dataAzurermEventgridPartnerRegistration', { get: function () { return require('./data-azurerm-eventgrid-partner-registration'); } });
 Object.defineProperty(exports, 'dataAzurermEventgridSystemTopic', { get: function () { return require('./data-azurerm-eventgrid-system-topic'); } });
 Object.defineProperty(exports, 'dataAzurermEventgridTopic', { get: function () { return require('./data-azurerm-eventgrid-topic'); } });
 Object.defineProperty(exports, 'dataAzurermEventhub', { get: function () { return require('./data-azurerm-eventhub'); } });
@@ -1292,6 +1297,7 @@ Object.defineProperty(exports, 'dataAzurermLoadTest', { get: function () { retur
 Object.defineProperty(exports, 'dataAzurermLocalNetworkGateway', { get: function () { return require('./data-azurerm-local-network-gateway'); } });
 Object.defineProperty(exports, 'dataAzurermLocation', { get: function () { return require('./data-azurerm-location'); } });
 Object.defineProperty(exports, 'dataAzurermLogAnalyticsWorkspace', { get: function () { return require('./data-azurerm-log-analytics-workspace'); } });
+Object.defineProperty(exports, 'dataAzurermLogAnalyticsWorkspaceTable', { get: function () { return require('./data-azurerm-log-analytics-workspace-table'); } });
 Object.defineProperty(exports, 'dataAzurermLogicAppIntegrationAccount', { get: function () { return require('./data-azurerm-logic-app-integration-account'); } });
 Object.defineProperty(exports, 'dataAzurermLogicAppStandard', { get: function () { return require('./data-azurerm-logic-app-standard'); } });
 Object.defineProperty(exports, 'dataAzurermLogicAppWorkflow', { get: function () { return require('./data-azurerm-logic-app-workflow'); } });
@@ -1324,6 +1330,7 @@ Object.defineProperty(exports, 'dataAzurermMonitorScheduledQueryRulesLog', { get
 Object.defineProperty(exports, 'dataAzurermMonitorWorkspace', { get: function () { return require('./data-azurerm-monitor-workspace'); } });
 Object.defineProperty(exports, 'dataAzurermMssqlDatabase', { get: function () { return require('./data-azurerm-mssql-database'); } });
 Object.defineProperty(exports, 'dataAzurermMssqlElasticpool', { get: function () { return require('./data-azurerm-mssql-elasticpool'); } });
+Object.defineProperty(exports, 'dataAzurermMssqlFailoverGroup', { get: function () { return require('./data-azurerm-mssql-failover-group'); } });
 Object.defineProperty(exports, 'dataAzurermMssqlManagedDatabase', { get: function () { return require('./data-azurerm-mssql-managed-database'); } });
 Object.defineProperty(exports, 'dataAzurermMssqlManagedInstance', { get: function () { return require('./data-azurerm-mssql-managed-instance'); } });
 Object.defineProperty(exports, 'dataAzurermMssqlServer', { get: function () { return require('./data-azurerm-mssql-server'); } });
@@ -1467,6 +1474,7 @@ Object.defineProperty(exports, 'dataAzurermTemplateSpecVersion', { get: function
 Object.defineProperty(exports, 'dataAzurermTenantTemplateDeployment', { get: function () { return require('./data-azurerm-tenant-template-deployment'); } });
 Object.defineProperty(exports, 'dataAzurermTrafficManagerGeographicalLocation', { get: function () { return require('./data-azurerm-traffic-manager-geographical-location'); } });
 Object.defineProperty(exports, 'dataAzurermTrafficManagerProfile', { get: function () { return require('./data-azurerm-traffic-manager-profile'); } });
+Object.defineProperty(exports, 'dataAzurermTrustedSigningAccount', { get: function () { return require('./data-azurerm-trusted-signing-account'); } });
 Object.defineProperty(exports, 'dataAzurermUserAssignedIdentity', { get: function () { return require('./data-azurerm-user-assigned-identity'); } });
 Object.defineProperty(exports, 'dataAzurermVirtualDesktopApplicationGroup', { get: function () { return require('./data-azurerm-virtual-desktop-application-group'); } });
 Object.defineProperty(exports, 'dataAzurermVirtualDesktopHostPool', { get: function () { return require('./data-azurerm-virtual-desktop-host-pool'); } });
