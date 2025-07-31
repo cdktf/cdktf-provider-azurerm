@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +13,58 @@ import * as cdktf from 'cdktf';
 
 export interface VideoIndexerAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#id VideoIndexerAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#id VideoIndexerAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#location VideoIndexerAccount#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#location VideoIndexerAccount#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#name VideoIndexerAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#name VideoIndexerAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#resource_group_name VideoIndexerAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#public_network_access VideoIndexerAccount#public_network_access}
+  */
+  readonly publicNetworkAccess?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#resource_group_name VideoIndexerAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#tags VideoIndexerAccount#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#tags VideoIndexerAccount#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#identity VideoIndexerAccount#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#identity VideoIndexerAccount#identity}
   */
   readonly identity: VideoIndexerAccountIdentity;
   /**
   * storage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#storage VideoIndexerAccount#storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#storage VideoIndexerAccount#storage}
   */
   readonly storage: VideoIndexerAccountStorage;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#timeouts VideoIndexerAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#timeouts VideoIndexerAccount#timeouts}
   */
   readonly timeouts?: VideoIndexerAccountTimeouts;
 }
 export interface VideoIndexerAccountIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#identity_ids VideoIndexerAccount#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#identity_ids VideoIndexerAccount#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#type VideoIndexerAccount#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#type VideoIndexerAccount#type}
   */
   readonly type: string;
 }
@@ -180,11 +184,11 @@ export class VideoIndexerAccountIdentityOutputReference extends cdktf.ComplexObj
 }
 export interface VideoIndexerAccountStorage {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#storage_account_id VideoIndexerAccount#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#storage_account_id VideoIndexerAccount#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#user_assigned_identity_id VideoIndexerAccount#user_assigned_identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#user_assigned_identity_id VideoIndexerAccount#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId?: string;
 }
@@ -294,19 +298,19 @@ export class VideoIndexerAccountStorageOutputReference extends cdktf.ComplexObje
 }
 export interface VideoIndexerAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#create VideoIndexerAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#create VideoIndexerAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#delete VideoIndexerAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#delete VideoIndexerAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#read VideoIndexerAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#read VideoIndexerAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#update VideoIndexerAccount#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#update VideoIndexerAccount#update}
   */
   readonly update?: string;
 }
@@ -487,7 +491,7 @@ export class VideoIndexerAccountTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account azurerm_video_indexer_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account azurerm_video_indexer_account}
 */
 export class VideoIndexerAccount extends cdktf.TerraformResource {
 
@@ -503,7 +507,7 @@ export class VideoIndexerAccount extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a VideoIndexerAccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the VideoIndexerAccount to import
-  * @param importFromId The id of the existing VideoIndexerAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing VideoIndexerAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the VideoIndexerAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -515,7 +519,7 @@ export class VideoIndexerAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/video_indexer_account azurerm_video_indexer_account} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/video_indexer_account azurerm_video_indexer_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -526,7 +530,7 @@ export class VideoIndexerAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_video_indexer_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.37.0',
+        providerVersion: '4.38.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -540,6 +544,7 @@ export class VideoIndexerAccount extends cdktf.TerraformResource {
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkAccess = config.publicNetworkAccess;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._identity.internalValue = config.identity;
@@ -591,6 +596,22 @@ export class VideoIndexerAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // public_network_access - computed: false, optional: true, required: false
+  private _publicNetworkAccess?: string; 
+  public get publicNetworkAccess() {
+    return this.getStringAttribute('public_network_access');
+  }
+  public set publicNetworkAccess(value: string) {
+    this._publicNetworkAccess = value;
+  }
+  public resetPublicNetworkAccess() {
+    this._publicNetworkAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessInput() {
+    return this._publicNetworkAccess;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -673,6 +694,7 @@ export class VideoIndexerAccount extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access: cdktf.stringToTerraform(this._publicNetworkAccess),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: videoIndexerAccountIdentityToTerraform(this._identity.internalValue),
@@ -697,6 +719,12 @@ export class VideoIndexerAccount extends cdktf.TerraformResource {
       },
       name: {
         value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_network_access: {
+        value: cdktf.stringToHclTerraform(this._publicNetworkAccess),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

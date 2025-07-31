@@ -4,7 +4,7 @@
 
 ### DataAzurermStreamAnalyticsJob <a name="DataAzurermStreamAnalyticsJob" id="@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJob"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job azurerm_stream_analytics_job}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job azurerm_stream_analytics_job}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJob.Initializer"></a>
 
@@ -39,9 +39,9 @@ dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJob(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJob.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJob.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJob.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJob.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#name DataAzurermStreamAnalyticsJob#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJob.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#resource_group_name DataAzurermStreamAnalyticsJob#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJob.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#id DataAzurermStreamAnalyticsJob#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJob.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#name DataAzurermStreamAnalyticsJob#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJob.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#resource_group_name DataAzurermStreamAnalyticsJob#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJob.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#id DataAzurermStreamAnalyticsJob#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJob.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobTimeouts">DataAzurermStreamAnalyticsJobTimeouts</a></code> | timeouts block. |
 
 ---
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#name DataAzurermStreamAnalyticsJob#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#name DataAzurermStreamAnalyticsJob#name}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#resource_group_name DataAzurermStreamAnalyticsJob#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#resource_group_name DataAzurermStreamAnalyticsJob#resource_group_name}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#id DataAzurermStreamAnalyticsJob#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#id DataAzurermStreamAnalyticsJob#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -139,7 +139,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#timeouts DataAzurermStreamAnalyticsJob#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#timeouts DataAzurermStreamAnalyticsJob#timeouts}
 
 ---
 
@@ -399,7 +399,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#read DataAzurermStreamAnalyticsJob#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#read DataAzurermStreamAnalyticsJob#read}.
 
 ---
 
@@ -529,7 +529,7 @@ The construct id used in the generated config for the DataAzurermStreamAnalytics
 
 The id of the existing DataAzurermStreamAnalyticsJob that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -988,9 +988,9 @@ dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobConfig(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#name DataAzurermStreamAnalyticsJob#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#resource_group_name DataAzurermStreamAnalyticsJob#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#id DataAzurermStreamAnalyticsJob#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#name DataAzurermStreamAnalyticsJob#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#resource_group_name DataAzurermStreamAnalyticsJob#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#id DataAzurermStreamAnalyticsJob#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobTimeouts">DataAzurermStreamAnalyticsJobTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1073,7 +1073,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#name DataAzurermStreamAnalyticsJob#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#name DataAzurermStreamAnalyticsJob#name}.
 
 ---
 
@@ -1085,7 +1085,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#resource_group_name DataAzurermStreamAnalyticsJob#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#resource_group_name DataAzurermStreamAnalyticsJob#resource_group_name}.
 
 ---
 
@@ -1097,7 +1097,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#id DataAzurermStreamAnalyticsJob#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#id DataAzurermStreamAnalyticsJob#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1114,7 +1114,7 @@ timeouts: DataAzurermStreamAnalyticsJobTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#timeouts DataAzurermStreamAnalyticsJob#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#timeouts DataAzurermStreamAnalyticsJob#timeouts}
 
 ---
 
@@ -1145,7 +1145,7 @@ dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#read DataAzurermStreamAnalyticsJob#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStreamAnalyticsJob.DataAzurermStreamAnalyticsJobTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#read DataAzurermStreamAnalyticsJob#read}. |
 
 ---
 
@@ -1157,7 +1157,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/data-sources/stream_analytics_job#read DataAzurermStreamAnalyticsJob#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/stream_analytics_job#read DataAzurermStreamAnalyticsJob#read}.
 
 ---
 

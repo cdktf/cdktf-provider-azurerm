@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,64 +13,298 @@ import * as cdktf from 'cdktf';
 
 export interface DynatraceMonitorConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#id DynatraceMonitor#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#id DynatraceMonitor#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#location DynatraceMonitor#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#location DynatraceMonitor#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#marketplace_subscription DynatraceMonitor#marketplace_subscription}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#marketplace_subscription DynatraceMonitor#marketplace_subscription}
   */
   readonly marketplaceSubscription: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#monitoring_enabled DynatraceMonitor#monitoring_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#monitoring_enabled DynatraceMonitor#monitoring_enabled}
   */
   readonly monitoringEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#name DynatraceMonitor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#name DynatraceMonitor#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#resource_group_name DynatraceMonitor#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#resource_group_name DynatraceMonitor#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#tags DynatraceMonitor#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#tags DynatraceMonitor#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
+  * environment_properties block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#environment_properties DynatraceMonitor#environment_properties}
+  */
+  readonly environmentProperties?: DynatraceMonitorEnvironmentProperties[] | cdktf.IResolvable;
+  /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#identity DynatraceMonitor#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#identity DynatraceMonitor#identity}
   */
   readonly identity: DynatraceMonitorIdentity;
   /**
   * plan block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#plan DynatraceMonitor#plan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#plan DynatraceMonitor#plan}
   */
   readonly plan: DynatraceMonitorPlan;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#timeouts DynatraceMonitor#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#timeouts DynatraceMonitor#timeouts}
   */
   readonly timeouts?: DynatraceMonitorTimeouts;
   /**
   * user block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#user DynatraceMonitor#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#user DynatraceMonitor#user}
   */
   readonly user: DynatraceMonitorUser;
 }
+export interface DynatraceMonitorEnvironmentPropertiesEnvironmentInfo {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#environment_id DynatraceMonitor#environment_id}
+  */
+  readonly environmentId: string;
+}
+
+export function dynatraceMonitorEnvironmentPropertiesEnvironmentInfoToTerraform(struct?: DynatraceMonitorEnvironmentPropertiesEnvironmentInfo | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    environment_id: cdktf.stringToTerraform(struct!.environmentId),
+  }
+}
+
+
+export function dynatraceMonitorEnvironmentPropertiesEnvironmentInfoToHclTerraform(struct?: DynatraceMonitorEnvironmentPropertiesEnvironmentInfo | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    environment_id: {
+      value: cdktf.stringToHclTerraform(struct!.environmentId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DynatraceMonitorEnvironmentPropertiesEnvironmentInfoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DynatraceMonitorEnvironmentPropertiesEnvironmentInfo | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._environmentId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.environmentId = this._environmentId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DynatraceMonitorEnvironmentPropertiesEnvironmentInfo | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._environmentId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._environmentId = value.environmentId;
+    }
+  }
+
+  // environment_id - computed: false, optional: false, required: true
+  private _environmentId?: string; 
+  public get environmentId() {
+    return this.getStringAttribute('environment_id');
+  }
+  public set environmentId(value: string) {
+    this._environmentId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get environmentIdInput() {
+    return this._environmentId;
+  }
+}
+
+export class DynatraceMonitorEnvironmentPropertiesEnvironmentInfoList extends cdktf.ComplexList {
+  public internalValue? : DynatraceMonitorEnvironmentPropertiesEnvironmentInfo[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DynatraceMonitorEnvironmentPropertiesEnvironmentInfoOutputReference {
+    return new DynatraceMonitorEnvironmentPropertiesEnvironmentInfoOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DynatraceMonitorEnvironmentProperties {
+  /**
+  * environment_info block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#environment_info DynatraceMonitor#environment_info}
+  */
+  readonly environmentInfo: DynatraceMonitorEnvironmentPropertiesEnvironmentInfo[] | cdktf.IResolvable;
+}
+
+export function dynatraceMonitorEnvironmentPropertiesToTerraform(struct?: DynatraceMonitorEnvironmentProperties | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    environment_info: cdktf.listMapper(dynatraceMonitorEnvironmentPropertiesEnvironmentInfoToTerraform, true)(struct!.environmentInfo),
+  }
+}
+
+
+export function dynatraceMonitorEnvironmentPropertiesToHclTerraform(struct?: DynatraceMonitorEnvironmentProperties | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    environment_info: {
+      value: cdktf.listMapperHcl(dynatraceMonitorEnvironmentPropertiesEnvironmentInfoToHclTerraform, true)(struct!.environmentInfo),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DynatraceMonitorEnvironmentPropertiesEnvironmentInfoList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DynatraceMonitorEnvironmentPropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DynatraceMonitorEnvironmentProperties | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._environmentInfo?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.environmentInfo = this._environmentInfo?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DynatraceMonitorEnvironmentProperties | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._environmentInfo.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._environmentInfo.internalValue = value.environmentInfo;
+    }
+  }
+
+  // environment_info - computed: false, optional: false, required: true
+  private _environmentInfo = new DynatraceMonitorEnvironmentPropertiesEnvironmentInfoList(this, "environment_info", false);
+  public get environmentInfo() {
+    return this._environmentInfo;
+  }
+  public putEnvironmentInfo(value: DynatraceMonitorEnvironmentPropertiesEnvironmentInfo[] | cdktf.IResolvable) {
+    this._environmentInfo.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get environmentInfoInput() {
+    return this._environmentInfo.internalValue;
+  }
+}
+
+export class DynatraceMonitorEnvironmentPropertiesList extends cdktf.ComplexList {
+  public internalValue? : DynatraceMonitorEnvironmentProperties[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DynatraceMonitorEnvironmentPropertiesOutputReference {
+    return new DynatraceMonitorEnvironmentPropertiesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DynatraceMonitorIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#type DynatraceMonitor#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#type DynatraceMonitor#type}
   */
   readonly type: string;
 }
@@ -161,15 +395,15 @@ export class DynatraceMonitorIdentityOutputReference extends cdktf.ComplexObject
 }
 export interface DynatraceMonitorPlan {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#billing_cycle DynatraceMonitor#billing_cycle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#billing_cycle DynatraceMonitor#billing_cycle}
   */
   readonly billingCycle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#plan DynatraceMonitor#plan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#plan DynatraceMonitor#plan}
   */
   readonly plan: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#usage_type DynatraceMonitor#usage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#usage_type DynatraceMonitor#usage_type}
   */
   readonly usageType?: string;
 }
@@ -313,19 +547,19 @@ export class DynatraceMonitorPlanOutputReference extends cdktf.ComplexObject {
 }
 export interface DynatraceMonitorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#create DynatraceMonitor#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#create DynatraceMonitor#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#delete DynatraceMonitor#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#delete DynatraceMonitor#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#read DynatraceMonitor#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#read DynatraceMonitor#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#update DynatraceMonitor#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#update DynatraceMonitor#update}
   */
   readonly update?: string;
 }
@@ -506,23 +740,23 @@ export class DynatraceMonitorTimeoutsOutputReference extends cdktf.ComplexObject
 }
 export interface DynatraceMonitorUser {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#country DynatraceMonitor#country}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#country DynatraceMonitor#country}
   */
   readonly country: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#email DynatraceMonitor#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#email DynatraceMonitor#email}
   */
   readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#first_name DynatraceMonitor#first_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#first_name DynatraceMonitor#first_name}
   */
   readonly firstName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#last_name DynatraceMonitor#last_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#last_name DynatraceMonitor#last_name}
   */
   readonly lastName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#phone_number DynatraceMonitor#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#phone_number DynatraceMonitor#phone_number}
   */
   readonly phoneNumber: string;
 }
@@ -707,7 +941,7 @@ export class DynatraceMonitorUserOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor azurerm_dynatrace_monitor}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor azurerm_dynatrace_monitor}
 */
 export class DynatraceMonitor extends cdktf.TerraformResource {
 
@@ -723,7 +957,7 @@ export class DynatraceMonitor extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DynatraceMonitor resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DynatraceMonitor to import
-  * @param importFromId The id of the existing DynatraceMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DynatraceMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DynatraceMonitor to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -735,7 +969,7 @@ export class DynatraceMonitor extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.37.0/docs/resources/dynatrace_monitor azurerm_dynatrace_monitor} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/dynatrace_monitor azurerm_dynatrace_monitor} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -746,7 +980,7 @@ export class DynatraceMonitor extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dynatrace_monitor',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.37.0',
+        providerVersion: '4.38.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -764,6 +998,7 @@ export class DynatraceMonitor extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._environmentProperties.internalValue = config.environmentProperties;
     this._identity.internalValue = config.identity;
     this._plan.internalValue = config.plan;
     this._timeouts.internalValue = config.timeouts;
@@ -874,6 +1109,22 @@ export class DynatraceMonitor extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // environment_properties - computed: false, optional: true, required: false
+  private _environmentProperties = new DynatraceMonitorEnvironmentPropertiesList(this, "environment_properties", false);
+  public get environmentProperties() {
+    return this._environmentProperties;
+  }
+  public putEnvironmentProperties(value: DynatraceMonitorEnvironmentProperties[] | cdktf.IResolvable) {
+    this._environmentProperties.internalValue = value;
+  }
+  public resetEnvironmentProperties() {
+    this._environmentProperties.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get environmentPropertiesInput() {
+    return this._environmentProperties.internalValue;
+  }
+
   // identity - computed: false, optional: false, required: true
   private _identity = new DynatraceMonitorIdentityOutputReference(this, "identity");
   public get identity() {
@@ -942,6 +1193,7 @@ export class DynatraceMonitor extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      environment_properties: cdktf.listMapper(dynatraceMonitorEnvironmentPropertiesToTerraform, true)(this._environmentProperties.internalValue),
       identity: dynatraceMonitorIdentityToTerraform(this._identity.internalValue),
       plan: dynatraceMonitorPlanToTerraform(this._plan.internalValue),
       timeouts: dynatraceMonitorTimeoutsToTerraform(this._timeouts.internalValue),
@@ -992,6 +1244,12 @@ export class DynatraceMonitor extends cdktf.TerraformResource {
         isBlock: false,
         type: "map",
         storageClassType: "stringMap",
+      },
+      environment_properties: {
+        value: cdktf.listMapperHcl(dynatraceMonitorEnvironmentPropertiesToHclTerraform, true)(this._environmentProperties.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DynatraceMonitorEnvironmentPropertiesList",
       },
       identity: {
         value: dynatraceMonitorIdentityToHclTerraform(this._identity.internalValue),
