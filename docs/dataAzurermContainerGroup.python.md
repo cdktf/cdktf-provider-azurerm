@@ -4,7 +4,7 @@
 
 ### DataAzurermContainerGroup <a name="DataAzurermContainerGroup" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group azurerm_container_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group azurerm_container_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer"></a>
 
@@ -40,11 +40,11 @@ dataAzurermContainerGroup.DataAzurermContainerGroup(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#name DataAzurermContainerGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#resource_group_name DataAzurermContainerGroup#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#id DataAzurermContainerGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#name DataAzurermContainerGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#resource_group_name DataAzurermContainerGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#id DataAzurermContainerGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupTimeouts">DataAzurermContainerGroupTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer.parameter.zones">zones</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#zones DataAzurermContainerGroup#zones}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroup.Initializer.parameter.zones">zones</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#zones DataAzurermContainerGroup#zones}. |
 
 ---
 
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#name DataAzurermContainerGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#name DataAzurermContainerGroup#name}.
 
 ---
 
@@ -120,7 +120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#resource_group_name DataAzurermContainerGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#resource_group_name DataAzurermContainerGroup#resource_group_name}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#id DataAzurermContainerGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#id DataAzurermContainerGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -141,7 +141,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#timeouts DataAzurermContainerGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#timeouts DataAzurermContainerGroup#timeouts}
 
 ---
 
@@ -149,7 +149,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#zones DataAzurermContainerGroup#zones}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#zones DataAzurermContainerGroup#zones}.
 
 ---
 
@@ -410,7 +410,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#read DataAzurermContainerGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#read DataAzurermContainerGroup#read}.
 
 ---
 
@@ -546,7 +546,7 @@ The construct id used in the generated config for the DataAzurermContainerGroup 
 
 The id of the existing DataAzurermContainerGroup that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -929,11 +929,11 @@ dataAzurermContainerGroup.DataAzurermContainerGroupConfig(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#name DataAzurermContainerGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#resource_group_name DataAzurermContainerGroup#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#id DataAzurermContainerGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#name DataAzurermContainerGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#resource_group_name DataAzurermContainerGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#id DataAzurermContainerGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupTimeouts">DataAzurermContainerGroupTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.zones">zones</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#zones DataAzurermContainerGroup#zones}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupConfig.property.zones">zones</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#zones DataAzurermContainerGroup#zones}. |
 
 ---
 
@@ -1015,7 +1015,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#name DataAzurermContainerGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#name DataAzurermContainerGroup#name}.
 
 ---
 
@@ -1027,7 +1027,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#resource_group_name DataAzurermContainerGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#resource_group_name DataAzurermContainerGroup#resource_group_name}.
 
 ---
 
@@ -1039,7 +1039,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#id DataAzurermContainerGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#id DataAzurermContainerGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1056,7 +1056,7 @@ timeouts: DataAzurermContainerGroupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#timeouts DataAzurermContainerGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#timeouts DataAzurermContainerGroup#timeouts}
 
 ---
 
@@ -1068,7 +1068,7 @@ zones: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#zones DataAzurermContainerGroup#zones}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#zones DataAzurermContainerGroup#zones}.
 
 ---
 
@@ -1099,7 +1099,7 @@ dataAzurermContainerGroup.DataAzurermContainerGroupTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#read DataAzurermContainerGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermContainerGroup.DataAzurermContainerGroupTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#read DataAzurermContainerGroup#read}. |
 
 ---
 
@@ -1111,7 +1111,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/data-sources/container_group#read DataAzurermContainerGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/data-sources/container_group#read DataAzurermContainerGroup#read}.
 
 ---
 

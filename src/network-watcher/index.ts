@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkWatcherConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher#id NetworkWatcher#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher#id NetworkWatcher#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher#location NetworkWatcher#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher#location NetworkWatcher#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher#name NetworkWatcher#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher#name NetworkWatcher#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher#resource_group_name NetworkWatcher#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher#resource_group_name NetworkWatcher#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher#tags NetworkWatcher#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher#tags NetworkWatcher#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher#timeouts NetworkWatcher#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher#timeouts NetworkWatcher#timeouts}
   */
   readonly timeouts?: NetworkWatcherTimeouts;
 }
 export interface NetworkWatcherTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher#create NetworkWatcher#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher#create NetworkWatcher#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher#delete NetworkWatcher#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher#delete NetworkWatcher#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher#read NetworkWatcher#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher#read NetworkWatcher#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher#update NetworkWatcher#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher#update NetworkWatcher#update}
   */
   readonly update?: string;
 }
@@ -237,7 +237,7 @@ export class NetworkWatcherTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher azurerm_network_watcher}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher azurerm_network_watcher}
 */
 export class NetworkWatcher extends cdktf.TerraformResource {
 
@@ -253,7 +253,7 @@ export class NetworkWatcher extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkWatcher resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkWatcher to import
-  * @param importFromId The id of the existing NetworkWatcher that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkWatcher that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkWatcher to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -265,7 +265,7 @@ export class NetworkWatcher extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/network_watcher azurerm_network_watcher} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/network_watcher azurerm_network_watcher} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -276,7 +276,7 @@ export class NetworkWatcher extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_watcher',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.38.0',
+        providerVersion: '4.38.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

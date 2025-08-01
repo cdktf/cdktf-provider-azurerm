@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/static_web_app_custom_domain
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/static_web_app_custom_domain
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +13,42 @@ import * as cdktf from 'cdktf';
 
 export interface StaticWebAppCustomDomainConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/static_web_app_custom_domain#domain_name StaticWebAppCustomDomain#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/static_web_app_custom_domain#domain_name StaticWebAppCustomDomain#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/static_web_app_custom_domain#id StaticWebAppCustomDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/static_web_app_custom_domain#id StaticWebAppCustomDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/static_web_app_custom_domain#static_web_app_id StaticWebAppCustomDomain#static_web_app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/static_web_app_custom_domain#static_web_app_id StaticWebAppCustomDomain#static_web_app_id}
   */
   readonly staticWebAppId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/static_web_app_custom_domain#validation_type StaticWebAppCustomDomain#validation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/static_web_app_custom_domain#validation_type StaticWebAppCustomDomain#validation_type}
   */
   readonly validationType: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/static_web_app_custom_domain#timeouts StaticWebAppCustomDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/static_web_app_custom_domain#timeouts StaticWebAppCustomDomain#timeouts}
   */
   readonly timeouts?: StaticWebAppCustomDomainTimeouts;
 }
 export interface StaticWebAppCustomDomainTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/static_web_app_custom_domain#create StaticWebAppCustomDomain#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/static_web_app_custom_domain#create StaticWebAppCustomDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/static_web_app_custom_domain#delete StaticWebAppCustomDomain#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/static_web_app_custom_domain#delete StaticWebAppCustomDomain#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/static_web_app_custom_domain#read StaticWebAppCustomDomain#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/static_web_app_custom_domain#read StaticWebAppCustomDomain#read}
   */
   readonly read?: string;
 }
@@ -200,7 +200,7 @@ export class StaticWebAppCustomDomainTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/static_web_app_custom_domain azurerm_static_web_app_custom_domain}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/static_web_app_custom_domain azurerm_static_web_app_custom_domain}
 */
 export class StaticWebAppCustomDomain extends cdktf.TerraformResource {
 
@@ -216,7 +216,7 @@ export class StaticWebAppCustomDomain extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a StaticWebAppCustomDomain resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the StaticWebAppCustomDomain to import
-  * @param importFromId The id of the existing StaticWebAppCustomDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/static_web_app_custom_domain#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing StaticWebAppCustomDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/static_web_app_custom_domain#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the StaticWebAppCustomDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -228,7 +228,7 @@ export class StaticWebAppCustomDomain extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/static_web_app_custom_domain azurerm_static_web_app_custom_domain} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/static_web_app_custom_domain azurerm_static_web_app_custom_domain} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -239,7 +239,7 @@ export class StaticWebAppCustomDomain extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_static_web_app_custom_domain',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.38.0',
+        providerVersion: '4.38.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

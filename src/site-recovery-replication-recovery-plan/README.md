@@ -1,3 +1,3 @@
 # `azurerm_site_recovery_replication_recovery_plan`
 
-Refer to the Terraform Registry for docs: [`azurerm_site_recovery_replication_recovery_plan`](https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/site_recovery_replication_recovery_plan).
+Refer to the Terraform Registry for docs: [`azurerm_site_recovery_replication_recovery_plan`](https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/site_recovery_replication_recovery_plan).
