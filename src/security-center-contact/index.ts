@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +13,54 @@ import * as cdktf from 'cdktf';
 
 export interface SecurityCenterContactConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact#alert_notifications SecurityCenterContact#alert_notifications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact#alert_notifications SecurityCenterContact#alert_notifications}
   */
   readonly alertNotifications: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact#alerts_to_admins SecurityCenterContact#alerts_to_admins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact#alerts_to_admins SecurityCenterContact#alerts_to_admins}
   */
   readonly alertsToAdmins: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact#email SecurityCenterContact#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact#email SecurityCenterContact#email}
   */
   readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact#id SecurityCenterContact#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact#id SecurityCenterContact#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact#name SecurityCenterContact#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact#name SecurityCenterContact#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact#phone SecurityCenterContact#phone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact#phone SecurityCenterContact#phone}
   */
   readonly phone?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact#timeouts SecurityCenterContact#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact#timeouts SecurityCenterContact#timeouts}
   */
   readonly timeouts?: SecurityCenterContactTimeouts;
 }
 export interface SecurityCenterContactTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact#create SecurityCenterContact#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact#create SecurityCenterContact#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact#delete SecurityCenterContact#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact#delete SecurityCenterContact#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact#read SecurityCenterContact#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact#read SecurityCenterContact#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact#update SecurityCenterContact#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact#update SecurityCenterContact#update}
   */
   readonly update?: string;
 }
@@ -241,7 +241,7 @@ export class SecurityCenterContactTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact azurerm_security_center_contact}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact azurerm_security_center_contact}
 */
 export class SecurityCenterContact extends cdktf.TerraformResource {
 
@@ -257,7 +257,7 @@ export class SecurityCenterContact extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SecurityCenterContact resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SecurityCenterContact to import
-  * @param importFromId The id of the existing SecurityCenterContact that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SecurityCenterContact that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SecurityCenterContact to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -269,7 +269,7 @@ export class SecurityCenterContact extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.0/docs/resources/security_center_contact azurerm_security_center_contact} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/security_center_contact azurerm_security_center_contact} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -280,7 +280,7 @@ export class SecurityCenterContact extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_security_center_contact',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.38.0',
+        providerVersion: '4.38.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
