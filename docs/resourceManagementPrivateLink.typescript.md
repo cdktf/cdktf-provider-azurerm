@@ -4,7 +4,7 @@
 
 ### ResourceManagementPrivateLink <a name="ResourceManagementPrivateLink" id="@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLink"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link azurerm_resource_management_private_link}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link azurerm_resource_management_private_link}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLink.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the ResourceManagementPrivateL
 
 The id of the existing ResourceManagementPrivateLink that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -820,10 +820,10 @@ const resourceManagementPrivateLinkConfig: resourceManagementPrivateLink.Resourc
 | <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#location ResourceManagementPrivateLink#location}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#name ResourceManagementPrivateLink#name}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#resource_group_name ResourceManagementPrivateLink#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#id ResourceManagementPrivateLink#id}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#location ResourceManagementPrivateLink#location}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#name ResourceManagementPrivateLink#name}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#resource_group_name ResourceManagementPrivateLink#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#id ResourceManagementPrivateLink#id}. |
 | <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkTimeouts">ResourceManagementPrivateLinkTimeouts</a></code> | timeouts block. |
 
 ---
@@ -906,7 +906,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#location ResourceManagementPrivateLink#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#location ResourceManagementPrivateLink#location}.
 
 ---
 
@@ -918,7 +918,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#name ResourceManagementPrivateLink#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#name ResourceManagementPrivateLink#name}.
 
 ---
 
@@ -930,7 +930,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#resource_group_name ResourceManagementPrivateLink#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#resource_group_name ResourceManagementPrivateLink#resource_group_name}.
 
 ---
 
@@ -942,7 +942,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#id ResourceManagementPrivateLink#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#id ResourceManagementPrivateLink#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -959,7 +959,7 @@ public readonly timeouts: ResourceManagementPrivateLinkTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#timeouts ResourceManagementPrivateLink#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#timeouts ResourceManagementPrivateLink#timeouts}
 
 ---
 
@@ -977,9 +977,9 @@ const resourceManagementPrivateLinkTimeouts: resourceManagementPrivateLink.Resou
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#create ResourceManagementPrivateLink#create}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#delete ResourceManagementPrivateLink#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#read ResourceManagementPrivateLink#read}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#create ResourceManagementPrivateLink#create}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#delete ResourceManagementPrivateLink#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceManagementPrivateLink.ResourceManagementPrivateLinkTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#read ResourceManagementPrivateLink#read}. |
 
 ---
 
@@ -991,7 +991,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#create ResourceManagementPrivateLink#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#create ResourceManagementPrivateLink#create}.
 
 ---
 
@@ -1003,7 +1003,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#delete ResourceManagementPrivateLink#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#delete ResourceManagementPrivateLink#delete}.
 
 ---
 
@@ -1015,7 +1015,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/resource_management_private_link#read ResourceManagementPrivateLink#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/resource_management_private_link#read ResourceManagementPrivateLink#read}.
 
 ---
 
