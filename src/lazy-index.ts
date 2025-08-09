@@ -59,6 +59,7 @@ Object.defineProperty(exports, 'apiManagementProductGroup', { get: function () {
 Object.defineProperty(exports, 'apiManagementProductPolicy', { get: function () { return require('./api-management-product-policy'); } });
 Object.defineProperty(exports, 'apiManagementProductTag', { get: function () { return require('./api-management-product-tag'); } });
 Object.defineProperty(exports, 'apiManagementRedisCache', { get: function () { return require('./api-management-redis-cache'); } });
+Object.defineProperty(exports, 'apiManagementStandaloneGateway', { get: function () { return require('./api-management-standalone-gateway'); } });
 Object.defineProperty(exports, 'apiManagementSubscription', { get: function () { return require('./api-management-subscription'); } });
 Object.defineProperty(exports, 'apiManagementTag', { get: function () { return require('./api-management-tag'); } });
 Object.defineProperty(exports, 'apiManagementUser', { get: function () { return require('./api-management-user'); } });
@@ -380,6 +381,7 @@ Object.defineProperty(exports, 'eventgridDomainTopic', { get: function () { retu
 Object.defineProperty(exports, 'eventgridEventSubscription', { get: function () { return require('./eventgrid-event-subscription'); } });
 Object.defineProperty(exports, 'eventgridNamespace', { get: function () { return require('./eventgrid-namespace'); } });
 Object.defineProperty(exports, 'eventgridPartnerConfiguration', { get: function () { return require('./eventgrid-partner-configuration'); } });
+Object.defineProperty(exports, 'eventgridPartnerNamespace', { get: function () { return require('./eventgrid-partner-namespace'); } });
 Object.defineProperty(exports, 'eventgridPartnerRegistration', { get: function () { return require('./eventgrid-partner-registration'); } });
 Object.defineProperty(exports, 'eventgridSystemTopic', { get: function () { return require('./eventgrid-system-topic'); } });
 Object.defineProperty(exports, 'eventgridSystemTopicEventSubscription', { get: function () { return require('./eventgrid-system-topic-event-subscription'); } });
@@ -740,6 +742,7 @@ Object.defineProperty(exports, 'postgresqlDatabase', { get: function () { return
 Object.defineProperty(exports, 'postgresqlFirewallRule', { get: function () { return require('./postgresql-firewall-rule'); } });
 Object.defineProperty(exports, 'postgresqlFlexibleServer', { get: function () { return require('./postgresql-flexible-server'); } });
 Object.defineProperty(exports, 'postgresqlFlexibleServerActiveDirectoryAdministrator', { get: function () { return require('./postgresql-flexible-server-active-directory-administrator'); } });
+Object.defineProperty(exports, 'postgresqlFlexibleServerBackup', { get: function () { return require('./postgresql-flexible-server-backup'); } });
 Object.defineProperty(exports, 'postgresqlFlexibleServerConfiguration', { get: function () { return require('./postgresql-flexible-server-configuration'); } });
 Object.defineProperty(exports, 'postgresqlFlexibleServerDatabase', { get: function () { return require('./postgresql-flexible-server-database'); } });
 Object.defineProperty(exports, 'postgresqlFlexibleServerFirewallRule', { get: function () { return require('./postgresql-flexible-server-firewall-rule'); } });
@@ -1235,6 +1238,7 @@ Object.defineProperty(exports, 'dataAzurermElasticSanVolumeGroup', { get: functi
 Object.defineProperty(exports, 'dataAzurermElasticSanVolumeSnapshot', { get: function () { return require('./data-azurerm-elastic-san-volume-snapshot'); } });
 Object.defineProperty(exports, 'dataAzurermEventgridDomain', { get: function () { return require('./data-azurerm-eventgrid-domain'); } });
 Object.defineProperty(exports, 'dataAzurermEventgridDomainTopic', { get: function () { return require('./data-azurerm-eventgrid-domain-topic'); } });
+Object.defineProperty(exports, 'dataAzurermEventgridPartnerNamespace', { get: function () { return require('./data-azurerm-eventgrid-partner-namespace'); } });
 Object.defineProperty(exports, 'dataAzurermEventgridPartnerRegistration', { get: function () { return require('./data-azurerm-eventgrid-partner-registration'); } });
 Object.defineProperty(exports, 'dataAzurermEventgridSystemTopic', { get: function () { return require('./data-azurerm-eventgrid-system-topic'); } });
 Object.defineProperty(exports, 'dataAzurermEventgridTopic', { get: function () { return require('./data-azurerm-eventgrid-topic'); } });

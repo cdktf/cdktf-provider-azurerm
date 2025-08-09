@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,82 +13,82 @@ import * as cdktf from 'cdktf';
 
 export interface QumuloFileSystemConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#admin_password QumuloFileSystem#admin_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#admin_password QumuloFileSystem#admin_password}
   */
   readonly adminPassword: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#email QumuloFileSystem#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#email QumuloFileSystem#email}
   */
   readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#id QumuloFileSystem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#id QumuloFileSystem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#location QumuloFileSystem#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#location QumuloFileSystem#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#name QumuloFileSystem#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#name QumuloFileSystem#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#offer_id QumuloFileSystem#offer_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#offer_id QumuloFileSystem#offer_id}
   */
   readonly offerId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#plan_id QumuloFileSystem#plan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#plan_id QumuloFileSystem#plan_id}
   */
   readonly planId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#publisher_id QumuloFileSystem#publisher_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#publisher_id QumuloFileSystem#publisher_id}
   */
   readonly publisherId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#resource_group_name QumuloFileSystem#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#resource_group_name QumuloFileSystem#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#storage_sku QumuloFileSystem#storage_sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#storage_sku QumuloFileSystem#storage_sku}
   */
   readonly storageSku: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#subnet_id QumuloFileSystem#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#subnet_id QumuloFileSystem#subnet_id}
   */
   readonly subnetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#tags QumuloFileSystem#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#tags QumuloFileSystem#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#zone QumuloFileSystem#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#zone QumuloFileSystem#zone}
   */
   readonly zone: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#timeouts QumuloFileSystem#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#timeouts QumuloFileSystem#timeouts}
   */
   readonly timeouts?: QumuloFileSystemTimeouts;
 }
 export interface QumuloFileSystemTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#create QumuloFileSystem#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#create QumuloFileSystem#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#delete QumuloFileSystem#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#delete QumuloFileSystem#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#read QumuloFileSystem#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#read QumuloFileSystem#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#update QumuloFileSystem#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#update QumuloFileSystem#update}
   */
   readonly update?: string;
 }
@@ -269,7 +269,7 @@ export class QumuloFileSystemTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system azurerm_qumulo_file_system}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system azurerm_qumulo_file_system}
 */
 export class QumuloFileSystem extends cdktf.TerraformResource {
 
@@ -285,7 +285,7 @@ export class QumuloFileSystem extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a QumuloFileSystem resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the QumuloFileSystem to import
-  * @param importFromId The id of the existing QumuloFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing QumuloFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the QumuloFileSystem to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -297,7 +297,7 @@ export class QumuloFileSystem extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.38.1/docs/resources/qumulo_file_system azurerm_qumulo_file_system} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/qumulo_file_system azurerm_qumulo_file_system} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -308,7 +308,7 @@ export class QumuloFileSystem extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_qumulo_file_system',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.38.1',
+        providerVersion: '4.39.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
