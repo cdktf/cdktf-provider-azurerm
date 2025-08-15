@@ -253,6 +253,7 @@ Object.defineProperty(exports, 'dataFactory', { get: function () { return requir
 Object.defineProperty(exports, 'dataFactoryCredentialServicePrincipal', { get: function () { return require('./data-factory-credential-service-principal'); } });
 Object.defineProperty(exports, 'dataFactoryCredentialUserManagedIdentity', { get: function () { return require('./data-factory-credential-user-managed-identity'); } });
 Object.defineProperty(exports, 'dataFactoryCustomDataset', { get: function () { return require('./data-factory-custom-dataset'); } });
+Object.defineProperty(exports, 'dataFactoryCustomerManagedKey', { get: function () { return require('./data-factory-customer-managed-key'); } });
 Object.defineProperty(exports, 'dataFactoryDataFlow', { get: function () { return require('./data-factory-data-flow'); } });
 Object.defineProperty(exports, 'dataFactoryDatasetAzureBlob', { get: function () { return require('./data-factory-dataset-azure-blob'); } });
 Object.defineProperty(exports, 'dataFactoryDatasetAzureSqlTable', { get: function () { return require('./data-factory-dataset-azure-sql-table'); } });

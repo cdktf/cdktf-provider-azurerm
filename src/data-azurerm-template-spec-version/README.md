@@ -1,3 +1,3 @@
 # `data_azurerm_template_spec_version`
 
-Refer to the Terraform Registry for docs: [`data_azurerm_template_spec_version`](https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/data-sources/template_spec_version).
+Refer to the Terraform Registry for docs: [`data_azurerm_template_spec_version`](https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/data-sources/template_spec_version).

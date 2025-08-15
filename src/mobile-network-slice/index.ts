@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,52 +13,60 @@ import * as cdktf from 'cdktf';
 
 export interface MobileNetworkSliceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#description MobileNetworkSlice#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#description MobileNetworkSlice#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#id MobileNetworkSlice#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#id MobileNetworkSlice#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#location MobileNetworkSlice#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#location MobileNetworkSlice#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#mobile_network_id MobileNetworkSlice#mobile_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#mobile_network_id MobileNetworkSlice#mobile_network_id}
   */
   readonly mobileNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#name MobileNetworkSlice#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#name MobileNetworkSlice#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#tags MobileNetworkSlice#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#slice_differentiator MobileNetworkSlice#slice_differentiator}
+  */
+  readonly sliceDifferentiator?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#slice_service_type MobileNetworkSlice#slice_service_type}
+  */
+  readonly sliceServiceType?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#tags MobileNetworkSlice#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * single_network_slice_selection_assistance_information block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#single_network_slice_selection_assistance_information MobileNetworkSlice#single_network_slice_selection_assistance_information}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#single_network_slice_selection_assistance_information MobileNetworkSlice#single_network_slice_selection_assistance_information}
   */
-  readonly singleNetworkSliceSelectionAssistanceInformation: MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformation;
+  readonly singleNetworkSliceSelectionAssistanceInformation?: MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformation;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#timeouts MobileNetworkSlice#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#timeouts MobileNetworkSlice#timeouts}
   */
   readonly timeouts?: MobileNetworkSliceTimeouts;
 }
 export interface MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#slice_differentiator MobileNetworkSlice#slice_differentiator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#slice_differentiator MobileNetworkSlice#slice_differentiator}
   */
   readonly sliceDifferentiator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#slice_service_type MobileNetworkSlice#slice_service_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#slice_service_type MobileNetworkSlice#slice_service_type}
   */
   readonly sliceServiceType: number;
 }
@@ -168,19 +176,19 @@ export class MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformationO
 }
 export interface MobileNetworkSliceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#create MobileNetworkSlice#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#create MobileNetworkSlice#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#delete MobileNetworkSlice#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#delete MobileNetworkSlice#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#read MobileNetworkSlice#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#read MobileNetworkSlice#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#update MobileNetworkSlice#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#update MobileNetworkSlice#update}
   */
   readonly update?: string;
 }
@@ -361,7 +369,7 @@ export class MobileNetworkSliceTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice azurerm_mobile_network_slice}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice azurerm_mobile_network_slice}
 */
 export class MobileNetworkSlice extends cdktf.TerraformResource {
 
@@ -377,7 +385,7 @@ export class MobileNetworkSlice extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MobileNetworkSlice resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MobileNetworkSlice to import
-  * @param importFromId The id of the existing MobileNetworkSlice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MobileNetworkSlice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MobileNetworkSlice to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -389,7 +397,7 @@ export class MobileNetworkSlice extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mobile_network_slice azurerm_mobile_network_slice} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mobile_network_slice azurerm_mobile_network_slice} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -400,7 +408,7 @@ export class MobileNetworkSlice extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mobile_network_slice',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -416,6 +424,8 @@ export class MobileNetworkSlice extends cdktf.TerraformResource {
     this._location = config.location;
     this._mobileNetworkId = config.mobileNetworkId;
     this._name = config.name;
+    this._sliceDifferentiator = config.sliceDifferentiator;
+    this._sliceServiceType = config.sliceServiceType;
     this._tags = config.tags;
     this._singleNetworkSliceSelectionAssistanceInformation.internalValue = config.singleNetworkSliceSelectionAssistanceInformation;
     this._timeouts.internalValue = config.timeouts;
@@ -496,6 +506,38 @@ export class MobileNetworkSlice extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // slice_differentiator - computed: true, optional: true, required: false
+  private _sliceDifferentiator?: string; 
+  public get sliceDifferentiator() {
+    return this.getStringAttribute('slice_differentiator');
+  }
+  public set sliceDifferentiator(value: string) {
+    this._sliceDifferentiator = value;
+  }
+  public resetSliceDifferentiator() {
+    this._sliceDifferentiator = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sliceDifferentiatorInput() {
+    return this._sliceDifferentiator;
+  }
+
+  // slice_service_type - computed: true, optional: true, required: false
+  private _sliceServiceType?: number; 
+  public get sliceServiceType() {
+    return this.getNumberAttribute('slice_service_type');
+  }
+  public set sliceServiceType(value: number) {
+    this._sliceServiceType = value;
+  }
+  public resetSliceServiceType() {
+    this._sliceServiceType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sliceServiceTypeInput() {
+    return this._sliceServiceType;
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string }; 
   public get tags() {
@@ -512,13 +554,16 @@ export class MobileNetworkSlice extends cdktf.TerraformResource {
     return this._tags;
   }
 
-  // single_network_slice_selection_assistance_information - computed: false, optional: false, required: true
+  // single_network_slice_selection_assistance_information - computed: false, optional: true, required: false
   private _singleNetworkSliceSelectionAssistanceInformation = new MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformationOutputReference(this, "single_network_slice_selection_assistance_information");
   public get singleNetworkSliceSelectionAssistanceInformation() {
     return this._singleNetworkSliceSelectionAssistanceInformation;
   }
   public putSingleNetworkSliceSelectionAssistanceInformation(value: MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformation) {
     this._singleNetworkSliceSelectionAssistanceInformation.internalValue = value;
+  }
+  public resetSingleNetworkSliceSelectionAssistanceInformation() {
+    this._singleNetworkSliceSelectionAssistanceInformation.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get singleNetworkSliceSelectionAssistanceInformationInput() {
@@ -552,6 +597,8 @@ export class MobileNetworkSlice extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       mobile_network_id: cdktf.stringToTerraform(this._mobileNetworkId),
       name: cdktf.stringToTerraform(this._name),
+      slice_differentiator: cdktf.stringToTerraform(this._sliceDifferentiator),
+      slice_service_type: cdktf.numberToTerraform(this._sliceServiceType),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       single_network_slice_selection_assistance_information: mobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformationToTerraform(this._singleNetworkSliceSelectionAssistanceInformation.internalValue),
       timeouts: mobileNetworkSliceTimeoutsToTerraform(this._timeouts.internalValue),
@@ -589,6 +636,18 @@ export class MobileNetworkSlice extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      slice_differentiator: {
+        value: cdktf.stringToHclTerraform(this._sliceDifferentiator),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      slice_service_type: {
+        value: cdktf.numberToHclTerraform(this._sliceServiceType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
       },
       tags: {
         value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),

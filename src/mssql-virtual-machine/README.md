@@ -1,3 +1,3 @@
 # `azurerm_mssql_virtual_machine`
 
-Refer to the Terraform Registry for docs: [`azurerm_mssql_virtual_machine`](https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/mssql_virtual_machine).
+Refer to the Terraform Registry for docs: [`azurerm_mssql_virtual_machine`](https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/mssql_virtual_machine).

@@ -253,6 +253,7 @@ export * as dataFactory from './data-factory';
 export * as dataFactoryCredentialServicePrincipal from './data-factory-credential-service-principal';
 export * as dataFactoryCredentialUserManagedIdentity from './data-factory-credential-user-managed-identity';
 export * as dataFactoryCustomDataset from './data-factory-custom-dataset';
+export * as dataFactoryCustomerManagedKey from './data-factory-customer-managed-key';
 export * as dataFactoryDataFlow from './data-factory-data-flow';
 export * as dataFactoryDatasetAzureBlob from './data-factory-dataset-azure-blob';
 export * as dataFactoryDatasetAzureSqlTable from './data-factory-dataset-azure-sql-table';
