@@ -643,6 +643,7 @@ The following submodules are available:
 - [dataFactoryCredentialServicePrincipal](./dataFactoryCredentialServicePrincipal.typescript.md)
 - [dataFactoryCredentialUserManagedIdentity](./dataFactoryCredentialUserManagedIdentity.typescript.md)
 - [dataFactoryCustomDataset](./dataFactoryCustomDataset.typescript.md)
+- [dataFactoryCustomerManagedKey](./dataFactoryCustomerManagedKey.typescript.md)
 - [dataFactoryDataFlow](./dataFactoryDataFlow.typescript.md)
 - [dataFactoryDatasetAzureBlob](./dataFactoryDatasetAzureBlob.typescript.md)
 - [dataFactoryDatasetAzureSqlTable](./dataFactoryDatasetAzureSqlTable.typescript.md)

@@ -643,6 +643,7 @@ The following submodules are available:
 - [dataFactoryCredentialServicePrincipal](./dataFactoryCredentialServicePrincipal.go.md)
 - [dataFactoryCredentialUserManagedIdentity](./dataFactoryCredentialUserManagedIdentity.go.md)
 - [dataFactoryCustomDataset](./dataFactoryCustomDataset.go.md)
+- [dataFactoryCustomerManagedKey](./dataFactoryCustomerManagedKey.go.md)
 - [dataFactoryDataFlow](./dataFactoryDataFlow.go.md)
 - [dataFactoryDatasetAzureBlob](./dataFactoryDatasetAzureBlob.go.md)
 - [dataFactoryDatasetAzureSqlTable](./dataFactoryDatasetAzureSqlTable.go.md)
