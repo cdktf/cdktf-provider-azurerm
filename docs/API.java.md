@@ -643,6 +643,7 @@ The following submodules are available:
 - [dataFactoryCredentialServicePrincipal](./dataFactoryCredentialServicePrincipal.java.md)
 - [dataFactoryCredentialUserManagedIdentity](./dataFactoryCredentialUserManagedIdentity.java.md)
 - [dataFactoryCustomDataset](./dataFactoryCustomDataset.java.md)
+- [dataFactoryCustomerManagedKey](./dataFactoryCustomerManagedKey.java.md)
 - [dataFactoryDataFlow](./dataFactoryDataFlow.java.md)
 - [dataFactoryDatasetAzureBlob](./dataFactoryDatasetAzureBlob.java.md)
 - [dataFactoryDatasetAzureSqlTable](./dataFactoryDatasetAzureSqlTable.java.md)

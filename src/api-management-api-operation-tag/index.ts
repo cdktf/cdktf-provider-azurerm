@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/api_management_api_operation_tag
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/api_management_api_operation_tag
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +13,46 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementApiOperationTagConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/api_management_api_operation_tag#api_operation_id ApiManagementApiOperationTag#api_operation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/api_management_api_operation_tag#api_operation_id ApiManagementApiOperationTag#api_operation_id}
   */
   readonly apiOperationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/api_management_api_operation_tag#display_name ApiManagementApiOperationTag#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/api_management_api_operation_tag#display_name ApiManagementApiOperationTag#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/api_management_api_operation_tag#id ApiManagementApiOperationTag#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/api_management_api_operation_tag#id ApiManagementApiOperationTag#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/api_management_api_operation_tag#name ApiManagementApiOperationTag#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/api_management_api_operation_tag#name ApiManagementApiOperationTag#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/api_management_api_operation_tag#timeouts ApiManagementApiOperationTag#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/api_management_api_operation_tag#timeouts ApiManagementApiOperationTag#timeouts}
   */
   readonly timeouts?: ApiManagementApiOperationTagTimeouts;
 }
 export interface ApiManagementApiOperationTagTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/api_management_api_operation_tag#create ApiManagementApiOperationTag#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/api_management_api_operation_tag#create ApiManagementApiOperationTag#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/api_management_api_operation_tag#delete ApiManagementApiOperationTag#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/api_management_api_operation_tag#delete ApiManagementApiOperationTag#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/api_management_api_operation_tag#read ApiManagementApiOperationTag#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/api_management_api_operation_tag#read ApiManagementApiOperationTag#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/api_management_api_operation_tag#update ApiManagementApiOperationTag#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/api_management_api_operation_tag#update ApiManagementApiOperationTag#update}
   */
   readonly update?: string;
 }
@@ -233,7 +233,7 @@ export class ApiManagementApiOperationTagTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/api_management_api_operation_tag azurerm_api_management_api_operation_tag}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/api_management_api_operation_tag azurerm_api_management_api_operation_tag}
 */
 export class ApiManagementApiOperationTag extends cdktf.TerraformResource {
 
@@ -249,7 +249,7 @@ export class ApiManagementApiOperationTag extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApiManagementApiOperationTag resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApiManagementApiOperationTag to import
-  * @param importFromId The id of the existing ApiManagementApiOperationTag that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/api_management_api_operation_tag#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApiManagementApiOperationTag that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/api_management_api_operation_tag#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApiManagementApiOperationTag to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -261,7 +261,7 @@ export class ApiManagementApiOperationTag extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/api_management_api_operation_tag azurerm_api_management_api_operation_tag} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/api_management_api_operation_tag azurerm_api_management_api_operation_tag} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -272,7 +272,7 @@ export class ApiManagementApiOperationTag extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_api_operation_tag',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,118 +13,118 @@ import * as cdktf from 'cdktf';
 
 export interface LogicAppStandardConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#app_service_plan_id LogicAppStandard#app_service_plan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#app_service_plan_id LogicAppStandard#app_service_plan_id}
   */
   readonly appServicePlanId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#app_settings LogicAppStandard#app_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#app_settings LogicAppStandard#app_settings}
   */
   readonly appSettings?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#bundle_version LogicAppStandard#bundle_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#bundle_version LogicAppStandard#bundle_version}
   */
   readonly bundleVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#client_affinity_enabled LogicAppStandard#client_affinity_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#client_affinity_enabled LogicAppStandard#client_affinity_enabled}
   */
   readonly clientAffinityEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#client_certificate_mode LogicAppStandard#client_certificate_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#client_certificate_mode LogicAppStandard#client_certificate_mode}
   */
   readonly clientCertificateMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#enabled LogicAppStandard#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#enabled LogicAppStandard#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#ftp_publish_basic_authentication_enabled LogicAppStandard#ftp_publish_basic_authentication_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#ftp_publish_basic_authentication_enabled LogicAppStandard#ftp_publish_basic_authentication_enabled}
   */
   readonly ftpPublishBasicAuthenticationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#https_only LogicAppStandard#https_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#https_only LogicAppStandard#https_only}
   */
   readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#id LogicAppStandard#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#id LogicAppStandard#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#location LogicAppStandard#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#location LogicAppStandard#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#name LogicAppStandard#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#name LogicAppStandard#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#public_network_access LogicAppStandard#public_network_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#public_network_access LogicAppStandard#public_network_access}
   */
   readonly publicNetworkAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#resource_group_name LogicAppStandard#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#resource_group_name LogicAppStandard#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#scm_publish_basic_authentication_enabled LogicAppStandard#scm_publish_basic_authentication_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#scm_publish_basic_authentication_enabled LogicAppStandard#scm_publish_basic_authentication_enabled}
   */
   readonly scmPublishBasicAuthenticationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#storage_account_access_key LogicAppStandard#storage_account_access_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#storage_account_access_key LogicAppStandard#storage_account_access_key}
   */
   readonly storageAccountAccessKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#storage_account_name LogicAppStandard#storage_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#storage_account_name LogicAppStandard#storage_account_name}
   */
   readonly storageAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#storage_account_share_name LogicAppStandard#storage_account_share_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#storage_account_share_name LogicAppStandard#storage_account_share_name}
   */
   readonly storageAccountShareName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#tags LogicAppStandard#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#tags LogicAppStandard#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#use_extension_bundle LogicAppStandard#use_extension_bundle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#use_extension_bundle LogicAppStandard#use_extension_bundle}
   */
   readonly useExtensionBundle?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#version LogicAppStandard#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#version LogicAppStandard#version}
   */
   readonly version?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#virtual_network_subnet_id LogicAppStandard#virtual_network_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#virtual_network_subnet_id LogicAppStandard#virtual_network_subnet_id}
   */
   readonly virtualNetworkSubnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#vnet_content_share_enabled LogicAppStandard#vnet_content_share_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#vnet_content_share_enabled LogicAppStandard#vnet_content_share_enabled}
   */
   readonly vnetContentShareEnabled?: boolean | cdktf.IResolvable;
   /**
   * connection_string block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#connection_string LogicAppStandard#connection_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#connection_string LogicAppStandard#connection_string}
   */
   readonly connectionString?: LogicAppStandardConnectionString[] | cdktf.IResolvable;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#identity LogicAppStandard#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#identity LogicAppStandard#identity}
   */
   readonly identity?: LogicAppStandardIdentity;
   /**
   * site_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#site_config LogicAppStandard#site_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#site_config LogicAppStandard#site_config}
   */
   readonly siteConfig?: LogicAppStandardSiteConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#timeouts LogicAppStandard#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#timeouts LogicAppStandard#timeouts}
   */
   readonly timeouts?: LogicAppStandardTimeouts;
 }
@@ -210,15 +210,15 @@ export class LogicAppStandardSiteCredentialList extends cdktf.ComplexList {
 }
 export interface LogicAppStandardConnectionString {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#name LogicAppStandard#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#name LogicAppStandard#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#type LogicAppStandard#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#type LogicAppStandard#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#value LogicAppStandard#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#value LogicAppStandard#value}
   */
   readonly value: string;
 }
@@ -383,11 +383,11 @@ export class LogicAppStandardConnectionStringList extends cdktf.ComplexList {
 }
 export interface LogicAppStandardIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#identity_ids LogicAppStandard#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#identity_ids LogicAppStandard#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#type LogicAppStandard#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#type LogicAppStandard#type}
   */
   readonly type: string;
 }
@@ -505,1071 +505,17 @@ export class LogicAppStandardIdentityOutputReference extends cdktf.ComplexObject
     return this._type;
   }
 }
-export interface LogicAppStandardSiteConfigIpRestrictionHeaders {
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#x_azure_fdid LogicAppStandard#x_azure_fdid}
-  */
-  readonly xAzureFdid?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#x_fd_health_probe LogicAppStandard#x_fd_health_probe}
-  */
-  readonly xFdHealthProbe?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#x_forwarded_for LogicAppStandard#x_forwarded_for}
-  */
-  readonly xForwardedFor?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#x_forwarded_host LogicAppStandard#x_forwarded_host}
-  */
-  readonly xForwardedHost?: string[];
-}
-
-export function logicAppStandardSiteConfigIpRestrictionHeadersToTerraform(struct?: LogicAppStandardSiteConfigIpRestrictionHeaders | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
-    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
-    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
-    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
-  }
-}
-
-
-export function logicAppStandardSiteConfigIpRestrictionHeadersToHclTerraform(struct?: LogicAppStandardSiteConfigIpRestrictionHeaders | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  const attrs = {
-    x_azure_fdid: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xAzureFdid),
-      isBlock: false,
-      type: "set",
-      storageClassType: "stringList",
-    },
-    x_fd_health_probe: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xFdHealthProbe),
-      isBlock: false,
-      type: "set",
-      storageClassType: "stringList",
-    },
-    x_forwarded_for: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xForwardedFor),
-      isBlock: false,
-      type: "set",
-      storageClassType: "stringList",
-    },
-    x_forwarded_host: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xForwardedHost),
-      isBlock: false,
-      type: "set",
-      storageClassType: "stringList",
-    },
-  };
-
-  // remove undefined attributes
-  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
-}
-
-export class LogicAppStandardSiteConfigIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): LogicAppStandardSiteConfigIpRestrictionHeaders | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._xAzureFdid !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xAzureFdid = this._xAzureFdid;
-    }
-    if (this._xFdHealthProbe !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xFdHealthProbe = this._xFdHealthProbe;
-    }
-    if (this._xForwardedFor !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xForwardedFor = this._xForwardedFor;
-    }
-    if (this._xForwardedHost !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xForwardedHost = this._xForwardedHost;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: LogicAppStandardSiteConfigIpRestrictionHeaders | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._xAzureFdid = undefined;
-      this._xFdHealthProbe = undefined;
-      this._xForwardedFor = undefined;
-      this._xForwardedHost = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._xAzureFdid = value.xAzureFdid;
-      this._xFdHealthProbe = value.xFdHealthProbe;
-      this._xForwardedFor = value.xForwardedFor;
-      this._xForwardedHost = value.xForwardedHost;
-    }
-  }
-
-  // x_azure_fdid - computed: true, optional: true, required: false
-  private _xAzureFdid?: string[]; 
-  public get xAzureFdid() {
-    return cdktf.Fn.tolist(this.getListAttribute('x_azure_fdid'));
-  }
-  public set xAzureFdid(value: string[]) {
-    this._xAzureFdid = value;
-  }
-  public resetXAzureFdid() {
-    this._xAzureFdid = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xAzureFdidInput() {
-    return this._xAzureFdid;
-  }
-
-  // x_fd_health_probe - computed: true, optional: true, required: false
-  private _xFdHealthProbe?: string[]; 
-  public get xFdHealthProbe() {
-    return cdktf.Fn.tolist(this.getListAttribute('x_fd_health_probe'));
-  }
-  public set xFdHealthProbe(value: string[]) {
-    this._xFdHealthProbe = value;
-  }
-  public resetXFdHealthProbe() {
-    this._xFdHealthProbe = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xFdHealthProbeInput() {
-    return this._xFdHealthProbe;
-  }
-
-  // x_forwarded_for - computed: true, optional: true, required: false
-  private _xForwardedFor?: string[]; 
-  public get xForwardedFor() {
-    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_for'));
-  }
-  public set xForwardedFor(value: string[]) {
-    this._xForwardedFor = value;
-  }
-  public resetXForwardedFor() {
-    this._xForwardedFor = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xForwardedForInput() {
-    return this._xForwardedFor;
-  }
-
-  // x_forwarded_host - computed: true, optional: true, required: false
-  private _xForwardedHost?: string[]; 
-  public get xForwardedHost() {
-    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_host'));
-  }
-  public set xForwardedHost(value: string[]) {
-    this._xForwardedHost = value;
-  }
-  public resetXForwardedHost() {
-    this._xForwardedHost = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xForwardedHostInput() {
-    return this._xForwardedHost;
-  }
-}
-
-export class LogicAppStandardSiteConfigIpRestrictionHeadersList extends cdktf.ComplexList {
-  public internalValue? : LogicAppStandardSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): LogicAppStandardSiteConfigIpRestrictionHeadersOutputReference {
-    return new LogicAppStandardSiteConfigIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface LogicAppStandardSiteConfigIpRestriction {
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#action LogicAppStandard#action}
-  */
-  readonly action?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#headers LogicAppStandard#headers}
-  */
-  readonly headers?: LogicAppStandardSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#ip_address LogicAppStandard#ip_address}
-  */
-  readonly ipAddress?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#name LogicAppStandard#name}
-  */
-  readonly name?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#priority LogicAppStandard#priority}
-  */
-  readonly priority?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#service_tag LogicAppStandard#service_tag}
-  */
-  readonly serviceTag?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#virtual_network_subnet_id LogicAppStandard#virtual_network_subnet_id}
-  */
-  readonly virtualNetworkSubnetId?: string;
-}
-
-export function logicAppStandardSiteConfigIpRestrictionToTerraform(struct?: LogicAppStandardSiteConfigIpRestriction | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    action: cdktf.stringToTerraform(struct!.action),
-    headers: cdktf.listMapper(logicAppStandardSiteConfigIpRestrictionHeadersToTerraform, false)(struct!.headers),
-    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
-    name: cdktf.stringToTerraform(struct!.name),
-    priority: cdktf.numberToTerraform(struct!.priority),
-    service_tag: cdktf.stringToTerraform(struct!.serviceTag),
-    virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
-  }
-}
-
-
-export function logicAppStandardSiteConfigIpRestrictionToHclTerraform(struct?: LogicAppStandardSiteConfigIpRestriction | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  const attrs = {
-    action: {
-      value: cdktf.stringToHclTerraform(struct!.action),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    headers: {
-      value: cdktf.listMapperHcl(logicAppStandardSiteConfigIpRestrictionHeadersToHclTerraform, false)(struct!.headers),
-      isBlock: true,
-      type: "list",
-      storageClassType: "LogicAppStandardSiteConfigIpRestrictionHeadersList",
-    },
-    ip_address: {
-      value: cdktf.stringToHclTerraform(struct!.ipAddress),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    name: {
-      value: cdktf.stringToHclTerraform(struct!.name),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    priority: {
-      value: cdktf.numberToHclTerraform(struct!.priority),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "number",
-    },
-    service_tag: {
-      value: cdktf.stringToHclTerraform(struct!.serviceTag),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    virtual_network_subnet_id: {
-      value: cdktf.stringToHclTerraform(struct!.virtualNetworkSubnetId),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-  };
-
-  // remove undefined attributes
-  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
-}
-
-export class LogicAppStandardSiteConfigIpRestrictionOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): LogicAppStandardSiteConfigIpRestriction | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._action !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.action = this._action;
-    }
-    if (this._headers?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.headers = this._headers?.internalValue;
-    }
-    if (this._ipAddress !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.ipAddress = this._ipAddress;
-    }
-    if (this._name !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.name = this._name;
-    }
-    if (this._priority !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.priority = this._priority;
-    }
-    if (this._serviceTag !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.serviceTag = this._serviceTag;
-    }
-    if (this._virtualNetworkSubnetId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.virtualNetworkSubnetId = this._virtualNetworkSubnetId;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: LogicAppStandardSiteConfigIpRestriction | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._action = undefined;
-      this._headers.internalValue = undefined;
-      this._ipAddress = undefined;
-      this._name = undefined;
-      this._priority = undefined;
-      this._serviceTag = undefined;
-      this._virtualNetworkSubnetId = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._action = value.action;
-      this._headers.internalValue = value.headers;
-      this._ipAddress = value.ipAddress;
-      this._name = value.name;
-      this._priority = value.priority;
-      this._serviceTag = value.serviceTag;
-      this._virtualNetworkSubnetId = value.virtualNetworkSubnetId;
-    }
-  }
-
-  // action - computed: true, optional: true, required: false
-  private _action?: string; 
-  public get action() {
-    return this.getStringAttribute('action');
-  }
-  public set action(value: string) {
-    this._action = value;
-  }
-  public resetAction() {
-    this._action = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get actionInput() {
-    return this._action;
-  }
-
-  // headers - computed: true, optional: true, required: false
-  private _headers = new LogicAppStandardSiteConfigIpRestrictionHeadersList(this, "headers", false);
-  public get headers() {
-    return this._headers;
-  }
-  public putHeaders(value: LogicAppStandardSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable) {
-    this._headers.internalValue = value;
-  }
-  public resetHeaders() {
-    this._headers.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get headersInput() {
-    return this._headers.internalValue;
-  }
-
-  // ip_address - computed: true, optional: true, required: false
-  private _ipAddress?: string; 
-  public get ipAddress() {
-    return this.getStringAttribute('ip_address');
-  }
-  public set ipAddress(value: string) {
-    this._ipAddress = value;
-  }
-  public resetIpAddress() {
-    this._ipAddress = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get ipAddressInput() {
-    return this._ipAddress;
-  }
-
-  // name - computed: true, optional: true, required: false
-  private _name?: string; 
-  public get name() {
-    return this.getStringAttribute('name');
-  }
-  public set name(value: string) {
-    this._name = value;
-  }
-  public resetName() {
-    this._name = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nameInput() {
-    return this._name;
-  }
-
-  // priority - computed: true, optional: true, required: false
-  private _priority?: number; 
-  public get priority() {
-    return this.getNumberAttribute('priority');
-  }
-  public set priority(value: number) {
-    this._priority = value;
-  }
-  public resetPriority() {
-    this._priority = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get priorityInput() {
-    return this._priority;
-  }
-
-  // service_tag - computed: true, optional: true, required: false
-  private _serviceTag?: string; 
-  public get serviceTag() {
-    return this.getStringAttribute('service_tag');
-  }
-  public set serviceTag(value: string) {
-    this._serviceTag = value;
-  }
-  public resetServiceTag() {
-    this._serviceTag = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get serviceTagInput() {
-    return this._serviceTag;
-  }
-
-  // virtual_network_subnet_id - computed: true, optional: true, required: false
-  private _virtualNetworkSubnetId?: string; 
-  public get virtualNetworkSubnetId() {
-    return this.getStringAttribute('virtual_network_subnet_id');
-  }
-  public set virtualNetworkSubnetId(value: string) {
-    this._virtualNetworkSubnetId = value;
-  }
-  public resetVirtualNetworkSubnetId() {
-    this._virtualNetworkSubnetId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get virtualNetworkSubnetIdInput() {
-    return this._virtualNetworkSubnetId;
-  }
-}
-
-export class LogicAppStandardSiteConfigIpRestrictionList extends cdktf.ComplexList {
-  public internalValue? : LogicAppStandardSiteConfigIpRestriction[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): LogicAppStandardSiteConfigIpRestrictionOutputReference {
-    return new LogicAppStandardSiteConfigIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface LogicAppStandardSiteConfigScmIpRestrictionHeaders {
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#x_azure_fdid LogicAppStandard#x_azure_fdid}
-  */
-  readonly xAzureFdid?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#x_fd_health_probe LogicAppStandard#x_fd_health_probe}
-  */
-  readonly xFdHealthProbe?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#x_forwarded_for LogicAppStandard#x_forwarded_for}
-  */
-  readonly xForwardedFor?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#x_forwarded_host LogicAppStandard#x_forwarded_host}
-  */
-  readonly xForwardedHost?: string[];
-}
-
-export function logicAppStandardSiteConfigScmIpRestrictionHeadersToTerraform(struct?: LogicAppStandardSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
-    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
-    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
-    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
-  }
-}
-
-
-export function logicAppStandardSiteConfigScmIpRestrictionHeadersToHclTerraform(struct?: LogicAppStandardSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  const attrs = {
-    x_azure_fdid: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xAzureFdid),
-      isBlock: false,
-      type: "set",
-      storageClassType: "stringList",
-    },
-    x_fd_health_probe: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xFdHealthProbe),
-      isBlock: false,
-      type: "set",
-      storageClassType: "stringList",
-    },
-    x_forwarded_for: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xForwardedFor),
-      isBlock: false,
-      type: "set",
-      storageClassType: "stringList",
-    },
-    x_forwarded_host: {
-      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xForwardedHost),
-      isBlock: false,
-      type: "set",
-      storageClassType: "stringList",
-    },
-  };
-
-  // remove undefined attributes
-  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
-}
-
-export class LogicAppStandardSiteConfigScmIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): LogicAppStandardSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._xAzureFdid !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xAzureFdid = this._xAzureFdid;
-    }
-    if (this._xFdHealthProbe !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xFdHealthProbe = this._xFdHealthProbe;
-    }
-    if (this._xForwardedFor !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xForwardedFor = this._xForwardedFor;
-    }
-    if (this._xForwardedHost !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.xForwardedHost = this._xForwardedHost;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: LogicAppStandardSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._xAzureFdid = undefined;
-      this._xFdHealthProbe = undefined;
-      this._xForwardedFor = undefined;
-      this._xForwardedHost = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._xAzureFdid = value.xAzureFdid;
-      this._xFdHealthProbe = value.xFdHealthProbe;
-      this._xForwardedFor = value.xForwardedFor;
-      this._xForwardedHost = value.xForwardedHost;
-    }
-  }
-
-  // x_azure_fdid - computed: true, optional: true, required: false
-  private _xAzureFdid?: string[]; 
-  public get xAzureFdid() {
-    return cdktf.Fn.tolist(this.getListAttribute('x_azure_fdid'));
-  }
-  public set xAzureFdid(value: string[]) {
-    this._xAzureFdid = value;
-  }
-  public resetXAzureFdid() {
-    this._xAzureFdid = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xAzureFdidInput() {
-    return this._xAzureFdid;
-  }
-
-  // x_fd_health_probe - computed: true, optional: true, required: false
-  private _xFdHealthProbe?: string[]; 
-  public get xFdHealthProbe() {
-    return cdktf.Fn.tolist(this.getListAttribute('x_fd_health_probe'));
-  }
-  public set xFdHealthProbe(value: string[]) {
-    this._xFdHealthProbe = value;
-  }
-  public resetXFdHealthProbe() {
-    this._xFdHealthProbe = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xFdHealthProbeInput() {
-    return this._xFdHealthProbe;
-  }
-
-  // x_forwarded_for - computed: true, optional: true, required: false
-  private _xForwardedFor?: string[]; 
-  public get xForwardedFor() {
-    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_for'));
-  }
-  public set xForwardedFor(value: string[]) {
-    this._xForwardedFor = value;
-  }
-  public resetXForwardedFor() {
-    this._xForwardedFor = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xForwardedForInput() {
-    return this._xForwardedFor;
-  }
-
-  // x_forwarded_host - computed: true, optional: true, required: false
-  private _xForwardedHost?: string[]; 
-  public get xForwardedHost() {
-    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_host'));
-  }
-  public set xForwardedHost(value: string[]) {
-    this._xForwardedHost = value;
-  }
-  public resetXForwardedHost() {
-    this._xForwardedHost = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get xForwardedHostInput() {
-    return this._xForwardedHost;
-  }
-}
-
-export class LogicAppStandardSiteConfigScmIpRestrictionHeadersList extends cdktf.ComplexList {
-  public internalValue? : LogicAppStandardSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): LogicAppStandardSiteConfigScmIpRestrictionHeadersOutputReference {
-    return new LogicAppStandardSiteConfigScmIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface LogicAppStandardSiteConfigScmIpRestriction {
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#action LogicAppStandard#action}
-  */
-  readonly action?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#headers LogicAppStandard#headers}
-  */
-  readonly headers?: LogicAppStandardSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#ip_address LogicAppStandard#ip_address}
-  */
-  readonly ipAddress?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#name LogicAppStandard#name}
-  */
-  readonly name?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#priority LogicAppStandard#priority}
-  */
-  readonly priority?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#service_tag LogicAppStandard#service_tag}
-  */
-  readonly serviceTag?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#virtual_network_subnet_id LogicAppStandard#virtual_network_subnet_id}
-  */
-  readonly virtualNetworkSubnetId?: string;
-}
-
-export function logicAppStandardSiteConfigScmIpRestrictionToTerraform(struct?: LogicAppStandardSiteConfigScmIpRestriction | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    action: cdktf.stringToTerraform(struct!.action),
-    headers: cdktf.listMapper(logicAppStandardSiteConfigScmIpRestrictionHeadersToTerraform, false)(struct!.headers),
-    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
-    name: cdktf.stringToTerraform(struct!.name),
-    priority: cdktf.numberToTerraform(struct!.priority),
-    service_tag: cdktf.stringToTerraform(struct!.serviceTag),
-    virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
-  }
-}
-
-
-export function logicAppStandardSiteConfigScmIpRestrictionToHclTerraform(struct?: LogicAppStandardSiteConfigScmIpRestriction | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  const attrs = {
-    action: {
-      value: cdktf.stringToHclTerraform(struct!.action),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    headers: {
-      value: cdktf.listMapperHcl(logicAppStandardSiteConfigScmIpRestrictionHeadersToHclTerraform, false)(struct!.headers),
-      isBlock: true,
-      type: "list",
-      storageClassType: "LogicAppStandardSiteConfigScmIpRestrictionHeadersList",
-    },
-    ip_address: {
-      value: cdktf.stringToHclTerraform(struct!.ipAddress),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    name: {
-      value: cdktf.stringToHclTerraform(struct!.name),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    priority: {
-      value: cdktf.numberToHclTerraform(struct!.priority),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "number",
-    },
-    service_tag: {
-      value: cdktf.stringToHclTerraform(struct!.serviceTag),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-    virtual_network_subnet_id: {
-      value: cdktf.stringToHclTerraform(struct!.virtualNetworkSubnetId),
-      isBlock: false,
-      type: "simple",
-      storageClassType: "string",
-    },
-  };
-
-  // remove undefined attributes
-  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
-}
-
-export class LogicAppStandardSiteConfigScmIpRestrictionOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): LogicAppStandardSiteConfigScmIpRestriction | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._action !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.action = this._action;
-    }
-    if (this._headers?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.headers = this._headers?.internalValue;
-    }
-    if (this._ipAddress !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.ipAddress = this._ipAddress;
-    }
-    if (this._name !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.name = this._name;
-    }
-    if (this._priority !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.priority = this._priority;
-    }
-    if (this._serviceTag !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.serviceTag = this._serviceTag;
-    }
-    if (this._virtualNetworkSubnetId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.virtualNetworkSubnetId = this._virtualNetworkSubnetId;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: LogicAppStandardSiteConfigScmIpRestriction | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._action = undefined;
-      this._headers.internalValue = undefined;
-      this._ipAddress = undefined;
-      this._name = undefined;
-      this._priority = undefined;
-      this._serviceTag = undefined;
-      this._virtualNetworkSubnetId = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._action = value.action;
-      this._headers.internalValue = value.headers;
-      this._ipAddress = value.ipAddress;
-      this._name = value.name;
-      this._priority = value.priority;
-      this._serviceTag = value.serviceTag;
-      this._virtualNetworkSubnetId = value.virtualNetworkSubnetId;
-    }
-  }
-
-  // action - computed: true, optional: true, required: false
-  private _action?: string; 
-  public get action() {
-    return this.getStringAttribute('action');
-  }
-  public set action(value: string) {
-    this._action = value;
-  }
-  public resetAction() {
-    this._action = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get actionInput() {
-    return this._action;
-  }
-
-  // headers - computed: true, optional: true, required: false
-  private _headers = new LogicAppStandardSiteConfigScmIpRestrictionHeadersList(this, "headers", false);
-  public get headers() {
-    return this._headers;
-  }
-  public putHeaders(value: LogicAppStandardSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable) {
-    this._headers.internalValue = value;
-  }
-  public resetHeaders() {
-    this._headers.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get headersInput() {
-    return this._headers.internalValue;
-  }
-
-  // ip_address - computed: true, optional: true, required: false
-  private _ipAddress?: string; 
-  public get ipAddress() {
-    return this.getStringAttribute('ip_address');
-  }
-  public set ipAddress(value: string) {
-    this._ipAddress = value;
-  }
-  public resetIpAddress() {
-    this._ipAddress = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get ipAddressInput() {
-    return this._ipAddress;
-  }
-
-  // name - computed: true, optional: true, required: false
-  private _name?: string; 
-  public get name() {
-    return this.getStringAttribute('name');
-  }
-  public set name(value: string) {
-    this._name = value;
-  }
-  public resetName() {
-    this._name = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nameInput() {
-    return this._name;
-  }
-
-  // priority - computed: true, optional: true, required: false
-  private _priority?: number; 
-  public get priority() {
-    return this.getNumberAttribute('priority');
-  }
-  public set priority(value: number) {
-    this._priority = value;
-  }
-  public resetPriority() {
-    this._priority = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get priorityInput() {
-    return this._priority;
-  }
-
-  // service_tag - computed: true, optional: true, required: false
-  private _serviceTag?: string; 
-  public get serviceTag() {
-    return this.getStringAttribute('service_tag');
-  }
-  public set serviceTag(value: string) {
-    this._serviceTag = value;
-  }
-  public resetServiceTag() {
-    this._serviceTag = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get serviceTagInput() {
-    return this._serviceTag;
-  }
-
-  // virtual_network_subnet_id - computed: true, optional: true, required: false
-  private _virtualNetworkSubnetId?: string; 
-  public get virtualNetworkSubnetId() {
-    return this.getStringAttribute('virtual_network_subnet_id');
-  }
-  public set virtualNetworkSubnetId(value: string) {
-    this._virtualNetworkSubnetId = value;
-  }
-  public resetVirtualNetworkSubnetId() {
-    this._virtualNetworkSubnetId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get virtualNetworkSubnetIdInput() {
-    return this._virtualNetworkSubnetId;
-  }
-}
-
-export class LogicAppStandardSiteConfigScmIpRestrictionList extends cdktf.ComplexList {
-  public internalValue? : LogicAppStandardSiteConfigScmIpRestriction[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): LogicAppStandardSiteConfigScmIpRestrictionOutputReference {
-    return new LogicAppStandardSiteConfigScmIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface LogicAppStandardSiteConfigCors {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#allowed_origins LogicAppStandard#allowed_origins}
+  * Specifies a list of origins that should be allowed to make cross-origin calls.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#allowed_origins LogicAppStandard#allowed_origins}
   */
-  readonly allowedOrigins: string[];
+  readonly allowedOrigins?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#support_credentials LogicAppStandard#support_credentials}
+  * Are credentials allowed in CORS requests? Defaults to `false`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#support_credentials LogicAppStandard#support_credentials}
   */
   readonly supportCredentials?: boolean | cdktf.IResolvable;
 }
@@ -1648,13 +594,16 @@ export class LogicAppStandardSiteConfigCorsOutputReference extends cdktf.Complex
     }
   }
 
-  // allowed_origins - computed: false, optional: false, required: true
+  // allowed_origins - computed: false, optional: true, required: false
   private _allowedOrigins?: string[]; 
   public get allowedOrigins() {
     return cdktf.Fn.tolist(this.getListAttribute('allowed_origins'));
   }
   public set allowedOrigins(value: string[]) {
     this._allowedOrigins = value;
+  }
+  public resetAllowedOrigins() {
+    this._allowedOrigins = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get allowedOriginsInput() {
@@ -1677,93 +626,1249 @@ export class LogicAppStandardSiteConfigCorsOutputReference extends cdktf.Complex
     return this._supportCredentials;
   }
 }
+export interface LogicAppStandardSiteConfigIpRestrictionHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#x_azure_fdid LogicAppStandard#x_azure_fdid}
+  */
+  readonly xAzureFdid?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#x_fd_health_probe LogicAppStandard#x_fd_health_probe}
+  */
+  readonly xFdHealthProbe?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#x_forwarded_for LogicAppStandard#x_forwarded_for}
+  */
+  readonly xForwardedFor?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#x_forwarded_host LogicAppStandard#x_forwarded_host}
+  */
+  readonly xForwardedHost?: string[];
+}
+
+export function logicAppStandardSiteConfigIpRestrictionHeadersToTerraform(struct?: LogicAppStandardSiteConfigIpRestrictionHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
+  }
+}
+
+
+export function logicAppStandardSiteConfigIpRestrictionHeadersToHclTerraform(struct?: LogicAppStandardSiteConfigIpRestrictionHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    x_azure_fdid: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xAzureFdid),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    x_fd_health_probe: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xFdHealthProbe),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    x_forwarded_for: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xForwardedFor),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    x_forwarded_host: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xForwardedHost),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class LogicAppStandardSiteConfigIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogicAppStandardSiteConfigIpRestrictionHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._xAzureFdid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xAzureFdid = this._xAzureFdid;
+    }
+    if (this._xFdHealthProbe !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xFdHealthProbe = this._xFdHealthProbe;
+    }
+    if (this._xForwardedFor !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedFor = this._xForwardedFor;
+    }
+    if (this._xForwardedHost !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedHost = this._xForwardedHost;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppStandardSiteConfigIpRestrictionHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = undefined;
+      this._xFdHealthProbe = undefined;
+      this._xForwardedFor = undefined;
+      this._xForwardedHost = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = value.xAzureFdid;
+      this._xFdHealthProbe = value.xFdHealthProbe;
+      this._xForwardedFor = value.xForwardedFor;
+      this._xForwardedHost = value.xForwardedHost;
+    }
+  }
+
+  // x_azure_fdid - computed: false, optional: true, required: false
+  private _xAzureFdid?: string[]; 
+  public get xAzureFdid() {
+    return this.getListAttribute('x_azure_fdid');
+  }
+  public set xAzureFdid(value: string[]) {
+    this._xAzureFdid = value;
+  }
+  public resetXAzureFdid() {
+    this._xAzureFdid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xAzureFdidInput() {
+    return this._xAzureFdid;
+  }
+
+  // x_fd_health_probe - computed: false, optional: true, required: false
+  private _xFdHealthProbe?: string[]; 
+  public get xFdHealthProbe() {
+    return this.getListAttribute('x_fd_health_probe');
+  }
+  public set xFdHealthProbe(value: string[]) {
+    this._xFdHealthProbe = value;
+  }
+  public resetXFdHealthProbe() {
+    this._xFdHealthProbe = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xFdHealthProbeInput() {
+    return this._xFdHealthProbe;
+  }
+
+  // x_forwarded_for - computed: false, optional: true, required: false
+  private _xForwardedFor?: string[]; 
+  public get xForwardedFor() {
+    return this.getListAttribute('x_forwarded_for');
+  }
+  public set xForwardedFor(value: string[]) {
+    this._xForwardedFor = value;
+  }
+  public resetXForwardedFor() {
+    this._xForwardedFor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedForInput() {
+    return this._xForwardedFor;
+  }
+
+  // x_forwarded_host - computed: false, optional: true, required: false
+  private _xForwardedHost?: string[]; 
+  public get xForwardedHost() {
+    return this.getListAttribute('x_forwarded_host');
+  }
+  public set xForwardedHost(value: string[]) {
+    this._xForwardedHost = value;
+  }
+  public resetXForwardedHost() {
+    this._xForwardedHost = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedHostInput() {
+    return this._xForwardedHost;
+  }
+}
+
+export class LogicAppStandardSiteConfigIpRestrictionHeadersList extends cdktf.ComplexList {
+  public internalValue? : LogicAppStandardSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogicAppStandardSiteConfigIpRestrictionHeadersOutputReference {
+    return new LogicAppStandardSiteConfigIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LogicAppStandardSiteConfigIpRestriction {
+  /**
+  * The action to take. Possible values are `Allow` or `Deny`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#action LogicAppStandard#action}
+  */
+  readonly action?: string;
+  /**
+  * The description of the IP restriction rule.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#description LogicAppStandard#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#headers LogicAppStandard#headers}
+  */
+  readonly headers?: LogicAppStandardSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable;
+  /**
+  * The CIDR notation of the IP or IP Range to match. For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#ip_address LogicAppStandard#ip_address}
+  */
+  readonly ipAddress?: string;
+  /**
+  * The name which should be used for this `ip_restriction`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#name LogicAppStandard#name}
+  */
+  readonly name?: string;
+  /**
+  * The priority value of this `ip_restriction`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#priority LogicAppStandard#priority}
+  */
+  readonly priority?: number;
+  /**
+  * The Service Tag used for this IP Restriction.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#service_tag LogicAppStandard#service_tag}
+  */
+  readonly serviceTag?: string;
+  /**
+  * The Virtual Network Subnet ID used for this IP Restriction.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#virtual_network_subnet_id LogicAppStandard#virtual_network_subnet_id}
+  */
+  readonly virtualNetworkSubnetId?: string;
+}
+
+export function logicAppStandardSiteConfigIpRestrictionToTerraform(struct?: LogicAppStandardSiteConfigIpRestriction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    description: cdktf.stringToTerraform(struct!.description),
+    headers: cdktf.listMapper(logicAppStandardSiteConfigIpRestrictionHeadersToTerraform, false)(struct!.headers),
+    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    service_tag: cdktf.stringToTerraform(struct!.serviceTag),
+    virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
+  }
+}
+
+
+export function logicAppStandardSiteConfigIpRestrictionToHclTerraform(struct?: LogicAppStandardSiteConfigIpRestriction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    headers: {
+      value: cdktf.listMapperHcl(logicAppStandardSiteConfigIpRestrictionHeadersToHclTerraform, false)(struct!.headers),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LogicAppStandardSiteConfigIpRestrictionHeadersList",
+    },
+    ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.ipAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    priority: {
+      value: cdktf.numberToHclTerraform(struct!.priority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    service_tag: {
+      value: cdktf.stringToHclTerraform(struct!.serviceTag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_network_subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.virtualNetworkSubnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class LogicAppStandardSiteConfigIpRestrictionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogicAppStandardSiteConfigIpRestriction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._headers?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers?.internalValue;
+    }
+    if (this._ipAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._serviceTag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceTag = this._serviceTag;
+    }
+    if (this._virtualNetworkSubnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkSubnetId = this._virtualNetworkSubnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppStandardSiteConfigIpRestriction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._description = undefined;
+      this._headers.internalValue = undefined;
+      this._ipAddress = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._serviceTag = undefined;
+      this._virtualNetworkSubnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._description = value.description;
+      this._headers.internalValue = value.headers;
+      this._ipAddress = value.ipAddress;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._serviceTag = value.serviceTag;
+      this._virtualNetworkSubnetId = value.virtualNetworkSubnetId;
+    }
+  }
+
+  // action - computed: false, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // headers - computed: false, optional: true, required: false
+  private _headers = new LogicAppStandardSiteConfigIpRestrictionHeadersList(this, "headers", false);
+  public get headers() {
+    return this._headers;
+  }
+  public putHeaders(value: LogicAppStandardSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable) {
+    this._headers.internalValue = value;
+  }
+  public resetHeaders() {
+    this._headers.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headersInput() {
+    return this._headers.internalValue;
+  }
+
+  // ip_address - computed: false, optional: true, required: false
+  private _ipAddress?: string; 
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+  public set ipAddress(value: string) {
+    this._ipAddress = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: false, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // service_tag - computed: false, optional: true, required: false
+  private _serviceTag?: string; 
+  public get serviceTag() {
+    return this.getStringAttribute('service_tag');
+  }
+  public set serviceTag(value: string) {
+    this._serviceTag = value;
+  }
+  public resetServiceTag() {
+    this._serviceTag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceTagInput() {
+    return this._serviceTag;
+  }
+
+  // virtual_network_subnet_id - computed: false, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+}
+
+export class LogicAppStandardSiteConfigIpRestrictionList extends cdktf.ComplexList {
+  public internalValue? : LogicAppStandardSiteConfigIpRestriction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogicAppStandardSiteConfigIpRestrictionOutputReference {
+    return new LogicAppStandardSiteConfigIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LogicAppStandardSiteConfigScmIpRestrictionHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#x_azure_fdid LogicAppStandard#x_azure_fdid}
+  */
+  readonly xAzureFdid?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#x_fd_health_probe LogicAppStandard#x_fd_health_probe}
+  */
+  readonly xFdHealthProbe?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#x_forwarded_for LogicAppStandard#x_forwarded_for}
+  */
+  readonly xForwardedFor?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#x_forwarded_host LogicAppStandard#x_forwarded_host}
+  */
+  readonly xForwardedHost?: string[];
+}
+
+export function logicAppStandardSiteConfigScmIpRestrictionHeadersToTerraform(struct?: LogicAppStandardSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
+  }
+}
+
+
+export function logicAppStandardSiteConfigScmIpRestrictionHeadersToHclTerraform(struct?: LogicAppStandardSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    x_azure_fdid: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xAzureFdid),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    x_fd_health_probe: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xFdHealthProbe),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    x_forwarded_for: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xForwardedFor),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    x_forwarded_host: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xForwardedHost),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class LogicAppStandardSiteConfigScmIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogicAppStandardSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._xAzureFdid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xAzureFdid = this._xAzureFdid;
+    }
+    if (this._xFdHealthProbe !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xFdHealthProbe = this._xFdHealthProbe;
+    }
+    if (this._xForwardedFor !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedFor = this._xForwardedFor;
+    }
+    if (this._xForwardedHost !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedHost = this._xForwardedHost;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppStandardSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = undefined;
+      this._xFdHealthProbe = undefined;
+      this._xForwardedFor = undefined;
+      this._xForwardedHost = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = value.xAzureFdid;
+      this._xFdHealthProbe = value.xFdHealthProbe;
+      this._xForwardedFor = value.xForwardedFor;
+      this._xForwardedHost = value.xForwardedHost;
+    }
+  }
+
+  // x_azure_fdid - computed: false, optional: true, required: false
+  private _xAzureFdid?: string[]; 
+  public get xAzureFdid() {
+    return this.getListAttribute('x_azure_fdid');
+  }
+  public set xAzureFdid(value: string[]) {
+    this._xAzureFdid = value;
+  }
+  public resetXAzureFdid() {
+    this._xAzureFdid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xAzureFdidInput() {
+    return this._xAzureFdid;
+  }
+
+  // x_fd_health_probe - computed: false, optional: true, required: false
+  private _xFdHealthProbe?: string[]; 
+  public get xFdHealthProbe() {
+    return this.getListAttribute('x_fd_health_probe');
+  }
+  public set xFdHealthProbe(value: string[]) {
+    this._xFdHealthProbe = value;
+  }
+  public resetXFdHealthProbe() {
+    this._xFdHealthProbe = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xFdHealthProbeInput() {
+    return this._xFdHealthProbe;
+  }
+
+  // x_forwarded_for - computed: false, optional: true, required: false
+  private _xForwardedFor?: string[]; 
+  public get xForwardedFor() {
+    return this.getListAttribute('x_forwarded_for');
+  }
+  public set xForwardedFor(value: string[]) {
+    this._xForwardedFor = value;
+  }
+  public resetXForwardedFor() {
+    this._xForwardedFor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedForInput() {
+    return this._xForwardedFor;
+  }
+
+  // x_forwarded_host - computed: false, optional: true, required: false
+  private _xForwardedHost?: string[]; 
+  public get xForwardedHost() {
+    return this.getListAttribute('x_forwarded_host');
+  }
+  public set xForwardedHost(value: string[]) {
+    this._xForwardedHost = value;
+  }
+  public resetXForwardedHost() {
+    this._xForwardedHost = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedHostInput() {
+    return this._xForwardedHost;
+  }
+}
+
+export class LogicAppStandardSiteConfigScmIpRestrictionHeadersList extends cdktf.ComplexList {
+  public internalValue? : LogicAppStandardSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogicAppStandardSiteConfigScmIpRestrictionHeadersOutputReference {
+    return new LogicAppStandardSiteConfigScmIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface LogicAppStandardSiteConfigScmIpRestriction {
+  /**
+  * The action to take. Possible values are `Allow` or `Deny`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#action LogicAppStandard#action}
+  */
+  readonly action?: string;
+  /**
+  * The description of the IP restriction rule.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#description LogicAppStandard#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#headers LogicAppStandard#headers}
+  */
+  readonly headers?: LogicAppStandardSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable;
+  /**
+  * The CIDR notation of the IP or IP Range to match. For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#ip_address LogicAppStandard#ip_address}
+  */
+  readonly ipAddress?: string;
+  /**
+  * The name which should be used for this `ip_restriction`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#name LogicAppStandard#name}
+  */
+  readonly name?: string;
+  /**
+  * The priority value of this `ip_restriction`.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#priority LogicAppStandard#priority}
+  */
+  readonly priority?: number;
+  /**
+  * The Service Tag used for this IP Restriction.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#service_tag LogicAppStandard#service_tag}
+  */
+  readonly serviceTag?: string;
+  /**
+  * The Virtual Network Subnet ID used for this IP Restriction.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#virtual_network_subnet_id LogicAppStandard#virtual_network_subnet_id}
+  */
+  readonly virtualNetworkSubnetId?: string;
+}
+
+export function logicAppStandardSiteConfigScmIpRestrictionToTerraform(struct?: LogicAppStandardSiteConfigScmIpRestriction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    description: cdktf.stringToTerraform(struct!.description),
+    headers: cdktf.listMapper(logicAppStandardSiteConfigScmIpRestrictionHeadersToTerraform, false)(struct!.headers),
+    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    service_tag: cdktf.stringToTerraform(struct!.serviceTag),
+    virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
+  }
+}
+
+
+export function logicAppStandardSiteConfigScmIpRestrictionToHclTerraform(struct?: LogicAppStandardSiteConfigScmIpRestriction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    headers: {
+      value: cdktf.listMapperHcl(logicAppStandardSiteConfigScmIpRestrictionHeadersToHclTerraform, false)(struct!.headers),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LogicAppStandardSiteConfigScmIpRestrictionHeadersList",
+    },
+    ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.ipAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    priority: {
+      value: cdktf.numberToHclTerraform(struct!.priority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    service_tag: {
+      value: cdktf.stringToHclTerraform(struct!.serviceTag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_network_subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.virtualNetworkSubnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class LogicAppStandardSiteConfigScmIpRestrictionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogicAppStandardSiteConfigScmIpRestriction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._headers?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers?.internalValue;
+    }
+    if (this._ipAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._serviceTag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceTag = this._serviceTag;
+    }
+    if (this._virtualNetworkSubnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkSubnetId = this._virtualNetworkSubnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppStandardSiteConfigScmIpRestriction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._description = undefined;
+      this._headers.internalValue = undefined;
+      this._ipAddress = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._serviceTag = undefined;
+      this._virtualNetworkSubnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._description = value.description;
+      this._headers.internalValue = value.headers;
+      this._ipAddress = value.ipAddress;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._serviceTag = value.serviceTag;
+      this._virtualNetworkSubnetId = value.virtualNetworkSubnetId;
+    }
+  }
+
+  // action - computed: false, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // headers - computed: false, optional: true, required: false
+  private _headers = new LogicAppStandardSiteConfigScmIpRestrictionHeadersList(this, "headers", false);
+  public get headers() {
+    return this._headers;
+  }
+  public putHeaders(value: LogicAppStandardSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable) {
+    this._headers.internalValue = value;
+  }
+  public resetHeaders() {
+    this._headers.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headersInput() {
+    return this._headers.internalValue;
+  }
+
+  // ip_address - computed: false, optional: true, required: false
+  private _ipAddress?: string; 
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+  public set ipAddress(value: string) {
+    this._ipAddress = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: false, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // service_tag - computed: false, optional: true, required: false
+  private _serviceTag?: string; 
+  public get serviceTag() {
+    return this.getStringAttribute('service_tag');
+  }
+  public set serviceTag(value: string) {
+    this._serviceTag = value;
+  }
+  public resetServiceTag() {
+    this._serviceTag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceTagInput() {
+    return this._serviceTag;
+  }
+
+  // virtual_network_subnet_id - computed: false, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+}
+
+export class LogicAppStandardSiteConfigScmIpRestrictionList extends cdktf.ComplexList {
+  public internalValue? : LogicAppStandardSiteConfigScmIpRestriction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogicAppStandardSiteConfigScmIpRestrictionOutputReference {
+    return new LogicAppStandardSiteConfigScmIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LogicAppStandardSiteConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#always_on LogicAppStandard#always_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#always_on LogicAppStandard#always_on}
   */
   readonly alwaysOn?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#app_scale_limit LogicAppStandard#app_scale_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#app_scale_limit LogicAppStandard#app_scale_limit}
   */
   readonly appScaleLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#dotnet_framework_version LogicAppStandard#dotnet_framework_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#dotnet_framework_version LogicAppStandard#dotnet_framework_version}
   */
   readonly dotnetFrameworkVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#elastic_instance_minimum LogicAppStandard#elastic_instance_minimum}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#elastic_instance_minimum LogicAppStandard#elastic_instance_minimum}
   */
   readonly elasticInstanceMinimum?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#ftps_state LogicAppStandard#ftps_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#ftps_state LogicAppStandard#ftps_state}
   */
   readonly ftpsState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#health_check_path LogicAppStandard#health_check_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#health_check_path LogicAppStandard#health_check_path}
   */
   readonly healthCheckPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#http2_enabled LogicAppStandard#http2_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#http2_enabled LogicAppStandard#http2_enabled}
   */
   readonly http2Enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#ip_restriction LogicAppStandard#ip_restriction}
-  */
-  readonly ipRestriction?: LogicAppStandardSiteConfigIpRestriction[] | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#linux_fx_version LogicAppStandard#linux_fx_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#linux_fx_version LogicAppStandard#linux_fx_version}
   */
   readonly linuxFxVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#min_tls_version LogicAppStandard#min_tls_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#min_tls_version LogicAppStandard#min_tls_version}
   */
   readonly minTlsVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#pre_warmed_instance_count LogicAppStandard#pre_warmed_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#pre_warmed_instance_count LogicAppStandard#pre_warmed_instance_count}
   */
   readonly preWarmedInstanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#public_network_access_enabled LogicAppStandard#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#public_network_access_enabled LogicAppStandard#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#runtime_scale_monitoring_enabled LogicAppStandard#runtime_scale_monitoring_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#runtime_scale_monitoring_enabled LogicAppStandard#runtime_scale_monitoring_enabled}
   */
   readonly runtimeScaleMonitoringEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#scm_ip_restriction LogicAppStandard#scm_ip_restriction}
-  */
-  readonly scmIpRestriction?: LogicAppStandardSiteConfigScmIpRestriction[] | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#scm_min_tls_version LogicAppStandard#scm_min_tls_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#scm_min_tls_version LogicAppStandard#scm_min_tls_version}
   */
   readonly scmMinTlsVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#scm_type LogicAppStandard#scm_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#scm_type LogicAppStandard#scm_type}
   */
   readonly scmType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#scm_use_main_ip_restriction LogicAppStandard#scm_use_main_ip_restriction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#scm_use_main_ip_restriction LogicAppStandard#scm_use_main_ip_restriction}
   */
   readonly scmUseMainIpRestriction?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#use_32_bit_worker_process LogicAppStandard#use_32_bit_worker_process}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#use_32_bit_worker_process LogicAppStandard#use_32_bit_worker_process}
   */
   readonly use32BitWorkerProcess?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#vnet_route_all_enabled LogicAppStandard#vnet_route_all_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#vnet_route_all_enabled LogicAppStandard#vnet_route_all_enabled}
   */
   readonly vnetRouteAllEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#websockets_enabled LogicAppStandard#websockets_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#websockets_enabled LogicAppStandard#websockets_enabled}
   */
   readonly websocketsEnabled?: boolean | cdktf.IResolvable;
   /**
   * cors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#cors LogicAppStandard#cors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#cors LogicAppStandard#cors}
   */
   readonly cors?: LogicAppStandardSiteConfigCors;
+  /**
+  * ip_restriction block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#ip_restriction LogicAppStandard#ip_restriction}
+  */
+  readonly ipRestriction?: LogicAppStandardSiteConfigIpRestriction[] | cdktf.IResolvable;
+  /**
+  * scm_ip_restriction block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#scm_ip_restriction LogicAppStandard#scm_ip_restriction}
+  */
+  readonly scmIpRestriction?: LogicAppStandardSiteConfigScmIpRestriction[] | cdktf.IResolvable;
 }
 
 export function logicAppStandardSiteConfigToTerraform(struct?: LogicAppStandardSiteConfigOutputReference | LogicAppStandardSiteConfig): any {
@@ -1779,13 +1884,11 @@ export function logicAppStandardSiteConfigToTerraform(struct?: LogicAppStandardS
     ftps_state: cdktf.stringToTerraform(struct!.ftpsState),
     health_check_path: cdktf.stringToTerraform(struct!.healthCheckPath),
     http2_enabled: cdktf.booleanToTerraform(struct!.http2Enabled),
-    ip_restriction: cdktf.listMapper(logicAppStandardSiteConfigIpRestrictionToTerraform, false)(struct!.ipRestriction),
     linux_fx_version: cdktf.stringToTerraform(struct!.linuxFxVersion),
     min_tls_version: cdktf.stringToTerraform(struct!.minTlsVersion),
     pre_warmed_instance_count: cdktf.numberToTerraform(struct!.preWarmedInstanceCount),
     public_network_access_enabled: cdktf.booleanToTerraform(struct!.publicNetworkAccessEnabled),
     runtime_scale_monitoring_enabled: cdktf.booleanToTerraform(struct!.runtimeScaleMonitoringEnabled),
-    scm_ip_restriction: cdktf.listMapper(logicAppStandardSiteConfigScmIpRestrictionToTerraform, false)(struct!.scmIpRestriction),
     scm_min_tls_version: cdktf.stringToTerraform(struct!.scmMinTlsVersion),
     scm_type: cdktf.stringToTerraform(struct!.scmType),
     scm_use_main_ip_restriction: cdktf.booleanToTerraform(struct!.scmUseMainIpRestriction),
@@ -1793,6 +1896,8 @@ export function logicAppStandardSiteConfigToTerraform(struct?: LogicAppStandardS
     vnet_route_all_enabled: cdktf.booleanToTerraform(struct!.vnetRouteAllEnabled),
     websockets_enabled: cdktf.booleanToTerraform(struct!.websocketsEnabled),
     cors: logicAppStandardSiteConfigCorsToTerraform(struct!.cors),
+    ip_restriction: cdktf.listMapper(logicAppStandardSiteConfigIpRestrictionToTerraform, true)(struct!.ipRestriction),
+    scm_ip_restriction: cdktf.listMapper(logicAppStandardSiteConfigScmIpRestrictionToTerraform, true)(struct!.scmIpRestriction),
   }
 }
 
@@ -1845,12 +1950,6 @@ export function logicAppStandardSiteConfigToHclTerraform(struct?: LogicAppStanda
       type: "simple",
       storageClassType: "boolean",
     },
-    ip_restriction: {
-      value: cdktf.listMapperHcl(logicAppStandardSiteConfigIpRestrictionToHclTerraform, false)(struct!.ipRestriction),
-      isBlock: true,
-      type: "list",
-      storageClassType: "LogicAppStandardSiteConfigIpRestrictionList",
-    },
     linux_fx_version: {
       value: cdktf.stringToHclTerraform(struct!.linuxFxVersion),
       isBlock: false,
@@ -1880,12 +1979,6 @@ export function logicAppStandardSiteConfigToHclTerraform(struct?: LogicAppStanda
       isBlock: false,
       type: "simple",
       storageClassType: "boolean",
-    },
-    scm_ip_restriction: {
-      value: cdktf.listMapperHcl(logicAppStandardSiteConfigScmIpRestrictionToHclTerraform, false)(struct!.scmIpRestriction),
-      isBlock: true,
-      type: "list",
-      storageClassType: "LogicAppStandardSiteConfigScmIpRestrictionList",
     },
     scm_min_tls_version: {
       value: cdktf.stringToHclTerraform(struct!.scmMinTlsVersion),
@@ -1928,6 +2021,18 @@ export function logicAppStandardSiteConfigToHclTerraform(struct?: LogicAppStanda
       isBlock: true,
       type: "list",
       storageClassType: "LogicAppStandardSiteConfigCorsList",
+    },
+    ip_restriction: {
+      value: cdktf.listMapperHcl(logicAppStandardSiteConfigIpRestrictionToHclTerraform, true)(struct!.ipRestriction),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LogicAppStandardSiteConfigIpRestrictionList",
+    },
+    scm_ip_restriction: {
+      value: cdktf.listMapperHcl(logicAppStandardSiteConfigScmIpRestrictionToHclTerraform, true)(struct!.scmIpRestriction),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LogicAppStandardSiteConfigScmIpRestrictionList",
     },
   };
 
@@ -1977,10 +2082,6 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.http2Enabled = this._http2Enabled;
     }
-    if (this._ipRestriction?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.ipRestriction = this._ipRestriction?.internalValue;
-    }
     if (this._linuxFxVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.linuxFxVersion = this._linuxFxVersion;
@@ -2000,10 +2101,6 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
     if (this._runtimeScaleMonitoringEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.runtimeScaleMonitoringEnabled = this._runtimeScaleMonitoringEnabled;
-    }
-    if (this._scmIpRestriction?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.scmIpRestriction = this._scmIpRestriction?.internalValue;
     }
     if (this._scmMinTlsVersion !== undefined) {
       hasAnyValues = true;
@@ -2033,6 +2130,14 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.cors = this._cors?.internalValue;
     }
+    if (this._ipRestriction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipRestriction = this._ipRestriction?.internalValue;
+    }
+    if (this._scmIpRestriction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scmIpRestriction = this._scmIpRestriction?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -2046,13 +2151,11 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
       this._ftpsState = undefined;
       this._healthCheckPath = undefined;
       this._http2Enabled = undefined;
-      this._ipRestriction.internalValue = undefined;
       this._linuxFxVersion = undefined;
       this._minTlsVersion = undefined;
       this._preWarmedInstanceCount = undefined;
       this._publicNetworkAccessEnabled = undefined;
       this._runtimeScaleMonitoringEnabled = undefined;
-      this._scmIpRestriction.internalValue = undefined;
       this._scmMinTlsVersion = undefined;
       this._scmType = undefined;
       this._scmUseMainIpRestriction = undefined;
@@ -2060,6 +2163,8 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
       this._vnetRouteAllEnabled = undefined;
       this._websocketsEnabled = undefined;
       this._cors.internalValue = undefined;
+      this._ipRestriction.internalValue = undefined;
+      this._scmIpRestriction.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -2070,13 +2175,11 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
       this._ftpsState = value.ftpsState;
       this._healthCheckPath = value.healthCheckPath;
       this._http2Enabled = value.http2Enabled;
-      this._ipRestriction.internalValue = value.ipRestriction;
       this._linuxFxVersion = value.linuxFxVersion;
       this._minTlsVersion = value.minTlsVersion;
       this._preWarmedInstanceCount = value.preWarmedInstanceCount;
       this._publicNetworkAccessEnabled = value.publicNetworkAccessEnabled;
       this._runtimeScaleMonitoringEnabled = value.runtimeScaleMonitoringEnabled;
-      this._scmIpRestriction.internalValue = value.scmIpRestriction;
       this._scmMinTlsVersion = value.scmMinTlsVersion;
       this._scmType = value.scmType;
       this._scmUseMainIpRestriction = value.scmUseMainIpRestriction;
@@ -2084,6 +2187,8 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
       this._vnetRouteAllEnabled = value.vnetRouteAllEnabled;
       this._websocketsEnabled = value.websocketsEnabled;
       this._cors.internalValue = value.cors;
+      this._ipRestriction.internalValue = value.ipRestriction;
+      this._scmIpRestriction.internalValue = value.scmIpRestriction;
     }
   }
 
@@ -2204,22 +2309,6 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
     return this._http2Enabled;
   }
 
-  // ip_restriction - computed: true, optional: true, required: false
-  private _ipRestriction = new LogicAppStandardSiteConfigIpRestrictionList(this, "ip_restriction", false);
-  public get ipRestriction() {
-    return this._ipRestriction;
-  }
-  public putIpRestriction(value: LogicAppStandardSiteConfigIpRestriction[] | cdktf.IResolvable) {
-    this._ipRestriction.internalValue = value;
-  }
-  public resetIpRestriction() {
-    this._ipRestriction.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get ipRestrictionInput() {
-    return this._ipRestriction.internalValue;
-  }
-
   // linux_fx_version - computed: true, optional: true, required: false
   private _linuxFxVersion?: string; 
   public get linuxFxVersion() {
@@ -2298,22 +2387,6 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   // Temporarily expose input value. Use with caution.
   public get runtimeScaleMonitoringEnabledInput() {
     return this._runtimeScaleMonitoringEnabled;
-  }
-
-  // scm_ip_restriction - computed: true, optional: true, required: false
-  private _scmIpRestriction = new LogicAppStandardSiteConfigScmIpRestrictionList(this, "scm_ip_restriction", false);
-  public get scmIpRestriction() {
-    return this._scmIpRestriction;
-  }
-  public putScmIpRestriction(value: LogicAppStandardSiteConfigScmIpRestriction[] | cdktf.IResolvable) {
-    this._scmIpRestriction.internalValue = value;
-  }
-  public resetScmIpRestriction() {
-    this._scmIpRestriction.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get scmIpRestrictionInput() {
-    return this._scmIpRestriction.internalValue;
   }
 
   // scm_min_tls_version - computed: true, optional: true, required: false
@@ -2427,22 +2500,54 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   public get corsInput() {
     return this._cors.internalValue;
   }
+
+  // ip_restriction - computed: false, optional: true, required: false
+  private _ipRestriction = new LogicAppStandardSiteConfigIpRestrictionList(this, "ip_restriction", false);
+  public get ipRestriction() {
+    return this._ipRestriction;
+  }
+  public putIpRestriction(value: LogicAppStandardSiteConfigIpRestriction[] | cdktf.IResolvable) {
+    this._ipRestriction.internalValue = value;
+  }
+  public resetIpRestriction() {
+    this._ipRestriction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRestrictionInput() {
+    return this._ipRestriction.internalValue;
+  }
+
+  // scm_ip_restriction - computed: false, optional: true, required: false
+  private _scmIpRestriction = new LogicAppStandardSiteConfigScmIpRestrictionList(this, "scm_ip_restriction", false);
+  public get scmIpRestriction() {
+    return this._scmIpRestriction;
+  }
+  public putScmIpRestriction(value: LogicAppStandardSiteConfigScmIpRestriction[] | cdktf.IResolvable) {
+    this._scmIpRestriction.internalValue = value;
+  }
+  public resetScmIpRestriction() {
+    this._scmIpRestriction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scmIpRestrictionInput() {
+    return this._scmIpRestriction.internalValue;
+  }
 }
 export interface LogicAppStandardTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#create LogicAppStandard#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#create LogicAppStandard#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#delete LogicAppStandard#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#delete LogicAppStandard#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#read LogicAppStandard#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#read LogicAppStandard#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#update LogicAppStandard#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#update LogicAppStandard#update}
   */
   readonly update?: string;
 }
@@ -2623,7 +2728,7 @@ export class LogicAppStandardTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard azurerm_logic_app_standard}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard azurerm_logic_app_standard}
 */
 export class LogicAppStandard extends cdktf.TerraformResource {
 
@@ -2639,7 +2744,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a LogicAppStandard resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the LogicAppStandard to import
-  * @param importFromId The id of the existing LogicAppStandard that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing LogicAppStandard that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the LogicAppStandard to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2651,7 +2756,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.39.0/docs/resources/logic_app_standard azurerm_logic_app_standard} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/logic_app_standard azurerm_logic_app_standard} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2662,7 +2767,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_logic_app_standard',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

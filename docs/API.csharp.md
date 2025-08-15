@@ -643,6 +643,7 @@ The following submodules are available:
 - [dataFactoryCredentialServicePrincipal](./dataFactoryCredentialServicePrincipal.csharp.md)
 - [dataFactoryCredentialUserManagedIdentity](./dataFactoryCredentialUserManagedIdentity.csharp.md)
 - [dataFactoryCustomDataset](./dataFactoryCustomDataset.csharp.md)
+- [dataFactoryCustomerManagedKey](./dataFactoryCustomerManagedKey.csharp.md)
 - [dataFactoryDataFlow](./dataFactoryDataFlow.csharp.md)
 - [dataFactoryDatasetAzureBlob](./dataFactoryDatasetAzureBlob.csharp.md)
 - [dataFactoryDatasetAzureSqlTable](./dataFactoryDatasetAzureSqlTable.csharp.md)

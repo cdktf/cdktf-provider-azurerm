@@ -643,6 +643,7 @@ The following submodules are available:
 - [dataFactoryCredentialServicePrincipal](./dataFactoryCredentialServicePrincipal.python.md)
 - [dataFactoryCredentialUserManagedIdentity](./dataFactoryCredentialUserManagedIdentity.python.md)
 - [dataFactoryCustomDataset](./dataFactoryCustomDataset.python.md)
+- [dataFactoryCustomerManagedKey](./dataFactoryCustomerManagedKey.python.md)
 - [dataFactoryDataFlow](./dataFactoryDataFlow.python.md)
 - [dataFactoryDatasetAzureBlob](./dataFactoryDatasetAzureBlob.python.md)
 - [dataFactoryDatasetAzureSqlTable](./dataFactoryDatasetAzureSqlTable.python.md)
