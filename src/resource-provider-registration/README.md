@@ -1,3 +1,3 @@
 # `azurerm_resource_provider_registration`
 
-Refer to the Terraform Registry for docs: [`azurerm_resource_provider_registration`](https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/resource_provider_registration).
+Refer to the Terraform Registry for docs: [`azurerm_resource_provider_registration`](https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/resource_provider_registration).

@@ -4,7 +4,7 @@
 
 ### NetappPool <a name="NetappPool" id="@cdktf/provider-azurerm.netappPool.NetappPool"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool azurerm_netapp_pool}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool azurerm_netapp_pool}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappPool.NetappPool.Initializer"></a>
 
@@ -75,6 +75,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.putTimeouts">putTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.resetCoolAccessEnabled">resetCoolAccessEnabled</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.resetCustomThroughputMibps">resetCustomThroughputMibps</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.resetEncryptionType">resetEncryptionType</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.resetQosType">resetQosType</a></code> | *No description.* |
@@ -389,6 +390,12 @@ public putTimeouts(value: NetappPoolTimeouts): void
 public resetCoolAccessEnabled(): void
 ```
 
+##### `resetCustomThroughputMibps` <a name="resetCustomThroughputMibps" id="@cdktf/provider-azurerm.netappPool.NetappPool.resetCustomThroughputMibps"></a>
+
+```typescript
+public resetCustomThroughputMibps(): void
+```
+
 ##### `resetEncryptionType` <a name="resetEncryptionType" id="@cdktf/provider-azurerm.netappPool.NetappPool.resetEncryptionType"></a>
 
 ```typescript
@@ -522,7 +529,7 @@ The construct id used in the generated config for the NetappPool to import.
 
 The id of the existing NetappPool that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -555,6 +562,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolTimeoutsOutputReference">NetappPoolTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.accountNameInput">accountNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.coolAccessEnabledInput">coolAccessEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.customThroughputMibpsInput">customThroughputMibpsInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.encryptionTypeInput">encryptionTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.locationInput">locationInput</a></code> | <code>string</code> | *No description.* |
@@ -567,6 +575,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.netappPool.NetappPoolTimeouts">NetappPoolTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.accountName">accountName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.coolAccessEnabled">coolAccessEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.customThroughputMibps">customThroughputMibps</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.encryptionType">encryptionType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPool.property.location">location</a></code> | <code>string</code> | *No description.* |
@@ -751,6 +760,16 @@ public readonly coolAccessEnabledInput: boolean | IResolvable;
 
 ---
 
+##### `customThroughputMibpsInput`<sup>Optional</sup> <a name="customThroughputMibpsInput" id="@cdktf/provider-azurerm.netappPool.NetappPool.property.customThroughputMibpsInput"></a>
+
+```typescript
+public readonly customThroughputMibpsInput: number;
+```
+
+- *Type:* number
+
+---
+
 ##### `encryptionTypeInput`<sup>Optional</sup> <a name="encryptionTypeInput" id="@cdktf/provider-azurerm.netappPool.NetappPool.property.encryptionTypeInput"></a>
 
 ```typescript
@@ -868,6 +887,16 @@ public readonly coolAccessEnabled: boolean | IResolvable;
 ```
 
 - *Type:* boolean | cdktf.IResolvable
+
+---
+
+##### `customThroughputMibps`<sup>Required</sup> <a name="customThroughputMibps" id="@cdktf/provider-azurerm.netappPool.NetappPool.property.customThroughputMibps"></a>
+
+```typescript
+public readonly customThroughputMibps: number;
+```
+
+- *Type:* number
 
 ---
 
@@ -1002,17 +1031,18 @@ const netappPoolConfig: netappPool.NetappPoolConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.accountName">accountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#account_name NetappPool#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#location NetappPool#location}. |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#name NetappPool#name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#resource_group_name NetappPool#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.serviceLevel">serviceLevel</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#service_level NetappPool#service_level}. |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.sizeInTb">sizeInTb</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#size_in_tb NetappPool#size_in_tb}. |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.coolAccessEnabled">coolAccessEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#cool_access_enabled NetappPool#cool_access_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.encryptionType">encryptionType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#encryption_type NetappPool#encryption_type}. |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#id NetappPool#id}. |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.qosType">qosType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#qos_type NetappPool#qos_type}. |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#tags NetappPool#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.accountName">accountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#account_name NetappPool#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#location NetappPool#location}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#name NetappPool#name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#resource_group_name NetappPool#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.serviceLevel">serviceLevel</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#service_level NetappPool#service_level}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.sizeInTb">sizeInTb</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#size_in_tb NetappPool#size_in_tb}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.coolAccessEnabled">coolAccessEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#cool_access_enabled NetappPool#cool_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.customThroughputMibps">customThroughputMibps</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#custom_throughput_mibps NetappPool#custom_throughput_mibps}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.encryptionType">encryptionType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#encryption_type NetappPool#encryption_type}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#id NetappPool#id}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.qosType">qosType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#qos_type NetappPool#qos_type}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#tags NetappPool#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolTimeouts">NetappPoolTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1095,7 +1125,7 @@ public readonly accountName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#account_name NetappPool#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#account_name NetappPool#account_name}.
 
 ---
 
@@ -1107,7 +1137,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#location NetappPool#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#location NetappPool#location}.
 
 ---
 
@@ -1119,7 +1149,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#name NetappPool#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#name NetappPool#name}.
 
 ---
 
@@ -1131,7 +1161,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#resource_group_name NetappPool#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#resource_group_name NetappPool#resource_group_name}.
 
 ---
 
@@ -1143,7 +1173,7 @@ public readonly serviceLevel: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#service_level NetappPool#service_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#service_level NetappPool#service_level}.
 
 ---
 
@@ -1155,7 +1185,7 @@ public readonly sizeInTb: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#size_in_tb NetappPool#size_in_tb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#size_in_tb NetappPool#size_in_tb}.
 
 ---
 
@@ -1167,7 +1197,19 @@ public readonly coolAccessEnabled: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#cool_access_enabled NetappPool#cool_access_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#cool_access_enabled NetappPool#cool_access_enabled}.
+
+---
+
+##### `customThroughputMibps`<sup>Optional</sup> <a name="customThroughputMibps" id="@cdktf/provider-azurerm.netappPool.NetappPoolConfig.property.customThroughputMibps"></a>
+
+```typescript
+public readonly customThroughputMibps: number;
+```
+
+- *Type:* number
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#custom_throughput_mibps NetappPool#custom_throughput_mibps}.
 
 ---
 
@@ -1179,7 +1221,7 @@ public readonly encryptionType: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#encryption_type NetappPool#encryption_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#encryption_type NetappPool#encryption_type}.
 
 ---
 
@@ -1191,7 +1233,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#id NetappPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#id NetappPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1206,7 +1248,7 @@ public readonly qosType: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#qos_type NetappPool#qos_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#qos_type NetappPool#qos_type}.
 
 ---
 
@@ -1218,7 +1260,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#tags NetappPool#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#tags NetappPool#tags}.
 
 ---
 
@@ -1232,7 +1274,7 @@ public readonly timeouts: NetappPoolTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#timeouts NetappPool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#timeouts NetappPool#timeouts}
 
 ---
 
@@ -1250,10 +1292,10 @@ const netappPoolTimeouts: netappPool.NetappPoolTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#create NetappPool#create}. |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#delete NetappPool#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#read NetappPool#read}. |
-| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#update NetappPool#update}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#create NetappPool#create}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#delete NetappPool#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#read NetappPool#read}. |
+| <code><a href="#@cdktf/provider-azurerm.netappPool.NetappPoolTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#update NetappPool#update}. |
 
 ---
 
@@ -1265,7 +1307,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#create NetappPool#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#create NetappPool#create}.
 
 ---
 
@@ -1277,7 +1319,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#delete NetappPool#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#delete NetappPool#delete}.
 
 ---
 
@@ -1289,7 +1331,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#read NetappPool#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#read NetappPool#read}.
 
 ---
 
@@ -1301,7 +1343,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_pool#update NetappPool#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_pool#update NetappPool#update}.
 
 ---
 

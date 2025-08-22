@@ -686,9 +686,11 @@ export * as networkManagerAdminRuleCollection from './network-manager-admin-rule
 export * as networkManagerConnectivityConfiguration from './network-manager-connectivity-configuration';
 export * as networkManagerDeployment from './network-manager-deployment';
 export * as networkManagerIpamPool from './network-manager-ipam-pool';
+export * as networkManagerIpamPoolStaticCidr from './network-manager-ipam-pool-static-cidr';
 export * as networkManagerManagementGroupConnection from './network-manager-management-group-connection';
 export * as networkManagerNetworkGroup from './network-manager-network-group';
 export * as networkManagerRoutingConfiguration from './network-manager-routing-configuration';
+export * as networkManagerRoutingRuleCollection from './network-manager-routing-rule-collection';
 export * as networkManagerScopeConnection from './network-manager-scope-connection';
 export * as networkManagerSecurityAdminConfiguration from './network-manager-security-admin-configuration';
 export * as networkManagerStaticMember from './network-manager-static-member';

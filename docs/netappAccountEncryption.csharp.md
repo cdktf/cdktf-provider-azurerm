@@ -4,7 +4,7 @@
 
 ### NetappAccountEncryption <a name="NetappAccountEncryption" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption azurerm_netapp_account_encryption}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption azurerm_netapp_account_encryption}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.Initializer"></a>
 
@@ -74,6 +74,8 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.moveToId">MoveToId</a></code> | Moves this resource to the resource corresponding to "id". |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.putTimeouts">PutTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.resetCrossTenantKeyVaultResourceId">ResetCrossTenantKeyVaultResourceId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.resetFederatedClientId">ResetFederatedClientId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.resetSystemAssignedIdentityPrincipalId">ResetSystemAssignedIdentityPrincipalId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
@@ -381,6 +383,18 @@ private void PutTimeouts(NetappAccountEncryptionTimeouts Value)
 
 ---
 
+##### `ResetCrossTenantKeyVaultResourceId` <a name="ResetCrossTenantKeyVaultResourceId" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.resetCrossTenantKeyVaultResourceId"></a>
+
+```csharp
+private void ResetCrossTenantKeyVaultResourceId()
+```
+
+##### `ResetFederatedClientId` <a name="ResetFederatedClientId" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.resetFederatedClientId"></a>
+
+```csharp
+private void ResetFederatedClientId()
+```
+
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.resetId"></a>
 
 ```csharp
@@ -508,7 +522,7 @@ The construct id used in the generated config for the NetappAccountEncryption to
 
 The id of the existing NetappAccountEncryption that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -539,13 +553,17 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionTimeoutsOutputReference">NetappAccountEncryptionTimeoutsOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.crossTenantKeyVaultResourceIdInput">CrossTenantKeyVaultResourceIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.encryptionKeyInput">EncryptionKeyInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.federatedClientIdInput">FederatedClientIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.netappAccountIdInput">NetappAccountIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.systemAssignedIdentityPrincipalIdInput">SystemAssignedIdentityPrincipalIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.userAssignedIdentityIdInput">UserAssignedIdentityIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.crossTenantKeyVaultResourceId">CrossTenantKeyVaultResourceId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.encryptionKey">EncryptionKey</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.federatedClientId">FederatedClientId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.netappAccountId">NetappAccountId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.systemAssignedIdentityPrincipalId">SystemAssignedIdentityPrincipalId</a></code> | <code>string</code> | *No description.* |
@@ -705,10 +723,30 @@ public NetappAccountEncryptionTimeoutsOutputReference Timeouts { get; }
 
 ---
 
+##### `CrossTenantKeyVaultResourceIdInput`<sup>Optional</sup> <a name="CrossTenantKeyVaultResourceIdInput" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.crossTenantKeyVaultResourceIdInput"></a>
+
+```csharp
+public string CrossTenantKeyVaultResourceIdInput { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `EncryptionKeyInput`<sup>Optional</sup> <a name="EncryptionKeyInput" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.encryptionKeyInput"></a>
 
 ```csharp
 public string EncryptionKeyInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `FederatedClientIdInput`<sup>Optional</sup> <a name="FederatedClientIdInput" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.federatedClientIdInput"></a>
+
+```csharp
+public string FederatedClientIdInput { get; }
 ```
 
 - *Type:* string
@@ -765,10 +803,30 @@ public string UserAssignedIdentityIdInput { get; }
 
 ---
 
+##### `CrossTenantKeyVaultResourceId`<sup>Required</sup> <a name="CrossTenantKeyVaultResourceId" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.crossTenantKeyVaultResourceId"></a>
+
+```csharp
+public string CrossTenantKeyVaultResourceId { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `EncryptionKey`<sup>Required</sup> <a name="EncryptionKey" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.encryptionKey"></a>
 
 ```csharp
 public string EncryptionKey { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `FederatedClientId`<sup>Required</sup> <a name="FederatedClientId" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.property.federatedClientId"></a>
+
+```csharp
+public string FederatedClientId { get; }
 ```
 
 - *Type:* string
@@ -852,6 +910,8 @@ new NetappAccountEncryptionConfig {
     object[] Provisioners = null,
     string EncryptionKey,
     string NetappAccountId,
+    string CrossTenantKeyVaultResourceId = null,
+    string FederatedClientId = null,
     string Id = null,
     string SystemAssignedIdentityPrincipalId = null,
     NetappAccountEncryptionTimeouts Timeouts = null,
@@ -872,7 +932,9 @@ new NetappAccountEncryptionConfig {
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionConfig.property.encryptionKey">EncryptionKey</a></code> | <code>string</code> | The versionless encryption key url. |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionConfig.property.netappAccountId">NetappAccountId</a></code> | <code>string</code> | The ID of the NetApp Account where encryption will be set. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#id NetappAccountEncryption#id}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionConfig.property.crossTenantKeyVaultResourceId">CrossTenantKeyVaultResourceId</a></code> | <code>string</code> | The full resource ID of the cross-tenant key vault. Required when using federated_client_id for cross-tenant scenarios. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionConfig.property.federatedClientId">FederatedClientId</a></code> | <code>string</code> | The Client ID of the multi-tenant Entra ID application used to access cross-tenant key vaults. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#id NetappAccountEncryption#id}. |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionConfig.property.systemAssignedIdentityPrincipalId">SystemAssignedIdentityPrincipalId</a></code> | <code>string</code> | The Principal ID of the System Assigned Identity to use for encryption. |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionTimeouts">NetappAccountEncryptionTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionConfig.property.userAssignedIdentityId">UserAssignedIdentityId</a></code> | <code>string</code> | The resource ID of the User Assigned Identity to use for encryption. |
@@ -959,7 +1021,7 @@ public string EncryptionKey { get; set; }
 
 The versionless encryption key url.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#encryption_key NetappAccountEncryption#encryption_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#encryption_key NetappAccountEncryption#encryption_key}
 
 ---
 
@@ -973,7 +1035,35 @@ public string NetappAccountId { get; set; }
 
 The ID of the NetApp Account where encryption will be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#netapp_account_id NetappAccountEncryption#netapp_account_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#netapp_account_id NetappAccountEncryption#netapp_account_id}
+
+---
+
+##### `CrossTenantKeyVaultResourceId`<sup>Optional</sup> <a name="CrossTenantKeyVaultResourceId" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionConfig.property.crossTenantKeyVaultResourceId"></a>
+
+```csharp
+public string CrossTenantKeyVaultResourceId { get; set; }
+```
+
+- *Type:* string
+
+The full resource ID of the cross-tenant key vault. Required when using federated_client_id for cross-tenant scenarios.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#cross_tenant_key_vault_resource_id NetappAccountEncryption#cross_tenant_key_vault_resource_id}
+
+---
+
+##### `FederatedClientId`<sup>Optional</sup> <a name="FederatedClientId" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionConfig.property.federatedClientId"></a>
+
+```csharp
+public string FederatedClientId { get; set; }
+```
+
+- *Type:* string
+
+The Client ID of the multi-tenant Entra ID application used to access cross-tenant key vaults.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#federated_client_id NetappAccountEncryption#federated_client_id}
 
 ---
 
@@ -985,7 +1075,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#id NetappAccountEncryption#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#id NetappAccountEncryption#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1002,7 +1092,7 @@ public string SystemAssignedIdentityPrincipalId { get; set; }
 
 The Principal ID of the System Assigned Identity to use for encryption.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#system_assigned_identity_principal_id NetappAccountEncryption#system_assigned_identity_principal_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#system_assigned_identity_principal_id NetappAccountEncryption#system_assigned_identity_principal_id}
 
 ---
 
@@ -1016,7 +1106,7 @@ public NetappAccountEncryptionTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#timeouts NetappAccountEncryption#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#timeouts NetappAccountEncryption#timeouts}
 
 ---
 
@@ -1030,7 +1120,7 @@ public string UserAssignedIdentityId { get; set; }
 
 The resource ID of the User Assigned Identity to use for encryption.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#user_assigned_identity_id NetappAccountEncryption#user_assigned_identity_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#user_assigned_identity_id NetappAccountEncryption#user_assigned_identity_id}
 
 ---
 
@@ -1053,10 +1143,10 @@ new NetappAccountEncryptionTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#create NetappAccountEncryption#create}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#delete NetappAccountEncryption#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#read NetappAccountEncryption#read}. |
-| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#update NetappAccountEncryption#update}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#create NetappAccountEncryption#create}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#delete NetappAccountEncryption#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#read NetappAccountEncryption#read}. |
+| <code><a href="#@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#update NetappAccountEncryption#update}. |
 
 ---
 
@@ -1068,7 +1158,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#create NetappAccountEncryption#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#create NetappAccountEncryption#create}.
 
 ---
 
@@ -1080,7 +1170,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#delete NetappAccountEncryption#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#delete NetappAccountEncryption#delete}.
 
 ---
 
@@ -1092,7 +1182,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#read NetappAccountEncryption#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#read NetappAccountEncryption#read}.
 
 ---
 
@@ -1104,7 +1194,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#update NetappAccountEncryption#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#update NetappAccountEncryption#update}.
 
 ---
 
