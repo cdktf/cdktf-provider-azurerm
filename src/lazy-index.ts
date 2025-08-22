@@ -686,9 +686,11 @@ Object.defineProperty(exports, 'networkManagerAdminRuleCollection', { get: funct
 Object.defineProperty(exports, 'networkManagerConnectivityConfiguration', { get: function () { return require('./network-manager-connectivity-configuration'); } });
 Object.defineProperty(exports, 'networkManagerDeployment', { get: function () { return require('./network-manager-deployment'); } });
 Object.defineProperty(exports, 'networkManagerIpamPool', { get: function () { return require('./network-manager-ipam-pool'); } });
+Object.defineProperty(exports, 'networkManagerIpamPoolStaticCidr', { get: function () { return require('./network-manager-ipam-pool-static-cidr'); } });
 Object.defineProperty(exports, 'networkManagerManagementGroupConnection', { get: function () { return require('./network-manager-management-group-connection'); } });
 Object.defineProperty(exports, 'networkManagerNetworkGroup', { get: function () { return require('./network-manager-network-group'); } });
 Object.defineProperty(exports, 'networkManagerRoutingConfiguration', { get: function () { return require('./network-manager-routing-configuration'); } });
+Object.defineProperty(exports, 'networkManagerRoutingRuleCollection', { get: function () { return require('./network-manager-routing-rule-collection'); } });
 Object.defineProperty(exports, 'networkManagerScopeConnection', { get: function () { return require('./network-manager-scope-connection'); } });
 Object.defineProperty(exports, 'networkManagerSecurityAdminConfiguration', { get: function () { return require('./network-manager-security-admin-configuration'); } });
 Object.defineProperty(exports, 'networkManagerStaticMember', { get: function () { return require('./network-manager-static-member'); } });

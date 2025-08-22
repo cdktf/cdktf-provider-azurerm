@@ -1,3 +1,3 @@
 # `azurerm_web_pubsub_network_acl`
 
-Refer to the Terraform Registry for docs: [`azurerm_web_pubsub_network_acl`](https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/web_pubsub_network_acl).
+Refer to the Terraform Registry for docs: [`azurerm_web_pubsub_network_acl`](https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/web_pubsub_network_acl).

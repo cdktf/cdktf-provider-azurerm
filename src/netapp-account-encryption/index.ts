@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,13 +13,25 @@ import * as cdktf from 'cdktf';
 
 export interface NetappAccountEncryptionConfig extends cdktf.TerraformMetaArguments {
   /**
+  * The full resource ID of the cross-tenant key vault. Required when using federated_client_id for cross-tenant scenarios.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#cross_tenant_key_vault_resource_id NetappAccountEncryption#cross_tenant_key_vault_resource_id}
+  */
+  readonly crossTenantKeyVaultResourceId?: string;
+  /**
   * The versionless encryption key url.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#encryption_key NetappAccountEncryption#encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#encryption_key NetappAccountEncryption#encryption_key}
   */
   readonly encryptionKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#id NetappAccountEncryption#id}
+  * The Client ID of the multi-tenant Entra ID application used to access cross-tenant key vaults.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#federated_client_id NetappAccountEncryption#federated_client_id}
+  */
+  readonly federatedClientId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#id NetappAccountEncryption#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,43 +40,43 @@ export interface NetappAccountEncryptionConfig extends cdktf.TerraformMetaArgume
   /**
   * The ID of the NetApp Account where encryption will be set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#netapp_account_id NetappAccountEncryption#netapp_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#netapp_account_id NetappAccountEncryption#netapp_account_id}
   */
   readonly netappAccountId: string;
   /**
   * The Principal ID of the System Assigned Identity to use for encryption.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#system_assigned_identity_principal_id NetappAccountEncryption#system_assigned_identity_principal_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#system_assigned_identity_principal_id NetappAccountEncryption#system_assigned_identity_principal_id}
   */
   readonly systemAssignedIdentityPrincipalId?: string;
   /**
   * The resource ID of the User Assigned Identity to use for encryption.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#user_assigned_identity_id NetappAccountEncryption#user_assigned_identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#user_assigned_identity_id NetappAccountEncryption#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#timeouts NetappAccountEncryption#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#timeouts NetappAccountEncryption#timeouts}
   */
   readonly timeouts?: NetappAccountEncryptionTimeouts;
 }
 export interface NetappAccountEncryptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#create NetappAccountEncryption#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#create NetappAccountEncryption#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#delete NetappAccountEncryption#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#delete NetappAccountEncryption#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#read NetappAccountEncryption#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#read NetappAccountEncryption#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#update NetappAccountEncryption#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#update NetappAccountEncryption#update}
   */
   readonly update?: string;
 }
@@ -245,7 +257,7 @@ export class NetappAccountEncryptionTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption azurerm_netapp_account_encryption}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption azurerm_netapp_account_encryption}
 */
 export class NetappAccountEncryption extends cdktf.TerraformResource {
 
@@ -261,7 +273,7 @@ export class NetappAccountEncryption extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetappAccountEncryption resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetappAccountEncryption to import
-  * @param importFromId The id of the existing NetappAccountEncryption that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetappAccountEncryption that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetappAccountEncryption to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -273,7 +285,7 @@ export class NetappAccountEncryption extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.40.0/docs/resources/netapp_account_encryption azurerm_netapp_account_encryption} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/netapp_account_encryption azurerm_netapp_account_encryption} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -284,7 +296,7 @@ export class NetappAccountEncryption extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_netapp_account_encryption',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -295,7 +307,9 @@ export class NetappAccountEncryption extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._crossTenantKeyVaultResourceId = config.crossTenantKeyVaultResourceId;
     this._encryptionKey = config.encryptionKey;
+    this._federatedClientId = config.federatedClientId;
     this._id = config.id;
     this._netappAccountId = config.netappAccountId;
     this._systemAssignedIdentityPrincipalId = config.systemAssignedIdentityPrincipalId;
@@ -306,6 +320,22 @@ export class NetappAccountEncryption extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // cross_tenant_key_vault_resource_id - computed: false, optional: true, required: false
+  private _crossTenantKeyVaultResourceId?: string; 
+  public get crossTenantKeyVaultResourceId() {
+    return this.getStringAttribute('cross_tenant_key_vault_resource_id');
+  }
+  public set crossTenantKeyVaultResourceId(value: string) {
+    this._crossTenantKeyVaultResourceId = value;
+  }
+  public resetCrossTenantKeyVaultResourceId() {
+    this._crossTenantKeyVaultResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get crossTenantKeyVaultResourceIdInput() {
+    return this._crossTenantKeyVaultResourceId;
+  }
 
   // encryption_key - computed: false, optional: false, required: true
   private _encryptionKey?: string; 
@@ -318,6 +348,22 @@ export class NetappAccountEncryption extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get encryptionKeyInput() {
     return this._encryptionKey;
+  }
+
+  // federated_client_id - computed: false, optional: true, required: false
+  private _federatedClientId?: string; 
+  public get federatedClientId() {
+    return this.getStringAttribute('federated_client_id');
+  }
+  public set federatedClientId(value: string) {
+    this._federatedClientId = value;
+  }
+  public resetFederatedClientId() {
+    this._federatedClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get federatedClientIdInput() {
+    return this._federatedClientId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -403,7 +449,9 @@ export class NetappAccountEncryption extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      cross_tenant_key_vault_resource_id: cdktf.stringToTerraform(this._crossTenantKeyVaultResourceId),
       encryption_key: cdktf.stringToTerraform(this._encryptionKey),
+      federated_client_id: cdktf.stringToTerraform(this._federatedClientId),
       id: cdktf.stringToTerraform(this._id),
       netapp_account_id: cdktf.stringToTerraform(this._netappAccountId),
       system_assigned_identity_principal_id: cdktf.stringToTerraform(this._systemAssignedIdentityPrincipalId),
@@ -414,8 +462,20 @@ export class NetappAccountEncryption extends cdktf.TerraformResource {
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
+      cross_tenant_key_vault_resource_id: {
+        value: cdktf.stringToHclTerraform(this._crossTenantKeyVaultResourceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       encryption_key: {
         value: cdktf.stringToHclTerraform(this._encryptionKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      federated_client_id: {
+        value: cdktf.stringToHclTerraform(this._federatedClientId),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
