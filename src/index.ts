@@ -1313,6 +1313,7 @@ export * as dataAzurermMaintenanceConfiguration from './data-azurerm-maintenance
 export * as dataAzurermManagedApi from './data-azurerm-managed-api';
 export * as dataAzurermManagedApplicationDefinition from './data-azurerm-managed-application-definition';
 export * as dataAzurermManagedDisk from './data-azurerm-managed-disk';
+export * as dataAzurermManagedDisks from './data-azurerm-managed-disks';
 export * as dataAzurermManagementGroup from './data-azurerm-management-group';
 export * as dataAzurermManagementGroupTemplateDeployment from './data-azurerm-management-group-template-deployment';
 export * as dataAzurermMapsAccount from './data-azurerm-maps-account';

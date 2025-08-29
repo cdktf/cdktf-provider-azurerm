@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/dev_center_attached_network
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/dev_center_attached_network
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +13,42 @@ import * as cdktf from 'cdktf';
 
 export interface DevCenterAttachedNetworkConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/dev_center_attached_network#dev_center_id DevCenterAttachedNetwork#dev_center_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/dev_center_attached_network#dev_center_id DevCenterAttachedNetwork#dev_center_id}
   */
   readonly devCenterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/dev_center_attached_network#id DevCenterAttachedNetwork#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/dev_center_attached_network#id DevCenterAttachedNetwork#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/dev_center_attached_network#name DevCenterAttachedNetwork#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/dev_center_attached_network#name DevCenterAttachedNetwork#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/dev_center_attached_network#network_connection_id DevCenterAttachedNetwork#network_connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/dev_center_attached_network#network_connection_id DevCenterAttachedNetwork#network_connection_id}
   */
   readonly networkConnectionId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/dev_center_attached_network#timeouts DevCenterAttachedNetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/dev_center_attached_network#timeouts DevCenterAttachedNetwork#timeouts}
   */
   readonly timeouts?: DevCenterAttachedNetworkTimeouts;
 }
 export interface DevCenterAttachedNetworkTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/dev_center_attached_network#create DevCenterAttachedNetwork#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/dev_center_attached_network#create DevCenterAttachedNetwork#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/dev_center_attached_network#delete DevCenterAttachedNetwork#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/dev_center_attached_network#delete DevCenterAttachedNetwork#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/dev_center_attached_network#read DevCenterAttachedNetwork#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/dev_center_attached_network#read DevCenterAttachedNetwork#read}
   */
   readonly read?: string;
 }
@@ -200,7 +200,7 @@ export class DevCenterAttachedNetworkTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/dev_center_attached_network azurerm_dev_center_attached_network}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/dev_center_attached_network azurerm_dev_center_attached_network}
 */
 export class DevCenterAttachedNetwork extends cdktf.TerraformResource {
 
@@ -216,7 +216,7 @@ export class DevCenterAttachedNetwork extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DevCenterAttachedNetwork resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DevCenterAttachedNetwork to import
-  * @param importFromId The id of the existing DevCenterAttachedNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/dev_center_attached_network#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DevCenterAttachedNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/dev_center_attached_network#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DevCenterAttachedNetwork to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -228,7 +228,7 @@ export class DevCenterAttachedNetwork extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/dev_center_attached_network azurerm_dev_center_attached_network} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/dev_center_attached_network azurerm_dev_center_attached_network} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -239,7 +239,7 @@ export class DevCenterAttachedNetwork extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dev_center_attached_network',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

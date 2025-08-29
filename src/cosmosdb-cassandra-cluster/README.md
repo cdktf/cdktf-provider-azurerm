@@ -1,3 +1,3 @@
 # `azurerm_cosmosdb_cassandra_cluster`
 
-Refer to the Terraform Registry for docs: [`azurerm_cosmosdb_cassandra_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/cosmosdb_cassandra_cluster).
+Refer to the Terraform Registry for docs: [`azurerm_cosmosdb_cassandra_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/cosmosdb_cassandra_cluster).

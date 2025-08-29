@@ -1,3 +1,3 @@
 # `azurerm_search_service`
 
-Refer to the Terraform Registry for docs: [`azurerm_search_service`](https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/search_service).
+Refer to the Terraform Registry for docs: [`azurerm_search_service`](https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/search_service).

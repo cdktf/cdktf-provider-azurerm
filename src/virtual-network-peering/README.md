@@ -1,3 +1,3 @@
 # `azurerm_virtual_network_peering`
 
-Refer to the Terraform Registry for docs: [`azurerm_virtual_network_peering`](https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/virtual_network_peering).
+Refer to the Terraform Registry for docs: [`azurerm_virtual_network_peering`](https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/virtual_network_peering).
