@@ -4,7 +4,7 @@
 
 ### AdvancedThreatProtection <a name="AdvancedThreatProtection" id="@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtection"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection azurerm_advanced_threat_protection}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection azurerm_advanced_threat_protection}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtection.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the AdvancedThreatProtection t
 
 The id of the existing AdvancedThreatProtection that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -798,9 +798,9 @@ const advancedThreatProtectionConfig: advancedThreatProtection.AdvancedThreatPro
 | <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionConfig.property.enabled">enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#enabled AdvancedThreatProtection#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionConfig.property.targetResourceId">targetResourceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#target_resource_id AdvancedThreatProtection#target_resource_id}. |
-| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#id AdvancedThreatProtection#id}. |
+| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionConfig.property.enabled">enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#enabled AdvancedThreatProtection#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionConfig.property.targetResourceId">targetResourceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#target_resource_id AdvancedThreatProtection#target_resource_id}. |
+| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#id AdvancedThreatProtection#id}. |
 | <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionTimeouts">AdvancedThreatProtectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -883,7 +883,7 @@ public readonly enabled: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#enabled AdvancedThreatProtection#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#enabled AdvancedThreatProtection#enabled}.
 
 ---
 
@@ -895,7 +895,7 @@ public readonly targetResourceId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#target_resource_id AdvancedThreatProtection#target_resource_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#target_resource_id AdvancedThreatProtection#target_resource_id}.
 
 ---
 
@@ -907,7 +907,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#id AdvancedThreatProtection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#id AdvancedThreatProtection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -924,7 +924,7 @@ public readonly timeouts: AdvancedThreatProtectionTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#timeouts AdvancedThreatProtection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#timeouts AdvancedThreatProtection#timeouts}
 
 ---
 
@@ -942,10 +942,10 @@ const advancedThreatProtectionTimeouts: advancedThreatProtection.AdvancedThreatP
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#create AdvancedThreatProtection#create}. |
-| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#delete AdvancedThreatProtection#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#read AdvancedThreatProtection#read}. |
-| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#update AdvancedThreatProtection#update}. |
+| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#create AdvancedThreatProtection#create}. |
+| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#delete AdvancedThreatProtection#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#read AdvancedThreatProtection#read}. |
+| <code><a href="#@cdktf/provider-azurerm.advancedThreatProtection.AdvancedThreatProtectionTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#update AdvancedThreatProtection#update}. |
 
 ---
 
@@ -957,7 +957,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#create AdvancedThreatProtection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#create AdvancedThreatProtection#create}.
 
 ---
 
@@ -969,7 +969,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#delete AdvancedThreatProtection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#delete AdvancedThreatProtection#delete}.
 
 ---
 
@@ -981,7 +981,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#read AdvancedThreatProtection#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#read AdvancedThreatProtection#read}.
 
 ---
 
@@ -993,7 +993,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/advanced_threat_protection#update AdvancedThreatProtection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/advanced_threat_protection#update AdvancedThreatProtection#update}.
 
 ---
 

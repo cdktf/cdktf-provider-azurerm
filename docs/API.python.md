@@ -448,6 +448,7 @@ The following submodules are available:
 - [dataAzurermManagedApi](./dataAzurermManagedApi.python.md)
 - [dataAzurermManagedApplicationDefinition](./dataAzurermManagedApplicationDefinition.python.md)
 - [dataAzurermManagedDisk](./dataAzurermManagedDisk.python.md)
+- [dataAzurermManagedDisks](./dataAzurermManagedDisks.python.md)
 - [dataAzurermManagementGroup](./dataAzurermManagementGroup.python.md)
 - [dataAzurermManagementGroupTemplateDeployment](./dataAzurermManagementGroupTemplateDeployment.python.md)
 - [dataAzurermMapsAccount](./dataAzurermMapsAccount.python.md)

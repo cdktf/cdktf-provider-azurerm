@@ -448,6 +448,7 @@ The following submodules are available:
 - [dataAzurermManagedApi](./dataAzurermManagedApi.csharp.md)
 - [dataAzurermManagedApplicationDefinition](./dataAzurermManagedApplicationDefinition.csharp.md)
 - [dataAzurermManagedDisk](./dataAzurermManagedDisk.csharp.md)
+- [dataAzurermManagedDisks](./dataAzurermManagedDisks.csharp.md)
 - [dataAzurermManagementGroup](./dataAzurermManagementGroup.csharp.md)
 - [dataAzurermManagementGroupTemplateDeployment](./dataAzurermManagementGroupTemplateDeployment.csharp.md)
 - [dataAzurermMapsAccount](./dataAzurermMapsAccount.csharp.md)

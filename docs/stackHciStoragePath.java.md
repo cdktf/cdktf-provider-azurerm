@@ -4,7 +4,7 @@
 
 ### StackHciStoragePath <a name="StackHciStoragePath" id="@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path azurerm_stack_hci_storage_path}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path azurerm_stack_hci_storage_path}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer"></a>
 
@@ -45,13 +45,13 @@ StackHciStoragePath.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.customLocationId">customLocationId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#custom_location_id StackHciStoragePath#custom_location_id}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#location StackHciStoragePath#location}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#name StackHciStoragePath#name}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.path">path</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#path StackHciStoragePath#path}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#resource_group_name StackHciStoragePath#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#id StackHciStoragePath#id}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#tags StackHciStoragePath#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.customLocationId">customLocationId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#custom_location_id StackHciStoragePath#custom_location_id}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#location StackHciStoragePath#location}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#name StackHciStoragePath#name}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.path">path</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#path StackHciStoragePath#path}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#resource_group_name StackHciStoragePath#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#id StackHciStoragePath#id}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#tags StackHciStoragePath#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePath.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathTimeouts">StackHciStoragePathTimeouts</a></code> | timeouts block. |
 
 ---
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#custom_location_id StackHciStoragePath#custom_location_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#custom_location_id StackHciStoragePath#custom_location_id}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#location StackHciStoragePath#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#location StackHciStoragePath#location}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#name StackHciStoragePath#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#name StackHciStoragePath#name}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#path StackHciStoragePath#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#path StackHciStoragePath#path}.
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#resource_group_name StackHciStoragePath#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#resource_group_name StackHciStoragePath#resource_group_name}.
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#id StackHciStoragePath#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#id StackHciStoragePath#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -171,7 +171,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#tags StackHciStoragePath#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#tags StackHciStoragePath#tags}.
 
 ---
 
@@ -181,7 +181,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#timeouts StackHciStoragePath#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#timeouts StackHciStoragePath#timeouts}
 
 ---
 
@@ -642,7 +642,7 @@ The construct id used in the generated config for the StackHciStoragePath to imp
 
 The id of the existing StackHciStoragePath that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1054,13 +1054,13 @@ StackHciStoragePathConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.customLocationId">customLocationId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#custom_location_id StackHciStoragePath#custom_location_id}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#location StackHciStoragePath#location}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#name StackHciStoragePath#name}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.path">path</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#path StackHciStoragePath#path}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#resource_group_name StackHciStoragePath#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#id StackHciStoragePath#id}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#tags StackHciStoragePath#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.customLocationId">customLocationId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#custom_location_id StackHciStoragePath#custom_location_id}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#location StackHciStoragePath#location}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#name StackHciStoragePath#name}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.path">path</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#path StackHciStoragePath#path}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#resource_group_name StackHciStoragePath#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#id StackHciStoragePath#id}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#tags StackHciStoragePath#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathTimeouts">StackHciStoragePathTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1143,7 +1143,7 @@ public java.lang.String getCustomLocationId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#custom_location_id StackHciStoragePath#custom_location_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#custom_location_id StackHciStoragePath#custom_location_id}.
 
 ---
 
@@ -1155,7 +1155,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#location StackHciStoragePath#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#location StackHciStoragePath#location}.
 
 ---
 
@@ -1167,7 +1167,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#name StackHciStoragePath#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#name StackHciStoragePath#name}.
 
 ---
 
@@ -1179,7 +1179,7 @@ public java.lang.String getPath();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#path StackHciStoragePath#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#path StackHciStoragePath#path}.
 
 ---
 
@@ -1191,7 +1191,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#resource_group_name StackHciStoragePath#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#resource_group_name StackHciStoragePath#resource_group_name}.
 
 ---
 
@@ -1203,7 +1203,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#id StackHciStoragePath#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#id StackHciStoragePath#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1218,7 +1218,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTags();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#tags StackHciStoragePath#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#tags StackHciStoragePath#tags}.
 
 ---
 
@@ -1232,7 +1232,7 @@ public StackHciStoragePathTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#timeouts StackHciStoragePath#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#timeouts StackHciStoragePath#timeouts}
 
 ---
 
@@ -1255,10 +1255,10 @@ StackHciStoragePathTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#create StackHciStoragePath#create}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#delete StackHciStoragePath#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#read StackHciStoragePath#read}. |
-| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#update StackHciStoragePath#update}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#create StackHciStoragePath#create}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#delete StackHciStoragePath#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#read StackHciStoragePath#read}. |
+| <code><a href="#@cdktf/provider-azurerm.stackHciStoragePath.StackHciStoragePathTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#update StackHciStoragePath#update}. |
 
 ---
 
@@ -1270,7 +1270,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#create StackHciStoragePath#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#create StackHciStoragePath#create}.
 
 ---
 
@@ -1282,7 +1282,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#delete StackHciStoragePath#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#delete StackHciStoragePath#delete}.
 
 ---
 
@@ -1294,7 +1294,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#read StackHciStoragePath#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#read StackHciStoragePath#read}.
 
 ---
 
@@ -1306,7 +1306,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/stack_hci_storage_path#update StackHciStoragePath#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/stack_hci_storage_path#update StackHciStoragePath#update}.
 
 ---
 
