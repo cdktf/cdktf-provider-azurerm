@@ -448,6 +448,7 @@ The following submodules are available:
 - [dataAzurermManagedApi](./dataAzurermManagedApi.go.md)
 - [dataAzurermManagedApplicationDefinition](./dataAzurermManagedApplicationDefinition.go.md)
 - [dataAzurermManagedDisk](./dataAzurermManagedDisk.go.md)
+- [dataAzurermManagedDisks](./dataAzurermManagedDisks.go.md)
 - [dataAzurermManagementGroup](./dataAzurermManagementGroup.go.md)
 - [dataAzurermManagementGroupTemplateDeployment](./dataAzurermManagementGroupTemplateDeployment.go.md)
 - [dataAzurermMapsAccount](./dataAzurermMapsAccount.go.md)

@@ -1,3 +1,3 @@
 # `azurerm_spring_cloud_api_portal`
 
-Refer to the Terraform Registry for docs: [`azurerm_spring_cloud_api_portal`](https://registry.terraform.io/providers/hashicorp/azurerm/4.41.0/docs/resources/spring_cloud_api_portal).
+Refer to the Terraform Registry for docs: [`azurerm_spring_cloud_api_portal`](https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/spring_cloud_api_portal).

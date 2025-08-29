@@ -448,6 +448,7 @@ The following submodules are available:
 - [dataAzurermManagedApi](./dataAzurermManagedApi.typescript.md)
 - [dataAzurermManagedApplicationDefinition](./dataAzurermManagedApplicationDefinition.typescript.md)
 - [dataAzurermManagedDisk](./dataAzurermManagedDisk.typescript.md)
+- [dataAzurermManagedDisks](./dataAzurermManagedDisks.typescript.md)
 - [dataAzurermManagementGroup](./dataAzurermManagementGroup.typescript.md)
 - [dataAzurermManagementGroupTemplateDeployment](./dataAzurermManagementGroupTemplateDeployment.typescript.md)
 - [dataAzurermMapsAccount](./dataAzurermMapsAccount.typescript.md)

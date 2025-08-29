@@ -1313,6 +1313,7 @@ Object.defineProperty(exports, 'dataAzurermMaintenanceConfiguration', { get: fun
 Object.defineProperty(exports, 'dataAzurermManagedApi', { get: function () { return require('./data-azurerm-managed-api'); } });
 Object.defineProperty(exports, 'dataAzurermManagedApplicationDefinition', { get: function () { return require('./data-azurerm-managed-application-definition'); } });
 Object.defineProperty(exports, 'dataAzurermManagedDisk', { get: function () { return require('./data-azurerm-managed-disk'); } });
+Object.defineProperty(exports, 'dataAzurermManagedDisks', { get: function () { return require('./data-azurerm-managed-disks'); } });
 Object.defineProperty(exports, 'dataAzurermManagementGroup', { get: function () { return require('./data-azurerm-management-group'); } });
 Object.defineProperty(exports, 'dataAzurermManagementGroupTemplateDeployment', { get: function () { return require('./data-azurerm-management-group-template-deployment'); } });
 Object.defineProperty(exports, 'dataAzurermMapsAccount', { get: function () { return require('./data-azurerm-maps-account'); } });
