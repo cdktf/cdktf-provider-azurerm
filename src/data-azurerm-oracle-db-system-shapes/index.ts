@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/data-sources/oracle_db_system_shapes
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/data-sources/oracle_db_system_shapes
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,26 +13,26 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermOracleDbSystemShapesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/data-sources/oracle_db_system_shapes#id DataAzurermOracleDbSystemShapes#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/data-sources/oracle_db_system_shapes#id DataAzurermOracleDbSystemShapes#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/data-sources/oracle_db_system_shapes#location DataAzurermOracleDbSystemShapes#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/data-sources/oracle_db_system_shapes#location DataAzurermOracleDbSystemShapes#location}
   */
   readonly location: string;
   /**
   * Filter the versions by zone
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/data-sources/oracle_db_system_shapes#zone DataAzurermOracleDbSystemShapes#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/data-sources/oracle_db_system_shapes#zone DataAzurermOracleDbSystemShapes#zone}
   */
   readonly zone?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/data-sources/oracle_db_system_shapes#timeouts DataAzurermOracleDbSystemShapes#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/data-sources/oracle_db_system_shapes#timeouts DataAzurermOracleDbSystemShapes#timeouts}
   */
   readonly timeouts?: DataAzurermOracleDbSystemShapesTimeouts;
 }
@@ -223,7 +223,7 @@ export class DataAzurermOracleDbSystemShapesDbSystemShapesList extends cdktf.Com
 }
 export interface DataAzurermOracleDbSystemShapesTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/data-sources/oracle_db_system_shapes#read DataAzurermOracleDbSystemShapes#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/data-sources/oracle_db_system_shapes#read DataAzurermOracleDbSystemShapes#read}
   */
   readonly read?: string;
 }
@@ -317,7 +317,7 @@ export class DataAzurermOracleDbSystemShapesTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/data-sources/oracle_db_system_shapes azurerm_oracle_db_system_shapes}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/data-sources/oracle_db_system_shapes azurerm_oracle_db_system_shapes}
 */
 export class DataAzurermOracleDbSystemShapes extends cdktf.TerraformDataSource {
 
@@ -333,7 +333,7 @@ export class DataAzurermOracleDbSystemShapes extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermOracleDbSystemShapes resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermOracleDbSystemShapes to import
-  * @param importFromId The id of the existing DataAzurermOracleDbSystemShapes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/data-sources/oracle_db_system_shapes#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermOracleDbSystemShapes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/data-sources/oracle_db_system_shapes#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermOracleDbSystemShapes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -345,7 +345,7 @@ export class DataAzurermOracleDbSystemShapes extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/data-sources/oracle_db_system_shapes azurerm_oracle_db_system_shapes} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/data-sources/oracle_db_system_shapes azurerm_oracle_db_system_shapes} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -356,7 +356,7 @@ export class DataAzurermOracleDbSystemShapes extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_oracle_db_system_shapes',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.42.0',
+        providerVersion: '4.43.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

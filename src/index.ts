@@ -713,6 +713,7 @@ export * as notificationHub from './notification-hub';
 export * as notificationHubAuthorizationRule from './notification-hub-authorization-rule';
 export * as notificationHubNamespace from './notification-hub-namespace';
 export * as oracleAutonomousDatabase from './oracle-autonomous-database';
+export * as oracleAutonomousDatabaseBackup from './oracle-autonomous-database-backup';
 export * as oracleCloudVmCluster from './oracle-cloud-vm-cluster';
 export * as oracleExadataInfrastructure from './oracle-exadata-infrastructure';
 export * as orbitalContact from './orbital-contact';
@@ -1373,6 +1374,8 @@ export * as dataAzurermNotificationHubNamespace from './data-azurerm-notificatio
 export * as dataAzurermOracleAdbsCharacterSets from './data-azurerm-oracle-adbs-character-sets';
 export * as dataAzurermOracleAdbsNationalCharacterSets from './data-azurerm-oracle-adbs-national-character-sets';
 export * as dataAzurermOracleAutonomousDatabase from './data-azurerm-oracle-autonomous-database';
+export * as dataAzurermOracleAutonomousDatabaseBackup from './data-azurerm-oracle-autonomous-database-backup';
+export * as dataAzurermOracleAutonomousDatabaseBackups from './data-azurerm-oracle-autonomous-database-backups';
 export * as dataAzurermOracleCloudVmCluster from './data-azurerm-oracle-cloud-vm-cluster';
 export * as dataAzurermOracleDbNodes from './data-azurerm-oracle-db-nodes';
 export * as dataAzurermOracleDbServers from './data-azurerm-oracle-db-servers';

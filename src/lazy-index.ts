@@ -713,6 +713,7 @@ Object.defineProperty(exports, 'notificationHub', { get: function () { return re
 Object.defineProperty(exports, 'notificationHubAuthorizationRule', { get: function () { return require('./notification-hub-authorization-rule'); } });
 Object.defineProperty(exports, 'notificationHubNamespace', { get: function () { return require('./notification-hub-namespace'); } });
 Object.defineProperty(exports, 'oracleAutonomousDatabase', { get: function () { return require('./oracle-autonomous-database'); } });
+Object.defineProperty(exports, 'oracleAutonomousDatabaseBackup', { get: function () { return require('./oracle-autonomous-database-backup'); } });
 Object.defineProperty(exports, 'oracleCloudVmCluster', { get: function () { return require('./oracle-cloud-vm-cluster'); } });
 Object.defineProperty(exports, 'oracleExadataInfrastructure', { get: function () { return require('./oracle-exadata-infrastructure'); } });
 Object.defineProperty(exports, 'orbitalContact', { get: function () { return require('./orbital-contact'); } });
@@ -1373,6 +1374,8 @@ Object.defineProperty(exports, 'dataAzurermNotificationHubNamespace', { get: fun
 Object.defineProperty(exports, 'dataAzurermOracleAdbsCharacterSets', { get: function () { return require('./data-azurerm-oracle-adbs-character-sets'); } });
 Object.defineProperty(exports, 'dataAzurermOracleAdbsNationalCharacterSets', { get: function () { return require('./data-azurerm-oracle-adbs-national-character-sets'); } });
 Object.defineProperty(exports, 'dataAzurermOracleAutonomousDatabase', { get: function () { return require('./data-azurerm-oracle-autonomous-database'); } });
+Object.defineProperty(exports, 'dataAzurermOracleAutonomousDatabaseBackup', { get: function () { return require('./data-azurerm-oracle-autonomous-database-backup'); } });
+Object.defineProperty(exports, 'dataAzurermOracleAutonomousDatabaseBackups', { get: function () { return require('./data-azurerm-oracle-autonomous-database-backups'); } });
 Object.defineProperty(exports, 'dataAzurermOracleCloudVmCluster', { get: function () { return require('./data-azurerm-oracle-cloud-vm-cluster'); } });
 Object.defineProperty(exports, 'dataAzurermOracleDbNodes', { get: function () { return require('./data-azurerm-oracle-db-nodes'); } });
 Object.defineProperty(exports, 'dataAzurermOracleDbServers', { get: function () { return require('./data-azurerm-oracle-db-servers'); } });
