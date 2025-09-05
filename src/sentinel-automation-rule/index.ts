@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,94 +13,100 @@ import * as cdktf from 'cdktf';
 
 export interface SentinelAutomationRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#condition_json SentinelAutomationRule#condition_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#condition_json SentinelAutomationRule#condition_json}
   */
   readonly conditionJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#display_name SentinelAutomationRule#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#display_name SentinelAutomationRule#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#enabled SentinelAutomationRule#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#enabled SentinelAutomationRule#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#expiration SentinelAutomationRule#expiration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#expiration SentinelAutomationRule#expiration}
   */
   readonly expiration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#id SentinelAutomationRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#id SentinelAutomationRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#log_analytics_workspace_id SentinelAutomationRule#log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#log_analytics_workspace_id SentinelAutomationRule#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#name SentinelAutomationRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#name SentinelAutomationRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#order SentinelAutomationRule#order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#order SentinelAutomationRule#order}
   */
   readonly order: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#triggers_on SentinelAutomationRule#triggers_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#triggers_on SentinelAutomationRule#triggers_on}
   */
   readonly triggersOn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#triggers_when SentinelAutomationRule#triggers_when}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#triggers_when SentinelAutomationRule#triggers_when}
   */
   readonly triggersWhen?: string;
   /**
   * action_incident block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#action_incident SentinelAutomationRule#action_incident}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#action_incident SentinelAutomationRule#action_incident}
   */
   readonly actionIncident?: SentinelAutomationRuleActionIncident[] | cdktf.IResolvable;
   /**
+  * action_incident_task block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#action_incident_task SentinelAutomationRule#action_incident_task}
+  */
+  readonly actionIncidentTask?: SentinelAutomationRuleActionIncidentTask[] | cdktf.IResolvable;
+  /**
   * action_playbook block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#action_playbook SentinelAutomationRule#action_playbook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#action_playbook SentinelAutomationRule#action_playbook}
   */
   readonly actionPlaybook?: SentinelAutomationRuleActionPlaybook[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#timeouts SentinelAutomationRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#timeouts SentinelAutomationRule#timeouts}
   */
   readonly timeouts?: SentinelAutomationRuleTimeouts;
 }
 export interface SentinelAutomationRuleActionIncident {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#classification SentinelAutomationRule#classification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#classification SentinelAutomationRule#classification}
   */
   readonly classification?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#classification_comment SentinelAutomationRule#classification_comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#classification_comment SentinelAutomationRule#classification_comment}
   */
   readonly classificationComment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#labels SentinelAutomationRule#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#labels SentinelAutomationRule#labels}
   */
   readonly labels?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#order SentinelAutomationRule#order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#order SentinelAutomationRule#order}
   */
   readonly order: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#owner_id SentinelAutomationRule#owner_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#owner_id SentinelAutomationRule#owner_id}
   */
   readonly ownerId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#severity SentinelAutomationRule#severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#severity SentinelAutomationRule#severity}
   */
   readonly severity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#status SentinelAutomationRule#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#status SentinelAutomationRule#status}
   */
   readonly status?: string;
 }
@@ -385,17 +391,193 @@ export class SentinelAutomationRuleActionIncidentList extends cdktf.ComplexList 
     return new SentinelAutomationRuleActionIncidentOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
-export interface SentinelAutomationRuleActionPlaybook {
+export interface SentinelAutomationRuleActionIncidentTask {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#logic_app_id SentinelAutomationRule#logic_app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#description SentinelAutomationRule#description}
   */
-  readonly logicAppId: string;
+  readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#order SentinelAutomationRule#order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#order SentinelAutomationRule#order}
   */
   readonly order: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#tenant_id SentinelAutomationRule#tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#title SentinelAutomationRule#title}
+  */
+  readonly title: string;
+}
+
+export function sentinelAutomationRuleActionIncidentTaskToTerraform(struct?: SentinelAutomationRuleActionIncidentTask | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    order: cdktf.numberToTerraform(struct!.order),
+    title: cdktf.stringToTerraform(struct!.title),
+  }
+}
+
+
+export function sentinelAutomationRuleActionIncidentTaskToHclTerraform(struct?: SentinelAutomationRuleActionIncidentTask | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    order: {
+      value: cdktf.numberToHclTerraform(struct!.order),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    title: {
+      value: cdktf.stringToHclTerraform(struct!.title),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class SentinelAutomationRuleActionIncidentTaskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SentinelAutomationRuleActionIncidentTask | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._order !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.order = this._order;
+    }
+    if (this._title !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.title = this._title;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SentinelAutomationRuleActionIncidentTask | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._order = undefined;
+      this._title = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._order = value.order;
+      this._title = value.title;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // order - computed: false, optional: false, required: true
+  private _order?: number; 
+  public get order() {
+    return this.getNumberAttribute('order');
+  }
+  public set order(value: number) {
+    this._order = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get orderInput() {
+    return this._order;
+  }
+
+  // title - computed: false, optional: false, required: true
+  private _title?: string; 
+  public get title() {
+    return this.getStringAttribute('title');
+  }
+  public set title(value: string) {
+    this._title = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title;
+  }
+}
+
+export class SentinelAutomationRuleActionIncidentTaskList extends cdktf.ComplexList {
+  public internalValue? : SentinelAutomationRuleActionIncidentTask[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SentinelAutomationRuleActionIncidentTaskOutputReference {
+    return new SentinelAutomationRuleActionIncidentTaskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SentinelAutomationRuleActionPlaybook {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#logic_app_id SentinelAutomationRule#logic_app_id}
+  */
+  readonly logicAppId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#order SentinelAutomationRule#order}
+  */
+  readonly order: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#tenant_id SentinelAutomationRule#tenant_id}
   */
   readonly tenantId?: string;
 }
@@ -563,19 +745,19 @@ export class SentinelAutomationRuleActionPlaybookList extends cdktf.ComplexList 
 }
 export interface SentinelAutomationRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#create SentinelAutomationRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#create SentinelAutomationRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#delete SentinelAutomationRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#delete SentinelAutomationRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#read SentinelAutomationRule#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#read SentinelAutomationRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#update SentinelAutomationRule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#update SentinelAutomationRule#update}
   */
   readonly update?: string;
 }
@@ -756,7 +938,7 @@ export class SentinelAutomationRuleTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule azurerm_sentinel_automation_rule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule azurerm_sentinel_automation_rule}
 */
 export class SentinelAutomationRule extends cdktf.TerraformResource {
 
@@ -772,7 +954,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SentinelAutomationRule resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SentinelAutomationRule to import
-  * @param importFromId The id of the existing SentinelAutomationRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SentinelAutomationRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SentinelAutomationRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -784,7 +966,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.42.0/docs/resources/sentinel_automation_rule azurerm_sentinel_automation_rule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/sentinel_automation_rule azurerm_sentinel_automation_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -795,7 +977,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sentinel_automation_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.42.0',
+        providerVersion: '4.43.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -817,6 +999,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
     this._triggersOn = config.triggersOn;
     this._triggersWhen = config.triggersWhen;
     this._actionIncident.internalValue = config.actionIncident;
+    this._actionIncidentTask.internalValue = config.actionIncidentTask;
     this._actionPlaybook.internalValue = config.actionPlaybook;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -989,6 +1172,22 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
     return this._actionIncident.internalValue;
   }
 
+  // action_incident_task - computed: false, optional: true, required: false
+  private _actionIncidentTask = new SentinelAutomationRuleActionIncidentTaskList(this, "action_incident_task", false);
+  public get actionIncidentTask() {
+    return this._actionIncidentTask;
+  }
+  public putActionIncidentTask(value: SentinelAutomationRuleActionIncidentTask[] | cdktf.IResolvable) {
+    this._actionIncidentTask.internalValue = value;
+  }
+  public resetActionIncidentTask() {
+    this._actionIncidentTask.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionIncidentTaskInput() {
+    return this._actionIncidentTask.internalValue;
+  }
+
   // action_playbook - computed: false, optional: true, required: false
   private _actionPlaybook = new SentinelAutomationRuleActionPlaybookList(this, "action_playbook", false);
   public get actionPlaybook() {
@@ -1038,6 +1237,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
       triggers_on: cdktf.stringToTerraform(this._triggersOn),
       triggers_when: cdktf.stringToTerraform(this._triggersWhen),
       action_incident: cdktf.listMapper(sentinelAutomationRuleActionIncidentToTerraform, true)(this._actionIncident.internalValue),
+      action_incident_task: cdktf.listMapper(sentinelAutomationRuleActionIncidentTaskToTerraform, true)(this._actionIncidentTask.internalValue),
       action_playbook: cdktf.listMapper(sentinelAutomationRuleActionPlaybookToTerraform, true)(this._actionPlaybook.internalValue),
       timeouts: sentinelAutomationRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -1110,6 +1310,12 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "SentinelAutomationRuleActionIncidentList",
+      },
+      action_incident_task: {
+        value: cdktf.listMapperHcl(sentinelAutomationRuleActionIncidentTaskToHclTerraform, true)(this._actionIncidentTask.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelAutomationRuleActionIncidentTaskList",
       },
       action_playbook: {
         value: cdktf.listMapperHcl(sentinelAutomationRuleActionPlaybookToHclTerraform, true)(this._actionPlaybook.internalValue),
