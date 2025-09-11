@@ -4,7 +4,7 @@
 
 ### MachineLearningWorkspaceNetworkOutboundRuleServiceTag <a name="MachineLearningWorkspaceNetworkOutboundRuleServiceTag" id="@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag azurerm_machine_learning_workspace_network_outbound_rule_service_tag}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag azurerm_machine_learning_workspace_network_outbound_rule_service_tag}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer"></a>
 
@@ -42,12 +42,12 @@ machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNe
 | <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#name MachineLearningWorkspaceNetworkOutboundRuleServiceTag#name}. |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.portRanges">port_ranges</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#port_ranges MachineLearningWorkspaceNetworkOutboundRuleServiceTag#port_ranges}. |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.protocol">protocol</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#protocol MachineLearningWorkspaceNetworkOutboundRuleServiceTag#protocol}. |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.serviceTag">service_tag</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#service_tag MachineLearningWorkspaceNetworkOutboundRuleServiceTag#service_tag}. |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.workspaceId">workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#workspace_id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#id}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#name MachineLearningWorkspaceNetworkOutboundRuleServiceTag#name}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.portRanges">port_ranges</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#port_ranges MachineLearningWorkspaceNetworkOutboundRuleServiceTag#port_ranges}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.protocol">protocol</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#protocol MachineLearningWorkspaceNetworkOutboundRuleServiceTag#protocol}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.serviceTag">service_tag</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#service_tag MachineLearningWorkspaceNetworkOutboundRuleServiceTag#service_tag}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.workspaceId">workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#workspace_id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#id}. |
 | <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTag.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagTimeouts">MachineLearningWorkspaceNetworkOutboundRuleServiceTagTimeouts</a></code> | timeouts block. |
 
 ---
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#name MachineLearningWorkspaceNetworkOutboundRuleServiceTag#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#name MachineLearningWorkspaceNetworkOutboundRuleServiceTag#name}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#port_ranges MachineLearningWorkspaceNetworkOutboundRuleServiceTag#port_ranges}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#port_ranges MachineLearningWorkspaceNetworkOutboundRuleServiceTag#port_ranges}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#protocol MachineLearningWorkspaceNetworkOutboundRuleServiceTag#protocol}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#protocol MachineLearningWorkspaceNetworkOutboundRuleServiceTag#protocol}.
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#service_tag MachineLearningWorkspaceNetworkOutboundRuleServiceTag#service_tag}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#service_tag MachineLearningWorkspaceNetworkOutboundRuleServiceTag#service_tag}.
 
 ---
 
@@ -148,7 +148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#workspace_id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#workspace_id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#workspace_id}.
 
 ---
 
@@ -156,7 +156,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -169,7 +169,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#timeouts MachineLearningWorkspaceNetworkOutboundRuleServiceTag#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#timeouts MachineLearningWorkspaceNetworkOutboundRuleServiceTag#timeouts}
 
 ---
 
@@ -546,7 +546,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#create MachineLearningWorkspaceNetworkOutboundRuleServiceTag#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#create MachineLearningWorkspaceNetworkOutboundRuleServiceTag#create}.
 
 ---
 
@@ -554,7 +554,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#delete MachineLearningWorkspaceNetworkOutboundRuleServiceTag#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#delete MachineLearningWorkspaceNetworkOutboundRuleServiceTag#delete}.
 
 ---
 
@@ -562,7 +562,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#read MachineLearningWorkspaceNetworkOutboundRuleServiceTag#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#read MachineLearningWorkspaceNetworkOutboundRuleServiceTag#read}.
 
 ---
 
@@ -570,7 +570,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#update MachineLearningWorkspaceNetworkOutboundRuleServiceTag#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#update MachineLearningWorkspaceNetworkOutboundRuleServiceTag#update}.
 
 ---
 
@@ -700,7 +700,7 @@ The construct id used in the generated config for the MachineLearningWorkspaceNe
 
 The id of the existing MachineLearningWorkspaceNetworkOutboundRuleServiceTag that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1085,12 +1085,12 @@ machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNe
 | <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#name MachineLearningWorkspaceNetworkOutboundRuleServiceTag#name}. |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.portRanges">port_ranges</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#port_ranges MachineLearningWorkspaceNetworkOutboundRuleServiceTag#port_ranges}. |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.protocol">protocol</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#protocol MachineLearningWorkspaceNetworkOutboundRuleServiceTag#protocol}. |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.serviceTag">service_tag</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#service_tag MachineLearningWorkspaceNetworkOutboundRuleServiceTag#service_tag}. |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.workspaceId">workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#workspace_id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#id}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#name MachineLearningWorkspaceNetworkOutboundRuleServiceTag#name}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.portRanges">port_ranges</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#port_ranges MachineLearningWorkspaceNetworkOutboundRuleServiceTag#port_ranges}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.protocol">protocol</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#protocol MachineLearningWorkspaceNetworkOutboundRuleServiceTag#protocol}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.serviceTag">service_tag</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#service_tag MachineLearningWorkspaceNetworkOutboundRuleServiceTag#service_tag}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.workspaceId">workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#workspace_id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#id}. |
 | <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagTimeouts">MachineLearningWorkspaceNetworkOutboundRuleServiceTagTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1173,7 +1173,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#name MachineLearningWorkspaceNetworkOutboundRuleServiceTag#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#name MachineLearningWorkspaceNetworkOutboundRuleServiceTag#name}.
 
 ---
 
@@ -1185,7 +1185,7 @@ port_ranges: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#port_ranges MachineLearningWorkspaceNetworkOutboundRuleServiceTag#port_ranges}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#port_ranges MachineLearningWorkspaceNetworkOutboundRuleServiceTag#port_ranges}.
 
 ---
 
@@ -1197,7 +1197,7 @@ protocol: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#protocol MachineLearningWorkspaceNetworkOutboundRuleServiceTag#protocol}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#protocol MachineLearningWorkspaceNetworkOutboundRuleServiceTag#protocol}.
 
 ---
 
@@ -1209,7 +1209,7 @@ service_tag: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#service_tag MachineLearningWorkspaceNetworkOutboundRuleServiceTag#service_tag}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#service_tag MachineLearningWorkspaceNetworkOutboundRuleServiceTag#service_tag}.
 
 ---
 
@@ -1221,7 +1221,7 @@ workspace_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#workspace_id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#workspace_id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#workspace_id}.
 
 ---
 
@@ -1233,7 +1233,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#id MachineLearningWorkspaceNetworkOutboundRuleServiceTag#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1250,7 +1250,7 @@ timeouts: MachineLearningWorkspaceNetworkOutboundRuleServiceTagTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#timeouts MachineLearningWorkspaceNetworkOutboundRuleServiceTag#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#timeouts MachineLearningWorkspaceNetworkOutboundRuleServiceTag#timeouts}
 
 ---
 
@@ -1273,10 +1273,10 @@ machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNe
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#create MachineLearningWorkspaceNetworkOutboundRuleServiceTag#create}. |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#delete MachineLearningWorkspaceNetworkOutboundRuleServiceTag#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#read MachineLearningWorkspaceNetworkOutboundRuleServiceTag#read}. |
-| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#update MachineLearningWorkspaceNetworkOutboundRuleServiceTag#update}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#create MachineLearningWorkspaceNetworkOutboundRuleServiceTag#create}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#delete MachineLearningWorkspaceNetworkOutboundRuleServiceTag#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#read MachineLearningWorkspaceNetworkOutboundRuleServiceTag#read}. |
+| <code><a href="#@cdktf/provider-azurerm.machineLearningWorkspaceNetworkOutboundRuleServiceTag.MachineLearningWorkspaceNetworkOutboundRuleServiceTagTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#update MachineLearningWorkspaceNetworkOutboundRuleServiceTag#update}. |
 
 ---
 
@@ -1288,7 +1288,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#create MachineLearningWorkspaceNetworkOutboundRuleServiceTag#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#create MachineLearningWorkspaceNetworkOutboundRuleServiceTag#create}.
 
 ---
 
@@ -1300,7 +1300,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#delete MachineLearningWorkspaceNetworkOutboundRuleServiceTag#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#delete MachineLearningWorkspaceNetworkOutboundRuleServiceTag#delete}.
 
 ---
 
@@ -1312,7 +1312,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#read MachineLearningWorkspaceNetworkOutboundRuleServiceTag#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#read MachineLearningWorkspaceNetworkOutboundRuleServiceTag#read}.
 
 ---
 
@@ -1324,7 +1324,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#update MachineLearningWorkspaceNetworkOutboundRuleServiceTag#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/machine_learning_workspace_network_outbound_rule_service_tag#update MachineLearningWorkspaceNetworkOutboundRuleServiceTag#update}.
 
 ---
 
