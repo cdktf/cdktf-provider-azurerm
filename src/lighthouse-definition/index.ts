@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,72 +13,72 @@ import * as cdktf from 'cdktf';
 
 export interface LighthouseDefinitionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#description LighthouseDefinition#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#description LighthouseDefinition#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#id LighthouseDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#id LighthouseDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#lighthouse_definition_id LighthouseDefinition#lighthouse_definition_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#lighthouse_definition_id LighthouseDefinition#lighthouse_definition_id}
   */
   readonly lighthouseDefinitionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#managing_tenant_id LighthouseDefinition#managing_tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#managing_tenant_id LighthouseDefinition#managing_tenant_id}
   */
   readonly managingTenantId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#name LighthouseDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#name LighthouseDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#scope LighthouseDefinition#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#scope LighthouseDefinition#scope}
   */
   readonly scope: string;
   /**
   * authorization block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#authorization LighthouseDefinition#authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#authorization LighthouseDefinition#authorization}
   */
   readonly authorization: LighthouseDefinitionAuthorization[] | cdktf.IResolvable;
   /**
   * eligible_authorization block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#eligible_authorization LighthouseDefinition#eligible_authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#eligible_authorization LighthouseDefinition#eligible_authorization}
   */
   readonly eligibleAuthorization?: LighthouseDefinitionEligibleAuthorization[] | cdktf.IResolvable;
   /**
   * plan block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#plan LighthouseDefinition#plan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#plan LighthouseDefinition#plan}
   */
   readonly plan?: LighthouseDefinitionPlan;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#timeouts LighthouseDefinition#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#timeouts LighthouseDefinition#timeouts}
   */
   readonly timeouts?: LighthouseDefinitionTimeouts;
 }
 export interface LighthouseDefinitionAuthorization {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#delegated_role_definition_ids LighthouseDefinition#delegated_role_definition_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#delegated_role_definition_ids LighthouseDefinition#delegated_role_definition_ids}
   */
   readonly delegatedRoleDefinitionIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#principal_display_name LighthouseDefinition#principal_display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#principal_display_name LighthouseDefinition#principal_display_name}
   */
   readonly principalDisplayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#principal_id LighthouseDefinition#principal_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#principal_id LighthouseDefinition#principal_id}
   */
   readonly principalId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#role_definition_id LighthouseDefinition#role_definition_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#role_definition_id LighthouseDefinition#role_definition_id}
   */
   readonly roleDefinitionId: string;
 }
@@ -275,11 +275,11 @@ export class LighthouseDefinitionAuthorizationList extends cdktf.ComplexList {
 }
 export interface LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#principal_display_name LighthouseDefinition#principal_display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#principal_display_name LighthouseDefinition#principal_display_name}
   */
   readonly principalDisplayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#principal_id LighthouseDefinition#principal_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#principal_id LighthouseDefinition#principal_id}
   */
   readonly principalId: string;
 }
@@ -421,17 +421,17 @@ export class LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyAppr
 }
 export interface LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#maximum_activation_duration LighthouseDefinition#maximum_activation_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#maximum_activation_duration LighthouseDefinition#maximum_activation_duration}
   */
   readonly maximumActivationDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#multi_factor_auth_provider LighthouseDefinition#multi_factor_auth_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#multi_factor_auth_provider LighthouseDefinition#multi_factor_auth_provider}
   */
   readonly multiFactorAuthProvider?: string;
   /**
   * approver block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#approver LighthouseDefinition#approver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#approver LighthouseDefinition#approver}
   */
   readonly approver?: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover[] | cdktf.IResolvable;
 }
@@ -573,21 +573,21 @@ export class LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyOutp
 }
 export interface LighthouseDefinitionEligibleAuthorization {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#principal_display_name LighthouseDefinition#principal_display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#principal_display_name LighthouseDefinition#principal_display_name}
   */
   readonly principalDisplayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#principal_id LighthouseDefinition#principal_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#principal_id LighthouseDefinition#principal_id}
   */
   readonly principalId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#role_definition_id LighthouseDefinition#role_definition_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#role_definition_id LighthouseDefinition#role_definition_id}
   */
   readonly roleDefinitionId: string;
   /**
   * just_in_time_access_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#just_in_time_access_policy LighthouseDefinition#just_in_time_access_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#just_in_time_access_policy LighthouseDefinition#just_in_time_access_policy}
   */
   readonly justInTimeAccessPolicy?: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy;
 }
@@ -784,19 +784,19 @@ export class LighthouseDefinitionEligibleAuthorizationList extends cdktf.Complex
 }
 export interface LighthouseDefinitionPlan {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#name LighthouseDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#name LighthouseDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#product LighthouseDefinition#product}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#product LighthouseDefinition#product}
   */
   readonly product: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#publisher LighthouseDefinition#publisher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#publisher LighthouseDefinition#publisher}
   */
   readonly publisher: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#version LighthouseDefinition#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#version LighthouseDefinition#version}
   */
   readonly version: string;
 }
@@ -955,19 +955,19 @@ export class LighthouseDefinitionPlanOutputReference extends cdktf.ComplexObject
 }
 export interface LighthouseDefinitionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#create LighthouseDefinition#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#create LighthouseDefinition#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#delete LighthouseDefinition#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#delete LighthouseDefinition#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#read LighthouseDefinition#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#read LighthouseDefinition#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#update LighthouseDefinition#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#update LighthouseDefinition#update}
   */
   readonly update?: string;
 }
@@ -1148,7 +1148,7 @@ export class LighthouseDefinitionTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition azurerm_lighthouse_definition}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition azurerm_lighthouse_definition}
 */
 export class LighthouseDefinition extends cdktf.TerraformResource {
 
@@ -1164,7 +1164,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a LighthouseDefinition resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the LighthouseDefinition to import
-  * @param importFromId The id of the existing LighthouseDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing LighthouseDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the LighthouseDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1176,7 +1176,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/lighthouse_definition azurerm_lighthouse_definition} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/lighthouse_definition azurerm_lighthouse_definition} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1187,7 +1187,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lighthouse_definition',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
