@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +13,54 @@ import * as cdktf from 'cdktf';
 
 export interface ContainerRegistryTokenConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token#container_registry_name ContainerRegistryToken#container_registry_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token#container_registry_name ContainerRegistryToken#container_registry_name}
   */
   readonly containerRegistryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token#enabled ContainerRegistryToken#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token#enabled ContainerRegistryToken#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token#id ContainerRegistryToken#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token#id ContainerRegistryToken#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token#name ContainerRegistryToken#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token#name ContainerRegistryToken#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token#resource_group_name ContainerRegistryToken#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token#resource_group_name ContainerRegistryToken#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token#scope_map_id ContainerRegistryToken#scope_map_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token#scope_map_id ContainerRegistryToken#scope_map_id}
   */
   readonly scopeMapId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token#timeouts ContainerRegistryToken#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token#timeouts ContainerRegistryToken#timeouts}
   */
   readonly timeouts?: ContainerRegistryTokenTimeouts;
 }
 export interface ContainerRegistryTokenTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token#create ContainerRegistryToken#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token#create ContainerRegistryToken#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token#delete ContainerRegistryToken#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token#delete ContainerRegistryToken#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token#read ContainerRegistryToken#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token#read ContainerRegistryToken#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token#update ContainerRegistryToken#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token#update ContainerRegistryToken#update}
   */
   readonly update?: string;
 }
@@ -241,7 +241,7 @@ export class ContainerRegistryTokenTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token azurerm_container_registry_token}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token azurerm_container_registry_token}
 */
 export class ContainerRegistryToken extends cdktf.TerraformResource {
 
@@ -257,7 +257,7 @@ export class ContainerRegistryToken extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ContainerRegistryToken resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerRegistryToken to import
-  * @param importFromId The id of the existing ContainerRegistryToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerRegistryToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerRegistryToken to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -269,7 +269,7 @@ export class ContainerRegistryToken extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.43.0/docs/resources/container_registry_token azurerm_container_registry_token} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/container_registry_token azurerm_container_registry_token} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -280,7 +280,7 @@ export class ContainerRegistryToken extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_registry_token',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
