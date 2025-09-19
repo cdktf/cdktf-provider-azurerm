@@ -4,7 +4,7 @@
 
 ### IothubEnrichmentA <a name="IothubEnrichmentA" id="@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentA"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment azurerm_iothub_enrichment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment azurerm_iothub_enrichment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentA.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the IothubEnrichmentA to impor
 
 The id of the existing IothubEnrichmentA that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -864,12 +864,12 @@ const iothubEnrichmentAConfig: iothubEnrichment.IothubEnrichmentAConfig = { ... 
 | <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.endpointNames">endpointNames</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#endpoint_names IothubEnrichmentA#endpoint_names}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.iothubName">iothubName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#iothub_name IothubEnrichmentA#iothub_name}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.key">key</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#key IothubEnrichmentA#key}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#resource_group_name IothubEnrichmentA#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.value">value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#value IothubEnrichmentA#value}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#id IothubEnrichmentA#id}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.endpointNames">endpointNames</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#endpoint_names IothubEnrichmentA#endpoint_names}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.iothubName">iothubName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#iothub_name IothubEnrichmentA#iothub_name}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.key">key</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#key IothubEnrichmentA#key}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#resource_group_name IothubEnrichmentA#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.value">value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#value IothubEnrichmentA#value}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#id IothubEnrichmentA#id}. |
 | <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentAConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentTimeouts">IothubEnrichmentTimeouts</a></code> | timeouts block. |
 
 ---
@@ -952,7 +952,7 @@ public readonly endpointNames: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#endpoint_names IothubEnrichmentA#endpoint_names}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#endpoint_names IothubEnrichmentA#endpoint_names}.
 
 ---
 
@@ -964,7 +964,7 @@ public readonly iothubName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#iothub_name IothubEnrichmentA#iothub_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#iothub_name IothubEnrichmentA#iothub_name}.
 
 ---
 
@@ -976,7 +976,7 @@ public readonly key: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#key IothubEnrichmentA#key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#key IothubEnrichmentA#key}.
 
 ---
 
@@ -988,7 +988,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#resource_group_name IothubEnrichmentA#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#resource_group_name IothubEnrichmentA#resource_group_name}.
 
 ---
 
@@ -1000,7 +1000,7 @@ public readonly value: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#value IothubEnrichmentA#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#value IothubEnrichmentA#value}.
 
 ---
 
@@ -1012,7 +1012,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#id IothubEnrichmentA#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#id IothubEnrichmentA#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1029,7 +1029,7 @@ public readonly timeouts: IothubEnrichmentTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#timeouts IothubEnrichmentA#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#timeouts IothubEnrichmentA#timeouts}
 
 ---
 
@@ -1047,10 +1047,10 @@ const iothubEnrichmentTimeouts: iothubEnrichment.IothubEnrichmentTimeouts = { ..
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#create IothubEnrichmentA#create}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#delete IothubEnrichmentA#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#read IothubEnrichmentA#read}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#update IothubEnrichmentA#update}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#create IothubEnrichmentA#create}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#delete IothubEnrichmentA#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#read IothubEnrichmentA#read}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEnrichment.IothubEnrichmentTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#update IothubEnrichmentA#update}. |
 
 ---
 
@@ -1062,7 +1062,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#create IothubEnrichmentA#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#create IothubEnrichmentA#create}.
 
 ---
 
@@ -1074,7 +1074,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#delete IothubEnrichmentA#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#delete IothubEnrichmentA#delete}.
 
 ---
 
@@ -1086,7 +1086,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#read IothubEnrichmentA#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#read IothubEnrichmentA#read}.
 
 ---
 
@@ -1098,7 +1098,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/iothub_enrichment#update IothubEnrichmentA#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/iothub_enrichment#update IothubEnrichmentA#update}.
 
 ---
 

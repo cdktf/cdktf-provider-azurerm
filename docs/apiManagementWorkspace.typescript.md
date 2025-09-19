@@ -4,7 +4,7 @@
 
 ### ApiManagementWorkspace <a name="ApiManagementWorkspace" id="@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspace"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace azurerm_api_management_workspace}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace azurerm_api_management_workspace}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspace.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the ApiManagementWorkspace to 
 
 The id of the existing ApiManagementWorkspace that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -849,11 +849,11 @@ const apiManagementWorkspaceConfig: apiManagementWorkspace.ApiManagementWorkspac
 | <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.apiManagementId">apiManagementId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#api_management_id ApiManagementWorkspace#api_management_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.displayName">displayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#display_name ApiManagementWorkspace#display_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#name ApiManagementWorkspace#name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#description ApiManagementWorkspace#description}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#id ApiManagementWorkspace#id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.apiManagementId">apiManagementId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#api_management_id ApiManagementWorkspace#api_management_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.displayName">displayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#display_name ApiManagementWorkspace#display_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#name ApiManagementWorkspace#name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#description ApiManagementWorkspace#description}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#id ApiManagementWorkspace#id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceTimeouts">ApiManagementWorkspaceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -936,7 +936,7 @@ public readonly apiManagementId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#api_management_id ApiManagementWorkspace#api_management_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#api_management_id ApiManagementWorkspace#api_management_id}.
 
 ---
 
@@ -948,7 +948,7 @@ public readonly displayName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#display_name ApiManagementWorkspace#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#display_name ApiManagementWorkspace#display_name}.
 
 ---
 
@@ -960,7 +960,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#name ApiManagementWorkspace#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#name ApiManagementWorkspace#name}.
 
 ---
 
@@ -972,7 +972,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#description ApiManagementWorkspace#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#description ApiManagementWorkspace#description}.
 
 ---
 
@@ -984,7 +984,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#id ApiManagementWorkspace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#id ApiManagementWorkspace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1001,7 +1001,7 @@ public readonly timeouts: ApiManagementWorkspaceTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#timeouts ApiManagementWorkspace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#timeouts ApiManagementWorkspace#timeouts}
 
 ---
 
@@ -1019,10 +1019,10 @@ const apiManagementWorkspaceTimeouts: apiManagementWorkspace.ApiManagementWorksp
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#create ApiManagementWorkspace#create}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#delete ApiManagementWorkspace#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#read ApiManagementWorkspace#read}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#update ApiManagementWorkspace#update}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#create ApiManagementWorkspace#create}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#delete ApiManagementWorkspace#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#read ApiManagementWorkspace#read}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementWorkspace.ApiManagementWorkspaceTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#update ApiManagementWorkspace#update}. |
 
 ---
 
@@ -1034,7 +1034,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#create ApiManagementWorkspace#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#create ApiManagementWorkspace#create}.
 
 ---
 
@@ -1046,7 +1046,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#delete ApiManagementWorkspace#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#delete ApiManagementWorkspace#delete}.
 
 ---
 
@@ -1058,7 +1058,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#read ApiManagementWorkspace#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#read ApiManagementWorkspace#read}.
 
 ---
 
@@ -1070,7 +1070,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/api_management_workspace#update ApiManagementWorkspace#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_workspace#update ApiManagementWorkspace#update}.
 
 ---
 
