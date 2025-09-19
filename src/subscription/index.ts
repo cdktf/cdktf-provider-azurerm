@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,15 +15,15 @@ export interface SubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
   * The Alias Name of the subscription. If omitted a new UUID will be generated for this property.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription#alias Subscription#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription#alias Subscription#alias}
   */
   readonly alias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription#billing_scope_id Subscription#billing_scope_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription#billing_scope_id Subscription#billing_scope_id}
   */
   readonly billingScopeId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription#id Subscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription#id Subscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,47 +32,47 @@ export interface SubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
   * The GUID of the Subscription.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription#subscription_id Subscription#subscription_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription#subscription_id Subscription#subscription_id}
   */
   readonly subscriptionId?: string;
   /**
   * The Display Name for the Subscription.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription#subscription_name Subscription#subscription_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription#subscription_name Subscription#subscription_name}
   */
   readonly subscriptionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription#tags Subscription#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription#tags Subscription#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * The workload type for the Subscription. Possible values are `Production` (default) and `DevTest`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription#workload Subscription#workload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription#workload Subscription#workload}
   */
   readonly workload?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription#timeouts Subscription#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription#timeouts Subscription#timeouts}
   */
   readonly timeouts?: SubscriptionTimeouts;
 }
 export interface SubscriptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription#create Subscription#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription#create Subscription#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription#delete Subscription#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription#delete Subscription#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription#read Subscription#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription#read Subscription#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription#update Subscription#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription#update Subscription#update}
   */
   readonly update?: string;
 }
@@ -253,7 +253,7 @@ export class SubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription azurerm_subscription}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription azurerm_subscription}
 */
 export class Subscription extends cdktf.TerraformResource {
 
@@ -269,7 +269,7 @@ export class Subscription extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a Subscription resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Subscription to import
-  * @param importFromId The id of the existing Subscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Subscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Subscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -281,7 +281,7 @@ export class Subscription extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.44.0/docs/resources/subscription azurerm_subscription} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/subscription azurerm_subscription} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -292,7 +292,7 @@ export class Subscription extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_subscription',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.44.0',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
