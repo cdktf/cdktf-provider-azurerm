@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,88 +13,88 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementApiOperationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#api_management_name ApiManagementApiOperation#api_management_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#api_management_name ApiManagementApiOperation#api_management_name}
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#api_name ApiManagementApiOperation#api_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#api_name ApiManagementApiOperation#api_name}
   */
   readonly apiName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#display_name ApiManagementApiOperation#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#display_name ApiManagementApiOperation#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#id ApiManagementApiOperation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#id ApiManagementApiOperation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#method ApiManagementApiOperation#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#method ApiManagementApiOperation#method}
   */
   readonly method: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#operation_id ApiManagementApiOperation#operation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#operation_id ApiManagementApiOperation#operation_id}
   */
   readonly operationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#resource_group_name ApiManagementApiOperation#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#resource_group_name ApiManagementApiOperation#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#url_template ApiManagementApiOperation#url_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#url_template ApiManagementApiOperation#url_template}
   */
   readonly urlTemplate: string;
   /**
   * request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#request ApiManagementApiOperation#request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#request ApiManagementApiOperation#request}
   */
   readonly request?: ApiManagementApiOperationRequest;
   /**
   * response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#response ApiManagementApiOperation#response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#response ApiManagementApiOperation#response}
   */
   readonly response?: ApiManagementApiOperationResponse[] | cdktf.IResolvable;
   /**
   * template_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#template_parameter ApiManagementApiOperation#template_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#template_parameter ApiManagementApiOperation#template_parameter}
   */
   readonly templateParameter?: ApiManagementApiOperationTemplateParameter[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#timeouts ApiManagementApiOperation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#timeouts ApiManagementApiOperation#timeouts}
   */
   readonly timeouts?: ApiManagementApiOperationTimeouts;
 }
 export interface ApiManagementApiOperationRequestHeaderExample {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
   */
   readonly externalValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
   */
   readonly summary?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
   */
   readonly value?: string;
 }
@@ -323,41 +323,41 @@ export class ApiManagementApiOperationRequestHeaderExampleList extends cdktf.Com
 }
 export interface ApiManagementApiOperationRequestHeader {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
   */
   readonly defaultValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#required ApiManagementApiOperation#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#required ApiManagementApiOperation#required}
   */
   readonly required: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
   */
   readonly schemaId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type ApiManagementApiOperation#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type ApiManagementApiOperation#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
   */
   readonly typeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#values ApiManagementApiOperation#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#values ApiManagementApiOperation#values}
   */
   readonly values?: string[];
   /**
   * example block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationRequestHeaderExample[] | cdktf.IResolvable;
 }
@@ -696,23 +696,23 @@ export class ApiManagementApiOperationRequestHeaderList extends cdktf.ComplexLis
 }
 export interface ApiManagementApiOperationRequestQueryParameterExample {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
   */
   readonly externalValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
   */
   readonly summary?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
   */
   readonly value?: string;
 }
@@ -941,41 +941,41 @@ export class ApiManagementApiOperationRequestQueryParameterExampleList extends c
 }
 export interface ApiManagementApiOperationRequestQueryParameter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
   */
   readonly defaultValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#required ApiManagementApiOperation#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#required ApiManagementApiOperation#required}
   */
   readonly required: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
   */
   readonly schemaId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type ApiManagementApiOperation#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type ApiManagementApiOperation#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
   */
   readonly typeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#values ApiManagementApiOperation#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#values ApiManagementApiOperation#values}
   */
   readonly values?: string[];
   /**
   * example block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationRequestQueryParameterExample[] | cdktf.IResolvable;
 }
@@ -1314,23 +1314,23 @@ export class ApiManagementApiOperationRequestQueryParameterList extends cdktf.Co
 }
 export interface ApiManagementApiOperationRequestRepresentationExample {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
   */
   readonly externalValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
   */
   readonly summary?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
   */
   readonly value?: string;
 }
@@ -1559,23 +1559,23 @@ export class ApiManagementApiOperationRequestRepresentationExampleList extends c
 }
 export interface ApiManagementApiOperationRequestRepresentationFormParameterExample {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
   */
   readonly externalValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
   */
   readonly summary?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
   */
   readonly value?: string;
 }
@@ -1804,41 +1804,41 @@ export class ApiManagementApiOperationRequestRepresentationFormParameterExampleL
 }
 export interface ApiManagementApiOperationRequestRepresentationFormParameter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
   */
   readonly defaultValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#required ApiManagementApiOperation#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#required ApiManagementApiOperation#required}
   */
   readonly required: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
   */
   readonly schemaId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type ApiManagementApiOperation#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type ApiManagementApiOperation#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
   */
   readonly typeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#values ApiManagementApiOperation#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#values ApiManagementApiOperation#values}
   */
   readonly values?: string[];
   /**
   * example block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationRequestRepresentationFormParameterExample[] | cdktf.IResolvable;
 }
@@ -2177,27 +2177,27 @@ export class ApiManagementApiOperationRequestRepresentationFormParameterList ext
 }
 export interface ApiManagementApiOperationRequestRepresentation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#content_type ApiManagementApiOperation#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#content_type ApiManagementApiOperation#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
   */
   readonly schemaId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
   */
   readonly typeName?: string;
   /**
   * example block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationRequestRepresentationExample[] | cdktf.IResolvable;
   /**
   * form_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#form_parameter ApiManagementApiOperation#form_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#form_parameter ApiManagementApiOperation#form_parameter}
   */
   readonly formParameter?: ApiManagementApiOperationRequestRepresentationFormParameter[] | cdktf.IResolvable;
 }
@@ -2426,25 +2426,25 @@ export class ApiManagementApiOperationRequestRepresentationList extends cdktf.Co
 }
 export interface ApiManagementApiOperationRequest {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
   * header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#header ApiManagementApiOperation#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#header ApiManagementApiOperation#header}
   */
   readonly header?: ApiManagementApiOperationRequestHeader[] | cdktf.IResolvable;
   /**
   * query_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#query_parameter ApiManagementApiOperation#query_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#query_parameter ApiManagementApiOperation#query_parameter}
   */
   readonly queryParameter?: ApiManagementApiOperationRequestQueryParameter[] | cdktf.IResolvable;
   /**
   * representation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#representation ApiManagementApiOperation#representation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#representation ApiManagementApiOperation#representation}
   */
   readonly representation?: ApiManagementApiOperationRequestRepresentation[] | cdktf.IResolvable;
 }
@@ -2615,23 +2615,23 @@ export class ApiManagementApiOperationRequestOutputReference extends cdktf.Compl
 }
 export interface ApiManagementApiOperationResponseHeaderExample {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
   */
   readonly externalValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
   */
   readonly summary?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
   */
   readonly value?: string;
 }
@@ -2860,41 +2860,41 @@ export class ApiManagementApiOperationResponseHeaderExampleList extends cdktf.Co
 }
 export interface ApiManagementApiOperationResponseHeader {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
   */
   readonly defaultValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#required ApiManagementApiOperation#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#required ApiManagementApiOperation#required}
   */
   readonly required: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
   */
   readonly schemaId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type ApiManagementApiOperation#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type ApiManagementApiOperation#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
   */
   readonly typeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#values ApiManagementApiOperation#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#values ApiManagementApiOperation#values}
   */
   readonly values?: string[];
   /**
   * example block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationResponseHeaderExample[] | cdktf.IResolvable;
 }
@@ -3233,23 +3233,23 @@ export class ApiManagementApiOperationResponseHeaderList extends cdktf.ComplexLi
 }
 export interface ApiManagementApiOperationResponseRepresentationExample {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
   */
   readonly externalValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
   */
   readonly summary?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
   */
   readonly value?: string;
 }
@@ -3478,23 +3478,23 @@ export class ApiManagementApiOperationResponseRepresentationExampleList extends 
 }
 export interface ApiManagementApiOperationResponseRepresentationFormParameterExample {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
   */
   readonly externalValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
   */
   readonly summary?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
   */
   readonly value?: string;
 }
@@ -3723,41 +3723,41 @@ export class ApiManagementApiOperationResponseRepresentationFormParameterExample
 }
 export interface ApiManagementApiOperationResponseRepresentationFormParameter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
   */
   readonly defaultValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#required ApiManagementApiOperation#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#required ApiManagementApiOperation#required}
   */
   readonly required: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
   */
   readonly schemaId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type ApiManagementApiOperation#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type ApiManagementApiOperation#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
   */
   readonly typeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#values ApiManagementApiOperation#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#values ApiManagementApiOperation#values}
   */
   readonly values?: string[];
   /**
   * example block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationResponseRepresentationFormParameterExample[] | cdktf.IResolvable;
 }
@@ -4096,27 +4096,27 @@ export class ApiManagementApiOperationResponseRepresentationFormParameterList ex
 }
 export interface ApiManagementApiOperationResponseRepresentation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#content_type ApiManagementApiOperation#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#content_type ApiManagementApiOperation#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
   */
   readonly schemaId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
   */
   readonly typeName?: string;
   /**
   * example block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationResponseRepresentationExample[] | cdktf.IResolvable;
   /**
   * form_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#form_parameter ApiManagementApiOperation#form_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#form_parameter ApiManagementApiOperation#form_parameter}
   */
   readonly formParameter?: ApiManagementApiOperationResponseRepresentationFormParameter[] | cdktf.IResolvable;
 }
@@ -4345,23 +4345,23 @@ export class ApiManagementApiOperationResponseRepresentationList extends cdktf.C
 }
 export interface ApiManagementApiOperationResponse {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#status_code ApiManagementApiOperation#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#status_code ApiManagementApiOperation#status_code}
   */
   readonly statusCode: number;
   /**
   * header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#header ApiManagementApiOperation#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#header ApiManagementApiOperation#header}
   */
   readonly header?: ApiManagementApiOperationResponseHeader[] | cdktf.IResolvable;
   /**
   * representation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#representation ApiManagementApiOperation#representation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#representation ApiManagementApiOperation#representation}
   */
   readonly representation?: ApiManagementApiOperationResponseRepresentation[] | cdktf.IResolvable;
 }
@@ -4561,23 +4561,23 @@ export class ApiManagementApiOperationResponseList extends cdktf.ComplexList {
 }
 export interface ApiManagementApiOperationTemplateParameterExample {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#external_value ApiManagementApiOperation#external_value}
   */
   readonly externalValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#summary ApiManagementApiOperation#summary}
   */
   readonly summary?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#value ApiManagementApiOperation#value}
   */
   readonly value?: string;
 }
@@ -4806,41 +4806,41 @@ export class ApiManagementApiOperationTemplateParameterExampleList extends cdktf
 }
 export interface ApiManagementApiOperationTemplateParameter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#default_value ApiManagementApiOperation#default_value}
   */
   readonly defaultValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#description ApiManagementApiOperation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#name ApiManagementApiOperation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#required ApiManagementApiOperation#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#required ApiManagementApiOperation#required}
   */
   readonly required: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
   */
   readonly schemaId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type ApiManagementApiOperation#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type ApiManagementApiOperation#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#type_name ApiManagementApiOperation#type_name}
   */
   readonly typeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#values ApiManagementApiOperation#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#values ApiManagementApiOperation#values}
   */
   readonly values?: string[];
   /**
   * example block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#example ApiManagementApiOperation#example}
   */
   readonly example?: ApiManagementApiOperationTemplateParameterExample[] | cdktf.IResolvable;
 }
@@ -5179,19 +5179,19 @@ export class ApiManagementApiOperationTemplateParameterList extends cdktf.Comple
 }
 export interface ApiManagementApiOperationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#create ApiManagementApiOperation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#create ApiManagementApiOperation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#delete ApiManagementApiOperation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#delete ApiManagementApiOperation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#read ApiManagementApiOperation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#read ApiManagementApiOperation#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#update ApiManagementApiOperation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#update ApiManagementApiOperation#update}
   */
   readonly update?: string;
 }
@@ -5372,7 +5372,7 @@ export class ApiManagementApiOperationTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation azurerm_api_management_api_operation}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation azurerm_api_management_api_operation}
 */
 export class ApiManagementApiOperation extends cdktf.TerraformResource {
 
@@ -5388,7 +5388,7 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApiManagementApiOperation resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApiManagementApiOperation to import
-  * @param importFromId The id of the existing ApiManagementApiOperation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApiManagementApiOperation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApiManagementApiOperation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -5400,7 +5400,7 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/api_management_api_operation azurerm_api_management_api_operation} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/api_management_api_operation azurerm_api_management_api_operation} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -5411,7 +5411,7 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_api_operation',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.45.0',
+        providerVersion: '4.45.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

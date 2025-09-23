@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,108 +13,108 @@ import * as cdktf from 'cdktf';
 
 export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#auto_learn_private_ranges_enabled FirewallPolicy#auto_learn_private_ranges_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#auto_learn_private_ranges_enabled FirewallPolicy#auto_learn_private_ranges_enabled}
   */
   readonly autoLearnPrivateRangesEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#base_policy_id FirewallPolicy#base_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#base_policy_id FirewallPolicy#base_policy_id}
   */
   readonly basePolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#id FirewallPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#id FirewallPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#location FirewallPolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#location FirewallPolicy#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#name FirewallPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#name FirewallPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#private_ip_ranges FirewallPolicy#private_ip_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#private_ip_ranges FirewallPolicy#private_ip_ranges}
   */
   readonly privateIpRanges?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#resource_group_name FirewallPolicy#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#resource_group_name FirewallPolicy#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#sku FirewallPolicy#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#sku FirewallPolicy#sku}
   */
   readonly sku?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#sql_redirect_allowed FirewallPolicy#sql_redirect_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#sql_redirect_allowed FirewallPolicy#sql_redirect_allowed}
   */
   readonly sqlRedirectAllowed?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#tags FirewallPolicy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#tags FirewallPolicy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#threat_intelligence_mode FirewallPolicy#threat_intelligence_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#threat_intelligence_mode FirewallPolicy#threat_intelligence_mode}
   */
   readonly threatIntelligenceMode?: string;
   /**
   * dns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#dns FirewallPolicy#dns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#dns FirewallPolicy#dns}
   */
   readonly dns?: FirewallPolicyDns;
   /**
   * explicit_proxy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#explicit_proxy FirewallPolicy#explicit_proxy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#explicit_proxy FirewallPolicy#explicit_proxy}
   */
   readonly explicitProxy?: FirewallPolicyExplicitProxy;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#identity FirewallPolicy#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#identity FirewallPolicy#identity}
   */
   readonly identity?: FirewallPolicyIdentity;
   /**
   * insights block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#insights FirewallPolicy#insights}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#insights FirewallPolicy#insights}
   */
   readonly insights?: FirewallPolicyInsights;
   /**
   * intrusion_detection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#intrusion_detection FirewallPolicy#intrusion_detection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#intrusion_detection FirewallPolicy#intrusion_detection}
   */
   readonly intrusionDetection?: FirewallPolicyIntrusionDetection;
   /**
   * threat_intelligence_allowlist block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#threat_intelligence_allowlist FirewallPolicy#threat_intelligence_allowlist}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#threat_intelligence_allowlist FirewallPolicy#threat_intelligence_allowlist}
   */
   readonly threatIntelligenceAllowlist?: FirewallPolicyThreatIntelligenceAllowlistStruct;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#timeouts FirewallPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#timeouts FirewallPolicy#timeouts}
   */
   readonly timeouts?: FirewallPolicyTimeouts;
   /**
   * tls_certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#tls_certificate FirewallPolicy#tls_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#tls_certificate FirewallPolicy#tls_certificate}
   */
   readonly tlsCertificate?: FirewallPolicyTlsCertificate;
 }
 export interface FirewallPolicyDns {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#proxy_enabled FirewallPolicy#proxy_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#proxy_enabled FirewallPolicy#proxy_enabled}
   */
   readonly proxyEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#servers FirewallPolicy#servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#servers FirewallPolicy#servers}
   */
   readonly servers?: string[];
 }
@@ -227,27 +227,27 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
 }
 export interface FirewallPolicyExplicitProxy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#enable_pac_file FirewallPolicy#enable_pac_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#enable_pac_file FirewallPolicy#enable_pac_file}
   */
   readonly enablePacFile?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#enabled FirewallPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#enabled FirewallPolicy#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#http_port FirewallPolicy#http_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#http_port FirewallPolicy#http_port}
   */
   readonly httpPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#https_port FirewallPolicy#https_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#https_port FirewallPolicy#https_port}
   */
   readonly httpsPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#pac_file FirewallPolicy#pac_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#pac_file FirewallPolicy#pac_file}
   */
   readonly pacFile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#pac_file_port FirewallPolicy#pac_file_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#pac_file_port FirewallPolicy#pac_file_port}
   */
   readonly pacFilePort?: number;
 }
@@ -476,11 +476,11 @@ export class FirewallPolicyExplicitProxyOutputReference extends cdktf.ComplexObj
 }
 export interface FirewallPolicyIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#identity_ids FirewallPolicy#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#identity_ids FirewallPolicy#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#type FirewallPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#type FirewallPolicy#type}
   */
   readonly type: string;
 }
@@ -600,11 +600,11 @@ export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface FirewallPolicyInsightsLogAnalyticsWorkspace {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#firewall_location FirewallPolicy#firewall_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#firewall_location FirewallPolicy#firewall_location}
   */
   readonly firewallLocation: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#id FirewallPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#id FirewallPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -746,21 +746,21 @@ export class FirewallPolicyInsightsLogAnalyticsWorkspaceList extends cdktf.Compl
 }
 export interface FirewallPolicyInsights {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#default_log_analytics_workspace_id FirewallPolicy#default_log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#default_log_analytics_workspace_id FirewallPolicy#default_log_analytics_workspace_id}
   */
   readonly defaultLogAnalyticsWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#enabled FirewallPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#enabled FirewallPolicy#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#retention_in_days FirewallPolicy#retention_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#retention_in_days FirewallPolicy#retention_in_days}
   */
   readonly retentionInDays?: number;
   /**
   * log_analytics_workspace block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#log_analytics_workspace FirewallPolicy#log_analytics_workspace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#log_analytics_workspace FirewallPolicy#log_analytics_workspace}
   */
   readonly logAnalyticsWorkspace?: FirewallPolicyInsightsLogAnalyticsWorkspace[] | cdktf.IResolvable;
 }
@@ -925,14 +925,14 @@ export class FirewallPolicyInsightsOutputReference extends cdktf.ComplexObject {
 }
 export interface FirewallPolicyIntrusionDetectionSignatureOverrides {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#id FirewallPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#id FirewallPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#state FirewallPolicy#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#state FirewallPolicy#state}
   */
   readonly state?: string;
 }
@@ -1077,35 +1077,35 @@ export class FirewallPolicyIntrusionDetectionSignatureOverridesList extends cdkt
 }
 export interface FirewallPolicyIntrusionDetectionTrafficBypass {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#description FirewallPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#description FirewallPolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#destination_addresses FirewallPolicy#destination_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#destination_addresses FirewallPolicy#destination_addresses}
   */
   readonly destinationAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#destination_ip_groups FirewallPolicy#destination_ip_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#destination_ip_groups FirewallPolicy#destination_ip_groups}
   */
   readonly destinationIpGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#destination_ports FirewallPolicy#destination_ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#destination_ports FirewallPolicy#destination_ports}
   */
   readonly destinationPorts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#name FirewallPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#name FirewallPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#protocol FirewallPolicy#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#protocol FirewallPolicy#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#source_addresses FirewallPolicy#source_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#source_addresses FirewallPolicy#source_addresses}
   */
   readonly sourceAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#source_ip_groups FirewallPolicy#source_ip_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#source_ip_groups FirewallPolicy#source_ip_groups}
   */
   readonly sourceIpGroups?: string[];
 }
@@ -1418,23 +1418,23 @@ export class FirewallPolicyIntrusionDetectionTrafficBypassList extends cdktf.Com
 }
 export interface FirewallPolicyIntrusionDetection {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#mode FirewallPolicy#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#mode FirewallPolicy#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#private_ranges FirewallPolicy#private_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#private_ranges FirewallPolicy#private_ranges}
   */
   readonly privateRanges?: string[];
   /**
   * signature_overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#signature_overrides FirewallPolicy#signature_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#signature_overrides FirewallPolicy#signature_overrides}
   */
   readonly signatureOverrides?: FirewallPolicyIntrusionDetectionSignatureOverrides[] | cdktf.IResolvable;
   /**
   * traffic_bypass block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#traffic_bypass FirewallPolicy#traffic_bypass}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#traffic_bypass FirewallPolicy#traffic_bypass}
   */
   readonly trafficBypass?: FirewallPolicyIntrusionDetectionTrafficBypass[] | cdktf.IResolvable;
 }
@@ -1605,11 +1605,11 @@ export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.Compl
 }
 export interface FirewallPolicyThreatIntelligenceAllowlistStruct {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#fqdns FirewallPolicy#fqdns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#fqdns FirewallPolicy#fqdns}
   */
   readonly fqdns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#ip_addresses FirewallPolicy#ip_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#ip_addresses FirewallPolicy#ip_addresses}
   */
   readonly ipAddresses?: string[];
 }
@@ -1722,19 +1722,19 @@ export class FirewallPolicyThreatIntelligenceAllowlistStructOutputReference exte
 }
 export interface FirewallPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#create FirewallPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#create FirewallPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#delete FirewallPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#delete FirewallPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#read FirewallPolicy#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#read FirewallPolicy#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#update FirewallPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#update FirewallPolicy#update}
   */
   readonly update?: string;
 }
@@ -1915,11 +1915,11 @@ export class FirewallPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 export interface FirewallPolicyTlsCertificate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#key_vault_secret_id FirewallPolicy#key_vault_secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#key_vault_secret_id FirewallPolicy#key_vault_secret_id}
   */
   readonly keyVaultSecretId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#name FirewallPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#name FirewallPolicy#name}
   */
   readonly name: string;
 }
@@ -2026,7 +2026,7 @@ export class FirewallPolicyTlsCertificateOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy azurerm_firewall_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy azurerm_firewall_policy}
 */
 export class FirewallPolicy extends cdktf.TerraformResource {
 
@@ -2042,7 +2042,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FirewallPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FirewallPolicy to import
-  * @param importFromId The id of the existing FirewallPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FirewallPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FirewallPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2054,7 +2054,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/firewall_policy azurerm_firewall_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/firewall_policy azurerm_firewall_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2065,7 +2065,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_firewall_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.45.0',
+        providerVersion: '4.45.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

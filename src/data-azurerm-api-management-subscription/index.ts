@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/api_management_subscription
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/api_management_subscription
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,30 +13,30 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermApiManagementSubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/api_management_subscription#api_management_id DataAzurermApiManagementSubscription#api_management_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/api_management_subscription#api_management_id DataAzurermApiManagementSubscription#api_management_id}
   */
   readonly apiManagementId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/api_management_subscription#id DataAzurermApiManagementSubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/api_management_subscription#id DataAzurermApiManagementSubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/api_management_subscription#subscription_id DataAzurermApiManagementSubscription#subscription_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/api_management_subscription#subscription_id DataAzurermApiManagementSubscription#subscription_id}
   */
   readonly subscriptionId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/api_management_subscription#timeouts DataAzurermApiManagementSubscription#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/api_management_subscription#timeouts DataAzurermApiManagementSubscription#timeouts}
   */
   readonly timeouts?: DataAzurermApiManagementSubscriptionTimeouts;
 }
 export interface DataAzurermApiManagementSubscriptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/api_management_subscription#read DataAzurermApiManagementSubscription#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/api_management_subscription#read DataAzurermApiManagementSubscription#read}
   */
   readonly read?: string;
 }
@@ -130,7 +130,7 @@ export class DataAzurermApiManagementSubscriptionTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/api_management_subscription azurerm_api_management_subscription}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/api_management_subscription azurerm_api_management_subscription}
 */
 export class DataAzurermApiManagementSubscription extends cdktf.TerraformDataSource {
 
@@ -146,7 +146,7 @@ export class DataAzurermApiManagementSubscription extends cdktf.TerraformDataSou
   * Generates CDKTF code for importing a DataAzurermApiManagementSubscription resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermApiManagementSubscription to import
-  * @param importFromId The id of the existing DataAzurermApiManagementSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/api_management_subscription#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermApiManagementSubscription that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/api_management_subscription#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermApiManagementSubscription to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -158,7 +158,7 @@ export class DataAzurermApiManagementSubscription extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/api_management_subscription azurerm_api_management_subscription} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/api_management_subscription azurerm_api_management_subscription} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -169,7 +169,7 @@ export class DataAzurermApiManagementSubscription extends cdktf.TerraformDataSou
       terraformResourceType: 'azurerm_api_management_subscription',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.45.0',
+        providerVersion: '4.45.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +13,54 @@ import * as cdktf from 'cdktf';
 
 export interface DataProtectionBackupInstancePostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server#backup_policy_id DataProtectionBackupInstancePostgresqlFlexibleServer#backup_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server#backup_policy_id DataProtectionBackupInstancePostgresqlFlexibleServer#backup_policy_id}
   */
   readonly backupPolicyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server#id DataProtectionBackupInstancePostgresqlFlexibleServer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server#id DataProtectionBackupInstancePostgresqlFlexibleServer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server#location DataProtectionBackupInstancePostgresqlFlexibleServer#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server#location DataProtectionBackupInstancePostgresqlFlexibleServer#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server#name DataProtectionBackupInstancePostgresqlFlexibleServer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server#name DataProtectionBackupInstancePostgresqlFlexibleServer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server#server_id DataProtectionBackupInstancePostgresqlFlexibleServer#server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server#server_id DataProtectionBackupInstancePostgresqlFlexibleServer#server_id}
   */
   readonly serverId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server#vault_id DataProtectionBackupInstancePostgresqlFlexibleServer#vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server#vault_id DataProtectionBackupInstancePostgresqlFlexibleServer#vault_id}
   */
   readonly vaultId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server#timeouts DataProtectionBackupInstancePostgresqlFlexibleServer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server#timeouts DataProtectionBackupInstancePostgresqlFlexibleServer#timeouts}
   */
   readonly timeouts?: DataProtectionBackupInstancePostgresqlFlexibleServerTimeouts;
 }
 export interface DataProtectionBackupInstancePostgresqlFlexibleServerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server#create DataProtectionBackupInstancePostgresqlFlexibleServer#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server#create DataProtectionBackupInstancePostgresqlFlexibleServer#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server#delete DataProtectionBackupInstancePostgresqlFlexibleServer#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server#delete DataProtectionBackupInstancePostgresqlFlexibleServer#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server#read DataProtectionBackupInstancePostgresqlFlexibleServer#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server#read DataProtectionBackupInstancePostgresqlFlexibleServer#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server#update DataProtectionBackupInstancePostgresqlFlexibleServer#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server#update DataProtectionBackupInstancePostgresqlFlexibleServer#update}
   */
   readonly update?: string;
 }
@@ -241,7 +241,7 @@ export class DataProtectionBackupInstancePostgresqlFlexibleServerTimeoutsOutputR
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server azurerm_data_protection_backup_instance_postgresql_flexible_server}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server azurerm_data_protection_backup_instance_postgresql_flexible_server}
 */
 export class DataProtectionBackupInstancePostgresqlFlexibleServer extends cdktf.TerraformResource {
 
@@ -257,7 +257,7 @@ export class DataProtectionBackupInstancePostgresqlFlexibleServer extends cdktf.
   * Generates CDKTF code for importing a DataProtectionBackupInstancePostgresqlFlexibleServer resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataProtectionBackupInstancePostgresqlFlexibleServer to import
-  * @param importFromId The id of the existing DataProtectionBackupInstancePostgresqlFlexibleServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataProtectionBackupInstancePostgresqlFlexibleServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataProtectionBackupInstancePostgresqlFlexibleServer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -269,7 +269,7 @@ export class DataProtectionBackupInstancePostgresqlFlexibleServer extends cdktf.
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/resources/data_protection_backup_instance_postgresql_flexible_server azurerm_data_protection_backup_instance_postgresql_flexible_server} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/data_protection_backup_instance_postgresql_flexible_server azurerm_data_protection_backup_instance_postgresql_flexible_server} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -280,7 +280,7 @@ export class DataProtectionBackupInstancePostgresqlFlexibleServer extends cdktf.
       terraformResourceType: 'azurerm_data_protection_backup_instance_postgresql_flexible_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.45.0',
+        providerVersion: '4.45.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

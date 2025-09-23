@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/oracle_autonomous_database_backups
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/oracle_autonomous_database_backups
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,11 +13,11 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermOracleAutonomousDatabaseBackupsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/oracle_autonomous_database_backups#autonomous_database_id DataAzurermOracleAutonomousDatabaseBackups#autonomous_database_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/oracle_autonomous_database_backups#autonomous_database_id DataAzurermOracleAutonomousDatabaseBackups#autonomous_database_id}
   */
   readonly autonomousDatabaseId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/oracle_autonomous_database_backups#id DataAzurermOracleAutonomousDatabaseBackups#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/oracle_autonomous_database_backups#id DataAzurermOracleAutonomousDatabaseBackups#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -26,7 +26,7 @@ export interface DataAzurermOracleAutonomousDatabaseBackupsConfig extends cdktf.
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/oracle_autonomous_database_backups#timeouts DataAzurermOracleAutonomousDatabaseBackups#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/oracle_autonomous_database_backups#timeouts DataAzurermOracleAutonomousDatabaseBackups#timeouts}
   */
   readonly timeouts?: DataAzurermOracleAutonomousDatabaseBackupsTimeouts;
 }
@@ -187,7 +187,7 @@ export class DataAzurermOracleAutonomousDatabaseBackupsAutonomousDatabaseBackups
 }
 export interface DataAzurermOracleAutonomousDatabaseBackupsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/oracle_autonomous_database_backups#read DataAzurermOracleAutonomousDatabaseBackups#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/oracle_autonomous_database_backups#read DataAzurermOracleAutonomousDatabaseBackups#read}
   */
   readonly read?: string;
 }
@@ -281,7 +281,7 @@ export class DataAzurermOracleAutonomousDatabaseBackupsTimeoutsOutputReference e
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/oracle_autonomous_database_backups azurerm_oracle_autonomous_database_backups}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/oracle_autonomous_database_backups azurerm_oracle_autonomous_database_backups}
 */
 export class DataAzurermOracleAutonomousDatabaseBackups extends cdktf.TerraformDataSource {
 
@@ -297,7 +297,7 @@ export class DataAzurermOracleAutonomousDatabaseBackups extends cdktf.TerraformD
   * Generates CDKTF code for importing a DataAzurermOracleAutonomousDatabaseBackups resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermOracleAutonomousDatabaseBackups to import
-  * @param importFromId The id of the existing DataAzurermOracleAutonomousDatabaseBackups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/oracle_autonomous_database_backups#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermOracleAutonomousDatabaseBackups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/oracle_autonomous_database_backups#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermOracleAutonomousDatabaseBackups to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -309,7 +309,7 @@ export class DataAzurermOracleAutonomousDatabaseBackups extends cdktf.TerraformD
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/oracle_autonomous_database_backups azurerm_oracle_autonomous_database_backups} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/oracle_autonomous_database_backups azurerm_oracle_autonomous_database_backups} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -320,7 +320,7 @@ export class DataAzurermOracleAutonomousDatabaseBackups extends cdktf.TerraformD
       terraformResourceType: 'azurerm_oracle_autonomous_database_backups',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.45.0',
+        providerVersion: '4.45.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

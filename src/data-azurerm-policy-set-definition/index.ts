@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/policy_set_definition
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/policy_set_definition
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,28 +13,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermPolicySetDefinitionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/policy_set_definition#display_name DataAzurermPolicySetDefinition#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/policy_set_definition#display_name DataAzurermPolicySetDefinition#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/policy_set_definition#id DataAzurermPolicySetDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/policy_set_definition#id DataAzurermPolicySetDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/policy_set_definition#management_group_name DataAzurermPolicySetDefinition#management_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/policy_set_definition#management_group_name DataAzurermPolicySetDefinition#management_group_name}
   */
   readonly managementGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/policy_set_definition#name DataAzurermPolicySetDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/policy_set_definition#name DataAzurermPolicySetDefinition#name}
   */
   readonly name?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/policy_set_definition#timeouts DataAzurermPolicySetDefinition#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/policy_set_definition#timeouts DataAzurermPolicySetDefinition#timeouts}
   */
   readonly timeouts?: DataAzurermPolicySetDefinitionTimeouts;
 }
@@ -231,7 +231,7 @@ export class DataAzurermPolicySetDefinitionPolicyDefinitionReferenceList extends
 }
 export interface DataAzurermPolicySetDefinitionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/policy_set_definition#read DataAzurermPolicySetDefinition#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/policy_set_definition#read DataAzurermPolicySetDefinition#read}
   */
   readonly read?: string;
 }
@@ -325,7 +325,7 @@ export class DataAzurermPolicySetDefinitionTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/policy_set_definition azurerm_policy_set_definition}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/policy_set_definition azurerm_policy_set_definition}
 */
 export class DataAzurermPolicySetDefinition extends cdktf.TerraformDataSource {
 
@@ -341,7 +341,7 @@ export class DataAzurermPolicySetDefinition extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermPolicySetDefinition resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermPolicySetDefinition to import
-  * @param importFromId The id of the existing DataAzurermPolicySetDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/policy_set_definition#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermPolicySetDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/policy_set_definition#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermPolicySetDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -353,7 +353,7 @@ export class DataAzurermPolicySetDefinition extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/policy_set_definition azurerm_policy_set_definition} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/policy_set_definition azurerm_policy_set_definition} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -364,7 +364,7 @@ export class DataAzurermPolicySetDefinition extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_policy_set_definition',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.45.0',
+        providerVersion: '4.45.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
