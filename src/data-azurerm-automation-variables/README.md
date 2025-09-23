@@ -1,3 +1,3 @@
 # `data_azurerm_automation_variables`
 
-Refer to the Terraform Registry for docs: [`data_azurerm_automation_variables`](https://registry.terraform.io/providers/hashicorp/azurerm/4.45.0/docs/data-sources/automation_variables).
+Refer to the Terraform Registry for docs: [`data_azurerm_automation_variables`](https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/automation_variables).
