@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/advisor_suppression
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/advisor_suppression
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +13,46 @@ import * as cdktf from 'cdktf';
 
 export interface AdvisorSuppressionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/advisor_suppression#id AdvisorSuppression#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/advisor_suppression#id AdvisorSuppression#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/advisor_suppression#name AdvisorSuppression#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/advisor_suppression#name AdvisorSuppression#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/advisor_suppression#recommendation_id AdvisorSuppression#recommendation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/advisor_suppression#recommendation_id AdvisorSuppression#recommendation_id}
   */
   readonly recommendationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/advisor_suppression#resource_id AdvisorSuppression#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/advisor_suppression#resource_id AdvisorSuppression#resource_id}
   */
   readonly resourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/advisor_suppression#ttl AdvisorSuppression#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/advisor_suppression#ttl AdvisorSuppression#ttl}
   */
   readonly ttl?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/advisor_suppression#timeouts AdvisorSuppression#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/advisor_suppression#timeouts AdvisorSuppression#timeouts}
   */
   readonly timeouts?: AdvisorSuppressionTimeouts;
 }
 export interface AdvisorSuppressionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/advisor_suppression#create AdvisorSuppression#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/advisor_suppression#create AdvisorSuppression#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/advisor_suppression#delete AdvisorSuppression#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/advisor_suppression#delete AdvisorSuppression#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/advisor_suppression#read AdvisorSuppression#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/advisor_suppression#read AdvisorSuppression#read}
   */
   readonly read?: string;
 }
@@ -204,7 +204,7 @@ export class AdvisorSuppressionTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/advisor_suppression azurerm_advisor_suppression}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/advisor_suppression azurerm_advisor_suppression}
 */
 export class AdvisorSuppression extends cdktf.TerraformResource {
 
@@ -220,7 +220,7 @@ export class AdvisorSuppression extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AdvisorSuppression resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AdvisorSuppression to import
-  * @param importFromId The id of the existing AdvisorSuppression that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/advisor_suppression#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AdvisorSuppression that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/advisor_suppression#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AdvisorSuppression to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -232,7 +232,7 @@ export class AdvisorSuppression extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/advisor_suppression azurerm_advisor_suppression} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/advisor_suppression azurerm_advisor_suppression} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -243,7 +243,7 @@ export class AdvisorSuppression extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_advisor_suppression',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.45.1',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,52 +13,52 @@ import * as cdktf from 'cdktf';
 
 export interface ContainerRegistryCredentialSetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#container_registry_id ContainerRegistryCredentialSet#container_registry_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#container_registry_id ContainerRegistryCredentialSet#container_registry_id}
   */
   readonly containerRegistryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#id ContainerRegistryCredentialSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#id ContainerRegistryCredentialSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#login_server ContainerRegistryCredentialSet#login_server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#login_server ContainerRegistryCredentialSet#login_server}
   */
   readonly loginServer: string;
   /**
   * The name of the credential set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#name ContainerRegistryCredentialSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#name ContainerRegistryCredentialSet#name}
   */
   readonly name: string;
   /**
   * authentication_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#authentication_credentials ContainerRegistryCredentialSet#authentication_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#authentication_credentials ContainerRegistryCredentialSet#authentication_credentials}
   */
   readonly authenticationCredentials: ContainerRegistryCredentialSetAuthenticationCredentials;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#identity ContainerRegistryCredentialSet#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#identity ContainerRegistryCredentialSet#identity}
   */
   readonly identity: ContainerRegistryCredentialSetIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#timeouts ContainerRegistryCredentialSet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#timeouts ContainerRegistryCredentialSet#timeouts}
   */
   readonly timeouts?: ContainerRegistryCredentialSetTimeouts;
 }
 export interface ContainerRegistryCredentialSetAuthenticationCredentials {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#password_secret_id ContainerRegistryCredentialSet#password_secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#password_secret_id ContainerRegistryCredentialSet#password_secret_id}
   */
   readonly passwordSecretId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#username_secret_id ContainerRegistryCredentialSet#username_secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#username_secret_id ContainerRegistryCredentialSet#username_secret_id}
   */
   readonly usernameSecretId: string;
 }
@@ -165,7 +165,7 @@ export class ContainerRegistryCredentialSetAuthenticationCredentialsOutputRefere
 }
 export interface ContainerRegistryCredentialSetIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#type ContainerRegistryCredentialSet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#type ContainerRegistryCredentialSet#type}
   */
   readonly type: string;
 }
@@ -256,19 +256,19 @@ export class ContainerRegistryCredentialSetIdentityOutputReference extends cdktf
 }
 export interface ContainerRegistryCredentialSetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#create ContainerRegistryCredentialSet#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#create ContainerRegistryCredentialSet#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#delete ContainerRegistryCredentialSet#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#delete ContainerRegistryCredentialSet#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#read ContainerRegistryCredentialSet#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#read ContainerRegistryCredentialSet#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#update ContainerRegistryCredentialSet#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#update ContainerRegistryCredentialSet#update}
   */
   readonly update?: string;
 }
@@ -449,7 +449,7 @@ export class ContainerRegistryCredentialSetTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set azurerm_container_registry_credential_set}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set azurerm_container_registry_credential_set}
 */
 export class ContainerRegistryCredentialSet extends cdktf.TerraformResource {
 
@@ -465,7 +465,7 @@ export class ContainerRegistryCredentialSet extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ContainerRegistryCredentialSet resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerRegistryCredentialSet to import
-  * @param importFromId The id of the existing ContainerRegistryCredentialSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerRegistryCredentialSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerRegistryCredentialSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -477,7 +477,7 @@ export class ContainerRegistryCredentialSet extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/container_registry_credential_set azurerm_container_registry_credential_set} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/container_registry_credential_set azurerm_container_registry_credential_set} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -488,7 +488,7 @@ export class ContainerRegistryCredentialSet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_registry_credential_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.45.1',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

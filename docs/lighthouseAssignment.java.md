@@ -4,7 +4,7 @@
 
 ### LighthouseAssignment <a name="LighthouseAssignment" id="@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment azurerm_lighthouse_assignment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment azurerm_lighthouse_assignment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment.Initializer"></a>
 
@@ -42,10 +42,10 @@ LighthouseAssignment.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment.Initializer.parameter.lighthouseDefinitionId">lighthouseDefinitionId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#lighthouse_definition_id LighthouseAssignment#lighthouse_definition_id}. |
-| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment.Initializer.parameter.scope">scope</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#scope LighthouseAssignment#scope}. |
-| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#id LighthouseAssignment#id}. |
-| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#name LighthouseAssignment#name}. |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment.Initializer.parameter.lighthouseDefinitionId">lighthouseDefinitionId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#lighthouse_definition_id LighthouseAssignment#lighthouse_definition_id}. |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment.Initializer.parameter.scope">scope</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#scope LighthouseAssignment#scope}. |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#id LighthouseAssignment#id}. |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#name LighthouseAssignment#name}. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignment.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentTimeouts">LighthouseAssignmentTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#lighthouse_definition_id LighthouseAssignment#lighthouse_definition_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#lighthouse_definition_id LighthouseAssignment#lighthouse_definition_id}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#scope LighthouseAssignment#scope}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#scope LighthouseAssignment#scope}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#id LighthouseAssignment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#id LighthouseAssignment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -141,7 +141,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#name LighthouseAssignment#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#name LighthouseAssignment#name}.
 
 ---
 
@@ -151,7 +151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#timeouts LighthouseAssignment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#timeouts LighthouseAssignment#timeouts}
 
 ---
 
@@ -612,7 +612,7 @@ The construct id used in the generated config for the LighthouseAssignment to im
 
 The id of the existing LighthouseAssignment that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -955,10 +955,10 @@ LighthouseAssignmentConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentConfig.property.lighthouseDefinitionId">lighthouseDefinitionId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#lighthouse_definition_id LighthouseAssignment#lighthouse_definition_id}. |
-| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentConfig.property.scope">scope</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#scope LighthouseAssignment#scope}. |
-| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#id LighthouseAssignment#id}. |
-| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#name LighthouseAssignment#name}. |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentConfig.property.lighthouseDefinitionId">lighthouseDefinitionId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#lighthouse_definition_id LighthouseAssignment#lighthouse_definition_id}. |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentConfig.property.scope">scope</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#scope LighthouseAssignment#scope}. |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#id LighthouseAssignment#id}. |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#name LighthouseAssignment#name}. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentTimeouts">LighthouseAssignmentTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1041,7 +1041,7 @@ public java.lang.String getLighthouseDefinitionId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#lighthouse_definition_id LighthouseAssignment#lighthouse_definition_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#lighthouse_definition_id LighthouseAssignment#lighthouse_definition_id}.
 
 ---
 
@@ -1053,7 +1053,7 @@ public java.lang.String getScope();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#scope LighthouseAssignment#scope}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#scope LighthouseAssignment#scope}.
 
 ---
 
@@ -1065,7 +1065,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#id LighthouseAssignment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#id LighthouseAssignment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1080,7 +1080,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#name LighthouseAssignment#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#name LighthouseAssignment#name}.
 
 ---
 
@@ -1094,7 +1094,7 @@ public LighthouseAssignmentTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#timeouts LighthouseAssignment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#timeouts LighthouseAssignment#timeouts}
 
 ---
 
@@ -1116,9 +1116,9 @@ LighthouseAssignmentTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#create LighthouseAssignment#create}. |
-| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#delete LighthouseAssignment#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#read LighthouseAssignment#read}. |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#create LighthouseAssignment#create}. |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#delete LighthouseAssignment#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseAssignment.LighthouseAssignmentTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#read LighthouseAssignment#read}. |
 
 ---
 
@@ -1130,7 +1130,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#create LighthouseAssignment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#create LighthouseAssignment#create}.
 
 ---
 
@@ -1142,7 +1142,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#delete LighthouseAssignment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#delete LighthouseAssignment#delete}.
 
 ---
 
@@ -1154,7 +1154,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/lighthouse_assignment#read LighthouseAssignment#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/lighthouse_assignment#read LighthouseAssignment#read}.
 
 ---
 

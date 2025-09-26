@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +13,54 @@ import * as cdktf from 'cdktf';
 
 export interface ApplicationLoadBalancerSecurityPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy#application_load_balancer_id ApplicationLoadBalancerSecurityPolicy#application_load_balancer_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy#application_load_balancer_id ApplicationLoadBalancerSecurityPolicy#application_load_balancer_id}
   */
   readonly applicationLoadBalancerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy#id ApplicationLoadBalancerSecurityPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy#id ApplicationLoadBalancerSecurityPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy#location ApplicationLoadBalancerSecurityPolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy#location ApplicationLoadBalancerSecurityPolicy#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy#name ApplicationLoadBalancerSecurityPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy#name ApplicationLoadBalancerSecurityPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy#tags ApplicationLoadBalancerSecurityPolicy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy#tags ApplicationLoadBalancerSecurityPolicy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy#web_application_firewall_policy_id ApplicationLoadBalancerSecurityPolicy#web_application_firewall_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy#web_application_firewall_policy_id ApplicationLoadBalancerSecurityPolicy#web_application_firewall_policy_id}
   */
   readonly webApplicationFirewallPolicyId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy#timeouts ApplicationLoadBalancerSecurityPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy#timeouts ApplicationLoadBalancerSecurityPolicy#timeouts}
   */
   readonly timeouts?: ApplicationLoadBalancerSecurityPolicyTimeouts;
 }
 export interface ApplicationLoadBalancerSecurityPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy#create ApplicationLoadBalancerSecurityPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy#create ApplicationLoadBalancerSecurityPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy#delete ApplicationLoadBalancerSecurityPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy#delete ApplicationLoadBalancerSecurityPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy#read ApplicationLoadBalancerSecurityPolicy#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy#read ApplicationLoadBalancerSecurityPolicy#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy#update ApplicationLoadBalancerSecurityPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy#update ApplicationLoadBalancerSecurityPolicy#update}
   */
   readonly update?: string;
 }
@@ -241,7 +241,7 @@ export class ApplicationLoadBalancerSecurityPolicyTimeoutsOutputReference extend
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy azurerm_application_load_balancer_security_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy azurerm_application_load_balancer_security_policy}
 */
 export class ApplicationLoadBalancerSecurityPolicy extends cdktf.TerraformResource {
 
@@ -257,7 +257,7 @@ export class ApplicationLoadBalancerSecurityPolicy extends cdktf.TerraformResour
   * Generates CDKTF code for importing a ApplicationLoadBalancerSecurityPolicy resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApplicationLoadBalancerSecurityPolicy to import
-  * @param importFromId The id of the existing ApplicationLoadBalancerSecurityPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApplicationLoadBalancerSecurityPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApplicationLoadBalancerSecurityPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -269,7 +269,7 @@ export class ApplicationLoadBalancerSecurityPolicy extends cdktf.TerraformResour
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/application_load_balancer_security_policy azurerm_application_load_balancer_security_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/application_load_balancer_security_policy azurerm_application_load_balancer_security_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -280,7 +280,7 @@ export class ApplicationLoadBalancerSecurityPolicy extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_application_load_balancer_security_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.45.1',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
