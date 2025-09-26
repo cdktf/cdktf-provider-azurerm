@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/key_vault_access_policy
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/key_vault_access_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,26 +13,26 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermKeyVaultAccessPolicyAConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/key_vault_access_policy#id DataAzurermKeyVaultAccessPolicyA#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/key_vault_access_policy#id DataAzurermKeyVaultAccessPolicyA#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/key_vault_access_policy#name DataAzurermKeyVaultAccessPolicyA#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/key_vault_access_policy#name DataAzurermKeyVaultAccessPolicyA#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/key_vault_access_policy#timeouts DataAzurermKeyVaultAccessPolicyA#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/key_vault_access_policy#timeouts DataAzurermKeyVaultAccessPolicyA#timeouts}
   */
   readonly timeouts?: DataAzurermKeyVaultAccessPolicyTimeouts;
 }
 export interface DataAzurermKeyVaultAccessPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/key_vault_access_policy#read DataAzurermKeyVaultAccessPolicyA#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/key_vault_access_policy#read DataAzurermKeyVaultAccessPolicyA#read}
   */
   readonly read?: string;
 }
@@ -126,7 +126,7 @@ export class DataAzurermKeyVaultAccessPolicyTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/key_vault_access_policy azurerm_key_vault_access_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/key_vault_access_policy azurerm_key_vault_access_policy}
 */
 export class DataAzurermKeyVaultAccessPolicyA extends cdktf.TerraformDataSource {
 
@@ -142,7 +142,7 @@ export class DataAzurermKeyVaultAccessPolicyA extends cdktf.TerraformDataSource 
   * Generates CDKTF code for importing a DataAzurermKeyVaultAccessPolicyA resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermKeyVaultAccessPolicyA to import
-  * @param importFromId The id of the existing DataAzurermKeyVaultAccessPolicyA that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/key_vault_access_policy#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermKeyVaultAccessPolicyA that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/key_vault_access_policy#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermKeyVaultAccessPolicyA to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -154,7 +154,7 @@ export class DataAzurermKeyVaultAccessPolicyA extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/key_vault_access_policy azurerm_key_vault_access_policy} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/key_vault_access_policy azurerm_key_vault_access_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -165,7 +165,7 @@ export class DataAzurermKeyVaultAccessPolicyA extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_key_vault_access_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.45.1',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

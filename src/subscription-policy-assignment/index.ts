@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,90 +13,90 @@ import * as cdktf from 'cdktf';
 
 export interface SubscriptionPolicyAssignmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#description SubscriptionPolicyAssignment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#description SubscriptionPolicyAssignment#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#display_name SubscriptionPolicyAssignment#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#display_name SubscriptionPolicyAssignment#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#enforce SubscriptionPolicyAssignment#enforce}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#enforce SubscriptionPolicyAssignment#enforce}
   */
   readonly enforce?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#id SubscriptionPolicyAssignment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#id SubscriptionPolicyAssignment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#location SubscriptionPolicyAssignment#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#location SubscriptionPolicyAssignment#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#metadata SubscriptionPolicyAssignment#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#metadata SubscriptionPolicyAssignment#metadata}
   */
   readonly metadata?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#name SubscriptionPolicyAssignment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#name SubscriptionPolicyAssignment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#not_scopes SubscriptionPolicyAssignment#not_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#not_scopes SubscriptionPolicyAssignment#not_scopes}
   */
   readonly notScopes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#parameters SubscriptionPolicyAssignment#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#parameters SubscriptionPolicyAssignment#parameters}
   */
   readonly parameters?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#policy_definition_id SubscriptionPolicyAssignment#policy_definition_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#policy_definition_id SubscriptionPolicyAssignment#policy_definition_id}
   */
   readonly policyDefinitionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#subscription_id SubscriptionPolicyAssignment#subscription_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#subscription_id SubscriptionPolicyAssignment#subscription_id}
   */
   readonly subscriptionId: string;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#identity SubscriptionPolicyAssignment#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#identity SubscriptionPolicyAssignment#identity}
   */
   readonly identity?: SubscriptionPolicyAssignmentIdentity;
   /**
   * non_compliance_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#non_compliance_message SubscriptionPolicyAssignment#non_compliance_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#non_compliance_message SubscriptionPolicyAssignment#non_compliance_message}
   */
   readonly nonComplianceMessage?: SubscriptionPolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable;
   /**
   * overrides block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#overrides SubscriptionPolicyAssignment#overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#overrides SubscriptionPolicyAssignment#overrides}
   */
   readonly overrides?: SubscriptionPolicyAssignmentOverrides[] | cdktf.IResolvable;
   /**
   * resource_selectors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#resource_selectors SubscriptionPolicyAssignment#resource_selectors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#resource_selectors SubscriptionPolicyAssignment#resource_selectors}
   */
   readonly resourceSelectors?: SubscriptionPolicyAssignmentResourceSelectors[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#timeouts SubscriptionPolicyAssignment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#timeouts SubscriptionPolicyAssignment#timeouts}
   */
   readonly timeouts?: SubscriptionPolicyAssignmentTimeouts;
 }
 export interface SubscriptionPolicyAssignmentIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#identity_ids SubscriptionPolicyAssignment#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#identity_ids SubscriptionPolicyAssignment#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#type SubscriptionPolicyAssignment#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#type SubscriptionPolicyAssignment#type}
   */
   readonly type: string;
 }
@@ -216,11 +216,11 @@ export class SubscriptionPolicyAssignmentIdentityOutputReference extends cdktf.C
 }
 export interface SubscriptionPolicyAssignmentNonComplianceMessage {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#content SubscriptionPolicyAssignment#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#content SubscriptionPolicyAssignment#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#policy_definition_reference_id SubscriptionPolicyAssignment#policy_definition_reference_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#policy_definition_reference_id SubscriptionPolicyAssignment#policy_definition_reference_id}
   */
   readonly policyDefinitionReferenceId?: string;
 }
@@ -362,15 +362,15 @@ export class SubscriptionPolicyAssignmentNonComplianceMessageList extends cdktf.
 }
 export interface SubscriptionPolicyAssignmentOverridesSelectors {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#in SubscriptionPolicyAssignment#in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#in SubscriptionPolicyAssignment#in}
   */
   readonly in?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#kind SubscriptionPolicyAssignment#kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#kind SubscriptionPolicyAssignment#kind}
   */
   readonly kind?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#not_in SubscriptionPolicyAssignment#not_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#not_in SubscriptionPolicyAssignment#not_in}
   */
   readonly notIn?: string[];
 }
@@ -544,13 +544,13 @@ export class SubscriptionPolicyAssignmentOverridesSelectorsList extends cdktf.Co
 }
 export interface SubscriptionPolicyAssignmentOverrides {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#value SubscriptionPolicyAssignment#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#value SubscriptionPolicyAssignment#value}
   */
   readonly value: string;
   /**
   * selectors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#selectors SubscriptionPolicyAssignment#selectors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#selectors SubscriptionPolicyAssignment#selectors}
   */
   readonly selectors?: SubscriptionPolicyAssignmentOverridesSelectors[] | cdktf.IResolvable;
 }
@@ -692,15 +692,15 @@ export class SubscriptionPolicyAssignmentOverridesList extends cdktf.ComplexList
 }
 export interface SubscriptionPolicyAssignmentResourceSelectorsSelectors {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#in SubscriptionPolicyAssignment#in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#in SubscriptionPolicyAssignment#in}
   */
   readonly in?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#kind SubscriptionPolicyAssignment#kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#kind SubscriptionPolicyAssignment#kind}
   */
   readonly kind: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#not_in SubscriptionPolicyAssignment#not_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#not_in SubscriptionPolicyAssignment#not_in}
   */
   readonly notIn?: string[];
 }
@@ -871,13 +871,13 @@ export class SubscriptionPolicyAssignmentResourceSelectorsSelectorsList extends 
 }
 export interface SubscriptionPolicyAssignmentResourceSelectors {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#name SubscriptionPolicyAssignment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#name SubscriptionPolicyAssignment#name}
   */
   readonly name?: string;
   /**
   * selectors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#selectors SubscriptionPolicyAssignment#selectors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#selectors SubscriptionPolicyAssignment#selectors}
   */
   readonly selectors: SubscriptionPolicyAssignmentResourceSelectorsSelectors[] | cdktf.IResolvable;
 }
@@ -1019,19 +1019,19 @@ export class SubscriptionPolicyAssignmentResourceSelectorsList extends cdktf.Com
 }
 export interface SubscriptionPolicyAssignmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#create SubscriptionPolicyAssignment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#create SubscriptionPolicyAssignment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#delete SubscriptionPolicyAssignment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#delete SubscriptionPolicyAssignment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#read SubscriptionPolicyAssignment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#read SubscriptionPolicyAssignment#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#update SubscriptionPolicyAssignment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#update SubscriptionPolicyAssignment#update}
   */
   readonly update?: string;
 }
@@ -1212,7 +1212,7 @@ export class SubscriptionPolicyAssignmentTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment azurerm_subscription_policy_assignment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment azurerm_subscription_policy_assignment}
 */
 export class SubscriptionPolicyAssignment extends cdktf.TerraformResource {
 
@@ -1228,7 +1228,7 @@ export class SubscriptionPolicyAssignment extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SubscriptionPolicyAssignment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SubscriptionPolicyAssignment to import
-  * @param importFromId The id of the existing SubscriptionPolicyAssignment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SubscriptionPolicyAssignment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SubscriptionPolicyAssignment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1240,7 +1240,7 @@ export class SubscriptionPolicyAssignment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/resources/subscription_policy_assignment azurerm_subscription_policy_assignment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/subscription_policy_assignment azurerm_subscription_policy_assignment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1251,7 +1251,7 @@ export class SubscriptionPolicyAssignment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_subscription_policy_assignment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.45.1',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

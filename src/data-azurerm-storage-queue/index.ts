@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/storage_queue
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/storage_queue
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,34 +13,38 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermStorageQueueConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/storage_queue#id DataAzurermStorageQueue#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/storage_queue#id DataAzurermStorageQueue#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/storage_queue#metadata DataAzurermStorageQueue#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/storage_queue#metadata DataAzurermStorageQueue#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/storage_queue#name DataAzurermStorageQueue#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/storage_queue#name DataAzurermStorageQueue#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/storage_queue#storage_account_name DataAzurermStorageQueue#storage_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/storage_queue#storage_account_id DataAzurermStorageQueue#storage_account_id}
   */
-  readonly storageAccountName: string;
+  readonly storageAccountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/storage_queue#storage_account_name DataAzurermStorageQueue#storage_account_name}
+  */
+  readonly storageAccountName?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/storage_queue#timeouts DataAzurermStorageQueue#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/storage_queue#timeouts DataAzurermStorageQueue#timeouts}
   */
   readonly timeouts?: DataAzurermStorageQueueTimeouts;
 }
 export interface DataAzurermStorageQueueTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/storage_queue#read DataAzurermStorageQueue#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/storage_queue#read DataAzurermStorageQueue#read}
   */
   readonly read?: string;
 }
@@ -134,7 +138,7 @@ export class DataAzurermStorageQueueTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/storage_queue azurerm_storage_queue}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/storage_queue azurerm_storage_queue}
 */
 export class DataAzurermStorageQueue extends cdktf.TerraformDataSource {
 
@@ -150,7 +154,7 @@ export class DataAzurermStorageQueue extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermStorageQueue resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermStorageQueue to import
-  * @param importFromId The id of the existing DataAzurermStorageQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/storage_queue#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermStorageQueue that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/storage_queue#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermStorageQueue to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -162,7 +166,7 @@ export class DataAzurermStorageQueue extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.45.1/docs/data-sources/storage_queue azurerm_storage_queue} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/storage_queue azurerm_storage_queue} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -173,7 +177,7 @@ export class DataAzurermStorageQueue extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_storage_queue',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.45.1',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -187,6 +191,7 @@ export class DataAzurermStorageQueue extends cdktf.TerraformDataSource {
     this._id = config.id;
     this._metadata = config.metadata;
     this._name = config.name;
+    this._storageAccountId = config.storageAccountId;
     this._storageAccountName = config.storageAccountName;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -245,7 +250,23 @@ export class DataAzurermStorageQueue extends cdktf.TerraformDataSource {
     return this.getStringAttribute('resource_manager_id');
   }
 
-  // storage_account_name - computed: false, optional: false, required: true
+  // storage_account_id - computed: false, optional: true, required: false
+  private _storageAccountId?: string; 
+  public get storageAccountId() {
+    return this.getStringAttribute('storage_account_id');
+  }
+  public set storageAccountId(value: string) {
+    this._storageAccountId = value;
+  }
+  public resetStorageAccountId() {
+    this._storageAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId;
+  }
+
+  // storage_account_name - computed: false, optional: true, required: false
   private _storageAccountName?: string; 
   public get storageAccountName() {
     return this.getStringAttribute('storage_account_name');
@@ -253,9 +274,17 @@ export class DataAzurermStorageQueue extends cdktf.TerraformDataSource {
   public set storageAccountName(value: string) {
     this._storageAccountName = value;
   }
+  public resetStorageAccountName() {
+    this._storageAccountName = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get storageAccountNameInput() {
     return this._storageAccountName;
+  }
+
+  // url - computed: true, optional: false, required: false
+  public get url() {
+    return this.getStringAttribute('url');
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -283,6 +312,7 @@ export class DataAzurermStorageQueue extends cdktf.TerraformDataSource {
       id: cdktf.stringToTerraform(this._id),
       metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
       timeouts: dataAzurermStorageQueueTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -304,6 +334,12 @@ export class DataAzurermStorageQueue extends cdktf.TerraformDataSource {
       },
       name: {
         value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_id: {
+        value: cdktf.stringToHclTerraform(this._storageAccountId),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
