@@ -64,6 +64,7 @@ The following submodules are available:
 - [apiManagementTag](./apiManagementTag.go.md)
 - [apiManagementUser](./apiManagementUser.go.md)
 - [apiManagementWorkspace](./apiManagementWorkspace.go.md)
+- [apiManagementWorkspacePolicy](./apiManagementWorkspacePolicy.go.md)
 - [appConfiguration](./appConfiguration.go.md)
 - [appConfigurationFeature](./appConfigurationFeature.go.md)
 - [appConfigurationKey](./appConfigurationKey.go.md)

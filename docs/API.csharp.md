@@ -64,6 +64,7 @@ The following submodules are available:
 - [apiManagementTag](./apiManagementTag.csharp.md)
 - [apiManagementUser](./apiManagementUser.csharp.md)
 - [apiManagementWorkspace](./apiManagementWorkspace.csharp.md)
+- [apiManagementWorkspacePolicy](./apiManagementWorkspacePolicy.csharp.md)
 - [appConfiguration](./appConfiguration.csharp.md)
 - [appConfigurationFeature](./appConfigurationFeature.csharp.md)
 - [appConfigurationKey](./appConfigurationKey.csharp.md)
