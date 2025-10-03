@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,126 +13,136 @@ import * as cdktf from 'cdktf';
 
 export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#custom_question_answering_search_service_id CognitiveAccount#custom_question_answering_search_service_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#custom_question_answering_search_service_id CognitiveAccount#custom_question_answering_search_service_id}
   */
   readonly customQuestionAnsweringSearchServiceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#custom_question_answering_search_service_key CognitiveAccount#custom_question_answering_search_service_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#custom_question_answering_search_service_key CognitiveAccount#custom_question_answering_search_service_key}
   */
   readonly customQuestionAnsweringSearchServiceKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#custom_subdomain_name CognitiveAccount#custom_subdomain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#custom_subdomain_name CognitiveAccount#custom_subdomain_name}
   */
   readonly customSubdomainName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#dynamic_throttling_enabled CognitiveAccount#dynamic_throttling_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#dynamic_throttling_enabled CognitiveAccount#dynamic_throttling_enabled}
   */
   readonly dynamicThrottlingEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#fqdns CognitiveAccount#fqdns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#fqdns CognitiveAccount#fqdns}
   */
   readonly fqdns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#id CognitiveAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#id CognitiveAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#kind CognitiveAccount#kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#kind CognitiveAccount#kind}
   */
   readonly kind: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#local_auth_enabled CognitiveAccount#local_auth_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#local_auth_enabled CognitiveAccount#local_auth_enabled}
   */
   readonly localAuthEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#location CognitiveAccount#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#location CognitiveAccount#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#metrics_advisor_aad_client_id CognitiveAccount#metrics_advisor_aad_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#metrics_advisor_aad_client_id CognitiveAccount#metrics_advisor_aad_client_id}
   */
   readonly metricsAdvisorAadClientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#metrics_advisor_aad_tenant_id CognitiveAccount#metrics_advisor_aad_tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#metrics_advisor_aad_tenant_id CognitiveAccount#metrics_advisor_aad_tenant_id}
   */
   readonly metricsAdvisorAadTenantId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#metrics_advisor_super_user_name CognitiveAccount#metrics_advisor_super_user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#metrics_advisor_super_user_name CognitiveAccount#metrics_advisor_super_user_name}
   */
   readonly metricsAdvisorSuperUserName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#metrics_advisor_website_name CognitiveAccount#metrics_advisor_website_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#metrics_advisor_website_name CognitiveAccount#metrics_advisor_website_name}
   */
   readonly metricsAdvisorWebsiteName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#name CognitiveAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#name CognitiveAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#outbound_network_access_restricted CognitiveAccount#outbound_network_access_restricted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#outbound_network_access_restricted CognitiveAccount#outbound_network_access_restricted}
   */
   readonly outboundNetworkAccessRestricted?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#public_network_access_enabled CognitiveAccount#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#project_management_enabled CognitiveAccount#project_management_enabled}
+  */
+  readonly projectManagementEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#public_network_access_enabled CognitiveAccount#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#qna_runtime_endpoint CognitiveAccount#qna_runtime_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#qna_runtime_endpoint CognitiveAccount#qna_runtime_endpoint}
   */
   readonly qnaRuntimeEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#resource_group_name CognitiveAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#resource_group_name CognitiveAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#sku_name CognitiveAccount#sku_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#sku_name CognitiveAccount#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#tags CognitiveAccount#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#tags CognitiveAccount#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * customer_managed_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#customer_managed_key CognitiveAccount#customer_managed_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#customer_managed_key CognitiveAccount#customer_managed_key}
   */
   readonly customerManagedKey?: CognitiveAccountCustomerManagedKey;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#identity CognitiveAccount#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#identity CognitiveAccount#identity}
   */
   readonly identity?: CognitiveAccountIdentity;
   /**
   * network_acls block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#network_acls CognitiveAccount#network_acls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#network_acls CognitiveAccount#network_acls}
   */
   readonly networkAcls?: CognitiveAccountNetworkAcls;
   /**
+  * network_injection block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#network_injection CognitiveAccount#network_injection}
+  */
+  readonly networkInjection?: CognitiveAccountNetworkInjection;
+  /**
   * storage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#storage CognitiveAccount#storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#storage CognitiveAccount#storage}
   */
   readonly storage?: CognitiveAccountStorage[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#timeouts CognitiveAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#timeouts CognitiveAccount#timeouts}
   */
   readonly timeouts?: CognitiveAccountTimeouts;
 }
 export interface CognitiveAccountCustomerManagedKey {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#identity_client_id CognitiveAccount#identity_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#identity_client_id CognitiveAccount#identity_client_id}
   */
   readonly identityClientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#key_vault_key_id CognitiveAccount#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#key_vault_key_id CognitiveAccount#key_vault_key_id}
   */
   readonly keyVaultKeyId: string;
 }
@@ -242,11 +252,11 @@ export class CognitiveAccountCustomerManagedKeyOutputReference extends cdktf.Com
 }
 export interface CognitiveAccountIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#identity_ids CognitiveAccount#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#identity_ids CognitiveAccount#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#type CognitiveAccount#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#type CognitiveAccount#type}
   */
   readonly type: string;
 }
@@ -366,11 +376,11 @@ export class CognitiveAccountIdentityOutputReference extends cdktf.ComplexObject
 }
 export interface CognitiveAccountNetworkAclsVirtualNetworkRules {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#ignore_missing_vnet_service_endpoint CognitiveAccount#ignore_missing_vnet_service_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#ignore_missing_vnet_service_endpoint CognitiveAccount#ignore_missing_vnet_service_endpoint}
   */
   readonly ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#subnet_id CognitiveAccount#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#subnet_id CognitiveAccount#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -512,21 +522,21 @@ export class CognitiveAccountNetworkAclsVirtualNetworkRulesList extends cdktf.Co
 }
 export interface CognitiveAccountNetworkAcls {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#bypass CognitiveAccount#bypass}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#bypass CognitiveAccount#bypass}
   */
   readonly bypass?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#default_action CognitiveAccount#default_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#default_action CognitiveAccount#default_action}
   */
   readonly defaultAction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#ip_rules CognitiveAccount#ip_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#ip_rules CognitiveAccount#ip_rules}
   */
   readonly ipRules?: string[];
   /**
   * virtual_network_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#virtual_network_rules CognitiveAccount#virtual_network_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#virtual_network_rules CognitiveAccount#virtual_network_rules}
   */
   readonly virtualNetworkRules?: CognitiveAccountNetworkAclsVirtualNetworkRules[] | cdktf.IResolvable;
 }
@@ -692,13 +702,124 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
     return this._virtualNetworkRules.internalValue;
   }
 }
+export interface CognitiveAccountNetworkInjection {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#scenario CognitiveAccount#scenario}
+  */
+  readonly scenario: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#subnet_id CognitiveAccount#subnet_id}
+  */
+  readonly subnetId: string;
+}
+
+export function cognitiveAccountNetworkInjectionToTerraform(struct?: CognitiveAccountNetworkInjectionOutputReference | CognitiveAccountNetworkInjection): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    scenario: cdktf.stringToTerraform(struct!.scenario),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
+
+export function cognitiveAccountNetworkInjectionToHclTerraform(struct?: CognitiveAccountNetworkInjectionOutputReference | CognitiveAccountNetworkInjection): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    scenario: {
+      value: cdktf.stringToHclTerraform(struct!.scenario),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CognitiveAccountNetworkInjectionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CognitiveAccountNetworkInjection | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._scenario !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scenario = this._scenario;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CognitiveAccountNetworkInjection | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._scenario = undefined;
+      this._subnetId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._scenario = value.scenario;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // scenario - computed: false, optional: false, required: true
+  private _scenario?: string; 
+  public get scenario() {
+    return this.getStringAttribute('scenario');
+  }
+  public set scenario(value: string) {
+    this._scenario = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scenarioInput() {
+    return this._scenario;
+  }
+
+  // subnet_id - computed: false, optional: false, required: true
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
 export interface CognitiveAccountStorage {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#identity_client_id CognitiveAccount#identity_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#identity_client_id CognitiveAccount#identity_client_id}
   */
   readonly identityClientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#storage_account_id CognitiveAccount#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#storage_account_id CognitiveAccount#storage_account_id}
   */
   readonly storageAccountId: string;
 }
@@ -840,19 +961,19 @@ export class CognitiveAccountStorageList extends cdktf.ComplexList {
 }
 export interface CognitiveAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#create CognitiveAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#create CognitiveAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#delete CognitiveAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#delete CognitiveAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#read CognitiveAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#read CognitiveAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#update CognitiveAccount#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#update CognitiveAccount#update}
   */
   readonly update?: string;
 }
@@ -1033,7 +1154,7 @@ export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account azurerm_cognitive_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account azurerm_cognitive_account}
 */
 export class CognitiveAccount extends cdktf.TerraformResource {
 
@@ -1049,7 +1170,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CognitiveAccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CognitiveAccount to import
-  * @param importFromId The id of the existing CognitiveAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CognitiveAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CognitiveAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1061,7 +1182,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/cognitive_account azurerm_cognitive_account} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cognitive_account azurerm_cognitive_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1072,7 +1193,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cognitive_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.46.0',
+        providerVersion: '4.47.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1098,6 +1219,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     this._metricsAdvisorWebsiteName = config.metricsAdvisorWebsiteName;
     this._name = config.name;
     this._outboundNetworkAccessRestricted = config.outboundNetworkAccessRestricted;
+    this._projectManagementEnabled = config.projectManagementEnabled;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._qnaRuntimeEndpoint = config.qnaRuntimeEndpoint;
     this._resourceGroupName = config.resourceGroupName;
@@ -1106,6 +1228,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     this._customerManagedKey.internalValue = config.customerManagedKey;
     this._identity.internalValue = config.identity;
     this._networkAcls.internalValue = config.networkAcls;
+    this._networkInjection.internalValue = config.networkInjection;
     this._storage.internalValue = config.storage;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -1355,6 +1478,22 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     return this.getStringAttribute('primary_access_key');
   }
 
+  // project_management_enabled - computed: false, optional: true, required: false
+  private _projectManagementEnabled?: boolean | cdktf.IResolvable; 
+  public get projectManagementEnabled() {
+    return this.getBooleanAttribute('project_management_enabled');
+  }
+  public set projectManagementEnabled(value: boolean | cdktf.IResolvable) {
+    this._projectManagementEnabled = value;
+  }
+  public resetProjectManagementEnabled() {
+    this._projectManagementEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectManagementEnabledInput() {
+    return this._projectManagementEnabled;
+  }
+
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
@@ -1482,6 +1621,22 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     return this._networkAcls.internalValue;
   }
 
+  // network_injection - computed: false, optional: true, required: false
+  private _networkInjection = new CognitiveAccountNetworkInjectionOutputReference(this, "network_injection");
+  public get networkInjection() {
+    return this._networkInjection;
+  }
+  public putNetworkInjection(value: CognitiveAccountNetworkInjection) {
+    this._networkInjection.internalValue = value;
+  }
+  public resetNetworkInjection() {
+    this._networkInjection.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInjectionInput() {
+    return this._networkInjection.internalValue;
+  }
+
   // storage - computed: false, optional: true, required: false
   private _storage = new CognitiveAccountStorageList(this, "storage", false);
   public get storage() {
@@ -1535,6 +1690,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       metrics_advisor_website_name: cdktf.stringToTerraform(this._metricsAdvisorWebsiteName),
       name: cdktf.stringToTerraform(this._name),
       outbound_network_access_restricted: cdktf.booleanToTerraform(this._outboundNetworkAccessRestricted),
+      project_management_enabled: cdktf.booleanToTerraform(this._projectManagementEnabled),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       qna_runtime_endpoint: cdktf.stringToTerraform(this._qnaRuntimeEndpoint),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
@@ -1543,6 +1699,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       customer_managed_key: cognitiveAccountCustomerManagedKeyToTerraform(this._customerManagedKey.internalValue),
       identity: cognitiveAccountIdentityToTerraform(this._identity.internalValue),
       network_acls: cognitiveAccountNetworkAclsToTerraform(this._networkAcls.internalValue),
+      network_injection: cognitiveAccountNetworkInjectionToTerraform(this._networkInjection.internalValue),
       storage: cdktf.listMapper(cognitiveAccountStorageToTerraform, true)(this._storage.internalValue),
       timeouts: cognitiveAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -1640,6 +1797,12 @@ export class CognitiveAccount extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "boolean",
       },
+      project_management_enabled: {
+        value: cdktf.booleanToHclTerraform(this._projectManagementEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
       public_network_access_enabled: {
         value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
         isBlock: false,
@@ -1687,6 +1850,12 @@ export class CognitiveAccount extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "CognitiveAccountNetworkAclsList",
+      },
+      network_injection: {
+        value: cognitiveAccountNetworkInjectionToHclTerraform(this._networkInjection.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CognitiveAccountNetworkInjectionList",
       },
       storage: {
         value: cdktf.listMapperHcl(cognitiveAccountStorageToHclTerraform, true)(this._storage.internalValue),

@@ -64,6 +64,7 @@ export * as apiManagementSubscription from './api-management-subscription';
 export * as apiManagementTag from './api-management-tag';
 export * as apiManagementUser from './api-management-user';
 export * as apiManagementWorkspace from './api-management-workspace';
+export * as apiManagementWorkspacePolicy from './api-management-workspace-policy';
 export * as appConfiguration from './app-configuration';
 export * as appConfigurationFeature from './app-configuration-feature';
 export * as appConfigurationKey from './app-configuration-key';
