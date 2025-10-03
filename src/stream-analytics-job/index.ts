@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,102 +13,102 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsJobConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#compatibility_level StreamAnalyticsJob#compatibility_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#compatibility_level StreamAnalyticsJob#compatibility_level}
   */
   readonly compatibilityLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#content_storage_policy StreamAnalyticsJob#content_storage_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#content_storage_policy StreamAnalyticsJob#content_storage_policy}
   */
   readonly contentStoragePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#data_locale StreamAnalyticsJob#data_locale}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#data_locale StreamAnalyticsJob#data_locale}
   */
   readonly dataLocale?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#events_late_arrival_max_delay_in_seconds StreamAnalyticsJob#events_late_arrival_max_delay_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#events_late_arrival_max_delay_in_seconds StreamAnalyticsJob#events_late_arrival_max_delay_in_seconds}
   */
   readonly eventsLateArrivalMaxDelayInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#events_out_of_order_max_delay_in_seconds StreamAnalyticsJob#events_out_of_order_max_delay_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#events_out_of_order_max_delay_in_seconds StreamAnalyticsJob#events_out_of_order_max_delay_in_seconds}
   */
   readonly eventsOutOfOrderMaxDelayInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#events_out_of_order_policy StreamAnalyticsJob#events_out_of_order_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#events_out_of_order_policy StreamAnalyticsJob#events_out_of_order_policy}
   */
   readonly eventsOutOfOrderPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#id StreamAnalyticsJob#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#id StreamAnalyticsJob#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#location StreamAnalyticsJob#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#location StreamAnalyticsJob#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#name StreamAnalyticsJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#name StreamAnalyticsJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#output_error_policy StreamAnalyticsJob#output_error_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#output_error_policy StreamAnalyticsJob#output_error_policy}
   */
   readonly outputErrorPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#resource_group_name StreamAnalyticsJob#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#resource_group_name StreamAnalyticsJob#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#sku_name StreamAnalyticsJob#sku_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#sku_name StreamAnalyticsJob#sku_name}
   */
   readonly skuName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#stream_analytics_cluster_id StreamAnalyticsJob#stream_analytics_cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#stream_analytics_cluster_id StreamAnalyticsJob#stream_analytics_cluster_id}
   */
   readonly streamAnalyticsClusterId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#streaming_units StreamAnalyticsJob#streaming_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#streaming_units StreamAnalyticsJob#streaming_units}
   */
   readonly streamingUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#tags StreamAnalyticsJob#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#tags StreamAnalyticsJob#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#transformation_query StreamAnalyticsJob#transformation_query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#transformation_query StreamAnalyticsJob#transformation_query}
   */
   readonly transformationQuery: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#type StreamAnalyticsJob#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#type StreamAnalyticsJob#type}
   */
   readonly type?: string;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#identity StreamAnalyticsJob#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#identity StreamAnalyticsJob#identity}
   */
   readonly identity?: StreamAnalyticsJobIdentity;
   /**
   * job_storage_account block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#job_storage_account StreamAnalyticsJob#job_storage_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#job_storage_account StreamAnalyticsJob#job_storage_account}
   */
-  readonly jobStorageAccount?: StreamAnalyticsJobJobStorageAccount[] | cdktf.IResolvable;
+  readonly jobStorageAccount?: StreamAnalyticsJobJobStorageAccount;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#timeouts StreamAnalyticsJob#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#timeouts StreamAnalyticsJob#timeouts}
   */
   readonly timeouts?: StreamAnalyticsJobTimeouts;
 }
 export interface StreamAnalyticsJobIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#identity_ids StreamAnalyticsJob#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#identity_ids StreamAnalyticsJob#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#type StreamAnalyticsJob#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#type StreamAnalyticsJob#type}
   */
   readonly type: string;
 }
@@ -228,20 +228,20 @@ export class StreamAnalyticsJobIdentityOutputReference extends cdktf.ComplexObje
 }
 export interface StreamAnalyticsJobJobStorageAccount {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#account_key StreamAnalyticsJob#account_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#account_key StreamAnalyticsJob#account_key}
   */
-  readonly accountKey: string;
+  readonly accountKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#account_name StreamAnalyticsJob#account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#account_name StreamAnalyticsJob#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#authentication_mode StreamAnalyticsJob#authentication_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#authentication_mode StreamAnalyticsJob#authentication_mode}
   */
   readonly authenticationMode?: string;
 }
 
-export function streamAnalyticsJobJobStorageAccountToTerraform(struct?: StreamAnalyticsJobJobStorageAccount | cdktf.IResolvable): any {
+export function streamAnalyticsJobJobStorageAccountToTerraform(struct?: StreamAnalyticsJobJobStorageAccountOutputReference | StreamAnalyticsJobJobStorageAccount): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -254,7 +254,7 @@ export function streamAnalyticsJobJobStorageAccountToTerraform(struct?: StreamAn
 }
 
 
-export function streamAnalyticsJobJobStorageAccountToHclTerraform(struct?: StreamAnalyticsJobJobStorageAccount | cdktf.IResolvable): any {
+export function streamAnalyticsJobJobStorageAccountToHclTerraform(struct?: StreamAnalyticsJobJobStorageAccountOutputReference | StreamAnalyticsJobJobStorageAccount): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -286,22 +286,16 @@ export function streamAnalyticsJobJobStorageAccountToHclTerraform(struct?: Strea
 
 export class StreamAnalyticsJobJobStorageAccountOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StreamAnalyticsJobJobStorageAccount | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): StreamAnalyticsJobJobStorageAccount | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._accountKey !== undefined) {
@@ -319,34 +313,31 @@ export class StreamAnalyticsJobJobStorageAccountOutputReference extends cdktf.Co
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StreamAnalyticsJobJobStorageAccount | cdktf.IResolvable | undefined) {
+  public set internalValue(value: StreamAnalyticsJobJobStorageAccount | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
       this._accountKey = undefined;
       this._accountName = undefined;
       this._authenticationMode = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
       this._accountKey = value.accountKey;
       this._accountName = value.accountName;
       this._authenticationMode = value.authenticationMode;
     }
   }
 
-  // account_key - computed: false, optional: false, required: true
+  // account_key - computed: false, optional: true, required: false
   private _accountKey?: string; 
   public get accountKey() {
     return this.getStringAttribute('account_key');
   }
   public set accountKey(value: string) {
     this._accountKey = value;
+  }
+  public resetAccountKey() {
+    this._accountKey = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get accountKeyInput() {
@@ -382,41 +373,21 @@ export class StreamAnalyticsJobJobStorageAccountOutputReference extends cdktf.Co
     return this._authenticationMode;
   }
 }
-
-export class StreamAnalyticsJobJobStorageAccountList extends cdktf.ComplexList {
-  public internalValue? : StreamAnalyticsJobJobStorageAccount[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): StreamAnalyticsJobJobStorageAccountOutputReference {
-    return new StreamAnalyticsJobJobStorageAccountOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface StreamAnalyticsJobTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#create StreamAnalyticsJob#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#create StreamAnalyticsJob#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#delete StreamAnalyticsJob#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#delete StreamAnalyticsJob#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#read StreamAnalyticsJob#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#read StreamAnalyticsJob#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#update StreamAnalyticsJob#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#update StreamAnalyticsJob#update}
   */
   readonly update?: string;
 }
@@ -597,7 +568,7 @@ export class StreamAnalyticsJobTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job azurerm_stream_analytics_job}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job azurerm_stream_analytics_job}
 */
 export class StreamAnalyticsJob extends cdktf.TerraformResource {
 
@@ -613,7 +584,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a StreamAnalyticsJob resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the StreamAnalyticsJob to import
-  * @param importFromId The id of the existing StreamAnalyticsJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing StreamAnalyticsJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the StreamAnalyticsJob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -625,7 +596,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/stream_analytics_job azurerm_stream_analytics_job} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/stream_analytics_job azurerm_stream_analytics_job} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -636,7 +607,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_job',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.46.0',
+        providerVersion: '4.47.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -955,11 +926,11 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
   }
 
   // job_storage_account - computed: false, optional: true, required: false
-  private _jobStorageAccount = new StreamAnalyticsJobJobStorageAccountList(this, "job_storage_account", false);
+  private _jobStorageAccount = new StreamAnalyticsJobJobStorageAccountOutputReference(this, "job_storage_account");
   public get jobStorageAccount() {
     return this._jobStorageAccount;
   }
-  public putJobStorageAccount(value: StreamAnalyticsJobJobStorageAccount[] | cdktf.IResolvable) {
+  public putJobStorageAccount(value: StreamAnalyticsJobJobStorageAccount) {
     this._jobStorageAccount.internalValue = value;
   }
   public resetJobStorageAccount() {
@@ -1010,7 +981,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
       transformation_query: cdktf.stringToTerraform(this._transformationQuery),
       type: cdktf.stringToTerraform(this._type),
       identity: streamAnalyticsJobIdentityToTerraform(this._identity.internalValue),
-      job_storage_account: cdktf.listMapper(streamAnalyticsJobJobStorageAccountToTerraform, true)(this._jobStorageAccount.internalValue),
+      job_storage_account: streamAnalyticsJobJobStorageAccountToTerraform(this._jobStorageAccount.internalValue),
       timeouts: streamAnalyticsJobTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -1126,7 +1097,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
         storageClassType: "StreamAnalyticsJobIdentityList",
       },
       job_storage_account: {
-        value: cdktf.listMapperHcl(streamAnalyticsJobJobStorageAccountToHclTerraform, true)(this._jobStorageAccount.internalValue),
+        value: streamAnalyticsJobJobStorageAccountToHclTerraform(this._jobStorageAccount.internalValue),
         isBlock: true,
         type: "list",
         storageClassType: "StreamAnalyticsJobJobStorageAccountList",

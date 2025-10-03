@@ -4,7 +4,7 @@
 
 ### DataAzurermDevCenterGallery <a name="DataAzurermDevCenterGallery" id="@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGallery"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/dev_center_gallery azurerm_dev_center_gallery}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/dev_center_gallery azurerm_dev_center_gallery}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGallery.Initializer"></a>
 
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermDevCenterGaller
 
 The id of the existing DataAzurermDevCenterGallery that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/dev_center_gallery#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/dev_center_gallery#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -685,9 +685,9 @@ const dataAzurermDevCenterGalleryConfig: dataAzurermDevCenterGallery.DataAzurerm
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGalleryConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGalleryConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGalleryConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGalleryConfig.property.devCenterId">devCenterId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/dev_center_gallery#dev_center_id DataAzurermDevCenterGallery#dev_center_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGalleryConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/dev_center_gallery#name DataAzurermDevCenterGallery#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGalleryConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/dev_center_gallery#id DataAzurermDevCenterGallery#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGalleryConfig.property.devCenterId">devCenterId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/dev_center_gallery#dev_center_id DataAzurermDevCenterGallery#dev_center_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGalleryConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/dev_center_gallery#name DataAzurermDevCenterGallery#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGalleryConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/dev_center_gallery#id DataAzurermDevCenterGallery#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGalleryConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGalleryTimeouts">DataAzurermDevCenterGalleryTimeouts</a></code> | timeouts block. |
 
 ---
@@ -770,7 +770,7 @@ public readonly devCenterId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/dev_center_gallery#dev_center_id DataAzurermDevCenterGallery#dev_center_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/dev_center_gallery#dev_center_id DataAzurermDevCenterGallery#dev_center_id}.
 
 ---
 
@@ -782,7 +782,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/dev_center_gallery#name DataAzurermDevCenterGallery#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/dev_center_gallery#name DataAzurermDevCenterGallery#name}.
 
 ---
 
@@ -794,7 +794,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/dev_center_gallery#id DataAzurermDevCenterGallery#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/dev_center_gallery#id DataAzurermDevCenterGallery#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -811,7 +811,7 @@ public readonly timeouts: DataAzurermDevCenterGalleryTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/dev_center_gallery#timeouts DataAzurermDevCenterGallery#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/dev_center_gallery#timeouts DataAzurermDevCenterGallery#timeouts}
 
 ---
 
@@ -829,7 +829,7 @@ const dataAzurermDevCenterGalleryTimeouts: dataAzurermDevCenterGallery.DataAzure
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGalleryTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/dev_center_gallery#read DataAzurermDevCenterGallery#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDevCenterGallery.DataAzurermDevCenterGalleryTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/dev_center_gallery#read DataAzurermDevCenterGallery#read}. |
 
 ---
 
@@ -841,7 +841,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/data-sources/dev_center_gallery#read DataAzurermDevCenterGallery#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/dev_center_gallery#read DataAzurermDevCenterGallery#read}.
 
 ---
 

@@ -64,6 +64,7 @@ The following submodules are available:
 - [apiManagementTag](./apiManagementTag.python.md)
 - [apiManagementUser](./apiManagementUser.python.md)
 - [apiManagementWorkspace](./apiManagementWorkspace.python.md)
+- [apiManagementWorkspacePolicy](./apiManagementWorkspacePolicy.python.md)
 - [appConfiguration](./appConfiguration.python.md)
 - [appConfigurationFeature](./appConfigurationFeature.python.md)
 - [appConfigurationKey](./appConfigurationKey.python.md)

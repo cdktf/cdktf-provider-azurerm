@@ -1,3 +1,3 @@
 # `azurerm_consumption_budget_subscription`
 
-Refer to the Terraform Registry for docs: [`azurerm_consumption_budget_subscription`](https://registry.terraform.io/providers/hashicorp/azurerm/4.46.0/docs/resources/consumption_budget_subscription).
+Refer to the Terraform Registry for docs: [`azurerm_consumption_budget_subscription`](https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/consumption_budget_subscription).

@@ -64,6 +64,7 @@ The following submodules are available:
 - [apiManagementTag](./apiManagementTag.typescript.md)
 - [apiManagementUser](./apiManagementUser.typescript.md)
 - [apiManagementWorkspace](./apiManagementWorkspace.typescript.md)
+- [apiManagementWorkspacePolicy](./apiManagementWorkspacePolicy.typescript.md)
 - [appConfiguration](./appConfiguration.typescript.md)
 - [appConfigurationFeature](./appConfigurationFeature.typescript.md)
 - [appConfigurationKey](./appConfigurationKey.typescript.md)

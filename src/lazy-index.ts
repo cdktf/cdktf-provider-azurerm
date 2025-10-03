@@ -64,6 +64,7 @@ Object.defineProperty(exports, 'apiManagementSubscription', { get: function () {
 Object.defineProperty(exports, 'apiManagementTag', { get: function () { return require('./api-management-tag'); } });
 Object.defineProperty(exports, 'apiManagementUser', { get: function () { return require('./api-management-user'); } });
 Object.defineProperty(exports, 'apiManagementWorkspace', { get: function () { return require('./api-management-workspace'); } });
+Object.defineProperty(exports, 'apiManagementWorkspacePolicy', { get: function () { return require('./api-management-workspace-policy'); } });
 Object.defineProperty(exports, 'appConfiguration', { get: function () { return require('./app-configuration'); } });
 Object.defineProperty(exports, 'appConfigurationFeature', { get: function () { return require('./app-configuration-feature'); } });
 Object.defineProperty(exports, 'appConfigurationKey', { get: function () { return require('./app-configuration-key'); } });

@@ -64,6 +64,7 @@ The following submodules are available:
 - [apiManagementTag](./apiManagementTag.java.md)
 - [apiManagementUser](./apiManagementUser.java.md)
 - [apiManagementWorkspace](./apiManagementWorkspace.java.md)
+- [apiManagementWorkspacePolicy](./apiManagementWorkspacePolicy.java.md)
 - [appConfiguration](./appConfiguration.java.md)
 - [appConfigurationFeature](./appConfigurationFeature.java.md)
 - [appConfigurationKey](./appConfigurationKey.java.md)
